@@ -11,7 +11,7 @@ const plans = [
     isPopular: false
   },
   {
-    name: 'Pro',
+    name: 'Programa seguridad avanzada',
     price: '$299',
     description: 'Nuestro curso más completo para principiantes.',
     features: ['20 horas de práctica', 'Curso teórico presencial', 'Vehículo para examen', 'Manejo defensivo', 'Garantía de aprobación'],
