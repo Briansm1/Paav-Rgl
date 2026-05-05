@@ -10,11 +10,26 @@ import { Button } from '@/components/ui/button';
 export const Header = () => {
   const [isScrolled, setIsScrolled] = useState(false);
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+  const [activeSection, setActiveSection] = useState('#inicio');
 
   useEffect(() => {
     const handleScroll = () => {
       setIsScrolled(window.scrollY > 20);
+
+      // Lógica simple de scroll spy para resaltar la sección actual
+      const sections = ['inicio', 'servicios', 'testimonios', 'planes', 'contacto'];
+      const current = sections.find(section => {
+        const element = document.getElementById(section);
+        if (element) {
+          const rect = element.getBoundingClientRect();
+          // Detectamos si la sección está en la parte superior de la ventana
+          return rect.top >= -150 && rect.top <= 300;
+        }
+        return false;
+      });
+      if (current) setActiveSection(`#${current}`);
     };
+    
     window.addEventListener('scroll', handleScroll);
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
@@ -31,13 +46,17 @@ export const Header = () => {
     <header
       className={cn(
         "fixed top-0 left-0 right-0 z-50 transition-all duration-300",
-        "bg-white/95 dark:bg-slate-900/95 backdrop-blur-md shadow-sm border-b border-border/50",
+        "bg-white dark:bg-slate-900 shadow-md border-b border-border/50",
         isScrolled ? "py-3" : "py-5"
       )}
     >
       <div className="container mx-auto px-4 flex items-center justify-between">
-        <Link href="#inicio" className="flex items-center gap-2">
-          <ShieldCheck className="w-8 h-8 text-primary" />
+        <Link 
+          href="#inicio" 
+          className="flex items-center gap-2 group"
+          onClick={() => setActiveSection('#inicio')}
+        >
+          <ShieldCheck className="w-8 h-8 text-primary transition-transform group-hover:scale-110" />
           <span className="text-xl font-bold font-headline tracking-tight text-foreground">
             Ruta <span className="text-primary">Segura</span>
           </span>
@@ -49,12 +68,23 @@ export const Header = () => {
             <Link
               key={link.name}
               href={link.href}
-              className="text-sm font-medium hover:text-primary transition-colors text-foreground"
+              onClick={() => setActiveSection(link.href)}
+              className={cn(
+                "relative text-sm font-bold py-1 transition-colors duration-300",
+                activeSection === link.href 
+                  ? "text-primary" 
+                  : "text-muted-foreground hover:text-primary"
+              )}
             >
               {link.name}
+              {/* El "rengloncito" o indicador inferior */}
+              <span className={cn(
+                "absolute bottom-0 left-0 w-full h-0.5 bg-primary transition-transform duration-300 origin-left",
+                activeSection === link.href ? "scale-x-100" : "scale-x-0"
+              )} />
             </Link>
           ))}
-          <Button variant="default" className="bg-accent hover:bg-accent/90">
+          <Button variant="default" className="bg-accent hover:bg-accent/90 rounded-full px-6 shadow-lg shadow-accent/20 transition-all hover:translate-y-[-2px]">
             Inscríbete Hoy
           </Button>
         </nav>
@@ -79,13 +109,19 @@ export const Header = () => {
             <Link
               key={link.name}
               href={link.href}
-              className="text-xl font-semibold border-b border-border pb-4 hover:text-primary transition-colors"
-              onClick={() => setMobileMenuOpen(false)}
+              className={cn(
+                "text-2xl font-bold border-b border-border pb-4 transition-colors",
+                activeSection === link.href ? "text-primary" : "text-foreground"
+              )}
+              onClick={() => {
+                setActiveSection(link.href);
+                setMobileMenuOpen(false);
+              }}
             >
               {link.name}
             </Link>
           ))}
-          <Button size="lg" className="mt-4 bg-accent hover:bg-accent/90 w-full h-14 text-lg">
+          <Button size="lg" className="mt-4 bg-accent hover:bg-accent/90 w-full h-14 text-lg rounded-2xl">
             Inscríbete Hoy
           </Button>
         </nav>
