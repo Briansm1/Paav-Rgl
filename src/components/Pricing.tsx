@@ -1,95 +1,109 @@
-
 import React from 'react';
 import { Button } from '@/components/ui/button';
-import { Check, Shield } from 'lucide-react';
+import { Check, Shield, Star } from 'lucide-react';
 
 const plans = [
   {
     name: 'Básico',
     price: '$199',
-    description: 'Ideal para quienes ya tienen nociones básicas.',
-    features: ['10 horas de práctica', 'Acceso a material teórico online', '1 examen simulacro', 'Asesoría para trámites'],
+    description: 'Perfecto para quienes necesitan reforzar conocimientos.',
+    features: ['10 horas de práctica', 'Material teórico digital', 'Examen de simulacro', 'Trámites administrativos'],
     isPopular: false
   },
   {
-    name: 'Pro (Más Elegido)',
+    name: 'Pro',
     price: '$299',
-    description: 'Formación completa para principiantes desde cero.',
-    features: ['20 horas de práctica', 'Curso teórico presencial', 'Vehículo para examen oficial', 'Técnicas de manejo defensivo', 'Garantía de aprendizaje'],
+    description: 'Nuestro curso más completo para principiantes.',
+    features: ['20 horas de práctica', 'Curso teórico presencial', 'Vehículo para examen', 'Manejo defensivo', 'Garantía de aprobación'],
     isPopular: true
   },
   {
-    name: 'Intensivo',
+    name: 'Máster',
     price: '$399',
-    description: 'Aprende todo en tiempo récord.',
-    features: ['30 horas de práctica', 'Prácticas nocturnas y en carretera', 'Curso de mecánica básica', 'Priority support 24/7', 'Vehículo premium para prácticas'],
+    description: 'Para quienes buscan dominar cada aspecto del volante.',
+    features: ['30 horas de práctica', 'Manejo nocturno y carretera', 'Mecánica básica', 'Soporte prioritario', 'Vehículo premium'],
     isPopular: false
   }
 ];
 
 export const Pricing = () => {
   return (
-    <section id="planes" className="py-16 md:py-24 bg-slate-50 dark:bg-slate-900/10">
+    <section id="planes" className="py-20 md:py-32 bg-slate-50 dark:bg-slate-900/20">
       <div className="container mx-auto px-4">
-        <div className="text-center mb-16 md:mb-20">
-          <h2 className="text-accent font-bold tracking-widest uppercase text-xs md:text-sm mb-4">Inversión para tu Futuro</h2>
-          <h3 className="text-3xl md:text-5xl font-bold font-headline mb-6 text-foreground">Nuestros Planes y Paquetes</h3>
-          <p className="text-muted-foreground max-w-2xl mx-auto text-base md:text-lg">
-            Elige el plan que mejor se adapte a tus necesidades y comienza tu viaje hoy mismo.
+        <div className="text-center max-w-3xl mx-auto mb-16 md:mb-24">
+          <span className="inline-block px-4 py-1.5 mb-6 text-xs font-bold tracking-widest text-accent uppercase bg-accent/10 rounded-full">
+            Inversión Inteligente
+          </span>
+          <h2 className="text-4xl md:text-6xl font-bold font-headline mb-6 tracking-tight text-foreground">
+            Planes diseñados para tu <span className="text-accent underline decoration-accent/30 underline-offset-8">éxito</span>
+          </h2>
+          <p className="text-lg md:text-xl text-muted-foreground leading-relaxed">
+            Transparencia total. Sin cargos ocultos, solo educación de calidad para tu futuro como conductor.
           </p>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 items-stretch">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 md:gap-12 items-stretch">
           {plans.map((plan, index) => (
             <div 
               key={index} 
-              className={`relative p-8 rounded-3xl border-2 transition-all duration-500 flex flex-col ${
+              className={`relative p-8 md:p-12 rounded-[2.5rem] border transition-all duration-700 flex flex-col ${
                 plan.isPopular 
                   ? 'bg-white dark:bg-slate-800 border-primary shadow-2xl scale-100 lg:scale-105 z-10' 
-                  : 'bg-white/40 dark:bg-slate-800/40 border-border hover:border-primary/50'
+                  : 'bg-white/50 dark:bg-slate-800/50 border-border hover:border-primary/50 shadow-sm'
               }`}
             >
               {plan.isPopular && (
-                <div className="absolute -top-4 left-1/2 -translate-x-1/2 bg-primary text-white px-6 py-1.5 rounded-full text-xs font-bold uppercase tracking-widest shadow-lg">
-                  Recomendado
+                <div className="absolute -top-5 left-1/2 -translate-x-1/2 bg-primary text-white px-6 py-2 rounded-full text-xs font-bold uppercase tracking-widest shadow-xl flex items-center gap-2">
+                  <Star className="w-3 h-3 fill-white" />
+                  Más Recomendado
                 </div>
               )}
-              <div className="mb-8">
+              
+              <div className="mb-10">
                 <h4 className="text-2xl font-bold mb-4">{plan.name}</h4>
-                <div className="flex items-baseline gap-1">
-                  <span className="text-5xl font-bold tracking-tight">{plan.price}</span>
-                  <span className="text-muted-foreground text-sm font-semibold">/total</span>
+                <div className="flex items-baseline gap-2 mb-4">
+                  <span className="text-5xl md:text-6xl font-bold tracking-tight">{plan.price}</span>
+                  <span className="text-muted-foreground font-semibold">/total</span>
                 </div>
-                <p className="mt-4 text-muted-foreground text-sm font-medium leading-relaxed">{plan.description}</p>
+                <p className="text-muted-foreground text-base leading-relaxed font-medium">{plan.description}</p>
               </div>
 
-              <ul className="space-y-4 mb-10 flex-grow">
+              <div className="space-y-5 mb-12 flex-grow">
                 {plan.features.map((feature, i) => (
-                  <li key={i} className="flex items-center gap-3">
-                    <div className="shrink-0 bg-primary/10 p-1 rounded-full">
-                      <Check className="w-4 h-4 text-primary shrink-0" />
+                  <div key={i} className="flex items-center gap-4">
+                    <div className="shrink-0 bg-primary/10 p-1.5 rounded-full shadow-inner">
+                      <Check className="w-4 h-4 text-primary" />
                     </div>
-                    <span className="text-sm md:text-base text-foreground/80 font-medium">{feature}</span>
-                  </li>
+                    <span className="text-base text-foreground/90 font-medium">{feature}</span>
+                  </div>
                 ))}
-              </ul>
+              </div>
 
               <Button 
                 variant={plan.isPopular ? 'default' : 'outline'} 
-                className={`w-full h-14 rounded-2xl text-lg font-bold transition-transform active:scale-95 ${
-                  plan.isPopular ? 'bg-primary hover:bg-primary/90' : 'border-primary text-primary hover:bg-primary/5'
+                className={`w-full h-16 rounded-2xl text-lg font-bold transition-all active:scale-95 shadow-md ${
+                  plan.isPopular 
+                    ? 'bg-primary hover:bg-primary/90 text-white' 
+                    : 'border-2 border-primary text-primary hover:bg-primary/5'
                 }`}
               >
-                Seleccionar Plan
+                Elegir este Plan
               </Button>
             </div>
           ))}
         </div>
         
-        <div className="mt-16 text-center px-4">
-          <div className="inline-flex items-center gap-3 bg-white dark:bg-slate-800 px-6 py-4 rounded-2xl border border-primary/20 shadow-sm max-w-full">
-            <Shield className="w-6 h-6 text-primary shrink-0" />
-            <span className="text-sm md:text-base font-semibold text-foreground leading-tight">Todos nuestros planes incluyen seguro contra accidentes durante las prácticas.</span>
+        <div className="mt-20 text-center max-w-4xl mx-auto px-4">
+          <div className="bg-white dark:bg-slate-800 p-6 md:p-8 rounded-[2rem] border-2 border-dashed border-primary/20 shadow-lg inline-flex flex-col md:flex-row items-center gap-6">
+            <div className="shrink-0 bg-primary/10 p-4 rounded-3xl">
+              <Shield className="w-10 h-10 text-primary" />
+            </div>
+            <div className="text-left">
+              <h5 className="text-xl font-bold mb-1">Tu seguridad es nuestra prioridad</h5>
+              <p className="text-muted-foreground text-sm md:text-base leading-relaxed">
+                Todos los planes incluyen un seguro de accidentes personal durante las horas de práctica, sin costo adicional.
+              </p>
+            </div>
           </div>
         </div>
       </div>

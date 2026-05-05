@@ -1,28 +1,30 @@
-
 import React from 'react';
 import Image from 'next/image';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { PlaceHolderImages } from '@/app/lib/placeholder-images';
-import { Car, BookOpen, Clock, Award } from 'lucide-react';
+import { Car, BookOpen, Clock, Award, ShieldCheck, Zap } from 'lucide-react';
 
 const services = [
   {
     title: 'Cursos para Principiantes',
-    description: 'Desde cero hasta tu licencia. Teoría y práctica intensiva con instructores certificados.',
+    description: 'Aprende desde lo más básico hasta obtener tu licencia con nuestro método paso a paso.',
     icon: <Car className="w-10 h-10 text-primary" />,
-    imgId: 'service-beginner'
+    imgId: 'service-beginner',
+    tag: 'Popular'
   },
   {
-    title: 'Refuerzo y Perfeccionamiento',
-    description: '¿Tienes miedo o hace tiempo no conduces? Recupera tu confianza con nuestras clases personalizadas.',
+    title: 'Perfeccionamiento',
+    description: '¿Miedo al tráfico? Recupera tu confianza con clases personalizadas de manejo avanzado.',
     icon: <Clock className="w-10 h-10 text-primary" />,
-    imgId: 'service-advanced'
+    imgId: 'service-advanced',
+    tag: 'Especializado'
   },
   {
     title: 'Teoría de Tránsito',
-    description: 'Domina las normas de vialidad y señales de tránsito para aprobar tu examen teórico sin problemas.',
+    description: 'Domina las normas y señales viales para aprobar tu examen teórico sin dificultades.',
     icon: <BookOpen className="w-10 h-10 text-primary" />,
-    imgId: 'service-theory'
+    imgId: 'service-theory',
+    tag: 'Académico'
   }
 ];
 
@@ -30,71 +32,85 @@ export const Services = () => {
   const instructorImg = PlaceHolderImages.find(img => img.id === 'driving-instructor');
 
   return (
-    <section id="servicios" className="py-16 md:py-24 bg-background">
+    <section id="servicios" className="py-20 md:py-32 bg-white dark:bg-slate-950">
       <div className="container mx-auto px-4">
-        <div className="text-center mb-12 md:mb-20">
-          <h2 className="text-accent font-bold tracking-widest uppercase text-xs md:text-sm mb-4">Nuestra Solución</h2>
-          <h3 className="text-3xl md:text-5xl font-bold font-headline mb-6 text-foreground">Aprender es más que solo manejar</h3>
-          <p className="text-muted-foreground max-w-2xl mx-auto text-base md:text-lg">
-            Combinamos tecnología, pedagogía moderna y años de experiencia para ofrecerte la mejor formación vial del mercado.
+        <div className="text-center max-w-3xl mx-auto mb-16 md:mb-24">
+          <span className="inline-block px-4 py-1.5 mb-6 text-xs font-bold tracking-widest text-primary uppercase bg-primary/10 rounded-full">
+            Nuestros Servicios
+          </span>
+          <h2 className="text-4xl md:text-6xl font-bold font-headline mb-6 tracking-tight text-foreground">
+            Aprender es más que solo <span className="text-primary italic">manejar</span>
+          </h2>
+          <p className="text-lg md:text-xl text-muted-foreground leading-relaxed">
+            Combinamos tecnología moderna con instructores expertos para ofrecerte la formación vial más completa del mercado.
           </p>
         </div>
 
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 md:gap-12">
           {services.map((service, index) => {
             const img = PlaceHolderImages.find(p => p.id === service.imgId);
             return (
-              <Card key={index} className="overflow-hidden border-none shadow-xl hover:-translate-y-2 transition-all duration-300">
-                <div className="relative h-48 sm:h-56 md:h-64">
+              <Card key={index} className="group relative overflow-hidden border-none bg-slate-50 dark:bg-slate-900 shadow-xl hover:shadow-2xl transition-all duration-500">
+                <div className="relative h-64 overflow-hidden">
                   <Image 
                     src={img?.imageUrl || ''} 
                     alt={service.title} 
                     fill 
-                    className="object-cover"
+                    className="object-cover group-hover:scale-110 transition-transform duration-700"
                     data-ai-hint={img?.imageHint}
                   />
-                  <div className="absolute top-4 left-4 bg-white/90 backdrop-blur-sm p-3 rounded-xl shadow-lg">
+                  <div className="absolute inset-0 bg-gradient-to-t from-slate-900/80 to-transparent"></div>
+                  <div className="absolute top-4 left-4">
+                    <span className="px-3 py-1 text-[10px] font-bold uppercase tracking-wider bg-white/90 backdrop-blur-sm text-primary rounded-lg shadow-sm">
+                      {service.tag}
+                    </span>
+                  </div>
+                  <div className="absolute bottom-6 left-6 text-white">
                     {service.icon}
                   </div>
                 </div>
-                <CardHeader>
-                  <CardTitle className="text-xl md:text-2xl font-bold">{service.title}</CardTitle>
+                <CardHeader className="pt-8">
+                  <CardTitle className="text-2xl font-bold group-hover:text-primary transition-colors">{service.title}</CardTitle>
                 </CardHeader>
                 <CardContent>
-                  <p className="text-muted-foreground leading-relaxed">{service.description}</p>
+                  <p className="text-muted-foreground text-base leading-relaxed mb-6">{service.description}</p>
                 </CardContent>
               </Card>
             );
           })}
         </div>
 
-        <div className="mt-16 md:mt-24 p-6 md:p-12 bg-white dark:bg-slate-800/50 rounded-3xl shadow-sm border border-border flex flex-col lg:flex-row items-center gap-10 md:gap-16">
-          <div className="lg:w-1/2 w-full order-2 lg:order-1">
-            <h4 className="text-2xl md:text-3xl font-bold mb-8">¿Por qué elegir Ruta Segura?</h4>
-            <ul className="space-y-6">
-              {[
-                'Vehículos de última generación con doble pedal.',
-                'Instructores amables y pacientes altamente capacitados.',
-                'Horarios flexibles que se adaptan a tu ritmo de vida.',
-                'Certificación oficial reconocida por las autoridades.'
-              ].map((item, i) => (
-                <li key={i} className="flex items-start gap-4">
-                  <div className="shrink-0 mt-1 bg-primary/10 p-1.5 rounded-full">
-                    <Award className="w-5 h-5 text-primary" />
+        <div className="mt-24 md:mt-40 p-1 md:p-2 bg-gradient-to-br from-primary/20 via-transparent to-accent/20 rounded-[2.5rem] overflow-hidden shadow-2xl">
+          <div className="bg-white dark:bg-slate-900 rounded-[2.4rem] p-8 md:p-16 flex flex-col lg:flex-row items-center gap-12 lg:gap-20">
+            <div className="lg:w-1/2 w-full">
+              <h3 className="text-3xl md:text-5xl font-bold mb-8 tracking-tight">
+                ¿Por qué somos la mejor opción?
+              </h3>
+              <div className="grid grid-cols-1 gap-8">
+                {[
+                  { icon: <ShieldCheck className="w-6 h-6 text-primary" />, text: 'Vehículos modernos con sistema de doble pedal para tu seguridad.' },
+                  { icon: <Award className="w-6 h-6 text-primary" />, text: 'Instructores certificados con más de 10 años de experiencia.' },
+                  { icon: <Zap className="w-6 h-6 text-primary" />, text: 'Horarios 100% flexibles que se adaptan a tu ritmo de vida.' }
+                ].map((item, i) => (
+                  <div key={i} className="flex items-start gap-5">
+                    <div className="shrink-0 mt-1 bg-primary/10 p-3 rounded-2xl shadow-inner">
+                      {item.icon}
+                    </div>
+                    <p className="text-foreground/80 font-medium text-lg md:text-xl leading-relaxed">{item.text}</p>
                   </div>
-                  <span className="text-foreground/90 font-medium text-base md:text-lg">{item}</span>
-                </li>
-              ))}
-            </ul>
-          </div>
-          <div className="lg:w-1/2 w-full order-1 lg:order-2 relative h-[250px] sm:h-[350px] md:h-[450px] rounded-2xl overflow-hidden shadow-2xl">
-            <Image 
-              src={instructorImg?.imageUrl || ''} 
-              alt={instructorImg?.description || "Instrucción profesional"} 
-              fill 
-              className="object-cover hover:scale-105 transition-transform duration-700"
-              data-ai-hint={instructorImg?.imageHint}
-            />
+                ))}
+              </div>
+            </div>
+            <div className="lg:w-1/2 w-full relative h-[350px] md:h-[550px] rounded-3xl overflow-hidden shadow-2xl group">
+              <Image 
+                src={instructorImg?.imageUrl || ''} 
+                alt={instructorImg?.description || "Instrucción profesional"} 
+                fill 
+                className="object-cover group-hover:scale-105 transition-transform duration-1000"
+                data-ai-hint={instructorImg?.imageHint}
+              />
+              <div className="absolute inset-0 bg-primary/10 group-hover:bg-transparent transition-colors duration-500"></div>
+            </div>
           </div>
         </div>
       </div>
