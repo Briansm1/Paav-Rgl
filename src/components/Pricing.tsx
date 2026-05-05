@@ -18,7 +18,7 @@ const plans = [
     isPopular: true
   },
   {
-    name: 'Máster',
+    name: 'Programa fundamentos',
     price: '$399',
     description: 'Para quienes buscan dominar cada aspecto del volante.',
     features: ['30 horas de práctica', 'Manejo nocturno y carretera', 'Mecánica básica', 'Soporte prioritario', 'Vehículo premium'],
