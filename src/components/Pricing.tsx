@@ -1,6 +1,6 @@
 import React from 'react';
 import { Button } from '@/components/ui/button';
-import { Check, Shield, Award } from 'lucide-react';
+import { Check, Shield } from 'lucide-react';
 
 const plans = [
   {
@@ -45,11 +45,6 @@ export const Pricing = () => {
               key={index} 
               className="relative p-8 md:p-12 rounded-[2.5rem] border-2 border-accent bg-white dark:bg-slate-800 shadow-xl hover:shadow-accent/20 transition-all duration-500 flex flex-col text-center group overflow-hidden"
             >
-              {/* Decorative element */}
-              <div className="absolute top-0 right-0 p-4 opacity-5 group-hover:opacity-10 transition-opacity">
-                <Award className="w-16 h-16 text-primary" />
-              </div>
-
               <div className="mb-10 relative z-10">
                 <h4 className="text-2xl font-bold mb-4 text-foreground tracking-tight text-center">{plan.name}</h4>
                 <div className="flex items-center justify-center gap-2 mb-4">
