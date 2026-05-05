@@ -19,7 +19,7 @@ const plans = [
   },
   {
     name: 'Programa fundamentos',
-    price: '$399.999',
+    price: 'Desde $311.999',
     description: 'Para quienes buscan dominar cada aspecto del volante.',
     features: ['30 horas de práctica', 'Manejo nocturno y carretera', 'Mecánica básica', 'Soporte prioritario', 'Vehículo premium'],
     isPopular: false
@@ -62,7 +62,7 @@ export const Pricing = () => {
 
               <div className="space-y-5 mb-12 flex-grow flex flex-col items-center">
                 {plan.features.map((feature, i) => (
-                  <div key={i} className="flex items-center gap-4">
+                  <div key={i} className="flex items-center gap-4 text-center">
                     <div className="shrink-0 bg-primary/10 p-1.5 rounded-full shadow-inner">
                       <Check className="w-4 h-4 text-primary" />
                     </div>
