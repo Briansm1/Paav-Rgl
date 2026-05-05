@@ -42,17 +42,6 @@ export const Pricing = () => {
           </p>
         </div>
 
-        {/* Banner destacado arriba de los planes */}
-        <div className="max-w-4xl mx-auto mb-12">
-          <div className="bg-primary p-6 md:p-8 rounded-[2rem] shadow-xl text-white text-center relative overflow-hidden">
-            <div className="absolute top-0 right-0 w-32 h-32 bg-white/10 rounded-full -mr-16 -mt-16 blur-2xl"></div>
-            <div className="absolute bottom-0 left-0 w-32 h-32 bg-accent/20 rounded-full -ml-16 -mb-16 blur-2xl"></div>
-            <p className="text-xl md:text-2xl font-bold relative z-10">
-              [TEXTO DEL CARTEL - PUEDES EDITARLO AQUÍ]
-            </p>
-          </div>
-        </div>
-
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 md:gap-12 items-stretch">
           {plans.map((plan, index) => (
             <div 
