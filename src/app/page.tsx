@@ -6,6 +6,7 @@ import { Pricing } from '@/components/Pricing';
 import { Contact } from '@/components/Contact';
 import { Footer } from '@/components/Footer';
 import { ScrollReveal } from '@/components/ScrollReveal';
+import { WhatsAppButton } from '@/components/WhatsAppButton';
 
 export default function Home() {
   return (
@@ -25,6 +26,7 @@ export default function Home() {
         <Contact />
       </ScrollReveal>
       <Footer />
+      <WhatsAppButton />
     </main>
   );
 }
