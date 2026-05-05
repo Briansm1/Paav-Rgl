@@ -1,6 +1,6 @@
 import React from 'react';
 import { Button } from '@/components/ui/button';
-import { Check, Shield, Star } from 'lucide-react';
+import { Check, Shield } from 'lucide-react';
 
 const plans = [
   {
@@ -30,7 +30,7 @@ export const Pricing = () => {
   return (
     <section id="planes" className="py-20 md:py-32 bg-slate-50 dark:bg-slate-900/20">
       <div className="container mx-auto px-4">
-        <div className="text-center max-w-3xl mx-auto mb-16 md:mb-24">
+        <div className="text-center max-w-3xl mx-auto mb-16">
           <span className="inline-block px-4 py-1.5 mb-6 text-xs font-bold tracking-widest text-accent uppercase bg-accent/10 rounded-full">
             Inversión Inteligente
           </span>
@@ -40,6 +40,17 @@ export const Pricing = () => {
           <p className="text-lg md:text-xl text-muted-foreground leading-relaxed">
             Transparencia total. Sin cargos ocultos, solo educación de calidad para tu futuro como conductor.
           </p>
+        </div>
+
+        {/* Banner destacado arriba de los planes */}
+        <div className="max-w-4xl mx-auto mb-12">
+          <div className="bg-primary p-6 md:p-8 rounded-[2rem] shadow-xl text-white text-center relative overflow-hidden">
+            <div className="absolute top-0 right-0 w-32 h-32 bg-white/10 rounded-full -mr-16 -mt-16 blur-2xl"></div>
+            <div className="absolute bottom-0 left-0 w-32 h-32 bg-accent/20 rounded-full -ml-16 -mb-16 blur-2xl"></div>
+            <p className="text-xl md:text-2xl font-bold relative z-10">
+              [TEXTO DEL CARTEL - PUEDES EDITARLO AQUÍ]
+            </p>
+          </div>
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 md:gap-12 items-stretch">
@@ -52,13 +63,6 @@ export const Pricing = () => {
                   : 'bg-white/50 dark:bg-slate-800/50 border-border hover:border-primary/50 shadow-sm'
               }`}
             >
-              {plan.isPopular && (
-                <div className="absolute -top-5 left-1/2 -translate-x-1/2 bg-primary text-white px-6 py-2 rounded-full text-xs font-bold uppercase tracking-widest shadow-xl flex items-center gap-2">
-                  <Star className="w-3 h-3 fill-white" />
-                  Más Recomendado
-                </div>
-              )}
-              
               <div className="mb-10">
                 <h4 className="text-2xl font-bold mb-4">{plan.name}</h4>
                 <div className="flex items-baseline gap-2 mb-4">
