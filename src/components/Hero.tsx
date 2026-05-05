@@ -1,4 +1,3 @@
-
 "use client";
 
 import React from 'react';
@@ -29,7 +28,7 @@ export const Hero = () => {
         <div className="max-w-3xl">
           <div className="inline-flex items-center gap-2 bg-white/20 backdrop-blur-md border border-white/30 rounded-full px-4 py-1.5 mb-6 animate-in fade-in slide-in-from-bottom-4 duration-700">
             <Star className="w-4 h-4 text-yellow-500 fill-yellow-500" />
-            <span className="text-xs md:text-sm font-bold text-foreground">La academia #1 de la región</span>
+            <span className="text-xs md:text-sm font-bold text-foreground">La academia N°1 de la región</span>
           </div>
           
           <h1 className="text-4xl sm:text-5xl md:text-7xl font-bold font-headline leading-[1.1] mb-6 text-foreground animate-in fade-in slide-in-from-bottom-6 duration-1000 delay-100">
