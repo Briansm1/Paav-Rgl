@@ -5,21 +5,21 @@ import { Check, Shield } from 'lucide-react';
 const plans = [
   {
     name: 'Programa experto',
-    price: '$199',
+    price: 'Desde $86.999',
     description: 'Perfecto para quienes necesitan reforzar conocimientos.',
     features: ['10 horas de práctica', 'Material teórico digital', 'Examen de simulacro', 'Trámites administrativos'],
     isPopular: false
   },
   {
     name: 'Programa seguridad avanzada',
-    price: '$299',
+    price: '$299.999',
     description: 'Nuestro curso más completo para principiantes.',
     features: ['20 horas de práctica', 'Curso teórico presencial', 'Vehículo para examen', 'Manejo defensivo', 'Garantía de aprobación'],
     isPopular: true
   },
   {
     name: 'Programa fundamentos',
-    price: '$399',
+    price: '$399.999',
     description: 'Para quienes buscan dominar cada aspecto del volante.',
     features: ['30 horas de práctica', 'Manejo nocturno y carretera', 'Mecánica básica', 'Soporte prioritario', 'Vehículo premium'],
     isPopular: false
@@ -54,9 +54,8 @@ export const Pricing = () => {
             >
               <div className="mb-10">
                 <h4 className="text-2xl font-bold mb-4">{plan.name}</h4>
-                <div className="flex items-baseline justify-center gap-2 mb-4">
-                  <span className="text-5xl md:text-6xl font-bold tracking-tight">{plan.price}</span>
-                  <span className="text-muted-foreground font-semibold">/total</span>
+                <div className="flex items-center justify-center gap-2 mb-4">
+                  <span className="text-4xl md:text-5xl font-bold tracking-tight text-foreground">{plan.price}</span>
                 </div>
                 <p className="text-muted-foreground text-base leading-relaxed font-medium">{plan.description}</p>
               </div>
