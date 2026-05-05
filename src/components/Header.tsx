@@ -32,7 +32,7 @@ export const Header = () => {
       className={cn(
         "fixed top-0 left-0 right-0 z-50 transition-all duration-300",
         isScrolled 
-          ? "bg-white/90 dark:bg-slate-900/90 backdrop-blur-md shadow-md py-3" 
+          ? "bg-white/95 dark:bg-slate-900/95 backdrop-blur-md shadow-md py-3" 
           : "bg-transparent py-5"
       )}
     >
@@ -45,7 +45,7 @@ export const Header = () => {
         </Link>
 
         {/* Desktop Nav */}
-        <nav className="hidden md:flex items-center gap-8">
+        <nav className="hidden md:flex items-center gap-6 lg:gap-8">
           {navLinks.map((link) => (
             <Link
               key={link.name}
@@ -62,33 +62,35 @@ export const Header = () => {
 
         {/* Mobile Toggle */}
         <button
-          className="md:hidden p-2 text-foreground"
+          className="md:hidden p-2 text-foreground focus:outline-none"
           onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
+          aria-label="Toggle menu"
         >
-          {mobileMenuOpen ? <X /> : <Menu />}
+          {mobileMenuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
         </button>
       </div>
 
-      {/* Mobile Nav */}
-      {mobileMenuOpen && (
-        <div className="md:hidden bg-background border-b border-border absolute w-full left-0 animate-in slide-in-from-top duration-300">
-          <nav className="flex flex-col p-4 gap-4">
-            {navLinks.map((link) => (
-              <Link
-                key={link.name}
-                href={link.href}
-                className="text-lg font-medium py-2"
-                onClick={() => setMobileMenuOpen(false)}
-              >
-                {link.name}
-              </Link>
-            ))}
-            <Button variant="default" className="w-full bg-accent hover:bg-accent/90">
-              Inscríbete Hoy
-            </Button>
-          </nav>
-        </div>
-      )}
+      {/* Mobile Nav Overlay */}
+      <div className={cn(
+        "fixed inset-0 top-[60px] bg-background z-40 transition-transform duration-300 md:hidden",
+        mobileMenuOpen ? "translate-x-0" : "translate-x-full"
+      )}>
+        <nav className="flex flex-col p-6 gap-6 h-full overflow-y-auto">
+          {navLinks.map((link) => (
+            <Link
+              key={link.name}
+              href={link.href}
+              className="text-xl font-semibold border-b border-border pb-4 hover:text-primary transition-colors"
+              onClick={() => setMobileMenuOpen(false)}
+            >
+              {link.name}
+            </Link>
+          ))}
+          <Button size="lg" className="mt-4 bg-accent hover:bg-accent/90 w-full h-14 text-lg">
+            Inscríbete Hoy
+          </Button>
+        </nav>
+      </div>
     </header>
   );
 };

@@ -37,40 +37,50 @@ const testimonials = [
 
 export const Testimonials = () => {
   return (
-    <section id="testimonios" className="py-24 bg-slate-50 dark:bg-slate-900/50">
+    <section id="testimonios" className="py-16 md:py-24 bg-slate-50 dark:bg-slate-900/50 overflow-hidden">
       <div className="container mx-auto px-4">
-        <div className="text-center mb-16">
-          <h2 className="text-accent font-bold tracking-widest uppercase text-sm mb-4">Lo que dicen de nosotros</h2>
-          <h3 className="text-4xl font-bold font-headline text-foreground">Testimonios de Éxito</h3>
+        <div className="text-center mb-12 md:mb-16">
+          <h2 className="text-accent font-bold tracking-widest uppercase text-xs md:text-sm mb-4">Lo que dicen de nosotros</h2>
+          <h3 className="text-3xl md:text-5xl font-bold font-headline text-foreground">Testimonios de Éxito</h3>
         </div>
 
-        <div className="relative max-w-5xl mx-auto px-12">
-          <Carousel opts={{ align: "start", loop: true }} className="w-full">
-            <CarouselContent>
+        <div className="relative max-w-6xl mx-auto px-4 sm:px-12">
+          <Carousel 
+            opts={{ 
+              align: "start", 
+              loop: true 
+            }} 
+            className="w-full"
+          >
+            <CarouselContent className="-ml-2 md:-ml-4">
               {testimonials.map((t, index) => {
                 const img = PlaceHolderImages.find(p => p.id === t.imgId);
                 return (
-                  <CarouselItem key={index} className="md:basis-1/2 lg:basis-1/2">
-                    <Card className="h-full border-none shadow-lg m-2">
-                      <CardContent className="p-8">
-                        <Quote className="w-10 h-10 text-primary/20 mb-4" />
-                        <p className="text-lg italic text-muted-foreground mb-6">"{t.content}"</p>
-                        <div className="flex items-center gap-4">
-                          <div className="relative w-14 h-14 rounded-full overflow-hidden border-2 border-primary">
-                            <Image 
-                              src={img?.imageUrl || ''} 
-                              alt={t.name} 
-                              fill 
-                              className="object-cover"
-                              data-ai-hint={img?.imageHint}
-                            />
+                  <CarouselItem key={index} className="pl-2 md:pl-4 basis-full sm:basis-1/2 lg:basis-1/3">
+                    <Card className="h-full border-none shadow-xl rounded-3xl m-1 hover:shadow-2xl transition-shadow duration-300">
+                      <CardContent className="p-8 flex flex-col h-full">
+                        <Quote className="w-10 h-10 text-primary/15 mb-6 shrink-0" />
+                        <p className="text-base md:text-lg italic text-muted-foreground mb-8 flex-grow leading-relaxed">
+                          "{t.content}"
+                        </p>
+                        <div className="flex items-center gap-4 mt-auto">
+                          <div className="relative w-14 h-14 rounded-full overflow-hidden border-2 border-primary/30 p-0.5">
+                            <div className="relative w-full h-full rounded-full overflow-hidden">
+                              <Image 
+                                src={img?.imageUrl || ''} 
+                                alt={t.name} 
+                                fill 
+                                className="object-cover"
+                                data-ai-hint={img?.imageHint}
+                              />
+                            </div>
                           </div>
                           <div>
-                            <p className="font-bold text-foreground">{t.name}</p>
-                            <p className="text-sm text-primary font-medium">{t.role}</p>
-                            <div className="flex gap-0.5 mt-1">
+                            <p className="font-bold text-foreground text-lg">{t.name}</p>
+                            <p className="text-sm text-primary font-semibold">{t.role}</p>
+                            <div className="flex gap-0.5 mt-1.5">
                               {[...Array(5)].map((_, i) => (
-                                <Star key={i} className="w-3 h-3 text-yellow-500 fill-yellow-500" />
+                                <Star key={i} className="w-3.5 h-3.5 text-yellow-500 fill-yellow-500" />
                               ))}
                             </div>
                           </div>
@@ -81,8 +91,14 @@ export const Testimonials = () => {
                 );
               })}
             </CarouselContent>
-            <CarouselPrevious className="-left-4 bg-primary text-white hover:bg-primary/90" />
-            <CarouselNext className="-right-4 bg-primary text-white hover:bg-primary/90" />
+            
+            {/* Controls are only visible and functional if there's enough space */}
+            <div className="hidden sm:block">
+              <CarouselPrevious className="-left-12 h-12 w-12 bg-white dark:bg-slate-800 text-primary border-primary/20 hover:bg-primary hover:text-white transition-all shadow-md" />
+              <CarouselNext className="-right-12 h-12 w-12 bg-white dark:bg-slate-800 text-primary border-primary/20 hover:bg-primary hover:text-white transition-all shadow-md" />
+            </div>
+            
+            {/* Mobile pagination dots indicator could go here if implemented in the UI component */}
           </Carousel>
         </div>
       </div>
