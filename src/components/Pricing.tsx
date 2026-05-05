@@ -4,7 +4,7 @@ import { Check, Shield } from 'lucide-react';
 
 const plans = [
   {
-    name: 'Básico',
+    name: 'Programa experto',
     price: '$199',
     description: 'Perfecto para quienes necesitan reforzar conocimientos.',
     features: ['10 horas de práctica', 'Material teórico digital', 'Examen de simulacro', 'Trámites administrativos'],
