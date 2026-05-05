@@ -81,9 +81,11 @@ export const Header = () => {
               )} />
             </Link>
           ))}
-          <Button variant="default" className="bg-accent hover:bg-accent/90 rounded-full px-6 shadow-lg shadow-accent/20 transition-all hover:translate-y-[-2px]">
-            Más información
-          </Button>
+          <Link href="#planes">
+            <Button variant="default" className="bg-accent hover:bg-accent/90 rounded-full px-6 shadow-lg shadow-accent/20 transition-all hover:translate-y-[-2px]">
+              Más información
+            </Button>
+          </Link>
         </nav>
 
         {/* Mobile Toggle */}
@@ -118,9 +120,11 @@ export const Header = () => {
               {link.name}
             </Link>
           ))}
-          <Button size="lg" className="mt-4 bg-accent hover:bg-accent/90 w-full h-14 text-lg rounded-2xl">
-            Más información
-          </Button>
+          <Link href="#planes" onClick={() => setMobileMenuOpen(false)}>
+            <Button size="lg" className="mt-4 bg-accent hover:bg-accent/90 w-full h-14 text-lg rounded-2xl">
+              Más información
+            </Button>
+          </Link>
         </nav>
       </div>
     </header>
