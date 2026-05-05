@@ -6,7 +6,6 @@ import { Testimonials } from '@/components/Testimonials';
 import { Pricing } from '@/components/Pricing';
 import { Contact } from '@/components/Contact';
 import { Footer } from '@/components/Footer';
-import { AiAssistant } from '@/components/AiAssistant';
 
 export default function Home() {
   return (
@@ -18,7 +17,6 @@ export default function Home() {
       <Pricing />
       <Contact />
       <Footer />
-      <AiAssistant />
     </main>
   );
 }

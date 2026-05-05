@@ -1,4 +1,5 @@
+
 import { config } from 'dotenv';
 config();
 
-import '@/ai/flows/ai-faq-assistant.ts';
+// No AI flows registered as per request

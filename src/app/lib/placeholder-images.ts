@@ -1,6 +1,4 @@
 
-import data from './placeholder-images.json';
-
 export type ImagePlaceholder = {
   id: string;
   description: string;
@@ -8,4 +6,59 @@ export type ImagePlaceholder = {
   imageHint: string;
 };
 
-export const PlaceHolderImages: ImagePlaceholder[] = data.placeholderImages;
+export const PlaceHolderImages: ImagePlaceholder[] = [
+  {
+    "id": "hero-bg",
+    "description": "Estudiante conduciendo un coche con un instructor",
+    "imageUrl": "https://picsum.photos/seed/ruta-hero/1920/1080",
+    "imageHint": "driving school"
+  },
+  {
+    "id": "service-beginner",
+    "description": "Primer plano de volante con manos",
+    "imageUrl": "https://picsum.photos/seed/ruta-beginner/800/600",
+    "imageHint": "car steering"
+  },
+  {
+    "id": "service-advanced",
+    "description": "Coche conduciendo en el tráfico nocturno",
+    "imageUrl": "https://picsum.photos/seed/ruta-advanced/800/600",
+    "imageHint": "city traffic"
+  },
+  {
+    "id": "service-theory",
+    "description": "Aula con gente aprendiendo teoría de conducción",
+    "imageUrl": "https://picsum.photos/seed/ruta-theory/800/600",
+    "imageHint": "classroom study"
+  },
+  {
+    "id": "student-1",
+    "description": "Joven feliz con su licencia de conducir",
+    "imageUrl": "https://picsum.photos/seed/student1/200/200",
+    "imageHint": "happy student"
+  },
+  {
+    "id": "student-2",
+    "description": "Mujer sonriendo junto a un coche de autoescuela",
+    "imageUrl": "https://picsum.photos/seed/student2/200/200",
+    "imageHint": "smiling driver"
+  },
+  {
+    "id": "student-3",
+    "description": "Persona dando pulgar hacia arriba dentro de un coche",
+    "imageUrl": "https://picsum.photos/seed/student3/200/200",
+    "imageHint": "success driver"
+  },
+  {
+    "id": "map-location",
+    "description": "Mapa con la ubicación de la academia",
+    "imageUrl": "https://picsum.photos/seed/map/800/600",
+    "imageHint": "map location"
+  },
+  {
+    "id": "driving-instructor",
+    "description": "Instructor de conducción profesional",
+    "imageUrl": "https://picsum.photos/seed/driving-instruct/800/600",
+    "imageHint": "driving instructor"
+  }
+];
