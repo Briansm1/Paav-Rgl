@@ -12,7 +12,7 @@ const plans = [
   },
   {
     name: 'Programa seguridad avanzada',
-    price: '$299.999',
+    price: 'Desde $165.999',
     description: 'Nuestro curso más completo para principiantes.',
     features: ['20 horas de práctica', 'Curso teórico presencial', 'Vehículo para examen', 'Manejo defensivo', 'Garantía de aprobación'],
     isPopular: true
