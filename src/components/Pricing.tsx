@@ -46,7 +46,7 @@ export const Pricing = () => {
           {plans.map((plan, index) => (
             <div 
               key={index} 
-              className={`relative p-8 md:p-12 rounded-[2.5rem] border transition-all duration-700 flex flex-col ${
+              className={`relative p-8 md:p-12 rounded-[2.5rem] border transition-all duration-700 flex flex-col text-center ${
                 plan.isPopular 
                   ? 'bg-white dark:bg-slate-800 border-primary shadow-2xl scale-100 lg:scale-105 z-10' 
                   : 'bg-white/50 dark:bg-slate-800/50 border-border hover:border-primary/50 shadow-sm'
@@ -54,14 +54,14 @@ export const Pricing = () => {
             >
               <div className="mb-10">
                 <h4 className="text-2xl font-bold mb-4">{plan.name}</h4>
-                <div className="flex items-baseline gap-2 mb-4">
+                <div className="flex items-baseline justify-center gap-2 mb-4">
                   <span className="text-5xl md:text-6xl font-bold tracking-tight">{plan.price}</span>
                   <span className="text-muted-foreground font-semibold">/total</span>
                 </div>
                 <p className="text-muted-foreground text-base leading-relaxed font-medium">{plan.description}</p>
               </div>
 
-              <div className="space-y-5 mb-12 flex-grow">
+              <div className="space-y-5 mb-12 flex-grow flex flex-col items-center">
                 {plan.features.map((feature, i) => (
                   <div key={i} className="flex items-center gap-4">
                     <div className="shrink-0 bg-primary/10 p-1.5 rounded-full shadow-inner">
@@ -91,7 +91,7 @@ export const Pricing = () => {
             <div className="shrink-0 bg-primary/10 p-4 rounded-3xl">
               <Shield className="w-10 h-10 text-primary" />
             </div>
-            <div className="text-left">
+            <div className="text-center md:text-left">
               <h5 className="text-xl font-bold mb-1">Tu seguridad es nuestra prioridad</h5>
               <p className="text-muted-foreground text-sm md:text-base leading-relaxed">
                 Todos los planes incluyen un seguro de accidentes personal durante las horas de práctica, sin costo adicional.
