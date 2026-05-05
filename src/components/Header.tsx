@@ -16,13 +16,11 @@ export const Header = () => {
     const handleScroll = () => {
       setIsScrolled(window.scrollY > 20);
 
-      // Lógica simple de scroll spy para resaltar la sección actual
       const sections = ['inicio', 'servicios', 'testimonios', 'planes', 'contacto'];
       const current = sections.find(section => {
         const element = document.getElementById(section);
         if (element) {
           const rect = element.getBoundingClientRect();
-          // Detectamos si la sección está en la parte superior de la ventana
           return rect.top >= -150 && rect.top <= 300;
         }
         return false;
@@ -77,7 +75,6 @@ export const Header = () => {
               )}
             >
               {link.name}
-              {/* El "rengloncito" o indicador inferior */}
               <span className={cn(
                 "absolute bottom-0 left-0 w-full h-0.5 bg-primary transition-transform duration-300 origin-left",
                 activeSection === link.href ? "scale-x-100" : "scale-x-0"
@@ -85,7 +82,7 @@ export const Header = () => {
             </Link>
           ))}
           <Button variant="default" className="bg-accent hover:bg-accent/90 rounded-full px-6 shadow-lg shadow-accent/20 transition-all hover:translate-y-[-2px]">
-            Inscríbete Hoy
+            Más información
           </Button>
         </nav>
 
@@ -122,7 +119,7 @@ export const Header = () => {
             </Link>
           ))}
           <Button size="lg" className="mt-4 bg-accent hover:bg-accent/90 w-full h-14 text-lg rounded-2xl">
-            Inscríbete Hoy
+            Más información
           </Button>
         </nav>
       </div>
