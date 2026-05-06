@@ -3,7 +3,7 @@ import Link from 'next/link';
 import { Header } from '@/components/Header';
 import { Footer } from '@/components/Footer';
 import { Button } from '@/components/ui/button';
-import { Check, ArrowLeft, Clock, Star, CreditCard } from 'lucide-react';
+import { Check, ArrowLeft, Clock, Star } from 'lucide-react';
 
 const detailedPlans = [
   {
@@ -70,7 +70,7 @@ export default function PlanesPage() {
                     </div>
                     <div className="flex flex-col items-center justify-center gap-2">
                       <div className="flex items-center gap-2 text-muted-foreground">
-                        <CreditCard className="w-5 h-5" />
+                        <span className="text-xl">💳</span>
                         <span className="text-sm font-medium">Tarjetas de crédito</span>
                       </div>
                       <p className="text-3xl font-bold text-green-600">{plan.cardPrice}</p>
