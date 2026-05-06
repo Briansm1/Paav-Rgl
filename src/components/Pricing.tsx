@@ -6,13 +6,6 @@ import { cn } from '@/lib/utils';
 
 const plans = [
   {
-    name: 'Programa fundamentos',
-    price: 'Desde $149.999',
-    description: 'Ideal para quienes empiezan desde cero y quieren aprender bien.',
-    highlight: false,
-    badge: 'Completo',
-  },
-  {
     name: 'Plan dominio',
     price: 'Desde $86.999',
     description: 'Perfecto para quienes necesitan reforzar conocimientos.',
@@ -25,6 +18,13 @@ const plans = [
     description: 'Para conductores que buscan maestría total en cualquier entorno.',
     highlight: false,
     badge: 'Elite',
+  },
+  {
+    name: 'Programa fundamentos',
+    price: 'Desde $149.999',
+    description: 'Ideal para quienes empiezan desde cero y quieren aprender bien.',
+    highlight: false,
+    badge: 'Completo',
   }
 ];
 
@@ -87,7 +87,7 @@ export const Pricing = () => {
               <Shield className="w-10 h-10 text-primary" />
             </div>
             <div className="text-center md:text-left">
-              <h5 className="text-xl font-bold mb-1">Tu seguridad es nuestra priority</h5>
+              <h5 className="text-xl font-bold mb-1">Tu seguridad es nuestra prioridad</h5>
               <p className="text-muted-foreground text-sm md:text-base leading-relaxed">
                 Todos nuestros planes incluyen un seguro de accidentes personal durante las horas de práctica, sin costo adicional.
               </p>
