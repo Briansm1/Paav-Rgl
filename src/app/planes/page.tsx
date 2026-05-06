@@ -46,18 +46,18 @@ export default function PlanesPage() {
       </section>
 
       {/* Detalle de Planes */}
-      <section className="py-20">
+      <section className="py-12 md:py-20">
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto">
             {detailedPlans.map((plan, index) => (
               <div 
                 key={index} 
-                className="flex flex-col gap-12 items-center p-8 md:p-12 rounded-[2.5rem] border-2 bg-white dark:bg-slate-900 shadow-2xl transition-all duration-500 border-border"
+                className="flex flex-col gap-8 md:gap-10 items-center p-6 md:p-10 rounded-[2.5rem] border-2 bg-white dark:bg-slate-900 shadow-2xl transition-all duration-500 border-border"
               >
-                <div className="w-full space-y-8 flex flex-col items-center text-center">
+                <div className="w-full space-y-6 md:space-y-8 flex flex-col items-center text-center">
                   <h2 className="text-3xl md:text-5xl font-bold tracking-tight">{plan.name}</h2>
                   
-                  <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 w-full max-w-2xl bg-slate-50 dark:bg-slate-800/50 p-6 rounded-2xl border border-border/50">
+                  <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 md:gap-6 w-full max-w-2xl bg-slate-50 dark:bg-slate-800/50 p-6 rounded-2xl border border-border/50">
                     <div className="flex flex-col items-center justify-center gap-2 sm:border-r border-border/50 sm:pr-6">
                       <div className="flex items-center gap-2 text-muted-foreground">
                         <span className="text-xl">📲</span>
@@ -83,23 +83,23 @@ export default function PlanesPage() {
                   <p className="text-lg text-muted-foreground leading-relaxed max-w-xl">
                     {plan.fullDesc}
                   </p>
-                  <div className="pt-4 w-full sm:w-auto">
+                  <div className="pt-2 w-full sm:w-auto">
                     <Button size="lg" className="rounded-full px-10 h-14 text-lg bg-primary hover:bg-primary/90 w-full">
                       Inscribirme Ahora
                     </Button>
                   </div>
                 </div>
 
-                <div className="w-full bg-slate-50 dark:bg-slate-800/50 p-8 md:p-10 rounded-[2rem] border border-border/50">
-                  <h3 className="text-xl font-bold mb-8 flex items-center justify-center gap-2">
+                <div className="w-full bg-slate-50 dark:bg-slate-800/50 p-6 md:p-8 rounded-[2rem] border border-border/50">
+                  <h3 className="text-xl font-bold mb-4 md:mb-6 flex items-center justify-center gap-2">
                     <Star className="w-5 h-5 text-accent fill-accent" />
                     ¿Qué incluye este programa?
                   </h3>
-                  <ul className="grid grid-cols-1 md:grid-cols-2 gap-x-8 gap-y-5">
+                  <ul className="grid grid-cols-1 md:grid-cols-2 gap-x-8 gap-y-2 md:gap-y-3">
                     {plan.features.map((feature, i) => (
-                      <li key={i} className="flex items-start gap-3">
+                      <li key={i} className="flex items-start gap-2.5">
                         <div className="mt-1 bg-green-500/10 p-1 rounded-full shrink-0">
-                          <Check className="w-3.5 h-3.5 text-green-600" />
+                          <Check className="w-3 h-3 text-green-600" />
                         </div>
                         <span className="text-sm md:text-base text-foreground/90 font-medium leading-tight">{feature}</span>
                       </li>
@@ -113,10 +113,10 @@ export default function PlanesPage() {
       </section>
 
       {/* Footer CTA */}
-      <section className="py-20 bg-white dark:bg-slate-900 border-t border-border">
+      <section className="py-16 bg-white dark:bg-slate-900 border-t border-border">
         <div className="container mx-auto px-4 text-center">
-          <h2 className="text-3xl font-bold mb-6">¿Aún tienes dudas?</h2>
-          <p className="text-muted-foreground mb-10 max-w-xl mx-auto">
+          <h2 className="text-3xl font-bold mb-4">¿Aún tienes dudas?</h2>
+          <p className="text-muted-foreground mb-8 max-w-xl mx-auto">
             Nuestros asesores expertos están listos para ayudarte a resolver cualquier inquietud sobre el Plan dominio.
           </p>
           <Link href="/#contacto">
