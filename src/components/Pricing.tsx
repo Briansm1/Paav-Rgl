@@ -9,21 +9,18 @@ const plans = [
     name: 'Plan dominio',
     price: 'Desde $86.999',
     description: 'Perfecto para quienes necesitan reforzar conocimientos.',
-    highlight: true,
     badge: 'Más Popular',
   },
   {
     name: 'Seguridad avanzada',
     price: 'Desde $199.999',
     description: 'Para conductores que buscan maestría total en cualquier entorno.',
-    highlight: false,
     badge: 'Elite',
   },
   {
     name: 'Programa fundamentos',
     price: 'Desde $149.999',
     description: 'Ideal para quienes empiezan desde cero y quieren aprender bien.',
-    highlight: false,
     badge: 'Completo',
   }
 ];
@@ -49,8 +46,7 @@ export const Pricing = () => {
             <div 
               key={index} 
               className={cn(
-                "relative p-8 rounded-[2.5rem] border-2 bg-white dark:bg-slate-800 shadow-xl transition-all duration-500 flex flex-col group overflow-hidden",
-                plan.highlight ? "border-accent scale-105 z-10" : "border-border hover:border-primary/50"
+                "relative p-8 rounded-[2.5rem] border-2 bg-white dark:bg-slate-800 shadow-xl transition-all duration-500 flex flex-col group overflow-hidden border-border hover:border-primary/50"
               )}
             >
               <div className="absolute top-0 right-0 bg-accent text-white px-6 py-1.5 rounded-bl-2xl text-[10px] font-bold uppercase tracking-widest">
@@ -69,8 +65,7 @@ export const Pricing = () => {
                 <Link href="/planes" className="w-full">
                   <Button 
                     className={cn(
-                      "w-full h-14 rounded-2xl text-base font-bold transition-all active:scale-95 shadow-lg",
-                      plan.highlight ? "bg-primary hover:bg-primary/90 text-white" : "bg-transparent border border-primary text-primary hover:bg-primary/5 shadow-none"
+                      "w-full h-14 rounded-2xl text-base font-bold transition-all active:scale-95 shadow-lg bg-primary hover:bg-primary/90 text-white"
                     )}
                   >
                     Conocer los planes
