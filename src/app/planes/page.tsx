@@ -102,7 +102,7 @@ export default function PlanesPage() {
                   </p>
                   <div className="pt-2 w-full sm:w-auto">
                     <Button size="lg" className="rounded-full px-10 h-14 text-lg bg-primary hover:bg-primary/90 w-full text-center">
-                      Inscribirme Ahora
+                      Quiero este plan
                     </Button>
                   </div>
                 </div>
