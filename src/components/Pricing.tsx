@@ -9,7 +9,7 @@ const plans = [
     name: 'Programa experto',
     price: 'Desde $86.999',
     description: 'Perfecto para quienes necesitan reforzar conocimientos.',
-    badge: 'NIVEL INTERMEDIO',
+    badge: 'NIVEL SUPERIOR',
   },
   {
     name: 'Seguridad avanzada',
@@ -21,7 +21,7 @@ const plans = [
     name: 'Programa fundamentos',
     price: 'Desde $149.999',
     description: 'Ideal para quienes empiezan desde cero y quieren aprender bien.',
-    badge: 'NIVEL INTERMEDIO',
+    badge: 'NIVEL INICIAL',
   }
 ];
 
