@@ -15,11 +15,11 @@ const detailedPlans = [
     icon: <Clock className="w-12 h-12 text-primary" />,
     features: [
       '2 sesiones de prácticas dinámicas',
+      'Auto para las prácticas',
       'Acceso a la comunidad privada',
       'Formación teórica aplicada a situaciones reales y sobre el marco legal',
       'Descuento en el uso del auto para el examen práctico - 5% off',
-      'Asesoría sobre los requisitos y trámites para gestionar la licencia de conducir',
-      'Auto para las prácticas'
+      'Asesoría sobre los requisitos y trámites para gestionar la licencia de conducir'
     ]
   }
 ];
