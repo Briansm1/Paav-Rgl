@@ -56,9 +56,6 @@ export default function PlanesPage() {
           <h1 className="text-4xl md:text-6xl font-bold font-headline mb-6 text-foreground text-center">
             Nuestros detalles para el <span className="text-primary">programa experto</span>
           </h1>
-          <p className="text-lg md:text-xl text-muted-foreground max-w-2xl mx-auto text-center">
-            Explora a fondo nuestro curso especializado y elige el camino que transformará tu manera de conducir para siempre.
-          </p>
         </div>
       </section>
 
