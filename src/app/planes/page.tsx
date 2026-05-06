@@ -73,7 +73,7 @@ export default function PlanesPage() {
                   
                   <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 md:gap-6 w-full max-w-2xl bg-slate-50 dark:bg-slate-800/50 p-6 rounded-2xl border border-border/50">
                     <div className="flex flex-col items-center justify-center gap-2 sm:border-r border-border/50 sm:pr-6">
-                      <div className="flex items-center gap-2 text-muted-foreground">
+                      <div className="flex flex-col items-center text-muted-foreground">
                         <span className="text-xl">📲</span>
                         <span className="text-sm font-medium">Transferencia</span>
                       </div>
@@ -83,7 +83,7 @@ export default function PlanesPage() {
                       </span>
                     </div>
                     <div className="flex flex-col items-center justify-center gap-2">
-                      <div className="flex items-center gap-2 text-muted-foreground">
+                      <div className="flex flex-col items-center text-muted-foreground">
                         <span className="text-xl">💳</span>
                         <span className="text-sm font-medium">Tarjetas de crédito</span>
                       </div>
