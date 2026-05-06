@@ -9,18 +9,6 @@ const plans = [
     price: 'Desde $86.999',
     description: 'Perfecto para quienes necesitan reforzar conocimientos.',
     features: ['10 horas de práctica', 'Material teórico digital', 'Examen de simulacro', 'Trámites administrativos'],
-  },
-  {
-    name: 'Programa seguridad avanzada',
-    price: 'Desde $165.999',
-    description: 'Nuestro curso más completo para principiantes.',
-    features: ['20 horas de práctica', 'Curso teórico presencial', 'Vehículo para examen', 'Manejo defensivo', 'Garantía de aprobación'],
-  },
-  {
-    name: 'Programa fundamentos',
-    price: 'Desde $311.999',
-    description: 'Para quienes buscan dominar cada aspecto del volante.',
-    features: ['30 horas de práctica', 'Manejo nocturno y carretera', 'Mecánica básica', 'Soporte prioritario', 'Vehículo premium'],
   }
 ];
 
@@ -30,17 +18,17 @@ export const Pricing = () => {
       <div className="container mx-auto px-4">
         <div className="text-center max-w-3xl mx-auto mb-16">
           <span className="inline-block px-4 py-1.5 mb-6 text-xs font-bold tracking-widest text-primary uppercase bg-primary/10 rounded-full border border-primary/20">
-            Nuestras Tarifas
+            Nuestra Tarifa
           </span>
           <h2 className="text-4xl md:text-6xl font-bold font-headline mb-6 tracking-tight text-foreground text-center">
-            Planes diseñados para tu <span className="text-primary italic">éxito</span>
+            Un plan diseñado para tu <span className="text-primary italic">éxito</span>
           </h2>
           <p className="text-lg md:text-xl text-muted-foreground leading-relaxed text-center">
-            Transparencia total y calidad garantizada. Elige el programa que mejor se adapte a tus metas.
+            Transparencia total y calidad garantizada en nuestro programa especializado.
           </p>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 md:gap-10 items-stretch">
+        <div className="max-w-lg mx-auto">
           {plans.map((plan, index) => (
             <div 
               key={index} 
@@ -71,7 +59,7 @@ export const Pricing = () => {
                 <Button 
                   className="w-full h-16 rounded-2xl text-lg font-bold transition-all active:scale-95 shadow-lg bg-primary hover:bg-primary/90 text-white relative z-10"
                 >
-                  Conocer más planes
+                  Conocer más detalles
                 </Button>
               </Link>
             </div>
@@ -86,7 +74,7 @@ export const Pricing = () => {
             <div className="text-center md:text-left">
               <h5 className="text-xl font-bold mb-1">Tu seguridad es nuestra prioridad</h5>
               <p className="text-muted-foreground text-sm md:text-base leading-relaxed">
-                Todos los planes incluyen un seguro de accidentes personal durante las horas de práctica, sin costo adicional.
+                El plan incluye un seguro de accidentes personal durante las horas de práctica, sin costo adicional.
               </p>
             </div>
           </div>

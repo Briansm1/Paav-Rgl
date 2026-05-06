@@ -20,39 +20,6 @@ const detailedPlans = [
       'Examen de simulacro incluido',
       'Asesoría en trámites de renovación'
     ]
-  },
-  {
-    name: 'Programa seguridad avanzada',
-    price: 'Desde $165.999',
-    shortDesc: 'El curso ideal para principiantes.',
-    fullDesc: 'Nuestro programa estrella. Te llevamos desde cero hasta la obtención de tu licencia con un enfoque total en la seguridad vial y el manejo defensivo.',
-    icon: <Shield className="w-12 h-12 text-primary" />,
-    featured: true,
-    features: [
-      '20 horas de práctica personalizada',
-      'Curso teórico presencial completo',
-      'Psicología del conductor',
-      'Vehículo disponible para el examen oficial',
-      'Técnicas de manejo defensivo',
-      'Garantía de aprobación (clases extra sin costo)',
-      'Kit del conductor Ruta Segura'
-    ]
-  },
-  {
-    name: 'Programa fundamentos',
-    price: 'Desde $311.999',
-    shortDesc: 'Dominio total del vehículo.',
-    fullDesc: 'El curso más robusto del mercado. No solo aprendes a conducir, sino que dominas el vehículo en cualquier terreno y condición climática.',
-    icon: <Car className="w-12 h-12 text-primary" />,
-    features: [
-      '30 horas de práctica extensiva',
-      'Salidas a carretera intermunicipal',
-      'Manejo nocturno y bajo lluvia',
-      'Mecánica básica y cambio de llantas',
-      'Soporte prioritario 24/7',
-      'Prácticas en vehículo premium de última generación',
-      'Certificación internacional de conducción segura'
-    ]
   }
 ];
 
@@ -72,7 +39,7 @@ export default function PlanesPage() {
             Nuestros planes para el <span className="text-primary">programa experto</span>
           </h1>
           <p className="text-lg md:text-xl text-muted-foreground max-w-2xl mx-auto">
-            Explora a fondo cada uno de nuestros cursos y elige el que transformará tu manera de conducir para siempre.
+            Explora a fondo nuestro curso especializado y elige el camino que transformará tu manera de conducir para siempre.
           </p>
         </div>
       </section>
@@ -80,11 +47,11 @@ export default function PlanesPage() {
       {/* Detalle de Planes */}
       <section className="py-20">
         <div className="container mx-auto px-4">
-          <div className="grid grid-cols-1 gap-16">
+          <div className="max-w-5xl mx-auto">
             {detailedPlans.map((plan, index) => (
               <div 
                 key={index} 
-                className={`flex flex-col lg:flex-row gap-12 items-stretch p-8 md:p-12 rounded-[3rem] border-2 bg-white dark:bg-slate-900 shadow-2xl transition-all duration-500 ${plan.featured ? 'border-accent ring-4 ring-accent/10' : 'border-border'}`}
+                className="flex flex-col lg:flex-row gap-12 items-stretch p-8 md:p-12 rounded-[3rem] border-2 bg-white dark:bg-slate-900 shadow-2xl transition-all duration-500 border-border"
               >
                 <div className="lg:w-1/2 space-y-8 flex flex-col justify-center text-center lg:text-left">
                   <div className="flex justify-center lg:justify-start">
@@ -92,11 +59,6 @@ export default function PlanesPage() {
                       {plan.icon}
                     </div>
                   </div>
-                  {plan.featured && (
-                    <span className="inline-block px-4 py-1 text-xs font-bold uppercase tracking-widest bg-accent text-white rounded-full self-center lg:self-start">
-                      El más elegido por alumnos
-                    </span>
-                  )}
                   <h2 className="text-3xl md:text-5xl font-bold tracking-tight">{plan.name}</h2>
                   <p className="text-2xl font-bold text-green-600">{plan.price}</p>
                   <p className="text-lg text-muted-foreground leading-relaxed">
@@ -114,7 +76,7 @@ export default function PlanesPage() {
                     <Star className="w-5 h-5 text-accent fill-accent" />
                     ¿Qué incluye este programa?
                   </h3>
-                  <ul className="grid grid-cols-1 md:grid-cols-2 gap-x-8 gap-y-5">
+                  <ul className="grid grid-cols-1 gap-y-5">
                     {plan.features.map((feature, i) => (
                       <li key={i} className="flex items-start gap-3">
                         <div className="mt-1 bg-green-500/10 p-1 rounded-full shrink-0">
@@ -136,7 +98,7 @@ export default function PlanesPage() {
         <div className="container mx-auto px-4 text-center">
           <h2 className="text-3xl font-bold mb-6">¿Aún tienes dudas?</h2>
           <p className="text-muted-foreground mb-10 max-w-xl mx-auto">
-            Nuestros asesores expertos están listos para ayudarte a elegir el plan perfecto según tus necesidades y presupuesto.
+            Nuestros asesores expertos están listos para ayudarte a resolver cualquier inquietud sobre el programa experto.
           </p>
           <Link href="/#contacto">
             <Button variant="outline" size="lg" className="rounded-full border-primary text-primary hover:bg-primary/5">
