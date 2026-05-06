@@ -63,32 +63,21 @@ export const Pricing = () => {
                 <div className="flex items-center gap-2 mb-4">
                   <span className="text-3xl font-bold tracking-tight text-green-600">{plan.price}</span>
                 </div>
-                <p className="text-muted-foreground text-sm leading-relaxed font-medium">{plan.description}</p>
+                <p className="text-muted-foreground text-sm leading-relaxed font-medium mb-6">{plan.description}</p>
               </div>
 
-              <div className="mb-10 flex-grow relative z-10">
-                <ul className="space-y-4">
-                  {plan.features.map((feature, i) => (
-                    <li key={i} className="flex items-center gap-3">
-                      <div className="shrink-0 bg-primary/10 p-1.5 rounded-full">
-                        <Check className="w-3 h-3 text-primary" />
-                      </div>
-                      <span className="text-sm text-foreground/90 font-medium">{feature}</span>
-                    </li>
-                  ))}
-                </ul>
+              <div className="mt-auto relative z-10">
+                <Link href="/planes" className="w-full">
+                  <Button 
+                    className={cn(
+                      "w-full h-14 rounded-2xl text-base font-bold transition-all active:scale-95 shadow-lg",
+                      plan.highlight ? "bg-primary hover:bg-primary/90 text-white" : "bg-transparent border border-primary text-primary hover:bg-primary/5 shadow-none"
+                    )}
+                  >
+                    Conocer más detalles
+                  </Button>
+                </Link>
               </div>
-
-              <Link href="/planes" className="w-full">
-                <Button 
-                  className={cn(
-                    "w-full h-14 rounded-2xl text-base font-bold transition-all active:scale-95 shadow-lg relative z-10",
-                    plan.highlight ? "bg-primary hover:bg-primary/90 text-white" : "bg-transparent border border-primary text-primary hover:bg-primary/5 shadow-none"
-                  )}
-                >
-                  Conocer más detalles
-                </Button>
-              </Link>
             </div>
           ))}
         </div>
