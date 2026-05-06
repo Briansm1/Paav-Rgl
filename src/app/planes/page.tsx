@@ -13,7 +13,6 @@ const detailedPlans = [
     shortDesc: 'Refuerzo y perfeccionamiento.',
     fullDesc: 'Diseñado para personas que ya tienen conocimientos básicos o licencia, pero desean ganar más seguridad en maniobras complejas, parqueo o tráfico pesado.',
     targetAudience: [
-      'Personas con licencia que no conducen por alguna razón',
       'Para quienes quieren realizar una simulación completa del examen práctico y ver en que situación está',
       'Para quienes necesitan mejorar alguna maniobra en particular',
       'Para quienes necesiten saber como trabajar la mentalidad a la hora de estar al volante'
