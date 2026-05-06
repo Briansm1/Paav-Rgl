@@ -16,7 +16,7 @@ const detailedPlans = [
       'Personas con licencia que no conducen por alguna razón',
       'Para quienes quieren realizar una simulación completa del examen práctico y ver en que situación está',
       'Para quienes necesitan mejorar alguna maniobra en particular',
-      'Consejos y práctica sobre como trabajar la mentalidad a la hora de estar al volante'
+      'Para quienes necesiten saber como trabajar la mentalidad a la hora de estar al volante'
     ],
     features: [
       '2 sesiones de prácticas dinámicas',
