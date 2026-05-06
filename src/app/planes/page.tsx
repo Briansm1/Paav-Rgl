@@ -158,11 +158,11 @@ export default function PlanesPage() {
                   </div>
                 </div>
 
-                {/* Sección: Bonos Exclusivos */}
+                {/* Sección: Bonos */}
                 <div className="w-full bg-primary/5 dark:bg-primary/10 p-6 md:p-8 rounded-[2rem] border-2 border-primary/20">
                   <h3 className="text-xl font-bold mb-6 flex items-center justify-center gap-2 text-primary text-center">
                     <Gift className="w-6 h-6" />
-                    Bonos Exclusivos
+                    Bonos
                   </h3>
                   <div className="grid grid-cols-1 md:grid-cols-2 gap-x-8 gap-y-3">
                     {plan.bonuses.map((bono, i) => (
