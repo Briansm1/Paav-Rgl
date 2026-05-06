@@ -3,7 +3,7 @@ import Link from 'next/link';
 import { Header } from '@/components/Header';
 import { Footer } from '@/components/Footer';
 import { Button } from '@/components/ui/button';
-import { Check, ArrowLeft, UserCheck } from 'lucide-react';
+import { Check, ArrowLeft, UserCheck, Target } from 'lucide-react';
 
 const detailedPlans = [
   {
@@ -16,6 +16,13 @@ const detailedPlans = [
       'Para quienes quieren realizar una simulación completa del examen práctico y ver en que situación está',
       'Para quienes necesitan mejorar alguna maniobra en particular',
       'Para quienes necesiten saber como trabajar la mentalidad a la hora de estar al volante'
+    ],
+    outcomes: [
+      'Dominio total del vehículo en cualquier tipo de pendiente.',
+      'Habilidad para parquear en paralelo y reversa con precisión milimétrica.',
+      'Confianza plena para circular por avenidas de alto flujo vehicular.',
+      'Conocimiento integral de las señales de tránsito y normas vigentes.',
+      'Capacidad para reaccionar con calma ante situaciones de riesgo imprevistas.'
     ],
     features: [
       '2 sesiones de prácticas dinámicas',
@@ -111,6 +118,24 @@ export default function PlanesPage() {
                   </div>
                 </div>
 
+                {/* Sección: ¿Qué vas a lograr? */}
+                <div className="w-full bg-slate-50 dark:bg-slate-800/50 p-6 md:p-8 rounded-[2rem] border border-border/50">
+                  <h3 className="text-xl font-bold mb-6 flex items-center justify-center gap-2 text-foreground text-center">
+                    ¿Qué vas a lograr?
+                  </h3>
+                  <div className="grid grid-cols-1 md:grid-cols-2 gap-x-8 gap-y-3">
+                    {plan.outcomes.map((item, i) => (
+                      <div key={i} className="flex items-start gap-3 group">
+                        <div className="mt-1 bg-accent/10 p-1 rounded-full shrink-0">
+                          <Target className="w-3 h-3 text-accent" />
+                        </div>
+                        <span className="text-sm md:text-base text-foreground/90 font-medium leading-tight">{item}</span>
+                      </div>
+                    ))}
+                  </div>
+                </div>
+
+                {/* Sección: ¿Qué incluye este programa? */}
                 <div className="w-full bg-slate-50 dark:bg-slate-800/50 p-6 md:p-8 rounded-[2rem] border border-border/50">
                   <h3 className="text-xl font-bold mb-6 flex items-center justify-center gap-2 text-foreground text-center">
                     ¿Qué incluye este programa?
