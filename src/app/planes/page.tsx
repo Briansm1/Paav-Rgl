@@ -19,7 +19,7 @@ const detailedPlans = [
       'Formación teórica aplicada a situaciones reales y sobre el marco legal',
       'Descuento en el uso del auto para el examen práctico - 5% off',
       'Asesoría sobre los requisitos y trámites para gestionar la licencia de conducir',
-      'Asesoría en trámites de renovación'
+      'Auto para las prácticas'
     ]
   }
 ];
