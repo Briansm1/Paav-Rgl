@@ -3,7 +3,7 @@ import Link from 'next/link';
 import { Header } from '@/components/Header';
 import { Footer } from '@/components/Footer';
 import { Button } from '@/components/ui/button';
-import { Check, ArrowLeft, Star } from 'lucide-react';
+import { Check, ArrowLeft } from 'lucide-react';
 
 const detailedPlans = [
   {
@@ -54,7 +54,7 @@ export default function PlanesPage() {
                 className="flex flex-col gap-10 p-6 md:p-10 rounded-[2.5rem] border-2 bg-white dark:bg-slate-900 shadow-2xl border-border"
               >
                 <div className="w-full space-y-6 flex flex-col items-center text-center">
-                  <h2 className="text-3xl md:text-5xl font-bold tracking-tight">{plan.name}</h2>
+                  <h2 className="text-3xl md:text-5xl font-bold tracking-tight">Plan dominio</h2>
                   
                   <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 md:gap-6 w-full max-w-2xl bg-slate-50 dark:bg-slate-800/50 p-6 rounded-2xl border border-border/50">
                     <div className="flex flex-col items-center justify-center gap-2 sm:border-r border-border/50 sm:pr-6">
@@ -91,7 +91,6 @@ export default function PlanesPage() {
 
                 <div className="w-full bg-slate-50 dark:bg-slate-800/50 p-6 md:p-8 rounded-[2rem] border border-border/50">
                   <h3 className="text-xl font-bold mb-6 flex items-center justify-center gap-2 text-foreground">
-                    <Star className="w-5 h-5 text-accent fill-accent" />
                     ¿Qué incluye este programa?
                   </h3>
                   <div className="grid grid-cols-1 md:grid-cols-2 gap-x-8 gap-y-3">
