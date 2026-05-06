@@ -1,7 +1,7 @@
 import React from 'react';
 import Link from 'next/link';
 import { Button } from '@/components/ui/button';
-import { Check, Shield } from 'lucide-react';
+import { Shield } from 'lucide-react';
 import { cn } from '@/lib/utils';
 
 const plans = [
@@ -9,21 +9,18 @@ const plans = [
     name: 'Programa fundamentos',
     price: 'Desde $149.999',
     description: 'Ideal para quienes empiezan desde cero y quieren aprender bien.',
-    features: ['10 sesiones de práctica', 'Teoría completa presencial', 'Examen de simulacro', 'Gestión de licencia'],
     highlight: false,
   },
   {
     name: 'Plan dominio',
     price: 'Desde $86.999',
     description: 'Perfecto para quienes necesitan reforzar conocimientos.',
-    features: ['2 sesiones de prácticas dinámicas', 'Material teórico digital', 'Examen de simulacro', 'Trámites administrativos'],
     highlight: true,
   },
   {
     name: 'Seguridad avanzada',
     price: 'Desde $199.999',
     description: 'Para conductores que buscan maestría total en cualquier entorno.',
-    features: ['Prácticas en carretera', 'Manejo defensivo pro', 'Técnicas de evasión', 'Certificación premium'],
     highlight: false,
   }
 ];
@@ -74,7 +71,7 @@ export const Pricing = () => {
                       plan.highlight ? "bg-primary hover:bg-primary/90 text-white" : "bg-transparent border border-primary text-primary hover:bg-primary/5 shadow-none"
                     )}
                   >
-                    Conocer más detalles
+                    Conocer los planes
                   </Button>
                 </Link>
               </div>
