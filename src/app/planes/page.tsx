@@ -33,10 +33,10 @@ const detailedPlans = [
       'Asesoría sobre los requisitos y trámites para gestionar la licencia de conducir'
     ],
     bonuses: [
-      'Acceso de por vida a la comunidad privada',
-      'Masterclass: Mantenimiento básico preventivo',
-      'Guía digital: Dominando el tráfico urbano',
-      'Soporte prioritario vía WhatsApp por 30 días'
+      'Como identificar los diferentes fluidos de un auto y como controlarlos',
+      'Como realizar un cambio de neumático',
+      'Simulador de examen teórico con +85 preguntas',
+      'Descuentos exclusivos en nuestros productos digitales'
     ]
   }
 ];
