@@ -9,19 +9,19 @@ const plans = [
     name: 'Plan dominio',
     price: 'Desde $86.999',
     description: 'Perfecto para quienes necesitan reforzar conocimientos.',
-    badge: 'Más Popular',
+    badge: 'NIVEL SUPERIOR',
   },
   {
     name: 'Seguridad avanzada',
     price: 'Desde $199.999',
     description: 'Para conductores que buscan maestría total en cualquier entorno.',
-    badge: 'Elite',
+    badge: 'NIVEL SUPERIOR',
   },
   {
     name: 'Programa fundamentos',
     price: 'Desde $149.999',
     description: 'Ideal para quienes empiezan desde cero y quieren aprender bien.',
-    badge: 'Completo',
+    badge: 'NIVEL SUPERIOR',
   }
 ];
 
