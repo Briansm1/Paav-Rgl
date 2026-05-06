@@ -14,7 +14,7 @@ const detailedPlans = [
     fullDesc: 'Diseñado para personas que ya tienen conocimientos básicos o licencia, pero desean ganar más seguridad en maniobras complejas, parqueo o tráfico pesado.',
     targetAudience: [
       'Personas con licencia que no conducen por alguna razón',
-      'Conductores que desean perfeccionar el parqueo',
+      'Para quienes quieren realizar una simulación completa del examen práctico y ver en que situación está',
       'Para quienes necesitan mejorar alguna maniobra en particular',
       'Estudiantes que necesitan refuerzo antes del examen'
     ],
@@ -95,7 +95,7 @@ export default function PlanesPage() {
                   </div>
                 </div>
 
-                {/* Nueva Sección: ¿Para quién es? */}
+                {/* Sección: ¿Para quién es? */}
                 <div className="w-full bg-slate-50 dark:bg-slate-800/50 p-6 md:p-8 rounded-[2rem] border border-border/50">
                   <h3 className="text-xl font-bold mb-6 flex items-center justify-center gap-2 text-foreground text-center">
                     ¿Para quién es?
