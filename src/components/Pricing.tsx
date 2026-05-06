@@ -6,7 +6,7 @@ import { cn } from '@/lib/utils';
 
 const plans = [
   {
-    name: 'Plan dominio',
+    name: 'Programa experto',
     price: 'Desde $86.999',
     description: 'Perfecto para quienes necesitan reforzar conocimientos.',
     badge: 'NIVEL INTERMEDIO',
@@ -46,7 +46,7 @@ export const Pricing = () => {
             <div 
               key={index} 
               className={cn(
-                "relative p-8 rounded-[2.5rem] border-2 bg-white dark:bg-slate-800 shadow-xl transition-all duration-500 flex flex-col group overflow-hidden border-border hover:border-primary/50"
+                "relative p-8 rounded-[2.5rem] border-2 bg-white dark:bg-slate-800 shadow-xl transition-all duration-500 flex flex-col group overflow-hidden border-border"
               )}
             >
               <div className="absolute top-0 right-0 bg-accent text-white px-6 py-1.5 rounded-bl-2xl text-[10px] font-bold uppercase tracking-widest">

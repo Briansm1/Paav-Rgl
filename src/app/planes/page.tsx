@@ -3,16 +3,15 @@ import Link from 'next/link';
 import { Header } from '@/components/Header';
 import { Footer } from '@/components/Footer';
 import { Button } from '@/components/ui/button';
-import { Check, ArrowLeft, Clock, Star } from 'lucide-react';
+import { Check, ArrowLeft, Star } from 'lucide-react';
 
 const detailedPlans = [
   {
-    name: 'Plan dominio',
+    name: 'Programa experto',
     transferPrice: '$86.999',
     cardPrice: '$133.999',
     shortDesc: 'Refuerzo y perfeccionamiento.',
     fullDesc: 'Diseñado para personas que ya tienen conocimientos básicos o licencia, pero desean ganar más seguridad en maniobras complejas, parqueo o tráfico pesado.',
-    icon: <Clock className="w-12 h-12 text-primary" />,
     features: [
       '2 sesiones de prácticas dinámicas',
       'Auto para las prácticas',
@@ -37,7 +36,7 @@ export default function PlanesPage() {
             Volver al inicio
           </Link>
           <h1 className="text-4xl md:text-6xl font-bold font-headline mb-6 text-foreground">
-            Nuestros planes para el <span className="text-primary">Plan dominio</span>
+            Nuestros detalles para el <span className="text-primary">Programa experto</span>
           </h1>
           <p className="text-lg md:text-xl text-muted-foreground max-w-2xl mx-auto">
             Explora a fondo nuestro curso especializado y elige el camino que transformará tu manera de conducir para siempre.
@@ -52,9 +51,9 @@ export default function PlanesPage() {
             {detailedPlans.map((plan, index) => (
               <div 
                 key={index} 
-                className="flex flex-col gap-8 md:gap-10 items-center p-6 md:p-10 rounded-[2.5rem] border-2 bg-white dark:bg-slate-900 shadow-2xl transition-all duration-500 border-border"
+                className="flex flex-col gap-10 p-6 md:p-10 rounded-[2.5rem] border-2 bg-white dark:bg-slate-900 shadow-2xl border-border"
               >
-                <div className="w-full space-y-6 md:space-y-8 flex flex-col items-center text-center">
+                <div className="w-full space-y-6 flex flex-col items-center text-center">
                   <h2 className="text-3xl md:text-5xl font-bold tracking-tight">{plan.name}</h2>
                   
                   <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 md:gap-6 w-full max-w-2xl bg-slate-50 dark:bg-slate-800/50 p-6 rounded-2xl border border-border/50">
@@ -90,18 +89,18 @@ export default function PlanesPage() {
                   </div>
                 </div>
 
-                <div className="w-full bg-slate-50 dark:bg-slate-800/50 p-6 md:p-10 rounded-[2rem] border border-border/50">
-                  <h3 className="text-xl font-bold mb-8 flex items-center justify-center gap-2 text-foreground">
+                <div className="w-full bg-slate-50 dark:bg-slate-800/50 p-6 md:p-8 rounded-[2rem] border border-border/50">
+                  <h3 className="text-xl font-bold mb-6 flex items-center justify-center gap-2 text-foreground">
                     <Star className="w-5 h-5 text-accent fill-accent" />
                     ¿Qué incluye este programa?
                   </h3>
-                  <div className="grid grid-cols-1 md:grid-cols-2 gap-x-12 gap-y-5">
+                  <div className="grid grid-cols-1 md:grid-cols-2 gap-x-8 gap-y-3">
                     {plan.features.map((feature, i) => (
-                      <div key={i} className="flex items-start gap-3.5 group">
-                        <div className="mt-0.5 bg-green-500/10 p-1.5 rounded-full shrink-0 group-hover:bg-green-500/20 transition-colors">
-                          <Check className="w-4 h-4 text-green-600" />
+                      <div key={i} className="flex items-start gap-3 group">
+                        <div className="mt-1 bg-green-500/10 p-1 rounded-full shrink-0">
+                          <Check className="w-3 h-3 text-green-600" />
                         </div>
-                        <span className="text-base text-foreground/80 font-medium leading-snug">{feature}</span>
+                        <span className="text-sm md:text-base text-foreground/90 font-medium leading-tight">{feature}</span>
                       </div>
                     ))}
                   </div>
@@ -117,7 +116,7 @@ export default function PlanesPage() {
         <div className="container mx-auto px-4 text-center">
           <h2 className="text-3xl font-bold mb-4">¿Aún tienes dudas?</h2>
           <p className="text-muted-foreground mb-8 max-w-xl mx-auto">
-            Nuestros asesores expertos están listos para ayudarte a resolver cualquier inquietud sobre el Plan dominio.
+            Nuestros asesores expertos están listos para ayudarte a resolver cualquier inquietud sobre el Programa experto.
           </p>
           <Link href="/#contacto">
             <Button variant="outline" size="lg" className="rounded-full border-primary text-primary hover:bg-primary/5">
