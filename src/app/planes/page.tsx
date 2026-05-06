@@ -11,7 +11,7 @@ const detailedPlans = [
     transferPrice: '$86.999',
     cardPrice: '$133.999',
     shortDesc: 'Refuerzo y perfeccionamiento.',
-    fullDesc: 'Diseñado para personas que ya tienen conocimientos básicos o licencia, pero desean ganar más seguridad en maniobras complejas, parqueo o tráfico pesado.',
+    fullDesc: 'Diseñado para personas que ya tienen conocimientos básicos o licencia, pero desean ganar más seguridad en maniobras complejas, estacionamiento tráfico.',
     targetAudience: [
       'Para quienes quieren realizar una simulación completa del examen práctico y ver en que situación está',
       'Para quienes necesitan mejorar alguna maniobra en particular',
