@@ -69,7 +69,7 @@ export default function PlanesPage() {
             Volver al inicio
           </Link>
           <h1 className="text-4xl md:text-6xl font-bold font-headline mb-6 text-foreground">
-            Detalles de nuestros <span className="text-primary">Programas</span>
+            Nuestros planes para el <span className="text-primary">programa experto</span>
           </h1>
           <p className="text-lg md:text-xl text-muted-foreground max-w-2xl mx-auto">
             Explora a fondo cada uno de nuestros cursos y elige el que transformará tu manera de conducir para siempre.
