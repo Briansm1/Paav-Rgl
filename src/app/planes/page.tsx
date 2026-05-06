@@ -13,7 +13,7 @@ const detailedPlans = [
     shortDesc: 'Refuerzo y perfeccionamiento.',
     fullDesc: 'Diseñado para personas que ya tienen conocimientos básicos o licencia, pero desean ganar más seguridad en maniobras complejas, parqueo o tráfico pesado.',
     targetAudience: [
-      'Personas con licencia que no conducen hace tiempo',
+      'Personas con licencia que no conducen por alguna razón',
       'Conductores que desean perfeccionar el parqueo',
       'Quienes sienten nervios en el tráfico pesado',
       'Estudiantes que necesitan refuerzo antes del examen'
