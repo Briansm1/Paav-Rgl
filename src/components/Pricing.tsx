@@ -1,4 +1,5 @@
 import React from 'react';
+import Link from 'next/link';
 import { Button } from '@/components/ui/button';
 import { Check, Shield } from 'lucide-react';
 
@@ -64,11 +65,13 @@ export const Pricing = () => {
                 ))}
               </div>
 
-              <Button 
-                className="w-full h-16 rounded-2xl text-lg font-bold transition-all active:scale-95 shadow-lg bg-primary hover:bg-primary/90 text-white relative z-10"
-              >
-                Elegir este Plan
-              </Button>
+              <Link href="/planes" className="w-full">
+                <Button 
+                  className="w-full h-16 rounded-2xl text-lg font-bold transition-all active:scale-95 shadow-lg bg-primary hover:bg-primary/90 text-white relative z-10"
+                >
+                  Conocer más planes
+                </Button>
+              </Link>
             </div>
           ))}
         </div>
