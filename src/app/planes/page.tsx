@@ -18,11 +18,11 @@ const detailedPlans = [
       'Para quienes necesiten saber como trabajar la mentalidad a la hora de estar al volante'
     ],
     outcomes: [
-      'Dominio total del vehículo en cualquier tipo de pendiente.',
-      'Habilidad para parquear en paralelo y reversa con precisión milimétrica.',
-      'Confianza plena para circular por avenidas de alto flujo vehicular.',
-      'Conocimiento integral de las señales de tránsito y normas vigentes.',
-      'Capacidad para reaccionar con calma ante situaciones de riesgo imprevistas.'
+      'Precisión en maniobras clave',
+      'Mayor seguridad en puntos complejos de la conducción',
+      'Corrección personalizada',
+      'Confianza inmediata en aquello que hoy te genera duda',
+      'Salir con sensación de dominio y control del vehículo'
     ],
     features: [
       '2 sesiones de prácticas dinámicas',
