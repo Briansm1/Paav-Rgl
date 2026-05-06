@@ -5,7 +5,7 @@ import { Check, Shield } from 'lucide-react';
 
 const plans = [
   {
-    name: 'Programa experto',
+    name: 'Plan dominio',
     price: 'Desde $86.999',
     description: 'Perfecto para quienes necesitan reforzar conocimientos.',
     features: ['10 horas de práctica', 'Material teórico digital', 'Examen de simulacro', 'Trámites administrativos'],
