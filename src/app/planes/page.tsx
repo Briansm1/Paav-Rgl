@@ -17,7 +17,7 @@ const detailedPlans = [
       '2 sesiones de prácticas dinámicas',
       'Acceso a la comunidad privada',
       'Formación teórica aplicada a situaciones reales y sobre el marco legal',
-      'Material teórico digital actualizado',
+      'Descuento en el uso del auto para el examen práctico - 5% off',
       'Asesoría sobre los requisitos y trámites para gestionar la licencia de conducir',
       'Asesoría en trámites de renovación'
     ]
