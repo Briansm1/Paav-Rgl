@@ -10,18 +10,21 @@ const plans = [
     price: 'Desde $149.999',
     description: 'Ideal para quienes empiezan desde cero y quieren aprender bien.',
     highlight: false,
+    badge: 'Completo',
   },
   {
     name: 'Plan dominio',
     price: 'Desde $86.999',
     description: 'Perfecto para quienes necesitan reforzar conocimientos.',
     highlight: true,
+    badge: 'Más Popular',
   },
   {
     name: 'Seguridad avanzada',
     price: 'Desde $199.999',
     description: 'Para conductores que buscan maestría total en cualquier entorno.',
     highlight: false,
+    badge: 'Elite',
   }
 ];
 
@@ -50,11 +53,10 @@ export const Pricing = () => {
                 plan.highlight ? "border-accent scale-105 z-10" : "border-border hover:border-primary/50"
               )}
             >
-              {plan.highlight && (
-                <div className="absolute top-0 right-0 bg-accent text-white px-6 py-1.5 rounded-bl-2xl text-[10px] font-bold uppercase tracking-widest">
-                  Más Popular
-                </div>
-              )}
+              <div className="absolute top-0 right-0 bg-accent text-white px-6 py-1.5 rounded-bl-2xl text-[10px] font-bold uppercase tracking-widest">
+                {plan.badge}
+              </div>
+              
               <div className="mb-8 relative z-10">
                 <h4 className="text-2xl font-bold mb-4 text-foreground tracking-tight">{plan.name}</h4>
                 <div className="flex items-center gap-2 mb-4">
@@ -85,7 +87,7 @@ export const Pricing = () => {
               <Shield className="w-10 h-10 text-primary" />
             </div>
             <div className="text-center md:text-left">
-              <h5 className="text-xl font-bold mb-1">Tu seguridad es nuestra prioridad</h5>
+              <h5 className="text-xl font-bold mb-1">Tu seguridad es nuestra priority</h5>
               <p className="text-muted-foreground text-sm md:text-base leading-relaxed">
                 Todos nuestros planes incluyen un seguro de accidentes personal durante las horas de práctica, sin costo adicional.
               </p>
