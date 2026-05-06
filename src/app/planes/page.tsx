@@ -18,7 +18,7 @@ const detailedPlans = [
       'Técnicas de parqueo avanzado',
       'Formación teórica aplicada a situaciones reales y sobre el marco legal',
       'Material teórico digital actualizado',
-      'Examen de simulacro incluido',
+      'Asesoría sobre los requisitos y trámites para gestionar la licencia de conducir',
       'Asesoría en trámites de renovación'
     ]
   }
