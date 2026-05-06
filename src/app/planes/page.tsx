@@ -7,7 +7,7 @@ import { Check, ArrowLeft, Star } from 'lucide-react';
 
 const detailedPlans = [
   {
-    name: 'Programa experto',
+    name: 'Plan dominio',
     transferPrice: '$86.999',
     cardPrice: '$133.999',
     shortDesc: 'Refuerzo y perfeccionamiento.',
@@ -36,7 +36,7 @@ export default function PlanesPage() {
             Volver al inicio
           </Link>
           <h1 className="text-4xl md:text-6xl font-bold font-headline mb-6 text-foreground">
-            Nuestros detalles para el <span className="text-primary">Programa experto</span>
+            Nuestros detalles para el <span className="text-primary">Plan dominio</span>
           </h1>
           <p className="text-lg md:text-xl text-muted-foreground max-w-2xl mx-auto">
             Explora a fondo nuestro curso especializado y elige el camino que transformará tu manera de conducir para siempre.
@@ -116,7 +116,7 @@ export default function PlanesPage() {
         <div className="container mx-auto px-4 text-center">
           <h2 className="text-3xl font-bold mb-4">¿Aún tienes dudas?</h2>
           <p className="text-muted-foreground mb-8 max-w-xl mx-auto">
-            Nuestros asesores expertos están listos para ayudarte a resolver cualquier inquietud sobre el Programa experto.
+            Nuestros asesores expertos están listos para ayudarte a resolver cualquier inquietud sobre el Plan dominio.
           </p>
           <Link href="/#contacto">
             <Button variant="outline" size="lg" className="rounded-full border-primary text-primary hover:bg-primary/5">
