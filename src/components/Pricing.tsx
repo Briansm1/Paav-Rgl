@@ -8,7 +8,7 @@ const plans = [
     name: 'Plan dominio',
     price: 'Desde $86.999',
     description: 'Perfecto para quienes necesitan reforzar conocimientos.',
-    features: ['10 horas de práctica', 'Material teórico digital', 'Examen de simulacro', 'Trámites administrativos'],
+    features: ['2 sesiones de prácticas dinámicas', 'Material teórico digital', 'Examen de simulacro', 'Trámites administrativos'],
   }
 ];
 

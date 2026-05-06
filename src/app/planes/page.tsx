@@ -14,7 +14,7 @@ const detailedPlans = [
     fullDesc: 'Diseñado para personas que ya tienen conocimientos básicos o licencia, pero desean ganar más seguridad en maniobras complejas, parqueo o tráfico pesado.',
     icon: <Clock className="w-12 h-12 text-primary" />,
     features: [
-      '10 horas de práctica intensiva',
+      '2 sesiones de prácticas dinámicas',
       'Técnicas de parqueo avanzado',
       'Manejo en pendientes pronunciadas',
       'Material teórico digital actualizado',
