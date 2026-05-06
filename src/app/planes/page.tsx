@@ -84,16 +84,16 @@ export default function PlanesPage() {
             {detailedPlans.map((plan, index) => (
               <div 
                 key={index} 
-                className={`flex flex-col lg:flex-row gap-12 items-center p-8 md:p-12 rounded-[3rem] border-2 bg-white dark:bg-slate-900 shadow-2xl transition-all duration-500 ${plan.featured ? 'border-accent ring-4 ring-accent/10' : 'border-border'}`}
+                className={`flex flex-col lg:flex-row gap-12 items-stretch p-8 md:p-12 rounded-[3rem] border-2 bg-white dark:bg-slate-900 shadow-2xl transition-all duration-500 ${plan.featured ? 'border-accent ring-4 ring-accent/10' : 'border-border'}`}
               >
-                <div className="lg:w-1/2 space-y-8 text-center lg:text-left">
+                <div className="lg:w-1/2 space-y-8 flex flex-col justify-center text-center lg:text-left">
                   <div className="flex justify-center lg:justify-start">
                     <div className="p-4 bg-primary/10 rounded-3xl">
                       {plan.icon}
                     </div>
                   </div>
                   {plan.featured && (
-                    <span className="inline-block px-4 py-1 text-xs font-bold uppercase tracking-widest bg-accent text-white rounded-full">
+                    <span className="inline-block px-4 py-1 text-xs font-bold uppercase tracking-widest bg-accent text-white rounded-full self-center lg:self-start">
                       El más elegido por alumnos
                     </span>
                   )}
@@ -114,13 +114,13 @@ export default function PlanesPage() {
                     <Star className="w-5 h-5 text-accent fill-accent" />
                     ¿Qué incluye este programa?
                   </h3>
-                  <ul className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                  <ul className="grid grid-cols-1 md:grid-cols-2 gap-x-8 gap-y-5">
                     {plan.features.map((feature, i) => (
                       <li key={i} className="flex items-start gap-3">
-                        <div className="mt-1 bg-green-500/20 p-1 rounded-full shrink-0">
-                          <Check className="w-3 h-3 text-green-600" />
+                        <div className="mt-1 bg-green-500/10 p-1 rounded-full shrink-0">
+                          <Check className="w-3.5 h-3.5 text-green-600" />
                         </div>
-                        <span className="text-foreground/90 font-medium">{feature}</span>
+                        <span className="text-sm md:text-base text-foreground/90 font-medium leading-tight">{feature}</span>
                       </li>
                     ))}
                   </ul>

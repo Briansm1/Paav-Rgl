@@ -44,25 +44,27 @@ export const Pricing = () => {
           {plans.map((plan, index) => (
             <div 
               key={index} 
-              className="relative p-8 md:p-12 rounded-[2.5rem] border-2 border-accent bg-white dark:bg-slate-800 shadow-xl hover:shadow-accent/20 transition-all duration-500 flex flex-col text-center group overflow-hidden"
+              className="relative p-8 md:p-12 rounded-[2.5rem] border-2 border-accent bg-white dark:bg-slate-800 shadow-xl hover:shadow-accent/20 transition-all duration-500 flex flex-col group overflow-hidden"
             >
-              <div className="mb-10 relative z-10">
-                <h4 className="text-2xl font-bold mb-4 text-foreground tracking-tight text-center">{plan.name}</h4>
+              <div className="mb-10 relative z-10 text-center">
+                <h4 className="text-2xl font-bold mb-4 text-foreground tracking-tight">{plan.name}</h4>
                 <div className="flex items-center justify-center gap-2 mb-4">
-                  <span className="text-3xl md:text-4xl font-bold tracking-tight text-foreground text-center">{plan.price}</span>
+                  <span className="text-3xl md:text-4xl font-bold tracking-tight text-foreground">{plan.price}</span>
                 </div>
-                <p className="text-muted-foreground text-base leading-relaxed font-medium text-center">{plan.description}</p>
+                <p className="text-muted-foreground text-base leading-relaxed font-medium">{plan.description}</p>
               </div>
 
-              <div className="space-y-5 mb-12 flex-grow flex flex-col items-center relative z-10">
-                {plan.features.map((feature, i) => (
-                  <div key={i} className="flex items-center gap-4 text-center">
-                    <div className="shrink-0 bg-primary/10 p-1.5 rounded-full">
-                      <Check className="w-4 h-4 text-primary" />
-                    </div>
-                    <span className="text-base text-foreground/90 font-medium text-center">{feature}</span>
-                  </div>
-                ))}
+              <div className="mb-12 flex-grow flex justify-center relative z-10">
+                <ul className="space-y-4 w-fit">
+                  {plan.features.map((feature, i) => (
+                    <li key={i} className="flex items-center gap-3">
+                      <div className="shrink-0 bg-primary/10 p-1.5 rounded-full">
+                        <Check className="w-3.5 h-3.5 text-primary" />
+                      </div>
+                      <span className="text-sm md:text-base text-foreground/90 font-medium">{feature}</span>
+                    </li>
+                  ))}
+                </ul>
               </div>
 
               <Link href="/planes" className="w-full">
