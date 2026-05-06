@@ -48,7 +48,7 @@ export default function PlanesPage() {
       {/* Detalle de Planes */}
       <section className="py-20">
         <div className="container mx-auto px-4">
-          <div className="max-w-3xl mx-auto">
+          <div className="max-w-4xl mx-auto">
             {detailedPlans.map((plan, index) => (
               <div 
                 key={index} 
@@ -60,23 +60,23 @@ export default function PlanesPage() {
                   </div>
                   <h2 className="text-3xl md:text-5xl font-bold tracking-tight">{plan.name}</h2>
                   
-                  <div className="space-y-4 w-full max-w-md bg-slate-50 dark:bg-slate-800/50 p-6 rounded-2xl border border-border/50">
-                    <div className="flex items-center justify-between gap-4 border-b border-border/50 pb-3">
+                  <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 w-full max-w-2xl bg-slate-50 dark:bg-slate-800/50 p-6 rounded-2xl border border-border/50">
+                    <div className="flex flex-col items-center justify-center gap-2 sm:border-r border-border/50 sm:pr-6">
                       <div className="flex items-center gap-2 text-muted-foreground">
                         <Banknote className="w-5 h-5" />
                         <span className="text-sm font-medium">Transferencia</span>
                       </div>
-                      <p className="text-2xl font-bold text-green-600">{plan.transferPrice}</p>
+                      <p className="text-3xl font-bold text-green-600">{plan.transferPrice}</p>
                     </div>
-                    <div className="flex items-center justify-between gap-4">
-                      <div className="flex items-center gap-2 text-muted-foreground text-left">
+                    <div className="flex flex-col items-center justify-center gap-2">
+                      <div className="flex items-center gap-2 text-muted-foreground">
                         <CreditCard className="w-5 h-5" />
-                        <div>
-                          <span className="text-sm font-medium block">Tarjetas de crédito</span>
-                          <span className="text-xs">6 cuotas sin interés</span>
-                        </div>
+                        <span className="text-sm font-medium">Tarjetas de crédito</span>
                       </div>
-                      <p className="text-2xl font-bold text-green-600">{plan.cardPrice}</p>
+                      <p className="text-3xl font-bold text-green-600">{plan.cardPrice}</p>
+                      <span className="text-xs font-bold bg-green-500/10 text-green-600 px-2 py-0.5 rounded-full">
+                        6 cuotas sin interés
+                      </span>
                     </div>
                   </div>
 
