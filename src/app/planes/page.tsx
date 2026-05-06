@@ -67,7 +67,7 @@ export default function PlanesPage() {
                         <span className="text-sm font-medium">Transferencia</span>
                       </div>
                       <p className="text-3xl font-bold text-green-600">{plan.transferPrice}</p>
-                      <span className="text-xs font-bold bg-green-500/10 text-green-600 px-3 py-1 rounded-full animate-pulse">
+                      <span className="text-xs font-bold bg-green-500/10 text-green-600 px-3 py-1 rounded-full">
                         Ahorro de $47.000
                       </span>
                     </div>
