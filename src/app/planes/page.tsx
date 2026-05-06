@@ -3,12 +3,13 @@ import Link from 'next/link';
 import { Header } from '@/components/Header';
 import { Footer } from '@/components/Footer';
 import { Button } from '@/components/ui/button';
-import { Check, ArrowLeft, Shield, Car, Clock, BookOpen, Star } from 'lucide-react';
+import { Check, ArrowLeft, Clock, Star, CreditCard, Banknote } from 'lucide-react';
 
 const detailedPlans = [
   {
     name: 'Plan dominio',
-    price: 'Desde $86.999',
+    transferPrice: '$86.999',
+    cardPrice: '$133.999',
     shortDesc: 'Refuerzo y perfeccionamiento.',
     fullDesc: 'Diseñado para personas que ya tienen conocimientos básicos o licencia, pero desean ganar más seguridad en maniobras complejas, parqueo o tráfico pesado.',
     icon: <Clock className="w-12 h-12 text-primary" />,
@@ -58,7 +59,27 @@ export default function PlanesPage() {
                     {plan.icon}
                   </div>
                   <h2 className="text-3xl md:text-5xl font-bold tracking-tight">{plan.name}</h2>
-                  <p className="text-2xl font-bold text-green-600">{plan.price}</p>
+                  
+                  <div className="space-y-4 w-full max-w-md bg-slate-50 dark:bg-slate-800/50 p-6 rounded-2xl border border-border/50">
+                    <div className="flex items-center justify-between gap-4 border-b border-border/50 pb-3">
+                      <div className="flex items-center gap-2 text-muted-foreground">
+                        <Banknote className="w-5 h-5" />
+                        <span className="text-sm font-medium">Transferencia</span>
+                      </div>
+                      <p className="text-2xl font-bold text-green-600">{plan.transferPrice}</p>
+                    </div>
+                    <div className="flex items-center justify-between gap-4">
+                      <div className="flex items-center gap-2 text-muted-foreground text-left">
+                        <CreditCard className="w-5 h-5" />
+                        <div>
+                          <span className="text-sm font-medium block">Tarjetas de crédito</span>
+                          <span className="text-xs">6 cuotas sin interés</span>
+                        </div>
+                      </div>
+                      <p className="text-2xl font-bold text-green-600">{plan.cardPrice}</p>
+                    </div>
+                  </div>
+
                   <p className="text-lg text-muted-foreground leading-relaxed max-w-xl">
                     {plan.fullDesc}
                   </p>
