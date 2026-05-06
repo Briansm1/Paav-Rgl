@@ -55,9 +55,6 @@ export default function PlanesPage() {
                 className="flex flex-col gap-12 items-center p-8 md:p-12 rounded-[2.5rem] border-2 bg-white dark:bg-slate-900 shadow-2xl transition-all duration-500 border-border"
               >
                 <div className="w-full space-y-8 flex flex-col items-center text-center">
-                  <div className="p-4 bg-primary/10 rounded-3xl">
-                    {plan.icon}
-                  </div>
                   <h2 className="text-3xl md:text-5xl font-bold tracking-tight">{plan.name}</h2>
                   
                   <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 w-full max-w-2xl bg-slate-50 dark:bg-slate-800/50 p-6 rounded-2xl border border-border/50">
