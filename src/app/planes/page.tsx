@@ -11,7 +11,7 @@ const detailedPlans = [
     transferPrice: '$86.999',
     cardPrice: '$133.999',
     shortDesc: 'Refuerzo y perfeccionamiento.',
-    fullDesc: 'Diseñado para personas que ya tienen conocimientos básicos o licencia, pero desean ganar más seguridad en maniobras complejas, estacionamiento o circular en tráfico.',
+    fullDesc: 'Diseñado para personas que ya tienen conocimientos básicos o licencia y quieren ganar más seguridad en maniobras complejas, estacionamiento o circular en tráfico.',
     targetAudience: [
       'Para quienes quieren realizar una simulación completa del examen práctico y ver en que situación está',
       'Para quienes necesitan mejorar alguna maniobra en particular',
@@ -69,7 +69,7 @@ export default function PlanesPage() {
                 className="flex flex-col gap-10 p-6 md:p-10 rounded-[2.5rem] border-2 bg-white dark:bg-slate-900 shadow-2xl border-border"
               >
                 <div className="w-full space-y-6 flex flex-col items-center text-center">
-                  <h2 className="text-3xl md:text-5xl font-bold tracking-tight text-center">Plan dominio</h2>
+                  <h2 className="text-3xl md:text-5xl font-bold tracking-tight text-center">{plan.name}</h2>
                   
                   <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 md:gap-6 w-full max-w-2xl bg-slate-50 dark:bg-slate-800/50 p-6 rounded-2xl border border-border/50">
                     <div className="flex flex-col items-center justify-center gap-2 sm:border-r border-border/50 sm:pr-6">
