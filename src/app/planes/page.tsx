@@ -3,7 +3,7 @@ import Link from 'next/link';
 import { Header } from '@/components/Header';
 import { Footer } from '@/components/Footer';
 import { Button } from '@/components/ui/button';
-import { Check, ArrowLeft, UserCheck, Target } from 'lucide-react';
+import { Check, ArrowLeft, UserCheck, Target, Gift } from 'lucide-react';
 
 const detailedPlans = [
   {
@@ -31,6 +31,12 @@ const detailedPlans = [
       'Formación teórica aplicada a situaciones reales y sobre el marco legal',
       'Descuento en el uso del auto para el examen práctico - 5% off',
       'Asesoría sobre los requisitos y trámites para gestionar la licencia de conducir'
+    ],
+    bonuses: [
+      'Acceso de por vida a la comunidad privada',
+      'Masterclass: Mantenimiento básico preventivo',
+      'Guía digital: Dominando el tráfico urbano',
+      'Soporte prioritario vía WhatsApp por 30 días'
     ]
   }
 ];
@@ -147,6 +153,24 @@ export default function PlanesPage() {
                           <Check className="w-3 h-3 text-green-600" />
                         </div>
                         <span className="text-sm md:text-base text-foreground/90 font-medium leading-tight">{feature}</span>
+                      </div>
+                    ))}
+                  </div>
+                </div>
+
+                {/* Sección: Bonos Exclusivos */}
+                <div className="w-full bg-primary/5 dark:bg-primary/10 p-6 md:p-8 rounded-[2rem] border-2 border-primary/20">
+                  <h3 className="text-xl font-bold mb-6 flex items-center justify-center gap-2 text-primary text-center">
+                    <Gift className="w-6 h-6" />
+                    Bonos Exclusivos
+                  </h3>
+                  <div className="grid grid-cols-1 md:grid-cols-2 gap-x-8 gap-y-3">
+                    {plan.bonuses.map((bono, i) => (
+                      <div key={i} className="flex items-start gap-3 group">
+                        <div className="mt-1 bg-primary/10 p-1 rounded-full shrink-0">
+                          <Check className="w-3 h-3 text-primary" />
+                        </div>
+                        <span className="text-sm md:text-base text-foreground/90 font-medium leading-tight">{bono}</span>
                       </div>
                     ))}
                   </div>
