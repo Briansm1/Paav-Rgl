@@ -15,7 +15,7 @@ const detailedPlans = [
     targetAudience: [
       'Personas con licencia que no conducen por alguna razón',
       'Conductores que desean perfeccionar el parqueo',
-      'Quienes sienten nervios en el tráfico pesado',
+      'Para quienes necesitan mejorar alguna maniobra en particular',
       'Estudiantes que necesitan refuerzo antes del examen'
     ],
     features: [
