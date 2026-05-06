@@ -47,36 +47,34 @@ export default function PlanesPage() {
       {/* Detalle de Planes */}
       <section className="py-20">
         <div className="container mx-auto px-4">
-          <div className="max-w-5xl mx-auto">
+          <div className="max-w-3xl mx-auto">
             {detailedPlans.map((plan, index) => (
               <div 
                 key={index} 
-                className="flex flex-col lg:flex-row gap-12 items-stretch p-8 md:p-12 rounded-[2.5rem] border-2 bg-white dark:bg-slate-900 shadow-2xl transition-all duration-500 border-border"
+                className="flex flex-col gap-12 items-center p-8 md:p-12 rounded-[2.5rem] border-2 bg-white dark:bg-slate-900 shadow-2xl transition-all duration-500 border-border"
               >
-                <div className="lg:w-1/2 space-y-8 flex flex-col justify-center text-center lg:text-left">
-                  <div className="flex justify-center lg:justify-start">
-                    <div className="p-4 bg-primary/10 rounded-3xl">
-                      {plan.icon}
-                    </div>
+                <div className="w-full space-y-8 flex flex-col items-center text-center">
+                  <div className="p-4 bg-primary/10 rounded-3xl">
+                    {plan.icon}
                   </div>
                   <h2 className="text-3xl md:text-5xl font-bold tracking-tight">{plan.name}</h2>
                   <p className="text-2xl font-bold text-green-600">{plan.price}</p>
-                  <p className="text-lg text-muted-foreground leading-relaxed">
+                  <p className="text-lg text-muted-foreground leading-relaxed max-w-xl">
                     {plan.fullDesc}
                   </p>
-                  <div className="pt-4">
-                    <Button size="lg" className="rounded-full px-10 h-14 text-lg bg-primary hover:bg-primary/90">
+                  <div className="pt-4 w-full sm:w-auto">
+                    <Button size="lg" className="rounded-full px-10 h-14 text-lg bg-primary hover:bg-primary/90 w-full">
                       Inscribirme Ahora
                     </Button>
                   </div>
                 </div>
 
-                <div className="lg:w-1/2 bg-slate-50 dark:bg-slate-800/50 p-8 md:p-12 rounded-[2rem] border border-border/50">
-                  <h3 className="text-xl font-bold mb-8 flex items-center gap-2">
+                <div className="w-full bg-slate-50 dark:bg-slate-800/50 p-8 md:p-10 rounded-[2rem] border border-border/50">
+                  <h3 className="text-xl font-bold mb-8 flex items-center justify-center gap-2">
                     <Star className="w-5 h-5 text-accent fill-accent" />
                     ¿Qué incluye este programa?
                   </h3>
-                  <ul className="grid grid-cols-1 gap-y-5">
+                  <ul className="grid grid-cols-1 md:grid-cols-2 gap-x-8 gap-y-5">
                     {plan.features.map((feature, i) => (
                       <li key={i} className="flex items-start gap-3">
                         <div className="mt-1 bg-green-500/10 p-1 rounded-full shrink-0">
