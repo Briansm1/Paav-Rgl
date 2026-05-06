@@ -16,7 +16,7 @@ const detailedPlans = [
     features: [
       '2 sesiones de prácticas dinámicas',
       'Técnicas de parqueo avanzado',
-      'Manejo en pendientes pronunciadas',
+      'Formación teórica aplicada a situaciones reales y sobre el marco legal',
       'Material teórico digital actualizado',
       'Examen de simulacro incluido',
       'Asesoría en trámites de renovación'
