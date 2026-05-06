@@ -97,11 +97,6 @@ export default function PlanesPage() {
                   <p className="text-lg text-muted-foreground leading-relaxed max-w-xl text-center">
                     {plan.fullDesc}
                   </p>
-                  <div className="pt-2 w-full sm:w-auto">
-                    <Button size="lg" className="rounded-full px-10 h-14 text-lg bg-primary hover:bg-primary/90 w-full text-center">
-                      Quiero este plan
-                    </Button>
-                  </div>
                 </div>
 
                 {/* Sección: ¿Para quién es? */}
@@ -171,6 +166,13 @@ export default function PlanesPage() {
                       </div>
                     ))}
                   </div>
+                </div>
+
+                {/* Botón de acción final */}
+                <div className="pt-4 w-full flex justify-center">
+                  <Button size="lg" className="rounded-full px-10 h-14 text-lg bg-primary hover:bg-primary/90 w-full text-center">
+                    Quiero este plan
+                  </Button>
                 </div>
               </div>
             ))}
