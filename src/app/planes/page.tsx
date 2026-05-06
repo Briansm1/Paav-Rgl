@@ -26,7 +26,7 @@ const detailedPlans = [
 
 export default function PlanesPage() {
   return (
-    <main className="min-h-screen bg-slate-50 dark:bg-slate-950">
+    <main className="min-h-screen bg-slate-50 dark:bg-slate-900">
       <Header />
       
       {/* Hero Section para Planes */}
@@ -67,7 +67,7 @@ export default function PlanesPage() {
                         <span className="text-sm font-medium">Transferencia</span>
                       </div>
                       <p className="text-3xl font-bold text-green-600">{plan.transferPrice}</p>
-                      <span className="text-xs font-bold bg-primary/10 text-primary px-3 py-1 rounded-full animate-pulse">
+                      <span className="text-xs font-bold bg-green-500/10 text-green-600 px-3 py-1 rounded-full animate-pulse">
                         Ahorro de $47.000
                       </span>
                     </div>
@@ -76,8 +76,8 @@ export default function PlanesPage() {
                         <span className="text-xl">💳</span>
                         <span className="text-sm font-medium">Tarjetas de crédito</span>
                       </div>
-                      <p className="text-3xl font-bold text-green-600">{plan.cardPrice}</p>
-                      <span className="text-xs font-bold bg-green-500/10 text-green-600 px-2 py-0.5 rounded-full">
+                      <p className="text-3xl font-bold text-primary">{plan.cardPrice}</p>
+                      <span className="text-xs font-bold bg-primary/10 text-primary px-3 py-1 rounded-full">
                         6 cuotas sin interés
                       </span>
                     </div>
