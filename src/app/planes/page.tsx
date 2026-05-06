@@ -90,21 +90,21 @@ export default function PlanesPage() {
                   </div>
                 </div>
 
-                <div className="w-full bg-slate-50 dark:bg-slate-800/50 p-6 md:p-8 rounded-[2rem] border border-border/50">
-                  <h3 className="text-xl font-bold mb-4 md:mb-6 flex items-center justify-center gap-2">
+                <div className="w-full bg-slate-50 dark:bg-slate-800/50 p-6 md:p-10 rounded-[2rem] border border-border/50">
+                  <h3 className="text-xl font-bold mb-8 flex items-center justify-center gap-2 text-foreground">
                     <Star className="w-5 h-5 text-accent fill-accent" />
                     ¿Qué incluye este programa?
                   </h3>
-                  <ul className="grid grid-cols-1 md:grid-cols-2 gap-x-8 gap-y-2 md:gap-y-3">
+                  <div className="grid grid-cols-1 md:grid-cols-2 gap-x-12 gap-y-5">
                     {plan.features.map((feature, i) => (
-                      <li key={i} className="flex items-start gap-2.5">
-                        <div className="mt-1 bg-green-500/10 p-1 rounded-full shrink-0">
-                          <Check className="w-3 h-3 text-green-600" />
+                      <div key={i} className="flex items-start gap-3.5 group">
+                        <div className="mt-0.5 bg-green-500/10 p-1.5 rounded-full shrink-0 group-hover:bg-green-500/20 transition-colors">
+                          <Check className="w-4 h-4 text-green-600" />
                         </div>
-                        <span className="text-sm md:text-base text-foreground/90 font-medium leading-tight">{feature}</span>
-                      </li>
+                        <span className="text-base text-foreground/80 font-medium leading-snug">{feature}</span>
+                      </div>
                     ))}
-                  </ul>
+                  </div>
                 </div>
               </div>
             ))}
