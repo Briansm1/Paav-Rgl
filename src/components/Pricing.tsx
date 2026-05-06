@@ -44,12 +44,12 @@ export const Pricing = () => {
           {plans.map((plan, index) => (
             <div 
               key={index} 
-              className="relative p-8 md:p-12 rounded-[2.5rem] border-2 border-accent bg-white dark:bg-slate-800 shadow-xl hover:shadow-accent/20 transition-all duration-500 flex flex-col group overflow-hidden"
+              className="relative p-8 md:p-12 rounded-[2.5rem] border-2 border-accent bg-white dark:bg-slate-800 shadow-xl transition-all duration-500 flex flex-col group overflow-hidden"
             >
               <div className="mb-10 relative z-10 text-center">
                 <h4 className="text-2xl font-bold mb-4 text-foreground tracking-tight">{plan.name}</h4>
                 <div className="flex items-center justify-center gap-2 mb-4">
-                  <span className="text-3xl md:text-4xl font-bold tracking-tight text-foreground">{plan.price}</span>
+                  <span className="text-3xl md:text-4xl font-bold tracking-tight text-green-600">{plan.price}</span>
                 </div>
                 <p className="text-muted-foreground text-base leading-relaxed font-medium">{plan.description}</p>
               </div>

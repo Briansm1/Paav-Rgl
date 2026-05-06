@@ -98,7 +98,7 @@ export default function PlanesPage() {
                     </span>
                   )}
                   <h2 className="text-3xl md:text-5xl font-bold tracking-tight">{plan.name}</h2>
-                  <p className="text-2xl font-bold text-primary">{plan.price}</p>
+                  <p className="text-2xl font-bold text-green-600">{plan.price}</p>
                   <p className="text-lg text-muted-foreground leading-relaxed">
                     {plan.fullDesc}
                   </p>
