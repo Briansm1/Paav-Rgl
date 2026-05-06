@@ -2,13 +2,29 @@ import React from 'react';
 import Link from 'next/link';
 import { Button } from '@/components/ui/button';
 import { Check, Shield } from 'lucide-react';
+import { cn } from '@/lib/utils';
 
 const plans = [
+  {
+    name: 'Programa fundamentos',
+    price: 'Desde $149.999',
+    description: 'Ideal para quienes empiezan desde cero y quieren aprender bien.',
+    features: ['10 sesiones de práctica', 'Teoría completa presencial', 'Examen de simulacro', 'Gestión de licencia'],
+    highlight: false,
+  },
   {
     name: 'Plan dominio',
     price: 'Desde $86.999',
     description: 'Perfecto para quienes necesitan reforzar conocimientos.',
     features: ['2 sesiones de prácticas dinámicas', 'Material teórico digital', 'Examen de simulacro', 'Trámites administrativos'],
+    highlight: true,
+  },
+  {
+    name: 'Seguridad avanzada',
+    price: 'Desde $199.999',
+    description: 'Para conductores que buscan maestría total en cualquier entorno.',
+    features: ['Prácticas en carretera', 'Manejo defensivo pro', 'Técnicas de evasión', 'Certificación premium'],
+    highlight: false,
   }
 ];
 
@@ -24,32 +40,40 @@ export const Pricing = () => {
             Un plan diseñado para tu <span className="text-primary italic">éxito</span>
           </h2>
           <p className="text-lg md:text-xl text-muted-foreground leading-relaxed text-center">
-            Transparencia total y calidad garantizada en nuestro programa especializado.
+            Transparencia total y calidad garantizada en todos nuestros programas.
           </p>
         </div>
 
-        <div className="max-w-lg mx-auto">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-7xl mx-auto">
           {plans.map((plan, index) => (
             <div 
               key={index} 
-              className="relative p-8 md:p-12 rounded-[2.5rem] border-2 border-accent bg-white dark:bg-slate-800 shadow-xl transition-all duration-500 flex flex-col group overflow-hidden"
+              className={cn(
+                "relative p-8 rounded-[2.5rem] border-2 bg-white dark:bg-slate-800 shadow-xl transition-all duration-500 flex flex-col group overflow-hidden",
+                plan.highlight ? "border-accent scale-105 z-10" : "border-border hover:border-primary/50"
+              )}
             >
-              <div className="mb-10 relative z-10 text-center">
-                <h4 className="text-2xl font-bold mb-4 text-foreground tracking-tight">{plan.name}</h4>
-                <div className="flex items-center justify-center gap-2 mb-4">
-                  <span className="text-3xl md:text-4xl font-bold tracking-tight text-green-600">{plan.price}</span>
+              {plan.highlight && (
+                <div className="absolute top-0 right-0 bg-accent text-white px-6 py-1.5 rounded-bl-2xl text-[10px] font-bold uppercase tracking-widest">
+                  Más Popular
                 </div>
-                <p className="text-muted-foreground text-base leading-relaxed font-medium">{plan.description}</p>
+              )}
+              <div className="mb-8 relative z-10">
+                <h4 className="text-2xl font-bold mb-4 text-foreground tracking-tight">{plan.name}</h4>
+                <div className="flex items-center gap-2 mb-4">
+                  <span className="text-3xl font-bold tracking-tight text-green-600">{plan.price}</span>
+                </div>
+                <p className="text-muted-foreground text-sm leading-relaxed font-medium">{plan.description}</p>
               </div>
 
-              <div className="mb-12 flex-grow flex justify-center relative z-10">
-                <ul className="space-y-4 w-fit">
+              <div className="mb-10 flex-grow relative z-10">
+                <ul className="space-y-4">
                   {plan.features.map((feature, i) => (
                     <li key={i} className="flex items-center gap-3">
                       <div className="shrink-0 bg-primary/10 p-1.5 rounded-full">
-                        <Check className="w-3.5 h-3.5 text-primary" />
+                        <Check className="w-3 h-3 text-primary" />
                       </div>
-                      <span className="text-sm md:text-base text-foreground/90 font-medium">{feature}</span>
+                      <span className="text-sm text-foreground/90 font-medium">{feature}</span>
                     </li>
                   ))}
                 </ul>
@@ -57,7 +81,10 @@ export const Pricing = () => {
 
               <Link href="/planes" className="w-full">
                 <Button 
-                  className="w-full h-16 rounded-2xl text-lg font-bold transition-all active:scale-95 shadow-lg bg-primary hover:bg-primary/90 text-white relative z-10"
+                  className={cn(
+                    "w-full h-14 rounded-2xl text-base font-bold transition-all active:scale-95 shadow-lg relative z-10",
+                    plan.highlight ? "bg-primary hover:bg-primary/90 text-white" : "bg-transparent border border-primary text-primary hover:bg-primary/5 shadow-none"
+                  )}
                 >
                   Conocer más detalles
                 </Button>
@@ -74,7 +101,7 @@ export const Pricing = () => {
             <div className="text-center md:text-left">
               <h5 className="text-xl font-bold mb-1">Tu seguridad es nuestra prioridad</h5>
               <p className="text-muted-foreground text-sm md:text-base leading-relaxed">
-                El plan incluye un seguro de accidentes personal durante las horas de práctica, sin costo adicional.
+                Todos nuestros planes incluyen un seguro de accidentes personal durante las horas de práctica, sin costo adicional.
               </p>
             </div>
           </div>
