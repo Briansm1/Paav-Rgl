@@ -1,6 +1,6 @@
 import React from 'react';
 import Link from 'next/link';
-import { ShieldCheck, Facebook, Instagram, Youtube } from 'lucide-react';
+import { Facebook, Instagram, Youtube } from 'lucide-react';
 
 export const Footer = () => {
   return (
@@ -9,7 +9,6 @@ export const Footer = () => {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-12 mb-12 text-center">
           <div className="flex flex-col items-center space-y-6">
             <Link href="#inicio" className="flex items-center gap-2">
-              <ShieldCheck className="w-8 h-8 text-primary" />
               <span className="text-2xl font-bold font-headline tracking-tight">
                 Pilotos - <span className="text-primary">ases al volante</span>
               </span>

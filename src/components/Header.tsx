@@ -2,7 +2,7 @@
 
 import React, { useState, useEffect } from 'react';
 import Link from 'next/link';
-import { Menu, X, ShieldCheck } from 'lucide-react';
+import { Menu, X } from 'lucide-react';
 import { cn } from '@/lib/utils';
 import { Button } from '@/components/ui/button';
 
@@ -53,7 +53,6 @@ export const Header = () => {
           className="flex items-center gap-2 group"
           onClick={() => setActiveSection('#inicio')}
         >
-          <ShieldCheck className="w-8 h-8 text-primary transition-transform group-hover:scale-110" />
           <span className="text-xl font-bold font-headline tracking-tight text-white">
             Pilotos - <span className="text-primary">ases al volante</span>
           </span>
