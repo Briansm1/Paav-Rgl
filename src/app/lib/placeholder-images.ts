@@ -16,7 +16,7 @@ export const PlaceHolderImages: ImagePlaceholder[] = [
   {
     "id": "service-beginner",
     "description": "Primer plano de volante con manos",
-    "imageUrl": "https://i.imgur.com/HPnM4eC.png",
+    "imageUrl": "https://i.imgur.com/4AK2c4Q.jpeg",
     "imageHint": "car steering"
   },
   {
