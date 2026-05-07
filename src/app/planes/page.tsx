@@ -18,7 +18,7 @@ const detailedPlans = [
       'Para quienes necesiten saber como trabajar la mentalidad a la hora de estar al volante'
     ],
     outcomes: [
-      'Precisión en maniobras clave',
+      'Presición en maniobras clave',
       'Mayor seguridad en puntos complejos de la conducción',
       'Corrección personalizada',
       'Confianza inmediata en aquello que hoy te genera duda',
@@ -183,7 +183,7 @@ export default function PlanesPage() {
       {/* Footer CTA */}
       <section className="py-16 bg-white dark:bg-slate-900 border-t border-border">
         <div className="container mx-auto px-4 text-center">
-          <h2 className="text-3xl font-bold mb-4 text-center">¿Aún tenés dudas?</h2>
+          <h2 className="text-3xl font-bold mb-4 text-center">¿Todavía tenés dudas?</h2>
           <p className="text-muted-foreground mb-8 max-w-xl mx-auto text-center">
             Nuestros asesores expertos están listos para ayudarte a resolver cualquier inquietud sobre el Plan dominio.
           </p>
