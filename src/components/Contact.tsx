@@ -1,7 +1,7 @@
 "use client";
 
 import React from 'react';
-import { Mail, Phone, MapPin, ExternalLink, Send } from 'lucide-react';
+import { Mail, Phone, MapPin, ExternalLink, Send, Star } from 'lucide-react';
 import { PlaceHolderImages } from '@/app/lib/placeholder-images';
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
@@ -17,13 +17,21 @@ import {
   FormLabel,
   FormMessage,
 } from '@/components/ui/form';
+import {
+  Select,
+  SelectContent,
+  SelectItem,
+  SelectTrigger,
+  SelectValue,
+} from "@/components/ui/select";
 import { useToast } from '@/hooks/use-toast';
 
 const formSchema = z.object({
   name: z.string().min(2, { message: 'El nombre es obligatorio' }),
   email: z.string().email({ message: 'Email inválido' }),
-  phone: z.string().min(7, { message: 'Teléfono inválido' }),
-  message: z.string().min(10, { message: 'Por favor escribe un mensaje más detallado' }),
+  course: z.string().min(2, { message: 'El curso realizado es obligatorio' }),
+  rating: z.string().min(1, { message: 'La calificación es obligatoria' }),
+  review: z.string().min(10, { message: 'Por favor escribe una reseña más detallada' }),
 });
 
 export const Contact = () => {
@@ -35,17 +43,18 @@ export const Contact = () => {
     defaultValues: {
       name: '',
       email: '',
-      phone: '',
-      message: '',
+      course: '',
+      rating: '5',
+      review: '',
     },
   });
 
   function onSubmit(values: z.infer<typeof formSchema>) {
-    // Simulación del envío del formulario
-    console.log("Formulario enviado a pilotosasesalvolante@gmail.com:", values);
+    // Simulación del envío de la reseña
+    console.log("Reseña enviada a pilotosasesalvolante@gmail.com:", values);
     toast({
-      title: "¡Mensaje enviado!",
-      description: "Tus datos han sido recibidos. Nos pondremos en contacto pronto.",
+      title: "¡Reseña recibida!",
+      description: "Gracias por compartir tu experiencia con nosotros. Tu opinión es muy valiosa.",
     });
     form.reset();
   }
@@ -55,13 +64,13 @@ export const Contact = () => {
       <div className="container mx-auto px-4">
         <div className="text-center max-w-3xl mx-auto mb-16 md:mb-24">
           <span className="inline-block px-4 py-1.5 mb-6 text-xs font-bold tracking-widest text-primary uppercase bg-primary/10 rounded-full">
-            Canales de Atención
+            Nuestra Comunidad
           </span>
           <h2 className="text-4xl md:text-6xl font-bold font-headline mb-6 tracking-tight text-foreground">
-            Inicia tu viaje <span className="text-primary italic">hoy</span>
+            Tu opinión es <span className="text-primary italic">nuestro motor</span>
           </h2>
           <p className="text-lg md:text-xl text-muted-foreground leading-relaxed">
-            Estamos listos para acompañarte en cada kilómetro. Elige el medio que prefieras para contactarnos.
+            ¿Ya eres un as al volante? Comparte tu experiencia y ayuda a otros a iniciar su camino hacia la libertad.
           </p>
         </div>
 
@@ -69,7 +78,7 @@ export const Contact = () => {
           <div className="flex flex-col gap-10">
             <div className="bg-slate-50 dark:bg-slate-900 p-8 md:p-12 rounded-[2.5rem] shadow-xl border border-border/50 h-full flex flex-col justify-between">
               <div>
-                <h4 className="text-2xl font-bold mb-10 tracking-tight">Nuestra Sede</h4>
+                <h4 className="text-2xl font-bold mb-10 tracking-tight">Canales de Atención</h4>
                 <div className="space-y-10">
                   <div className="flex items-start gap-6">
                     <div className="bg-white dark:bg-slate-800 p-4 rounded-[1.2rem] shadow-sm shrink-0">
@@ -85,7 +94,7 @@ export const Contact = () => {
                       <Phone className="w-6 h-6 text-primary" />
                     </div>
                     <div>
-                      <p className="font-bold text-lg mb-1">Línea Directa</p>
+                      <p className="font-bold text-lg mb-1">Línea Directa / WhatsApp</p>
                       <p className="text-muted-foreground font-medium">+57 (300) 123 4567</p>
                     </div>
                   </div>
@@ -94,8 +103,8 @@ export const Contact = () => {
                       <Mail className="w-6 h-6 text-primary" />
                     </div>
                     <div>
-                      <p className="font-bold text-lg mb-1">Correo Electrónico</p>
-                      <p className="text-muted-foreground font-medium border-b border-primary/20 inline-block">info@rutasegura.com</p>
+                      <p className="font-bold text-lg mb-1">Consultas</p>
+                      <p className="text-muted-foreground font-medium border-b border-primary/20 inline-block">pilotosasesalvolante@gmail.com</p>
                     </div>
                   </div>
                 </div>
@@ -122,10 +131,10 @@ export const Contact = () => {
 
           <div className="flex flex-col gap-10">
             <div className="bg-white dark:bg-slate-900 p-8 md:p-12 rounded-[2.5rem] shadow-2xl border border-border/50 h-full">
-              <div className="mb-8">
-                <h4 className="text-2xl md:text-3xl font-bold mb-4 tracking-tight">Déjanos tus datos</h4>
+              <div className="mb-8 text-center md:text-left">
+                <h4 className="text-2xl md:text-3xl font-bold mb-4 tracking-tight">Cuéntanos tu experiencia</h4>
                 <p className="text-muted-foreground">
-                  Completa el formulario y nos pondremos en contacto contigo para agendar tu primera clase.
+                  Tu reseña será enviada a nuestro equipo para seguir mejorando día a día.
                 </p>
               </div>
               
@@ -138,20 +147,61 @@ export const Contact = () => {
                       <FormItem>
                         <FormLabel>Nombre completo</FormLabel>
                         <FormControl>
-                          <Input placeholder="Escribe tu nombre" {...field} className="rounded-xl border-slate-200 focus:ring-primary" />
+                          <Input placeholder="Tu nombre" {...field} className="rounded-xl border-slate-200 focus:ring-primary" />
                         </FormControl>
                         <FormMessage />
                       </FormItem>
                     )}
                   />
+                  <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                    <FormField
+                      control={form.control}
+                      name="email"
+                      render={({ field }) => (
+                        <FormItem>
+                          <FormLabel>Correo electrónico</FormLabel>
+                          <FormControl>
+                            <Input placeholder="tu@email.com" {...field} className="rounded-xl border-slate-200 focus:ring-primary" />
+                          </FormControl>
+                          <FormMessage />
+                        </FormItem>
+                      )}
+                    />
+                    <FormField
+                      control={form.control}
+                      name="rating"
+                      render={({ field }) => (
+                        <FormItem>
+                          <FormLabel>Calificación</FormLabel>
+                          <Select onValueChange={field.onChange} defaultValue={field.value}>
+                            <FormControl>
+                              <SelectTrigger className="rounded-xl border-slate-200 focus:ring-primary">
+                                <SelectValue placeholder="Califica" />
+                              </SelectTrigger>
+                            </FormControl>
+                            <SelectContent>
+                              {[5, 4, 3, 2, 1].map((val) => (
+                                <SelectItem key={val} value={val.toString()}>
+                                  <div className="flex items-center gap-2">
+                                    {val} {val === 1 ? 'estrella' : 'estrellas'}
+                                  </div>
+                                </SelectItem>
+                              ))}
+                            </SelectContent>
+                          </Select>
+                          <FormMessage />
+                        </FormItem>
+                      )}
+                    />
+                  </div>
                   <FormField
                     control={form.control}
-                    name="email"
+                    name="course"
                     render={({ field }) => (
                       <FormItem>
-                        <FormLabel>Correo electrónico</FormLabel>
+                        <FormLabel>¿Qué programa realizaste?</FormLabel>
                         <FormControl>
-                          <Input placeholder="tu@email.com" {...field} className="rounded-xl border-slate-200 focus:ring-primary" />
+                          <Input placeholder="Ej: Programa experto" {...field} className="rounded-xl border-slate-200 focus:ring-primary" />
                         </FormControl>
                         <FormMessage />
                       </FormItem>
@@ -159,27 +209,14 @@ export const Contact = () => {
                   />
                   <FormField
                     control={form.control}
-                    name="phone"
+                    name="review"
                     render={({ field }) => (
                       <FormItem>
-                        <FormLabel>Teléfono / WhatsApp</FormLabel>
-                        <FormControl>
-                          <Input placeholder="Tu número de contacto" {...field} className="rounded-xl border-slate-200 focus:ring-primary" />
-                        </FormControl>
-                        <FormMessage />
-                      </FormItem>
-                    )}
-                  />
-                  <FormField
-                    control={form.control}
-                    name="message"
-                    render={({ field }) => (
-                      <FormItem>
-                        <FormLabel>Mensaje o Consulta</FormLabel>
+                        <FormLabel>Tu reseña</FormLabel>
                         <FormControl>
                           <Textarea 
-                            placeholder="¿En qué programa estás interesado?" 
-                            className="rounded-xl border-slate-200 focus:ring-primary min-h-[100px]" 
+                            placeholder="Cuéntanos qué fue lo que más te gustó de tus clases..." 
+                            className="rounded-xl border-slate-200 focus:ring-primary min-h-[120px]" 
                             {...field} 
                           />
                         </FormControl>
@@ -191,14 +228,14 @@ export const Contact = () => {
                     type="submit" 
                     className="w-full h-14 bg-primary hover:bg-primary/90 text-white text-lg font-bold rounded-xl shadow-lg shadow-primary/20 transition-all active:scale-[0.98] flex items-center justify-center gap-2"
                   >
-                    Enviar Información
+                    Publicar Reseña
                     <Send className="w-5 h-5" />
                   </Button>
                 </form>
               </Form>
               
               <p className="mt-6 text-center text-[10px] text-muted-foreground uppercase tracking-widest font-bold">
-                pilotosasesalvolante@gmail.com
+                Gracias por confiar en Pilotos
               </p>
             </div>
           </div>
