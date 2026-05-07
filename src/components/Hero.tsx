@@ -26,7 +26,7 @@ export const Hero = () => {
       </div>
 
       <div className="container mx-auto px-4 relative z-10">
-        <div className="max-w-3xl -mt-10 md:-mt-20">
+        <div className="max-w-3xl -mt-4 md:-mt-8">
           <div className="inline-flex items-center gap-2 bg-white/20 backdrop-blur-md border border-white/30 rounded-full px-4 py-1.5 mb-6 animate-in fade-in slide-in-from-bottom-4 duration-700">
             <Star className="w-4 h-4 text-yellow-500 fill-yellow-500" />
             <span className="text-xs md:text-sm font-bold text-white">La elección N°1 de la región</span>
