@@ -11,7 +11,7 @@ export const Hero = () => {
   const heroImg = PlaceHolderImages.find(img => img.id === 'hero-bg');
 
   return (
-    <section id="inicio" className="relative min-h-[90vh] md:h-screen flex items-center pt-24 pb-12 overflow-hidden">
+    <section id="inicio" className="relative min-h-[90vh] md:h-screen flex items-center pt-32 md:pt-40 pb-12 overflow-hidden">
       {/* Background Image Overlay */}
       <div className="absolute inset-0 z-0">
         <Image
