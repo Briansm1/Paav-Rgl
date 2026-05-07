@@ -39,6 +39,7 @@ export const Contact = () => {
   const mapUrl = "https://www.google.com/maps/search/?api=1&query=Plaza+San+Martin+Rio+Gallegos+Santa+Cruz";
   const phoneNumber = "542966265603";
   const whatsappUrl = `https://wa.me/${phoneNumber}`;
+  const emailAddress = "pilotosasesalvolante@gmail.com";
 
   const form = useForm<z.infer<typeof formSchema>>({
     resolver: zodResolver(formSchema),
@@ -51,7 +52,7 @@ export const Contact = () => {
   });
 
   function onSubmit(values: z.infer<typeof formSchema>) {
-    console.log("Reseña enviada a pilotosasesalvolante@gmail.com:", values);
+    console.log(`Reseña enviada a ${emailAddress}:`, values);
     toast({
       title: "¡Reseña recibida!",
       description: "Gracias por compartir tu experiencia con nosotros. Tu opinión es muy valiosa.",
@@ -111,7 +112,12 @@ export const Contact = () => {
                     </div>
                     <div>
                       <p className="font-bold text-lg mb-1">Consultas</p>
-                      <p className="text-muted-foreground font-medium border-b border-primary/20 inline-block">pilotosasesalvolante@gmail.com</p>
+                      <a 
+                        href={`mailto:${emailAddress}`}
+                        className="text-muted-foreground font-medium border-b border-primary/20 inline-block hover:text-primary transition-colors"
+                      >
+                        {emailAddress}
+                      </a>
                     </div>
                   </div>
                 </div>
