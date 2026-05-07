@@ -22,7 +22,7 @@ export const PlaceHolderImages: ImagePlaceholder[] = [
   {
     "id": "service-advanced",
     "description": "Coche conduciendo en el tráfico nocturno",
-    "imageUrl": "https://picsum.photos/seed/ruta-advanced/1080/1080",
+    "imageUrl": "https://i.imgur.com/yo6Y693.jpeg",
     "imageHint": "city traffic"
   },
   {
