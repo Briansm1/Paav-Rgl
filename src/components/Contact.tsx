@@ -1,14 +1,54 @@
 "use client";
 
 import React from 'react';
-import { Mail, Phone, MapPin, ExternalLink, ArrowRight } from 'lucide-react';
+import { Mail, Phone, MapPin, ExternalLink, Send } from 'lucide-react';
 import { PlaceHolderImages } from '@/app/lib/placeholder-images';
 import { Button } from '@/components/ui/button';
+import { Input } from '@/components/ui/input';
+import { Textarea } from '@/components/ui/textarea';
+import { useForm } from 'react-hook-form';
+import { zodResolver } from '@hookform/resolvers/zod';
+import * as z from 'zod';
+import {
+  Form,
+  FormControl,
+  FormField,
+  FormItem,
+  FormLabel,
+  FormMessage,
+} from '@/components/ui/form';
+import { useToast } from '@/hooks/use-toast';
+
+const formSchema = z.object({
+  name: z.string().min(2, { message: 'El nombre es obligatorio' }),
+  email: z.string().email({ message: 'Email inválido' }),
+  phone: z.string().min(7, { message: 'Teléfono inválido' }),
+  message: z.string().min(10, { message: 'Por favor escribe un mensaje más detallado' }),
+});
 
 export const Contact = () => {
+  const { toast } = useToast();
   const mapImg = PlaceHolderImages.find(img => img.id === 'map-location');
-  const phoneNumber = "573001234567";
-  const whatsappUrl = `https://wa.me/${phoneNumber}?text=Hola! Quiero inscribirme.`;
+
+  const form = useForm<z.infer<typeof formSchema>>({
+    resolver: zodResolver(formSchema),
+    defaultValues: {
+      name: '',
+      email: '',
+      phone: '',
+      message: '',
+    },
+  });
+
+  function onSubmit(values: z.infer<typeof formSchema>) {
+    // Simulación del envío del formulario
+    console.log("Formulario enviado a pilotosasesalvolante@gmail.com:", values);
+    toast({
+      title: "¡Mensaje enviado!",
+      description: "Tus datos han sido recibidos. Nos pondremos en contacto pronto.",
+    });
+    form.reset();
+  }
 
   return (
     <section id="contacto" className="py-20 md:py-32 bg-white dark:bg-slate-950">
@@ -81,28 +121,85 @@ export const Contact = () => {
           </div>
 
           <div className="flex flex-col gap-10">
-            <div className="bg-primary p-8 md:p-16 rounded-[2.5rem] shadow-2xl text-white relative overflow-hidden flex flex-col justify-center h-full">
-              <div className="absolute top-0 right-0 w-64 h-64 bg-white/10 rounded-full -mr-32 -mt-32 blur-3xl"></div>
-              <div className="absolute bottom-0 left-0 w-64 h-64 bg-accent/20 rounded-full -ml-32 -mb-32 blur-3xl"></div>
-              
-              <div className="relative z-10 space-y-8">
-                <h4 className="text-3xl md:text-5xl font-bold leading-tight">¿Listo para obtener tu licencia?</h4>
-                <p className="text-xl text-primary-foreground/90 leading-relaxed">
-                  No pierdas más tiempo. Chatea con uno de nuestros asesores y agenda tu primera clase hoy mismo.
+            <div className="bg-white dark:bg-slate-900 p-8 md:p-12 rounded-[2.5rem] shadow-2xl border border-border/50 h-full">
+              <div className="mb-8">
+                <h4 className="text-2xl md:text-3xl font-bold mb-4 tracking-tight">Déjanos tus datos</h4>
+                <p className="text-muted-foreground">
+                  Completa el formulario y nos pondremos en contacto contigo para agendar tu primera clase.
                 </p>
-                
-                <div className="pt-8">
-                  <a href={whatsappUrl} target="_blank" rel="noopener noreferrer" className="block">
-                    <Button className="w-full h-24 bg-white text-primary hover:bg-slate-50 text-2xl font-bold rounded-[1.5rem] shadow-xl transition-all active:scale-[0.98] flex items-center justify-center gap-4">
-                      Inscribirme por WhatsApp
-                      <ArrowRight className="w-8 h-8" />
-                    </Button>
-                  </a>
-                  <p className="mt-6 text-center text-primary-foreground/70 font-medium">
-                    Atención inmediata de Lunes a Sábado.
-                  </p>
-                </div>
               </div>
+              
+              <Form {...form}>
+                <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-5">
+                  <FormField
+                    control={form.control}
+                    name="name"
+                    render={({ field }) => (
+                      <FormItem>
+                        <FormLabel>Nombre completo</FormLabel>
+                        <FormControl>
+                          <Input placeholder="Escribe tu nombre" {...field} className="rounded-xl border-slate-200 focus:ring-primary" />
+                        </FormControl>
+                        <FormMessage />
+                      </FormItem>
+                    )}
+                  />
+                  <FormField
+                    control={form.control}
+                    name="email"
+                    render={({ field }) => (
+                      <FormItem>
+                        <FormLabel>Correo electrónico</FormLabel>
+                        <FormControl>
+                          <Input placeholder="tu@email.com" {...field} className="rounded-xl border-slate-200 focus:ring-primary" />
+                        </FormControl>
+                        <FormMessage />
+                      </FormItem>
+                    )}
+                  />
+                  <FormField
+                    control={form.control}
+                    name="phone"
+                    render={({ field }) => (
+                      <FormItem>
+                        <FormLabel>Teléfono / WhatsApp</FormLabel>
+                        <FormControl>
+                          <Input placeholder="Tu número de contacto" {...field} className="rounded-xl border-slate-200 focus:ring-primary" />
+                        </FormControl>
+                        <FormMessage />
+                      </FormItem>
+                    )}
+                  />
+                  <FormField
+                    control={form.control}
+                    name="message"
+                    render={({ field }) => (
+                      <FormItem>
+                        <FormLabel>Mensaje o Consulta</FormLabel>
+                        <FormControl>
+                          <Textarea 
+                            placeholder="¿En qué programa estás interesado?" 
+                            className="rounded-xl border-slate-200 focus:ring-primary min-h-[100px]" 
+                            {...field} 
+                          />
+                        </FormControl>
+                        <FormMessage />
+                      </FormItem>
+                    )}
+                  />
+                  <Button 
+                    type="submit" 
+                    className="w-full h-14 bg-primary hover:bg-primary/90 text-white text-lg font-bold rounded-xl shadow-lg shadow-primary/20 transition-all active:scale-[0.98] flex items-center justify-center gap-2"
+                  >
+                    Enviar Información
+                    <Send className="w-5 h-5" />
+                  </Button>
+                </form>
+              </Form>
+              
+              <p className="mt-6 text-center text-[10px] text-muted-foreground uppercase tracking-widest font-bold">
+                pilotosasesalvolante@gmail.com
+              </p>
             </div>
           </div>
         </div>
