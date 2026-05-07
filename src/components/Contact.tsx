@@ -1,7 +1,7 @@
 "use client";
 
 import React from 'react';
-import { Mail, Phone, MapPin, ExternalLink, Send, Star } from 'lucide-react';
+import { Mail, MessageSquare, MapPin, ExternalLink, Send, Star } from 'lucide-react';
 import { PlaceHolderImages } from '@/app/lib/placeholder-images';
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
@@ -91,7 +91,7 @@ export const Contact = () => {
                   </div>
                   <div className="flex items-start gap-6">
                     <div className="bg-white dark:bg-slate-800 p-4 rounded-[1.2rem] shadow-sm shrink-0">
-                      <Phone className="w-6 h-6 text-primary" />
+                      <MessageSquare className="w-6 h-6 text-primary" />
                     </div>
                     <div>
                       <p className="font-bold text-lg mb-1">WhatsApp</p>
