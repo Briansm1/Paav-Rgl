@@ -95,7 +95,7 @@ export const Services = () => {
           <div className="bg-secondary rounded-[2.4rem] p-8 md:p-16 flex flex-col lg:flex-row items-center gap-12 lg:gap-20">
             <div className="lg:w-1/2 w-full">
               <h3 className="text-3xl md:text-5xl font-bold mb-8 tracking-tight">
-                ¿Por qué somos la mejor opción?
+                ¿Por qué somos los más elegidos?
               </h3>
               <div className="grid grid-cols-1 gap-8">
                 {[
