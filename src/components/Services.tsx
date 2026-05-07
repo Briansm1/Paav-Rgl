@@ -34,7 +34,7 @@ export const Services = () => {
   return (
     <section id="servicios" className="py-20 md:py-32 bg-background">
       <div className="container mx-auto px-4">
-        <div className="text-center max-w-3xl mx-auto mb-16 md:mb-24">
+        <div className="text-center max-w-4xl mx-auto mb-16 md:mb-24">
           <span className="inline-block px-4 py-1.5 mb-6 text-xs font-bold tracking-widest text-primary uppercase bg-primary/10 rounded-full">
             Nuestros Servicios
           </span>
@@ -42,7 +42,7 @@ export const Services = () => {
             Conducir es <span className="text-primary italic">más que solo manejar</span>
           </h2>
           <p className="text-lg md:text-xl text-muted-foreground leading-relaxed">
-            Combinamos tecnología moderna con instructores expertos para ofrecerte la formación vial más completa del mercado.
+            Revolucionamos la enseñanza vial combinando conocimiento de vanguardia con nuestro método exclusivo de 3 pilares: <span className="text-primary font-bold">mentalidad</span> para darte confianza, <span className="text-primary font-bold">teoría</span> para un aprendizaje sólido, y <span className="text-primary font-bold">técnica</span> para el dominio total del vehículo. Más que enseñarte a manejar, formamos conductores expertos.
           </p>
         </div>
 
