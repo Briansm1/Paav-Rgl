@@ -21,7 +21,7 @@ const services = [
   },
   {
     title: 'Técnica profesional aplicable',
-    description: 'Domina las normas y señales viales para aprobar tu examen teórico sin dificultades.',
+    description: 'Desarrollamos tus habilidades mediante una práctica estructurada para que logres el dominio total del vehículo y conviertas el manejo en algo natural y fluido.',
     icon: <BookOpen className="w-10 h-10 text-primary" />,
     imgId: 'service-theory',
     tag: 'Académico'
@@ -38,7 +38,7 @@ export const Services = () => {
           <span className="inline-block px-4 py-1.5 mb-6 text-xs font-bold tracking-widest text-primary uppercase bg-primary/10 rounded-full">
             Nuestros Servicios
           </span>
-          <h2 className="text-4xl md:text-6xl font-bold font-headline mb-6 tracking-tight text-foreground">
+          <h2 className="text-4xl md:text-6xl font-bold font-headline mb-6 tracking-tight text-foreground text-center">
             Conducir es <span className="text-primary italic">más que solo manejar</span>
           </h2>
           <p className="text-lg md:text-xl text-muted-foreground leading-relaxed">
