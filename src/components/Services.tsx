@@ -101,7 +101,7 @@ export const Services = () => {
               </h3>
               <div className="grid grid-cols-1 gap-8">
                 {[
-                  { icon: <ShieldCheck className="w-6 h-6 text-primary" />, text: 'Vehículos modernos con sistema de doble pedal para tu seguridad.' },
+                  { icon: <ShieldCheck className="w-6 h-6 text-primary" />, text: 'Aprendizaje en un entorno real: Practica en vehículos modernos, seguros y con el máximo confort, exactamente iguales a los que manejarás cuando tengas tu licencia.' },
                   { icon: <Award className="w-6 h-6 text-primary" />, text: 'Instructores certificados con más de 5 años de experiencia.' },
                   { icon: <Car className="w-6 h-6 text-primary" />, text: 'Horarios 100% flexibles que se adaptan a tu ritmo de vida.' }
                 ].map((item, i) => (
