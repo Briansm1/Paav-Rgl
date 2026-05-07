@@ -114,7 +114,7 @@ export const Contact = () => {
                       <p className="font-bold text-lg mb-1">Consultas</p>
                       <a 
                         href={`mailto:${emailAddress}`}
-                        className="text-muted-foreground font-medium border-b border-primary/20 inline-block hover:text-primary transition-colors"
+                        className="text-muted-foreground font-medium hover:text-primary transition-colors"
                       >
                         {emailAddress}
                       </a>
