@@ -29,22 +29,19 @@ const services = [
     title: 'Mentalidad de piloto',
     description: 'Trabajamos la gestión de tus emociones al volante para que logres superar los miedos y conduzcas con total seguridad y confianza.',
     icon: <Brain className="w-10 h-10 text-primary" />,
-    imgId: 'service-beginner',
-    tag: 'Popular'
+    imgId: 'service-beginner'
   },
   {
     title: 'Teoría basada en el marco legal y al tráfico real',
     description: 'Profundizamos en las normas de tránsito y el manejo preventivo para que logres anticiparte al entorno y tomes decisiones inteligentes en la calle.',
     icon: <BookOpen className="w-10 h-10 text-primary" />,
-    imgId: 'service-advanced',
-    tag: 'Especializado'
+    imgId: 'service-advanced'
   },
   {
     title: 'Técnica profesional aplicable',
     description: 'Desarrollamos tus habilidades mediante una práctica estructurada para que logres el dominio total del vehículo y conviertas el manejo en algo natural y fluido.',
     icon: <SteeringWheel className="w-10 h-10 text-primary" />,
-    imgId: 'service-theory',
-    tag: 'Académico'
+    imgId: 'service-theory'
   }
 ];
 
@@ -80,11 +77,6 @@ export const Services = () => {
                     data-ai-hint={img?.imageHint}
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-black/90 to-transparent"></div>
-                  <div className="absolute top-4 left-4">
-                    <span className="px-3 py-1 text-[10px] font-bold uppercase tracking-wider bg-white/10 backdrop-blur-md text-white rounded-lg shadow-sm border border-white/20">
-                      {service.tag}
-                    </span>
-                  </div>
                   <div className="absolute bottom-6 left-6 text-white">
                     {service.icon}
                   </div>
