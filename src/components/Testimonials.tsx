@@ -1,4 +1,3 @@
-
 "use client";
 
 import React from 'react';
@@ -37,7 +36,7 @@ const testimonials = [
 
 export const Testimonials = () => {
   return (
-    <section id="testimonios" className="py-16 md:py-24 bg-slate-50 dark:bg-slate-900/50 overflow-hidden">
+    <section id="testimonios" className="py-16 md:py-24 bg-secondary overflow-hidden">
       <div className="container mx-auto px-4">
         <div className="text-center mb-12 md:mb-16">
           <h2 className="text-accent font-bold tracking-widest uppercase text-xs md:text-sm mb-4">Lo que dicen de nosotros</h2>
@@ -57,7 +56,7 @@ export const Testimonials = () => {
                 const img = PlaceHolderImages.find(p => p.id === t.imgId);
                 return (
                   <CarouselItem key={index} className="pl-2 md:pl-4 basis-full sm:basis-1/2 lg:basis-1/3">
-                    <Card className="h-full border-none shadow-xl rounded-3xl m-1 hover:shadow-2xl transition-shadow duration-300">
+                    <Card className="h-full border-none shadow-xl rounded-3xl m-1 hover:shadow-2xl transition-shadow duration-300 bg-card">
                       <CardContent className="p-8 flex flex-col h-full">
                         <Quote className="w-10 h-10 text-primary/15 mb-6 shrink-0" />
                         <p className="text-base md:text-lg italic text-muted-foreground mb-8 flex-grow leading-relaxed">
@@ -92,13 +91,10 @@ export const Testimonials = () => {
               })}
             </CarouselContent>
             
-            {/* Controls are only visible and functional if there's enough space */}
             <div className="hidden sm:block">
-              <CarouselPrevious className="-left-12 h-12 w-12 bg-white dark:bg-slate-800 text-primary border-primary/20 hover:bg-primary hover:text-white transition-all shadow-md" />
-              <CarouselNext className="-right-12 h-12 w-12 bg-white dark:bg-slate-800 text-primary border-primary/20 hover:bg-primary hover:text-white transition-all shadow-md" />
+              <CarouselPrevious className="-left-12 h-12 w-12 bg-card text-primary border-white/10 hover:bg-primary hover:text-white transition-all shadow-md" />
+              <CarouselNext className="-right-12 h-12 w-12 bg-card text-primary border-white/10 hover:bg-primary hover:text-white transition-all shadow-md" />
             </div>
-            
-            {/* Mobile pagination dots indicator could go here if implemented in the UI component */}
           </Carousel>
         </div>
       </div>

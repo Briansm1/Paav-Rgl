@@ -58,7 +58,7 @@ export const Contact = () => {
   }
 
   return (
-    <section id="contacto" className="py-20 md:py-32 bg-white dark:bg-slate-950">
+    <section id="contacto" className="py-20 md:py-32 bg-background">
       <div className="container mx-auto px-4">
         <div className="text-center max-w-3xl mx-auto mb-16 md:mb-24">
           <span className="inline-block px-4 py-1.5 mb-6 text-xs font-bold tracking-widest text-primary uppercase bg-primary/10 rounded-full">
@@ -74,11 +74,11 @@ export const Contact = () => {
 
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 md:gap-20 items-stretch">
           <div className="flex flex-col gap-10">
-            <div className="bg-slate-50 dark:bg-slate-900 p-8 md:p-12 rounded-[2.5rem] shadow-xl border border-border/50 h-full flex flex-col justify-center">
+            <div className="bg-secondary p-8 md:p-12 rounded-[2.5rem] shadow-xl border border-white/5 h-full flex flex-col justify-center">
               <h4 className="text-2xl font-bold mb-10 tracking-tight">Canales de atención</h4>
               <div className="space-y-10">
                 <div className="flex items-start gap-6">
-                  <div className="bg-white dark:bg-slate-800 p-4 rounded-[1.2rem] shadow-sm shrink-0">
+                  <div className="bg-white/5 p-4 rounded-[1.2rem] shadow-sm shrink-0">
                     <MapPin className="w-6 h-6 text-primary" />
                   </div>
                   <div>
@@ -87,7 +87,7 @@ export const Contact = () => {
                   </div>
                 </div>
                 <div className="flex items-start gap-6">
-                  <div className="bg-white dark:bg-slate-800 p-4 rounded-[1.2rem] shadow-sm shrink-0">
+                  <div className="bg-white/5 p-4 rounded-[1.2rem] shadow-sm shrink-0">
                     <MessageSquare className="w-6 h-6 text-primary" />
                   </div>
                   <div>
@@ -103,7 +103,7 @@ export const Contact = () => {
                   </div>
                 </div>
                 <div className="flex items-start gap-6">
-                  <div className="bg-white dark:bg-slate-800 p-4 rounded-[1.2rem] shadow-sm shrink-0">
+                  <div className="bg-white/5 p-4 rounded-[1.2rem] shadow-sm shrink-0">
                     <Mail className="w-6 h-6 text-primary" />
                   </div>
                   <div>
@@ -121,7 +121,7 @@ export const Contact = () => {
           </div>
 
           <div className="flex flex-col gap-10">
-            <div className="bg-white dark:bg-slate-900 p-8 md:p-12 rounded-[2.5rem] shadow-2xl border border-border/50 h-full">
+            <div className="bg-card p-8 md:p-12 rounded-[2.5rem] shadow-2xl border border-white/5 h-full">
               <div className="mb-8 text-center md:text-left">
                 <h4 className="text-2xl md:text-3xl font-bold mb-4 tracking-tight">Cuéntanos tu experiencia</h4>
                 <p className="text-muted-foreground">
@@ -138,7 +138,7 @@ export const Contact = () => {
                       <FormItem>
                         <FormLabel>Nombre completo</FormLabel>
                         <FormControl>
-                          <Input placeholder="Tu nombre" {...field} className="rounded-xl border-slate-200 focus:ring-primary" />
+                          <Input placeholder="Tu nombre" {...field} className="rounded-xl bg-white/5 border-white/10 focus:ring-primary text-white" />
                         </FormControl>
                         <FormMessage />
                       </FormItem>
@@ -152,7 +152,7 @@ export const Contact = () => {
                         <FormItem>
                           <FormLabel>Correo electrónico</FormLabel>
                           <FormControl>
-                            <Input placeholder="tu@email.com" {...field} className="rounded-xl border-slate-200 focus:ring-primary" />
+                            <Input placeholder="tu@email.com" {...field} className="rounded-xl bg-white/5 border-white/10 focus:ring-primary text-white" />
                           </FormControl>
                           <FormMessage />
                         </FormItem>
@@ -166,13 +166,13 @@ export const Contact = () => {
                           <FormLabel>Calificación</FormLabel>
                           <Select onValueChange={field.onChange} defaultValue={field.value}>
                             <FormControl>
-                              <SelectTrigger className="rounded-xl border-slate-200 focus:ring-primary">
+                              <SelectTrigger className="rounded-xl bg-white/5 border-white/10 focus:ring-primary text-white">
                                 <SelectValue placeholder="Califica" />
                               </SelectTrigger>
                             </FormControl>
-                            <SelectContent>
+                            <SelectContent className="bg-card border-white/10">
                               {[5, 4, 3, 2, 1].map((val) => (
-                                <SelectItem key={val} value={val.toString()}>
+                                <SelectItem key={val} value={val.toString()} className="text-white hover:bg-primary/20">
                                   <div className="flex items-center gap-2">
                                     {val} {val === 1 ? 'estrella' : 'estrellas'}
                                   </div>
@@ -194,7 +194,7 @@ export const Contact = () => {
                         <FormControl>
                           <Textarea 
                             placeholder="Cuéntanos qué fue lo que más te gustó de tus clases..." 
-                            className="rounded-xl border-slate-200 focus:ring-primary min-h-[120px]" 
+                            className="rounded-xl bg-white/5 border-white/10 focus:ring-primary text-white min-h-[120px]" 
                             {...field} 
                           />
                         </FormControl>

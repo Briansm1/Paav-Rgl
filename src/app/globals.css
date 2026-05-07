@@ -4,44 +4,44 @@
 
 @layer base {
   :root {
-    --background: 218 71% 96%; /* #ECF2FC */
-    --foreground: 220 10% 10%;
-    --card: 0 0% 100%;
-    --card-foreground: 220 10% 10%;
-    --popover: 0 0% 100%;
-    --popover-foreground: 220 10% 10%;
-    --primary: 213 74% 52%; /* #297BE0 - Blue */
+    --background: 0 0% 0%; /* Negro puro */
+    --foreground: 218 71% 96%;
+    --card: 0 0% 7%; /* Negro muy claro para tarjetas */
+    --card-foreground: 218 71% 96%;
+    --popover: 0 0% 7%;
+    --popover-foreground: 218 71% 96%;
+    --primary: 213 74% 52%; /* Azul */
     --primary-foreground: 0 0% 100%;
-    --secondary: 218 30% 90%;
+    --secondary: 0 0% 12%; /* Gris oscuro para separación */
     --secondary-foreground: 213 74% 52%;
-    --muted: 218 20% 90%;
-    --muted-foreground: 220 10% 40%;
-    --accent: 43 74% 49%; /* #D4AF37 - Gold */
+    --muted: 0 0% 10%;
+    --muted-foreground: 220 10% 60%;
+    --accent: 43 74% 49%; /* Oro */
     --accent-foreground: 0 0% 100%;
     --destructive: 0 84.2% 60.2%;
     --destructive-foreground: 0 0% 98%;
-    --border: 213 20% 85%;
-    --input: 213 20% 85%;
+    --border: 0 0% 15%;
+    --input: 0 0% 15%;
     --ring: 43 74% 49%;
     --radius: 0.75rem;
   }
   .dark {
-    --background: 220 20% 10%;
+    --background: 0 0% 0%;
     --foreground: 218 71% 96%;
-    --card: 220 20% 15%;
+    --card: 0 0% 7%;
     --card-foreground: 218 71% 96%;
-    --popover: 220 20% 15%;
+    --popover: 0 0% 7%;
     --popover-foreground: 218 71% 96%;
     --primary: 213 74% 52%;
     --primary-foreground: 0 0% 100%;
-    --secondary: 220 20% 20%;
+    --secondary: 0 0% 12%;
     --secondary-foreground: 213 74% 52%;
-    --muted: 220 20% 20%;
+    --muted: 0 0% 10%;
     --muted-foreground: 220 10% 60%;
     --accent: 43 74% 49%;
     --accent-foreground: 0 0% 100%;
-    --border: 220 20% 25%;
-    --input: 220 20% 25%;
+    --border: 0 0% 15%;
+    --input: 0 0% 15%;
     --ring: 43 74% 49%;
   }
 }

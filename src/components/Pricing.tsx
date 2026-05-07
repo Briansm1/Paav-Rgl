@@ -27,7 +27,7 @@ const plans = [
 
 export const Pricing = () => {
   return (
-    <section id="planes" className="py-20 md:py-32 bg-slate-50 dark:bg-slate-900/20">
+    <section id="planes" className="py-20 md:py-32 bg-background">
       <div className="container mx-auto px-4">
         <div className="text-center max-w-3xl mx-auto mb-16">
           <span className="inline-block px-4 py-1.5 mb-6 text-xs font-bold tracking-widest text-primary uppercase bg-primary/10 rounded-full border border-primary/20">
@@ -46,7 +46,7 @@ export const Pricing = () => {
             <div 
               key={index} 
               className={cn(
-                "relative p-8 rounded-[2.5rem] border-2 bg-white dark:bg-slate-800 shadow-xl transition-all duration-500 flex flex-col items-center text-center group overflow-hidden border-border"
+                "relative p-8 rounded-[2.5rem] border-2 bg-secondary shadow-xl transition-all duration-500 flex flex-col items-center text-center group overflow-hidden border-white/5"
               )}
             >
               <div className="absolute top-0 right-0 bg-accent text-white px-6 py-1.5 rounded-bl-2xl text-[10px] font-bold uppercase tracking-widest">
@@ -56,7 +56,7 @@ export const Pricing = () => {
               <div className="mb-8 relative z-10 w-full">
                 <h4 className="text-2xl font-bold mb-4 text-foreground tracking-tight">{plan.name}</h4>
                 <div className="flex items-center justify-center gap-2 mb-4">
-                  <span className="text-3xl font-bold tracking-tight text-green-600">{plan.price}</span>
+                  <span className="text-3xl font-bold tracking-tight text-green-500">{plan.price}</span>
                 </div>
                 <p className="text-muted-foreground text-sm leading-relaxed font-medium mb-6">{plan.description}</p>
               </div>
@@ -77,7 +77,7 @@ export const Pricing = () => {
         </div>
         
         <div className="mt-20 text-center max-w-4xl mx-auto px-4">
-          <div className="bg-white dark:bg-slate-800 p-6 md:p-8 rounded-[2rem] border border-border shadow-lg inline-flex flex-col items-center gap-6 text-center">
+          <div className="bg-secondary p-6 md:p-8 rounded-[2rem] border border-white/5 shadow-lg inline-flex flex-col items-center gap-6 text-center">
             <div className="shrink-0 bg-primary/10 p-4 rounded-3xl">
               <Shield className="w-10 h-10 text-primary" />
             </div>

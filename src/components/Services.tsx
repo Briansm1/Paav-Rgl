@@ -32,7 +32,7 @@ export const Services = () => {
   const instructorImg = PlaceHolderImages.find(img => img.id === 'driving-instructor');
 
   return (
-    <section id="servicios" className="py-20 md:py-32 bg-white dark:bg-slate-950">
+    <section id="servicios" className="py-20 md:py-32 bg-background">
       <div className="container mx-auto px-4">
         <div className="text-center max-w-3xl mx-auto mb-16 md:mb-24">
           <span className="inline-block px-4 py-1.5 mb-6 text-xs font-bold tracking-widest text-primary uppercase bg-primary/10 rounded-full">
@@ -50,7 +50,7 @@ export const Services = () => {
           {services.map((service, index) => {
             const img = PlaceHolderImages.find(p => p.id === service.imgId);
             return (
-              <Card key={index} className="group relative overflow-hidden border-none bg-slate-50 dark:bg-slate-900 shadow-xl hover:shadow-2xl transition-all duration-500">
+              <Card key={index} className="group relative overflow-hidden border-none bg-secondary shadow-xl hover:shadow-2xl transition-all duration-500">
                 <div className="relative h-64 overflow-hidden">
                   <Image 
                     src={img?.imageUrl || ''} 
@@ -59,9 +59,9 @@ export const Services = () => {
                     className="object-cover group-hover:scale-110 transition-transform duration-700"
                     data-ai-hint={img?.imageHint}
                   />
-                  <div className="absolute inset-0 bg-gradient-to-t from-slate-900/80 to-transparent"></div>
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/90 to-transparent"></div>
                   <div className="absolute top-4 left-4">
-                    <span className="px-3 py-1 text-[10px] font-bold uppercase tracking-wider bg-white/90 backdrop-blur-sm text-primary rounded-lg shadow-sm">
+                    <span className="px-3 py-1 text-[10px] font-bold uppercase tracking-wider bg-white/10 backdrop-blur-md text-white rounded-lg shadow-sm border border-white/20">
                       {service.tag}
                     </span>
                   </div>
@@ -81,7 +81,7 @@ export const Services = () => {
         </div>
 
         <div className="mt-24 md:mt-40 p-1 md:p-2 bg-gradient-to-br from-primary/20 via-transparent to-accent/20 rounded-[2.5rem] overflow-hidden shadow-2xl">
-          <div className="bg-white dark:bg-slate-900 rounded-[2.4rem] p-8 md:p-16 flex flex-col lg:flex-row items-center gap-12 lg:gap-20">
+          <div className="bg-secondary rounded-[2.4rem] p-8 md:p-16 flex flex-col lg:flex-row items-center gap-12 lg:gap-20">
             <div className="lg:w-1/2 w-full">
               <h3 className="text-3xl md:text-5xl font-bold mb-8 tracking-tight">
                 ¿Por qué somos la mejor opción?
@@ -109,7 +109,7 @@ export const Services = () => {
                 className="object-cover group-hover:scale-105 transition-transform duration-1000"
                 data-ai-hint={instructorImg?.imageHint}
               />
-              <div className="absolute inset-0 bg-primary/10 group-hover:bg-transparent transition-colors duration-500"></div>
+              <div className="absolute inset-0 bg-primary/5 group-hover:bg-transparent transition-colors duration-500"></div>
             </div>
           </div>
         </div>

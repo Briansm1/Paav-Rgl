@@ -43,11 +43,10 @@ const detailedPlans = [
 
 export default function PlanesPage() {
   return (
-    <main className="min-h-screen bg-slate-50 dark:bg-slate-900">
+    <main className="min-h-screen bg-background">
       <Header />
       
-      {/* Hero Section para Planes */}
-      <section className="pt-32 pb-20 bg-primary/5 border-b border-primary/10">
+      <section className="pt-32 pb-20 bg-secondary/30 border-b border-white/5">
         <div className="container mx-auto px-4 text-center">
           <Link href="/#planes" className="inline-flex items-center gap-2 text-primary font-bold mb-8 hover:underline">
             <ArrowLeft className="w-4 h-4" />
@@ -59,33 +58,32 @@ export default function PlanesPage() {
         </div>
       </section>
 
-      {/* Detalle de Planes */}
-      <section className="py-12 md:py-20">
+      <section className="py-12 md:py-20 bg-background">
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto">
             {detailedPlans.map((plan, index) => (
               <div 
                 key={index} 
-                className="flex flex-col gap-10 p-6 md:p-10 rounded-[2.5rem] border-2 bg-white dark:bg-slate-900 shadow-2xl border-border"
+                className="flex flex-col gap-10 p-6 md:p-10 rounded-[2.5rem] border bg-secondary shadow-2xl border-white/5"
               >
                 <div className="w-full space-y-6 flex flex-col items-center text-center">
                   <h2 className="text-3xl md:text-5xl font-bold tracking-tight text-center">{plan.name}</h2>
                   
-                  <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 md:gap-6 w-full max-w-2xl bg-slate-50 dark:bg-slate-800/50 p-6 rounded-2xl border border-border/50">
-                    <div className="flex flex-col items-center justify-center gap-2 sm:border-r border-border/50 sm:pr-6">
+                  <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 md:gap-6 w-full max-w-2xl bg-black/20 p-6 rounded-2xl border border-white/5">
+                    <div className="flex flex-col items-center justify-center gap-2 sm:border-r border-white/10 sm:pr-6">
                       <div className="flex flex-col items-center gap-2 text-muted-foreground">
                         <span className="text-xl">📲</span>
-                        <span className="text-sm font-medium">Transferencia</span>
+                        <span className="text-sm font-medium text-slate-400">Transferencia</span>
                       </div>
-                      <p className="text-3xl font-bold text-green-600 text-center">{plan.transferPrice}</p>
-                      <span className="text-xs font-bold bg-green-500/10 text-green-600 px-3 py-1 rounded-full text-center">
+                      <p className="text-3xl font-bold text-green-500 text-center">{plan.transferPrice}</p>
+                      <span className="text-xs font-bold bg-green-500/10 text-green-500 px-3 py-1 rounded-full text-center">
                         Ahorro de $47.000
                       </span>
                     </div>
                     <div className="flex flex-col items-center justify-center gap-2">
                       <div className="flex flex-col items-center gap-2 text-muted-foreground">
                         <span className="text-xl">💳</span>
-                        <span className="text-sm font-medium">Tarjetas de crédito</span>
+                        <span className="text-sm font-medium text-slate-400">Tarjetas de crédito</span>
                       </div>
                       <p className="text-3xl font-bold text-primary text-center">{plan.cardPrice}</p>
                       <span className="text-xs font-bold bg-primary/10 text-primary px-3 py-1 rounded-full text-center">
@@ -99,8 +97,7 @@ export default function PlanesPage() {
                   </p>
                 </div>
 
-                {/* Sección: ¿Para quién es? */}
-                <div className="w-full bg-slate-50 dark:bg-slate-800/50 p-6 md:p-8 rounded-[2rem] border border-border/50">
+                <div className="w-full bg-black/20 p-6 md:p-8 rounded-[2rem] border border-white/5">
                   <h3 className="text-xl font-bold mb-6 flex items-center justify-center gap-2 text-foreground text-center">
                     ¿Para quién es?
                   </h3>
@@ -116,8 +113,7 @@ export default function PlanesPage() {
                   </div>
                 </div>
 
-                {/* Sección: ¿Qué vas a lograr? */}
-                <div className="w-full bg-slate-50 dark:bg-slate-800/50 p-6 md:p-8 rounded-[2rem] border border-border/50">
+                <div className="w-full bg-black/20 p-6 md:p-8 rounded-[2rem] border border-white/5">
                   <h3 className="text-xl font-bold mb-6 flex items-center justify-center gap-2 text-foreground text-center">
                     ¿Qué vas a lograr?
                   </h3>
@@ -133,8 +129,7 @@ export default function PlanesPage() {
                   </div>
                 </div>
 
-                {/* Sección: ¿Qué incluye este programa? */}
-                <div className="w-full bg-slate-50 dark:bg-slate-800/50 p-6 md:p-8 rounded-[2rem] border border-border/50">
+                <div className="w-full bg-black/20 p-6 md:p-8 rounded-[2rem] border border-white/5">
                   <h3 className="text-xl font-bold mb-6 flex items-center justify-center gap-2 text-foreground text-center">
                     ¿Qué incluye este programa?
                   </h3>
@@ -142,7 +137,7 @@ export default function PlanesPage() {
                     {plan.features.map((feature, i) => (
                       <div key={i} className="flex items-start gap-3 group">
                         <div className="mt-1 bg-green-500/10 p-1 rounded-full shrink-0">
-                          <Check className="w-3 h-3 text-green-600" />
+                          <Check className="w-3 h-3 text-green-500" />
                         </div>
                         <span className="text-sm md:text-base text-foreground/90 font-medium leading-tight">{feature}</span>
                       </div>
@@ -150,8 +145,7 @@ export default function PlanesPage() {
                   </div>
                 </div>
 
-                {/* Sección: Bonos */}
-                <div className="w-full bg-primary/5 dark:bg-primary/10 p-6 md:p-8 rounded-[2rem] border-2 border-primary/20">
+                <div className="w-full bg-primary/5 p-6 md:p-8 rounded-[2rem] border-2 border-primary/20">
                   <h3 className="text-xl font-bold mb-6 flex items-center justify-center gap-2 text-primary text-center">
                     <Gift className="w-6 h-6" />
                     Bonos
@@ -168,7 +162,6 @@ export default function PlanesPage() {
                   </div>
                 </div>
 
-                {/* Botón de acción final */}
                 <div className="pt-4 w-full flex justify-center">
                   <Button size="lg" className="rounded-full px-10 h-14 text-lg bg-primary hover:bg-primary/90 w-full text-center">
                     Quiero este plan
@@ -180,8 +173,7 @@ export default function PlanesPage() {
         </div>
       </section>
 
-      {/* Footer CTA */}
-      <section className="py-16 bg-white dark:bg-slate-900 border-t border-border">
+      <section className="py-16 bg-background border-t border-white/5">
         <div className="container mx-auto px-4 text-center">
           <h2 className="text-3xl font-bold mb-4 text-center">¿Todavía tenés consultas?</h2>
           <p className="text-muted-foreground mb-8 max-w-xl mx-auto text-center">
