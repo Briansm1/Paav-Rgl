@@ -102,7 +102,7 @@ export const Services = () => {
                 {[
                   { icon: <ShieldCheck className="w-6 h-6 text-primary" />, text: 'Aprendizaje en un entorno real: Practica en vehículos modernos, seguros y con el máximo confort, exactamente iguales a los que manejarás cuando tengas tu licencia.' },
                   { icon: <Award className="w-6 h-6 text-primary" />, text: 'Guía profesional y experta: Nuestro equipo certificado te acompaña paso a paso, brindándote la tranquilidad y técnica que necesitas para dominar el volante.' },
-                  { icon: <Car className="w-6 h-6 text-primary" />, text: 'Horarios 100% flexibles que se adaptan a tu ritmo de vida.' }
+                  { icon: <Car className="w-6 h-6 text-primary" />, text: 'A tu propia medida: ¿Trabajas o estudias? No hay problema. Armamos un cronograma de clases que se adapte a tus tiempos.' }
                 ].map((item, i) => (
                   <div key={i} className="flex items-start gap-5">
                     <div className="shrink-0 mt-1 bg-primary/10 p-3 rounded-2xl shadow-inner">
