@@ -68,7 +68,7 @@ export const Contact = () => {
             Tu opinión es <span className="text-primary italic">nuestro motor</span>
           </h2>
           <p className="text-lg md:text-xl text-muted-foreground leading-relaxed">
-            ¿Ya eres un as al volante? Comparte tu experiencia y ayuda a otros a iniciar su camino hacia la libertad.
+            Compartí tu experiencia y ayuda a otros a iniciar su camino hacia la libertad e independencia.
           </p>
         </div>
 
@@ -110,7 +110,7 @@ export const Contact = () => {
                     <p className="font-bold text-lg mb-1">Consultas</p>
                     <a 
                       href={`mailto:${emailAddress}`}
-                      className="text-muted-foreground font-medium hover:text-primary transition-colors"
+                      className="text-muted-foreground font-medium hover:text-primary transition-colors no-underline"
                     >
                       {emailAddress}
                     </a>
