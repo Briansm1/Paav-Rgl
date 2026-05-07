@@ -43,7 +43,7 @@ export const Header = () => {
     <header
       className={cn(
         "fixed top-0 left-0 right-0 z-50 transition-all duration-300",
-        "bg-white dark:bg-slate-900 shadow-md border-b border-border/50",
+        "bg-black shadow-md border-b border-white/10",
         isScrolled ? "py-3" : "py-5"
       )}
     >
@@ -54,7 +54,7 @@ export const Header = () => {
           onClick={() => setActiveSection('#inicio')}
         >
           <ShieldCheck className="w-8 h-8 text-primary transition-transform group-hover:scale-110" />
-          <span className="text-xl font-bold font-headline tracking-tight text-foreground">
+          <span className="text-xl font-bold font-headline tracking-tight text-white">
             Pilotos - <span className="text-primary">ases al volante</span>
           </span>
         </Link>
@@ -70,7 +70,7 @@ export const Header = () => {
                 "relative text-sm font-bold py-1 transition-colors duration-300",
                 activeSection === link.href 
                   ? "text-primary" 
-                  : "text-muted-foreground hover:text-primary"
+                  : "text-slate-300 hover:text-white"
               )}
             >
               {link.name}
@@ -89,7 +89,7 @@ export const Header = () => {
 
         {/* Mobile Toggle */}
         <button
-          className="md:hidden p-2 text-foreground focus:outline-none"
+          className="md:hidden p-2 text-white focus:outline-none"
           onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
           aria-label="Toggle menu"
         >
@@ -99,7 +99,7 @@ export const Header = () => {
 
       {/* Mobile Nav Overlay */}
       <div className={cn(
-        "fixed inset-0 top-[60px] bg-background z-40 transition-transform duration-300 md:hidden",
+        "fixed inset-0 top-[60px] bg-black z-40 transition-transform duration-300 md:hidden",
         mobileMenuOpen ? "translate-x-0" : "translate-x-full"
       )}>
         <nav className="flex flex-col p-6 gap-6 h-full overflow-y-auto">
@@ -108,8 +108,8 @@ export const Header = () => {
               key={link.name}
               href={link.href}
               className={cn(
-                "text-2xl font-bold border-b border-border pb-4 transition-colors",
-                activeSection === link.href ? "text-primary" : "text-foreground"
+                "text-2xl font-bold border-b border-white/10 pb-4 transition-colors",
+                activeSection === link.href ? "text-primary" : "text-white"
               )}
               onClick={() => {
                 setActiveSection(link.href);
