@@ -39,7 +39,7 @@ export const Services = () => {
             Nuestros Servicios
           </span>
           <h2 className="text-4xl md:text-6xl font-bold font-headline mb-6 tracking-tight text-foreground">
-            Conducir por <span className="text-primary italic">aprender</span>
+            Conducir es <span className="text-primary italic">más que solo manejar</span>
           </h2>
           <p className="text-lg md:text-xl text-muted-foreground leading-relaxed">
             Combinamos tecnología moderna con instructores expertos para ofrecerte la formación vial más completa del mercado.
