@@ -11,7 +11,7 @@ export const Hero = () => {
   const heroImg = PlaceHolderImages.find(img => img.id === 'hero-bg');
 
   return (
-    <section id="inicio" className="relative min-h-[90vh] md:h-screen flex items-center pt-32 md:pt-40 pb-12 overflow-hidden">
+    <section id="inicio" className="relative min-h-screen flex items-center pt-24 pb-12 overflow-hidden">
       {/* Background Image Overlay */}
       <div className="absolute inset-0 z-0">
         <Image
@@ -32,37 +32,37 @@ export const Hero = () => {
             <span className="text-xs md:text-sm font-bold text-foreground">La elección N°1 de la región</span>
           </div>
           
-          <h1 className="text-4xl sm:text-5xl md:text-7xl font-bold font-headline leading-[1.1] mb-6 text-foreground animate-in fade-in slide-in-from-bottom-6 duration-1000 delay-100">
+          <h1 className="text-3xl sm:text-5xl md:text-7xl font-bold font-headline leading-[1.1] mb-6 text-foreground animate-in fade-in slide-in-from-bottom-6 duration-1000 delay-100">
             Tu camino hacia la <span className="text-primary">Libertad</span> comienza con nosotros.
           </h1>
           
-          <p className="text-base sm:text-lg md:text-xl text-muted-foreground mb-10 max-w-xl animate-in fade-in slide-in-from-bottom-8 duration-1000 delay-200">
+          <p className="text-sm sm:text-lg md:text-xl text-muted-foreground mb-8 max-w-xl animate-in fade-in slide-in-from-bottom-8 duration-1000 delay-200">
             En nuestra academia, no solo te enseñamos a manejar; te preparamos para ser un conductor responsable, seguro y con total confianza en las calles.
           </p>
           
           <div className="flex flex-col sm:flex-row gap-4 animate-in fade-in slide-in-from-bottom-10 duration-1000 delay-300">
             <Link href="#planes" className="w-full sm:w-auto">
-              <Button size="lg" className="h-14 px-8 text-lg bg-primary hover:bg-primary/90 rounded-full w-full">
+              <Button size="lg" className="h-12 md:h-14 px-8 text-base md:text-lg bg-primary hover:bg-primary/90 rounded-full w-full">
                 Conocer nuestros planes
                 <ChevronRight className="ml-2 w-5 h-5" />
               </Button>
             </Link>
           </div>
           
-          <div className="mt-12 flex items-center gap-4 sm:gap-8 md:gap-12 animate-in fade-in duration-1000 delay-500">
+          <div className="mt-10 md:mt-16 flex items-center gap-3 sm:gap-8 md:gap-12 animate-in fade-in duration-1000 delay-500">
             <div>
-              <p className="text-lg sm:text-2xl md:text-4xl font-bold text-foreground">Equipo</p>
-              <p className="text-[10px] sm:text-xs md:text-sm text-muted-foreground uppercase tracking-wider font-semibold">altamente calificado</p>
+              <p className="text-base sm:text-2xl md:text-4xl font-bold text-foreground whitespace-nowrap">Equipo</p>
+              <p className="text-[9px] sm:text-xs md:text-sm text-muted-foreground uppercase tracking-wider font-semibold">altamente calificado</p>
             </div>
-            <div className="w-px h-8 sm:h-12 bg-border"></div>
+            <div className="w-px h-8 md:h-12 bg-border"></div>
             <div>
-              <p className="text-lg sm:text-2xl md:text-4xl font-bold text-foreground">+5 años</p>
-              <p className="text-[10px] sm:text-xs md:text-sm text-muted-foreground uppercase tracking-wider font-semibold">formando ases al volante</p>
+              <p className="text-base sm:text-2xl md:text-4xl font-bold text-foreground whitespace-nowrap">+5 años</p>
+              <p className="text-[9px] sm:text-xs md:text-sm text-muted-foreground uppercase tracking-wider font-semibold">ases al volante</p>
             </div>
-            <div className="w-px h-8 sm:h-12 bg-border"></div>
+            <div className="w-px h-8 md:h-12 bg-border"></div>
             <div>
-              <p className="text-lg sm:text-2xl md:text-4xl font-bold text-foreground">4.9/5</p>
-              <p className="text-[10px] sm:text-xs md:text-sm text-muted-foreground uppercase tracking-wider font-semibold">la más recomendada</p>
+              <p className="text-base sm:text-2xl md:text-4xl font-bold text-foreground whitespace-nowrap">4.9/5</p>
+              <p className="text-[9px] sm:text-xs md:text-sm text-muted-foreground uppercase tracking-wider font-semibold">recomendada</p>
             </div>
           </div>
         </div>
