@@ -134,7 +134,7 @@ export const Contact = () => {
               <div className="mb-8 text-center md:text-left">
                 <h4 className="text-2xl md:text-3xl font-bold mb-4 tracking-tight">Cuéntanos tu experiencia</h4>
                 <p className="text-muted-foreground">
-                  Tu reseña será enviada a nuestro equipo para seguir mejorando día a día.
+                  Tu opinión será enviada a nuestro equipo para seguir mejorando día a día.
                 </p>
               </div>
               
