@@ -64,7 +64,7 @@ export const PlaceHolderImages: ImagePlaceholder[] = [
   {
     "id": "academy-logo",
     "description": "Logotipo oficial de Pilotos - ases al volante",
-    "imageUrl": "https://i.imgur.com/vfznNIO.jpeg",
+    "imageUrl": "https://i.imgur.com/bLVVpLH.jpeg",
     "imageHint": "academy logo"
   }
 ];
