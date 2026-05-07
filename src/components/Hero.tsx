@@ -1,7 +1,9 @@
+
 "use client";
 
 import React from 'react';
 import Image from 'next/image';
+import Link from 'next/link';
 import { Button } from '@/components/ui/button';
 import { PlaceHolderImages } from '@/app/lib/placeholder-images';
 import { ChevronRight, Star } from 'lucide-react';
@@ -40,13 +42,12 @@ export const Hero = () => {
           </p>
           
           <div className="flex flex-col sm:flex-row gap-4 animate-in fade-in slide-in-from-bottom-10 duration-1000 delay-300">
-            <Button size="lg" className="h-14 px-8 text-lg bg-primary hover:bg-primary/90 rounded-full w-full sm:w-auto">
-              Empezar Cursos
-              <ChevronRight className="ml-2 w-5 h-5" />
-            </Button>
-            <Button size="lg" variant="outline" className="h-14 px-8 text-lg rounded-full border-primary text-primary hover:bg-primary/5 w-full sm:w-auto">
-              Nuestros Planes
-            </Button>
+            <Link href="#planes" className="w-full sm:w-auto">
+              <Button size="lg" className="h-14 px-8 text-lg bg-primary hover:bg-primary/90 rounded-full w-full">
+                Conocer nuestros planes
+                <ChevronRight className="ml-2 w-5 h-5" />
+              </Button>
+            </Link>
           </div>
           
           <div className="mt-12 flex flex-wrap items-center gap-6 md:gap-12 animate-in fade-in duration-1000 delay-500">
