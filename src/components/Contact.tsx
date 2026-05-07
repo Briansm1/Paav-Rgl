@@ -86,7 +86,7 @@ export const Contact = () => {
                     </div>
                     <div>
                       <p className="font-bold text-lg mb-1">Zona de Cobertura</p>
-                      <p className="text-muted-foreground leading-relaxed">Río Gallegos, Santa Cruz,<br />Argentina (Sin oficina física)</p>
+                      <p className="text-muted-foreground leading-relaxed">Río Gallegos, Santa Cruz (9400),<br />Argentina</p>
                     </div>
                   </div>
                   <div className="flex items-start gap-6">
