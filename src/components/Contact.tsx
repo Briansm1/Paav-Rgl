@@ -38,8 +38,7 @@ export const Contact = () => {
   const mapImg = PlaceHolderImages.find(img => img.id === 'map-location');
   const mapUrl = "https://www.google.com/maps/search/?api=1&query=Plaza+San+Martin+Rio+Gallegos+Santa+Cruz";
   const phoneNumber = "542966265603";
-  const message = "Hola Pilotos - ases al volante! Me gustaría recibir información sobre sus cursos de conducción.";
-  const whatsappUrl = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`;
+  const whatsappUrl = `https://wa.me/${phoneNumber}`;
 
   const form = useForm<z.infer<typeof formSchema>>({
     resolver: zodResolver(formSchema),

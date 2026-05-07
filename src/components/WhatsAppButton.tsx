@@ -5,8 +5,7 @@ import { cn } from '@/lib/utils';
 
 export const WhatsAppButton = () => {
   const phoneNumber = "542966265603"; 
-  const message = "Hola Pilotos - ases al volante! Me gustaría recibir información sobre sus cursos de conducción.";
-  const whatsappUrl = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`;
+  const whatsappUrl = `https://wa.me/${phoneNumber}`;
 
   return (
     <a
