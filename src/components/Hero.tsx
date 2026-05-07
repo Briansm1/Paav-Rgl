@@ -52,6 +52,11 @@ export const Hero = () => {
           
           <div className="mt-12 flex flex-wrap items-center gap-6 md:gap-12 animate-in fade-in duration-1000 delay-500">
             <div>
+              <p className="text-2xl md:text-4xl font-bold text-foreground">Equipo</p>
+              <p className="text-xs md:text-sm text-muted-foreground uppercase tracking-wider font-semibold">altamente calificado</p>
+            </div>
+            <div className="hidden sm:block w-px h-12 bg-border"></div>
+            <div>
               <p className="text-2xl md:text-4xl font-bold text-foreground">+5 años</p>
               <p className="text-xs md:text-sm text-muted-foreground uppercase tracking-wider font-semibold">formando conductores expertos</p>
             </div>
