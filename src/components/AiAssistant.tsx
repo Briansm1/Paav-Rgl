@@ -1,4 +1,3 @@
-
 "use client";
 
 import React, { useState } from 'react';
@@ -19,7 +18,7 @@ export const AiAssistant = () => {
   const [input, setInput] = useState('');
   const [isLoading, setIsLoading] = useState(false);
   const [messages, setMessages] = useState<Message[]>([
-    { role: 'assistant', content: '¡Hola! Soy el asistente virtual de Ruta Segura. ¿En qué puedo ayudarte hoy con respecto a nuestros cursos de conducción?' }
+    { role: 'assistant', content: '¡Hola! Soy el asistente virtual de PILOTOS - ASES AL VOLANTE. ¿En qué puedo ayudarte hoy con respecto a nuestros cursos de conducción?' }
   ]);
 
   const handleSubmit = async (e: React.FormEvent) => {
@@ -57,7 +56,7 @@ export const AiAssistant = () => {
           <CardHeader className="bg-primary p-4 flex flex-row items-center justify-between text-white">
             <div className="flex items-center gap-2">
               <Bot className="w-6 h-6" />
-              <CardTitle className="text-lg">Asistente Ruta Segura</CardTitle>
+              <CardTitle className="text-lg">Asistente Pilotos</CardTitle>
             </div>
             <button onClick={() => setIsOpen(false)} className="hover:bg-white/20 p-1 rounded-full">
               <X className="w-5 h-5" />

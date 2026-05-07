@@ -1,4 +1,3 @@
-
 "use client";
 
 import React, { useState, useEffect } from 'react';
@@ -55,8 +54,8 @@ export const Header = () => {
           onClick={() => setActiveSection('#inicio')}
         >
           <ShieldCheck className="w-8 h-8 text-primary transition-transform group-hover:scale-110" />
-          <span className="text-xl font-bold font-headline tracking-tight text-foreground">
-            Ruta <span className="text-primary">Segura</span>
+          <span className="text-xl font-bold font-headline tracking-tight text-foreground uppercase">
+            PILOTOS - <span className="text-primary">ASES AL VOLANTE</span>
           </span>
         </Link>
 

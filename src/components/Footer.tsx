@@ -1,4 +1,3 @@
-
 import React from 'react';
 import Link from 'next/link';
 import { ShieldCheck, Facebook, Instagram, Twitter, Youtube } from 'lucide-react';
@@ -11,8 +10,8 @@ export const Footer = () => {
           <div className="space-y-6">
             <Link href="#inicio" className="flex items-center gap-2">
               <ShieldCheck className="w-8 h-8 text-primary" />
-              <span className="text-2xl font-bold font-headline tracking-tight">
-                Ruta <span className="text-primary">Segura</span>
+              <span className="text-2xl font-bold font-headline tracking-tight uppercase">
+                PILOTOS - <span className="text-primary">ASES AL VOLANTE</span>
               </span>
             </Link>
             <p className="text-slate-400">
@@ -57,7 +56,7 @@ export const Footer = () => {
         </div>
 
         <div className="pt-8 border-t border-slate-800 text-center text-slate-500 text-sm">
-          <p>© {new Date().getFullYear()} Ruta Segura Academia de Conducción. Todos los derechos reservados.</p>
+          <p>© {new Date().getFullYear()} PILOTOS - ASES AL VOLANTE Academia de Conducción. Todos los derechos reservados.</p>
         </div>
       </div>
     </footer>

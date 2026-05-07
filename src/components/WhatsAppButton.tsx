@@ -1,4 +1,3 @@
-
 "use client";
 
 import React from 'react';
@@ -6,7 +5,7 @@ import { cn } from '@/lib/utils';
 
 export const WhatsAppButton = () => {
   const phoneNumber = "573001234567"; // Reemplazar con el número real
-  const message = "Hola Ruta Segura! Me gustaría recibir información sobre sus cursos de conducción.";
+  const message = "Hola PILOTOS - ASES AL VOLANTE! Me gustaría recibir información sobre sus cursos de conducción.";
   const whatsappUrl = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`;
 
   return (
