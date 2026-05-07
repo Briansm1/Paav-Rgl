@@ -6,7 +6,7 @@ export const Footer = () => {
   return (
     <footer className="bg-slate-900 text-white py-16">
       <div className="container mx-auto px-4">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-12">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-12 mb-12">
           <div className="space-y-6">
             <Link href="#inicio" className="flex items-center gap-2">
               <ShieldCheck className="w-8 h-8 text-primary" />
@@ -50,15 +50,6 @@ export const Footer = () => {
               <li className="text-slate-400">Programas digitales</li>
               <li className="text-slate-400">Asesoría personalizada para la gestión de la licencia</li>
               <li className="text-slate-400">Alquiler del auto para rendir el examen práctico</li>
-            </ul>
-          </div>
-
-          <div>
-            <h4 className="text-lg font-bold mb-6">Horarios de Atención</h4>
-            <ul className="space-y-4 text-slate-400">
-              <li className="flex justify-between"><span>Lunes - Viernes:</span> <span>7:00 - 19:00</span></li>
-              <li className="flex justify-between"><span>Sábados:</span> <span>8:00 - 16:00</span></li>
-              <li className="flex justify-between"><span>Domingos:</span> <span>Cerrado</span></li>
             </ul>
           </div>
         </div>
