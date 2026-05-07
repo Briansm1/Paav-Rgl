@@ -14,7 +14,7 @@ const services = [
   },
   {
     title: 'Teoría basada en el marco legal y al tráfico real',
-    description: '¿Miedo al tráfico? Recupera tu confianza con clases personalizadas de manejo avanzado.',
+    description: 'Profundizamos en las normas de tránsito y el manejo preventivo para que logres anticiparte al entorno y tomes decisiones inteligentes en la calle.',
     icon: <Clock className="w-10 h-10 text-primary" />,
     imgId: 'service-advanced',
     tag: 'Especializado'
