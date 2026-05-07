@@ -52,13 +52,13 @@ export const Hero = () => {
           
           <div className="mt-12 flex flex-wrap items-center gap-6 md:gap-12 animate-in fade-in duration-1000 delay-500">
             <div>
-              <p className="text-2xl md:text-4xl font-bold text-foreground">4.9/5</p>
-              <p className="text-xs md:text-sm text-muted-foreground uppercase tracking-wider font-semibold">Calificación Google</p>
+              <p className="text-2xl md:text-4xl font-bold text-foreground">+5 años</p>
+              <p className="text-xs md:text-sm text-muted-foreground uppercase tracking-wider font-semibold">formando conductores expertos</p>
             </div>
             <div className="hidden sm:block w-px h-12 bg-border"></div>
             <div>
-              <p className="text-2xl md:text-4xl font-bold text-foreground">+5 años</p>
-              <p className="text-xs md:text-sm text-muted-foreground uppercase tracking-wider font-semibold">formando conductores expertos</p>
+              <p className="text-2xl md:text-4xl font-bold text-foreground">4.9/5</p>
+              <p className="text-xs md:text-sm text-muted-foreground uppercase tracking-wider font-semibold">Valoración de alumnos/as</p>
             </div>
           </div>
         </div>
