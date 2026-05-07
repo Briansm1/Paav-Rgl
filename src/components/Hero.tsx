@@ -50,17 +50,17 @@ export const Hero = () => {
           </div>
           
           <div className="mt-8 flex items-center gap-3 sm:gap-8 md:gap-12 animate-in fade-in duration-1000 delay-500">
-            <div>
+            <div className="text-center">
               <p className="text-base sm:text-2xl md:text-4xl font-bold text-foreground whitespace-nowrap">Equipo</p>
               <p className="text-[9px] sm:text-xs md:text-sm text-foreground/60 uppercase tracking-wider font-semibold">altamente calificado</p>
             </div>
             <div className="w-px h-8 md:h-12 bg-border"></div>
-            <div>
+            <div className="text-center">
               <p className="text-base sm:text-2xl md:text-4xl font-bold text-foreground whitespace-nowrap">+5 años</p>
               <p className="text-[9px] sm:text-xs md:text-sm text-foreground/60 uppercase tracking-wider font-semibold">formando ases al volante</p>
             </div>
             <div className="w-px h-8 md:h-12 bg-border"></div>
-            <div>
+            <div className="text-center">
               <p className="text-base sm:text-2xl md:text-4xl font-bold text-foreground whitespace-nowrap">4.9/5</p>
               <p className="text-[9px] sm:text-xs md:text-sm text-foreground/60 uppercase tracking-wider font-semibold">LA MÁS RECOMENDADA</p>
             </div>
