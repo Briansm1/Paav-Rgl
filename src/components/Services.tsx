@@ -57,7 +57,7 @@ export const Services = () => {
             Conducir es <span className="text-primary italic">más que solo manejar</span>
           </h2>
           <p className="text-lg md:text-xl text-muted-foreground leading-relaxed">
-            Revolucionamos la enseñanza vial combinando conocimiento de vanguardia con <span className="text-primary font-bold">nuestra metodología exclusiva</span> de 3 pilares: <span className="text-primary font-bold">mentalidad</span> para darte confianza, <span className="text-primary font-bold">teoría</span> para un aprendizaje sólido, y <span className="text-primary font-bold">técnica</span> para el dominio total del vehículo. Más que enseñarte a manejar, formamos conductores expertos.
+            Revolucionamos la enseñanza vial combinando conocimiento de vanguardia con <span className="text-primary font-bold">nuestra metodología exclusiva</span> de 3 pilares: <span className="text-primary font-bold">mentalidad</span> para darte confianza, <span className="text-primary font-bold">teoría</span> para un aprendizaje sólido, y <span className="text-primary font-bold">tecnica</span> para el dominio total del vehículo. Más que enseñarte a manejar, formamos conductores expertos.
           </p>
         </div>
 
@@ -114,7 +114,7 @@ export const Services = () => {
             </div>
             <div className="lg:w-1/2 w-full relative h-[350px] md:h-[550px] rounded-3xl overflow-hidden shadow-2xl">
               <video 
-                src="https://i.imgur.com/Ype82Hq.mp4"
+                src="https://i.imgur.com/3YGoxMZ.mp4"
                 autoPlay
                 loop
                 muted
