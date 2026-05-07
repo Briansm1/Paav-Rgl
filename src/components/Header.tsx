@@ -59,7 +59,7 @@ export const Header = () => {
           onClick={() => setActiveSection('#inicio')}
         >
           {logoImg ? (
-            <div className="relative h-10 w-40 md:h-12 md:w-48">
+            <div className="relative h-12 w-48 md:h-16 md:w-64">
               <Image 
                 src={logoImg.imageUrl} 
                 alt={logoImg.description} 

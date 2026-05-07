@@ -15,7 +15,7 @@ export const Footer = () => {
           <div className="flex flex-col items-center space-y-6">
             <Link href="#inicio" className="flex items-center gap-2">
               {logoImg ? (
-                <div className="relative h-12 w-48 md:h-14 md:w-56">
+                <div className="relative h-16 w-64 md:h-20 md:w-80">
                   <Image 
                     src={logoImg.imageUrl} 
                     alt={logoImg.description} 
