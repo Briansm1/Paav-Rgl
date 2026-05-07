@@ -10,13 +10,13 @@
     {
       "id": "service-beginner",
       "description": "Primer plano de volante con manos",
-      "imageUrl": "https://picsum.photos/seed/ruta-beginner/800/600",
+      "imageUrl": "https://picsum.photos/seed/ruta-beginner/1080/1080",
       "imageHint": "car steering"
     },
     {
       "id": "service-advanced",
       "description": "Coche conduciendo en el tráfico nocturno",
-      "imageUrl": "https://picsum.photos/seed/ruta-advanced/800/600",
+      "imageUrl": "https://picsum.photos/seed/ruta-advanced/1080/1080",
       "imageHint": "city traffic"
     },
     {

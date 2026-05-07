@@ -1,3 +1,4 @@
+
 import React from 'react';
 import Image from 'next/image';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
@@ -68,7 +69,7 @@ export const Services = () => {
             const img = PlaceHolderImages.find(p => p.id === service.imgId);
             return (
               <Card key={index} className="group relative overflow-hidden border-none bg-secondary shadow-xl hover:shadow-2xl transition-all duration-500">
-                <div className="relative h-64 overflow-hidden">
+                <div className="relative aspect-square overflow-hidden">
                   <Image 
                     src={img?.imageUrl || ''} 
                     alt={service.title} 
