@@ -1,7 +1,7 @@
 "use client";
 
 import React from 'react';
-import { Mail, MessageSquare, MapPin, ExternalLink, Send, Star } from 'lucide-react';
+import { Mail, MessageSquare, MapPin, ExternalLink, Send } from 'lucide-react';
 import { PlaceHolderImages } from '@/app/lib/placeholder-images';
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
@@ -29,7 +29,6 @@ import { useToast } from '@/hooks/use-toast';
 const formSchema = z.object({
   name: z.string().min(2, { message: 'El nombre es obligatorio' }),
   email: z.string().email({ message: 'Email inválido' }),
-  course: z.string().min(2, { message: 'El curso realizado es obligatorio' }),
   rating: z.string().min(1, { message: 'La calificación es obligatoria' }),
   review: z.string().min(10, { message: 'Por favor escribe una reseña más detallada' }),
 });
@@ -43,7 +42,6 @@ export const Contact = () => {
     defaultValues: {
       name: '',
       email: '',
-      course: '',
       rating: '5',
       review: '',
     },
@@ -194,19 +192,6 @@ export const Contact = () => {
                       )}
                     />
                   </div>
-                  <FormField
-                    control={form.control}
-                    name="course"
-                    render={({ field }) => (
-                      <FormItem>
-                        <FormLabel>¿Qué programa realizaste?</FormLabel>
-                        <FormControl>
-                          <Input placeholder="Ej: Programa experto" {...field} className="rounded-xl border-slate-200 focus:ring-primary" />
-                        </FormControl>
-                        <FormMessage />
-                      </FormItem>
-                    )}
-                  />
                   <FormField
                     control={form.control}
                     name="review"
