@@ -32,6 +32,18 @@ export const PlaceHolderImages: ImagePlaceholder[] = [
     "imageHint": "classroom study"
   },
   {
+    "id": "mentalidad",
+    "description": "Psicología y mentalidad al volante",
+    "imageUrl": "https://i.imgur.com/AH7yJHh.jpeg",
+    "imageHint": "driving mind"
+  },
+  {
+    "id": "tecnica",
+    "description": "Técnica y dominio del vehículo",
+    "imageUrl": "https://i.imgur.com/hSJ1QbG.jpeg",
+    "imageHint": "driving technique"
+  },
+  {
     "id": "student-1",
     "description": "Joven feliz con su licencia de conducir",
     "imageUrl": "https://picsum.photos/seed/student1/200/200",
