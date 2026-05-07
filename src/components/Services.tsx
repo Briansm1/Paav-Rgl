@@ -1,4 +1,3 @@
-
 import React from 'react';
 import Image from 'next/image';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
@@ -102,7 +101,7 @@ export const Services = () => {
               <div className="grid grid-cols-1 gap-8">
                 {[
                   { icon: <ShieldCheck className="w-6 h-6 text-primary" />, text: 'Aprendizaje en un entorno real: Practica en vehículos modernos, seguros y con el máximo confort, exactamente iguales a los que manejarás cuando tengas tu licencia.' },
-                  { icon: <Award className="w-6 h-6 text-primary" />, text: 'Instructores certificados con más de 5 años de experiencia.' },
+                  { icon: <Award className="w-6 h-6 text-primary" />, text: 'Guía profesional y experta: Nuestro equipo certificado te acompaña paso a paso, brindándote la tranquilidad y técnica que necesitas para dominar el volante.' },
                   { icon: <Car className="w-6 h-6 text-primary" />, text: 'Horarios 100% flexibles que se adaptan a tu ritmo de vida.' }
                 ].map((item, i) => (
                   <div key={i} className="flex items-start gap-5">
