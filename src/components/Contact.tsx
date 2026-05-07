@@ -36,6 +36,7 @@ const formSchema = z.object({
 export const Contact = () => {
   const { toast } = useToast();
   const mapImg = PlaceHolderImages.find(img => img.id === 'map-location');
+  const mapUrl = "https://www.google.com/maps/search/?api=1&query=Plaza+San+Martin+Rio+Gallegos+Santa+Cruz";
 
   const form = useForm<z.infer<typeof formSchema>>({
     resolver: zodResolver(formSchema),
@@ -48,7 +49,6 @@ export const Contact = () => {
   });
 
   function onSubmit(values: z.infer<typeof formSchema>) {
-    // Simulación del envío de la reseña
     console.log("Reseña enviada a pilotosasesalvolante@gmail.com:", values);
     toast({
       title: "¡Reseña recibida!",
@@ -111,17 +111,22 @@ export const Contact = () => {
               <div className="mt-12 h-64 md:h-80 w-full relative group rounded-[2rem] overflow-hidden shadow-2xl">
                 <img 
                   src={mapImg?.imageUrl || ''} 
-                  alt={mapImg?.description || 'Ubicación'} 
+                  alt={mapImg?.description || 'Ubicación Plaza San Martín'} 
                   className="absolute inset-0 w-full h-full object-cover transition-transform duration-1000 group-hover:scale-110"
-                  data-ai-hint={mapImg?.imageHint}
+                  data-ai-hint="Plaza San Martin"
                 />
                 <div className="absolute inset-0 bg-primary/20 backdrop-blur-[1px] group-hover:backdrop-blur-none transition-all duration-500"></div>
                 <div className="absolute inset-0 flex items-center justify-center">
-                  <button className="bg-white/95 dark:bg-slate-800/95 p-5 rounded-[1.5rem] shadow-2xl flex items-center gap-3 transform group-hover:scale-110 transition-transform duration-500 border border-white">
+                  <a 
+                    href={mapUrl}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="bg-white/95 dark:bg-slate-800/95 p-5 rounded-[1.5rem] shadow-2xl flex items-center gap-3 transform group-hover:scale-110 transition-transform duration-500 border border-white"
+                  >
                     <MapPin className="w-6 h-6 text-primary" />
                     <span className="font-bold text-foreground">Ver en Maps</span>
                     <ExternalLink className="w-4 h-4 text-muted-foreground" />
-                  </button>
+                  </a>
                 </div>
               </div>
             </div>
