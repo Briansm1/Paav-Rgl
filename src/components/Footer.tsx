@@ -48,7 +48,7 @@ export const Footer = () => {
               <li className="text-slate-400">Licencia de Auto</li>
               <li className="text-slate-400">Licencia de Moto</li>
               <li className="text-slate-400">Programas digitales</li>
-              <li className="text-slate-400">Asesoría de Trámites</li>
+              <li className="text-slate-400">Asesoría personalizada para la gestión de la licencia</li>
             </ul>
           </div>
 
