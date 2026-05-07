@@ -13,7 +13,7 @@ const services = [
     tag: 'Popular'
   },
   {
-    title: 'Perfeccionamiento',
+    title: 'Teoría basada en el marco legal y al tráfico real',
     description: '¿Miedo al tráfico? Recupera tu confianza con clases personalizadas de manejo avanzado.',
     icon: <Clock className="w-10 h-10 text-primary" />,
     imgId: 'service-advanced',
@@ -42,7 +42,7 @@ export const Services = () => {
             Conducir es <span className="text-primary italic">más que solo manejar</span>
           </h2>
           <p className="text-lg md:text-xl text-muted-foreground leading-relaxed">
-            Revolucionamos la enseñanza vial combinando conocimiento de vanguardia con nuestra metodología exclusiva de 3 pilares: <span className="text-primary font-bold">mentalidad</span> para darte confianza, <span className="text-primary font-bold">teoría</span> para un aprendizaje sólido, y <span className="text-primary font-bold">técnica</span> para el dominio total del vehículo. Más que enseñarte a manejar, formamos conductores expertos.
+            Revolucionamos la enseñanza vial combinando conocimiento de vanguardia con <span className="text-primary font-bold">nuestra metodología exclusiva</span> de 3 pilares: <span className="text-primary font-bold">mentalidad</span> para darte confianza, <span className="text-primary font-bold">teoría</span> para un aprendizaje sólido, y <span className="text-primary font-bold">técnica</span> para el dominio total del vehículo. Más que enseñarte a manejar, formamos conductores expertos.
           </p>
         </div>
 
