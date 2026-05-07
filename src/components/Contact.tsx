@@ -123,12 +123,12 @@ export const Contact = () => {
                 </div>
               </div>
 
-              <div className="mt-12 h-64 md:h-80 w-full relative group rounded-[2rem] overflow-hidden shadow-2xl">
+              <div className="mt-8 h-40 md:h-48 w-full relative group rounded-[2rem] overflow-hidden shadow-2xl">
                 <img 
                   src={mapImg?.imageUrl || ''} 
-                  alt={mapImg?.description || 'Ubicación Plaza San Martín'} 
+                  alt="Ubicación Río Gallegos, Santa Cruz, Z9400" 
                   className="absolute inset-0 w-full h-full object-cover transition-transform duration-1000 group-hover:scale-110"
-                  data-ai-hint="Plaza San Martin"
+                  data-ai-hint="rio gallegos"
                 />
                 <div className="absolute inset-0 bg-primary/20 backdrop-blur-[1px] group-hover:backdrop-blur-none transition-all duration-500"></div>
                 <div className="absolute inset-0 flex items-center justify-center">
@@ -136,11 +136,11 @@ export const Contact = () => {
                     href={mapUrl}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="bg-white/95 dark:bg-slate-800/95 p-5 rounded-[1.5rem] shadow-2xl flex items-center gap-3 transform group-hover:scale-110 transition-transform duration-500 border border-white"
+                    className="bg-white/95 dark:bg-slate-800/95 p-3 rounded-[1.2rem] shadow-2xl flex items-center gap-2 transform group-hover:scale-105 transition-transform duration-500 border border-white"
                   >
-                    <MapPin className="w-6 h-6 text-primary" />
-                    <span className="font-bold text-foreground">Ver en Maps</span>
-                    <ExternalLink className="w-4 h-4 text-muted-foreground" />
+                    <MapPin className="w-5 h-5 text-primary" />
+                    <span className="font-bold text-sm text-foreground">Ver en Maps</span>
+                    <ExternalLink className="w-3 h-3 text-muted-foreground" />
                   </a>
                 </div>
               </div>

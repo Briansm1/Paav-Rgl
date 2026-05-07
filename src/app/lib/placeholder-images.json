@@ -1,4 +1,3 @@
-
 {
   "placeholderImages": [
     {
@@ -45,9 +44,9 @@
     },
     {
       "id": "map-location",
-      "description": "Mapa con la ubicación de la academia",
-      "imageUrl": "https://picsum.photos/seed/map/800/600",
-      "imageHint": "map location"
+      "description": "Mapa de Río Gallegos, Santa Cruz, Argentina",
+      "imageUrl": "https://picsum.photos/seed/rio-gallegos-map/800/600",
+      "imageHint": "rio gallegos"
     },
     {
       "id": "driving-instructor",
