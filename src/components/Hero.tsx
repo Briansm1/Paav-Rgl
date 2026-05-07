@@ -58,7 +58,7 @@ export const Hero = () => {
             <div className="w-px h-8 sm:h-12 bg-border"></div>
             <div>
               <p className="text-lg sm:text-2xl md:text-4xl font-bold text-foreground">+5 años</p>
-              <p className="text-[10px] sm:text-xs md:text-sm text-muted-foreground uppercase tracking-wider font-semibold">experiencia</p>
+              <p className="text-[10px] sm:text-xs md:text-sm text-muted-foreground uppercase tracking-wider font-semibold">formando ases al volante</p>
             </div>
             <div className="w-px h-8 sm:h-12 bg-border"></div>
             <div>
