@@ -15,7 +15,7 @@ const services = [
   {
     title: 'Teoría basada en el marco legal y al tráfico real',
     description: 'Profundizamos en las normas de tránsito y el manejo preventivo para que logres anticiparte al entorno y tomes decisiones inteligentes en la calle.',
-    icon: <Scale className="w-10 h-10 text-primary" />,
+    icon: <BookOpen className="w-10 h-10 text-primary" />,
     imgId: 'service-advanced',
     tag: 'Especializado'
   },
