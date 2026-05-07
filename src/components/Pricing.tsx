@@ -12,7 +12,7 @@ const plans = [
     badge: 'NIVEL SUPERIOR',
   },
   {
-    name: 'Seguridad avanzada',
+    name: 'Programa seguridad avanzada',
     price: 'Desde $199.999',
     description: 'Para conductores que buscan maestría total en cualquier entorno.',
     badge: 'NIVEL INTERMEDIO',
