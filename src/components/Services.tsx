@@ -2,27 +2,27 @@ import React from 'react';
 import Image from 'next/image';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { PlaceHolderImages } from '@/app/lib/placeholder-images';
-import { Car, BookOpen, Clock, Award, ShieldCheck, Zap } from 'lucide-react';
+import { Car, BookOpen, Clock, Award, ShieldCheck, Zap, Brain, Scale } from 'lucide-react';
 
 const services = [
   {
     title: 'Mentalidad de piloto',
     description: 'Trabajamos la gestión de tus emociones al volante para que logres superar los miedos y conduzcas con total seguridad y confianza.',
-    icon: <Car className="w-10 h-10 text-primary" />,
+    icon: <Brain className="w-10 h-10 text-primary" />,
     imgId: 'service-beginner',
     tag: 'Popular'
   },
   {
     title: 'Teoría basada en el marco legal y al tráfico real',
     description: 'Profundizamos en las normas de tránsito y el manejo preventivo para que logres anticiparte al entorno y tomes decisiones inteligentes en la calle.',
-    icon: <Clock className="w-10 h-10 text-primary" />,
+    icon: <Scale className="w-10 h-10 text-primary" />,
     imgId: 'service-advanced',
     tag: 'Especializado'
   },
   {
     title: 'Técnica profesional aplicable',
     description: 'Desarrollamos tus habilidades mediante una práctica estructurada para que logres el dominio total del vehículo y conviertas el manejo en algo natural y fluido.',
-    icon: <BookOpen className="w-10 h-10 text-primary" />,
+    icon: <Zap className="w-10 h-10 text-primary" />,
     imgId: 'service-theory',
     tag: 'Académico'
   }
