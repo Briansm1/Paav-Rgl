@@ -85,8 +85,8 @@ export const Contact = () => {
                       <MapPin className="w-6 h-6 text-primary" />
                     </div>
                     <div>
-                      <p className="font-bold text-lg mb-1">Dirección Principal</p>
-                      <p className="text-muted-foreground leading-relaxed">Calle de la Seguridad #123,<br />Ciudad del Conductor, CP 45000</p>
+                      <p className="font-bold text-lg mb-1">Zona de Cobertura</p>
+                      <p className="text-muted-foreground leading-relaxed">Río Gallegos, Santa Cruz,<br />Argentina (Sin oficina física)</p>
                     </div>
                   </div>
                   <div className="flex items-start gap-6">
