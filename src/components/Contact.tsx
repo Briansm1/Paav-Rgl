@@ -1,8 +1,7 @@
 "use client";
 
 import React from 'react';
-import { Mail, MessageSquare, MapPin, ExternalLink, Send } from 'lucide-react';
-import { PlaceHolderImages } from '@/app/lib/placeholder-images';
+import { Mail, MessageSquare, MapPin, Send } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
 import { Textarea } from '@/components/ui/textarea';
@@ -35,8 +34,6 @@ const formSchema = z.object({
 
 export const Contact = () => {
   const { toast } = useToast();
-  const mapImg = PlaceHolderImages.find(img => img.id === 'map-location');
-  const mapUrl = "https://www.google.com/maps/search/?api=1&query=Plaza+San+Martin+Rio+Gallegos+Santa+Cruz";
   const phoneNumber = "542966265603";
   const whatsappUrl = `https://wa.me/${phoneNumber}`;
   const emailAddress = "pilotosasesalvolante@gmail.com";
@@ -77,71 +74,47 @@ export const Contact = () => {
 
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 md:gap-20 items-stretch">
           <div className="flex flex-col gap-10">
-            <div className="bg-slate-50 dark:bg-slate-900 p-8 md:p-12 rounded-[2.5rem] shadow-xl border border-border/50 h-full flex flex-col justify-between">
-              <div>
-                <h4 className="text-2xl font-bold mb-10 tracking-tight">Canales de atención</h4>
-                <div className="space-y-10">
-                  <div className="flex items-start gap-6">
-                    <div className="bg-white dark:bg-slate-800 p-4 rounded-[1.2rem] shadow-sm shrink-0">
-                      <MapPin className="w-6 h-6 text-primary" />
-                    </div>
-                    <div>
-                      <p className="font-bold text-lg mb-1">Zona de cobertura</p>
-                      <p className="text-muted-foreground leading-relaxed">Río Gallegos, Santa Cruz, Argentina, Z9400</p>
-                    </div>
+            <div className="bg-slate-50 dark:bg-slate-900 p-8 md:p-12 rounded-[2.5rem] shadow-xl border border-border/50 h-full flex flex-col justify-center">
+              <h4 className="text-2xl font-bold mb-10 tracking-tight">Canales de atención</h4>
+              <div className="space-y-10">
+                <div className="flex items-start gap-6">
+                  <div className="bg-white dark:bg-slate-800 p-4 rounded-[1.2rem] shadow-sm shrink-0">
+                    <MapPin className="w-6 h-6 text-primary" />
                   </div>
-                  <div className="flex items-start gap-6">
-                    <div className="bg-white dark:bg-slate-800 p-4 rounded-[1.2rem] shadow-sm shrink-0">
-                      <MessageSquare className="w-6 h-6 text-primary" />
-                    </div>
-                    <div>
-                      <p className="font-bold text-lg mb-1">WhatsApp</p>
-                      <a 
-                        href={whatsappUrl}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="text-muted-foreground font-medium hover:text-primary transition-colors block"
-                      >
-                        +54 2966 265603
-                      </a>
-                    </div>
-                  </div>
-                  <div className="flex items-start gap-6">
-                    <div className="bg-white dark:bg-slate-800 p-4 rounded-[1.2rem] shadow-sm shrink-0">
-                      <Mail className="w-6 h-6 text-primary" />
-                    </div>
-                    <div>
-                      <p className="font-bold text-lg mb-1">Consultas</p>
-                      <a 
-                        href={`mailto:${emailAddress}`}
-                        className="text-muted-foreground font-medium hover:text-primary transition-colors"
-                      >
-                        {emailAddress}
-                      </a>
-                    </div>
+                  <div>
+                    <p className="font-bold text-lg mb-1">Zona de cobertura</p>
+                    <p className="text-muted-foreground leading-relaxed">Río Gallegos, Santa Cruz, Argentina, Z9400</p>
                   </div>
                 </div>
-              </div>
-
-              <div className="mt-8 h-40 md:h-48 w-full relative group rounded-[2rem] overflow-hidden shadow-2xl">
-                <img 
-                  src={mapImg?.imageUrl || ''} 
-                  alt="Ubicación Río Gallegos, Santa Cruz, Z9400" 
-                  className="absolute inset-0 w-full h-full object-cover transition-transform duration-1000 group-hover:scale-110"
-                  data-ai-hint="rio gallegos"
-                />
-                <div className="absolute inset-0 bg-primary/20 backdrop-blur-[1px] group-hover:backdrop-blur-none transition-all duration-500"></div>
-                <div className="absolute inset-0 flex items-center justify-center">
-                  <a 
-                    href={mapUrl}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="bg-white/95 dark:bg-slate-800/95 p-3 rounded-[1.2rem] shadow-2xl flex items-center gap-2 transform group-hover:scale-105 transition-transform duration-500 border border-white"
-                  >
-                    <MapPin className="w-5 h-5 text-primary" />
-                    <span className="font-bold text-sm text-foreground">Ver en Maps</span>
-                    <ExternalLink className="w-3 h-3 text-muted-foreground" />
-                  </a>
+                <div className="flex items-start gap-6">
+                  <div className="bg-white dark:bg-slate-800 p-4 rounded-[1.2rem] shadow-sm shrink-0">
+                    <MessageSquare className="w-6 h-6 text-primary" />
+                  </div>
+                  <div>
+                    <p className="font-bold text-lg mb-1">WhatsApp</p>
+                    <a 
+                      href={whatsappUrl}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="text-muted-foreground font-medium hover:text-primary transition-colors block"
+                    >
+                      +54 2966 265603
+                    </a>
+                  </div>
+                </div>
+                <div className="flex items-start gap-6">
+                  <div className="bg-white dark:bg-slate-800 p-4 rounded-[1.2rem] shadow-sm shrink-0">
+                    <Mail className="w-6 h-6 text-primary" />
+                  </div>
+                  <div>
+                    <p className="font-bold text-lg mb-1">Consultas</p>
+                    <a 
+                      href={`mailto:${emailAddress}`}
+                      className="text-muted-foreground font-medium hover:text-primary transition-colors"
+                    >
+                      {emailAddress}
+                    </a>
+                  </div>
                 </div>
               </div>
             </div>
