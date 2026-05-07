@@ -18,7 +18,7 @@ export const AiAssistant = () => {
   const [input, setInput] = useState('');
   const [isLoading, setIsLoading] = useState(false);
   const [messages, setMessages] = useState<Message[]>([
-    { role: 'assistant', content: '¡Hola! Soy el asistente virtual de Pilotos - Ases al volante. ¿En qué puedo ayudarte hoy con respecto a nuestros cursos de conducción?' }
+    { role: 'assistant', content: '¡Hola! Soy el asistente virtual de Pilotos - ases al volante. ¿En qué puedo ayudarte hoy con respecto a nuestros cursos de conducción?' }
   ]);
 
   const handleSubmit = async (e: React.FormEvent) => {

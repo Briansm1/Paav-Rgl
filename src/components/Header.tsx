@@ -55,7 +55,7 @@ export const Header = () => {
         >
           <ShieldCheck className="w-8 h-8 text-primary transition-transform group-hover:scale-110" />
           <span className="text-xl font-bold font-headline tracking-tight text-foreground">
-            Pilotos - <span className="text-primary">Ases al volante</span>
+            Pilotos - <span className="text-primary">ases al volante</span>
           </span>
         </Link>
 

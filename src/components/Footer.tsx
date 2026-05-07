@@ -11,7 +11,7 @@ export const Footer = () => {
             <Link href="#inicio" className="flex items-center gap-2">
               <ShieldCheck className="w-8 h-8 text-primary" />
               <span className="text-2xl font-bold font-headline tracking-tight">
-                Pilotos - <span className="text-primary">Ases al volante</span>
+                Pilotos - <span className="text-primary">ases al volante</span>
               </span>
             </Link>
             <p className="text-slate-400">
@@ -56,7 +56,7 @@ export const Footer = () => {
         </div>
 
         <div className="pt-8 border-t border-slate-800 text-center text-slate-500 text-sm">
-          <p>© {new Date().getFullYear()} Pilotos - Ases al volante Academia de Conducción. Todos los derechos reservados.</p>
+          <p>© {new Date().getFullYear()} Pilotos - ases al volante Academia de Conducción. Todos los derechos reservados.</p>
         </div>
       </div>
     </footer>
