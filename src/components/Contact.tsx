@@ -85,7 +85,7 @@ export const Contact = () => {
                       <MapPin className="w-6 h-6 text-primary" />
                     </div>
                     <div>
-                      <p className="font-bold text-lg mb-1">Zona de Cobertura</p>
+                      <p className="font-bold text-lg mb-1">Zona de cobertura</p>
                       <p className="text-muted-foreground leading-relaxed">Río Gallegos, Santa Cruz (9400),<br />Argentina</p>
                     </div>
                   </div>
