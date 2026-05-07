@@ -19,7 +19,7 @@ const plans = [
   },
   {
     name: 'Programa fundamentos',
-    price: 'Desde $149.999',
+    price: 'Desde $311.999',
     description: 'Ideal para quienes empiezan desde cero y quieren aprender bien.',
     badge: 'NIVEL INICIAL',
   }
