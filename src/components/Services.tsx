@@ -29,7 +29,7 @@ const services = [
     title: 'Mentalidad de piloto',
     description: 'Trabajamos la gestión de tus emociones al volante para que logres superar los miedos y conduzcas con total seguridad y confianza.',
     icon: <Brain className="w-10 h-10 text-primary" />,
-    imgId: 'service-beginner'
+    imgId: 'mentalidad'
   },
   {
     title: 'Teoría basada en el marco legal y al tráfico real',
@@ -41,13 +41,11 @@ const services = [
     title: 'Técnica profesional aplicable',
     description: 'Desarrollamos tus habilidades mediante una práctica estructurada para que logres el dominio total del vehículo y conviertas el manejo en algo natural y fluido.',
     icon: <SteeringWheel className="w-10 h-10 text-primary" />,
-    imgId: 'service-advanced'
+    imgId: 'tecnica'
   }
 ];
 
 export const Services = () => {
-  const instructorImg = PlaceHolderImages.find(img => img.id === 'driving-instructor');
-
   return (
     <section id="servicios" className="py-20 md:py-32 bg-background">
       <div className="container mx-auto px-4">
@@ -65,10 +63,11 @@ export const Services = () => {
 
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 md:gap-12">
           {services.map((service, index) => {
-            const img = PlaceHolderImages.find(p => p.id === service.imgId);
+            // Buscamos la imagen por ID en PlaceHolderImages, si no existe usamos un placeholder por defecto
+            const img = PlaceHolderImages.find(p => p.id === service.imgId) || PlaceHolderImages[0];
             return (
               <Card key={index} className="group relative overflow-hidden border-none bg-secondary shadow-xl hover:shadow-2xl transition-all duration-500">
-                <div className="relative aspect-square overflow-hidden">
+                <div className="relative aspect-square overflow-hidden bg-black">
                   <Image 
                     src={img?.imageUrl || ''} 
                     alt={service.title} 
@@ -113,15 +112,15 @@ export const Services = () => {
                 ))}
               </div>
             </div>
-            <div className="lg:w-1/2 w-full relative h-[350px] md:h-[550px] rounded-3xl overflow-hidden shadow-2xl group">
-              <Image 
-                src={instructorImg?.imageUrl || ''} 
-                alt={instructorImg?.description || "Instrucción profesional"} 
-                fill 
-                className="object-cover group-hover:scale-105 transition-transform duration-1000"
-                data-ai-hint={instructorImg?.imageHint}
+            <div className="lg:w-1/2 w-full relative h-[350px] md:h-[550px] rounded-3xl overflow-hidden shadow-2xl">
+              <video 
+                src="https://i.imgur.com/qJkVbD3.mp4"
+                autoPlay
+                loop
+                muted
+                playsInline
+                className="w-full h-full object-cover"
               />
-              <div className="absolute inset-0 bg-primary/5 group-hover:bg-transparent transition-colors duration-500"></div>
             </div>
           </div>
         </div>
