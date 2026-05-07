@@ -1,15 +1,20 @@
+
 "use client";
 
 import React, { useState, useEffect } from 'react';
 import Link from 'next/link';
+import Image from 'next/image';
 import { Menu, X } from 'lucide-react';
 import { cn } from '@/lib/utils';
 import { Button } from '@/components/ui/button';
+import { PlaceHolderImages } from '@/app/lib/placeholder-images';
 
 export const Header = () => {
   const [isScrolled, setIsScrolled] = useState(false);
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const [activeSection, setActiveSection] = useState('#inicio');
+
+  const logoImg = PlaceHolderImages.find(img => img.id === 'academy-logo');
 
   useEffect(() => {
     const handleScroll = () => {
@@ -53,9 +58,22 @@ export const Header = () => {
           className="flex items-center gap-2 group"
           onClick={() => setActiveSection('#inicio')}
         >
-          <span className="text-xl font-bold font-headline tracking-tight text-white">
-            Pilotos - <span className="text-primary">ases al volante</span>
-          </span>
+          {logoImg ? (
+            <div className="relative h-10 w-40 md:h-12 md:w-48">
+              <Image 
+                src={logoImg.imageUrl} 
+                alt={logoImg.description} 
+                fill
+                className="object-contain"
+                priority
+                data-ai-hint={logoImg.imageHint}
+              />
+            </div>
+          ) : (
+            <span className="text-xl font-bold font-headline tracking-tight text-white">
+              Pilotos - <span className="text-primary">ases al volante</span>
+            </span>
+          )}
         </Link>
 
         {/* Desktop Nav */}

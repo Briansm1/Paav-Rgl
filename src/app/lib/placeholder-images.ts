@@ -60,5 +60,11 @@ export const PlaceHolderImages: ImagePlaceholder[] = [
     "description": "Instructor de conducción profesional",
     "imageUrl": "https://picsum.photos/seed/driving-instruct/800/600",
     "imageHint": "driving instructor"
+  },
+  {
+    "id": "academy-logo",
+    "description": "Logotipo oficial de Pilotos - ases al volante",
+    "imageUrl": "https://i.imgur.com/vfznNIO.jpeg",
+    "imageHint": "academy logo"
   }
 ];

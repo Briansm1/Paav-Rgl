@@ -1,17 +1,34 @@
+
 import React from 'react';
 import Link from 'next/link';
+import Image from 'next/image';
 import { Facebook, Instagram, Youtube } from 'lucide-react';
+import { PlaceHolderImages } from '@/app/lib/placeholder-images';
 
 export const Footer = () => {
+  const logoImg = PlaceHolderImages.find(img => img.id === 'academy-logo');
+
   return (
     <footer className="bg-black text-white py-16">
       <div className="container mx-auto px-4">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-12 mb-12 text-center">
           <div className="flex flex-col items-center space-y-6">
             <Link href="#inicio" className="flex items-center gap-2">
-              <span className="text-2xl font-bold font-headline tracking-tight">
-                Pilotos - <span className="text-primary">ases al volante</span>
-              </span>
+              {logoImg ? (
+                <div className="relative h-12 w-48 md:h-14 md:w-56">
+                  <Image 
+                    src={logoImg.imageUrl} 
+                    alt={logoImg.description} 
+                    fill
+                    className="object-contain"
+                    data-ai-hint={logoImg.imageHint}
+                  />
+                </div>
+              ) : (
+                <span className="text-2xl font-bold font-headline tracking-tight">
+                  Pilotos - <span className="text-primary">ases al volante</span>
+                </span>
+              )}
             </Link>
             <p className="text-slate-400 max-w-sm">
               Formando conductores responsables con seguridad y excelencia desde el primer día. Tu libertad empieza con una educación vial sólida.
