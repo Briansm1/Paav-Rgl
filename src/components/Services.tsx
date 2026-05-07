@@ -20,7 +20,7 @@ const services = [
     tag: 'Especializado'
   },
   {
-    title: 'Teoría de Tránsito',
+    title: 'Técnica profesional aplicable',
     description: 'Domina las normas y señales viales para aprobar tu examen teórico sin dificultades.',
     icon: <BookOpen className="w-10 h-10 text-primary" />,
     imgId: 'service-theory',
