@@ -31,7 +31,7 @@ export const Pricing = () => {
       <div className="container mx-auto px-4">
         <div className="text-center max-w-3xl mx-auto mb-16">
           <span className="inline-block px-4 py-1.5 mb-6 text-xs font-bold tracking-widest text-primary uppercase bg-primary/10 rounded-full border border-primary/20">
-            Nuestra Tarifa
+            TU INVERSIÓN
           </span>
           <h2 className="text-4xl md:text-6xl font-bold font-headline mb-6 tracking-tight text-foreground">
             Un plan diseñado para tu <span className="text-primary italic">éxito</span>
