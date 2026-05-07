@@ -36,7 +36,7 @@ export const Hero = () => {
             Tu camino hacia la <span className="text-primary">Libertad</span> comienza con nosotros.
           </h1>
           
-          <p className="text-sm sm:text-lg md:text-xl text-muted-foreground mb-8 max-w-xl animate-in fade-in slide-in-from-bottom-8 duration-1000 delay-200">
+          <p className="text-sm sm:text-lg md:text-xl text-foreground/80 mb-8 max-w-xl animate-in fade-in slide-in-from-bottom-8 duration-1000 delay-200">
             En nuestra academia, no solo te enseñamos a manejar; te preparamos para ser un conductor responsable, seguro y con total confianza en las calles.
           </p>
           
@@ -52,17 +52,17 @@ export const Hero = () => {
           <div className="mt-10 md:mt-16 flex items-center gap-3 sm:gap-8 md:gap-12 animate-in fade-in duration-1000 delay-500">
             <div>
               <p className="text-base sm:text-2xl md:text-4xl font-bold text-foreground whitespace-nowrap">Equipo</p>
-              <p className="text-[9px] sm:text-xs md:text-sm text-muted-foreground uppercase tracking-wider font-semibold">altamente calificado</p>
+              <p className="text-[9px] sm:text-xs md:text-sm text-foreground/60 uppercase tracking-wider font-semibold">altamente calificado</p>
             </div>
             <div className="w-px h-8 md:h-12 bg-border"></div>
             <div>
               <p className="text-base sm:text-2xl md:text-4xl font-bold text-foreground whitespace-nowrap">+5 años</p>
-              <p className="text-[9px] sm:text-xs md:text-sm text-muted-foreground uppercase tracking-wider font-semibold">ases al volante</p>
+              <p className="text-[9px] sm:text-xs md:text-sm text-foreground/60 uppercase tracking-wider font-semibold">ases al volante</p>
             </div>
             <div className="w-px h-8 md:h-12 bg-border"></div>
             <div>
               <p className="text-base sm:text-2xl md:text-4xl font-bold text-foreground whitespace-nowrap">4.9/5</p>
-              <p className="text-[9px] sm:text-xs md:text-sm text-muted-foreground uppercase tracking-wider font-semibold">recomendada</p>
+              <p className="text-[9px] sm:text-xs md:text-sm text-foreground/60 uppercase tracking-wider font-semibold">recomendada</p>
             </div>
           </div>
         </div>
