@@ -10,7 +10,7 @@ export const PlaceHolderImages: ImagePlaceholder[] = [
   {
     "id": "hero-bg",
     "description": "Estudiante conduciendo un coche con un instructor",
-    "imageUrl": "https://picsum.photos/seed/ruta-hero/1920/1080",
+    "imageUrl": "https://i.imgur.com/7vloPaK.jpeg",
     "imageHint": "driving school"
   },
   {
