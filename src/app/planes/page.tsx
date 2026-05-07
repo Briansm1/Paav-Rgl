@@ -185,7 +185,7 @@ export default function PlanesPage() {
         <div className="container mx-auto px-4 text-center">
           <h2 className="text-3xl font-bold mb-4 text-center">¿Todavía tenés dudas?</h2>
           <p className="text-muted-foreground mb-8 max-w-xl mx-auto text-center">
-            Nuestros asesores expertos están listos para ayudarte a resolver cualquier inquietud sobre el Plan dominio.
+            Nuestros asesores están listos para ayudarte a resolver cualquier duda que tengas sobre el Plan dominio.
           </p>
           <Link href="/#contacto">
             <Button variant="outline" size="lg" className="rounded-full border-primary text-primary hover:bg-primary/5 text-center">
