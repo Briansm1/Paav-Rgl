@@ -1,3 +1,4 @@
+
 "use client";
 
 import React from 'react';
@@ -86,7 +87,7 @@ export const Contact = () => {
                     </div>
                     <div>
                       <p className="font-bold text-lg mb-1">Zona de cobertura</p>
-                      <p className="text-muted-foreground leading-relaxed">Río Gallegos, Santa Cruz (9400),<br />Argentina</p>
+                      <p className="text-muted-foreground leading-relaxed">Río Gallegos, Santa Cruz,<br />Argentina, Z9400</p>
                     </div>
                   </div>
                   <div className="flex items-start gap-6">
