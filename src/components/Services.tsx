@@ -6,7 +6,7 @@ import { Car, BookOpen, Clock, Award, ShieldCheck, Zap } from 'lucide-react';
 
 const services = [
   {
-    title: 'Cursos para Principiantes',
+    title: 'Mentalidad de piloto',
     description: 'Aprende desde lo más básico hasta obtener tu licencia con nuestro método paso a paso.',
     icon: <Car className="w-10 h-10 text-primary" />,
     imgId: 'service-beginner',
