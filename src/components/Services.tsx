@@ -7,7 +7,7 @@ import { Car, BookOpen, Clock, Award, ShieldCheck, Zap } from 'lucide-react';
 const services = [
   {
     title: 'Mentalidad de piloto',
-    description: 'Aprende desde lo más básico hasta obtener tu licencia con nuestro método paso a paso.',
+    description: 'Trabajamos la gestión de tus emociones al volante para que logres superar los miedos y conduzcas con total seguridad y confianza.',
     icon: <Car className="w-10 h-10 text-primary" />,
     imgId: 'service-beginner',
     tag: 'Popular'
