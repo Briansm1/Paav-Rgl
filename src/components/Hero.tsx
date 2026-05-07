@@ -18,7 +18,7 @@ export const Hero = () => {
           src={heroImg?.imageUrl || ''}
           alt={heroImg?.description || 'Driving school background'}
           fill
-          className="object-cover"
+          className="object-cover blur-[3px] scale-105"
           priority
           data-ai-hint={heroImg?.imageHint}
         />
