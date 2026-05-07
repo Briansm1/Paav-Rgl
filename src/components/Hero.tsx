@@ -32,11 +32,11 @@ export const Hero = () => {
           </div>
           
           <h1 className="text-4xl sm:text-5xl md:text-7xl font-bold font-headline leading-[1.1] mb-6 text-foreground animate-in fade-in slide-in-from-bottom-6 duration-1000 delay-100">
-            Tu camino hacia la <span className="text-primary">Libertad</span> comienza aquí.
+            Tu camino hacia la <span className="text-primary">Libertad</span> comienza con nosotros.
           </h1>
           
           <p className="text-base sm:text-lg md:text-xl text-muted-foreground mb-10 max-w-xl animate-in fade-in slide-in-from-bottom-8 duration-1000 delay-200">
-            En Ruta Segura, no solo te enseñamos a manejar; te preparamos para ser un conductor responsable, seguro y con total confianza en las calles.
+            En Pilotos - ases al volante, no solo te enseñamos a manejar; te preparamos para ser un conductor responsable, seguro y con total confianza en las calles.
           </p>
           
           <div className="flex flex-col sm:flex-row gap-4 animate-in fade-in slide-in-from-bottom-10 duration-1000 delay-300">
