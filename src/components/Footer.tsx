@@ -47,7 +47,7 @@ export const Footer = () => {
             <ul className="space-y-4">
               <li className="text-slate-400">Licencia de Auto</li>
               <li className="text-slate-400">Licencia de Moto</li>
-              <li className="text-slate-400">Cursos de Refuerzo</li>
+              <li className="text-slate-400">Programas digitales</li>
               <li className="text-slate-400">Asesoría de Trámites</li>
             </ul>
           </div>
