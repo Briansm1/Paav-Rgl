@@ -37,6 +37,9 @@ export const Contact = () => {
   const { toast } = useToast();
   const mapImg = PlaceHolderImages.find(img => img.id === 'map-location');
   const mapUrl = "https://www.google.com/maps/search/?api=1&query=Plaza+San+Martin+Rio+Gallegos+Santa+Cruz";
+  const phoneNumber = "542966265603";
+  const message = "Hola Pilotos - ases al volante! Me gustaría recibir información sobre sus cursos de conducción.";
+  const whatsappUrl = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`;
 
   const form = useForm<z.infer<typeof formSchema>>({
     resolver: zodResolver(formSchema),
@@ -93,7 +96,14 @@ export const Contact = () => {
                     </div>
                     <div>
                       <p className="font-bold text-lg mb-1">WhatsApp</p>
-                      <p className="text-muted-foreground font-medium">+54 2966 265603</p>
+                      <a 
+                        href={whatsappUrl}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="text-muted-foreground font-medium hover:text-primary transition-colors block"
+                      >
+                        +54 2966 265603
+                      </a>
                     </div>
                   </div>
                   <div className="flex items-start gap-6">
