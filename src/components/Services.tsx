@@ -4,7 +4,7 @@ import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { PlaceHolderImages } from '@/app/lib/placeholder-images';
 import { Car, BookOpen, Award, ShieldCheck, Brain } from 'lucide-react';
 
-// Componente para el icono de volante (SVG personalizado ya que Lucide no tiene uno específico)
+// Componente para el icono de volante (SVG personalizado con un formato más limpio y moderno)
 const SteeringWheel = ({ className }: { className?: string }) => (
   <svg 
     xmlns="http://www.w3.org/2000/svg" 
@@ -17,11 +17,10 @@ const SteeringWheel = ({ className }: { className?: string }) => (
     className={className}
   >
     <circle cx="12" cy="12" r="10" />
-    <path d="M12 12m-2 0a2 2 0 1 0 4 0a2 2 0 1 0 -4 0" />
-    <path d="M12 2v2" />
-    <path d="M12 14v7" />
-    <path d="M10 12l-7 1" />
-    <path d="M14 12l7 1" />
+    <circle cx="12" cy="12" r="2.5" />
+    <path d="M12 14.5v5.5" />
+    <path d="M9.5 10.5l-5-2.5" />
+    <path d="M14.5 10.5l5-2.5" />
   </svg>
 );
 
