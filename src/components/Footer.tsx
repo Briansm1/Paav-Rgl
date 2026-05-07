@@ -62,8 +62,13 @@ export const Footer = () => {
           </div>
         </div>
 
-        <div className="pt-8 border-t border-slate-800 text-center text-slate-500 text-sm">
+        <div className="pt-8 border-t border-slate-800 flex flex-col md:flex-row justify-between items-center gap-6 text-slate-500 text-sm">
           <p>© {new Date().getFullYear()} Pilotos - ases al volante Academia de Conducción. Todos los derechos reservados.</p>
+          <div className="flex flex-wrap justify-center gap-x-6 gap-y-2">
+            <Link href="#" className="hover:text-white transition-colors">Política de Privacidad</Link>
+            <Link href="#" className="hover:text-white transition-colors">Términos y Condiciones</Link>
+            <Link href="#" className="hover:text-white transition-colors">Política de Cookies</Link>
+          </div>
         </div>
       </div>
     </footer>
