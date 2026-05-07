@@ -1,4 +1,3 @@
-
 "use client";
 
 import React from 'react';
@@ -95,7 +94,7 @@ export const Contact = () => {
                       <Phone className="w-6 h-6 text-primary" />
                     </div>
                     <div>
-                      <p className="font-bold text-lg mb-1">Línea Directa / WhatsApp</p>
+                      <p className="font-bold text-lg mb-1">WhatsApp</p>
                       <p className="text-muted-foreground font-medium">+57 (300) 123 4567</p>
                     </div>
                   </div>
