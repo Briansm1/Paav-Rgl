@@ -76,7 +76,7 @@ export const Contact = () => {
           <div className="flex flex-col gap-10">
             <div className="bg-slate-50 dark:bg-slate-900 p-8 md:p-12 rounded-[2.5rem] shadow-xl border border-border/50 h-full flex flex-col justify-between">
               <div>
-                <h4 className="text-2xl font-bold mb-10 tracking-tight">Canales de Atención</h4>
+                <h4 className="text-2xl font-bold mb-10 tracking-tight">Canales de atención</h4>
                 <div className="space-y-10">
                   <div className="flex items-start gap-6">
                     <div className="bg-white dark:bg-slate-800 p-4 rounded-[1.2rem] shadow-sm shrink-0">
