@@ -2,7 +2,28 @@ import React from 'react';
 import Image from 'next/image';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { PlaceHolderImages } from '@/app/lib/placeholder-images';
-import { Car, BookOpen, Clock, Award, ShieldCheck, Zap, Brain, Scale } from 'lucide-react';
+import { Car, BookOpen, Award, ShieldCheck, Brain } from 'lucide-react';
+
+// Componente para el icono de volante (SVG personalizado ya que Lucide no tiene uno específico)
+const SteeringWheel = ({ className }: { className?: string }) => (
+  <svg 
+    xmlns="http://www.w3.org/2000/svg" 
+    viewBox="0 0 24 24" 
+    fill="none" 
+    stroke="currentColor" 
+    strokeWidth="2" 
+    strokeLinecap="round" 
+    strokeLinejoin="round" 
+    className={className}
+  >
+    <circle cx="12" cy="12" r="10" />
+    <path d="M12 12m-2 0a2 2 0 1 0 4 0a2 2 0 1 0 -4 0" />
+    <path d="M12 2v2" />
+    <path d="M12 14v7" />
+    <path d="M10 12l-7 1" />
+    <path d="M14 12l7 1" />
+  </svg>
+);
 
 const services = [
   {
@@ -22,7 +43,7 @@ const services = [
   {
     title: 'Técnica profesional aplicable',
     description: 'Desarrollamos tus habilidades mediante una práctica estructurada para que logres el dominio total del vehículo y conviertas el manejo en algo natural y fluido.',
-    icon: <Zap className="w-10 h-10 text-primary" />,
+    icon: <SteeringWheel className="w-10 h-10 text-primary" />,
     imgId: 'service-theory',
     tag: 'Académico'
   }
@@ -90,7 +111,7 @@ export const Services = () => {
                 {[
                   { icon: <ShieldCheck className="w-6 h-6 text-primary" />, text: 'Vehículos modernos con sistema de doble pedal para tu seguridad.' },
                   { icon: <Award className="w-6 h-6 text-primary" />, text: 'Instructores certificados con más de 10 años de experiencia.' },
-                  { icon: <Zap className="w-6 h-6 text-primary" />, text: 'Horarios 100% flexibles que se adaptan a tu ritmo de vida.' }
+                  { icon: <Car className="w-6 h-6 text-primary" />, text: 'Horarios 100% flexibles que se adaptan a tu ritmo de vida.' }
                 ].map((item, i) => (
                   <div key={i} className="flex items-start gap-5">
                     <div className="shrink-0 mt-1 bg-primary/10 p-3 rounded-2xl shadow-inner">
