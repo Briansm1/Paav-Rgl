@@ -6,18 +6,18 @@ export const Footer = () => {
   return (
     <footer className="bg-slate-900 text-white py-16">
       <div className="container mx-auto px-4">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-12 mb-12">
-          <div className="space-y-6">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-12 mb-12 text-center">
+          <div className="flex flex-col items-center space-y-6">
             <Link href="#inicio" className="flex items-center gap-2">
               <ShieldCheck className="w-8 h-8 text-primary" />
               <span className="text-2xl font-bold font-headline tracking-tight">
                 Pilotos - <span className="text-primary">ases al volante</span>
               </span>
             </Link>
-            <p className="text-slate-400">
+            <p className="text-slate-400 max-w-sm">
               Formando conductores responsables con seguridad y excelencia desde el primer día. Tu libertad empieza con una educación vial sólida.
             </p>
-            <div className="flex gap-4">
+            <div className="flex gap-4 justify-center">
               <Instagram className="w-5 h-5 text-slate-400 hover:text-primary cursor-pointer transition-colors" />
               <Facebook className="w-5 h-5 text-slate-400 hover:text-primary cursor-pointer transition-colors" />
               <Youtube className="w-5 h-5 text-slate-400 hover:text-primary cursor-pointer transition-colors" />
@@ -32,7 +32,7 @@ export const Footer = () => {
             </div>
           </div>
 
-          <div>
+          <div className="flex flex-col items-center">
             <h4 className="text-lg font-bold mb-6">Enlaces Rápidos</h4>
             <ul className="space-y-4">
               <li><Link href="#inicio" className="text-slate-400 hover:text-white transition-colors">Inicio</Link></li>
@@ -42,7 +42,7 @@ export const Footer = () => {
             </ul>
           </div>
 
-          <div>
+          <div className="flex flex-col items-center">
             <h4 className="text-lg font-bold mb-6">Servicios</h4>
             <ul className="space-y-4">
               <li className="text-slate-400">Formación para conducir autos</li>
@@ -54,7 +54,7 @@ export const Footer = () => {
           </div>
         </div>
 
-        <div className="pt-8 border-t border-slate-800 flex flex-col md:flex-row justify-between items-center gap-6 text-slate-500 text-sm">
+        <div className="pt-8 border-t border-slate-800 flex flex-col items-center gap-6 text-slate-500 text-sm text-center">
           <p>© {new Date().getFullYear()} Pilotos - ases al volante Academia de Conducción. Todos los derechos reservados.</p>
           <div className="flex flex-wrap justify-center gap-x-6 gap-y-2">
             <Link href="#" className="hover:text-white transition-colors">Política de Privacidad</Link>
