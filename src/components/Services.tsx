@@ -114,7 +114,7 @@ export const Services = () => {
             </div>
             <div className="lg:w-1/2 w-full relative h-[350px] md:h-[550px] rounded-3xl overflow-hidden shadow-2xl">
               <video 
-                src="https://i.imgur.com/qJkVbD3.mp4"
+                src="https://i.imgur.com/Ype82Hq.mp4"
                 autoPlay
                 loop
                 muted
