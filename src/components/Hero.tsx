@@ -57,8 +57,8 @@ export const Hero = () => {
             </div>
             <div className="hidden sm:block w-px h-12 bg-border"></div>
             <div>
-              <p className="text-2xl md:text-4xl font-bold text-foreground">98%</p>
-              <p className="text-xs md:text-sm text-muted-foreground uppercase tracking-wider font-semibold">Aprobación Primera Vez</p>
+              <p className="text-2xl md:text-4xl font-bold text-foreground">+5 años</p>
+              <p className="text-xs md:text-sm text-muted-foreground uppercase tracking-wider font-semibold">formando conductores expertos</p>
             </div>
           </div>
         </div>
