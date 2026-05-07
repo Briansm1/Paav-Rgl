@@ -53,7 +53,7 @@ export const Hero = () => {
           <div className="mt-12 flex items-center gap-4 sm:gap-8 md:gap-12 animate-in fade-in duration-1000 delay-500">
             <div>
               <p className="text-lg sm:text-2xl md:text-4xl font-bold text-foreground">Equipo</p>
-              <p className="text-[10px] sm:text-xs md:text-sm text-muted-foreground uppercase tracking-wider font-semibold">calificado</p>
+              <p className="text-[10px] sm:text-xs md:text-sm text-muted-foreground uppercase tracking-wider font-semibold">altamente calificado</p>
             </div>
             <div className="w-px h-8 sm:h-12 bg-border"></div>
             <div>
