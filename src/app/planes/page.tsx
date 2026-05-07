@@ -25,7 +25,7 @@ const detailedPlans = [
       'Salir con sensación de dominio y control del vehículo'
     ],
     features: [
-      '2 sesiones de prácticas dinámicas',
+      '2 sesiones de prácticas dinámicas (50 min c/u)',
       'Auto para las prácticas',
       'Acceso a la comunidad privada',
       'Formación teórica aplicada a situaciones reales y sobre el marco legal',
