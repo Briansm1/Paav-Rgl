@@ -62,7 +62,7 @@ export const Hero = () => {
             <div className="w-px h-8 md:h-12 bg-border"></div>
             <div>
               <p className="text-base sm:text-2xl md:text-4xl font-bold text-foreground whitespace-nowrap">4.9/5</p>
-              <p className="text-[9px] sm:text-xs md:text-sm text-foreground/60 uppercase tracking-wider font-semibold">recomendada</p>
+              <p className="text-[9px] sm:text-xs md:text-sm text-foreground/60 uppercase tracking-wider font-semibold">LA MÁS RECOMENDADA</p>
             </div>
           </div>
         </div>
