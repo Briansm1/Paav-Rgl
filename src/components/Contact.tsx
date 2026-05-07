@@ -95,7 +95,7 @@ export const Contact = () => {
                     </div>
                     <div>
                       <p className="font-bold text-lg mb-1">WhatsApp</p>
-                      <p className="text-muted-foreground font-medium">+57 (300) 123 4567</p>
+                      <p className="text-muted-foreground font-medium">+54 2966 265603</p>
                     </div>
                   </div>
                   <div className="flex items-start gap-6">
