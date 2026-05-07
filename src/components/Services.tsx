@@ -102,7 +102,7 @@ export const Services = () => {
               <div className="grid grid-cols-1 gap-8">
                 {[
                   { icon: <ShieldCheck className="w-6 h-6 text-primary" />, text: 'Vehículos modernos con sistema de doble pedal para tu seguridad.' },
-                  { icon: <Award className="w-6 h-6 text-primary" />, text: 'Instructores certificados con más de 10 años de experiencia.' },
+                  { icon: <Award className="w-6 h-6 text-primary" />, text: 'Instructores certificados con más de 5 años de experiencia.' },
                   { icon: <Car className="w-6 h-6 text-primary" />, text: 'Horarios 100% flexibles que se adaptan a tu ritmo de vida.' }
                 ].map((item, i) => (
                   <div key={i} className="flex items-start gap-5">
