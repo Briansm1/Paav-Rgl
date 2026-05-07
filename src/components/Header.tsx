@@ -54,8 +54,8 @@ export const Header = () => {
           onClick={() => setActiveSection('#inicio')}
         >
           <ShieldCheck className="w-8 h-8 text-primary transition-transform group-hover:scale-110" />
-          <span className="text-xl font-bold font-headline tracking-tight text-foreground uppercase">
-            PILOTOS - <span className="text-primary">ASES AL VOLANTE</span>
+          <span className="text-xl font-bold font-headline tracking-tight text-foreground">
+            Pilotos - <span className="text-primary">Ases al volante</span>
           </span>
         </Link>
 

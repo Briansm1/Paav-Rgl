@@ -2,7 +2,7 @@ import type {Metadata} from 'next';
 import './globals.css';
 
 export const metadata: Metadata = {
-  title: 'PILOTOS - ASES AL VOLANTE | Academia de Conducción',
+  title: 'Pilotos - Ases al volante | Academia de Conducción',
   description: 'Tu academia de confianza para aprender a conducir con seguridad y profesionalismo.',
 };
 
