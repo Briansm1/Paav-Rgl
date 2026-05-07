@@ -4,7 +4,7 @@ import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { PlaceHolderImages } from '@/app/lib/placeholder-images';
 import { Car, BookOpen, Award, ShieldCheck, Brain } from 'lucide-react';
 
-// Componente para el icono de volante (SVG personalizado con un formato más limpio y moderno)
+// Componente para el icono de volante
 const SteeringWheel = ({ className }: { className?: string }) => (
   <svg 
     xmlns="http://www.w3.org/2000/svg" 
@@ -35,13 +35,13 @@ const services = [
     title: 'Teoría basada en el marco legal y al tráfico real',
     description: 'Profundizamos en las normas de tránsito y el manejo preventivo para que logres anticiparte al entorno y tomes decisiones inteligentes en la calle.',
     icon: <BookOpen className="w-10 h-10 text-primary" />,
-    imgId: 'service-advanced'
+    imgId: 'service-theory'
   },
   {
     title: 'Técnica profesional aplicable',
     description: 'Desarrollamos tus habilidades mediante una práctica estructurada para que logres el dominio total del vehículo y conviertas el manejo en algo natural y fluido.',
     icon: <SteeringWheel className="w-10 h-10 text-primary" />,
-    imgId: 'service-theory'
+    imgId: 'service-advanced'
   }
 ];
 
