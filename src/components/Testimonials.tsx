@@ -40,7 +40,9 @@ export const Testimonials = () => {
       <div className="container mx-auto px-4">
         <div className="text-center mb-12 md:mb-16">
           <h2 className="text-accent font-bold tracking-widest uppercase text-xs md:text-sm mb-4">Lo que dicen de nosotros</h2>
-          <h3 className="text-3xl md:text-5xl font-bold font-headline text-foreground">Testimonios de Éxito</h3>
+          <h3 className="text-3xl md:text-5xl font-bold font-headline text-foreground">
+            Testimonios de <span className="text-primary">Éxito</span>
+          </h3>
         </div>
 
         <div className="relative max-w-6xl mx-auto px-4 sm:px-12">
