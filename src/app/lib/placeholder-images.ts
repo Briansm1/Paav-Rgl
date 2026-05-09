@@ -120,5 +120,11 @@ export const PlaceHolderImages: ImagePlaceholder[] = [
     "description": "Logro de Daniela Rojas",
     "imageUrl": "https://i.imgur.com/IlzG3wN.png",
     "imageHint": "driving achievement"
+  },
+  {
+    "id": "achievement-candelaria",
+    "description": "Logro de Candelaria Pereyra",
+    "imageUrl": "https://i.imgur.com/OeVAKpn.png",
+    "imageHint": "driving success"
   }
 ];

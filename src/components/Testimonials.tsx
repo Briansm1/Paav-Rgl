@@ -20,44 +20,41 @@ const testimonials = [
   {
     name: 'Julia Geoia',
     content: '¡Hola! La verdad es que la academia es súper recomendable, tanto por la calidad de la enseñanza como por la atención. Pude superar mis miedos y también los conos jajaja. El profesor es un genio: tiene muchísima paciencia, es muy respetuoso y explica de manera clara y práctica. La academia es muy completa; brindan material teórico y práctico. Fue una excelente experiencia. ¡Millones de gracias! Y les deseo muchísimos éxitos.',
-    imgId: 'student-1'
   },
   {
     name: 'Lautaro Ramirez',
     content: 'Buenas. Muy recomendable la escuela de manejo. La mejor atención que recibí y todo excelente; pude concretar mi meta de recibir mi licencia de conducir gracias a las clases intensivas que me brindaron. El instructor es una persona muy paciente y profesional, dando indicaciones claras. Excelente academia brindándome material teórico y práctico para adquirir mucho más conocimiento. Una experiencia excelente, muchas gracias a Pilotos - ases al volante por la meta que logré conseguir.',
-    imgId: 'student-2'
   },
   {
     name: 'Maria Silisque',
     content: '¡EXCELENTE DIEZ! Recomiendo, súper responsable, respetuoso y con una paciencia de oro. ¡Gracias!',
-    imgId: 'student-3'
   },
   {
     name: 'Javier Peña',
-    content: 'Hola! Recomiendo, todo excelente y práctico, me sirvió un montón.',
-    imgId: 'student-4'
+    content: '¡Hola! Recomiendo, todo excelente y práctico, me sirvió un montón.',
   },
   {
     name: 'Alejandra Merlo',
     content: 'Simplemente quería agradecer de corazón haberme cruzado con la academia. Era algo que me costaba un montón y que procrastiné mucho tiempo; gracias a la confianza, el apoyo, la educación y, sobre todo, la paciencia y empatía recibida, pude lograrlo. ¡No se dan una idea de lo importante que esto es para mí, y fue gracias a la ayuda de ustedes! ¡Gracias, gracias!',
-    imgId: 'student-5',
     headerImageId: 'achievement-alejandra'
   },
   {
     name: 'Daniela Rojas',
     content: 'Queríamos agradecerles por el acompañamiento en este proceso tan importante para nuestra hija: ayudarla a perder sus miedos, a creer en que podía lograrlo y, sobre todo, sentirse segura en cada movimiento. El esfuerzo de esta licencia es de ella, pero sin ayuda no hubiese sido posible. La paciencia y técnicas son increíbles, y las palabras de aliento ya son de otro nivel. ¡Muchísimas gracias, Brian, por estas semanas acompañándola en el proceso de aprendizaje!',
-    imgId: 'student-6',
     headerImageId: 'achievement-daniela'
   },
   {
     name: 'Maura Rivero',
     content: 'Brian, excelente profe, gracias por la paciencia y dedicación.',
-    imgId: 'student-7'
   },
   {
     name: 'Oscar Benítez',
     content: 'Excelente, quiero agradecer al instructor de manejo por su profesionalismo, paciencia y compromiso en la formación de mi hija para obtener su licencia profesional. No solo enseña a conducir, enseña responsabilidad y seguridad. ¡Gracias por acompañarla en este paso tan importante!',
-    imgId: 'student-8'
+  },
+  {
+    name: 'Candelaria Pereyra',
+    content: '¡Holi! La verdad, súper conforme con las clases. Me sorprendió haber aprendido un montón en poco tiempo y el hecho de que después practiqué con autos reales y no conos me dejó muy sorprendida por pensar que no estaba lista. Brian, el instructor, súper buena onda; explica re bien, claro, paciente ante todo, súper seguro y divertido. Tengo amigos que quieren aprender, así que les voy a recomendar a ustedes. ¡10/10! Muchas gracias.',
+    headerImageId: 'achievement-candelaria'
   }
 ];
 
@@ -125,8 +122,8 @@ export const Testimonials = () => {
                             />
                           </div>
                         )}
-                        <CardContent className="p-6 md:p-8 flex flex-col flex-grow">
-                          <div className="flex-grow mb-6">
+                        <CardContent className="p-5 md:p-6 flex flex-col flex-grow">
+                          <div className="flex-grow mb-4">
                             <p className="text-sm md:text-base italic text-muted-foreground leading-relaxed">
                               {t.content}
                             </p>
