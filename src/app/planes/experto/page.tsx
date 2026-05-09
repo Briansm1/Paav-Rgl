@@ -53,7 +53,7 @@ export default function PlanExpertoPage() {
             Volver al inicio
           </Link>
           <h1 className="text-4xl md:text-6xl font-bold font-headline mb-6 text-foreground text-center">
-            Los detalles para el <span className="text-primary">programa experto</span>
+            Programa <span className="text-primary">experto</span>
           </h1>
         </div>
       </section>
