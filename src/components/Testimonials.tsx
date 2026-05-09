@@ -76,13 +76,13 @@ export const Testimonials = () => {
   }, [api]);
 
   return (
-    <section id="testimonios" className="py-20 md:py-32 bg-secondary overflow-hidden">
+    <section id="testimonios" className="py-16 md:py-24 bg-secondary overflow-hidden">
       <div className="container mx-auto px-4">
-        <div className="text-center mb-16 md:mb-20">
+        <div className="text-center mb-12 md:mb-16">
           <span className="inline-block px-4 py-1.5 mb-6 text-xs font-bold tracking-widest text-accent uppercase bg-accent/10 rounded-full border border-accent/20">
             Lo que dicen de nosotros
           </span>
-          <h3 className="text-4xl md:text-6xl font-bold font-headline text-foreground tracking-tight">
+          <h3 className="text-4xl md:text-5xl font-bold font-headline text-foreground tracking-tight">
             Algunos casos de <span className="text-primary italic">éxito</span>
           </h3>
         </div>
@@ -103,16 +103,16 @@ export const Testimonials = () => {
                 const isActive = index === current;
 
                 return (
-                  <CarouselItem key={index} className="pl-4 md:pl-6 basis-full sm:basis-1/2 lg:basis-1/3 py-8">
+                  <CarouselItem key={index} className="pl-4 md:pl-6 basis-full sm:basis-1/2 lg:basis-1/3 py-6">
                     <div className={cn(
                       "transition-all duration-700 ease-in-out h-full",
                       isActive 
-                        ? "opacity-100 blur-0 scale-105 z-10" 
+                        ? "opacity-100 blur-0 scale-[1.02] z-10" 
                         : "opacity-30 blur-[2px] scale-90 grayscale-[50%]"
                     )}>
-                      <Card className="h-full border-none shadow-2xl rounded-[2.5rem] group bg-card border border-white/5 relative overflow-hidden">
+                      <Card className="h-full border-none shadow-xl rounded-[2rem] group bg-card border border-white/5 relative overflow-hidden flex flex-col">
                         {headerImg && (
-                          <div className="relative aspect-[1080/680] w-full overflow-hidden border-b border-white/5">
+                          <div className="relative aspect-[16/9] w-full overflow-hidden border-b border-white/5">
                             <Image 
                               src={headerImg.imageUrl} 
                               alt="Logro del estudiante" 
@@ -122,16 +122,16 @@ export const Testimonials = () => {
                             />
                           </div>
                         )}
-                        <CardContent className="p-8 md:p-10 flex flex-col h-full">
-                          <div className="flex-grow relative z-10">
-                            <p className="text-base md:text-lg italic text-muted-foreground leading-relaxed">
+                        <CardContent className="p-6 md:p-8 flex flex-col flex-grow">
+                          <div className="flex-grow">
+                            <p className="text-sm md:text-base italic text-muted-foreground leading-relaxed">
                               {t.content}
                             </p>
                           </div>
 
-                          <div className="flex flex-col mt-10 border-t border-white/5 pt-6 relative z-10">
+                          <div className="flex flex-col mt-6 border-t border-white/5 pt-4">
                             <div>
-                              <p className="font-bold text-foreground text-lg tracking-tight">{t.name}</p>
+                              <p className="font-bold text-foreground text-base tracking-tight">{t.name}</p>
                               <div className="flex gap-0.5 mt-1">
                                 {[...Array(5)].map((_, i) => (
                                   <Star key={i} className="w-3.5 h-3.5 text-yellow-500 fill-yellow-500" />
@@ -147,8 +147,8 @@ export const Testimonials = () => {
               })}
             </CarouselContent>
             
-            <CarouselPrevious className="hidden md:flex -left-4 lg:-left-20 h-14 w-14 bg-card text-primary border-white/10 hover:bg-primary hover:text-white transition-all shadow-xl rounded-2xl" />
-            <CarouselNext className="hidden md:flex -right-4 lg:-right-20 h-14 w-14 bg-card text-primary border-white/10 hover:bg-primary hover:text-white transition-all shadow-xl rounded-2xl" />
+            <CarouselPrevious className="hidden md:flex -left-4 lg:-left-16 h-12 w-12 bg-card text-primary border-white/10 hover:bg-primary hover:text-white transition-all shadow-lg rounded-xl" />
+            <CarouselNext className="hidden md:flex -right-4 lg:-right-16 h-12 w-12 bg-card text-primary border-white/10 hover:bg-primary hover:text-white transition-all shadow-lg rounded-xl" />
           </Carousel>
         </div>
       </div>
