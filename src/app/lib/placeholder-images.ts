@@ -112,7 +112,7 @@ export const PlaceHolderImages: ImagePlaceholder[] = [
   {
     "id": "achievement-alejandra",
     "description": "Logro de Alejandra Merlo",
-    "imageUrl": "https://i.imgur.com/n3sWIQE.png",
+    "imageUrl": "https://i.imgur.com/dcZmbIq.png",
     "imageHint": "driving license"
   },
   {
