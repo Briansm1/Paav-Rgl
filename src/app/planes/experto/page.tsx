@@ -176,7 +176,7 @@ export default function PlanExpertoPage() {
 
                 <div className="pt-4 mt-auto w-full flex justify-center">
                   <Button size="lg" className="rounded-full px-10 h-14 text-lg bg-primary hover:bg-primary/90 w-full text-center">
-                    Quiero este plan
+                    Elegir
                   </Button>
                 </div>
               </div>

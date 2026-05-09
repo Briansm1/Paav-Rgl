@@ -27,7 +27,7 @@ const detailedPlans = [
     ],
     features: [
       'Auto para las prácticas con doble comando (si aplica)',
-      'Acceso exclusivo a la comunidad privada PAAV',
+      'Acceso exclusiva a la comunidad privada PAAV',
       'Material teórico completo y actualizado',
       'Acompañamiento personalizado en cada sesión',
       'Descuento especial en alquiler de auto para examen - 15% off'
@@ -53,7 +53,7 @@ export default function PlanFundamentosPage() {
             Volver al inicio
           </Link>
           <h1 className="text-4xl md:text-6xl font-bold font-headline mb-6 text-foreground text-center">
-            Detalles del <span className="text-primary">Programa Fundamentos</span>
+            Programa <span className="text-primary">fundamentos</span>
           </h1>
         </div>
       </section>
@@ -176,7 +176,7 @@ export default function PlanFundamentosPage() {
 
                 <div className="pt-4 mt-auto w-full flex justify-center">
                   <Button size="lg" className="rounded-full px-10 h-14 text-lg bg-primary hover:bg-primary/90 w-full text-center">
-                    Quiero este plan
+                    Elegir
                   </Button>
                 </div>
               </div>
