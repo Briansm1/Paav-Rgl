@@ -110,8 +110,14 @@ export const PlaceHolderImages: ImagePlaceholder[] = [
     "imageHint": "academy logo"
   },
   {
-    "id": "testimonial-achievement",
-    "description": "Logro de licencia de conducir",
+    "id": "achievement-alejandra",
+    "description": "Logro de Alejandra Merlo",
+    "imageUrl": "https://i.imgur.com/n3sWIQE.png",
+    "imageHint": "driving license"
+  },
+  {
+    "id": "achievement-daniela",
+    "description": "Logro de Daniela Rojas",
     "imageUrl": "https://i.imgur.com/IlzG3wN.png",
     "imageHint": "driving achievement"
   }

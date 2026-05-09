@@ -29,7 +29,7 @@ const testimonials = [
   },
   {
     name: 'Maria Silisque',
-    content: '¡Excelente diez! Recomiendo, súper responsable, respetuoso y con una paciencia de oro. ¡Gracias!',
+    content: '¡EXCELENTE DIEZ! Recomiendo, súper responsable, respetuoso y con una paciencia de oro. ¡Gracias!',
     imgId: 'student-3'
   },
   {
@@ -39,15 +39,15 @@ const testimonials = [
   },
   {
     name: 'Alejandra Merlo',
-    content: 'Simplemente quería agradecer de corazón haberme cruzado con la academia. Era algo que me costaba un montón y que procrastiné durante mucho tiempo; gracias a la confianza, el apoyo, la educación y, sobre todo, la paciencia y empatía recibida, pude lograrlo. ¡No se dan una idea de lo importante que esto es para mí, y fue gracias a la ayuda de ustedes! ¡Gracias, gracias!',
+    content: 'Simplemente quería agradecer de corazón haberme cruzado con la academia. Era algo que me costaba un montón y que procrastiné mucho tiempo; gracias a la confianza, el apoyo, la educación y, sobre todo, la paciencia y empatía recibida, pude lograrlo. ¡No se dan una idea de lo importante que esto es para mí, y fue gracias a la ayuda de ustedes! ¡Gracias, gracias!',
     imgId: 'student-5',
-    headerImageId: 'testimonial-achievement'
+    headerImageId: 'achievement-alejandra'
   },
   {
     name: 'Daniela Rojas',
     content: 'Queríamos agradecerles por el acompañamiento en este proceso tan importante para nuestra hija: ayudarla a perder sus miedos, a creer en que podía lograrlo y, sobre todo, sentirse segura en cada movimiento. El esfuerzo de esta licencia es de ella, pero sin ayuda no hubiese sido posible. La paciencia y técnicas son increíbles, y las palabras de aliento ya son de otro nivel. ¡Muchísimas gracias, Brian, por estas semanas acompañándola en el proceso de aprendizaje!',
     imgId: 'student-6',
-    headerImageId: 'testimonial-achievement'
+    headerImageId: 'achievement-daniela'
   },
   {
     name: 'Maura Rivero',
