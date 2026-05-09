@@ -69,24 +69,29 @@ export default function PlanesPage() {
                 <div className="w-full space-y-6 flex flex-col items-center text-center">
                   <h2 className="text-3xl md:text-5xl font-bold tracking-tight text-center">{plan.name}</h2>
                   
-                  <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 md:gap-6 w-full max-w-2xl bg-black/20 p-6 rounded-2xl border border-white/5">
-                    <div className="flex flex-col items-center justify-center gap-2 sm:border-r border-white/10 sm:pr-6">
-                      <div className="flex flex-col items-center gap-2 text-muted-foreground">
-                        <span className="text-xl">📲</span>
-                        <span className="text-sm font-medium text-slate-400">Transferencia</span>
+                  <div className="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-8 w-full max-w-3xl bg-black/40 p-8 md:p-10 rounded-3xl border border-white/10 shadow-inner">
+                    <div className="flex flex-col items-center justify-center gap-4 md:border-r border-white/10 md:pr-8">
+                      <div className="flex flex-col items-center gap-2">
+                        <span className="text-2xl">📲</span>
+                        <span className="text-sm font-bold text-slate-400 uppercase tracking-widest">Transferencia</span>
                       </div>
-                      <p className="text-3xl font-bold text-green-500 text-center">{plan.transferPrice}</p>
-                      <span className="text-xs font-bold bg-green-500/10 text-green-500 px-3 py-1 rounded-full text-center">
+                      <p className="text-4xl md:text-6xl font-black text-green-500 text-center tracking-tighter">
+                        {plan.transferPrice}
+                      </p>
+                      <span className="text-xs md:text-sm font-bold bg-green-500/20 text-green-500 px-4 py-1.5 rounded-full text-center border border-green-500/30">
                         Ahorro de $47.000
                       </span>
                     </div>
-                    <div className="flex flex-col items-center justify-center gap-2">
-                      <div className="flex flex-col items-center gap-2 text-muted-foreground">
-                        <span className="text-xl">💳</span>
-                        <span className="text-sm font-medium text-slate-400">Tarjetas de crédito</span>
+                    
+                    <div className="flex flex-col items-center justify-center gap-4">
+                      <div className="flex flex-col items-center gap-2">
+                        <span className="text-2xl">💳</span>
+                        <span className="text-sm font-bold text-slate-400 uppercase tracking-widest">Tarjetas de crédito</span>
                       </div>
-                      <p className="text-3xl font-bold text-primary text-center">{plan.cardPrice}</p>
-                      <span className="text-xs font-bold bg-primary/10 text-primary px-3 py-1 rounded-full text-center">
+                      <p className="text-4xl md:text-6xl font-black text-primary text-center tracking-tighter">
+                        {plan.cardPrice}
+                      </p>
+                      <span className="text-xs md:text-sm font-bold bg-primary/20 text-primary px-4 py-1.5 rounded-full text-center border border-primary/30">
                         6 cuotas sin interés
                       </span>
                     </div>
