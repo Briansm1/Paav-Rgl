@@ -33,7 +33,7 @@ const detailedPlans = [
       'Asesoría sobre los requisitos y trámites para gestionar la licencia de conducir'
     ],
     bonuses: [
-      'Como identificar los diferentes fluidos de un auto y como controlarlos',
+      'Como identificar los differentes fluidos de un auto y como controlarlos',
       'Como realizar un cambio de neumático',
       'Simulador de examen teórico con +85 preguntas',
       'Descuentos exclusivos en nuestros productos digitales'
@@ -182,7 +182,7 @@ export default function PlanExpertoPage() {
                 <div className="pt-4 flex justify-center">
                   <Link href="#precios" className="w-full max-w-xs">
                     <Button className="w-full bg-primary hover:bg-primary/90 rounded-xl h-12 font-bold transition-all">
-                      Elegir este plan
+                      Elegir
                     </Button>
                   </Link>
                 </div>

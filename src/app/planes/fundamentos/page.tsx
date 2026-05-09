@@ -182,7 +182,7 @@ export default function PlanFundamentosPage() {
                 <div className="pt-4 flex justify-center">
                   <Link href="#precios" className="w-full max-w-xs">
                     <Button className="w-full bg-primary hover:bg-primary/90 rounded-xl h-12 font-bold transition-all">
-                      Elegir este plan
+                      Elegir
                     </Button>
                   </Link>
                 </div>
