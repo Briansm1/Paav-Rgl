@@ -38,6 +38,39 @@ const detailedPlans = [
       'Simulador de examen teórico premium (+150 preguntas)',
       'Acceso vitalicio a actualizaciones de material digital'
     ]
+  },
+  {
+    name: 'Plan Maestría Plus',
+    transferPrice: '$165.999',
+    cardPrice: '$255.999',
+    savings: 'Ahorro de $90.000',
+    sessions: '4 sesiones de prácticas dinámicas',
+    fullDesc: 'Una versión extendida para quienes buscan consolidar su técnica con más horas al volante y mayor variedad de situaciones de tráfico real.',
+    targetAudience: [
+      'Para quienes buscan una transformación profunda en su confianza',
+      'Para quienes necesitan más tiempo de práctica asistida',
+      'Para quienes desean dominar circular en avenidas y zonas de alto tráfico'
+    ],
+    outcomes: [
+      'Dominio total en cualquier entorno urbano',
+      'Eliminación completa del miedo a conducir',
+      'Reflejos y anticipación mejorada',
+      'Habilidad experta en todo tipo de estacionamientos',
+      'Seguridad total para el examen y el día a día'
+    ],
+    features: [
+      'Auto para las prácticas',
+      'Acceso a la comunidad privada',
+      'Formación teórica intensiva sobre manejo preventivo',
+      'Descuento en el uso del auto para el examen práctico - 15% off',
+      'Asesoría completa sobre trámites de licencia'
+    ],
+    bonuses: [
+      'Mantenimiento preventivo: Fluidos y mecánica ligera',
+      'Kit de emergencia: Cambio de neumáticos y seguridad',
+      'Simulador de examen teórico premium (+150 preguntas)',
+      'Acceso vitalicio a actualizaciones de material digital'
+    ]
   }
 ];
 
@@ -60,11 +93,11 @@ export default function PlanSeguridadAvanzadaPage() {
 
       <section className="py-12 md:py-20 bg-background">
         <div className="container mx-auto px-4">
-          <div className="flex justify-center max-w-7xl mx-auto">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 max-w-7xl mx-auto">
             {detailedPlans.map((plan, index) => (
               <div 
                 key={index} 
-                className="flex flex-col gap-8 p-6 md:p-10 rounded-[2.5rem] border bg-secondary shadow-2xl border-white/5 h-full max-w-2xl w-full"
+                className="flex flex-col gap-8 p-6 md:p-10 rounded-[2.5rem] border bg-secondary shadow-2xl border-white/5 h-full w-full"
               >
                 <div className="w-full space-y-6 flex flex-col items-center text-center">
                   <h2 className="text-3xl md:text-4xl font-bold tracking-tight text-center">{plan.name}</h2>
