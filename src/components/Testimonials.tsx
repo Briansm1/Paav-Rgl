@@ -1,18 +1,20 @@
 
 "use client";
 
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import Image from 'next/image';
 import { 
   Carousel, 
   CarouselContent, 
   CarouselItem, 
   CarouselNext, 
-  CarouselPrevious 
+  CarouselPrevious,
+  type CarouselApi
 } from '@/components/ui/carousel';
 import { Card, CardContent } from '@/components/ui/card';
 import { PlaceHolderImages } from '@/app/lib/placeholder-images';
 import { Quote, Star } from 'lucide-react';
+import { cn } from '@/lib/utils';
 
 const testimonials = [
   {
@@ -66,6 +68,19 @@ const testimonials = [
 ];
 
 export const Testimonials = () => {
+  const [api, setApi] = useState<CarouselApi>();
+  const [current, setCurrent] = useState(0);
+
+  useEffect(() => {
+    if (!api) return;
+
+    setCurrent(api.selectedScrollSnap());
+
+    api.on("select", () => {
+      setCurrent(api.selectedScrollSnap());
+    });
+  }, [api]);
+
   return (
     <section id="testimonios" className="py-20 md:py-32 bg-secondary overflow-hidden">
       <div className="container mx-auto px-4">
@@ -80,60 +95,70 @@ export const Testimonials = () => {
 
         <div className="relative max-w-7xl mx-auto px-4 md:px-12">
           <Carousel 
+            setApi={setApi}
             opts={{ 
-              align: "start", 
+              align: "center", 
               loop: true,
-              dragFree: true
+              dragFree: false
             }} 
             className="w-full relative group"
           >
             <CarouselContent className="-ml-4 md:-ml-6">
               {testimonials.map((t, index) => {
                 const img = PlaceHolderImages.find(p => p.id === t.imgId);
+                const isActive = index === current;
+
                 return (
-                  <CarouselItem key={index} className="pl-4 md:pl-6 basis-full sm:basis-1/2 lg:basis-1/3 py-4">
-                    <Card className="h-full border-none shadow-xl rounded-[2.5rem] transition-all duration-500 hover:shadow-2xl hover:-translate-y-2 group bg-card border border-white/5">
-                      <CardContent className="p-8 md:p-10 flex flex-col h-full relative overflow-hidden">
-                        <div className="absolute top-0 right-0 p-8 opacity-10 group-hover:opacity-20 transition-opacity">
-                          <Quote className="w-16 h-16 text-primary rotate-180" />
-                        </div>
-                        
-                        <div className="flex gap-1 mb-6">
-                          {[...Array(5)].map((_, i) => (
-                            <Star key={i} className="w-4 h-4 text-yellow-500 fill-yellow-500" />
-                          ))}
-                        </div>
+                  <CarouselItem key={index} className="pl-4 md:pl-6 basis-full sm:basis-1/2 lg:basis-1/3 py-8">
+                    <div className={cn(
+                      "transition-all duration-700 ease-in-out",
+                      isActive 
+                        ? "opacity-100 blur-0 scale-105 z-10" 
+                        : "opacity-30 blur-[2px] scale-90 grayscale-[50%]"
+                    )}>
+                      <Card className="h-full border-none shadow-2xl rounded-[2.5rem] group bg-card border border-white/5">
+                        <CardContent className="p-8 md:p-10 flex flex-col h-full relative overflow-hidden">
+                          <div className="absolute top-0 right-0 p-8 opacity-10 group-hover:opacity-20 transition-opacity">
+                            <Quote className="w-16 h-16 text-primary rotate-180" />
+                          </div>
+                          
+                          <div className="flex gap-1 mb-6">
+                            {[...Array(5)].map((_, i) => (
+                              <Star key={i} className="w-4 h-4 text-yellow-500 fill-yellow-500" />
+                            ))}
+                          </div>
 
-                        <p className="text-base md:text-lg italic text-muted-foreground mb-10 flex-grow leading-relaxed relative z-10">
-                          "{t.content}"
-                        </p>
+                          <p className="text-base md:text-lg italic text-muted-foreground mb-10 flex-grow leading-relaxed relative z-10">
+                            "{t.content}"
+                          </p>
 
-                        <div className="flex items-center gap-5 mt-auto border-t border-white/5 pt-6">
-                          <div className="relative w-14 h-14 rounded-2xl overflow-hidden border-2 border-primary/20 p-0.5 group-hover:border-primary/50 transition-colors">
-                            <div className="relative w-full h-full rounded-[0.8rem] overflow-hidden">
-                              <Image 
-                                src={img?.imageUrl || ''} 
-                                alt={t.name} 
-                                fill 
-                                className="object-cover"
-                                data-ai-hint={img?.imageHint}
-                              />
+                          <div className="flex items-center gap-5 mt-auto border-t border-white/5 pt-6">
+                            <div className="relative w-14 h-14 rounded-2xl overflow-hidden border-2 border-primary/20 p-0.5 group-hover:border-primary/50 transition-colors">
+                              <div className="relative w-full h-full rounded-[0.8rem] overflow-hidden">
+                                <Image 
+                                  src={img?.imageUrl || ''} 
+                                  alt={t.name} 
+                                  fill 
+                                  className="object-cover"
+                                  data-ai-hint={img?.imageHint}
+                                />
+                              </div>
+                            </div>
+                            <div>
+                              <p className="font-bold text-foreground text-lg tracking-tight">{t.name}</p>
+                              <p className="text-sm text-primary font-bold uppercase tracking-wider">{t.role}</p>
                             </div>
                           </div>
-                          <div>
-                            <p className="font-bold text-foreground text-lg tracking-tight">{t.name}</p>
-                            <p className="text-sm text-primary font-bold uppercase tracking-wider">{t.role}</p>
-                          </div>
-                        </div>
-                      </CardContent>
-                    </Card>
+                        </CardContent>
+                      </Card>
+                    </div>
                   </CarouselItem>
                 );
               })}
             </CarouselContent>
             
-            <CarouselPrevious className="hidden md:flex -left-4 lg:-left-16 h-14 w-14 bg-card text-primary border-white/10 hover:bg-primary hover:text-white transition-all shadow-xl rounded-2xl" />
-            <CarouselNext className="hidden md:flex -right-4 lg:-right-16 h-14 w-14 bg-card text-primary border-white/10 hover:bg-primary hover:text-white transition-all shadow-xl rounded-2xl" />
+            <CarouselPrevious className="hidden md:flex -left-4 lg:-left-20 h-14 w-14 bg-card text-primary border-white/10 hover:bg-primary hover:text-white transition-all shadow-xl rounded-2xl" />
+            <CarouselNext className="hidden md:flex -right-4 lg:-right-20 h-14 w-14 bg-card text-primary border-white/10 hover:bg-primary hover:text-white transition-all shadow-xl rounded-2xl" />
           </Carousel>
         </div>
       </div>
