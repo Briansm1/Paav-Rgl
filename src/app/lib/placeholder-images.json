@@ -102,6 +102,12 @@
       "description": "Logotipo oficial de Pilotos - ases al volante",
       "imageUrl": "https://i.imgur.com/bLVVpLH.jpeg",
       "imageHint": "academy logo"
+    },
+    {
+      "id": "testimonial-achievement",
+      "description": "Logro de licencia de conducir",
+      "imageUrl": "https://i.imgur.com/IlzG3wN.png",
+      "imageHint": "driving achievement"
     }
   ]
 }

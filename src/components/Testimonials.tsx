@@ -39,13 +39,15 @@ const testimonials = [
   },
   {
     name: 'Alejandra Merlo',
-    content: 'Simplemente quería agradecer de corazón haberme cruzado con la academia. Era algo que me costaba un montón y que procrastiné un montón de tiempo, y gracias a la confianza, el apoyo, la educación y sobre todo la paciencia y empatía recibida pude lograrlo. ¡No se dan una idea de lo importante que esto es para mí y fue gracias a la ayuda de ustedes! ¡Gracias, gracias!',
-    imgId: 'student-5'
+    content: 'Simplemente quería agradecer de corazón haberme cruzado con la academia. Era algo que me costaba un montón y que procrastiné durante mucho tiempo; gracias a la confianza, el apoyo, la educación y, sobre todo, la paciencia y empatía recibida, pude lograrlo. ¡No se dan una idea de lo importante que esto es para mí, y fue gracias a la ayuda de ustedes! ¡Gracias, gracias!',
+    imgId: 'student-5',
+    headerImageId: 'testimonial-achievement'
   },
   {
     name: 'Daniela Rojas',
-    content: 'Queríamos agradecerles por el acompañamiento en este proceso tan importante para nuestra hija: ayudarla a perder sus miedos, a creer en que podía lograrlo y sobre todo sentirse segura en cada movimiento. El esfuerzo de esta licencia es de ella, pero sin ayuda no hubiese sido posible. La paciencia y técnicas son increíbles y las palabras de aliento ya son de otro nivel. Muchísimas gracias Brian, por estas semanas acompañándola en el proceso de aprendizaje.',
-    imgId: 'student-6'
+    content: 'Queríamos agradecerles por el acompañamiento en este proceso tan importante para nuestra hija: ayudarla a perder sus miedos, a creer en que podía lograrlo y, sobre todo, sentirse segura en cada movimiento. El esfuerzo de esta licencia es de ella, pero sin ayuda no hubiese sido posible. La paciencia y técnicas son increíbles, y las palabras de aliento ya son de otro nivel. ¡Muchísimas gracias, Brian, por estas semanas acompañándola en el proceso de aprendizaje!',
+    imgId: 'student-6',
+    headerImageId: 'testimonial-achievement'
   },
   {
     name: 'Maura Rivero',
@@ -98,6 +100,7 @@ export const Testimonials = () => {
             <CarouselContent className="-ml-4 md:-ml-6">
               {testimonials.map((t, index) => {
                 const img = PlaceHolderImages.find(p => p.id === t.imgId);
+                const headerImg = t.headerImageId ? PlaceHolderImages.find(p => p.id === t.headerImageId) : null;
                 const isActive = index === current;
 
                 return (
@@ -109,6 +112,17 @@ export const Testimonials = () => {
                         : "opacity-30 blur-[2px] scale-90 grayscale-[50%]"
                     )}>
                       <Card className="h-full border-none shadow-2xl rounded-[2.5rem] group bg-card border border-white/5 relative overflow-hidden">
+                        {headerImg && (
+                          <div className="relative aspect-[1080/680] w-full overflow-hidden border-b border-white/5">
+                            <Image 
+                              src={headerImg.imageUrl} 
+                              alt="Logro del estudiante" 
+                              fill 
+                              className="object-cover"
+                              data-ai-hint={headerImg.imageHint}
+                            />
+                          </div>
+                        )}
                         <CardContent className="p-8 md:p-10 flex flex-col h-full">
                           <div className="flex-grow relative z-10">
                             <p className="text-base md:text-lg italic text-muted-foreground leading-relaxed">
