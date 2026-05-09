@@ -34,7 +34,7 @@ const testimonials = [
   },
   {
     name: 'Javier Peña',
-    content: '¡Hola! Recomiendo, todo excelente y práctico, me sirvió un montón.',
+    content: 'Hola! Recomiendo, todo excelente y práctico, me sirvió un montón.',
     imgId: 'student-4'
   },
   {
@@ -78,7 +78,7 @@ export const Testimonials = () => {
   return (
     <section id="testimonios" className="py-16 md:py-24 bg-secondary overflow-hidden">
       <div className="container mx-auto px-4">
-        <div className="text-center mb-12 md:mb-16">
+        <div className="text-center mb-10 md:mb-12">
           <span className="inline-block px-4 py-1.5 mb-6 text-xs font-bold tracking-widest text-accent uppercase bg-accent/10 rounded-full border border-accent/20">
             Lo que dicen de nosotros
           </span>
@@ -103,16 +103,19 @@ export const Testimonials = () => {
                 const isActive = index === current;
 
                 return (
-                  <CarouselItem key={index} className="pl-4 md:pl-6 basis-full sm:basis-1/2 lg:basis-1/3 py-6">
+                  <CarouselItem key={index} className="pl-4 md:pl-6 basis-full sm:basis-1/2 lg:basis-1/3 py-4">
                     <div className={cn(
                       "transition-all duration-700 ease-in-out h-full",
                       isActive 
-                        ? "opacity-100 blur-0 scale-[1.02] z-10" 
-                        : "opacity-30 blur-[2px] scale-90 grayscale-[50%]"
+                        ? "opacity-100 blur-0 scale-[1.01] z-10" 
+                        : "opacity-30 blur-[2px] scale-95 grayscale-[50%]"
                     )}>
                       <Card className="h-full border-none shadow-xl rounded-[2rem] group bg-card border border-white/5 relative overflow-hidden flex flex-col">
                         {headerImg && (
-                          <div className="relative aspect-[16/9] w-full overflow-hidden border-b border-white/5">
+                          <div 
+                            className="relative w-full overflow-hidden border-b border-white/5"
+                            style={{ aspectRatio: '1080 / 680' }}
+                          >
                             <Image 
                               src={headerImg.imageUrl} 
                               alt="Logro del estudiante" 
@@ -123,13 +126,13 @@ export const Testimonials = () => {
                           </div>
                         )}
                         <CardContent className="p-6 md:p-8 flex flex-col flex-grow">
-                          <div className="flex-grow">
+                          <div className="flex-grow mb-6">
                             <p className="text-sm md:text-base italic text-muted-foreground leading-relaxed">
                               {t.content}
                             </p>
                           </div>
 
-                          <div className="flex flex-col mt-6 border-t border-white/5 pt-4">
+                          <div className="flex flex-col border-t border-white/5 pt-4">
                             <div>
                               <p className="font-bold text-foreground text-base tracking-tight">{t.name}</p>
                               <div className="flex gap-0.5 mt-1">
