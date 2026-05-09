@@ -74,10 +74,6 @@ export default function PlanSeguridadAvanzadaPage() {
             <div className="flex flex-col gap-10 p-6 md:p-12 rounded-[3rem] border bg-secondary shadow-2xl border-white/5 h-full w-full">
               
               <div className="text-center space-y-4">
-                <div className="inline-flex items-center gap-2 px-4 py-1 rounded-full bg-primary/10 border border-primary/20 text-primary text-xs font-bold uppercase tracking-widest">
-                  <ShieldCheck className="w-4 h-4" />
-                  Formación Integral
-                </div>
                 <p className="text-lg text-muted-foreground leading-relaxed max-w-2xl mx-auto">
                   {programDetails.description}
                 </p>
@@ -108,7 +104,7 @@ export default function PlanSeguridadAvanzadaPage() {
                         <span className="mt-1 text-[10px] font-bold text-slate-400">6 cuotas sin interés</span>
                       </div>
 
-                      {/* Sesiones - Movido aquí debajo de los precios */}
+                      {/* Sesiones debajo de los precios */}
                       <div className="pt-4 border-t border-white/10 flex items-center justify-center gap-2 text-primary font-bold">
                         <Clock className="w-4 h-4" />
                         <span className="text-sm">{option.sessions}</span>
