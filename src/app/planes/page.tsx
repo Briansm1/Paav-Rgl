@@ -38,39 +38,6 @@ const detailedPlans = [
       'Simulador de examen teórico con +85 preguntas',
       'Descuentos exclusivos en nuestros productos digitales'
     ]
-  },
-  {
-    name: 'Plan dominio plus',
-    transferPrice: '$129.999',
-    cardPrice: '$199.999',
-    savings: 'Ahorro de $70.000',
-    sessions: '4 sesiones de prácticas dinámicas',
-    fullDesc: 'Una versión extendida para quienes buscan consolidar su técnica con más horas al volante y mayor variedad de situaciones de tráfico real.',
-    targetAudience: [
-      'Para quienes buscan una transformación profunda en su confianza',
-      'Para quienes necesitan más tiempo de práctica asistida',
-      'Para quienes desean dominar circular en avenidas y zonas de alto tráfico'
-    ],
-    outcomes: [
-      'Dominio total en cualquier entorno urbano',
-      'Eliminación completa del miedo a conducir',
-      'Reflejos y anticipación mejorada',
-      'Habilidad experta en estacionamiento',
-      'Seguridad total para el examen y el día a día'
-    ],
-    features: [
-      'Auto para las prácticas',
-      'Acceso a la comunidad privada',
-      'Formación teórica aplicada a situaciones reales y sobre el marco legal',
-      'Descuento en el uso del auto para el examen práctico - 10% off',
-      'Asesoría sobre los requisitos y trámites para gestionar la licencia de conducir'
-    ],
-    bonuses: [
-      'Como identificar los diferentes fluidos de un auto y como controlarlos',
-      'Como realizar un cambio de neumático',
-      'Simulador de examen teórico con +85 preguntas',
-      'Descuentos exclusivos en nuestros productos digitales'
-    ]
   }
 ];
 
@@ -93,11 +60,11 @@ export default function PlanesPage() {
 
       <section className="py-12 md:py-20 bg-background">
         <div className="container mx-auto px-4">
-          <div className="grid grid-cols-1 xl:grid-cols-2 gap-10 max-w-7xl mx-auto items-start">
+          <div className="flex justify-center max-w-7xl mx-auto">
             {detailedPlans.map((plan, index) => (
               <div 
                 key={index} 
-                className="flex flex-col gap-8 p-6 md:p-10 rounded-[2.5rem] border bg-secondary shadow-2xl border-white/5 h-full"
+                className="flex flex-col gap-8 p-6 md:p-10 rounded-[2.5rem] border bg-secondary shadow-2xl border-white/5 h-full max-w-2xl w-full"
               >
                 <div className="w-full space-y-6 flex flex-col items-center text-center">
                   <h2 className="text-3xl md:text-4xl font-bold tracking-tight text-center">{plan.name}</h2>
