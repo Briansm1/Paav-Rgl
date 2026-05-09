@@ -108,17 +108,21 @@ export const Testimonials = () => {
                         ? "opacity-100 blur-0 scale-105 z-10" 
                         : "opacity-30 blur-[2px] scale-90 grayscale-[50%]"
                     )}>
-                      <Card className="h-full border-none shadow-2xl rounded-[2.5rem] group bg-card border border-white/5">
-                        <CardContent className="p-8 md:p-10 flex flex-col h-full relative overflow-hidden">
-                          <div className="absolute top-0 right-0 p-8 opacity-10 group-hover:opacity-20 transition-opacity">
-                            <Quote className="w-16 h-16 text-primary rotate-180" />
+                      <Card className="h-full border-none shadow-2xl rounded-[2.5rem] group bg-card border border-white/5 relative overflow-hidden">
+                        <CardContent className="p-8 md:p-10 flex flex-col h-full">
+                          {/* Comilla decorativa mejorada: más sutil y mejor posicionada */}
+                          <div className="absolute -top-4 -right-2 opacity-[0.03] group-hover:opacity-[0.07] transition-opacity pointer-events-none">
+                            <Quote className="w-32 h-32 text-primary rotate-12" />
                           </div>
                           
-                          <p className="text-base md:text-lg italic text-muted-foreground mb-10 flex-grow leading-relaxed relative z-10">
-                            "{t.content}"
-                          </p>
+                          <div className="flex-grow relative z-10">
+                            <Quote className="w-8 h-8 text-primary/20 mb-4" />
+                            <p className="text-base md:text-lg italic text-muted-foreground leading-relaxed">
+                              {t.content}
+                            </p>
+                          </div>
 
-                          <div className="flex items-center gap-5 mt-auto border-t border-white/5 pt-6">
+                          <div className="flex items-center gap-5 mt-10 border-t border-white/5 pt-6 relative z-10">
                             <div className="relative w-14 h-14 rounded-2xl overflow-hidden border-2 border-primary/20 p-0.5 group-hover:border-primary/50 transition-colors">
                               <div className="relative w-full h-full rounded-[0.8rem] overflow-hidden">
                                 <Image 
