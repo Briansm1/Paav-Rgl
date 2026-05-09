@@ -19,32 +19,32 @@ import { cn } from '@/lib/utils';
 const testimonials = [
   {
     name: 'Julia Geoia',
-    content: '¡Hola! La verdad es que la academia es súper recomendable, tanto por la calidad de la enseñanza como por la atención. Pude superar mis miedos y también los conos jajaja. El profesor es un genio: tiene muchísima paciencia, es muy respetuoso y explica de manera clara y práctica. La academia es muy completa; brindan material teórico y práctico. Fue una excelente experiencia. ¡Millones de gracias!',
+    content: '¡Hola! La verdad es que la academia es súper recomendable, tanto por la calidad de la enseñanza como por la atención. Pude superar mis miedos y también los conos jajaja. El profesor es un genio: tiene muchísima paciencia, es muy respetuoso y explica de manera clara y práctica. La academia es muy completa; brindan material teórico y práctico. Fue una excelente experiencia. ¡Millones de gracias! Y les deseo muchísimos éxitos.',
     imgId: 'student-1'
   },
   {
     name: 'Lautaro Ramirez',
-    content: 'Muy recomendable la escuela de manejo. La mejor atención que recibí y muy excelente todo, pude concretar mi meta de recibir mi licencia de conducir gracias a las clases intensivas que me brindaron. El instructor una persona muy paciente y profesional, dando indicaciones claras. Excelente academia brindándome material teórico y práctico para adquirir mucho más conocimiento.',
+    content: 'Buenas, Muy recomendable la escuela de manejo. La mejor atención que recibí y muy excelente todo, pude concretar mi meta de recibir mi licencia de conducir gracias a las clases intensivas que me brindaron. El instructor una persona muy paciente y profesional, dando indicaciones claras. Excelente academia brindandome material teorico y practico para adquirir mucho mas conocimiento, una experiencia excelente, muchas gracias a Pilotos Asesalvolante por la meta que logre conseguir.',
     imgId: 'student-2'
   },
   {
     name: 'Maria Silisque',
-    content: '¡EXCELENTE DIEZ! Recomiendo, súper responsable, respetuoso y con una paciencia de oro. ¡¡Gracias!!',
+    content: '¡EXCELENTE DIEZ! Recomiendo, super responsable, respetuoso y con una paciencia de oro. Gracias!!',
     imgId: 'student-3'
   },
   {
     name: 'Javier Peña',
-    content: 'Hola! Recomiendo, todo excelente y práctico, me sirvió un montón.',
+    content: 'hola! recomiendo, todo excelente y práctico, me sirvió un montón.',
     imgId: 'student-4'
   },
   {
     name: 'Alejandra Merlo',
-    content: 'Simplemente quería agradecer de corazón haberme cruzado con la academia. Era algo que me costaba un montón y que procrastiné mucho tiempo. Gracias a la confianza, el apoyo y educación y sobre todo la PACIENCIA y empatía recibida pude lograrlo. No se dan una idea lo importante que esto es para mí.',
+    content: 'Simplemente quería agradecer de corazón haberme cruzado con la academia. Era algo que me costaba un montón y que procrastine un montón de tiempo y gracias a la confianza, el apoyo y educación y sibre todo la PACIENCIA y empatía recibida pude lograrlo. No se dan una idea lo importante que esto es para mí y fue gracias a la ayuda de ustedes! gracias gracias!',
     imgId: 'student-5'
   },
   {
     name: 'Daniela Rojas',
-    content: 'Queríamos agradecerles por el acompañamiento en este proceso tan importante para nuestra hija, ayudarla a perder sus miedos, a creer en que podía lograrlo y sobre todo sentirse segura en cada movimiento. La paciencia y técnicas son increíbles y las palabras de aliento ya son de otro nivel. Muchísimas gracias Brian.',
+    content: 'Queríamos agradecerles por el acompañamiento en este proceso tan importante para nuestra hija, ayudarla a perder sus miedos, a creer en que podía lograrlo y sobre todo sentirse segura en cada movimiento. El esfuerzo de esta licencia es de ella, pero sin ayuda no hubiese sido posible, la paciencia y técnicas son increíbles y las palabras de aliento ya son de otro nivel. Muchísimas gracias Brian, por estas semanas acompañándola en el proceso de aprendizaje.',
     imgId: 'student-6'
   },
   {
