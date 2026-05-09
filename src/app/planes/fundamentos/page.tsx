@@ -180,8 +180,8 @@ export default function PlanFundamentosPage() {
                 </div>
 
                 <div className="pt-4 flex justify-center">
-                  <Link href="#precios" className="w-full">
-                    <Button size="lg" className="w-full h-16 rounded-2xl bg-primary hover:bg-primary/90 text-xl font-bold shadow-xl shadow-primary/20 transition-all active:scale-[0.98]">
+                  <Link href="#precios" className="w-full max-w-xs">
+                    <Button className="w-full bg-primary hover:bg-primary/90 rounded-xl h-12 font-bold transition-all">
                       Elegir este plan
                     </Button>
                   </Link>

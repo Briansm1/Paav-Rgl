@@ -26,7 +26,7 @@ const programDetails = {
   ],
   targetAudience: [
     'Para quienes quieren ganar seguridad total en avenidas y zonas de alto tráfico',
-    'Para personas que necesitan considerar su técnica de manejo defensivo',
+    'Para personas que necesitan consolidar su técnica de manejo defensivo',
     'Para quienes buscan una transformación profunda en su confianza al volante'
   ],
   outcomes: [
@@ -182,7 +182,7 @@ export default function PlanSeguridadAvanzadaPage() {
                   <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
                     {programDetails.bonuses.map((bono, i) => (
                       <div key={i} className="flex flex-col items-center text-center gap-2">
-                        <div className="w-7 h-7 rounded-full bg-primary text-white flex items-center justify-center font-bold text-xs shadow-lg shadow-primary/20">
+                        <div className="w-7 h-7 rounded-full bg-primary text-white flex items-center justify-center font-bold text-sm shadow-lg shadow-primary/20">
                           {i + 1}
                         </div>
                         <span className="text-xs text-foreground/90 font-bold leading-tight">
@@ -196,8 +196,8 @@ export default function PlanSeguridadAvanzadaPage() {
 
               {/* Botón final para volver a los precios */}
               <div className="pt-8 flex justify-center">
-                <Link href="#opciones-plan" className="w-full">
-                  <Button size="lg" className="w-full h-16 rounded-2xl bg-primary hover:bg-primary/90 text-xl font-bold shadow-xl shadow-primary/20 transition-all active:scale-[0.98]">
+                <Link href="#opciones-plan" className="w-full max-w-xs">
+                  <Button className="w-full bg-primary hover:bg-primary/90 rounded-xl h-12 font-bold transition-all">
                     Quiero elegir un plan
                   </Button>
                 </Link>
