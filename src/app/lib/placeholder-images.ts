@@ -118,7 +118,7 @@ export const PlaceHolderImages: ImagePlaceholder[] = [
   {
     "id": "achievement-daniela",
     "description": "Logro de Daniela Rojas",
-    "imageUrl": "https://i.imgur.com/IlzG3wN.png",
+    "imageUrl": "https://i.imgur.com/Des9Hf8.png",
     "imageHint": "driving achievement"
   },
   {
