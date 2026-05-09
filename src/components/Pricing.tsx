@@ -34,7 +34,7 @@ export const Pricing = () => {
             TU INVERSIÓN
           </span>
           <h2 className="text-4xl md:text-6xl font-bold font-headline mb-6 tracking-tight text-foreground text-center">
-            Programas pensados para conseguir tu <span className="text-primary italic">mejor versión al volante</span>
+            Planes pensados para alcanzar tu <span className="text-primary italic">mejor versión al volante</span>
           </h2>
           <p className="text-lg md:text-xl text-muted-foreground leading-relaxed">
             Transparencia total y calidad garantizada en todos nuestros programas.
