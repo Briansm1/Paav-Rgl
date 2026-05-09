@@ -7,7 +7,7 @@ import { Check, ArrowLeft, UserCheck, Target, Clock, Gift } from 'lucide-react';
 
 const detailedPlans = [
   {
-    name: 'Plan Maestría',
+    name: 'Plan as',
     transferPrice: '$165.999',
     cardPrice: '$255.999',
     savings: 'Ahorro de $90.000',
