@@ -26,7 +26,7 @@ const programDetails = {
   ],
   targetAudience: [
     'Para quienes quieren ganar seguridad total en avenidas y zonas de alto tráfico',
-    'Para personas que necesitan consolidar su técnica de manejo defensivo',
+    'Para personas que necesitan considerar su técnica de manejo defensivo',
     'Para quienes buscan una transformación profunda en su confianza al volante'
   ],
   outcomes: [
@@ -198,7 +198,7 @@ export default function PlanSeguridadAvanzadaPage() {
               <div className="pt-8 flex justify-center">
                 <Link href="#opciones-plan" className="w-full">
                   <Button size="lg" className="w-full h-16 rounded-2xl bg-primary hover:bg-primary/90 text-xl font-bold shadow-xl shadow-primary/20 transition-all active:scale-[0.98]">
-                    Elegir un plan
+                    Quiero elegir un plan
                   </Button>
                 </Link>
               </div>
