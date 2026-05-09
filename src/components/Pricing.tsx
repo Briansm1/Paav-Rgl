@@ -37,7 +37,7 @@ export const Pricing = () => {
             Planes pensados para alcanzar tu <span className="text-primary italic">mejor versión al volante</span>
           </h2>
           <p className="text-lg md:text-xl text-muted-foreground leading-relaxed">
-            Transparencia total y calidad garantizada en todos nuestros programas.
+            Al elegirnos tenés transparencia al 100% y calidad garantizada
           </p>
         </div>
 
