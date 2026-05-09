@@ -73,12 +73,6 @@ export default function PlanSeguridadAvanzadaPage() {
           <div className="max-w-4xl mx-auto">
             <div className="flex flex-col gap-10 p-6 md:p-12 rounded-[3rem] border bg-secondary shadow-2xl border-white/5 h-full w-full">
               
-              <div className="text-center space-y-4">
-                <p className="text-lg text-muted-foreground leading-relaxed max-w-2xl mx-auto">
-                  {programDetails.description}
-                </p>
-              </div>
-
               {/* Opciones de Plan */}
               <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                 {programDetails.options.map((option, idx) => (
@@ -118,8 +112,15 @@ export default function PlanSeguridadAvanzadaPage() {
                 ))}
               </div>
 
+              {/* Descripción movida debajo de los botones de elegir */}
+              <div className="text-center py-4">
+                <p className="text-lg text-muted-foreground leading-relaxed max-w-2xl mx-auto">
+                  {programDetails.description}
+                </p>
+              </div>
+
               {/* Contenido Unificado Stacking Vertically */}
-              <div className="flex flex-col gap-8 pt-6">
+              <div className="flex flex-col gap-8">
                 <div className="bg-black/20 p-6 rounded-[2rem] border border-white/5">
                   <h3 className="text-lg font-bold mb-4 flex items-center justify-center gap-2 text-foreground">
                     <UserCheck className="w-5 h-5 text-primary" />
