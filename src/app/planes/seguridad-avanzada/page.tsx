@@ -85,7 +85,7 @@ export default function PlanSeguridadAvanzadaPage() {
                       {/* Precio Transferencia */}
                       <div className="flex flex-col items-center">
                         <span className="text-[10px] font-bold text-slate-400 uppercase tracking-widest mb-1">Transferencia</span>
-                        <p className="text-3xl md:text-4xl font-black text-green-500 tracking-tighter">{option.transferPrice}</p>
+                        <p className="text-4xl md:text-5xl font-black text-green-500 tracking-tighter">{option.transferPrice}</p>
                         <span className="mt-2 text-[10px] font-bold bg-green-500/20 text-green-500 px-3 py-1 rounded-full border border-green-500/30">
                           {option.savings}
                         </span>
@@ -94,7 +94,7 @@ export default function PlanSeguridadAvanzadaPage() {
                       {/* Precio Tarjeta */}
                       <div className="pt-4 border-t border-white/5 flex flex-col items-center">
                         <span className="text-[10px] font-bold text-slate-400 uppercase tracking-widest mb-1">Tarjeta de crédito</span>
-                        <p className="text-2xl md:text-3xl font-black text-primary tracking-tighter">{option.cardPrice}</p>
+                        <p className="text-4xl md:text-5xl font-black text-primary tracking-tighter">{option.cardPrice}</p>
                         <span className="mt-1 text-[10px] font-bold text-slate-400">6 cuotas sin interés</span>
                       </div>
 
