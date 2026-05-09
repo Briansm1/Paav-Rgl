@@ -53,7 +53,7 @@ export default function PlanSeguridadAvanzadaPage() {
             Volver al inicio
           </Link>
           <h1 className="text-4xl md:text-6xl font-bold font-headline mb-6 text-foreground text-center">
-            Detalles del <span className="text-primary">Programa Seguridad Avanzada</span>
+            Los detalles para el programa <span className="text-primary">seguridad avanzada</span>
           </h1>
         </div>
       </section>
