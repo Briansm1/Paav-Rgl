@@ -44,7 +44,7 @@ const detailedPlans = [
     transferPrice: '$165.999',
     cardPrice: '$255.999',
     savings: 'Ahorro de $90.000',
-    sessions: '4 sesiones de prácticas dinámicas',
+    sessions: '5 sesiones de prácticas dinámicas',
     fullDesc: 'Una versión extendida para quienes buscan consolidar su técnica con más horas al volante y mayor variedad de situaciones de tráfico real.',
     targetAudience: [
       'Para quienes buscan una transformación profunda en su confianza',
