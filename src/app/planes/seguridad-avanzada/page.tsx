@@ -95,7 +95,9 @@ export default function PlanSeguridadAvanzadaPage() {
                       <div className="pt-4 border-t border-white/5 flex flex-col items-center">
                         <span className="text-[10px] font-bold text-slate-400 uppercase tracking-widest mb-1">Tarjeta de crédito</span>
                         <p className="text-4xl md:text-5xl font-black text-primary tracking-tighter">{option.cardPrice}</p>
-                        <span className="mt-1 text-[10px] font-bold text-slate-400">6 cuotas sin interés</span>
+                        <span className="mt-2 text-[10px] font-bold bg-primary/20 text-primary px-3 py-1 rounded-full border border-primary/30">
+                          6 cuotas sin interés
+                        </span>
                       </div>
 
                       {/* Sesiones debajo de los precios */}
@@ -122,7 +124,7 @@ export default function PlanSeguridadAvanzadaPage() {
               {/* Contenido Unificado Stacking Vertically */}
               <div className="flex flex-col gap-8">
                 <div className="bg-black/20 p-6 rounded-[2rem] border border-white/5">
-                  <h3 className="text-lg font-bold mb-4 flex items-center justify-center gap-2 text-foreground">
+                  <h3 className="text-lg font-bold mb-4 flex items-center justify-center gap-2 text-foreground text-center">
                     <UserCheck className="w-5 h-5 text-primary" />
                     ¿Para quién es?
                   </h3>
@@ -139,7 +141,7 @@ export default function PlanSeguridadAvanzadaPage() {
                 </div>
 
                 <div className="bg-black/20 p-6 rounded-[2rem] border border-white/5">
-                  <h3 className="text-lg font-bold mb-4 flex items-center justify-center gap-2 text-foreground">
+                  <h3 className="text-lg font-bold mb-4 flex items-center justify-center gap-2 text-foreground text-center">
                     <Target className="w-5 h-5 text-accent" />
                     ¿Qué vas a lograr?
                   </h3>
@@ -156,7 +158,7 @@ export default function PlanSeguridadAvanzadaPage() {
                 </div>
 
                 <div className="bg-black/20 p-6 rounded-[2rem] border border-white/5">
-                  <h3 className="text-lg font-bold mb-4 flex items-center justify-center gap-2 text-foreground">
+                  <h3 className="text-lg font-bold mb-4 flex items-center justify-center gap-2 text-foreground text-center">
                     <ShieldCheck className="w-5 h-5 text-green-500" />
                     ¿Qué incluye el programa?
                   </h3>
@@ -173,7 +175,7 @@ export default function PlanSeguridadAvanzadaPage() {
                 </div>
 
                 <div className="bg-primary/5 p-6 rounded-[2rem] border-2 border-primary/20">
-                  <h3 className="text-lg font-bold mb-6 flex items-center justify-center gap-2 text-primary">
+                  <h3 className="text-lg font-bold mb-6 flex items-center justify-center gap-2 text-primary text-center">
                     <Gift className="w-5 h-5" />
                     Bonos de regalo
                   </h3>
