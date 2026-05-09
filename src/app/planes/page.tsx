@@ -3,7 +3,7 @@ import Link from 'next/link';
 import { Header } from '@/components/Header';
 import { Footer } from '@/components/Footer';
 import { Button } from '@/components/ui/button';
-import { Check, ArrowLeft, UserCheck, Target } from 'lucide-react';
+import { Check, ArrowLeft, UserCheck, Target, Clock } from 'lucide-react';
 
 const detailedPlans = [
   {
@@ -92,6 +92,13 @@ export default function PlanesPage() {
                       <span className="text-xs md:text-sm font-bold bg-primary/20 text-primary px-4 py-1.5 rounded-full text-center border border-primary/30">
                         6 cuotas sin interés
                       </span>
+                    </div>
+
+                    <div className="col-span-full pt-6 border-t border-white/10 mt-2">
+                      <p className="text-center font-bold text-slate-300 flex items-center justify-center gap-2 text-lg">
+                        <Clock className="w-5 h-5 text-primary" />
+                        2 sesiones de prácticas dinámicas
+                      </p>
                     </div>
                   </div>
 
