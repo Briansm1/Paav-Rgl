@@ -40,7 +40,7 @@ const detailedPlans = [
     ]
   },
   {
-    name: 'Plan Maestría Plus',
+    name: 'Plan diamante',
     transferPrice: '$165.999',
     cardPrice: '$255.999',
     savings: 'Ahorro de $90.000',
