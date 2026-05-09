@@ -1,3 +1,4 @@
+
 "use client";
 
 import React from 'react';
@@ -15,58 +16,101 @@ import { Quote, Star } from 'lucide-react';
 
 const testimonials = [
   {
-    name: 'Carlos Mendoza',
-    role: 'Alumno Graduado',
-    content: 'Increíble experiencia. Los instructores tienen mucha paciencia y las clases teóricas son muy dinámicas. Aprobé mi examen a la primera.',
+    name: 'Julia Geoia',
+    role: 'Alumna Graduada',
+    content: '¡Hola! La verdad es que la academia es súper recomendable, tanto por la calidad de la enseñanza como por la atención. Pude superar mis miedos y también los conos jajaja. El profesor es un genio: tiene muchísima paciencia, es muy respetuoso y explica de manera clara y práctica. La academia es muy completa; brindan material teórico y práctico. Fue una excelente experiencia. ¡Millones de gracias!',
     imgId: 'student-1'
   },
   {
-    name: 'Sofía Rodríguez',
-    role: 'Alumna Graduada',
-    content: 'Tenía mucho miedo al tráfico, pero gracias a Ruta Segura ahora manejo con total confianza por toda la ciudad. ¡Altamente recomendados!',
+    name: 'Lautaro Ramirez',
+    role: 'Licencia Obtenida',
+    content: 'Muy recomendable la escuela de manejo. La mejor atención que recibí y muy excelente todo, pude concretar mi meta de recibir mi licencia de conducir gracias a las clases intensivas que me brindaron. El instructor una persona muy paciente y profesional, dando indicaciones claras. Excelente academia brindándome material teórico y práctico para adquirir mucho más conocimiento.',
     imgId: 'student-2'
   },
   {
-    name: 'Juan Pablo Duarte',
-    role: 'Curso Intensivo',
-    content: 'El servicio es de primera. Los vehículos están impecables y te dan todas las herramientas para ser un conductor responsable.',
+    name: 'Maria Silisque',
+    role: 'Alumna Graduada',
+    content: '¡EXCELENTE DIEZ! Recomiendo, súper responsable, respetuoso y con una paciencia de oro. ¡¡Gracias!!',
     imgId: 'student-3'
+  },
+  {
+    name: 'Javier Peña',
+    role: 'Alumno Graduado',
+    content: 'Hola! Recomiendo, todo excelente y práctico, me sirvió un montón.',
+    imgId: 'student-4'
+  },
+  {
+    name: 'Alejandra Merlo',
+    role: 'Alumna Graduada',
+    content: 'Simplemente quería agradecer de corazón haberme cruzado con la academia. Era algo que me costaba un montón y que procrastiné mucho tiempo. Gracias a la confianza, el apoyo y educación y sobre todo la PACIENCIA y empatía recibida pude lograrlo. No se dan una idea lo importante que esto es para mí.',
+    imgId: 'student-5'
+  },
+  {
+    name: 'Daniela Rojas',
+    role: 'Familia Pilotos',
+    content: 'Queríamos agradecerles por el acompañamiento en este proceso tan importante para nuestra hija, ayudarla a perder sus miedos, a creer en que podía lograrlo y sobre todo sentirse segura en cada movimiento. La paciencia y técnicas son increíbles y las palabras de aliento ya son de otro nivel. Muchísimas gracias Brian.',
+    imgId: 'student-6'
+  },
+  {
+    name: 'Maura Rivero',
+    role: 'Alumna Graduada',
+    content: 'Brian, excelente profe, gracias por la paciencia y dedicación.',
+    imgId: 'student-7'
+  },
+  {
+    name: 'Oscar Benítez',
+    role: 'Familia Pilotos',
+    content: 'Excelente, quiero agradecer al instructor de manejo por su profesionalismo, paciencia y compromiso en la formación de mi hija para obtener su licencia profesional. No solo enseña a conducir, enseña responsabilidad y seguridad. ¡Gracias por acompañarla en este paso tan importante!',
+    imgId: 'student-8'
   }
 ];
 
 export const Testimonials = () => {
   return (
-    <section id="testimonios" className="py-16 md:py-24 bg-secondary overflow-hidden">
+    <section id="testimonios" className="py-20 md:py-32 bg-secondary overflow-hidden">
       <div className="container mx-auto px-4">
-        <div className="text-center mb-12 md:mb-16">
-          <h2 className="text-accent font-bold tracking-widest uppercase text-xs md:text-sm mb-4">Lo que dicen de nosotros</h2>
-          <h3 className="text-3xl md:text-5xl font-bold font-headline text-foreground">
-            Algunos casos de <span className="text-primary">éxito</span>
+        <div className="text-center mb-16 md:mb-20">
+          <span className="inline-block px-4 py-1.5 mb-6 text-xs font-bold tracking-widest text-accent uppercase bg-accent/10 rounded-full border border-accent/20">
+            Lo que dicen de nosotros
+          </span>
+          <h3 className="text-4xl md:text-6xl font-bold font-headline text-foreground tracking-tight">
+            Algunos casos de <span className="text-primary italic">éxito</span>
           </h3>
         </div>
 
-        <div className="relative max-w-6xl mx-auto px-4 sm:px-12">
+        <div className="relative max-w-7xl mx-auto">
           <Carousel 
             opts={{ 
               align: "start", 
-              loop: true 
+              loop: true,
+              dragFree: true
             }} 
             className="w-full"
           >
-            <CarouselContent className="-ml-2 md:-ml-4">
+            <CarouselContent className="-ml-4 md:-ml-6">
               {testimonials.map((t, index) => {
                 const img = PlaceHolderImages.find(p => p.id === t.imgId);
                 return (
-                  <CarouselItem key={index} className="pl-2 md:pl-4 basis-full sm:basis-1/2 lg:basis-1/3">
-                    <Card className="h-full border-none shadow-xl rounded-3xl m-1 hover:shadow-2xl transition-shadow duration-300 bg-card">
-                      <CardContent className="p-8 flex flex-col h-full">
-                        <Quote className="w-10 h-10 text-primary/15 mb-6 shrink-0" />
-                        <p className="text-base md:text-lg italic text-muted-foreground mb-8 flex-grow leading-relaxed">
+                  <CarouselItem key={index} className="pl-4 md:pl-6 basis-full sm:basis-1/2 lg:basis-1/3 py-4">
+                    <Card className="h-full border-none shadow-xl rounded-[2.5rem] transition-all duration-500 hover:shadow-2xl hover:-translate-y-2 group bg-card border border-white/5">
+                      <CardContent className="p-8 md:p-10 flex flex-col h-full relative overflow-hidden">
+                        <div className="absolute top-0 right-0 p-8 opacity-10 group-hover:opacity-20 transition-opacity">
+                          <Quote className="w-16 h-16 text-primary rotate-180" />
+                        </div>
+                        
+                        <div className="flex gap-1 mb-6">
+                          {[...Array(5)].map((_, i) => (
+                            <Star key={i} className="w-4 h-4 text-yellow-500 fill-yellow-500" />
+                          ))}
+                        </div>
+
+                        <p className="text-base md:text-lg italic text-muted-foreground mb-10 flex-grow leading-relaxed relative z-10">
                           "{t.content}"
                         </p>
-                        <div className="flex items-center gap-4 mt-auto">
-                          <div className="relative w-14 h-14 rounded-full overflow-hidden border-2 border-primary/30 p-0.5">
-                            <div className="relative w-full h-full rounded-full overflow-hidden">
+
+                        <div className="flex items-center gap-5 mt-auto border-t border-white/5 pt-6">
+                          <div className="relative w-14 h-14 rounded-2xl overflow-hidden border-2 border-primary/20 p-0.5 group-hover:border-primary/50 transition-colors">
+                            <div className="relative w-full h-full rounded-[0.8rem] overflow-hidden">
                               <Image 
                                 src={img?.imageUrl || ''} 
                                 alt={t.name} 
@@ -77,13 +121,8 @@ export const Testimonials = () => {
                             </div>
                           </div>
                           <div>
-                            <p className="font-bold text-foreground text-lg">{t.name}</p>
-                            <p className="text-sm text-primary font-semibold">{t.role}</p>
-                            <div className="flex gap-0.5 mt-1.5">
-                              {[...Array(5)].map((_, i) => (
-                                <Star key={i} className="w-3.5 h-3.5 text-yellow-500 fill-yellow-500" />
-                              ))}
-                            </div>
+                            <p className="font-bold text-foreground text-lg tracking-tight">{t.name}</p>
+                            <p className="text-sm text-primary font-bold uppercase tracking-wider">{t.role}</p>
                           </div>
                         </div>
                       </CardContent>
@@ -93,9 +132,9 @@ export const Testimonials = () => {
               })}
             </CarouselContent>
             
-            <div className="hidden sm:block">
-              <CarouselPrevious className="-left-12 h-12 w-12 bg-card text-primary border-white/10 hover:bg-primary hover:text-white transition-all shadow-md" />
-              <CarouselNext className="-right-12 h-12 w-12 bg-card text-primary border-white/10 hover:bg-primary hover:text-white transition-all shadow-md" />
+            <div className="flex justify-center gap-4 mt-12 sm:mt-16">
+              <CarouselPrevious className="static translate-y-0 h-14 w-14 bg-card text-primary border-white/10 hover:bg-primary hover:text-white transition-all shadow-xl rounded-2xl" />
+              <CarouselNext className="static translate-y-0 h-14 w-14 bg-card text-primary border-white/10 hover:bg-primary hover:text-white transition-all shadow-xl rounded-2xl" />
             </div>
           </Carousel>
         </div>
