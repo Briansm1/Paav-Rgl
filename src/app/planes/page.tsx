@@ -3,7 +3,7 @@ import Link from 'next/link';
 import { Header } from '@/components/Header';
 import { Footer } from '@/components/Footer';
 import { Button } from '@/components/ui/button';
-import { Check, ArrowLeft, UserCheck, Target, Gift } from 'lucide-react';
+import { Check, ArrowLeft, UserCheck, Target } from 'lucide-react';
 
 const detailedPlans = [
   {
@@ -147,7 +147,13 @@ export default function PlanesPage() {
 
                 <div className="w-full bg-primary/5 p-8 md:p-10 rounded-[2.5rem] border-2 border-primary/20">
                   <h3 className="text-2xl font-bold mb-10 flex items-center justify-center gap-3 text-primary text-center">
-                    <Gift className="w-7 h-7" />
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="w-7 h-7">
+                      <path d="M20 12v10H4V12" />
+                      <rect x="2" y="7" width="20" height="5" />
+                      <path d="M12 22V7" />
+                      <path d="M12 7H7.5a2.5 2.5 0 0 1 0-5C11 2 12 7 12 7z" />
+                      <path d="M12 7h4.5a2.5 2.5 0 0 0 0-5C13 2 12 7 12 7z" />
+                    </svg>
                     Bonos de regalo
                   </h3>
                   <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
