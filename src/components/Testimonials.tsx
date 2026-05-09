@@ -13,7 +13,7 @@ import {
 } from '@/components/ui/carousel';
 import { Card, CardContent } from '@/components/ui/card';
 import { PlaceHolderImages } from '@/app/lib/placeholder-images';
-import { Quote, Star } from 'lucide-react';
+import { Star } from 'lucide-react';
 import { cn } from '@/lib/utils';
 
 const testimonials = [
@@ -110,13 +110,7 @@ export const Testimonials = () => {
                     )}>
                       <Card className="h-full border-none shadow-2xl rounded-[2.5rem] group bg-card border border-white/5 relative overflow-hidden">
                         <CardContent className="p-8 md:p-10 flex flex-col h-full">
-                          {/* Comilla decorativa mejorada: más sutil y mejor posicionada */}
-                          <div className="absolute -top-4 -right-2 opacity-[0.03] group-hover:opacity-[0.07] transition-opacity pointer-events-none">
-                            <Quote className="w-32 h-32 text-primary rotate-12" />
-                          </div>
-                          
                           <div className="flex-grow relative z-10">
-                            <Quote className="w-8 h-8 text-primary/20 mb-4" />
                             <p className="text-base md:text-lg italic text-muted-foreground leading-relaxed">
                               {t.content}
                             </p>
