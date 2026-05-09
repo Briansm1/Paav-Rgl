@@ -19,7 +19,7 @@ const programDetails = {
     {
       name: 'Plan diamante',
       transferPrice: '$198.999',
-      cardPrice: '$306.999',
+      cardPrice: '$305.999',
       savings: 'Ahorro de $108.000',
       sessions: '5 sesiones de prácticas dinámicas',
     }
@@ -112,7 +112,7 @@ export default function PlanSeguridadAvanzadaPage() {
                     </div>
 
                     <Button className="w-full mt-4 bg-primary hover:bg-primary/90 rounded-xl h-12 font-bold transition-all group-hover:scale-[1.02]">
-                      Elegir {option.name}
+                      Elegir
                     </Button>
                   </div>
                 ))}
