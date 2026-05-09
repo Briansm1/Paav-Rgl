@@ -87,15 +87,12 @@ export default function PlanSeguridadAvanzadaPage() {
               <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                 {programDetails.options.map((option, idx) => (
                   <div key={idx} className="flex flex-col gap-6 p-6 md:p-8 rounded-[2rem] bg-black/40 border border-white/10 shadow-inner relative overflow-hidden group">
-                    <div className="text-center space-y-2">
+                    <div className="text-center">
                       <h3 className="text-2xl font-bold tracking-tight text-white uppercase">{option.name}</h3>
-                      <div className="flex items-center justify-center gap-2 text-primary font-bold">
-                        <Clock className="w-4 h-4" />
-                        <span className="text-sm">{option.sessions}</span>
-                      </div>
                     </div>
 
                     <div className="space-y-4">
+                      {/* Precio Transferencia */}
                       <div className="flex flex-col items-center">
                         <span className="text-[10px] font-bold text-slate-400 uppercase tracking-widest mb-1">Transferencia</span>
                         <p className="text-3xl md:text-4xl font-black text-green-500 tracking-tighter">{option.transferPrice}</p>
@@ -104,10 +101,17 @@ export default function PlanSeguridadAvanzadaPage() {
                         </span>
                       </div>
 
+                      {/* Precio Tarjeta */}
                       <div className="pt-4 border-t border-white/5 flex flex-col items-center">
                         <span className="text-[10px] font-bold text-slate-400 uppercase tracking-widest mb-1">Tarjeta de crédito</span>
                         <p className="text-2xl md:text-3xl font-black text-primary tracking-tighter">{option.cardPrice}</p>
                         <span className="mt-1 text-[10px] font-bold text-slate-400">6 cuotas sin interés</span>
+                      </div>
+
+                      {/* Sesiones - Movido aquí debajo de los precios */}
+                      <div className="pt-4 border-t border-white/10 flex items-center justify-center gap-2 text-primary font-bold">
+                        <Clock className="w-4 h-4" />
+                        <span className="text-sm">{option.sessions}</span>
                       </div>
                     </div>
 
