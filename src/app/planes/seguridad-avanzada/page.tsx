@@ -74,7 +74,7 @@ export default function PlanSeguridadAvanzadaPage() {
             <div className="flex flex-col gap-10 p-6 md:p-12 rounded-[3rem] border bg-secondary shadow-2xl border-white/5 h-full w-full">
               
               {/* Opciones de Plan */}
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+              <div id="opciones-plan" className="grid grid-cols-1 md:grid-cols-2 gap-6">
                 {programDetails.options.map((option, idx) => (
                   <div key={idx} className="flex flex-col gap-6 p-6 md:p-8 rounded-[2rem] bg-black/40 border border-white/10 shadow-inner relative overflow-hidden group">
                     <div className="text-center">
@@ -192,6 +192,15 @@ export default function PlanSeguridadAvanzadaPage() {
                     ))}
                   </div>
                 </div>
+              </div>
+
+              {/* Botón final para volver a los precios */}
+              <div className="pt-8 flex justify-center">
+                <Link href="#opciones-plan" className="w-full">
+                  <Button size="lg" className="w-full h-16 rounded-2xl bg-primary hover:bg-primary/90 text-xl font-bold shadow-xl shadow-primary/20 transition-all active:scale-[0.98]">
+                    Elegir un plan
+                  </Button>
+                </Link>
               </div>
 
             </div>
