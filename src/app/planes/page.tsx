@@ -66,7 +66,7 @@ export default function PlanesPage() {
                 key={index} 
                 className="flex flex-col gap-8 p-6 md:p-10 rounded-[2.5rem] border bg-secondary shadow-2xl border-white/5 h-full max-w-2xl w-full"
               >
-                <div className="w-full space-y-6 flex flex-col items-center text-center">
+                <div id="precios" className="w-full space-y-6 flex flex-col items-center text-center">
                   <h2 className="text-3xl md:text-4xl font-bold tracking-tight text-center">{plan.name}</h2>
                   
                   <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 w-full bg-black/40 p-6 md:p-8 rounded-3xl border border-white/10 shadow-inner">
@@ -99,9 +99,11 @@ export default function PlanesPage() {
                         <Clock className="w-5 h-5 text-primary" />
                         {plan.sessions}
                       </p>
-                      <Button className="w-full max-w-xs bg-primary hover:bg-primary/90 rounded-xl h-12 font-bold transition-all">
-                        Elegir
-                      </Button>
+                      <Link href="#precios" className="w-full max-w-xs">
+                        <Button className="w-full bg-primary hover:bg-primary/90 rounded-xl h-12 font-bold transition-all">
+                          Elegir
+                        </Button>
+                      </Link>
                     </div>
                   </div>
 
@@ -175,6 +177,14 @@ export default function PlanesPage() {
                       </div>
                     ))}
                   </div>
+                </div>
+
+                <div className="pt-4 flex justify-center">
+                  <Link href="#precios" className="w-full">
+                    <Button size="lg" className="w-full h-16 rounded-2xl bg-primary hover:bg-primary/90 text-xl font-bold shadow-xl shadow-primary/20 transition-all active:scale-[0.98]">
+                      Elegir este plan
+                    </Button>
+                  </Link>
                 </div>
               </div>
             ))}
