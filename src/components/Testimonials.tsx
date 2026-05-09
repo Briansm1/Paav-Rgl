@@ -19,49 +19,41 @@ import { cn } from '@/lib/utils';
 const testimonials = [
   {
     name: 'Julia Geoia',
-    role: 'Alumna Graduada',
     content: '¡Hola! La verdad es que la academia es súper recomendable, tanto por la calidad de la enseñanza como por la atención. Pude superar mis miedos y también los conos jajaja. El profesor es un genio: tiene muchísima paciencia, es muy respetuoso y explica de manera clara y práctica. La academia es muy completa; brindan material teórico y práctico. Fue una excelente experiencia. ¡Millones de gracias!',
     imgId: 'student-1'
   },
   {
     name: 'Lautaro Ramirez',
-    role: 'Licencia Obtenida',
     content: 'Muy recomendable la escuela de manejo. La mejor atención que recibí y muy excelente todo, pude concretar mi meta de recibir mi licencia de conducir gracias a las clases intensivas que me brindaron. El instructor una persona muy paciente y profesional, dando indicaciones claras. Excelente academia brindándome material teórico y práctico para adquirir mucho más conocimiento.',
     imgId: 'student-2'
   },
   {
     name: 'Maria Silisque',
-    role: 'Alumna Graduada',
     content: '¡EXCELENTE DIEZ! Recomiendo, súper responsable, respetuoso y con una paciencia de oro. ¡¡Gracias!!',
     imgId: 'student-3'
   },
   {
     name: 'Javier Peña',
-    role: 'Alumno Graduado',
     content: 'Hola! Recomiendo, todo excelente y práctico, me sirvió un montón.',
     imgId: 'student-4'
   },
   {
     name: 'Alejandra Merlo',
-    role: 'Alumna Graduada',
     content: 'Simplemente quería agradecer de corazón haberme cruzado con la academia. Era algo que me costaba un montón y que procrastiné mucho tiempo. Gracias a la confianza, el apoyo y educación y sobre todo la PACIENCIA y empatía recibida pude lograrlo. No se dan una idea lo importante que esto es para mí.',
     imgId: 'student-5'
   },
   {
     name: 'Daniela Rojas',
-    role: 'Familia Pilotos',
     content: 'Queríamos agradecerles por el acompañamiento en este proceso tan importante para nuestra hija, ayudarla a perder sus miedos, a creer en que podía lograrlo y sobre todo sentirse segura en cada movimiento. La paciencia y técnicas son increíbles y las palabras de aliento ya son de otro nivel. Muchísimas gracias Brian.',
     imgId: 'student-6'
   },
   {
     name: 'Maura Rivero',
-    role: 'Alumna Graduada',
     content: 'Brian, excelente profe, gracias por la paciencia y dedicación.',
     imgId: 'student-7'
   },
   {
     name: 'Oscar Benítez',
-    role: 'Familia Pilotos',
     content: 'Excelente, quiero agradecer al instructor de manejo por su profesionalismo, paciencia y compromiso en la formación de mi hija para obtener su licencia profesional. No solo enseña a conducir, enseña responsabilidad y seguridad. ¡Gracias por acompañarla en este paso tan importante!',
     imgId: 'student-8'
   }
@@ -111,7 +103,7 @@ export const Testimonials = () => {
                 return (
                   <CarouselItem key={index} className="pl-4 md:pl-6 basis-full sm:basis-1/2 lg:basis-1/3 py-8">
                     <div className={cn(
-                      "transition-all duration-700 ease-in-out",
+                      "transition-all duration-700 ease-in-out h-full",
                       isActive 
                         ? "opacity-100 blur-0 scale-105 z-10" 
                         : "opacity-30 blur-[2px] scale-90 grayscale-[50%]"
@@ -122,12 +114,6 @@ export const Testimonials = () => {
                             <Quote className="w-16 h-16 text-primary rotate-180" />
                           </div>
                           
-                          <div className="flex gap-1 mb-6">
-                            {[...Array(5)].map((_, i) => (
-                              <Star key={i} className="w-4 h-4 text-yellow-500 fill-yellow-500" />
-                            ))}
-                          </div>
-
                           <p className="text-base md:text-lg italic text-muted-foreground mb-10 flex-grow leading-relaxed relative z-10">
                             "{t.content}"
                           </p>
@@ -146,7 +132,11 @@ export const Testimonials = () => {
                             </div>
                             <div>
                               <p className="font-bold text-foreground text-lg tracking-tight">{t.name}</p>
-                              <p className="text-sm text-primary font-bold uppercase tracking-wider">{t.role}</p>
+                              <div className="flex gap-0.5 mt-1">
+                                {[...Array(5)].map((_, i) => (
+                                  <Star key={i} className="w-3.5 h-3.5 text-yellow-500 fill-yellow-500" />
+                                ))}
+                              </div>
                             </div>
                           </div>
                         </CardContent>
