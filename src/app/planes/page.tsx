@@ -145,18 +145,20 @@ export default function PlanesPage() {
                   </div>
                 </div>
 
-                <div className="w-full bg-primary/5 p-6 md:p-8 rounded-[2rem] border-2 border-primary/20">
-                  <h3 className="text-xl font-bold mb-6 flex items-center justify-center gap-2 text-primary text-center">
-                    <Gift className="w-6 h-6" />
-                    Bonos
+                <div className="w-full bg-primary/5 p-8 md:p-10 rounded-[2.5rem] border-2 border-primary/20">
+                  <h3 className="text-2xl font-bold mb-10 flex items-center justify-center gap-3 text-primary text-center">
+                    <Gift className="w-7 h-7" />
+                    Bonos exclusivos
                   </h3>
-                  <div className="grid grid-cols-1 md:grid-cols-2 gap-x-8 gap-y-3">
+                  <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
                     {plan.bonuses.map((bono, i) => (
-                      <div key={i} className="flex items-start gap-3 group">
-                        <div className="mt-1 bg-primary/10 p-1 rounded-full shrink-0">
-                          <Check className="w-3 h-3 text-primary" />
+                      <div key={i} className="flex flex-col items-center text-center gap-5 group">
+                        <div className="w-12 h-12 rounded-full bg-primary text-white flex items-center justify-center font-bold text-xl shadow-lg shadow-primary/20 group-hover:scale-110 transition-transform">
+                          {i + 1}
                         </div>
-                        <span className="text-sm md:text-base text-foreground/90 font-medium leading-tight">{bono}</span>
+                        <span className="text-sm md:text-base text-foreground/90 font-bold leading-snug">
+                          {bono}
+                        </span>
                       </div>
                     ))}
                   </div>
