@@ -24,27 +24,27 @@ const testimonials = [
   },
   {
     name: 'Lautaro Ramirez',
-    content: 'Buenas, Muy recomendable la escuela de manejo. La mejor atención que recibí y muy excelente todo, pude concretar mi meta de recibir mi licencia de conducir gracias a las clases intensivas que me brindaron. El instructor una persona muy paciente y profesional, dando indicaciones claras. Excelente academia brindandome material teorico y practico para adquirir mucho mas conocimiento, una experiencia excelente, muchas gracias a Pilotos Asesalvolante por la meta que logre conseguir.',
+    content: 'Buenas. Muy recomendable la escuela de manejo. La mejor atención que recibí y todo excelente; pude concretar mi meta de recibir mi licencia de conducir gracias a las clases intensivas que me brindaron. El instructor es una persona muy paciente y profesional, dando indicaciones claras. Excelente academia brindándome material teórico y práctico para adquirir mucho más conocimiento. Una experiencia excelente, muchas gracias a Pilotos - ases al volante por la meta que logré conseguir.',
     imgId: 'student-2'
   },
   {
     name: 'Maria Silisque',
-    content: '¡EXCELENTE DIEZ! Recomiendo, super responsable, respetuoso y con una paciencia de oro. Gracias!!',
+    content: '¡Excelente diez! Recomiendo, súper responsable, respetuoso y con una paciencia de oro. ¡Gracias!',
     imgId: 'student-3'
   },
   {
     name: 'Javier Peña',
-    content: 'hola! recomiendo, todo excelente y práctico, me sirvió un montón.',
+    content: '¡Hola! Recomiendo, todo excelente y práctico, me sirvió un montón.',
     imgId: 'student-4'
   },
   {
     name: 'Alejandra Merlo',
-    content: 'Simplemente quería agradecer de corazón haberme cruzado con la academia. Era algo que me costaba un montón y que procrastine un montón de tiempo y gracias a la confianza, el apoyo y educación y sibre todo la PACIENCIA y empatía recibida pude lograrlo. No se dan una idea lo importante que esto es para mí y fue gracias a la ayuda de ustedes! gracias gracias!',
+    content: 'Simplemente quería agradecer de corazón haberme cruzado con la academia. Era algo que me costaba un montón y que procrastiné un montón de tiempo, y gracias a la confianza, el apoyo, la educación y sobre todo la paciencia y empatía recibida pude lograrlo. ¡No se dan una idea de lo importante que esto es para mí y fue gracias a la ayuda de ustedes! ¡Gracias, gracias!',
     imgId: 'student-5'
   },
   {
     name: 'Daniela Rojas',
-    content: 'Queríamos agradecerles por el acompañamiento en este proceso tan importante para nuestra hija, ayudarla a perder sus miedos, a creer en que podía lograrlo y sobre todo sentirse segura en cada movimiento. El esfuerzo de esta licencia es de ella, pero sin ayuda no hubiese sido posible, la paciencia y técnicas son increíbles y las palabras de aliento ya son de otro nivel. Muchísimas gracias Brian, por estas semanas acompañándola en el proceso de aprendizaje.',
+    content: 'Queríamos agradecerles por el acompañamiento en este proceso tan importante para nuestra hija: ayudarla a perder sus miedos, a creer en que podía lograrlo y sobre todo sentirse segura en cada movimiento. El esfuerzo de esta licencia es de ella, pero sin ayuda no hubiese sido posible. La paciencia y técnicas son increíbles y las palabras de aliento ya son de otro nivel. Muchísimas gracias Brian, por estas semanas acompañándola en el proceso de aprendizaje.',
     imgId: 'student-6'
   },
   {
