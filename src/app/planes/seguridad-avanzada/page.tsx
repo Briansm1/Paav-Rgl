@@ -121,7 +121,7 @@ export default function PlanSeguridadAvanzadaPage() {
               {/* Contenido Unificado Stacking Vertically */}
               <div className="flex flex-col gap-8 pt-6">
                 <div className="bg-black/20 p-6 rounded-[2rem] border border-white/5">
-                  <h3 className="text-lg font-bold mb-4 flex items-center gap-2 text-foreground">
+                  <h3 className="text-lg font-bold mb-4 flex items-center justify-center gap-2 text-foreground">
                     <UserCheck className="w-5 h-5 text-primary" />
                     ¿Para quién es?
                   </h3>
@@ -138,7 +138,7 @@ export default function PlanSeguridadAvanzadaPage() {
                 </div>
 
                 <div className="bg-black/20 p-6 rounded-[2rem] border border-white/5">
-                  <h3 className="text-lg font-bold mb-4 flex items-center gap-2 text-foreground">
+                  <h3 className="text-lg font-bold mb-4 flex items-center justify-center gap-2 text-foreground">
                     <Target className="w-5 h-5 text-accent" />
                     ¿Qué vas a lograr?
                   </h3>
@@ -155,7 +155,7 @@ export default function PlanSeguridadAvanzadaPage() {
                 </div>
 
                 <div className="bg-black/20 p-6 rounded-[2rem] border border-white/5">
-                  <h3 className="text-lg font-bold mb-4 flex items-center gap-2 text-foreground">
+                  <h3 className="text-lg font-bold mb-4 flex items-center justify-center gap-2 text-foreground">
                     <ShieldCheck className="w-5 h-5 text-green-500" />
                     ¿Qué incluye el programa?
                   </h3>
@@ -172,7 +172,7 @@ export default function PlanSeguridadAvanzadaPage() {
                 </div>
 
                 <div className="bg-primary/5 p-6 rounded-[2rem] border-2 border-primary/20">
-                  <h3 className="text-lg font-bold mb-6 flex items-center gap-2 text-primary">
+                  <h3 className="text-lg font-bold mb-6 flex items-center justify-center gap-2 text-primary">
                     <Gift className="w-5 h-5" />
                     Bonos de regalo
                   </h3>
