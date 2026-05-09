@@ -127,7 +127,7 @@ export default function PlanesPage() {
                       </span>
                     </div>
 
-                    <div className="col-span-full pt-4 border-t border-white/10 mt-2">
+                    <div className="col-span-full pt-4 border-t border-white/10 mt-2 flex justify-center">
                       <p className="text-center font-bold text-slate-300 flex items-center justify-center gap-2 text-base md:text-lg">
                         <Clock className="w-5 h-5 text-primary" />
                         {plan.sessions}
