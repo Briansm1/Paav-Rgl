@@ -78,14 +78,14 @@ export const Testimonials = () => {
           </h3>
         </div>
 
-        <div className="relative max-w-7xl mx-auto">
+        <div className="relative max-w-7xl mx-auto px-4 md:px-12">
           <Carousel 
             opts={{ 
               align: "start", 
               loop: true,
               dragFree: true
             }} 
-            className="w-full"
+            className="w-full relative group"
           >
             <CarouselContent className="-ml-4 md:-ml-6">
               {testimonials.map((t, index) => {
@@ -132,10 +132,8 @@ export const Testimonials = () => {
               })}
             </CarouselContent>
             
-            <div className="flex justify-center gap-4 mt-12 sm:mt-16">
-              <CarouselPrevious className="static translate-y-0 h-14 w-14 bg-card text-primary border-white/10 hover:bg-primary hover:text-white transition-all shadow-xl rounded-2xl" />
-              <CarouselNext className="static translate-y-0 h-14 w-14 bg-card text-primary border-white/10 hover:bg-primary hover:text-white transition-all shadow-xl rounded-2xl" />
-            </div>
+            <CarouselPrevious className="hidden md:flex -left-4 lg:-left-16 h-14 w-14 bg-card text-primary border-white/10 hover:bg-primary hover:text-white transition-all shadow-xl rounded-2xl" />
+            <CarouselNext className="hidden md:flex -right-4 lg:-right-16 h-14 w-14 bg-card text-primary border-white/10 hover:bg-primary hover:text-white transition-all shadow-xl rounded-2xl" />
           </Carousel>
         </div>
       </div>
