@@ -10,18 +10,21 @@ const plans = [
     price: 'Desde $86.999',
     description: 'Perfecto para quienes necesitan reforzar conocimientos.',
     badge: 'NIVEL SUPERIOR',
+    href: '/planes/experto'
   },
   {
     name: 'Programa seguridad avanzada',
     price: 'Desde $165.999',
     description: 'Para conductores que buscan maestría total en cualquier entorno.',
     badge: 'NIVEL INTERMEDIO',
+    href: '/planes/seguridad-avanzada'
   },
   {
     name: 'Programa fundamentos',
     price: 'Desde $311.999',
     description: 'Ideal para quienes empiezan desde cero y quieren aprender bien.',
     badge: 'NIVEL INICIAL',
+    href: '/planes/fundamentos'
   }
 ];
 
@@ -62,7 +65,7 @@ export const Pricing = () => {
               </div>
 
               <div className="mt-auto relative z-10 w-full">
-                <Link href="/planes" className="w-full">
+                <Link href={plan.href} className="w-full">
                   <Button 
                     className={cn(
                       "w-full h-14 rounded-2xl text-base font-bold transition-all active:scale-95 shadow-lg bg-primary hover:bg-primary/90 text-white"
