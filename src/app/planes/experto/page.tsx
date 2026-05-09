@@ -94,11 +94,14 @@ export default function PlanExpertoPage() {
                       </span>
                     </div>
 
-                    <div className="col-span-full pt-4 border-t border-white/10 mt-2 flex justify-center">
+                    <div className="col-span-full pt-4 border-t border-white/10 mt-2 flex flex-col items-center gap-4">
                       <p className="text-center font-bold text-slate-300 flex items-center justify-center gap-2 text-base md:text-lg">
                         <Clock className="w-5 h-5 text-primary" />
                         {plan.sessions}
                       </p>
+                      <Button className="w-full max-w-xs bg-primary hover:bg-primary/90 rounded-xl h-12 font-bold transition-all">
+                        Elegir
+                      </Button>
                     </div>
                   </div>
 
@@ -172,12 +175,6 @@ export default function PlanExpertoPage() {
                       </div>
                     ))}
                   </div>
-                </div>
-
-                <div className="pt-4 mt-auto w-full flex justify-center">
-                  <Button size="lg" className="rounded-full px-10 h-14 text-lg bg-primary hover:bg-primary/90 w-full text-center">
-                    Elegir
-                  </Button>
                 </div>
               </div>
             ))}
