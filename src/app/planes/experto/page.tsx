@@ -84,7 +84,7 @@ export default function PlanExpertoPage() {
                     
                     <div className="flex flex-col items-center justify-center gap-4">
                       <div className="flex flex-col items-center gap-1">
-                        <span className="text-[10px] md:text-xs font-bold text-slate-400 uppercase tracking-widest">Tarjeta</span>
+                        <span className="text-[10px] md:text-xs font-bold text-slate-400 uppercase tracking-widest">TARJETA DE CRÉDITO</span>
                       </div>
                       <p className="text-3xl md:text-5xl font-black text-primary text-center tracking-tighter">
                         {plan.cardPrice}

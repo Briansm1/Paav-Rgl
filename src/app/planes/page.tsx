@@ -53,7 +53,7 @@ export default function PlanesPage() {
             Volver al inicio
           </Link>
           <h1 className="text-4xl md:text-6xl font-bold font-headline mb-6 text-foreground text-center">
-            Los detalles para el <span className="text-primary">programa seguridad avanzada</span>
+            Programa <span className="text-primary">seguridad avanzada</span>
           </h1>
         </div>
       </section>
@@ -84,7 +84,7 @@ export default function PlanesPage() {
                     
                     <div className="flex flex-col items-center justify-center gap-4">
                       <div className="flex flex-col items-center gap-1">
-                        <span className="text-[10px] md:text-xs font-bold text-slate-400 uppercase tracking-widest">Tarjeta</span>
+                        <span className="text-[10px] md:text-xs font-bold text-slate-400 uppercase tracking-widest">TARJETA DE CRÉDITO</span>
                       </div>
                       <p className="text-3xl md:text-5xl font-black text-primary text-center tracking-tighter">
                         {plan.cardPrice}
@@ -176,7 +176,7 @@ export default function PlanesPage() {
 
                 <div className="pt-4 mt-auto w-full flex justify-center">
                   <Button size="lg" className="rounded-full px-10 h-14 text-lg bg-primary hover:bg-primary/90 w-full text-center">
-                    Quiero este plan
+                    Elegir
                   </Button>
                 </div>
               </div>
