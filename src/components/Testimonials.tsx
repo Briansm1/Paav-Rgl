@@ -99,7 +99,6 @@ export const Testimonials = () => {
           >
             <CarouselContent className="-ml-4 md:-ml-6">
               {testimonials.map((t, index) => {
-                const img = PlaceHolderImages.find(p => p.id === t.imgId);
                 const headerImg = t.headerImageId ? PlaceHolderImages.find(p => p.id === t.headerImageId) : null;
                 const isActive = index === current;
 
@@ -130,18 +129,7 @@ export const Testimonials = () => {
                             </p>
                           </div>
 
-                          <div className="flex items-center gap-5 mt-10 border-t border-white/5 pt-6 relative z-10">
-                            <div className="relative w-14 h-14 rounded-2xl overflow-hidden border-2 border-primary/20 p-0.5 group-hover:border-primary/50 transition-colors">
-                              <div className="relative w-full h-full rounded-[0.8rem] overflow-hidden">
-                                <Image 
-                                  src={img?.imageUrl || ''} 
-                                  alt={t.name} 
-                                  fill 
-                                  className="object-cover"
-                                  data-ai-hint={img?.imageHint}
-                                />
-                              </div>
-                            </div>
+                          <div className="flex flex-col mt-10 border-t border-white/5 pt-6 relative z-10">
                             <div>
                               <p className="font-bold text-foreground text-lg tracking-tight">{t.name}</p>
                               <div className="flex gap-0.5 mt-1">
