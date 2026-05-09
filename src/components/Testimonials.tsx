@@ -18,18 +18,13 @@ import { cn } from '@/lib/utils';
 
 const testimonials = [
   {
-    name: 'Alejandra Merlo',
-    content: 'Simplemente quería agradecer de corazón haberme cruzado con la academia. Era algo que me costaba un montón y que procrastiné mucho tiempo; gracias a la confianza, el apoyo, la educación y, sobre todo, la paciencia y empatía recibida, pude lograrlo. ¡No se dan una idea de lo importante que esto es para mí, y fue gracias a la ayuda de ustedes! ¡Gracias, gracias!',
-    headerImageId: 'achievement-alejandra'
-  },
-  {
     name: 'Daniela Rojas',
     content: 'Queríamos agradecerles por el acompañamiento en este proceso tan importante para nuestra hija: ayudarla a perder sus miedos, a creer en que podía lograrlo y, sobre todo, sentirse segura en cada movimiento. El esfuerzo de esta licencia es de ella, pero sin ayuda no hubiese sido posible. La paciencia y técnicas son increíbles, y las palabras de aliento ya son de otro nivel. ¡Muchísimas gracias, Brian, por estas semanas acompañándola en el proceso de aprendizaje!',
     headerImageId: 'achievement-daniela'
   },
   {
     name: 'Candelaria Pereyra',
-    content: '¡Holi! La verdad, súper conforme con las clases. Me sorprendió haber aprendido un montón en poco tiempo y el hecho de que después practiqué con autos reales y no conos me dejó muy sorprendida por pensar que no estaba lista. Brian, el instructor, súper buena onda; explica re bien, claro, paciente ante todo, súper seguro y divertido. Tengo amigos que quieren aprender, así que les voy a recomendar a ustedes. ¡10/10! Muchas gracias.',
+    content: '¡Holi! La verdad, súper conforme con las clases. Me sorprendió haber aprendido un montón en poco tiempo y el hecho de que después practiqué con autos reales y no conos me dejó muy sorprendida por pensar que no estaba lista. Brian, el instructor, es súper buena onda: explica re bien, es claro, paciente ante todo, súper seguro y divertido. Tengo amigos que quieren aprender, así que les voy a recomendar a ustedes. ¡10/10! Muchas gracias.',
     headerImageId: 'achievement-candelaria'
   },
   {
@@ -55,6 +50,11 @@ const testimonials = [
   {
     name: 'Oscar Benítez',
     content: 'Excelente, quiero agradecer al instructor de manejo por su profesionalismo, paciencia y compromiso en la formación de mi hija para obtener su licencia profesional. No solo enseña a conducir, enseña responsabilidad y seguridad. ¡Gracias por acompañarla en este paso tan importante!',
+  },
+  {
+    name: 'Alejandra Merlo',
+    content: 'Simplemente quería agradecer de corazón haberme cruzado con la academia. Era algo que me costaba un montón y que procrastiné mucho tiempo; gracias a la confianza, el apoyo, la educación y, sobre todo, la paciencia y empatía recibida, pude lograrlo. ¡No se dan una idea de lo importante que esto es para mí, y fue gracias a la ayuda de ustedes! ¡Gracias, gracias!',
+    headerImageId: 'achievement-alejandra'
   }
 ];
 
