@@ -118,79 +118,75 @@ export default function PlanSeguridadAvanzadaPage() {
                 ))}
               </div>
 
-              {/* Contenido Unificado */}
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-8 pt-6">
-                <div className="space-y-6">
-                  <div className="bg-black/20 p-6 rounded-[2rem] border border-white/5">
-                    <h3 className="text-lg font-bold mb-4 flex items-center gap-2 text-foreground">
-                      <UserCheck className="w-5 h-5 text-primary" />
-                      ¿Para quién es?
-                    </h3>
-                    <div className="space-y-3">
-                      {programDetails.targetAudience.map((item, i) => (
-                        <div key={i} className="flex items-start gap-3">
-                          <div className="mt-1 bg-primary/10 p-1 rounded-full shrink-0">
-                            <Check className="w-3 h-3 text-primary" />
-                          </div>
-                          <span className="text-sm text-foreground/90 font-medium leading-tight">{item}</span>
+              {/* Contenido Unificado Stacking Vertically */}
+              <div className="flex flex-col gap-8 pt-6">
+                <div className="bg-black/20 p-6 rounded-[2rem] border border-white/5">
+                  <h3 className="text-lg font-bold mb-4 flex items-center gap-2 text-foreground">
+                    <UserCheck className="w-5 h-5 text-primary" />
+                    ¿Para quién es?
+                  </h3>
+                  <div className="space-y-3">
+                    {programDetails.targetAudience.map((item, i) => (
+                      <div key={i} className="flex items-start gap-3">
+                        <div className="mt-1 bg-primary/10 p-1 rounded-full shrink-0">
+                          <Check className="w-3 h-3 text-primary" />
                         </div>
-                      ))}
-                    </div>
-                  </div>
-
-                  <div className="bg-black/20 p-6 rounded-[2rem] border border-white/5">
-                    <h3 className="text-lg font-bold mb-4 flex items-center gap-2 text-foreground">
-                      <Target className="w-5 h-5 text-accent" />
-                      ¿Qué vas a lograr?
-                    </h3>
-                    <div className="space-y-3">
-                      {programDetails.outcomes.map((item, i) => (
-                        <div key={i} className="flex items-start gap-3">
-                          <div className="mt-1 bg-accent/10 p-1 rounded-full shrink-0">
-                            <Check className="w-3 h-3 text-accent" />
-                          </div>
-                          <span className="text-sm text-foreground/90 font-medium leading-tight">{item}</span>
-                        </div>
-                      ))}
-                    </div>
+                        <span className="text-sm text-foreground/90 font-medium leading-tight">{item}</span>
+                      </div>
+                    ))}
                   </div>
                 </div>
 
-                <div className="space-y-6">
-                  <div className="bg-black/20 p-6 rounded-[2rem] border border-white/5">
-                    <h3 className="text-lg font-bold mb-4 flex items-center gap-2 text-foreground">
-                      <ShieldCheck className="w-5 h-5 text-green-500" />
-                      ¿Qué incluye el programa?
-                    </h3>
-                    <div className="space-y-3">
-                      {programDetails.features.map((feature, i) => (
-                        <div key={i} className="flex items-start gap-3">
-                          <div className="mt-1 bg-green-500/10 p-1 rounded-full shrink-0">
-                            <Check className="w-3 h-3 text-green-500" />
-                          </div>
-                          <span className="text-sm text-foreground/90 font-medium leading-tight">{feature}</span>
+                <div className="bg-black/20 p-6 rounded-[2rem] border border-white/5">
+                  <h3 className="text-lg font-bold mb-4 flex items-center gap-2 text-foreground">
+                    <Target className="w-5 h-5 text-accent" />
+                    ¿Qué vas a lograr?
+                  </h3>
+                  <div className="space-y-3">
+                    {programDetails.outcomes.map((item, i) => (
+                      <div key={i} className="flex items-start gap-3">
+                        <div className="mt-1 bg-accent/10 p-1 rounded-full shrink-0">
+                          <Check className="w-3 h-3 text-accent" />
                         </div>
-                      ))}
-                    </div>
+                        <span className="text-sm text-foreground/90 font-medium leading-tight">{item}</span>
+                      </div>
+                    ))}
                   </div>
+                </div>
 
-                  <div className="bg-primary/5 p-6 rounded-[2rem] border-2 border-primary/20">
-                    <h3 className="text-lg font-bold mb-6 flex items-center gap-2 text-primary">
-                      <Gift className="w-5 h-5" />
-                      Bonos de regalo
-                    </h3>
-                    <div className="grid grid-cols-2 gap-4">
-                      {programDetails.bonuses.map((bono, i) => (
-                        <div key={i} className="flex flex-col items-center text-center gap-2">
-                          <div className="w-7 h-7 rounded-full bg-primary text-white flex items-center justify-center font-bold text-xs shadow-lg shadow-primary/20">
-                            {i + 1}
-                          </div>
-                          <span className="text-[10px] md:text-xs text-foreground/90 font-bold leading-tight">
-                            {bono}
-                          </span>
+                <div className="bg-black/20 p-6 rounded-[2rem] border border-white/5">
+                  <h3 className="text-lg font-bold mb-4 flex items-center gap-2 text-foreground">
+                    <ShieldCheck className="w-5 h-5 text-green-500" />
+                    ¿Qué incluye el programa?
+                  </h3>
+                  <div className="space-y-3">
+                    {programDetails.features.map((feature, i) => (
+                      <div key={i} className="flex items-start gap-3">
+                        <div className="mt-1 bg-green-500/10 p-1 rounded-full shrink-0">
+                          <Check className="w-3 h-3 text-green-500" />
                         </div>
-                      ))}
-                    </div>
+                        <span className="text-sm text-foreground/90 font-medium leading-tight">{feature}</span>
+                      </div>
+                    ))}
+                  </div>
+                </div>
+
+                <div className="bg-primary/5 p-6 rounded-[2rem] border-2 border-primary/20">
+                  <h3 className="text-lg font-bold mb-6 flex items-center gap-2 text-primary">
+                    <Gift className="w-5 h-5" />
+                    Bonos de regalo
+                  </h3>
+                  <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
+                    {programDetails.bonuses.map((bono, i) => (
+                      <div key={i} className="flex flex-col items-center text-center gap-2">
+                        <div className="w-7 h-7 rounded-full bg-primary text-white flex items-center justify-center font-bold text-xs shadow-lg shadow-primary/20">
+                          {i + 1}
+                        </div>
+                        <span className="text-xs text-foreground/90 font-bold leading-tight">
+                          {bono}
+                        </span>
+                      </div>
+                    ))}
                   </div>
                 </div>
               </div>
