@@ -19,9 +19,9 @@ const programDetails = {
     },
     {
       name: 'Plan rookie',
-      transferPrice: '$389.999',
+      transferPrice: '$369.999',
       cardPrice: '$599.999',
-      savings: 'Ahorro de $210.000',
+      savings: 'Ahorro de $230.000',
       sessions: '10 sesiones de prácticas dinámicas',
     }
   ],
@@ -45,11 +45,11 @@ const programDetails = {
     'Descuento especial en alquiler de auto para examen - 15% off'
   ],
   bonuses: [
-    'Como identificar los diferentes fluidos de un auto y como controlarlos',
-    'Como realizar un cambio de neumático',
-    'Simulador de examen teórico con +85 preguntas',
-    'Descuentos exclusivos en nuestros productos digitales',
-    'Descuentos exclusivos con nuestros comercios amigos y socios'
+    { text: 'Como identificar los diferentes fluidos de un auto y como controlarlos' },
+    { text: 'Como realizar un cambio de neumático' },
+    { text: 'Simulador de examen teórico con +85 preguntas' },
+    { text: 'Descuentos exclusivos en nuestros productos digitales' },
+    { text: 'Descuentos exclusivos con nuestros comercios amigos y socios' }
   ]
 };
 
@@ -201,7 +201,7 @@ export default function PlanFundamentosPage() {
                           </div>
                         </div>
                         <span className="text-xs md:text-sm text-foreground/90 font-bold leading-snug">
-                          {bono}
+                          {bono.text}
                         </span>
                       </div>
                     ))}
