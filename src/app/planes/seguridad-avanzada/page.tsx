@@ -45,7 +45,7 @@ const programDetails = {
     'Asesoría sobre los requisitos y trámites para gestionar la licencia de conducir'
   ],
   bonuses: [
-    'Como identificar los differentes fluidos de un auto y como controlarlos',
+    'Como identificar los diferentes fluidos de un auto y como controlarlos',
     'Como realizar un cambio de neumático',
     'Simulador de examen teórico con +85 preguntas',
     'Descuentos exclusivos en nuestros productos digitales',
@@ -95,7 +95,7 @@ export default function PlanSeguridadAvanzadaPage() {
 
                       {/* Precio Tarjeta */}
                       <div className="pt-4 border-t border-white/5 flex flex-col items-center">
-                        <span className="text-[10px] font-bold text-slate-400 uppercase tracking-widest mb-1">Tarjeta de crédito</span>
+                        <span className="text-[10px] font-bold text-slate-400 uppercase tracking-widest mb-1">TARJETA DE CRÉDITO</span>
                         <p className="text-4xl md:text-5xl font-black text-primary tracking-tighter">{option.cardPrice}</p>
                         <span className="mt-2 text-[10px] font-bold bg-primary/20 text-primary px-3 py-1 rounded-full border border-primary/30">
                           6 cuotas sin interés

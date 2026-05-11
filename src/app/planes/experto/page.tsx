@@ -33,7 +33,7 @@ const detailedPlans = [
       'Asesoría sobre los requisitos y trámites para gestionar la licencia de conducir'
     ],
     bonuses: [
-      'Como identificar los differentes fluidos de un auto y como controlarlos',
+      'Como identificar los diferentes fluidos de un auto y como controlarlos',
       'Como realizar un cambio de neumático',
       'Simulador de examen teórico con +85 preguntas',
       'Descuentos exclusivos en nuestros productos digitales'
