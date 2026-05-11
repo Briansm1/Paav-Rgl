@@ -97,7 +97,7 @@ export default function PlanSeguridadAvanzadaPage() {
                       <div className="pt-4 border-t border-white/5 flex flex-col items-center">
                         <span className="text-[10px] font-bold text-slate-400 uppercase tracking-widest mb-1">TARJETA DE CRÉDITO</span>
                         <p className="text-4xl md:text-5xl font-black text-primary tracking-tighter">{option.cardPrice}</p>
-                        <span className="mt-2 text-[10px] font-bold bg-primary/20 text-primary px-3 py-1 rounded-full border border-primary/30">
+                        <span className="mt-1 text-[10px] font-bold bg-primary/20 text-primary px-3 py-1 rounded-full text-center border border-primary/30">
                           6 cuotas sin interés
                         </span>
                       </div>
@@ -180,8 +180,8 @@ export default function PlanSeguridadAvanzadaPage() {
                   </div>
                 </div>
 
-                <div className="bg-primary/5 p-6 rounded-[2rem] border-2 border-primary/20">
-                  <h3 className="text-xl font-bold mb-8 flex items-center justify-center gap-3 text-primary text-center">
+                <div className="bg-accent/5 p-6 rounded-[2rem] border-2 border-accent/20">
+                  <h3 className="text-xl font-bold mb-8 flex items-center justify-center gap-3 text-accent text-center">
                     <Gift className="w-6 h-6" />
                     Bonos de regalo
                   </h3>
@@ -194,7 +194,7 @@ export default function PlanSeguridadAvanzadaPage() {
                           i === programDetails.bonuses.length - 1 && i % 2 === 0 && "sm:col-span-2"
                         )}
                       >
-                        <div className="w-7 h-7 rounded-full bg-primary text-white flex items-center justify-center font-bold text-sm shadow-lg shadow-primary/20">
+                        <div className="w-7 h-7 rounded-full bg-accent text-white flex items-center justify-center font-bold text-sm shadow-lg shadow-accent/20">
                           {i + 1}
                         </div>
                         <span className="text-xs text-foreground/90 font-bold leading-tight">

@@ -12,7 +12,7 @@ const detailedPlans = [
     cardPrice: '$133.999',
     savings: 'Ahorro de $47.000',
     sessions: '2 sesiones de prácticas dinámicas',
-    fullDesc: 'Diseñado para personas que ya tienen conocimientos o licencia y quieren ganar más seguridad en maniobras complejas, estacionamiento o circular en tráfico.',
+    fullDesc: 'Diseñado para personas que ya tienen conocimientos o licencia y quieren ganar más seguridad en maniobras complejas, estacionamiento or circular en tráfico.',
     targetAudience: [
       'Para quienes quieren realizar una simulación completa del examen práctico y ver en que situación está',
       'Para quienes necesitan mejorar alguna maniobra en particular',
@@ -89,7 +89,7 @@ export default function PlanesPage() {
                       <p className="text-3xl md:text-5xl font-black text-primary text-center tracking-tighter">
                         {plan.cardPrice}
                       </p>
-                      <span className="text-[10px] md:text-xs font-bold bg-primary/20 text-primary px-3 py-1 rounded-full text-center border border-primary/30">
+                      <span className="mt-1 text-[10px] font-bold bg-primary/20 text-primary px-3 py-1 rounded-full text-center border border-primary/30">
                         6 cuotas sin interés
                       </span>
                     </div>
@@ -160,15 +160,15 @@ export default function PlanesPage() {
                   </div>
                 </div>
 
-                <div className="w-full bg-primary/5 p-6 md:p-8 rounded-[2.5rem] border-2 border-primary/20">
-                  <h3 className="text-xl font-bold mb-8 flex items-center justify-center gap-3 text-primary text-center">
+                <div className="w-full bg-accent/5 p-6 md:p-8 rounded-[2.5rem] border-2 border-accent/20">
+                  <h3 className="text-xl font-bold mb-8 flex items-center justify-center gap-3 text-accent text-center">
                     <Gift className="w-6 h-6" />
                     Bonos de regalo
                   </h3>
                   <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
                     {plan.bonuses.map((bono, i) => (
                       <div key={i} className="flex flex-col items-center text-center gap-3 group">
-                        <div className="w-10 h-10 rounded-full bg-primary text-white flex items-center justify-center font-bold text-lg shadow-lg shadow-primary/20 group-hover:scale-110 transition-transform">
+                        <div className="w-10 h-10 rounded-full bg-accent text-white flex items-center justify-center font-bold text-lg shadow-lg shadow-accent/20 group-hover:scale-110 transition-transform">
                           {i + 1}
                         </div>
                         <span className="text-xs md:text-sm text-foreground/90 font-bold leading-snug">
