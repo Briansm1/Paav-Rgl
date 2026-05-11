@@ -4,6 +4,7 @@ import { Header } from '@/components/Header';
 import { Footer } from '@/components/Footer';
 import { Button } from '@/components/ui/button';
 import { Check, ArrowLeft, UserCheck, Target, Clock, Gift, ShieldCheck } from 'lucide-react';
+import { cn } from '@/lib/utils';
 
 const programDetails = {
   name: 'Programa seguridad avanzada',
@@ -106,11 +107,15 @@ export default function PlanSeguridadAvanzadaPage() {
                         <Clock className="w-4 h-4" />
                         <span className="text-sm">{option.sessions}</span>
                       </div>
-                    </div>
 
-                    <Button className="w-full mt-4 bg-primary hover:bg-primary/90 rounded-xl h-12 font-bold transition-all group-hover:scale-[1.02]">
-                      Elegir
-                    </Button>
+                      <div className="pt-2 flex justify-center">
+                        <Link href="#opciones-plan" className="w-full">
+                          <Button className="w-full bg-primary hover:bg-primary/90 rounded-xl h-12 font-bold transition-all group-hover:scale-[1.02]">
+                            Elegir
+                          </Button>
+                        </Link>
+                      </div>
+                    </div>
                   </div>
                 ))}
               </div>
@@ -176,13 +181,19 @@ export default function PlanSeguridadAvanzadaPage() {
                 </div>
 
                 <div className="bg-primary/5 p-6 rounded-[2rem] border-2 border-primary/20">
-                  <h3 className="text-lg font-bold mb-6 flex items-center justify-center gap-2 text-primary text-center">
-                    <Gift className="w-5 h-5" />
+                  <h3 className="text-xl font-bold mb-8 flex items-center justify-center gap-3 text-primary text-center">
+                    <Gift className="w-6 h-6" />
                     Bonos de regalo
                   </h3>
                   <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
                     {programDetails.bonuses.map((bono, i) => (
-                      <div key={i} className="flex flex-col items-center text-center gap-2">
+                      <div 
+                        key={i} 
+                        className={cn(
+                          "flex flex-col items-center text-center gap-2",
+                          i === programDetails.bonuses.length - 1 && i % 2 === 0 && "sm:col-span-2"
+                        )}
+                      >
                         <div className="w-7 h-7 rounded-full bg-primary text-white flex items-center justify-center font-bold text-sm shadow-lg shadow-primary/20">
                           {i + 1}
                         </div>
