@@ -27,7 +27,7 @@ const programDetails = {
   ],
   targetAudience: [
     'Para quienes no tengan experiencia y empiezan desde 0',
-    'Para quienes tienen mucho miedo y necesitan un proceso guiado paso a paso',
+    'Para quienes tienen conocimientos muy básicos y quieren aprender desde cero con un método eficaz, estructura sólida y seguridad vial',
     'Para quienes buscan una base sólida y técnica desde el primer día'
   ],
   outcomes: [
@@ -174,7 +174,7 @@ export default function PlanFundamentosPage() {
                   </div>
                 </div>
 
-                <div className="bg-accent/10 p-6 rounded-[2rem] border-2 border-accent/40 shadow-lg shadow-accent/5">
+                <div className="bg-accent/10 p-6 rounded-[2.5rem] border-2 border-accent/40 shadow-lg shadow-accent/5">
                   <h3 className="text-xl font-bold mb-8 flex items-center justify-center gap-3 text-accent text-center">
                     <Gift className="w-6 h-6" />
                     Bonos de regalo
