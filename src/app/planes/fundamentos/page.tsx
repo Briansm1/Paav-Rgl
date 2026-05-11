@@ -33,8 +33,8 @@ const detailedPlans = [
       'Descuento especial en alquiler de auto para examen - 15% off'
     ],
     bonuses: [
-      'Taller de mecánica básica y cambio de neumáticos',
-      'Guía de gestión de emociones y mentalidad al volante',
+      'Como identificar los diferentes fluidos de un auto y como controlarlos',
+      'Como realizar un cambio de neumático',
       'Simulador de examen teórico ilimitado',
       'Asesoría VIP en trámites municipales'
     ]
@@ -160,7 +160,7 @@ export default function PlanFundamentosPage() {
                   </div>
                 </div>
 
-                <div className="w-full bg-accent/5 p-6 md:p-8 rounded-[2.5rem] border-2 border-accent/20">
+                <div className="w-full bg-accent/10 p-6 md:p-8 rounded-[2.5rem] border-2 border-accent/40 shadow-lg shadow-accent/5">
                   <h3 className="text-xl font-bold mb-8 flex items-center justify-center gap-3 text-accent text-center">
                     <Gift className="w-6 h-6" />
                     Bonos de regalo
@@ -168,7 +168,7 @@ export default function PlanFundamentosPage() {
                   <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
                     {plan.bonuses.map((bono, i) => (
                       <div key={i} className="flex flex-col items-center text-center gap-3 group">
-                        <div className="w-10 h-10 rounded-full bg-accent text-white flex items-center justify-center font-bold text-lg shadow-lg shadow-accent/20 group-hover:scale-110 transition-transform">
+                        <div className="w-10 h-10 rounded-full bg-accent text-white flex items-center justify-center font-bold text-lg shadow-lg shadow-accent/30 group-hover:scale-110 transition-transform">
                           {i + 1}
                         </div>
                         <span className="text-xs md:text-sm text-foreground/90 font-bold leading-snug">

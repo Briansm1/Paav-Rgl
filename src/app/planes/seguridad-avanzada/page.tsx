@@ -180,7 +180,7 @@ export default function PlanSeguridadAvanzadaPage() {
                   </div>
                 </div>
 
-                <div className="bg-accent/5 p-6 rounded-[2rem] border-2 border-accent/20">
+                <div className="bg-accent/10 p-6 rounded-[2rem] border-2 border-accent/40 shadow-lg shadow-accent/5">
                   <h3 className="text-xl font-bold mb-8 flex items-center justify-center gap-3 text-accent text-center">
                     <Gift className="w-6 h-6" />
                     Bonos de regalo
@@ -194,7 +194,7 @@ export default function PlanSeguridadAvanzadaPage() {
                           i === programDetails.bonuses.length - 1 && i % 2 === 0 && "sm:col-span-2"
                         )}
                       >
-                        <div className="w-7 h-7 rounded-full bg-accent text-white flex items-center justify-center font-bold text-sm shadow-lg shadow-accent/20">
+                        <div className="w-7 h-7 rounded-full bg-accent text-white flex items-center justify-center font-bold text-sm shadow-lg shadow-accent/30">
                           {i + 1}
                         </div>
                         <span className="text-xs text-foreground/90 font-bold leading-tight">
