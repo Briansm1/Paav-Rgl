@@ -20,8 +20,8 @@ const programDetails = {
     {
       name: 'Plan rookie',
       transferPrice: '$369.999',
-      cardPrice: '$599.999',
-      savings: 'Ahorro de $230.000',
+      cardPrice: '$569.999',
+      savings: 'Ahorro de $200.000',
       sessions: '10 sesiones de prácticas dinámicas',
     }
   ],
@@ -75,7 +75,6 @@ export default function PlanFundamentosPage() {
           <div className="max-w-4xl mx-auto">
             <div className="flex flex-col gap-10 p-6 md:p-12 rounded-[3rem] border bg-secondary shadow-2xl border-white/5 h-full w-full">
               
-              {/* Opciones de Plan */}
               <div id="opciones-plan" className="grid grid-cols-1 md:grid-cols-2 gap-6">
                 {programDetails.options.map((option, idx) => (
                   <div key={idx} className="flex flex-col gap-6 p-6 md:p-8 rounded-[2rem] bg-black/40 border border-white/10 shadow-inner relative overflow-hidden group">
@@ -84,7 +83,6 @@ export default function PlanFundamentosPage() {
                     </div>
 
                     <div className="space-y-4">
-                      {/* Precio Transferencia */}
                       <div className="flex flex-col items-center">
                         <span className="text-[10px] font-bold text-slate-400 uppercase tracking-widest mb-1">Transferencia</span>
                         <p className="text-4xl md:text-5xl font-black text-green-500 tracking-tighter">{option.transferPrice}</p>
@@ -93,7 +91,6 @@ export default function PlanFundamentosPage() {
                         </span>
                       </div>
 
-                      {/* Precio Tarjeta */}
                       <div className="pt-4 border-t border-white/5 flex flex-col items-center">
                         <span className="text-[10px] font-bold text-slate-400 uppercase tracking-widest mb-1">TARJETA DE CRÉDITO</span>
                         <p className="text-4xl md:text-5xl font-black text-primary tracking-tighter">{option.cardPrice}</p>
@@ -102,7 +99,6 @@ export default function PlanFundamentosPage() {
                         </span>
                       </div>
 
-                      {/* Sesiones debajo de los precios */}
                       <div className="pt-4 border-t border-white/10 flex items-center justify-center gap-2 text-primary font-bold">
                         <Clock className="w-4 h-4" />
                         <span className="text-sm text-center">{option.sessions}</span>
@@ -120,14 +116,12 @@ export default function PlanFundamentosPage() {
                 ))}
               </div>
 
-              {/* Descripción */}
               <div className="text-center py-4">
                 <p className="text-lg text-muted-foreground leading-relaxed max-w-2xl mx-auto">
                   {programDetails.description}
                 </p>
               </div>
 
-              {/* Contenido Unificado */}
               <div className="flex flex-col gap-8">
                 <div className="bg-black/20 p-6 rounded-[2rem] border border-white/5">
                   <h3 className="text-lg font-bold mb-4 flex items-center justify-center gap-2 text-foreground text-center">
@@ -209,7 +203,6 @@ export default function PlanFundamentosPage() {
                 </div>
               </div>
 
-              {/* Botón final */}
               <div className="pt-8 flex justify-center">
                 <Link href="#opciones-plan" className="w-full max-w-xs">
                   <Button className="w-full bg-primary hover:bg-primary/90 rounded-xl h-12 font-bold transition-all">
