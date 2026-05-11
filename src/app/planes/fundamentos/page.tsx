@@ -168,8 +168,11 @@ export default function PlanFundamentosPage() {
                   <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
                     {plan.bonuses.map((bono, i) => (
                       <div key={i} className="flex flex-col items-center text-center gap-3 group">
-                        <div className="w-10 h-10 rounded-full bg-accent text-white flex items-center justify-center font-bold text-lg shadow-lg shadow-accent/30 group-hover:scale-110 transition-transform">
-                          {i + 1}
+                        <div className="relative">
+                          <span className="absolute inset-0 rounded-full bg-accent animate-ping opacity-75"></span>
+                          <div className="relative w-10 h-10 rounded-full bg-accent text-white flex items-center justify-center font-bold text-lg shadow-lg shadow-accent/30 group-hover:scale-110 transition-transform">
+                            {i + 1}
+                          </div>
                         </div>
                         <span className="text-xs md:text-sm text-foreground/90 font-bold leading-snug">
                           {bono}
