@@ -25,9 +25,9 @@ const programDetails = {
     }
   ],
   targetAudience: [
-    'Para quienes quieren ganar seguridad total en avenidas y zonas de alto tráfico',
-    'Para personas que necesitan consolidar su técnica de manejo defensivo',
-    'Para quienes buscan una transformación profunda en su confianza al volante'
+    'Para personas que ya manejan, pero no se sienten 100% seguras.',
+    'Para quienes van a sacar su licencia y necesitan reforzar práctica o maniobras puntuales.',
+    'Para quienes tienen licencia pero quieren afianzar técnica y precisión.'
   ],
   outcomes: [
     'Dominio fluido en entornos urbanos complejos',
