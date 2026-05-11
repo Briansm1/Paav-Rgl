@@ -8,7 +8,7 @@ import { cn } from '@/lib/utils';
 
 const programDetails = {
   name: 'Programa seguridad avanzada',
-  description: 'Diseñado para conductores que buscan una formación integral, combinando maniobras avanzadas con una mayor carga horaria de conducción en tráfico real.',
+  description: 'Diseñado para personas que buscan aprender maniobras concretas o mejorar el conocimiento actual, prepararse para el examen práctico o conseguir confianza y seguridad al volante.',
   options: [
     {
       name: 'Plan as',
