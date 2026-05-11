@@ -28,7 +28,7 @@ const programDetails = {
   targetAudience: [
     'Para quienes no tengan experiencia y empiezan desde 0',
     'Para quienes tienen conocimientos muy básicos y quieren aprender desde cero con un método eficaz, estructura sólida y seguridad vial',
-    'Para quienes buscan una base sólida y técnica desde el primer día'
+    'Para quienes tienen licencia pero no saben conducir'
   ],
   outcomes: [
     'Conocimiento total de los controles del vehículo',
