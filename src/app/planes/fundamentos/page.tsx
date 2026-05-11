@@ -31,11 +31,11 @@ const programDetails = {
     'Para quienes tienen licencia pero no saben conducir'
   ],
   outcomes: [
-    'Conocimiento total de los controles del vehículo',
-    'Capacidad de circular con seguridad en calles y avenidas',
-    'Dominio de todas las maniobras de estacionamiento',
-    'Mentalidad de conductor responsable y preventivo',
-    'Preparación integral para obtener la licencia sin estrés'
+    'COMPRENDER EL VEHÍCULO Y DOMINARlo',
+    'EJECUTAR MANIOBRAS CON TÉCNICA CORRECTA.',
+    'Eliminar el MIEDO E INSEGURIDAD AL VOLANTE.',
+    'LLEGAR AL EXAMEN CON PREPARACIÓN ESTRATÉGICA.',
+    'CONSTRUIR CONFIANZA REAL PARA MANEJAR SOLO.'
   ],
   features: [
     'Auto para las prácticas con doble comando (si aplica)',
