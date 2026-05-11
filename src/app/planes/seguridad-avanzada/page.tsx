@@ -30,11 +30,11 @@ const programDetails = {
     'Para quienes tienen licencia pero quieren afianzar técnica y precisión.'
   ],
   outcomes: [
-    'Dominio fluido en entornos urbanos complejos',
-    'Eliminación del miedo a circular en zonas de alta velocidad',
-    'Reflejos y anticipación mejorada',
-    'Habilidad avanzada en todo tipo de estacionamientos',
-    'Sensación de control absoluto del vehículo'
+    'Mejorar coordinación y control del vehículo.',
+    'Ejecutar maniobras pendientes con la técnica correcta.',
+    'Corregir vicios malos de conducción.',
+    'Ganar seguridad en situaciones que hoy generan tensión.',
+    'Manejar con fluidez y confianza real.'
   ],
   features: [
     'Auto para las prácticas',
