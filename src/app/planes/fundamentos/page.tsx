@@ -81,11 +81,11 @@ export default function PlanFundamentosPage() {
                     key={idx} 
                     className={cn(
                       "flex flex-col gap-6 p-6 md:p-8 rounded-[2rem] bg-black/40 border transition-all duration-300 shadow-inner relative overflow-hidden group",
-                      idx === 0 ? "border-accent/40 bg-accent/5 ring-1 ring-accent/20" : "border-white/10"
+                      idx === 0 ? "border-gold/40 bg-gold/5 ring-1 ring-gold/20" : "border-white/10"
                     )}
                   >
                     {idx === 0 && (
-                      <div className="absolute top-0 left-1/2 -translate-x-1/2 bg-accent text-white px-4 py-1 rounded-b-xl flex items-center shadow-lg z-20">
+                      <div className="absolute top-0 left-1/2 -translate-x-1/2 bg-gold text-gold-foreground px-4 py-1 rounded-b-xl flex items-center shadow-lg z-20">
                         <span className="text-[10px] font-black uppercase tracking-widest whitespace-nowrap">MÁS POPULAR</span>
                       </div>
                     )}
@@ -93,7 +93,7 @@ export default function PlanFundamentosPage() {
                     <div className="text-center pt-4">
                       <h3 className={cn(
                         "text-2xl font-bold tracking-tight uppercase",
-                        idx === 0 ? "text-accent" : "text-white"
+                        idx === 0 ? "text-gold" : "text-white"
                       )}>
                         {option.name}
                       </h3>
@@ -126,7 +126,7 @@ export default function PlanFundamentosPage() {
                           <Button 
                             className={cn(
                               "w-full rounded-xl h-12 font-bold transition-all group-hover:scale-[1.02]",
-                              idx === 0 ? "bg-accent hover:bg-accent/90" : "bg-primary hover:bg-primary/90"
+                              idx === 0 ? "bg-gold hover:bg-gold/90 text-gold-foreground" : "bg-primary hover:bg-primary/90"
                             )}
                           >
                             Elegir

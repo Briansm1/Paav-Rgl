@@ -24,6 +24,8 @@
     --input: 0 0% 15%;
     --ring: 25 100% 50%;
     --radius: 0.75rem;
+    --gold: 47 95% 43%;
+    --gold-foreground: 0 0% 100%;
   }
   .dark {
     --background: 0 0% 0%;
@@ -43,6 +45,8 @@
     --border: 0 0% 15%;
     --input: 0 0% 15%;
     --ring: 25 100% 50%;
+    --gold: 47 95% 43%;
+    --gold-foreground: 0 0% 100%;
   }
 }
 
