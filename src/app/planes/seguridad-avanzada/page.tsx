@@ -78,9 +78,26 @@ export default function PlanSeguridadAvanzadaPage() {
               {/* Opciones de Plan */}
               <div id="opciones-plan" className="grid grid-cols-1 md:grid-cols-2 gap-6">
                 {programDetails.options.map((option, idx) => (
-                  <div key={idx} className="flex flex-col gap-6 p-6 md:p-8 rounded-[2rem] bg-black/40 border border-white/10 shadow-inner relative overflow-hidden group">
-                    <div className="text-center">
-                      <h3 className="text-2xl font-bold tracking-tight text-white uppercase">{option.name}</h3>
+                  <div 
+                    key={idx} 
+                    className={cn(
+                      "flex flex-col gap-6 p-6 md:p-8 rounded-[2rem] bg-black/40 border transition-all duration-300 shadow-inner relative overflow-hidden group",
+                      idx === 0 ? "border-accent/40 bg-accent/5 ring-1 ring-accent/20" : "border-white/10"
+                    )}
+                  >
+                    {idx === 0 && (
+                      <div className="absolute top-0 left-1/2 -translate-x-1/2 bg-accent text-white px-4 py-1 rounded-b-xl flex items-center shadow-lg z-20">
+                        <span className="text-[10px] font-black uppercase tracking-widest whitespace-nowrap">MÁS POPULAR</span>
+                      </div>
+                    )}
+
+                    <div className="text-center pt-4">
+                      <h3 className={cn(
+                        "text-2xl font-bold tracking-tight uppercase",
+                        idx === 0 ? "text-accent" : "text-white"
+                      )}>
+                        {option.name}
+                      </h3>
                     </div>
 
                     <div className="space-y-4">
@@ -110,7 +127,12 @@ export default function PlanSeguridadAvanzadaPage() {
 
                       <div className="pt-2 flex justify-center">
                         <Link href="#opciones-plan" className="w-full">
-                          <Button className="w-full bg-primary hover:bg-primary/90 rounded-xl h-12 font-bold transition-all group-hover:scale-[1.02]">
+                          <Button 
+                            className={cn(
+                              "w-full rounded-xl h-12 font-bold transition-all group-hover:scale-[1.02]",
+                              idx === 0 ? "bg-accent hover:bg-accent/90" : "bg-primary hover:bg-primary/90"
+                            )}
+                          >
                             Elegir
                           </Button>
                         </Link>
