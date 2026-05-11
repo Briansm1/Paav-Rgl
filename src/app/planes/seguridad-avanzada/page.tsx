@@ -196,7 +196,7 @@ export default function PlanSeguridadAvanzadaPage() {
                       >
                         <div className="relative">
                           <span className="absolute inset-0 rounded-full bg-accent animate-ping opacity-75"></span>
-                          <div className="relative w-7 h-7 rounded-full bg-accent text-white flex items-center justify-center font-bold text-sm shadow-lg shadow-accent/30">
+                          <div className="relative w-7 h-7 rounded-full bg-accent text-white flex items-center justify-center font-bold text-sm">
                             {i + 1}
                           </div>
                         </div>
@@ -213,7 +213,7 @@ export default function PlanSeguridadAvanzadaPage() {
               <div className="pt-8 flex justify-center">
                 <Link href="#opciones-plan" className="w-full max-w-xs">
                   <Button className="w-full bg-primary hover:bg-primary/90 rounded-xl h-12 font-bold transition-all">
-                    Quiero elegir un plan
+                    Elegir
                   </Button>
                 </Link>
               </div>
