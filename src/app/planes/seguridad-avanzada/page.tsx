@@ -44,10 +44,11 @@ const programDetails = {
     'Asesoría sobre los requisitos y trámites para gestionar la licencia de conducir'
   ],
   bonuses: [
-    'Mantenimiento preventivo: Fluidos y mecánica ligera',
-    'Kit de emergencia: Cambio de neumáticos y seguridad',
-    'Simulador de examen teórico premium (+150 preguntas)',
-    'Acceso vitalicio a actualizaciones de material digital'
+    'Como identificar los differentes fluidos de un auto y como controlarlos',
+    'Como realizar un cambio de neumático',
+    'Simulador de examen teórico con +85 preguntas',
+    'Descuentos exclusivos en nuestros productos digitales',
+    'Descuentos exclusivos con nuestros comercios amigos y socios'
   ]
 };
 
