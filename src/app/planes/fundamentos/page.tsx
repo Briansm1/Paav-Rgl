@@ -3,43 +3,54 @@ import Link from 'next/link';
 import { Header } from '@/components/Header';
 import { Footer } from '@/components/Footer';
 import { Button } from '@/components/ui/button';
-import { Check, ArrowLeft, UserCheck, Target, Clock, Gift } from 'lucide-react';
+import { Check, ArrowLeft, UserCheck, Target, Clock, Gift, ShieldCheck } from 'lucide-react';
+import { cn } from '@/lib/utils';
 
-const detailedPlans = [
-  {
-    name: 'Plan Cero a Héroe',
-    transferPrice: '$311.999',
-    cardPrice: '$479.999',
-    savings: 'Ahorro de $168.000',
-    sessions: '8 sesiones de prácticas dinámicas',
-    fullDesc: 'La formación definitiva para quienes empiezan desde cero absoluto. Te acompañamos desde el primer contacto con el auto hasta convertirte en un conductor seguro y autónomo.',
-    targetAudience: [
-      'Para personas que nunca han tocado un volante',
-      'Para quienes tienen mucho miedo y necesitan un proceso guiado paso a paso',
-      'Para quienes buscan una base sólida y técnica desde el primer día'
-    ],
-    outcomes: [
-      'Conocimiento total de los controles del vehículo',
-      'Capacidad de circular con seguridad en calles y avenidas',
-      'Dominio de todas las maniobras de estacionamiento',
-      'Mentalidad de conductor responsable y preventivo',
-      'Preparación integral para obtener la licencia sin estrés'
-    ],
-    features: [
-      'Auto para las prácticas con doble comando (si aplica)',
-      'Acceso exclusiva a la comunidad privada PAAV',
-      'Material teórico completo and actualizado',
-      'Acompañamiento personalizado en cada sesión',
-      'Descuento especial en alquiler de auto para examen - 15% off'
-    ],
-    bonuses: [
-      'Como identificar los diferentes fluidos de un auto y como controlarlos',
-      'Como realizar un cambio de neumático',
-      'Simulador de examen teórico ilimitado',
-      'Asesoría VIP en trámites municipales'
-    ]
-  }
-];
+const programDetails = {
+  name: 'Programa fundamentos',
+  description: 'La formación definitiva para quienes empiezan desde cero absoluto. Te acompañamos desde el primer contacto con el auto hasta convertirte en un conductor seguro y autónomo.',
+  options: [
+    {
+      name: 'Plan Cero a Héroe',
+      transferPrice: '$311.999',
+      cardPrice: '$479.999',
+      savings: 'Ahorro de $168.000',
+      sessions: '8 sesiones de prácticas dinámicas',
+    },
+    {
+      name: 'Plan Héroe Total',
+      transferPrice: '$389.999',
+      cardPrice: '$599.999',
+      savings: 'Ahorro de $210.000',
+      sessions: '10 sesiones de prácticas dinámicas',
+    }
+  ],
+  targetAudience: [
+    'Para personas que nunca han tocado un volante',
+    'Para quienes tienen mucho miedo y necesitan un proceso guiado paso a paso',
+    'Para quienes buscan una base sólida y técnica desde el primer día'
+  ],
+  outcomes: [
+    'Conocimiento total de los controles del vehículo',
+    'Capacidad de circular con seguridad en calles y avenidas',
+    'Dominio de todas las maniobras de estacionamiento',
+    'Mentalidad de conductor responsable y preventivo',
+    'Preparación integral para obtener la licencia sin estrés'
+  ],
+  features: [
+    'Auto para las prácticas con doble comando (si aplica)',
+    'Acceso exclusiva a la comunidad privada PAAV',
+    'Material teórico completo y actualizado',
+    'Acompañamiento personalizado en cada sesión',
+    'Descuento especial en alquiler de auto para examen - 15% off'
+  ],
+  bonuses: [
+    'Como identificar los diferentes fluidos de un auto y como controlarlos',
+    'Como realizar un cambio de neumático',
+    'Simulador de examen teórico ilimitado',
+    'Asesoría VIP en trámites municipales'
+  ]
+};
 
 export default function PlanFundamentosPage() {
   return (
@@ -60,67 +71,73 @@ export default function PlanFundamentosPage() {
 
       <section className="py-12 md:py-20 bg-background">
         <div className="container mx-auto px-4">
-          <div className="flex justify-center max-w-7xl mx-auto">
-            {detailedPlans.map((plan, index) => (
-              <div 
-                key={index} 
-                className="flex flex-col gap-8 p-6 md:p-10 rounded-[2.5rem] border bg-secondary shadow-2xl border-white/5 h-full max-w-2xl w-full"
-              >
-                <div id="precios" className="w-full space-y-6 flex flex-col items-center text-center">
-                  <h2 className="text-3xl md:text-4xl font-bold tracking-tight text-center">{plan.name}</h2>
-                  
-                  <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 w-full bg-black/40 p-6 md:p-8 rounded-3xl border border-white/10 shadow-inner">
-                    <div className="flex flex-col items-center justify-center gap-4 sm:border-r border-white/10 sm:pr-6">
-                      <div className="flex flex-col items-center gap-1">
-                        <span className="text-[10px] md:text-xs font-bold text-slate-400 uppercase tracking-widest">Transferencia</span>
-                      </div>
-                      <p className="text-3xl md:text-5xl font-black text-green-500 text-center tracking-tighter">
-                        {plan.transferPrice}
-                      </p>
-                      <span className="text-[10px] md:text-xs font-bold bg-green-500/20 text-green-500 px-3 py-1 rounded-full text-center border border-green-500/30">
-                        {plan.savings}
-                      </span>
-                    </div>
-                    
-                    <div className="flex flex-col items-center justify-center gap-4">
-                      <div className="flex flex-col items-center gap-1">
-                        <span className="text-[10px] md:text-xs font-bold text-slate-400 uppercase tracking-widest">TARJETA DE CRÉDITO</span>
-                      </div>
-                      <p className="text-3xl md:text-5xl font-black text-primary text-center tracking-tighter">
-                        {plan.cardPrice}
-                      </p>
-                      <span className="mt-1 text-[10px] font-bold bg-primary/20 text-primary px-3 py-1 rounded-full text-center border border-primary/30">
-                        6 cuotas sin interés
-                      </span>
+          <div className="max-w-4xl mx-auto">
+            <div className="flex flex-col gap-10 p-6 md:p-12 rounded-[3rem] border bg-secondary shadow-2xl border-white/5 h-full w-full">
+              
+              {/* Opciones de Plan */}
+              <div id="opciones-plan" className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                {programDetails.options.map((option, idx) => (
+                  <div key={idx} className="flex flex-col gap-6 p-6 md:p-8 rounded-[2rem] bg-black/40 border border-white/10 shadow-inner relative overflow-hidden group">
+                    <div className="text-center">
+                      <h3 className="text-2xl font-bold tracking-tight text-white uppercase">{option.name}</h3>
                     </div>
 
-                    <div className="col-span-full pt-4 border-t border-white/10 mt-2 flex flex-col items-center gap-4">
-                      <p className="text-center font-bold text-slate-300 flex items-center justify-center gap-2 text-base md:text-lg">
-                        <Clock className="w-5 h-5 text-primary" />
-                        {plan.sessions}
-                      </p>
-                      <Link href="#precios" className="w-full max-w-xs">
-                        <Button className="w-full bg-primary hover:bg-primary/90 rounded-xl h-12 font-bold transition-all">
-                          Elegir
-                        </Button>
-                      </Link>
+                    <div className="space-y-4">
+                      {/* Precio Transferencia */}
+                      <div className="flex flex-col items-center">
+                        <span className="text-[10px] font-bold text-slate-400 uppercase tracking-widest mb-1">Transferencia</span>
+                        <p className="text-4xl md:text-5xl font-black text-green-500 tracking-tighter">{option.transferPrice}</p>
+                        <span className="mt-2 text-[10px] font-bold bg-green-500/20 text-green-500 px-3 py-1 rounded-full border border-green-500/30">
+                          {option.savings}
+                        </span>
+                      </div>
+
+                      {/* Precio Tarjeta */}
+                      <div className="pt-4 border-t border-white/5 flex flex-col items-center">
+                        <span className="text-[10px] font-bold text-slate-400 uppercase tracking-widest mb-1">TARJETA DE CRÉDITO</span>
+                        <p className="text-4xl md:text-5xl font-black text-primary tracking-tighter">{option.cardPrice}</p>
+                        <span className="mt-1 text-[10px] font-bold bg-primary/20 text-primary px-3 py-1 rounded-full text-center border border-primary/30">
+                          6 cuotas sin interés
+                        </span>
+                      </div>
+
+                      {/* Sesiones debajo de los precios */}
+                      <div className="pt-4 border-t border-white/10 flex items-center justify-center gap-2 text-primary font-bold">
+                        <Clock className="w-4 h-4" />
+                        <span className="text-sm text-center">{option.sessions}</span>
+                      </div>
+
+                      <div className="pt-2 flex justify-center">
+                        <Link href="#opciones-plan" className="w-full">
+                          <Button className="w-full bg-primary hover:bg-primary/90 rounded-xl h-12 font-bold transition-all group-hover:scale-[1.02]">
+                            Elegir
+                          </Button>
+                        </Link>
+                      </div>
                     </div>
                   </div>
+                ))}
+              </div>
 
-                  <p className="text-base text-muted-foreground leading-relaxed max-w-xl text-center">
-                    {plan.fullDesc}
-                  </p>
-                </div>
+              {/* Descripción */}
+              <div className="text-center py-4">
+                <p className="text-lg text-muted-foreground leading-relaxed max-w-2xl mx-auto">
+                  {programDetails.description}
+                </p>
+              </div>
 
-                <div className="w-full bg-black/20 p-6 rounded-[2rem] border border-white/5">
+              {/* Contenido Unificado */}
+              <div className="flex flex-col gap-8">
+                <div className="bg-black/20 p-6 rounded-[2rem] border border-white/5">
                   <h3 className="text-lg font-bold mb-4 flex items-center justify-center gap-2 text-foreground text-center">
+                    <UserCheck className="w-5 h-5 text-primary" />
                     ¿Para quién es?
                   </h3>
                   <div className="space-y-3">
-                    {plan.targetAudience.map((item, i) => (
-                      <div key={i} className="flex items-start gap-3 group">
+                    {programDetails.targetAudience.map((item, i) => (
+                      <div key={i} className="flex items-start gap-3">
                         <div className="mt-1 bg-primary/10 p-1 rounded-full shrink-0">
-                          <UserCheck className="w-3 h-3 text-primary" />
+                          <Check className="w-3 h-3 text-primary" />
                         </div>
                         <span className="text-sm text-foreground/90 font-medium leading-tight">{item}</span>
                       </div>
@@ -128,15 +145,16 @@ export default function PlanFundamentosPage() {
                   </div>
                 </div>
 
-                <div className="w-full bg-black/20 p-6 rounded-[2rem] border border-white/5">
+                <div className="bg-black/20 p-6 rounded-[2rem] border border-white/5">
                   <h3 className="text-lg font-bold mb-4 flex items-center justify-center gap-2 text-foreground text-center">
+                    <Target className="w-5 h-5 text-accent" />
                     ¿Qué vas a lograr?
                   </h3>
                   <div className="space-y-3">
-                    {plan.outcomes.map((item, i) => (
-                      <div key={i} className="flex items-start gap-3 group">
+                    {programDetails.outcomes.map((item, i) => (
+                      <div key={i} className="flex items-start gap-3">
                         <div className="mt-1 bg-accent/10 p-1 rounded-full shrink-0">
-                          <Target className="w-3 h-3 text-accent" />
+                          <Check className="w-3 h-3 text-accent" />
                         </div>
                         <span className="text-sm text-foreground/90 font-medium leading-tight">{item}</span>
                       </div>
@@ -144,13 +162,14 @@ export default function PlanFundamentosPage() {
                   </div>
                 </div>
 
-                <div className="w-full bg-black/20 p-6 rounded-[2rem] border border-white/5">
+                <div className="bg-black/20 p-6 rounded-[2rem] border border-white/5">
                   <h3 className="text-lg font-bold mb-4 flex items-center justify-center gap-2 text-foreground text-center">
-                    ¿Qué incluye?
+                    <ShieldCheck className="w-5 h-5 text-green-500" />
+                    ¿Qué incluye el programa?
                   </h3>
                   <div className="space-y-3">
-                    {plan.features.map((feature, i) => (
-                      <div key={i} className="flex items-start gap-3 group">
+                    {programDetails.features.map((feature, i) => (
+                      <div key={i} className="flex items-start gap-3">
                         <div className="mt-1 bg-green-500/10 p-1 rounded-full shrink-0">
                           <Check className="w-3 h-3 text-green-500" />
                         </div>
@@ -160,37 +179,45 @@ export default function PlanFundamentosPage() {
                   </div>
                 </div>
 
-                <div className="w-full bg-accent/10 p-6 md:p-8 rounded-[2.5rem] border-2 border-accent/40 shadow-lg shadow-accent/5">
+                <div className="bg-accent/10 p-6 rounded-[2rem] border-2 border-accent/40 shadow-lg shadow-accent/5">
                   <h3 className="text-xl font-bold mb-8 flex items-center justify-center gap-3 text-accent text-center">
                     <Gift className="w-6 h-6" />
                     Bonos de regalo
                   </h3>
                   <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
-                    {plan.bonuses.map((bono, i) => (
-                      <div key={i} className="flex flex-col items-center text-center gap-3 group">
+                    {programDetails.bonuses.map((bono, i) => (
+                      <div 
+                        key={i} 
+                        className={cn(
+                          "flex flex-col items-center text-center gap-2",
+                          i === programDetails.bonuses.length - 1 && i % 2 === 0 && "sm:col-span-2"
+                        )}
+                      >
                         <div className="relative">
                           <span className="absolute inset-0 rounded-full bg-accent animate-ping opacity-75"></span>
-                          <div className="relative w-10 h-10 rounded-full bg-accent text-white flex items-center justify-center font-bold text-lg group-hover:scale-110 transition-transform">
+                          <div className="relative w-7 h-7 rounded-full bg-accent text-white flex items-center justify-center font-bold text-sm">
                             {i + 1}
                           </div>
                         </div>
-                        <span className="text-xs md:text-sm text-foreground/90 font-bold leading-snug">
+                        <span className="text-xs text-foreground/90 font-bold leading-tight">
                           {bono}
                         </span>
                       </div>
                     ))}
                   </div>
                 </div>
-
-                <div className="pt-4 flex justify-center">
-                  <Link href="#precios" className="w-full max-w-xs">
-                    <Button className="w-full bg-primary hover:bg-primary/90 rounded-xl h-12 font-bold transition-all">
-                      Elegir
-                    </Button>
-                  </Link>
-                </div>
               </div>
-            ))}
+
+              {/* Botón final */}
+              <div className="pt-8 flex justify-center">
+                <Link href="#opciones-plan" className="w-full max-w-xs">
+                  <Button className="w-full bg-primary hover:bg-primary/90 rounded-xl h-12 font-bold transition-all">
+                    Elegir
+                  </Button>
+                </Link>
+              </div>
+
+            </div>
           </div>
         </div>
       </section>
