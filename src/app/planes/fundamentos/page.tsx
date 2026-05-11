@@ -40,9 +40,9 @@ const programDetails = {
   features: [
     'Auto para las prácticas con doble comando (si aplica)',
     'Acceso exclusiva a la comunidad privada PAAV',
-    'Material teórico completo y actualizado',
-    'Acompañamiento personalizado en cada sesión',
-    'Descuento especial en alquiler de auto para examen - 15% off'
+    'Formación teórica aplicada a situaciones reales y sobre el marco legal',
+    'Descuento en el uso del auto para el examen práctico - 15% off',
+    'Asesoría sobre los requisitos y trámites para gestionar la licencia de conducir'
   ],
   bonuses: [
     'Como identificar los diferentes fluidos de un auto y como controlarlos',
