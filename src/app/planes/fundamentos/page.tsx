@@ -11,7 +11,7 @@ const programDetails = {
   description: 'La formación definitiva para quienes empiezan desde cero absoluto. Te acompañamos desde el primer contacto con el auto hasta convertirte en un conductor seguro y autónomo.',
   options: [
     {
-      name: 'Plan Cero a Héroe',
+      name: 'Plan oro',
       transferPrice: '$311.999',
       cardPrice: '$479.999',
       savings: 'Ahorro de $168.000',
