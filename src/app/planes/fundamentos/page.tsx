@@ -75,7 +75,7 @@ export default function PlanFundamentosPage() {
           <div className="max-w-4xl mx-auto">
             <div className="flex flex-col gap-10 p-6 md:p-12 rounded-[3rem] border bg-secondary shadow-2xl border-white/5 h-full w-full">
               
-              <div id="opciones-plan" className="grid grid-cols-1 md:grid-cols-2 gap-6">
+              <div id="opciones-plan" className="grid grid-cols-1 md:grid-cols-2 gap-6 pt-6">
                 {programDetails.options.map((option, idx) => (
                   <div 
                     key={idx} 
@@ -85,13 +85,12 @@ export default function PlanFundamentosPage() {
                     )}
                   >
                     {idx === 0 && (
-                      <div className="absolute top-0 right-0 bg-accent text-white px-4 py-1 rounded-bl-xl flex items-center gap-1.5 shadow-lg">
-                        <Star className="w-3 h-3 fill-current" />
-                        <span className="text-[10px] font-black uppercase tracking-widest">MÁS POPULAR</span>
+                      <div className="absolute top-0 left-1/2 -translate-x-1/2 bg-accent text-white px-4 py-1 rounded-b-xl flex items-center shadow-lg z-20">
+                        <span className="text-[10px] font-black uppercase tracking-widest whitespace-nowrap">MÁS POPULAR</span>
                       </div>
                     )}
 
-                    <div className="text-center pt-2">
+                    <div className="text-center pt-4">
                       <h3 className={cn(
                         "text-2xl font-bold tracking-tight uppercase",
                         idx === 0 ? "text-accent" : "text-white"
