@@ -47,8 +47,9 @@ const programDetails = {
   bonuses: [
     'Como identificar los diferentes fluidos de un auto y como controlarlos',
     'Como realizar un cambio de neumático',
-    'Simulador de examen teórico ilimitado',
-    'Asesoría VIP en trámites municipales'
+    'Simulador de examen teórico con +85 preguntas',
+    'Descuentos exclusivos en nuestros productos digitales',
+    'Descuentos exclusivos con nuestros comercios amigos y socios'
   ]
 };
 
@@ -189,17 +190,17 @@ export default function PlanFundamentosPage() {
                       <div 
                         key={i} 
                         className={cn(
-                          "flex flex-col items-center text-center gap-2",
+                          "flex flex-col items-center text-center gap-3 group",
                           i === programDetails.bonuses.length - 1 && i % 2 === 0 && "sm:col-span-2"
                         )}
                       >
                         <div className="relative">
                           <span className="absolute inset-0 rounded-full bg-accent animate-ping opacity-75"></span>
-                          <div className="relative w-7 h-7 rounded-full bg-accent text-white flex items-center justify-center font-bold text-sm">
+                          <div className="relative w-10 h-10 rounded-full bg-accent text-white flex items-center justify-center font-bold text-lg">
                             {i + 1}
                           </div>
                         </div>
-                        <span className="text-xs text-foreground/90 font-bold leading-tight">
+                        <span className="text-xs md:text-sm text-foreground/90 font-bold leading-snug">
                           {bono}
                         </span>
                       </div>
