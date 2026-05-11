@@ -26,7 +26,7 @@ const programDetails = {
     }
   ],
   targetAudience: [
-    'Para personas que nunca han tocado un volante',
+    'Para quienes no tengan experiencia y empiezan desde 0',
     'Para quienes tienen mucho miedo y necesitan un proceso guiado paso a paso',
     'Para quienes buscan una base sólida y técnica desde el primer día'
   ],
@@ -45,11 +45,11 @@ const programDetails = {
     'Descuento especial en alquiler de auto para examen - 15% off'
   ],
   bonuses: [
-    { text: 'Como identificar los diferentes fluidos de un auto y como controlarlos' },
-    { text: 'Como realizar un cambio de neumático' },
-    { text: 'Simulador de examen teórico con +85 preguntas' },
-    { text: 'Descuentos exclusivos en nuestros productos digitales' },
-    { text: 'Descuentos exclusivos con nuestros comercios amigos y socios' }
+    'Como identificar los diferentes fluidos de un auto y como controlarlos',
+    'Como realizar un cambio de neumático',
+    'Simulador de examen teórico con +85 preguntas',
+    'Descuentos exclusivos en nuestros productos digitales',
+    'Descuentos exclusivos con nuestros comercios amigos y socios'
   ]
 };
 
@@ -195,7 +195,7 @@ export default function PlanFundamentosPage() {
                           </div>
                         </div>
                         <span className="text-xs md:text-sm text-foreground/90 font-bold leading-snug">
-                          {bono.text}
+                          {bono}
                         </span>
                       </div>
                     ))}
