@@ -31,11 +31,11 @@ const programDetails = {
     'Para quienes tienen licencia pero no saben conducir'
   ],
   outcomes: [
-    'COMPRENDER EL VEHÍCULO Y DOMINARlo',
-    'EJECUTAR MANIOBRAS CON TÉCNICA CORRECTA.',
-    'Eliminar el MIEDO E INSEGURIDAD AL VOLANTE.',
-    'LLEGAR AL EXAMEN CON PREPARACIÓN ESTRATÉGICA.',
-    'CONSTRUIR CONFIANZA REAL PARA MANEJAR SOLO.'
+    'Comprender el vehículo y dominarlo',
+    'Ejecutar maniobras con técnica correcta',
+    'Eliminar el miedo e inseguridad al volante',
+    'Llegar al examen con preparación estratégica',
+    'Construir confianza real para manejar solo'
   ],
   features: [
     'Auto para las prácticas con doble comando (si aplica)',
