@@ -39,9 +39,9 @@ const programDetails = {
   features: [
     'Auto para las prácticas',
     'Acceso a la comunidad privada',
-    'Formación teórica intensiva sobre manejo preventivo',
-    'Descuento en el uso del auto para el examen práctico',
-    'Asesoría completa sobre trámites de licencia'
+    'Formación teórica aplicada a situaciones reales y sobre el marco legal',
+    'Descuento en el uso del auto para el examen práctico - 10% off',
+    'Asesoría sobre los requisitos y trámites para gestionar la licencia de conducir'
   ],
   bonuses: [
     'Mantenimiento preventivo: Fluidos y mecánica ligera',
@@ -114,7 +114,7 @@ export default function PlanSeguridadAvanzadaPage() {
                 ))}
               </div>
 
-              {/* Descripción movida debajo de los botones de elegir */}
+              {/* Descripción debajo de los botones de elegir */}
               <div className="text-center py-4">
                 <p className="text-lg text-muted-foreground leading-relaxed max-w-2xl mx-auto">
                   {programDetails.description}
