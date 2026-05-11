@@ -38,8 +38,8 @@ const programDetails = {
     'Construir confianza real para manejar solo'
   ],
   features: [
-    'Vehículo para las clases prácticas (con doble comando)',
-    'Acceso exclusiva a la comunidad privada PAAV',
+    'Vehículo para las clases prácticas',
+    'Acceso a la comunidad privada',
     'Formación teórica aplicada a situaciones reales y sobre el marco legal',
     'Descuento en el uso del auto para el examen práctico - 15% off',
     'Asesoría sobre los requisitos y trámites para gestionar la licencia de conducir'
