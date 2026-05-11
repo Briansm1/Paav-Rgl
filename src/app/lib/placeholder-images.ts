@@ -126,5 +126,11 @@ export const PlaceHolderImages: ImagePlaceholder[] = [
     "description": "Logro de Candelaria Pereyra",
     "imageUrl": "https://i.imgur.com/OeVAKpn.png",
     "imageHint": "driving success"
+  },
+  {
+    "id": "achievement-lautaro",
+    "description": "Logro de Lautaro Ramirez",
+    "imageUrl": "https://i.imgur.com/GsZ2NCM.png",
+    "imageHint": "driving achievement"
   }
 ];

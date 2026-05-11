@@ -34,6 +34,7 @@ const testimonials = [
   {
     name: 'Lautaro Ramirez',
     content: 'Buenas. Muy recomendable la escuela de manejo. La mejor atención que recibí y todo excelente; pude concretar mi meta de recibir mi licencia de conducir gracias a las clases intensivas que me brindaron. El instructor es una persona muy paciente y profesional, dando indicaciones claras. Excelente academia brindándome material teórico y práctico para adquirir mucho más conocimiento. Una experiencia excelente, muchas gracias a Pilotos - ases al volante por la meta que logré conseguir.',
+    headerImageId: 'achievement-lautaro'
   },
   {
     name: 'Maria Silisque',
