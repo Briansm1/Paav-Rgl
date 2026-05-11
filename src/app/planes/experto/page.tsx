@@ -26,7 +26,7 @@ const detailedPlans = [
       'Salir con sensación de dominio y control del vehículo'
     ],
     features: [
-      'Auto para las prácticas',
+      'Vehículo para las clases prácticas',
       'Acceso a la comunidad privada',
       'Formación teórica aplicada a situaciones reales y sobre el marco legal',
       'Descuento en el uso del auto para el examen práctico - 5% off',

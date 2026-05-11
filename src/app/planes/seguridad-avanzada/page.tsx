@@ -38,7 +38,7 @@ const programDetails = {
     'Manejar con fluidez y confianza real.'
   ],
   features: [
-    'Auto para las prácticas',
+    'Vehículo para las clases prácticas',
     'Acceso a la comunidad privada',
     'Formación teórica aplicada a situaciones reales y sobre el marco legal',
     'Descuento en el uso del auto para el examen práctico - 10% off',
