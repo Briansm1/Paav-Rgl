@@ -18,7 +18,7 @@ const programDetails = {
       sessions: '8 sesiones de prácticas dinámicas',
     },
     {
-      name: 'Plan Héroe Total',
+      name: 'Plan rookie',
       transferPrice: '$389.999',
       cardPrice: '$599.999',
       savings: 'Ahorro de $210.000',
