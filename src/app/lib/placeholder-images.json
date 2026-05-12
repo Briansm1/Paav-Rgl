@@ -138,6 +138,18 @@
       "description": "Socio Estratégico 2",
       "imageUrl": "https://i.imgur.com/1CDCJEJ.png",
       "imageHint": "partner logo"
+    },
+    {
+      "id": "partner-3",
+      "description": "TE ESTAMOS BUSCANDO",
+      "imageUrl": "https://picsum.photos/seed/searching1/1080/680",
+      "imageHint": "looking for"
+    },
+    {
+      "id": "partner-4",
+      "description": "TE ESTAMOS BUSCANDO",
+      "imageUrl": "https://picsum.photos/seed/searching2/1080/680",
+      "imageHint": "partnership opportunity"
     }
   ]
 }
