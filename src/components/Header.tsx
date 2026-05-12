@@ -1,3 +1,4 @@
+
 "use client";
 
 import React, { useState, useEffect } from 'react';
@@ -16,6 +17,12 @@ export const Header = () => {
   const logoImg = PlaceHolderImages.find(img => img.id === 'academy-logo');
 
   useEffect(() => {
+    // Forzar scroll al inicio al recargar la página
+    window.scrollTo(0, 0);
+    if ('scrollRestoration' in window.history) {
+      window.history.scrollRestoration = 'manual';
+    }
+
     const handleScroll = () => {
       setIsScrolled(window.scrollY > 20);
 
