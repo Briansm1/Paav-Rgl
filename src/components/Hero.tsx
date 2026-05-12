@@ -28,7 +28,7 @@ export const Hero = () => {
       <div className="container mx-auto px-4 relative z-10">
         <div className="max-w-4xl">
           <div className="inline-flex items-center gap-2 bg-white/10 backdrop-blur-md border border-white/20 rounded-full px-4 py-1.5 mb-4 animate-in fade-in slide-in-from-bottom-4 duration-700">
-            <Star className="w-4 h-4 text-yellow-500 fill-yellow-500" />
+            <Star className="w-4 h-4 text-gold fill-gold" />
             <span className="text-sm md:text-base font-bold text-white">La elección N°1 de la región</span>
           </div>
           
@@ -51,17 +51,17 @@ export const Hero = () => {
           
           <div className="mt-8 md:mt-10 flex items-center gap-6 sm:gap-12 md:gap-16 animate-in fade-in duration-1000 delay-500">
             <div className="text-center">
-              <p className="text-2xl md:text-4xl font-bold text-white">Equipo</p>
+              <p className="text-2xl md:text-4xl font-bold text-gold">Equipo</p>
               <p className="text-[10px] md:text-xs text-white/50 uppercase tracking-widest font-bold mt-1">CERTIFICADO Y CALIFICADO</p>
             </div>
             <div className="w-px h-10 bg-white/20"></div>
             <div className="text-center">
-              <p className="text-2xl md:text-4xl font-bold text-white">+5 años</p>
+              <p className="text-2xl md:text-4xl font-bold text-gold">+5 años</p>
               <p className="text-[10px] md:text-xs text-white/50 uppercase tracking-widest font-bold mt-1">FORMANDO ASES</p>
             </div>
             <div className="w-px h-10 bg-white/20"></div>
             <div className="text-center">
-              <p className="text-2xl md:text-4xl font-bold text-white">4.9/5</p>
+              <p className="text-2xl md:text-4xl font-bold text-gold">4.9/5</p>
               <p className="text-[10px] md:text-xs text-white/50 uppercase tracking-widest font-bold mt-1">LOS MÁS RECOMENDADOS</p>
             </div>
           </div>
