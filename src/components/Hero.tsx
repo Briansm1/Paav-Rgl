@@ -62,7 +62,7 @@ export const Hero = () => {
             <div className="w-px h-10 bg-white/20"></div>
             <div className="text-center">
               <p className="text-2xl md:text-4xl font-bold text-white">4.9/5</p>
-              <p className="text-[10px] md:text-xs text-white/50 uppercase tracking-widest font-bold mt-1">rating</p>
+              <p className="text-[10px] md:text-xs text-white/50 uppercase tracking-widest font-bold mt-1">LOS MÁS RECOMENDADOS</p>
             </div>
           </div>
         </div>
