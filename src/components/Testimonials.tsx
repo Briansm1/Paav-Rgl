@@ -53,7 +53,7 @@ const testimonials = [
   },
   {
     name: 'Javier Peña',
-    content: 'La metodología que usan es muy efectiva. Pasé de tener pánico a sentarme frente al volante a manejar con total tranquilidad en el tráfico. Los recomiendo totalmente.',
+    content: 'hola! recomiendo, todo excelente y práctico, me sirvió un montón.',
     role: 'Egresado'
   },
   {
