@@ -154,7 +154,7 @@ export const Contact = () => {
                     <Mail className="w-6 h-6 text-primary" />
                   </div>
                   <div>
-                    <p className="font-bold text-lg mb-1">Consultas</p>
+                    <p className="font-bold text-lg mb-1">Más consultas o propuestas</p>
                     <a 
                       href={`mailto:${emailAddress}`}
                       className="text-muted-foreground font-medium hover:text-primary transition-colors no-underline"
