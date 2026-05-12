@@ -126,6 +126,36 @@
       "description": "Logro de Lautaro Ramirez",
       "imageUrl": "https://i.imgur.com/GsZ2NCM.png",
       "imageHint": "driving achievement"
+    },
+    {
+      "id": "partner-1",
+      "description": "Gomería El Amigo",
+      "imageUrl": "https://picsum.photos/seed/partner1/200/100",
+      "imageHint": "shop logo"
+    },
+    {
+      "id": "partner-2",
+      "description": "Seguros Santa Cruz",
+      "imageUrl": "https://picsum.photos/seed/partner2/200/100",
+      "imageHint": "insurance logo"
+    },
+    {
+      "id": "partner-3",
+      "description": "Estética Vehicular",
+      "imageUrl": "https://picsum.photos/seed/partner3/200/100",
+      "imageHint": "car detailing"
+    },
+    {
+      "id": "partner-4",
+      "description": "Café del Volante",
+      "imageUrl": "https://picsum.photos/seed/partner4/200/100",
+      "imageHint": "coffee logo"
+    },
+    {
+      "id": "partner-5",
+      "description": "Repuestos Río",
+      "imageUrl": "https://picsum.photos/seed/partner5/200/100",
+      "imageHint": "parts store"
     }
   ]
 }
