@@ -68,7 +68,7 @@ export const Contact = () => {
             Tu opinión es <span className="text-primary italic">nuestro motor</span>
           </h2>
           <p className="text-lg md:text-xl text-muted-foreground leading-relaxed">
-            Compartí tu experiencia y ayuda a otros a iniciar su camino hacia la libertad e independencia.
+            Compartinos tu experiencia y ayuda a otros a iniciar su camino hacia la libertad e independencia.
           </p>
         </div>
 
