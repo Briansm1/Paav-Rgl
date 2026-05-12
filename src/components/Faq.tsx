@@ -42,9 +42,6 @@ export const Faq = () => {
           <h2 className="text-4xl md:text-6xl font-bold font-headline mb-6 tracking-tight text-foreground">
             Preguntas <span className="text-primary italic">frecuentes</span>
           </h2>
-          <p className="text-lg text-muted-foreground leading-relaxed">
-            Todo lo que necesitás saber antes de subirte al auto con nosotros.
-          </p>
         </div>
 
         <div className="max-w-3xl mx-auto bg-card p-6 md:p-10 rounded-[2.5rem] border border-white/5 shadow-2xl">
