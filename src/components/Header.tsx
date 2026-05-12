@@ -1,4 +1,3 @@
-
 "use client";
 
 import React, { useState, useEffect } from 'react';
@@ -49,8 +48,8 @@ export const Header = () => {
       className={cn(
         "fixed top-0 left-0 right-0 z-50 transition-all duration-300 bg-black border-b border-white/5",
         isScrolled || mobileMenuOpen 
-          ? "py-1 shadow-lg" 
-          : "py-2"
+          ? "py-2 shadow-lg" 
+          : "py-4"
       )}
     >
       <div className="container mx-auto px-4 flex items-center justify-between">
@@ -63,7 +62,7 @@ export const Header = () => {
           }}
         >
           {logoImg ? (
-            <div className="relative h-10 w-40 md:h-12 md:w-48 transition-all duration-300">
+            <div className="relative h-12 w-48 md:h-14 md:w-56 transition-all duration-300">
               <Image 
                 src={logoImg.imageUrl} 
                 alt={logoImg.description} 
@@ -74,21 +73,21 @@ export const Header = () => {
               />
             </div>
           ) : (
-            <span className="text-lg font-bold font-headline tracking-tight text-white">
+            <span className="text-xl md:text-2xl font-bold font-headline tracking-tight text-white">
               Pilotos - <span className="text-primary">ases al volante</span>
             </span>
           )}
         </Link>
 
         {/* Desktop Nav */}
-        <nav className="hidden md:flex items-center gap-6 lg:gap-8">
+        <nav className="hidden md:flex items-center gap-6 lg:gap-10">
           {navLinks.map((link) => (
             <Link
               key={link.name}
               href={link.href}
               onClick={() => setActiveSection(link.href)}
               className={cn(
-                "relative text-xs font-bold transition-colors duration-300",
+                "relative text-sm lg:text-base font-bold transition-colors duration-300",
                 activeSection === link.href 
                   ? "text-primary" 
                   : "text-slate-300 hover:text-white"
@@ -102,7 +101,7 @@ export const Header = () => {
             </Link>
           ))}
           <Link href="#planes">
-            <Button className="bg-green-600 hover:bg-green-700 text-white rounded-full px-5 font-bold shadow-lg shadow-green-600/20 h-9 text-xs">
+            <Button className="bg-green-600 hover:bg-green-700 text-white rounded-full px-6 font-bold shadow-lg shadow-green-600/20 h-10 text-sm">
               Quiero empezar
             </Button>
           </Link>
