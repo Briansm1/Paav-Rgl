@@ -11,7 +11,7 @@ export const Hero = () => {
   const heroImg = PlaceHolderImages.find(img => img.id === 'hero-bg');
 
   return (
-    <section id="inicio" className="relative min-h-screen flex items-center pt-24 pb-12 overflow-hidden">
+    <section id="inicio" className="relative min-h-screen flex items-center pt-20 pb-12 overflow-hidden">
       {/* Background Image Overlay */}
       <div className="absolute inset-0 z-0">
         <Image
@@ -27,42 +27,42 @@ export const Hero = () => {
 
       <div className="container mx-auto px-4 relative z-10">
         <div className="max-w-4xl">
-          <div className="inline-flex items-center gap-2 bg-white/10 backdrop-blur-md border border-white/20 rounded-full px-5 py-2 mb-8 animate-in fade-in slide-in-from-bottom-4 duration-700">
-            <Star className="w-5 h-5 text-yellow-500 fill-yellow-500" />
-            <span className="text-sm md:text-base font-bold text-white">La elección N°1 de la región</span>
+          <div className="inline-flex items-center gap-2 bg-white/10 backdrop-blur-md border border-white/20 rounded-full px-4 py-1.5 mb-6 animate-in fade-in slide-in-from-bottom-4 duration-700">
+            <Star className="w-4 h-4 text-yellow-500 fill-yellow-500" />
+            <span className="text-xs md:text-sm font-bold text-white">La elección N°1 de la región</span>
           </div>
           
-          <h1 className="text-4xl sm:text-5xl md:text-7xl lg:text-8xl font-bold font-headline leading-[1.1] mb-8 text-white animate-in fade-in slide-in-from-bottom-6 duration-1000 delay-100">
+          <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold font-headline leading-[1.1] mb-6 text-white animate-in fade-in slide-in-from-bottom-6 duration-1000 delay-100">
             Tu camino hacia la <span className="text-primary">libertad</span> comienza con nosotros.
           </h1>
           
-          <p className="text-lg sm:text-xl md:text-2xl text-white/80 mb-10 max-w-2xl animate-in fade-in slide-in-from-bottom-8 duration-1000 delay-200 leading-relaxed">
+          <p className="text-lg sm:text-xl md:text-xl text-white/80 mb-8 max-w-2xl animate-in fade-in slide-in-from-bottom-8 duration-1000 delay-200 leading-relaxed">
             En nuestra academia, no solo te enseñamos a manejar; te preparamos para ser un conductor responsable, seguro y con total confianza en las calles.
           </p>
           
           <div className="flex flex-col sm:flex-row gap-4 animate-in fade-in slide-in-from-bottom-10 duration-1000 delay-300">
             <Link href="#planes" className="w-full sm:w-auto">
-              <Button size="lg" className="h-14 md:h-16 px-10 text-lg md:text-xl bg-primary hover:bg-primary/90 rounded-full w-full font-bold">
+              <Button size="lg" className="h-12 md:h-14 px-10 text-lg bg-primary hover:bg-primary/90 rounded-full w-full font-bold">
                 Conocer planes
-                <ChevronRight className="ml-2 w-6 h-6" />
+                <ChevronRight className="ml-2 w-5 h-5" />
               </Button>
             </Link>
           </div>
           
-          <div className="mt-16 flex items-center gap-6 sm:gap-12 md:gap-20 animate-in fade-in duration-1000 delay-500">
+          <div className="mt-12 flex items-center gap-6 sm:gap-12 md:gap-16 animate-in fade-in duration-1000 delay-500">
             <div className="text-center">
-              <p className="text-3xl md:text-5xl font-bold text-white">Equipo</p>
-              <p className="text-[10px] md:text-sm text-white/50 uppercase tracking-widest font-bold mt-1">calificado</p>
+              <p className="text-2xl md:text-4xl font-bold text-white">Equipo</p>
+              <p className="text-[10px] md:text-xs text-white/50 uppercase tracking-widest font-bold mt-1">calificado</p>
             </div>
-            <div className="w-px h-12 bg-white/20"></div>
+            <div className="w-px h-10 bg-white/20"></div>
             <div className="text-center">
-              <p className="text-3xl md:text-5xl font-bold text-white">+5 años</p>
-              <p className="text-[10px] md:text-sm text-white/50 uppercase tracking-widest font-bold mt-1">experiencia</p>
+              <p className="text-2xl md:text-4xl font-bold text-white">+5 años</p>
+              <p className="text-[10px] md:text-xs text-white/50 uppercase tracking-widest font-bold mt-1">experiencia</p>
             </div>
-            <div className="w-px h-12 bg-white/20"></div>
+            <div className="w-px h-10 bg-white/20"></div>
             <div className="text-center">
-              <p className="text-3xl md:text-5xl font-bold text-white">4.9/5</p>
-              <p className="text-[10px] md:text-sm text-white/50 uppercase tracking-widest font-bold mt-1">rating</p>
+              <p className="text-2xl md:text-4xl font-bold text-white">4.9/5</p>
+              <p className="text-[10px] md:text-xs text-white/50 uppercase tracking-widest font-bold mt-1">rating</p>
             </div>
           </div>
         </div>
