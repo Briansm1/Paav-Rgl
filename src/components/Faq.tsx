@@ -19,8 +19,8 @@ const faqs = [
     answer: "No, nosotros te brindamos el vehículo para todas tus clases. Trabajamos con unidades modernas, seguras y equipadas para que tu aprendizaje sea totalmente tranquilo y profesional."
   },
   {
-    question: "¿Qué requisitos necesito para empezar?",
-    answer: "Para comenzar tus clases prácticas, solo necesitás haber iniciado el trámite de tu licencia o tener ganas de aprender. Nosotros te asesoramos paso a paso sobre la documentación necesaria en Río Gallegos."
+    question: "¿En qué ubicación se dan clases?",
+    answer: "Nuestras clases se desarrollan en Río Gallegos, recorriendo las zonas más importantes de la ciudad para que ganes experiencia en tránsito real y te familiarices con los circuitos del examen práctico."
   },
   {
     question: "¿Qué pasa si tengo mucho miedo de manejar?",
