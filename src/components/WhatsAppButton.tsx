@@ -20,7 +20,7 @@ export const WhatsAppButton = () => {
     >
       {/* Tooltip moderno */}
       <div className="absolute -top-12 right-0 bg-white text-slate-900 px-4 py-2 rounded-xl text-sm font-bold shadow-xl opacity-0 group-hover:opacity-100 transition-opacity pointer-events-none whitespace-nowrap border border-slate-100">
-        ¿En qué te ayudamos?
+        ¿Querés elegir un plan a medida?
         <div className="absolute bottom-[-6px] right-6 w-3 h-3 bg-white border-r border-b border-slate-100 rotate-45"></div>
       </div>
       
