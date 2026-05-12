@@ -2,7 +2,7 @@
 "use client";
 
 import React, { useState } from 'react';
-import { Mail, MessageSquare, MapPin, Image as ImageIcon, CheckCircle2 } from 'lucide-react';
+import { Mail, MessageSquare, MapPin, Image as ImageIcon, CheckCircle2, Loader2 } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
 import { Textarea } from '@/components/ui/textarea';
@@ -26,6 +26,13 @@ import {
   SelectValue,
 } from "@/components/ui/select";
 import { useToast } from '@/hooks/use-toast';
+import { initializeApp, getApps } from 'firebase/app';
+import { getFirestore, collection, addDoc, serverTimestamp } from 'firebase/firestore';
+import { firebaseConfig } from '@/firebase/config';
+
+// Inicializar Firebase si no está inicializado
+const app = getApps().length === 0 ? initializeApp(firebaseConfig) : getApps()[0];
+const db = getFirestore(app);
 
 const formSchema = z.object({
   name: z.string().min(2, { message: 'El nombre es obligatorio' }),
@@ -38,6 +45,7 @@ const formSchema = z.object({
 export const Contact = () => {
   const { toast } = useToast();
   const [fileName, setFileName] = useState<string | null>(null);
+  const [isSubmitting, setIsSubmitting] = useState(false);
   const phoneNumber = "542966265603";
   const whatsappUrl = `https://wa.me/${phoneNumber}`;
   const emailAddress = "pilotosasesalvolante@gmail.com";
@@ -61,14 +69,55 @@ export const Contact = () => {
     }
   };
 
-  function onSubmit(values: z.infer<typeof formSchema>) {
-    console.log(`Reseña enviada a ${emailAddress}:`, values);
-    toast({
-      title: "¡Reseña recibida!",
-      description: "Gracias por compartir tu experiencia con nosotros. Tu opinión es muy valiosa.",
-    });
-    form.reset();
-    setFileName(null);
+  async function onSubmit(values: z.infer<typeof formSchema>) {
+    setIsSubmitting(true);
+    try {
+      // 1. Guardar la reseña en la colección 'reviews'
+      await addDoc(collection(db, 'reviews'), {
+        ...values,
+        licenseImage: fileName || null,
+        createdAt: serverTimestamp(),
+      });
+
+      // 2. Crear documento en la colección 'mail' para disparar la extensión Trigger Email
+      await addDoc(collection(db, 'mail'), {
+        to: emailAddress,
+        message: {
+          subject: `Nueva Reseña de Estudiante: ${values.name}`,
+          text: `Has recibido una nueva reseña de ${values.name} (${values.email}).\nCalificación: ${values.rating} estrellas.\nReseña: ${values.review}`,
+          html: `
+            <div style="font-family: sans-serif; padding: 20px; border: 1px solid #eee; border-radius: 10px;">
+              <h2 style="color: #2563eb;">¡Nueva Reseña de Estudiante!</h2>
+              <p><strong>Nombre:</strong> ${values.name}</p>
+              <p><strong>Email:</strong> ${values.email}</p>
+              <p><strong>Calificación:</strong> ${values.rating} ⭐</p>
+              <p><strong>Reseña:</strong></p>
+              <blockquote style="background: #f9f9f9; padding: 15px; border-left: 5px solid #2563eb;">
+                ${values.review}
+              </blockquote>
+              ${fileName ? `<p style="font-size: 12px; color: #666;">* El usuario adjuntó una imagen de licencia: ${fileName}</p>` : ''}
+              <p style="margin-top: 20px; font-size: 10px; color: #aaa;">Enviado desde el sitio web de Pilotos - ases al volante</p>
+            </div>
+          `,
+        },
+      });
+
+      toast({
+        title: "¡Reseña enviada con éxito!",
+        description: "Gracias por compartir tu experiencia. Te llegará una copia al mail.",
+      });
+      form.reset();
+      setFileName(null);
+    } catch (error) {
+      console.error("Error al enviar:", error);
+      toast({
+        variant: "destructive",
+        title: "Error al enviar",
+        description: "No pudimos procesar tu reseña en este momento. Intenta por WhatsApp.",
+      });
+    } finally {
+      setIsSubmitting(false);
+    }
   }
 
   return (
@@ -139,7 +188,7 @@ export const Contact = () => {
               <div className="mb-8 text-center md:text-left">
                 <h4 className="text-2xl md:text-3xl font-bold mb-4 tracking-tight">Cuéntanos tu experiencia</h4>
                 <p className="text-muted-foreground">
-                  Tu opinión será enviada a nuestro equipo para seguir mejorando día a día.
+                  Tu opinión será guardada y enviada a nuestro equipo para seguir mejorando día a día.
                 </p>
               </div>
               
@@ -256,9 +305,17 @@ export const Contact = () => {
                   />
                   <Button 
                     type="submit" 
+                    disabled={isSubmitting}
                     className="w-full h-14 bg-primary hover:bg-primary/90 text-white text-lg font-bold rounded-xl shadow-lg shadow-primary/20 transition-all active:scale-[0.98] flex items-center justify-center gap-2"
                   >
-                    Enviar reseña
+                    {isSubmitting ? (
+                      <>
+                        <Loader2 className="w-5 h-5 animate-spin" />
+                        Enviando...
+                      </>
+                    ) : (
+                      "Enviar reseña"
+                    )}
                   </Button>
                 </form>
               </Form>
