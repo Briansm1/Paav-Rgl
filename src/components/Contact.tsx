@@ -1,3 +1,4 @@
+
 "use client";
 
 import React from 'react';
@@ -207,7 +208,6 @@ export const Contact = () => {
                     className="w-full h-14 bg-primary hover:bg-primary/90 text-white text-lg font-bold rounded-xl shadow-lg shadow-primary/20 transition-all active:scale-[0.98] flex items-center justify-center gap-2"
                   >
                     Enviar reseña
-                    <Send className="w-5 h-5" />
                   </Button>
                 </form>
               </Form>
