@@ -14,7 +14,7 @@ const faqs = [
     answer: "Nuestras sesiones de prácticas dinámicas duran 50 minutos. Es lo ideal para optimizar tu aprendizaje sin agotarte, permitiéndote fijar los conocimientos de manera efectiva en cada encuentro."
   },
   {
-    question: "¿Qué días y horarios tienen disponibles?",
+    question: "¿En qué días y horarios son las clases?",
     answer: "Contamos con una amplia flexibilidad horaria de lunes a sábados. Coordinamos los encuentros según tu conveniencia para que puedas aprender a tu ritmo y sin complicaciones."
   },
   {
