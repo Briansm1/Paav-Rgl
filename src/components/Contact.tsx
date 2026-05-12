@@ -1,4 +1,3 @@
-
 "use client";
 
 import React, { useState } from 'react';
@@ -74,13 +73,24 @@ export const Contact = () => {
     setIsSubmitting(true);
     
     const reviewData = {
-      ...values,
-      licenseImage: fileName || null,
+      name: values.name,
+      email: values.email,
+      rating: values.rating,
+      review: values.review,
+      licenseImageName: fileName || null,
       createdAt: serverTimestamp(),
     };
 
-    // Guardar la reseña en la colección 'reviews'
+    // Guardar la reseña en la colección 'reviews' de tu proyecto
     addDoc(collection(firestore, 'reviews'), reviewData)
+      .then(() => {
+        toast({
+          title: "¡Reseña enviada!",
+          description: "Tu experiencia se ha guardado correctamente. ¡Gracias!",
+        });
+        form.reset();
+        setFileName(null);
+      })
       .catch(async (error) => {
         const permissionError = new FirestorePermissionError({
           path: 'reviews',
@@ -88,17 +98,10 @@ export const Contact = () => {
           requestResourceData: reviewData,
         });
         errorEmitter.emit('permission-error', permissionError);
+      })
+      .finally(() => {
+        setIsSubmitting(false);
       });
-
-    // Feedback inmediato al usuario
-    toast({
-      title: "¡Reseña enviada!",
-      description: "Tu experiencia se ha guardado correctamente en nuestra base de datos. ¡Gracias!",
-    });
-    
-    form.reset();
-    setFileName(null);
-    setIsSubmitting(false);
   }
 
   return (
@@ -214,9 +217,9 @@ export const Contact = () => {
                                 <SelectValue placeholder="Califica" />
                               </SelectTrigger>
                             </FormControl>
-                            <SelectContent className="bg-card border-white/10">
+                            <SelectContent className="bg-card border-white/10 text-white">
                               {[5, 4, 3, 2, 1].map((val) => (
-                                <SelectItem key={val} value={val.toString()} className="text-white hover:bg-primary/20">
+                                <SelectItem key={val} value={val.toString()} className="hover:bg-primary/20">
                                   <div className="flex items-center gap-2">
                                     {val} {val === 1 ? 'estrella' : 'estrellas'}
                                   </div>
