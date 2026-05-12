@@ -230,7 +230,7 @@ export const Contact = () => {
                           </div>
                         </FormControl>
                         <FormDescription className="text-[11px] text-slate-400 italic">
-                          No te preocupes por la privacidad: nuestro equipo se encargará de tapar todos los datos sensibles antes de compartir tu logro.
+                          No te preocupes por la privacidad: nuestro equipo se encargará de tapar todos los datos sensibles antes de publicar tu logro.
                         </FormDescription>
                         <FormMessage />
                       </FormItem>
