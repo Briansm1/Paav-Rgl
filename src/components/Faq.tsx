@@ -11,16 +11,16 @@ import {
 
 const faqs = [
   {
-    question: "¿Qué requisitos necesito para empezar?",
-    answer: "Para comenzar tus clases prácticas, solo necesitás haber iniciado el trámite de tu licencia o tener ganas de aprender. Nosotros te asesoramos paso a paso sobre la documentación necesaria en Río Gallegos."
+    question: "¿Cuánto dura cada clase?",
+    answer: "Nuestras sesiones de prácticas dinámicas duran 45 minutos. Es el tiempo ideal para optimizar tu aprendizaje sin agotarte, permitiéndote fijar los conocimientos de manera efectiva en cada encuentro."
   },
   {
     question: "¿Ustedes me prestan el auto para el examen?",
     answer: "¡Sí! Contamos con un servicio de alquiler de vehículo especialmente acondicionado para que rindas tu examen práctico con el mismo auto con el que practicaste, dándote mucha más seguridad."
   },
   {
-    question: "¿Cuánto tiempo duran las clases?",
-    answer: "Nuestras sesiones de prácticas dinámicas están diseñadas para optimizar tu aprendizaje sin agotarte, permitiéndote fijar los conocimientos de manera efectiva en cada encuentro."
+    question: "¿Qué requisitos necesito para empezar?",
+    answer: "Para comenzar tus clases prácticas, solo necesitás haber iniciado el trámite de tu licencia o tener ganas de aprender. Nosotros te asesoramos paso a paso sobre la documentación necesaria en Río Gallegos."
   },
   {
     question: "¿Qué pasa si tengo mucho miedo de manejar?",
