@@ -87,7 +87,7 @@ export const Pricing = () => {
             <div>
               <h5 className="text-xl font-bold mb-1">¿Estás listo/a para convertirte en un verdadero as al volante?</h5>
               <p className="text-muted-foreground text-sm md:text-base leading-relaxed max-w-2xl mx-auto">
-                Todos nuestros planes incluyen un seguro de accidentes personal durante las horas de práctica, sin costo adicional.
+                Con nosotros vas a conocer las claves para dominar cualquier camino, bajo cualquier condición y así vas a lograr tu mejor versión
               </p>
             </div>
           </div>
