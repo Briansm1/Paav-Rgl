@@ -20,9 +20,6 @@ export default function Home() {
       <ScrollReveal>
         <Services />
       </ScrollReveal>
-      <ScrollReveal delay={50}>
-        <PartnersTicker />
-      </ScrollReveal>
       <ScrollReveal delay={100}>
         <Testimonials />
       </ScrollReveal>
@@ -30,9 +27,12 @@ export default function Home() {
         <Pricing />
       </ScrollReveal>
       <ScrollReveal delay={250}>
-        <Faq />
+        <PartnersTicker />
       </ScrollReveal>
       <ScrollReveal delay={300}>
+        <Faq />
+      </ScrollReveal>
+      <ScrollReveal delay={350}>
         <Contact />
       </ScrollReveal>
       <Footer />
