@@ -10,7 +10,6 @@ import { Contact } from '@/components/Contact';
 import { Footer } from '@/components/Footer';
 import { ScrollReveal } from '@/components/ScrollReveal';
 import { WhatsAppButton } from '@/components/WhatsAppButton';
-import { AiAssistant } from '@/components/AiAssistant';
 
 export default function Home() {
   return (
@@ -37,7 +36,6 @@ export default function Home() {
       </ScrollReveal>
       <Footer />
       <WhatsAppButton />
-      <AiAssistant />
     </main>
   );
 }
