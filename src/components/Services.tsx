@@ -57,7 +57,7 @@ export const Services = () => {
             Conducir es <span className="text-primary italic">más que solo manejar</span>
           </h2>
           <p className="text-lg md:text-xl text-muted-foreground leading-relaxed">
-            Revolucionamos la enseñanza vial combinando conocimiento de vanguardia con <span className="text-primary font-bold">nuestra metodología exclusiva</span> de 3 pilares: <span className="text-primary font-bold">mentalidad</span> para darte confianza, <span className="text-primary font-bold">teoría</span> para un aprendizaje sólido, y <span className="text-primary font-bold">tecnica</span> para el dominio total del vehículo. Más que enseñarte a manejar, te formamos para ser un conductor experto.
+            Revolucionamos la enseñanza vial combinando conocimiento de vanguardia con <span className="text-primary font-bold">nuestra metodología exclusiva</span> de 3 pilares: <span className="text-primary font-bold">mentalidad</span> para darte confianza, <span className="text-primary font-bold">teoría</span> para un aprendizaje sólido, y <span className="text-primary font-bold">tecnica</span> para el dominio total del vehículo. Más que enseñarte a manejar, te instruimos para ser un experto al volante.
           </p>
         </div>
 
