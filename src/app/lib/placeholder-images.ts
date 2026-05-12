@@ -34,7 +34,7 @@ export const PlaceHolderImages: ImagePlaceholder[] = [
   {
     "id": "mentalidad",
     "description": "Psicología y mentalidad al volante",
-    "imageUrl": "https://i.imgur.com/AH7yJHh.jpeg",
+    "imageUrl": "https://i.imgur.com/E0sIJCA.jpeg",
     "imageHint": "driving mind"
   },
   {
