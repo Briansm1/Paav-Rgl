@@ -7,9 +7,9 @@ export const metadata: Metadata = {
   keywords: ['conducción', 'clases de manejo', 'Río Gallegos', 'licencia de conducir', 'seguridad vial', 'academia de manejo', 'aprender a manejar'],
   authors: [{ name: 'Pilotos - Ases al Volante' }],
   icons: {
-    icon: 'https://i.imgur.com/bLVVpLH.jpeg',
-    shortcut: 'https://i.imgur.com/bLVVpLH.jpeg',
-    apple: 'https://i.imgur.com/bLVVpLH.jpeg',
+    icon: 'https://i.imgur.com/kQtT1h5.jpeg',
+    shortcut: 'https://i.imgur.com/kQtT1h5.jpeg',
+    apple: 'https://i.imgur.com/kQtT1h5.jpeg',
   },
   openGraph: {
     title: 'Pilotos - Ases al Volante | Academia de Conducción',
