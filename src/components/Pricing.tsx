@@ -90,6 +90,11 @@ export const Pricing = () => {
                 Con nosotros vas a conocer las claves para dominar cualquier camino, bajo cualquier condición y así vas a lograr tu mejor versión
               </p>
             </div>
+            <Link href="#planes">
+              <Button size="lg" className="rounded-full bg-accent hover:bg-accent/90 text-white font-bold h-12 px-8">
+                Quiero ser un as
+              </Button>
+            </Link>
           </div>
         </div>
       </div>
