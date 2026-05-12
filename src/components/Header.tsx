@@ -48,8 +48,8 @@ export const Header = () => {
       className={cn(
         "fixed top-0 left-0 right-0 z-50 transition-all duration-500 bg-black border-b border-white/5",
         isScrolled || mobileMenuOpen 
-          ? "py-3 shadow-lg" 
-          : "py-5"
+          ? "py-2 shadow-lg" 
+          : "py-3"
       )}
     >
       <div className="container mx-auto px-4 flex items-center justify-between">
@@ -62,7 +62,7 @@ export const Header = () => {
           }}
         >
           {logoImg ? (
-            <div className="relative h-12 w-48 md:h-14 md:w-56 transition-all duration-300">
+            <div className="relative h-10 w-40 md:h-12 md:w-48 transition-all duration-300">
               <Image 
                 src={logoImg.imageUrl} 
                 alt={logoImg.description} 
@@ -101,7 +101,7 @@ export const Header = () => {
             </Link>
           ))}
           <Link href="#planes">
-            <Button className="bg-primary hover:bg-primary/90 text-white rounded-full px-6 font-bold shadow-lg shadow-primary/20">
+            <Button className="bg-primary hover:bg-primary/90 text-white rounded-full px-6 font-bold shadow-lg shadow-primary/20 h-9">
               Más info
             </Button>
           </Link>
@@ -109,11 +109,11 @@ export const Header = () => {
 
         {/* Mobile Toggle */}
         <button
-          className="md:hidden relative z-50 p-2 text-white focus:outline-none"
+          className="md:hidden relative z-50 p-1.5 text-white focus:outline-none"
           onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
           aria-label="Toggle menu"
         >
-          {mobileMenuOpen ? <X className="w-7 h-7" /> : <Menu className="w-7 h-7" />}
+          {mobileMenuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
         </button>
       </div>
 
