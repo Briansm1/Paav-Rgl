@@ -23,7 +23,7 @@ export const PartnersTicker = () => {
         <div className="flex animate-marquee whitespace-nowrap items-center py-4">
           {displayPartners.map((partner, index) => (
             <div key={index} className="mx-12 md:mx-20 flex-shrink-0 grayscale hover:grayscale-0 transition-all duration-300 opacity-50 hover:opacity-100">
-              <div className="relative h-12 w-32 md:h-16 md:w-40">
+              <div className="relative h-28 w-44 md:h-40 md:w-64">
                 <Image
                   src={partner.imageUrl}
                   alt={partner.description}
@@ -40,7 +40,7 @@ export const PartnersTicker = () => {
         <div className="absolute top-0 flex animate-marquee2 whitespace-nowrap items-center py-4 h-full">
           {displayPartners.map((partner, index) => (
             <div key={index} className="mx-12 md:mx-20 flex-shrink-0 grayscale hover:grayscale-0 transition-all duration-300 opacity-50 hover:opacity-100">
-              <div className="relative h-12 w-32 md:h-16 md:w-40">
+              <div className="relative h-28 w-44 md:h-40 md:w-64">
                 <Image
                   src={partner.imageUrl}
                   alt={partner.description}
