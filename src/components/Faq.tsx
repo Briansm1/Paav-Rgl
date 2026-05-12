@@ -26,8 +26,8 @@ const faqs = [
     answer: "Es totalmente normal. Nuestra metodología se enfoca precisamente en la 'Mentalidad de piloto', ayudándote a gestionar los miedos y ganar confianza progresivamente en un entorno seguro."
   },
   {
-    question: "¿Tienen facilidades de pago?",
-    answer: "Ofrecemos importantes descuentos por pago mediante transferencia y también contamos con planes de hasta 6 cuotas sin interés con tarjeta de crédito para que el costo no sea un impedimento."
+    question: "¿Alquilan el auto para poder rendir el examen práctico?",
+    answer: "Sí, contamos con el servicio de alquiler de auto para el examen práctico. De hecho, todos nuestros alumnos tienen un descuento especial para que puedan rendir con el mismo vehículo con el que practicaron, ganando así mayor seguridad y confianza en ese momento clave."
   }
 ];
 
