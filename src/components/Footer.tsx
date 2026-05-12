@@ -70,7 +70,7 @@ export const Footer = () => {
         </div>
 
         <div className="pt-8 border-t border-slate-800 flex flex-col items-center gap-6 text-slate-500 text-sm text-center">
-          <p>Copyright © 2026 PAAV | Academia de conducción. Todos los derechos reservados.</p>
+          <p>Copyright © 2026 PAAV. Todos los derechos reservados.</p>
           <div className="flex flex-wrap justify-center gap-x-6 gap-y-2">
             <Link href="#" className="hover:text-white transition-colors">Política de Privacidad</Link>
             <Link href="#" className="hover:text-white transition-colors">Términos y Condiciones</Link>
