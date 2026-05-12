@@ -48,7 +48,7 @@ const testimonials = [
   },
   {
     name: 'Maria Silisque',
-    content: 'Excelente atención y predisposición. Me sentí muy cómoda en todas las clases, explican con mucha calma y eso te da la seguridad que necesitás cuando recién empezás. ¡Muchas gracias por todo!',
+    content: '¡EXCELENTE DIEZ! Recomiendo, super responsable, respetuoso y con una paciencia de oro. Gracias!!',
     role: 'Egresada'
   },
   {
