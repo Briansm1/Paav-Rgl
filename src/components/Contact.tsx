@@ -213,7 +213,7 @@ export const Contact = () => {
               </Form>
               
               <p className="mt-6 text-center text-[10px] text-muted-foreground uppercase tracking-widest font-bold">
-                ¡GRACIAS POR CONFIAR!
+                ¡GRACIAS POR CONFIAR EN NOSOTROS!
               </p>
             </div>
           </div>
