@@ -85,7 +85,7 @@ export const Pricing = () => {
               <Shield className="w-10 h-10 text-primary" />
             </div>
             <div>
-              <h5 className="text-xl font-bold mb-1">Tu seguridad es nuestra prioridad</h5>
+              <h5 className="text-xl font-bold mb-1">¿Estás listo/a para despertar tu mejor versión al volante?</h5>
               <p className="text-muted-foreground text-sm md:text-base leading-relaxed max-w-2xl mx-auto">
                 Todos nuestros planes incluyen un seguro de accidentes personal durante las horas de práctica, sin costo adicional.
               </p>
