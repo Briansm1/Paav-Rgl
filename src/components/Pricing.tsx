@@ -1,7 +1,7 @@
 import React from 'react';
 import Link from 'next/link';
 import { Button } from '@/components/ui/button';
-import { Shield } from 'lucide-react';
+import { Medal } from 'lucide-react';
 import { cn } from '@/lib/utils';
 
 const plans = [
@@ -82,7 +82,7 @@ export const Pricing = () => {
         <div className="mt-20 text-center max-w-4xl mx-auto px-4">
           <div className="bg-secondary p-6 md:p-8 rounded-[2rem] border border-white/5 shadow-lg inline-flex flex-col items-center gap-6 text-center">
             <div className="shrink-0 bg-primary/10 p-4 rounded-3xl">
-              <Shield className="w-10 h-10 text-primary" />
+              <Medal className="w-10 h-10 text-primary" />
             </div>
             <div>
               <h5 className="text-xl font-bold mb-1">¿Estás listo/a para convertirte en un verdadero as al volante?</h5>
