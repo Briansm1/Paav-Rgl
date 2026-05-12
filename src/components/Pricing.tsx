@@ -8,7 +8,7 @@ const plans = [
   {
     name: 'Programa experto',
     price: 'Desde $86.999',
-    description: 'Perfecto para quienes necesitan reforzar conocimientos.',
+    description: 'Para quienes quieren reforzar alguna maniobra puntual o realizar un simulacro de examen práctico con todos los ejercicios',
     badge: 'NIVEL SUPERIOR',
     href: '/planes/experto'
   },
