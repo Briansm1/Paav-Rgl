@@ -33,17 +33,48 @@ export const Footer = () => {
               Formando conductores responsables con seguridad y excelencia desde el primer día. Tu libertad empieza con una educación vial sólida.
             </p>
             <div className="flex gap-4 justify-center">
-              <Instagram className="w-5 h-5 text-slate-400 hover:text-primary cursor-pointer transition-colors" />
-              <Facebook className="w-5 h-5 text-slate-400 hover:text-primary cursor-pointer transition-colors" />
-              <Youtube className="w-5 h-5 text-slate-400 hover:text-primary cursor-pointer transition-colors" />
-              {/* Icono de TikTok mediante SVG inline */}
-              <svg 
-                viewBox="0 0 448 512" 
-                className="w-5 h-5 fill-slate-400 hover:fill-primary cursor-pointer transition-colors" 
-                xmlns="http://www.w3.org/2000/svg"
+              <a 
+                href="https://www.instagram.com/pilotos.asesalvolante/" 
+                target="_blank" 
+                rel="noopener noreferrer"
+                className="text-slate-400 hover:text-primary transition-colors"
+                aria-label="Instagram"
               >
-                <path d="M448,209.91a210.06,210.06,0,0,1-122.77-39.25V349.38A162.55,162.55,0,1,1,185,188.31V278.2a74.62,74.62,0,1,0,52.23,71.18V0l88,0a121.18,121.18,0,0,0,1.86,22.17h0A122.18,122.18,0,0,0,381,102.39a121.43,121.43,0,0,0,67,20.14Z"/>
-              </svg>
+                <Instagram className="w-5 h-5" />
+              </a>
+              <a 
+                href="https://www.facebook.com/profile.php?id=61576666433315" 
+                target="_blank" 
+                rel="noopener noreferrer"
+                className="text-slate-400 hover:text-primary transition-colors"
+                aria-label="Facebook"
+              >
+                <Facebook className="w-5 h-5" />
+              </a>
+              <a 
+                href="https://www.youtube.com/@pilotosasesalvolante" 
+                target="_blank" 
+                rel="noopener noreferrer"
+                className="text-slate-400 hover:text-primary transition-colors"
+                aria-label="YouTube"
+              >
+                <Youtube className="w-5 h-5" />
+              </a>
+              <a 
+                href="https://www.tiktok.com/@pilotos_asesalvolante" 
+                target="_blank" 
+                rel="noopener noreferrer"
+                className="text-slate-400 hover:text-primary transition-colors"
+                aria-label="TikTok"
+              >
+                <svg 
+                  viewBox="0 0 448 512" 
+                  className="w-5 h-5 fill-current" 
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path d="M448,209.91a210.06,210.06,0,0,1-122.77-39.25V349.38A162.55,162.55,0,1,1,185,188.31V278.2a74.62,74.62,0,1,0,52.23,71.18V0l88,0a121.18,121.18,0,0,0,1.86,22.17h0A122.18,122.18,0,0,0,381,102.39a121.43,121.43,0,0,0,67,20.14Z"/>
+                </svg>
+              </a>
             </div>
           </div>
 
