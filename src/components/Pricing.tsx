@@ -15,7 +15,7 @@ const plans = [
   {
     name: 'Programa seguridad avanzada',
     price: 'Desde $165.999',
-    description: 'Para conductores que buscan maestría total en cualquier entorno.',
+    description: 'Para quienes quieran aprender o reforzar maniobras del examen práctico o mejorar la técnica del día a día',
     badge: 'NIVEL INTERMEDIO',
     href: '/planes/seguridad-avanzada'
   },
