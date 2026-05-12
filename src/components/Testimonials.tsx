@@ -53,7 +53,7 @@ const testimonials = [
   },
   {
     name: 'Javier Peña',
-    content: 'hola! recomiendo, todo excelente y práctico, me sirvió un montón.',
+    content: '¡Hola! recomiendo, todo excelente y práctico, me sirvió un montón.',
     role: 'Egresado'
   },
   {
