@@ -40,6 +40,18 @@ const testimonials = [
     name: 'Alejandra Merlo',
     content: 'Simplemente quería agradecer de corazón haberme cruzado con la academia. Era algo que me costaba un montón y que procrastiné mucho tiempo; gracias a la confianza, el apoyo y sobre todo la paciencia, pude lograrlo. ¡No se dan una idea de lo importante que esto es para mí!',
     headerImageId: 'achievement-alejandra'
+  },
+  {
+    name: 'Maria Silisque',
+    content: 'Excelente atención y predisposición. Me sentí muy cómoda en todas las clases, explican con mucha calma y eso te da la seguridad que necesitás cuando recién empezás. ¡Muchas gracias por todo!',
+  },
+  {
+    name: 'Javier Peña',
+    content: 'La metodología que usan es muy efectiva. Pasé de tener pánico a sentarme frente al volante a manejar con total tranquilidad en el tráfico. Los recomiendo totalmente.',
+  },
+  {
+    name: 'Maura Rivero',
+    content: 'Un antes y un después en mi confianza al conducir. El enfoque en la mentalidad me ayudó a superar bloqueos que tenía hace años. ¡Gracias Pilotos!',
   }
 ];
 
@@ -60,7 +72,7 @@ export const Testimonials = () => {
   }, [api]);
 
   return (
-    <section id="testimonios" className="py-20 md:py-32 bg-secondary/50 overflow-hidden">
+    <section id="testimonios" className="py-20 md:py-32 bg-secondary/30 overflow-hidden">
       <div className="container mx-auto px-4">
         <div className="text-center mb-12 md:mb-16">
           <span className="inline-block px-4 py-1.5 mb-6 text-xs font-bold tracking-widest text-accent uppercase bg-accent/10 rounded-full border border-accent/20">
@@ -86,20 +98,20 @@ export const Testimonials = () => {
                 
                 return (
                   <CarouselItem key={index} className="pl-4 basis-full sm:basis-1/2 lg:basis-1/3 py-4">
-                    <Card className="h-full border-none shadow-xl rounded-[2rem] bg-card border border-white/5 relative overflow-hidden flex flex-col group hover:scale-[1.02] transition-transform duration-300">
+                    <Card className="h-full border-none shadow-lg rounded-[2.5rem] bg-card border border-white/5 relative overflow-hidden flex flex-col group hover:scale-[1.01] transition-all duration-300">
                       {headerImg && (
                         <div className="relative aspect-[16/10] w-full overflow-hidden border-b border-white/5">
                           <Image 
                             src={headerImg.imageUrl} 
                             alt={`Logro de ${t.name}`} 
                             fill 
-                            className="object-cover transition-transform duration-500 group-hover:scale-110"
+                            className="object-cover transition-transform duration-500 group-hover:scale-105"
                             data-ai-hint={headerImg.imageHint}
                           />
                         </div>
                       )}
-                      <CardContent className="p-6 md:p-8 flex flex-col flex-grow">
-                        <div className="mb-4">
+                      <CardContent className="p-8 flex flex-col flex-grow">
+                        <div className="mb-6">
                           <div className="flex gap-0.5 mb-4">
                             {[...Array(5)].map((_, i) => (
                               <Star key={i} className="w-4 h-4 text-yellow-500 fill-yellow-500" />
@@ -112,7 +124,7 @@ export const Testimonials = () => {
 
                         <div className="mt-auto pt-6 border-t border-white/5">
                           <p className="font-bold text-foreground text-lg tracking-tight">{t.name}</p>
-                          <p className="text-xs text-primary font-bold uppercase tracking-widest mt-1">Egresado PAAV</p>
+                          <p className="text-[10px] text-primary font-bold uppercase tracking-widest mt-1">Egresado/a Pilotos</p>
                         </div>
                       </CardContent>
                     </Card>
@@ -141,6 +153,11 @@ export const Testimonials = () => {
                   aria-label={`Go to slide ${i + 1}`}
                 />
               ))}
+            </div>
+
+            {/* Hint for mobile scrolling */}
+            <div className="md:hidden text-center mt-4 text-[10px] text-muted-foreground uppercase tracking-widest font-bold animate-pulse">
+              Desliza para ver más →
             </div>
           </Carousel>
         </div>

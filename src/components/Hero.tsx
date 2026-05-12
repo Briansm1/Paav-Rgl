@@ -1,3 +1,4 @@
+
 "use client";
 
 import React from 'react';
@@ -11,14 +12,14 @@ export const Hero = () => {
   const heroImg = PlaceHolderImages.find(img => img.id === 'hero-bg');
 
   return (
-    <section id="inicio" className="relative min-h-screen flex items-center pt-24 pb-12 overflow-hidden">
+    <section id="inicio" className="relative min-h-screen flex items-center pt-20 pb-12 overflow-hidden">
       {/* Background Image Overlay */}
       <div className="absolute inset-0 z-0">
         <Image
           src={heroImg?.imageUrl || ''}
           alt={heroImg?.description || 'Driving school background'}
           fill
-          className="object-cover blur-[3px] scale-105"
+          className="object-cover blur-[2px] scale-105"
           priority
           data-ai-hint={heroImg?.imageHint}
         />
@@ -27,42 +28,42 @@ export const Hero = () => {
 
       <div className="container mx-auto px-4 relative z-10">
         <div className="max-w-3xl">
-          <div className="inline-flex items-center gap-2 bg-white/20 backdrop-blur-md border border-white/30 rounded-full px-4 py-1.5 mb-4 animate-in fade-in slide-in-from-bottom-4 duration-700">
+          <div className="inline-flex items-center gap-2 bg-white/10 backdrop-blur-md border border-white/20 rounded-full px-4 py-1.5 mb-6 animate-in fade-in slide-in-from-bottom-4 duration-700">
             <Star className="w-4 h-4 text-yellow-500 fill-yellow-500" />
             <span className="text-xs md:text-sm font-bold text-white">La elección N°1 de la región</span>
           </div>
           
-          <h1 className="text-3xl sm:text-5xl md:text-7xl font-bold font-headline leading-[1.1] mb-4 text-white animate-in fade-in slide-in-from-bottom-6 duration-1000 delay-100">
+          <h1 className="text-4xl sm:text-5xl md:text-7xl font-bold font-headline leading-[1.1] mb-6 text-white animate-in fade-in slide-in-from-bottom-6 duration-1000 delay-100">
             Tu camino hacia la <span className="text-primary">libertad</span> comienza con nosotros.
           </h1>
           
-          <p className="text-sm sm:text-lg md:text-xl text-white/90 mb-6 max-w-xl animate-in fade-in slide-in-from-bottom-8 duration-1000 delay-200">
+          <p className="text-base sm:text-lg md:text-xl text-white/80 mb-8 max-w-xl animate-in fade-in slide-in-from-bottom-8 duration-1000 delay-200">
             En nuestra academia, no solo te enseñamos a manejar; te preparamos para ser un conductor responsable, seguro y con total confianza en las calles.
           </p>
           
           <div className="flex flex-col sm:flex-row gap-4 animate-in fade-in slide-in-from-bottom-10 duration-1000 delay-300">
             <Link href="#planes" className="w-full sm:w-auto">
-              <Button size="lg" className="h-12 md:h-14 px-8 text-base md:text-lg bg-primary hover:bg-primary/90 rounded-full w-full">
+              <Button size="lg" className="h-12 md:h-14 px-8 text-base md:text-lg bg-primary hover:bg-primary/90 rounded-full w-full font-bold">
                 Conocer nuestros planes
                 <ChevronRight className="ml-2 w-5 h-5" />
               </Button>
             </Link>
           </div>
           
-          <div className="mt-8 flex items-center gap-3 sm:gap-8 md:gap-12 animate-in fade-in duration-1000 delay-500">
-            <div className="text-center flex-1">
-              <p className="text-base sm:text-2xl md:text-4xl font-bold text-white whitespace-nowrap">Equipo</p>
-              <p className="text-[9px] sm:text-xs md:text-sm text-white/60 uppercase tracking-wider font-semibold">altamente calificado</p>
+          <div className="mt-12 flex items-center gap-4 sm:gap-8 md:gap-16 animate-in fade-in duration-1000 delay-500">
+            <div className="text-center">
+              <p className="text-2xl md:text-4xl font-bold text-white">Equipo</p>
+              <p className="text-[10px] md:text-xs text-white/50 uppercase tracking-widest font-bold">calificado</p>
             </div>
-            <div className="w-px h-8 md:h-12 bg-white/20"></div>
-            <div className="text-center flex-1">
-              <p className="text-base sm:text-2xl md:text-4xl font-bold text-white whitespace-nowrap">+5 años</p>
-              <p className="text-[9px] sm:text-xs md:text-sm text-white/60 uppercase tracking-wider font-semibold">formando ases al volante</p>
+            <div className="w-px h-10 bg-white/20"></div>
+            <div className="text-center">
+              <p className="text-2xl md:text-4xl font-bold text-white">+5 años</p>
+              <p className="text-[10px] md:text-xs text-white/50 uppercase tracking-widest font-bold">experiencia</p>
             </div>
-            <div className="w-px h-8 md:h-12 bg-white/20"></div>
-            <div className="text-center flex-1">
-              <p className="text-base sm:text-2xl md:text-4xl font-bold text-white whitespace-nowrap">4.9/5</p>
-              <p className="text-[9px] sm:text-xs md:text-sm text-white/60 uppercase tracking-wider font-semibold">LA MÁS RECOMENDADA</p>
+            <div className="w-px h-10 bg-white/20"></div>
+            <div className="text-center">
+              <p className="text-2xl md:text-4xl font-bold text-white">4.9/5</p>
+              <p className="text-[10px] md:text-xs text-white/50 uppercase tracking-widest font-bold">rating</p>
             </div>
           </div>
         </div>

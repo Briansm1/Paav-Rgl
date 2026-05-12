@@ -47,7 +47,7 @@ export const Header = () => {
   return (
     <header
       className={cn(
-        "fixed top-0 left-0 right-0 z-50 transition-all duration-500 bg-black border-b border-white/5",
+        "fixed top-0 left-0 right-0 z-50 transition-all duration-300 bg-black border-b border-white/5",
         isScrolled || mobileMenuOpen 
           ? "py-1 shadow-lg" 
           : "py-2"
@@ -63,7 +63,7 @@ export const Header = () => {
           }}
         >
           {logoImg ? (
-            <div className="relative h-8 w-32 md:h-10 md:w-40 transition-all duration-300">
+            <div className="relative h-10 w-40 md:h-12 md:w-48 transition-all duration-300">
               <Image 
                 src={logoImg.imageUrl} 
                 alt={logoImg.description} 
@@ -102,19 +102,19 @@ export const Header = () => {
             </Link>
           ))}
           <Link href="#planes">
-            <Button className="bg-primary hover:bg-primary/90 text-white rounded-full px-5 font-bold shadow-lg shadow-primary/20 h-8 text-xs">
-              Inscribirme
+            <Button className="bg-primary hover:bg-primary/90 text-white rounded-full px-5 font-bold shadow-lg shadow-primary/20 h-9 text-xs">
+              Quiero empezar
             </Button>
           </Link>
         </nav>
 
         {/* Mobile Toggle */}
         <button
-          className="md:hidden relative z-50 p-1.5 text-white focus:outline-none"
+          className="md:hidden relative z-50 p-2 text-white focus:outline-none"
           onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
           aria-label="Toggle menu"
         >
-          {mobileMenuOpen ? <X className="w-5 h-5" /> : <Menu className="w-5 h-5" />}
+          {mobileMenuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
         </button>
       </div>
 
@@ -123,7 +123,7 @@ export const Header = () => {
         "fixed inset-0 bg-black z-40 flex flex-col items-center justify-center transition-all duration-500 md:hidden",
         mobileMenuOpen ? "opacity-100 visible" : "opacity-0 invisible pointer-events-none"
       )}>
-        <nav className="flex flex-col items-center gap-6 p-6">
+        <nav className="flex flex-col items-center gap-8 p-6">
           {navLinks.map((link) => (
             <Link
               key={link.name}
@@ -142,7 +142,7 @@ export const Header = () => {
           ))}
           <Link href="#planes" onClick={() => setMobileMenuOpen(false)} className="mt-4 w-full">
             <Button size="lg" className="bg-primary hover:bg-primary/90 text-white w-full h-14 text-lg rounded-xl font-bold">
-              Quiero empezar
+              Inscribirme ahora
             </Button>
           </Link>
         </nav>
