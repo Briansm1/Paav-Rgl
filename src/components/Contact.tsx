@@ -1,8 +1,8 @@
 
 "use client";
 
-import React from 'react';
-import { Mail, MessageSquare, MapPin, Send } from 'lucide-react';
+import React, { useState } from 'react';
+import { Mail, MessageSquare, MapPin, Image as ImageIcon, CheckCircle2 } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
 import { Textarea } from '@/components/ui/textarea';
@@ -16,6 +16,7 @@ import {
   FormItem,
   FormLabel,
   FormMessage,
+  FormDescription,
 } from '@/components/ui/form';
 import {
   Select,
@@ -31,10 +32,12 @@ const formSchema = z.object({
   email: z.string().email({ message: 'Email inválido' }),
   rating: z.string().min(1, { message: 'La calificación es obligatoria' }),
   review: z.string().min(10, { message: 'Por favor escribe una reseña más detallada' }),
+  licenseImage: z.any().optional(),
 });
 
 export const Contact = () => {
   const { toast } = useToast();
+  const [fileName, setFileName] = useState<string | null>(null);
   const phoneNumber = "542966265603";
   const whatsappUrl = `https://wa.me/${phoneNumber}`;
   const emailAddress = "pilotosasesalvolante@gmail.com";
@@ -46,8 +49,17 @@ export const Contact = () => {
       email: '',
       rating: '5',
       review: '',
+      licenseImage: undefined,
     },
   });
+
+  const handleFileChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+    const file = e.target.files?.[0];
+    if (file) {
+      setFileName(file.name);
+      form.setValue('licenseImage', file);
+    }
+  };
 
   function onSubmit(values: z.infer<typeof formSchema>) {
     console.log(`Reseña enviada a ${emailAddress}:`, values);
@@ -56,6 +68,7 @@ export const Contact = () => {
       description: "Gracias por compartir tu experiencia con nosotros. Tu opinión es muy valiosa.",
     });
     form.reset();
+    setFileName(null);
   }
 
   return (
@@ -186,6 +199,44 @@ export const Contact = () => {
                       )}
                     />
                   </div>
+
+                  <FormField
+                    control={form.control}
+                    name="licenseImage"
+                    render={() => (
+                      <FormItem className="space-y-3">
+                        <FormLabel>Foto de tu licencia (opcional)</FormLabel>
+                        <FormControl>
+                          <div className="relative group">
+                            <input
+                              type="file"
+                              accept="image/*"
+                              onChange={handleFileChange}
+                              className="absolute inset-0 w-full h-full opacity-0 cursor-pointer z-10"
+                            />
+                            <div className="flex flex-col items-center justify-center border-2 border-dashed border-white/10 rounded-2xl p-6 bg-white/5 group-hover:bg-white/10 transition-colors">
+                              {fileName ? (
+                                <div className="flex items-center gap-3 text-primary font-medium">
+                                  <CheckCircle2 className="w-5 h-5" />
+                                  <span className="text-sm truncate max-w-[200px]">{fileName}</span>
+                                </div>
+                              ) : (
+                                <>
+                                  <ImageIcon className="w-8 h-8 text-muted-foreground mb-2" />
+                                  <p className="text-xs text-muted-foreground font-medium">Click o arrastra para subir tu foto</p>
+                                </>
+                              )}
+                            </div>
+                          </div>
+                        </FormControl>
+                        <FormDescription className="text-[11px] text-slate-400 italic">
+                          No te preocupes por la privacidad: nuestro equipo se encargará de tapar todos los datos sensibles antes de compartir tu logro.
+                        </FormDescription>
+                        <FormMessage />
+                      </FormItem>
+                    )}
+                  />
+
                   <FormField
                     control={form.control}
                     name="review"
