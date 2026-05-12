@@ -1,0 +1,78 @@
+
+{
+  "entities": {
+    "Review": {
+      "title": "Reseña de Estudiante",
+      "description": "Información detallada de la experiencia de un alumno y su calificación.",
+      "type": "object",
+      "properties": {
+        "name": {
+          "type": "string",
+          "description": "Nombre completo del alumno"
+        },
+        "email": {
+          "type": "string",
+          "format": "email",
+          "description": "Correo electrónico de contacto"
+        },
+        "rating": {
+          "type": "string",
+          "description": "Calificación de 1 a 5 estrellas"
+        },
+        "review": {
+          "type": "string",
+          "description": "Contenido textual de la reseña"
+        },
+        "licenseImage": {
+          "type": "string",
+          "description": "Nombre del archivo de imagen de la licencia (opcional)"
+        },
+        "createdAt": {
+          "type": "string",
+          "format": "date-time",
+          "description": "Fecha y hora de creación"
+        }
+      },
+      "required": [
+        "name",
+        "email",
+        "rating",
+        "review"
+      ]
+    },
+    "MailTrigger": {
+      "title": "Activador de Email",
+      "description": "Documento para que la extensión Trigger Email envíe un correo automáticamente.",
+      "type": "object",
+      "properties": {
+        "to": {
+          "type": "string",
+          "format": "email"
+        },
+        "message": {
+          "type": "object",
+          "properties": {
+            "subject": { "type": "string" },
+            "text": { "type": "string" },
+            "html": { "type": "string" }
+          }
+        }
+      }
+    }
+  },
+  "auth": {
+    "providers": [
+      "google.com"
+    ]
+  },
+  "firestore": {
+    "/reviews/{reviewId}": {
+      "schema": "Review",
+      "description": "Colección que almacena todas las reseñas enviadas por los alumnos."
+    },
+    "/mail/{mailId}": {
+      "schema": "MailTrigger",
+      "description": "Colección monitoreada por la extensión Trigger Email para enviar notificaciones."
+    }
+  }
+}
