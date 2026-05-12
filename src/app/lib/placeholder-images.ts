@@ -135,44 +135,14 @@ export const PlaceHolderImages: ImagePlaceholder[] = [
   },
   {
     "id": "partner-1",
-    "description": "Gomería El Amigo",
-    "imageUrl": "https://picsum.photos/seed/partner1/200/100",
-    "imageHint": "shop logo"
-  },
-  {
-    "id": "partner-2",
-    "description": "Seguros Santa Cruz",
-    "imageUrl": "https://picsum.photos/seed/partner2/200/100",
-    "imageHint": "insurance logo"
-  },
-  {
-    "id": "partner-3",
-    "description": "Estética Vehicular",
-    "imageUrl": "https://picsum.photos/seed/partner3/200/100",
-    "imageHint": "car detailing"
-  },
-  {
-    "id": "partner-4",
-    "description": "Café del Volante",
-    "imageUrl": "https://picsum.photos/seed/partner4/200/100",
-    "imageHint": "coffee logo"
-  },
-  {
-    "id": "partner-5",
-    "description": "Repuestos Río",
-    "imageUrl": "https://picsum.photos/seed/partner5/200/100",
-    "imageHint": "parts store"
-  },
-  {
-    "id": "partner-6",
-    "description": "Nuevo Socio Estratégico",
-    "imageUrl": "https://i.imgur.com/g2IwIgJ.png",
+    "description": "Socio Estratégico 1",
+    "imageUrl": "https://i.imgur.com/Ei70iM1.png",
     "imageHint": "partner logo"
   },
   {
-    "id": "partner-7",
-    "description": "Socio Estratégico Adicional",
-    "imageUrl": "https://i.imgur.com/rH9aYl9.png",
+    "id": "partner-2",
+    "description": "Socio Estratégico 2",
+    "imageUrl": "https://i.imgur.com/1CDCJEJ.png",
     "imageHint": "partner logo"
   }
 ];
