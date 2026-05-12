@@ -1,4 +1,3 @@
-
 "use client";
 
 import React from 'react';
@@ -20,7 +19,7 @@ const faqs = [
   },
   {
     question: "¿En qué ubicación se dan clases?",
-    answer: "Nuestras clases se desarrollan en Río Gallegos, recorriendo las zonas más importantes de la ciudad para que ganes experiencia en tránsito real y te familiarices con los circuitos del examen práctico."
+    answer: "Nuestras clases se desarrollan en Río Gallegos, el predio que usamos puede ser atrás de la unpa o el autódromo, dependiendo del horario y de la clase en cuestión."
   },
   {
     question: "¿Qué pasa si tengo mucho miedo de manejar?",
