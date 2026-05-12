@@ -44,7 +44,7 @@ export const Hero = () => {
           <div className="flex flex-col sm:flex-row gap-4 animate-in fade-in slide-in-from-bottom-10 duration-1000 delay-300">
             <Link href="#planes" className="w-full sm:w-auto">
               <Button size="lg" className="h-12 md:h-14 px-8 text-base md:text-lg bg-primary hover:bg-primary/90 rounded-full w-full font-bold">
-                Conocer nuestros planes
+                Conocer planes
                 <ChevronRight className="ml-2 w-5 h-5" />
               </Button>
             </Link>
