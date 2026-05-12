@@ -22,7 +22,7 @@ const faqs = [
     answer: "Nuestras clases se desarrollan en Río Gallegos, el predio que usamos puede ser atrás de la unpa o el autódromo, dependiendo del horario y de la clase en cuestión."
   },
   {
-    question: "¿Qué pasa si tengo mucho miedo de manejar?",
+    question: "¿Es normal que tenga miedo a manejar?",
     answer: "Es totalmente normal. Nuestra metodología se enfoca precisamente en la 'Mentalidad de Piloto', ayudándote a gestionar los miedos y ganar confianza progresivamente en un entorno seguro."
   },
   {
