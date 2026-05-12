@@ -1,3 +1,4 @@
+
 "use client";
 
 import React, { useState, useEffect } from 'react';
@@ -37,7 +38,7 @@ export const Header = () => {
 
   const navLinks = [
     { name: 'Inicio', href: '#inicio' },
-    { name: 'Nuestra Metodología', href: '#servicios' },
+    { name: 'Nuestra metodología', href: '#servicios' },
     { name: 'Casos de éxito', href: '#testimonios' },
     { name: 'Planes', href: '#planes' },
     { name: 'Contacto', href: '#contacto' },
