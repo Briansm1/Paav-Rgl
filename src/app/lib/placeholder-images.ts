@@ -162,5 +162,11 @@ export const PlaceHolderImages: ImagePlaceholder[] = [
     "description": "Repuestos Río",
     "imageUrl": "https://picsum.photos/seed/partner5/200/100",
     "imageHint": "parts store"
+  },
+  {
+    "id": "partner-6",
+    "description": "Nuevo Socio Estratégico",
+    "imageUrl": "https://i.imgur.com/g2IwIgJ.png",
+    "imageHint": "partner logo"
   }
 ];
