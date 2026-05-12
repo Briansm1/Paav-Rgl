@@ -23,7 +23,7 @@ const faqs = [
   },
   {
     question: "¿Es normal que tenga miedo a manejar?",
-    answer: "Es totalmente normal. Nuestra metodología se enfoca precisamente en la 'Mentalidad de Piloto', ayudándote a gestionar los miedos y ganar confianza progresivamente en un entorno seguro."
+    answer: "Es totalmente normal. Nuestra metodología se enfoca precisamente en la 'Mentalidad de piloto', ayudándote a gestionar los miedos y ganar confianza progresivamente en un entorno seguro."
   },
   {
     question: "¿Tienen facilidades de pago?",
