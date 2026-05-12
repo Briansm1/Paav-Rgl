@@ -79,29 +79,7 @@ export const Contact = () => {
       createdAt: serverTimestamp(),
     };
 
-    const mailData = {
-      to: emailAddress,
-      message: {
-        subject: `Nueva Reseña de Estudiante: ${values.name}`,
-        text: `Has recibido una nueva reseña de ${values.name} (${values.email}).\nCalificación: ${values.rating} estrellas.\nReseña: ${values.review}`,
-        html: `
-          <div style="font-family: sans-serif; padding: 20px; border: 1px solid #eee; border-radius: 10px;">
-            <h2 style="color: #2563eb;">¡Nueva Reseña de Estudiante!</h2>
-            <p><strong>Nombre:</strong> ${values.name}</p>
-            <p><strong>Email:</strong> ${values.email}</p>
-            <p><strong>Calificación:</strong> ${values.rating} ⭐</p>
-            <p><strong>Reseña:</strong></p>
-            <blockquote style="background: #f9f9f9; padding: 15px; border-left: 5px solid #2563eb;">
-              ${values.review}
-            </blockquote>
-            ${fileName ? `<p style="font-size: 12px; color: #666;">* El usuario adjuntó una imagen de licencia: ${fileName}</p>` : ''}
-            <p style="margin-top: 20px; font-size: 10px; color: #aaa;">Enviado desde el sitio web de Pilotos - ases al volante</p>
-          </div>
-        `,
-      },
-    };
-
-    // 1. Guardar la reseña en la colección 'reviews' (Sin await para evitar latencia UI)
+    // Guardar la reseña en la colección 'reviews'
     addDoc(collection(firestore, 'reviews'), reviewData)
       .catch(async (error) => {
         const permissionError = new FirestorePermissionError({
@@ -112,21 +90,10 @@ export const Contact = () => {
         errorEmitter.emit('permission-error', permissionError);
       });
 
-    // 2. Crear documento en la colección 'mail' (Sin await)
-    addDoc(collection(firestore, 'mail'), mailData)
-      .catch(async (error) => {
-        const permissionError = new FirestorePermissionError({
-          path: 'mail',
-          operation: 'create',
-          requestResourceData: mailData,
-        });
-        errorEmitter.emit('permission-error', permissionError);
-      });
-
     // Feedback inmediato al usuario
     toast({
-      title: "¡Reseña enviada con éxito!",
-      description: "Gracias por compartir tu experiencia. Estamos procesando tu mensaje.",
+      title: "¡Reseña enviada!",
+      description: "Tu experiencia se ha guardado correctamente en nuestra base de datos. ¡Gracias!",
     });
     
     form.reset();
@@ -202,7 +169,7 @@ export const Contact = () => {
               <div className="mb-8 text-center md:text-left">
                 <h4 className="text-2xl md:text-3xl font-bold mb-4 tracking-tight">Cuéntanos tu experiencia</h4>
                 <p className="text-muted-foreground">
-                  Tu opinión será guardada y enviada a nuestro equipo para seguir mejorando día a día.
+                  Tu opinión será guardada en nuestro sistema para seguir mejorando día a día.
                 </p>
               </div>
               
