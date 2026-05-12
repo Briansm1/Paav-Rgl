@@ -87,7 +87,7 @@ export const Pricing = () => {
             <div>
               <h5 className="text-xl font-bold mb-1">¿Estás listo/a para convertirte en un verdadero as al volante?</h5>
               <p className="text-muted-foreground text-sm md:text-base leading-relaxed max-w-2xl mx-auto">
-                Con nosotros vas a conocer las claves para dominar cualquier camino, bajo cualquier condición y así vas a lograr tu mejor versión
+                Con nosotros vas a conocer las claves para dominar cualquier camino, bajo cualquier condición y así vas a lograr tu mejor versión para pilotar las calles
               </p>
             </div>
             <Link href="#planes">
