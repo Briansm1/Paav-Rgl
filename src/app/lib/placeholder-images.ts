@@ -168,5 +168,11 @@ export const PlaceHolderImages: ImagePlaceholder[] = [
     "description": "Nuevo Socio Estratégico",
     "imageUrl": "https://i.imgur.com/g2IwIgJ.png",
     "imageHint": "partner logo"
+  },
+  {
+    "id": "partner-7",
+    "description": "Socio Estratégico Adicional",
+    "imageUrl": "https://i.imgur.com/KknzbWT.png",
+    "imageHint": "partner logo"
   }
 ];
