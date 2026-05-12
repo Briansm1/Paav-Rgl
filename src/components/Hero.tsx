@@ -11,7 +11,7 @@ export const Hero = () => {
   const heroImg = PlaceHolderImages.find(img => img.id === 'hero-bg');
 
   return (
-    <section id="inicio" className="relative min-h-screen flex items-center pt-20 pb-12 overflow-hidden">
+    <section id="inicio" className="relative min-h-screen flex items-center pt-32 md:pt-40 pb-12 overflow-hidden">
       {/* Background Image Overlay */}
       <div className="absolute inset-0 z-0">
         <Image
@@ -29,7 +29,7 @@ export const Hero = () => {
         <div className="max-w-4xl">
           <div className="inline-flex items-center gap-2 bg-white/10 backdrop-blur-md border border-white/20 rounded-full px-4 py-1.5 mb-6 animate-in fade-in slide-in-from-bottom-4 duration-700">
             <Star className="w-4 h-4 text-yellow-500 fill-yellow-500" />
-            <span className="text-xs md:text-sm font-bold text-white">La elección N°1 de la región</span>
+            <span className="text-sm md:text-base font-bold text-white">La elección N°1 de la región</span>
           </div>
           
           <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold font-headline leading-[1.1] mb-6 text-white animate-in fade-in slide-in-from-bottom-6 duration-1000 delay-100">
