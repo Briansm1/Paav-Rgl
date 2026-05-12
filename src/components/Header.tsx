@@ -1,3 +1,4 @@
+
 "use client";
 
 import React, { useState, useEffect } from 'react';
@@ -37,8 +38,8 @@ export const Header = () => {
 
   const navLinks = [
     { name: 'Inicio', href: '#inicio' },
-    { name: 'Servicios', href: '#servicios' },
-    { name: 'Referencias', href: '#testimonios' },
+    { name: 'Nuestra Metodología', href: '#servicios' },
+    { name: 'Casos de éxito', href: '#testimonios' },
     { name: 'Planes', href: '#planes' },
     { name: 'Contacto', href: '#contacto' },
   ];
@@ -46,19 +47,23 @@ export const Header = () => {
   return (
     <header
       className={cn(
-        "fixed top-0 left-0 right-0 z-50 transition-all duration-300",
-        "bg-black shadow-md border-b border-white/10",
-        isScrolled ? "py-1.5" : "py-2.5"
+        "fixed top-0 left-0 right-0 z-50 transition-all duration-500",
+        isScrolled || mobileMenuOpen 
+          ? "bg-black/95 backdrop-blur-md py-3 shadow-lg border-b border-white/5" 
+          : "bg-transparent py-5"
       )}
     >
       <div className="container mx-auto px-4 flex items-center justify-between">
         <Link 
           href="#inicio" 
-          className="flex items-center gap-2 group"
-          onClick={() => setActiveSection('#inicio')}
+          className="flex items-center gap-2 group relative z-50"
+          onClick={() => {
+            setActiveSection('#inicio');
+            setMobileMenuOpen(false);
+          }}
         >
           {logoImg ? (
-            <div className="relative h-10 w-40 md:h-12 md:w-48">
+            <div className="relative h-12 w-48 md:h-14 md:w-56 transition-all duration-300">
               <Image 
                 src={logoImg.imageUrl} 
                 alt={logoImg.description} 
@@ -69,21 +74,21 @@ export const Header = () => {
               />
             </div>
           ) : (
-            <span className="text-lg font-bold font-headline tracking-tight text-white">
+            <span className="text-xl font-bold font-headline tracking-tight text-white">
               Pilotos - <span className="text-primary">ases al volante</span>
             </span>
           )}
         </Link>
 
         {/* Desktop Nav */}
-        <nav className="hidden md:flex items-center gap-6 lg:gap-8">
+        <nav className="hidden md:flex items-center gap-8 lg:gap-10">
           {navLinks.map((link) => (
             <Link
               key={link.name}
               href={link.href}
               onClick={() => setActiveSection(link.href)}
               className={cn(
-                "relative text-sm font-bold py-1 transition-colors duration-300",
+                "relative text-sm font-bold transition-colors duration-300",
                 activeSection === link.href 
                   ? "text-primary" 
                   : "text-slate-300 hover:text-white"
@@ -91,40 +96,40 @@ export const Header = () => {
             >
               {link.name}
               <span className={cn(
-                "absolute bottom-0 left-0 w-full h-0.5 bg-primary transition-transform duration-300 origin-left",
+                "absolute -bottom-1 left-0 w-full h-0.5 bg-primary transition-transform duration-300 origin-left",
                 activeSection === link.href ? "scale-x-100" : "scale-x-0"
               )} />
             </Link>
           ))}
           <Link href="#planes">
-            <Button variant="default" className="bg-green-600 hover:bg-green-700 text-white rounded-full px-5 h-9 text-xs shadow-lg shadow-green-600/20 transition-all hover:translate-y-[-2px]">
-              Más información
+            <Button className="bg-primary hover:bg-primary/90 text-white rounded-full px-6 font-bold shadow-lg shadow-primary/20">
+              Más info
             </Button>
           </Link>
         </nav>
 
         {/* Mobile Toggle */}
         <button
-          className="md:hidden p-2 text-white focus:outline-none"
+          className="md:hidden relative z-50 p-2 text-white focus:outline-none"
           onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
           aria-label="Toggle menu"
         >
-          {mobileMenuOpen ? <X className="w-5 h-5" /> : <Menu className="w-5 h-5" />}
+          {mobileMenuOpen ? <X className="w-7 h-7" /> : <Menu className="w-7 h-7" />}
         </button>
       </div>
 
       {/* Mobile Nav Overlay */}
       <div className={cn(
-        "fixed inset-0 top-[52px] bg-black z-40 transition-transform duration-300 md:hidden",
-        mobileMenuOpen ? "translate-x-0" : "translate-x-full"
+        "fixed inset-0 bg-black z-40 flex flex-col items-center justify-center transition-all duration-500 md:hidden",
+        mobileMenuOpen ? "opacity-100 visible" : "opacity-0 invisible pointer-events-none"
       )}>
-        <nav className="flex flex-col p-6 gap-6 h-full overflow-y-auto">
+        <nav className="flex flex-col items-center gap-8 p-6">
           {navLinks.map((link) => (
             <Link
               key={link.name}
               href={link.href}
               className={cn(
-                "text-2xl font-bold border-b border-white/10 pb-4 transition-colors",
+                "text-3xl font-bold tracking-tight transition-colors",
                 activeSection === link.href ? "text-primary" : "text-white"
               )}
               onClick={() => {
@@ -135,9 +140,9 @@ export const Header = () => {
               {link.name}
             </Link>
           ))}
-          <Link href="#planes" onClick={() => setMobileMenuOpen(false)}>
-            <Button size="lg" className="mt-4 bg-green-600 hover:bg-green-700 text-white w-full h-14 text-lg rounded-2xl">
-              Más información
+          <Link href="#planes" onClick={() => setMobileMenuOpen(false)} className="mt-4 w-full">
+            <Button size="lg" className="bg-primary hover:bg-primary/90 text-white w-full h-16 text-xl rounded-2xl font-bold">
+              Inscribirme ahora
             </Button>
           </Link>
         </nav>
