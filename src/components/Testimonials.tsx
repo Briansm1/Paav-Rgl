@@ -20,38 +20,46 @@ const testimonials = [
   {
     name: 'Daniela Rojas',
     content: 'Queríamos agradecerles por el acompañamiento en este proceso tan importante para nuestra hija: ayudarla a perder sus miedos, a creer en que podía lograrlo y, sobre todo, sentirse segura en cada movimiento. El esfuerzo de esta licencia es de ella, pero sin ayuda no hubiese sido posible. La paciencia y técnicas son increíbles, y las palabras de aliento ya son de otro nivel.',
-    headerImageId: 'achievement-daniela'
+    headerImageId: 'achievement-daniela',
+    role: 'Egresada'
   },
   {
     name: 'Candelaria Pereyra',
     content: '¡Holi! La verdad, súper conforme con las clases. Me sorprendió haber aprendido un montón en poco tiempo y el hecho de que después practiqué con autos reales y no conos me dejó muy sorprendida. Brian es súper buena onda: explica re bien, es claro, paciente ante todo, súper seguro y divertido. ¡10/10!',
-    headerImageId: 'achievement-candelaria'
+    headerImageId: 'achievement-candelaria',
+    role: 'Egresada'
   },
   {
     name: 'Julia Geoia',
     content: '¡Hola! La verdad es que la academia es súper recomendable, tanto por la calidad de la enseñanza como por la atención. Pude superar mis miedos y también los conos jajaja. El profesor es un genio: tiene muchísima paciencia, es muy respetuoso y explica de manera clara y práctica.',
+    role: 'Egresada'
   },
   {
     name: 'Lautaro Ramirez',
     content: 'Muy recomendable la escuela de manejo. La mejor atención que recibí y todo excelente; pude concretar mi meta de recibir mi licencia de conducir gracias a las clases intensivas que me brindaron. El instructor es una persona muy paciente y profesional.',
-    headerImageId: 'achievement-lautaro'
+    headerImageId: 'achievement-lautaro',
+    role: 'Egresado'
   },
   {
     name: 'Alejandra Merlo',
     content: 'Simplemente quería agradecer de corazón haberme cruzado con la academia. Era algo que me costaba un montón y que procrastiné mucho tiempo; gracias a la confianza, el apoyo y sobre todo la paciencia, pude lograrlo. ¡No se dan una idea de lo importante que esto es para mí!',
-    headerImageId: 'achievement-alejandra'
+    headerImageId: 'achievement-alejandra',
+    role: 'Egresada'
   },
   {
     name: 'Maria Silisque',
     content: 'Excelente atención y predisposición. Me sentí muy cómoda en todas las clases, explican con mucha calma y eso te da la seguridad que necesitás cuando recién empezás. ¡Muchas gracias por todo!',
+    role: 'Egresada'
   },
   {
     name: 'Javier Peña',
     content: 'La metodología que usan es muy efectiva. Pasé de tener pánico a sentarme frente al volante a manejar con total tranquilidad en el tráfico. Los recomiendo totalmente.',
+    role: 'Egresado'
   },
   {
     name: 'Maura Rivero',
     content: 'Un antes y un después en mi confianza al conducir. El enfoque en la mentalidad me ayudó a superar bloqueos que tenía hace años. ¡Gracias Pilotos!',
+    role: 'Egresada'
   }
 ];
 
@@ -124,7 +132,7 @@ export const Testimonials = () => {
 
                         <div className="mt-auto pt-6 border-t border-white/5">
                           <p className="font-bold text-foreground text-lg tracking-tight">{t.name}</p>
-                          <p className="text-[10px] text-primary font-bold uppercase tracking-widest mt-1">Egresado/a Pilotos</p>
+                          <p className="text-[10px] text-primary font-bold uppercase tracking-widest mt-1">{t.role} Pilotos</p>
                         </div>
                       </CardContent>
                     </Card>
