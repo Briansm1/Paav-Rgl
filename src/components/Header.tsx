@@ -102,7 +102,7 @@ export const Header = () => {
             </Link>
           ))}
           <Link href="#planes">
-            <Button className="bg-primary hover:bg-primary/90 text-white rounded-full px-5 font-bold shadow-lg shadow-primary/20 h-9 text-xs">
+            <Button className="bg-green-600 hover:bg-green-700 text-white rounded-full px-5 font-bold shadow-lg shadow-green-600/20 h-9 text-xs">
               Quiero empezar
             </Button>
           </Link>
@@ -141,7 +141,7 @@ export const Header = () => {
             </Link>
           ))}
           <Link href="#planes" onClick={() => setMobileMenuOpen(false)} className="mt-4 w-full">
-            <Button size="lg" className="bg-primary hover:bg-primary/90 text-white w-full h-14 text-lg rounded-xl font-bold">
+            <Button size="lg" className="bg-green-600 hover:bg-green-700 text-white w-full h-14 text-lg rounded-xl font-bold">
               Inscribirme ahora
             </Button>
           </Link>
