@@ -26,13 +26,10 @@ import {
   SelectValue,
 } from "@/components/ui/select";
 import { useToast } from '@/hooks/use-toast';
-import { initializeApp, getApps } from 'firebase/app';
-import { getFirestore, collection, addDoc, serverTimestamp } from 'firebase/firestore';
-import { firebaseConfig } from '@/firebase/config';
-
-// Inicializar Firebase si no está inicializado
-const app = getApps().length === 0 ? initializeApp(firebaseConfig) : getApps()[0];
-const db = getFirestore(app);
+import { collection, addDoc, serverTimestamp } from 'firebase/firestore';
+import { initializeFirebase } from '@/firebase';
+import { errorEmitter } from '@/firebase/error-emitter';
+import { FirestorePermissionError } from '@/firebase/errors';
 
 const formSchema = z.object({
   name: z.string().min(2, { message: 'El nombre es obligatorio' }),
@@ -46,6 +43,8 @@ export const Contact = () => {
   const { toast } = useToast();
   const [fileName, setFileName] = useState<string | null>(null);
   const [isSubmitting, setIsSubmitting] = useState(false);
+  const { firestore } = initializeFirebase();
+  
   const phoneNumber = "542966265603";
   const whatsappUrl = `https://wa.me/${phoneNumber}`;
   const emailAddress = "pilotosasesalvolante@gmail.com";
@@ -70,54 +69,69 @@ export const Contact = () => {
   };
 
   async function onSubmit(values: z.infer<typeof formSchema>) {
+    if (!firestore) return;
+    
     setIsSubmitting(true);
-    try {
-      // 1. Guardar la reseña en la colección 'reviews'
-      await addDoc(collection(db, 'reviews'), {
-        ...values,
-        licenseImage: fileName || null,
-        createdAt: serverTimestamp(),
+    
+    const reviewData = {
+      ...values,
+      licenseImage: fileName || null,
+      createdAt: serverTimestamp(),
+    };
+
+    const mailData = {
+      to: emailAddress,
+      message: {
+        subject: `Nueva Reseña de Estudiante: ${values.name}`,
+        text: `Has recibido una nueva reseña de ${values.name} (${values.email}).\nCalificación: ${values.rating} estrellas.\nReseña: ${values.review}`,
+        html: `
+          <div style="font-family: sans-serif; padding: 20px; border: 1px solid #eee; border-radius: 10px;">
+            <h2 style="color: #2563eb;">¡Nueva Reseña de Estudiante!</h2>
+            <p><strong>Nombre:</strong> ${values.name}</p>
+            <p><strong>Email:</strong> ${values.email}</p>
+            <p><strong>Calificación:</strong> ${values.rating} ⭐</p>
+            <p><strong>Reseña:</strong></p>
+            <blockquote style="background: #f9f9f9; padding: 15px; border-left: 5px solid #2563eb;">
+              ${values.review}
+            </blockquote>
+            ${fileName ? `<p style="font-size: 12px; color: #666;">* El usuario adjuntó una imagen de licencia: ${fileName}</p>` : ''}
+            <p style="margin-top: 20px; font-size: 10px; color: #aaa;">Enviado desde el sitio web de Pilotos - ases al volante</p>
+          </div>
+        `,
+      },
+    };
+
+    // 1. Guardar la reseña en la colección 'reviews' (Sin await para evitar latencia UI)
+    addDoc(collection(firestore, 'reviews'), reviewData)
+      .catch(async (error) => {
+        const permissionError = new FirestorePermissionError({
+          path: 'reviews',
+          operation: 'create',
+          requestResourceData: reviewData,
+        });
+        errorEmitter.emit('permission-error', permissionError);
       });
 
-      // 2. Crear documento en la colección 'mail' para disparar la extensión Trigger Email
-      await addDoc(collection(db, 'mail'), {
-        to: emailAddress,
-        message: {
-          subject: `Nueva Reseña de Estudiante: ${values.name}`,
-          text: `Has recibido una nueva reseña de ${values.name} (${values.email}).\nCalificación: ${values.rating} estrellas.\nReseña: ${values.review}`,
-          html: `
-            <div style="font-family: sans-serif; padding: 20px; border: 1px solid #eee; border-radius: 10px;">
-              <h2 style="color: #2563eb;">¡Nueva Reseña de Estudiante!</h2>
-              <p><strong>Nombre:</strong> ${values.name}</p>
-              <p><strong>Email:</strong> ${values.email}</p>
-              <p><strong>Calificación:</strong> ${values.rating} ⭐</p>
-              <p><strong>Reseña:</strong></p>
-              <blockquote style="background: #f9f9f9; padding: 15px; border-left: 5px solid #2563eb;">
-                ${values.review}
-              </blockquote>
-              ${fileName ? `<p style="font-size: 12px; color: #666;">* El usuario adjuntó una imagen de licencia: ${fileName}</p>` : ''}
-              <p style="margin-top: 20px; font-size: 10px; color: #aaa;">Enviado desde el sitio web de Pilotos - ases al volante</p>
-            </div>
-          `,
-        },
+    // 2. Crear documento en la colección 'mail' (Sin await)
+    addDoc(collection(firestore, 'mail'), mailData)
+      .catch(async (error) => {
+        const permissionError = new FirestorePermissionError({
+          path: 'mail',
+          operation: 'create',
+          requestResourceData: mailData,
+        });
+        errorEmitter.emit('permission-error', permissionError);
       });
 
-      toast({
-        title: "¡Reseña enviada con éxito!",
-        description: "Gracias por compartir tu experiencia. Te llegará una copia al mail.",
-      });
-      form.reset();
-      setFileName(null);
-    } catch (error) {
-      console.error("Error al enviar:", error);
-      toast({
-        variant: "destructive",
-        title: "Error al enviar",
-        description: "No pudimos procesar tu reseña en este momento. Intenta por WhatsApp.",
-      });
-    } finally {
-      setIsSubmitting(false);
-    }
+    // Feedback inmediato al usuario
+    toast({
+      title: "¡Reseña enviada con éxito!",
+      description: "Gracias por compartir tu experiencia. Estamos procesando tu mensaje.",
+    });
+    
+    form.reset();
+    setFileName(null);
+    setIsSubmitting(false);
   }
 
   return (
