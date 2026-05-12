@@ -15,8 +15,8 @@ const faqs = [
     answer: "Nuestras sesiones de prácticas dinámicas duran 50 minutos. Es el tiempo ideal para optimizar tu aprendizaje sin agotarte, permitiéndote fijar los conocimientos de manera efectiva en cada encuentro."
   },
   {
-    question: "¿Ustedes me prestan el auto para el examen?",
-    answer: "¡Sí! Contamos con un servicio de alquiler de vehículo especialmente acondicionado para que rindas tu examen práctico con el mismo auto con el que practicaste, dándote mucha más seguridad."
+    question: "¿Tengo que tener auto para las prácticas?",
+    answer: "No, nosotros te brindamos el vehículo para todas tus clases. Trabajamos con unidades modernas, seguras y equipadas para que tu aprendizaje sea totalmente tranquilo y profesional."
   },
   {
     question: "¿Qué requisitos necesito para empezar?",
