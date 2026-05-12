@@ -58,7 +58,7 @@ const testimonials = [
   },
   {
     name: 'Maura Rivero',
-    content: 'Un antes y un después en mi confianza al conducir. El enfoque en la mentalidad me ayudó a superar bloqueos que tenía hace años. ¡Gracias Pilotos!',
+    content: 'Brian, excelente profe, gracias por la paciencia y dedicación.',
     role: 'Egresada'
   }
 ];
