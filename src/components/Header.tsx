@@ -4,10 +4,16 @@
 import React, { useState, useEffect } from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
-import { Menu, X } from 'lucide-react';
+import { Menu, X, ChevronDown, Instagram, Facebook, Youtube } from 'lucide-react';
 import { cn } from '@/lib/utils';
 import { Button } from '@/components/ui/button';
 import { PlaceHolderImages } from '@/app/lib/placeholder-images';
+import {
+  DropdownMenu,
+  DropdownMenuContent,
+  DropdownMenuItem,
+  DropdownMenuTrigger,
+} from "@/components/ui/dropdown-menu";
 
 export const Header = () => {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -50,6 +56,21 @@ export const Header = () => {
     { name: 'Preguntas frecuentes', href: '#faq' },
   ];
 
+  const socialLinks = [
+    { name: 'Instagram', href: 'https://www.instagram.com/pilotos.asesalvolante/', icon: <Instagram className="w-4 h-4" /> },
+    { name: 'Facebook', href: 'https://www.facebook.com/profile.php?id=61576666433315', icon: <Facebook className="w-4 h-4" /> },
+    { name: 'YouTube', href: 'https://www.youtube.com/@pilotosasesalvolante', icon: <Youtube className="w-4 h-4" /> },
+    { 
+      name: 'TikTok', 
+      href: 'https://www.tiktok.com/@pilotos_asesalvolante', 
+      icon: (
+        <svg viewBox="0 0 448 512" className="w-4 h-4 fill-current" xmlns="http://www.w3.org/2000/svg">
+          <path d="M448,209.91a210.06,210.06,0,0,1-122.77-39.25V349.38A162.55,162.55,0,1,1,185,188.31V278.2a74.62,74.62,0,1,0,52.23,71.18V0l88,0a121.18,121.18,0,0,0,1.86,22.17h0A122.18,122.18,0,0,0,381,102.39a121.43,121.43,0,0,0,67,20.14Z"/>
+        </svg>
+      ) 
+    },
+  ];
+
   return (
     <header
       className={cn(
@@ -87,7 +108,7 @@ export const Header = () => {
         </Link>
 
         {/* Desktop Nav */}
-        <nav className="hidden md:flex items-center gap-6 lg:gap-10">
+        <nav className="hidden md:flex items-center gap-6 lg:gap-8">
           {navLinks.map((link) => (
             <Link
               key={link.name}
@@ -107,6 +128,29 @@ export const Header = () => {
               )} />
             </Link>
           ))}
+          
+          <DropdownMenu>
+            <DropdownMenuTrigger className="flex items-center gap-1 text-sm lg:text-base font-bold text-slate-300 hover:text-white outline-none transition-colors">
+              Redes
+              <ChevronDown className="w-4 h-4" />
+            </DropdownMenuTrigger>
+            <DropdownMenuContent className="bg-black border-white/10 text-white p-2 min-w-[160px]">
+              {socialLinks.map((social) => (
+                <DropdownMenuItem key={social.name} asChild>
+                  <a 
+                    href={social.href} 
+                    target="_blank" 
+                    rel="noopener noreferrer"
+                    className="flex items-center gap-3 p-2 hover:bg-white/10 rounded-md cursor-pointer transition-colors"
+                  >
+                    <span className="text-primary">{social.icon}</span>
+                    <span className="font-bold text-sm">{social.name}</span>
+                  </a>
+                </DropdownMenuItem>
+              ))}
+            </DropdownMenuContent>
+          </DropdownMenu>
+
           <Link href="#planes">
             <Button className="bg-green-600 hover:bg-green-700 text-white rounded-full px-6 font-bold shadow-lg shadow-green-600/20 h-10 text-sm">
               Quiero empezar
@@ -129,7 +173,7 @@ export const Header = () => {
         "fixed inset-0 bg-black z-40 flex flex-col items-center justify-center transition-all duration-500 md:hidden",
         mobileMenuOpen ? "opacity-100 visible" : "opacity-0 invisible pointer-events-none"
       )}>
-        <nav className="flex flex-col items-center gap-8 p-6">
+        <nav className="flex flex-col items-center gap-6 p-6 w-full max-w-xs text-center">
           {navLinks.map((link) => (
             <Link
               key={link.name}
@@ -146,7 +190,26 @@ export const Header = () => {
               {link.name}
             </Link>
           ))}
-          <Link href="#planes" onClick={() => setMobileMenuOpen(false)} className="mt-4 w-full">
+          
+          <div className="w-full border-t border-white/10 pt-6 mt-2">
+            <p className="text-slate-500 text-xs font-bold uppercase tracking-widest mb-4">Nuestras Redes</p>
+            <div className="flex justify-center gap-6">
+              {socialLinks.map((social) => (
+                <a 
+                  key={social.name}
+                  href={social.href} 
+                  target="_blank" 
+                  rel="noopener noreferrer"
+                  className="text-white hover:text-primary transition-colors"
+                  aria-label={social.name}
+                >
+                  <span className="[&>svg]:w-6 [&>svg]:h-6">{social.icon}</span>
+                </a>
+              ))}
+            </div>
+          </div>
+
+          <Link href="#planes" onClick={() => setMobileMenuOpen(false)} className="mt-6 w-full">
             <Button size="lg" className="bg-green-600 hover:bg-green-700 text-white w-full h-14 text-lg rounded-xl font-bold">
               Inscribirme ahora
             </Button>
