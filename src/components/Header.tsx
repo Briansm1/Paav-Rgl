@@ -44,7 +44,7 @@ export const Header = () => {
         }
         return false;
       });
-      if (current) setActiveSection(`#${current}`);
+      if (current) setActiveSection(`/#${current}`);
     };
     
     window.addEventListener('scroll', handleScroll);
@@ -52,11 +52,11 @@ export const Header = () => {
   }, []);
 
   const navLinks = [
-    { name: 'Inicio', href: '#inicio' },
-    { name: 'Nuestra metodología', href: '#servicios' },
-    { name: 'Casos de éxito', href: '#testimonios' },
-    { name: 'Programas', href: '#planes' },
-    { name: 'Preguntas frecuentes', href: '#faq' },
+    { name: 'Inicio', href: '/#inicio' },
+    { name: 'Nuestra metodología', href: '/#servicios' },
+    { name: 'Casos de éxito', href: '/#testimonios' },
+    { name: 'Programas', href: '/#planes' },
+    { name: 'Preguntas frecuentes', href: '/#faq' },
   ];
 
   const socialLinks = [
@@ -85,10 +85,10 @@ export const Header = () => {
     >
       <div className="container mx-auto px-4 flex items-center justify-between">
         <Link 
-          href="#inicio" 
+          href="/#inicio" 
           className="flex items-center gap-2 group relative z-50"
           onClick={() => {
-            setActiveSection('#inicio');
+            setActiveSection('/#inicio');
             setMobileMenuOpen(false);
           }}
         >
@@ -154,7 +154,7 @@ export const Header = () => {
             </DropdownMenuContent>
           </DropdownMenu>
 
-          <Link href="#planes">
+          <Link href="/#planes">
             <Button className="bg-green-600 hover:bg-green-700 text-white rounded-full px-6 font-bold shadow-lg shadow-green-600/20 h-10 text-sm">
               Quiero empezar
             </Button>
@@ -212,7 +212,7 @@ export const Header = () => {
             </div>
           </div>
 
-          <Link href="#planes" onClick={() => setMobileMenuOpen(false)} className="mt-6 w-full">
+          <Link href="/#planes" onClick={() => setMobileMenuOpen(false)} className="mt-6 w-full">
             <Button size="lg" className="bg-green-600 hover:bg-green-700 text-white w-full h-14 text-lg rounded-xl font-bold">
               Inscribirme ahora
             </Button>
