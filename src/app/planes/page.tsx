@@ -77,7 +77,7 @@ export default function PlanesPage() {
           <div className="max-w-4xl mx-auto">
             <div className="flex flex-col gap-10 p-6 md:p-12 rounded-[3rem] border bg-secondary shadow-2xl border-white/5 h-full w-full">
               
-              <div id="opciones-plan" className="flex flex-row md:grid md:grid-cols-2 gap-6 overflow-x-auto md:overflow-x-visible pb-4 md:pb-0 snap-x snap-mandatory">
+              <div id="opciones-plan" className="flex flex-row md:grid md:grid-cols-2 gap-6 overflow-x-auto md:overflow-x-visible pb-4 md:pb-0 snap-x snap-mandatory scrollbar-hide">
                 {programDetails.options.map((option, idx) => (
                   <div 
                     key={idx} 
@@ -171,7 +171,7 @@ export default function PlanesPage() {
                     ¿Qué vas a lograr?
                   </h3>
                   <div className="space-y-3">
-                    {programDetails.targetAudience.map((item, i) => (
+                    {programDetails.outcomes.map((item, i) => (
                       <div key={i} className="flex items-start gap-3">
                         <div className="mt-1 bg-accent/10 p-1 rounded-full shrink-0">
                           <Check className="w-3 h-3 text-accent" />
