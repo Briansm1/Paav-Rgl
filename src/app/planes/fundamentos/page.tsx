@@ -3,7 +3,7 @@ import Link from 'next/link';
 import { Header } from '@/components/Header';
 import { Footer } from '@/components/Footer';
 import { Button } from '@/components/ui/button';
-import { Check, ArrowLeft, UserCheck, Target, Clock, Gift, ShieldCheck, Star } from 'lucide-react';
+import { Check, ArrowLeft, UserCheck, Target, Clock, Gift, ShieldCheck } from 'lucide-react';
 import { cn } from '@/lib/utils';
 
 const programDetails = {
@@ -58,13 +58,13 @@ export default function PlanFundamentosPage() {
     <main className="min-h-screen bg-background">
       <Header />
       
-      <section className="pt-24 pb-10 bg-secondary/30 border-b border-white/5">
+      <section className="pt-24 pb-8 bg-secondary/30 border-b border-white/5">
         <div className="container mx-auto px-4 text-center">
           <Link href="/#planes" className="inline-flex items-center gap-2 text-primary font-bold mb-4 hover:underline">
             <ArrowLeft className="w-4 h-4" />
             Volver a los programas
           </Link>
-          <h1 className="text-3xl md:text-5xl font-bold font-headline mb-2 text-foreground text-center">
+          <h1 className="text-3xl md:text-5xl font-bold font-headline mb-0 text-foreground text-center">
             Programa <span className="text-primary">fundamentos</span>
           </h1>
         </div>
@@ -169,7 +169,7 @@ export default function PlanFundamentosPage() {
                     ¿Qué vas a lograr?
                   </h3>
                   <div className="space-y-3">
-                    {programDetails.outcomes.map((item, i) => (
+                    {programDetails.targetAudience.map((item, i) => (
                       <div key={i} className="flex items-start gap-3">
                         <div className="mt-1 bg-accent/10 p-1 rounded-full shrink-0">
                           <Check className="w-3 h-3 text-accent" />
