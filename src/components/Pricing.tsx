@@ -44,12 +44,13 @@ export const Pricing = () => {
           </p>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-7xl mx-auto">
+        <div className="flex flex-row md:grid md:grid-cols-3 gap-6 md:gap-8 max-w-7xl mx-auto overflow-x-auto md:overflow-x-visible pb-8 md:pb-0 snap-x snap-mandatory scrollbar-hide">
           {plans.map((plan, index) => (
             <div 
               key={index} 
               className={cn(
-                "relative p-8 rounded-[2.5rem] border-2 bg-secondary shadow-xl transition-all duration-500 flex flex-col items-center text-center group overflow-hidden border-white/5"
+                "relative p-8 rounded-[2.5rem] border-2 bg-secondary shadow-xl transition-all duration-500 flex flex-col items-center text-center group overflow-hidden border-white/5",
+                "min-w-[280px] md:min-w-0 snap-center"
               )}
             >
               <div className="absolute top-0 right-0 bg-accent text-white px-6 py-1.5 rounded-bl-2xl text-[10px] font-bold uppercase tracking-widest">

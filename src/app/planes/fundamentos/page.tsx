@@ -75,12 +75,13 @@ export default function PlanFundamentosPage() {
           <div className="max-w-4xl mx-auto">
             <div className="flex flex-col gap-10 p-6 md:p-12 rounded-[3rem] border bg-secondary shadow-2xl border-white/5 h-full w-full">
               
-              <div id="opciones-plan" className="grid grid-cols-1 md:grid-cols-2 gap-6 pt-6">
+              <div id="opciones-plan" className="flex flex-row md:grid md:grid-cols-2 gap-6 pt-6 overflow-x-auto md:overflow-x-visible pb-4 md:pb-0 snap-x snap-mandatory">
                 {programDetails.options.map((option, idx) => (
                   <div 
                     key={idx} 
                     className={cn(
                       "flex flex-col gap-6 p-6 md:p-8 rounded-[2rem] bg-black/40 border transition-all duration-300 shadow-inner relative overflow-hidden group",
+                      "min-w-[280px] md:min-w-0 snap-center",
                       idx === 0 ? "border-gold/40 bg-gold/5 ring-1 ring-gold/20" : "border-white/10"
                     )}
                   >
