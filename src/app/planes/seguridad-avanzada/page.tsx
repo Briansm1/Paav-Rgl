@@ -34,7 +34,7 @@ const programDetails = {
   ],
   outcomes: [
     'Mejorar coordinación y control del vehículo.',
-    'Ejecutar maniobras con técnica correcta.',
+    'Ejecutar maniobras pendientes con la técnica correcta.',
     'Corregir vicios malos de conducción.',
     'Ganar seguridad en situaciones que hoy generan tensión.',
     'Manejar con fluidez y confianza real.'
