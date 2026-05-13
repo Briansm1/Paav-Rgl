@@ -23,8 +23,11 @@ export const Header = () => {
   const logoImg = PlaceHolderImages.find(img => img.id === 'academy-logo');
 
   useEffect(() => {
-    // Forzar scroll al inicio al recargar la página
-    window.scrollTo(0, 0);
+    // Solo forzar scroll al inicio si NO hay un hash en la URL (evita romper anclajes como #planes)
+    if (!window.location.hash) {
+      window.scrollTo(0, 0);
+    }
+    
     if ('scrollRestoration' in window.history) {
       window.history.scrollRestoration = 'manual';
     }
