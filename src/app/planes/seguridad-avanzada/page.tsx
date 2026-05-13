@@ -16,7 +16,7 @@ const programDetails = {
       cardPrice: '$255.999',
       savings: 'Ahorro de $90.000',
       sessions: '4 sesiones de prácticas dinámicas',
-      whatsappLink: "https://wa.me/5492966265603?text=Hola%2C%20vengo%20desde%20la%20web%20y%20quiero%20contratar%20el%20*plan%20as*%20de%20*4%20sesiones)*"
+      whatsappLink: "https://wa.me/5492966265603?text=Hola%2C%20vengo%20desde%20la%20web%20y%20quiero%20contratar%20el%20*plan%20as*%20de%20*4%20sesiones*"
     },
     {
       name: 'Plan diamante',
@@ -24,7 +24,7 @@ const programDetails = {
       cardPrice: '$305.999',
       savings: 'Ahorro de $108.000',
       sessions: '5 sesiones de prácticas dinámicas',
-      whatsappLink: "https://wa.me/5492966265603?text=Hola%2C%20vengo%20desde%20la%20web%20y%20quiero%20contratar%20el%20*plan%20diamante*%20de%20*5%20sesiones)*"
+      whatsappLink: "https://wa.me/5492966265603?text=Hola%2C%20vengo%20desde%20la%20web%20y%20quiero%20contratar%20el%20*plan%20diamante*%20de%20*5%20sesiones*"
     }
   ],
   targetAudience: [
@@ -34,7 +34,7 @@ const programDetails = {
   ],
   outcomes: [
     'Mejorar coordinación y control del vehículo.',
-    'Ejecutar maniobras pendientes con la técnica correcta.',
+    'Ejecutar maniobras con técnica correcta.',
     'Corregir vicios malos de conducción.',
     'Ganar seguridad en situaciones que hoy generan tensión.',
     'Manejar con fluidez y confianza real.'
@@ -77,7 +77,7 @@ export default function PlanSeguridadAvanzadaPage() {
           <div className="max-w-4xl mx-auto">
             <div className="flex flex-col gap-10 p-6 md:p-12 rounded-[3rem] border bg-secondary shadow-2xl border-white/5 h-full w-full">
               
-              <div id="opciones-plan" className="flex flex-row md:grid md:grid-cols-2 gap-6 overflow-x-auto md:overflow-x-visible pb-4 md:pb-0 snap-x snap-mandatory">
+              <div id="opciones-plan" className="flex flex-row md:grid md:grid-cols-2 gap-6 pt-6 overflow-x-auto md:overflow-x-visible pb-4 md:pb-0 snap-x snap-mandatory scrollbar-hide">
                 {programDetails.options.map((option, idx) => (
                   <div 
                     key={idx} 
