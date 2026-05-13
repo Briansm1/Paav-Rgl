@@ -17,13 +17,13 @@ export const PartnersTicker = () => {
       </div>
       
       <div className="container mx-auto px-4">
-        <div className="flex flex-wrap justify-center items-center gap-12 md:gap-24">
+        <div className="flex flex-row justify-center items-center gap-8 md:gap-24">
           {partners.map((partner, index) => (
             <div 
               key={index} 
-              className="grayscale hover:grayscale-0 transition-all duration-500 opacity-60 hover:opacity-100"
+              className="grayscale hover:grayscale-0 transition-all duration-500 opacity-60 hover:opacity-100 shrink-0"
             >
-              <div className="relative h-28 w-44 md:h-40 md:w-64">
+              <div className="relative h-20 w-32 sm:h-28 sm:w-44 md:h-40 md:w-64">
                 <Image
                   src={partner.imageUrl}
                   alt={partner.description}
