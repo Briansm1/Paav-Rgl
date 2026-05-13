@@ -50,7 +50,7 @@ export default function PlanExpertoPage() {
         <div className="container mx-auto px-4 text-center">
           <Link href="/#planes" className="inline-flex items-center gap-2 text-primary font-bold mb-8 hover:underline">
             <ArrowLeft className="w-4 h-4" />
-            Volver al inicio
+            Volver a los programas
           </Link>
           <h1 className="text-4xl md:text-6xl font-bold font-headline mb-6 text-foreground text-center">
             Programa <span className="text-primary">experto</span>
