@@ -81,7 +81,6 @@ export const Contact = () => {
       createdAt: serverTimestamp(),
     };
 
-    // Guardar la reseña en la colección 'reviews' de tu proyecto
     addDoc(collection(firestore, 'reviews'), reviewData)
       .then(() => {
         toast({
@@ -111,53 +110,53 @@ export const Contact = () => {
           <span className="inline-block px-4 py-1.5 mb-6 text-xs font-bold tracking-widest text-primary uppercase bg-primary/10 rounded-full">
             Nuestra Comunidad
           </span>
-          <h2 className="text-4xl md:text-6xl font-bold font-headline mb-6 tracking-tight text-foreground">
+          <h2 className="text-3xl md:text-6xl font-bold font-headline mb-6 tracking-tight text-foreground">
             Tu opinión es <span className="text-primary italic">nuestro motor</span>
           </h2>
-          <p className="text-lg md:text-xl text-muted-foreground leading-relaxed">
+          <p className="text-base md:text-xl text-muted-foreground leading-relaxed">
             Compartinos tu experiencia y ayuda a otros a iniciar su camino hacia la libertad e independencia.
           </p>
         </div>
 
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 md:gap-20 items-stretch">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 md:gap-20 items-stretch">
           <div className="flex flex-col gap-10">
-            <div className="bg-secondary p-8 md:p-12 rounded-[2.5rem] shadow-xl border border-white/5 h-full flex flex-col justify-center">
-              <h4 className="text-2xl font-bold mb-10 tracking-tight">Canales de atención</h4>
-              <div className="space-y-10">
-                <div className="flex items-start gap-6">
-                  <div className="bg-white/5 p-4 rounded-[1.2rem] shadow-sm shrink-0">
-                    <MapPin className="w-6 h-6 text-primary" />
+            <div className="bg-secondary p-6 md:p-12 rounded-[2.5rem] shadow-xl border border-white/5 h-full flex flex-col justify-center">
+              <h4 className="text-xl md:text-2xl font-bold mb-8 md:mb-10 tracking-tight text-center md:text-left">Canales de atención</h4>
+              <div className="space-y-8 md:space-y-10">
+                <div className="flex items-start gap-4 md:gap-6">
+                  <div className="bg-white/5 p-3 md:p-4 rounded-[1.2rem] shadow-sm shrink-0">
+                    <MapPin className="w-5 h-5 md:w-6 md:h-6 text-primary" />
                   </div>
                   <div>
-                    <p className="font-bold text-lg mb-1">Zona de cobertura</p>
-                    <p className="text-muted-foreground leading-relaxed">Río Gallegos, Santa Cruz, Argentina, Z9400</p>
+                    <p className="font-bold text-base md:text-lg mb-1">Zona de cobertura</p>
+                    <p className="text-sm md:text-base text-muted-foreground leading-relaxed">Río Gallegos, Santa Cruz, Argentina, Z9400</p>
                   </div>
                 </div>
-                <div className="flex items-start gap-6">
-                  <div className="bg-white/5 p-4 rounded-[1.2rem] shadow-sm shrink-0">
-                    <MessageSquare className="w-6 h-6 text-primary" />
+                <div className="flex items-start gap-4 md:gap-6">
+                  <div className="bg-white/5 p-3 md:p-4 rounded-[1.2rem] shadow-sm shrink-0">
+                    <MessageSquare className="w-5 h-5 md:w-6 md:h-6 text-primary" />
                   </div>
                   <div>
-                    <p className="font-bold text-lg mb-1">WhatsApp</p>
+                    <p className="font-bold text-base md:text-lg mb-1">WhatsApp</p>
                     <a 
                       href={whatsappUrl}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="text-muted-foreground font-medium hover:text-primary transition-colors block"
+                      className="text-sm md:text-base text-muted-foreground font-medium hover:text-primary transition-colors block"
                     >
                       +54 2966 265603
                     </a>
                   </div>
                 </div>
-                <div className="flex items-start gap-6">
-                  <div className="bg-white/5 p-4 rounded-[1.2rem] shadow-sm shrink-0">
-                    <Mail className="w-6 h-6 text-primary" />
+                <div className="flex items-start gap-4 md:gap-6">
+                  <div className="bg-white/5 p-3 md:p-4 rounded-[1.2rem] shadow-sm shrink-0">
+                    <Mail className="w-5 h-5 md:w-6 md:h-6 text-primary" />
                   </div>
-                  <div>
-                    <p className="font-bold text-lg mb-1">Más consultas o propuestas</p>
+                  <div className="overflow-hidden">
+                    <p className="font-bold text-base md:text-lg mb-1">Consultas o propuestas</p>
                     <a 
                       href={`mailto:${emailAddress}`}
-                      className="text-muted-foreground font-medium hover:text-primary transition-colors no-underline"
+                      className="text-sm md:text-base text-muted-foreground font-medium hover:text-primary transition-colors no-underline break-words block"
                     >
                       {emailAddress}
                     </a>
@@ -168,16 +167,16 @@ export const Contact = () => {
           </div>
 
           <div className="flex flex-col gap-10">
-            <div className="bg-card p-8 md:p-12 rounded-[2.5rem] shadow-2xl border border-white/5 h-full">
+            <div className="bg-card p-6 md:p-12 rounded-[2.5rem] shadow-2xl border border-white/5 h-full">
               <div className="mb-8 text-center md:text-left">
-                <h4 className="text-2xl md:text-3xl font-bold mb-4 tracking-tight">Cuéntanos tu experiencia</h4>
-                <p className="text-muted-foreground">
+                <h4 className="text-xl md:text-3xl font-bold mb-3 md:mb-4 tracking-tight">Cuéntanos tu experiencia</h4>
+                <p className="text-sm md:text-base text-muted-foreground">
                   Tu opinión será guardada en nuestro sistema para seguir mejorando día a día.
                 </p>
               </div>
               
               <Form {...form}>
-                <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-5">
+                <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-4 md:space-y-5">
                   <FormField
                     control={form.control}
                     name="name"
@@ -219,7 +218,7 @@ export const Contact = () => {
                             </FormControl>
                             <SelectContent className="bg-card border-white/10 text-white">
                               {[5, 4, 3, 2, 1].map((val) => (
-                                <SelectItem key={val} value={val.toString()} className="hover:bg-primary/20">
+                                <SelectItem key={val} value={val.toString()} className="hover:bg-primary/20 cursor-pointer">
                                   <div className="flex items-center gap-2">
                                     {val} {val === 1 ? 'estrella' : 'estrellas'}
                                   </div>
@@ -247,23 +246,23 @@ export const Contact = () => {
                               onChange={handleFileChange}
                               className="absolute inset-0 w-full h-full opacity-0 cursor-pointer z-10"
                             />
-                            <div className="flex flex-col items-center justify-center border-2 border-dashed border-white/10 rounded-2xl p-6 bg-white/5 group-hover:bg-white/10 transition-colors">
+                            <div className="flex flex-col items-center justify-center border-2 border-dashed border-white/10 rounded-2xl p-4 md:p-6 bg-white/5 group-hover:bg-white/10 transition-colors">
                               {fileName ? (
                                 <div className="flex items-center gap-3 text-primary font-medium">
                                   <CheckCircle2 className="w-5 h-5" />
-                                  <span className="text-sm truncate max-w-[200px]">{fileName}</span>
+                                  <span className="text-xs md:text-sm truncate max-w-[150px] md:max-w-[200px]">{fileName}</span>
                                 </div>
                               ) : (
                                 <>
-                                  <ImageIcon className="w-8 h-8 text-muted-foreground mb-2" />
-                                  <p className="text-xs text-muted-foreground font-medium">Click o arrastra para subir tu foto</p>
+                                  <ImageIcon className="w-6 h-6 md:w-8 md:h-8 text-muted-foreground mb-2" />
+                                  <p className="text-[10px] md:text-xs text-muted-foreground font-medium">Click o arrastra para subir foto</p>
                                 </>
                               )}
                             </div>
                           </div>
                         </FormControl>
-                        <FormDescription className="text-[11px] text-slate-400 italic">
-                          No te preocupes por la privacidad: nuestro equipo se encargará de tapar todos los datos sensibles antes de publicar tu logro.
+                        <FormDescription className="text-[10px] md:text-[11px] text-slate-400 italic leading-tight">
+                          No te preocupes por la privacidad: taparemos tus datos sensibles antes de publicar tu logro.
                         </FormDescription>
                         <FormMessage />
                       </FormItem>
@@ -278,8 +277,8 @@ export const Contact = () => {
                         <FormLabel>Tu reseña</FormLabel>
                         <FormControl>
                           <Textarea 
-                            placeholder="Cuéntanos qué fue lo que más te gustó de tus clases..." 
-                            className="rounded-xl bg-white/5 border-white/10 focus:ring-primary text-white min-h-[120px]" 
+                            placeholder="Cuéntanos qué fue lo que más te gustó..." 
+                            className="rounded-xl bg-white/5 border-white/10 focus:ring-primary text-white min-h-[100px] md:min-h-[120px]" 
                             {...field} 
                           />
                         </FormControl>
@@ -290,7 +289,7 @@ export const Contact = () => {
                   <Button 
                     type="submit" 
                     disabled={isSubmitting}
-                    className="w-full h-14 bg-primary hover:bg-primary/90 text-white text-lg font-bold rounded-xl shadow-lg shadow-primary/20 transition-all active:scale-[0.98] flex items-center justify-center gap-2"
+                    className="w-full h-12 md:h-14 bg-primary hover:bg-primary/90 text-white text-base md:text-lg font-bold rounded-xl shadow-lg shadow-primary/20 transition-all active:scale-[0.98] flex items-center justify-center gap-2"
                   >
                     {isSubmitting ? (
                       <>
