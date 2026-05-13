@@ -16,7 +16,7 @@ const programDetails = {
       cardPrice: '$479.999',
       savings: 'Ahorro de $168.000',
       sessions: '8 sesiones de prácticas dinámicas',
-      whatsappLink: "https://wa.me/5492966265603?text=Hola%2C%20vengo%20desde%20la%20web%20y%20quiero%20contratar%20el%20*plan%20oro*%20de%20*8%20sesiones)*"
+      whatsappLink: "https://wa.me/5492966265603?text=Hola%2C%20vengo%20desde%20la%20web%20y%20quiero%20contratar%20el%20*plan%20oro*%20de%20*8%20sesiones*"
     },
     {
       name: 'Plan rookie',
@@ -24,7 +24,7 @@ const programDetails = {
       cardPrice: '$569.999',
       savings: 'Ahorro de $200.000',
       sessions: '10 sesiones de prácticas dinámicas',
-      whatsappLink: "https://wa.me/5492966265603?text=Hola%2C%20vengo%20desde%20la%20web%20y%20quiero%20contratar%20el%20*plan%20rookie*%20de%20*10%20sesiones)*"
+      whatsappLink: "https://wa.me/5492966265603?text=Hola%2C%20vengo%20desde%20la%20web%20y%20quiero%20contratar%20el%20*plan%20rookie*%20de%20*10%20sesiones*"
     }
   ],
   targetAudience: [
@@ -229,7 +229,7 @@ export default function PlanFundamentosPage() {
               </div>
 
               <div className="pt-8 flex justify-center">
-                <a href={programDetails.options[0].whatsappLink} target="_blank" rel="noopener noreferrer" className="w-full max-w-xs">
+                <a href={programDetails.options[1].whatsappLink} target="_blank" rel="noopener noreferrer" className="w-full max-w-xs">
                   <Button className="w-full bg-primary hover:bg-primary/90 rounded-xl h-12 font-bold transition-all">
                     Elegir
                   </Button>
