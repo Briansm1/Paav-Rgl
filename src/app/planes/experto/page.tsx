@@ -37,7 +37,8 @@ const detailedPlans = [
       'Como realizar un cambio de neumático',
       'Simulador de examen teórico con +85 preguntas',
       'Descuentos exclusivos en nuestros productos digitales'
-    ]
+    ],
+    whatsappLink: "https://wa.me/5492966265603?text=Hola%2C%20vengo%20desde%20la%20web%20y%20quiero%20contratar%20el%20*plan%20experto*%20de%20*2%20sesiones)*"
   }
 ];
 
@@ -99,11 +100,11 @@ export default function PlanExpertoPage() {
                         <Clock className="w-5 h-5 text-primary" />
                         {plan.sessions}
                       </p>
-                      <Link href="#precios" className="w-full max-w-xs">
+                      <a href={plan.whatsappLink} target="_blank" rel="noopener noreferrer" className="w-full max-w-xs">
                         <Button className="w-full bg-primary hover:bg-primary/90 rounded-xl h-12 font-bold transition-all">
                           Elegir
                         </Button>
-                      </Link>
+                      </a>
                     </div>
                   </div>
 
@@ -183,11 +184,11 @@ export default function PlanExpertoPage() {
                 </div>
 
                 <div className="pt-4 flex justify-center">
-                  <Link href="#precios" className="w-full max-w-xs">
+                  <a href={plan.whatsappLink} target="_blank" rel="noopener noreferrer" className="w-full max-w-xs">
                     <Button className="w-full bg-primary hover:bg-primary/90 rounded-xl h-12 font-bold transition-all">
                       Elegir
                     </Button>
-                  </Link>
+                  </a>
                 </div>
               </div>
             ))}

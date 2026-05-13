@@ -16,6 +16,7 @@ const programDetails = {
       cardPrice: '$479.999',
       savings: 'Ahorro de $168.000',
       sessions: '8 sesiones de prácticas dinámicas',
+      whatsappLink: "https://wa.me/5492966265603?text=Hola%2C%20vengo%20desde%20la%20web%20y%20quiero%20contratar%20el%20*plan%20oro*%20de%20*8%20sesiones)*"
     },
     {
       name: 'Plan rookie',
@@ -23,6 +24,7 @@ const programDetails = {
       cardPrice: '$569.999',
       savings: 'Ahorro de $200.000',
       sessions: '10 sesiones de prácticas dinámicas',
+      whatsappLink: "https://wa.me/5492966265603?text=Hola%2C%20vengo%20desde%20la%20web%20y%20quiero%20contratar%20el%20*plan%20rookie*%20de%20*10%20sesiones)*"
     }
   ],
   targetAudience: [
@@ -123,7 +125,7 @@ export default function PlanFundamentosPage() {
                       </div>
 
                       <div className="pt-2 flex justify-center">
-                        <Link href="#opciones-plan" className="w-full">
+                        <a href={option.whatsappLink} target="_blank" rel="noopener noreferrer" className="w-full">
                           <Button 
                             className={cn(
                               "w-full rounded-xl h-12 font-bold transition-all group-hover:scale-[1.02]",
@@ -132,7 +134,7 @@ export default function PlanFundamentosPage() {
                           >
                             Elegir
                           </Button>
-                        </Link>
+                        </a>
                       </div>
                     </div>
                   </div>
@@ -169,7 +171,7 @@ export default function PlanFundamentosPage() {
                     ¿Qué vas a lograr?
                   </h3>
                   <div className="space-y-3">
-                    {programDetails.targetAudience.map((item, i) => (
+                    {programDetails.outcomes.map((item, i) => (
                       <div key={i} className="flex items-start gap-3">
                         <div className="mt-1 bg-accent/10 p-1 rounded-full shrink-0">
                           <Check className="w-3 h-3 text-accent" />
@@ -227,11 +229,11 @@ export default function PlanFundamentosPage() {
               </div>
 
               <div className="pt-8 flex justify-center">
-                <Link href="#opciones-plan" className="w-full max-w-xs">
+                <a href={programDetails.options[0].whatsappLink} target="_blank" rel="noopener noreferrer" className="w-full max-w-xs">
                   <Button className="w-full bg-primary hover:bg-primary/90 rounded-xl h-12 font-bold transition-all">
                     Elegir
                   </Button>
-                </Link>
+                </a>
               </div>
 
             </div>

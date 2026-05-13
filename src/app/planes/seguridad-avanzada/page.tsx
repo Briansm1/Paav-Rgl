@@ -16,6 +16,7 @@ const programDetails = {
       cardPrice: '$255.999',
       savings: 'Ahorro de $90.000',
       sessions: '4 sesiones de prácticas dinámicas',
+      whatsappLink: "https://wa.me/5492966265603?text=Hola%2C%20vengo%20desde%20la%20web%20y%20quiero%20contratar%20el%20*plan%20as*%20de%20*4%20sesiones)*"
     },
     {
       name: 'Plan diamante',
@@ -23,6 +24,7 @@ const programDetails = {
       cardPrice: '$305.999',
       savings: 'Ahorro de $108.000',
       sessions: '5 sesiones de prácticas dinámicas',
+      whatsappLink: "https://wa.me/5492966265603?text=Hola%2C%20vengo%20desde%20la%20web%20y%20quiero%20contratar%20el%20*plan%20diamante*%20de%20*5%20sesiones)*"
     }
   ],
   targetAudience: [
@@ -75,7 +77,6 @@ export default function PlanSeguridadAvanzadaPage() {
           <div className="max-w-4xl mx-auto">
             <div className="flex flex-col gap-10 p-6 md:p-12 rounded-[3rem] border bg-secondary shadow-2xl border-white/5 h-full w-full">
               
-              {/* Opciones de Plan */}
               <div id="opciones-plan" className="flex flex-row md:grid md:grid-cols-2 gap-6 overflow-x-auto md:overflow-x-visible pb-4 md:pb-0 snap-x snap-mandatory">
                 {programDetails.options.map((option, idx) => (
                   <div 
@@ -102,7 +103,6 @@ export default function PlanSeguridadAvanzadaPage() {
                     </div>
 
                     <div className="space-y-4">
-                      {/* Precio Transferencia */}
                       <div className="flex flex-col items-center">
                         <span className="text-[10px] font-bold text-slate-400 uppercase tracking-widest mb-1">Transferencia</span>
                         <p className="text-4xl md:text-5xl font-black text-green-500 tracking-tighter">{option.transferPrice}</p>
@@ -111,7 +111,6 @@ export default function PlanSeguridadAvanzadaPage() {
                         </span>
                       </div>
 
-                      {/* Precio Tarjeta */}
                       <div className="pt-4 border-t border-white/5 flex flex-col items-center">
                         <span className="text-[10px] font-bold text-slate-400 uppercase tracking-widest mb-1">TARJETA DE CRÉDITO</span>
                         <p className="text-4xl md:text-5xl font-black text-primary tracking-tighter">{option.cardPrice}</p>
@@ -120,14 +119,13 @@ export default function PlanSeguridadAvanzadaPage() {
                         </span>
                       </div>
 
-                      {/* Sesiones debajo de los precios */}
                       <div className="pt-4 border-t border-white/10 flex items-center justify-center gap-2 text-primary font-bold">
                         <Clock className="w-4 h-4" />
                         <span className="text-sm">{option.sessions}</span>
                       </div>
 
                       <div className="pt-2 flex justify-center">
-                        <Link href="#opciones-plan" className="w-full">
+                        <a href={option.whatsappLink} target="_blank" rel="noopener noreferrer" className="w-full">
                           <Button 
                             className={cn(
                               "w-full rounded-xl h-12 font-bold transition-all group-hover:scale-[1.02]",
@@ -136,21 +134,19 @@ export default function PlanSeguridadAvanzadaPage() {
                           >
                             Elegir
                           </Button>
-                        </Link>
+                        </a>
                       </div>
                     </div>
                   </div>
                 ))}
               </div>
 
-              {/* Descripción debajo de los botones de elegir */}
               <div className="text-center py-4">
                 <p className="text-lg text-muted-foreground leading-relaxed max-w-2xl mx-auto">
                   {programDetails.description}
                 </p>
               </div>
 
-              {/* Contenido Unificado Stacking Vertically */}
               <div className="flex flex-col gap-8">
                 <div className="bg-black/20 p-6 rounded-[2rem] border border-white/5">
                   <h3 className="text-lg font-bold mb-4 flex items-center justify-center gap-2 text-foreground text-center">
@@ -232,13 +228,12 @@ export default function PlanSeguridadAvanzadaPage() {
                 </div>
               </div>
 
-              {/* Botón final para volver a los precios */}
               <div className="pt-8 flex justify-center">
-                <Link href="#opciones-plan" className="w-full max-w-xs">
+                <a href={programDetails.options[0].whatsappLink} target="_blank" rel="noopener noreferrer" className="w-full max-w-xs">
                   <Button className="w-full bg-primary hover:bg-primary/90 rounded-xl h-12 font-bold transition-all">
                     Elegir
                     </Button>
-                </Link>
+                </a>
               </div>
 
             </div>
