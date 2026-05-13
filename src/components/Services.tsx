@@ -1,8 +1,14 @@
+
 import React from 'react';
 import Image from 'next/image';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { PlaceHolderImages } from '@/app/lib/placeholder-images';
 import { BookOpen, Award, ShieldCheck, Brain, Clock } from 'lucide-react';
+import {
+  Carousel,
+  CarouselContent,
+  CarouselItem,
+} from "@/components/ui/carousel";
 
 // Componente para el icono de volante
 const SteeringWheel = ({ className }: { className?: string }) => (
@@ -61,34 +67,50 @@ export const Services = () => {
           </p>
         </div>
 
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 md:gap-12">
-          {services.map((service, index) => {
-            // Buscamos la imagen por ID en PlaceHolderImages, si no existe usamos un placeholder por defecto
-            const img = PlaceHolderImages.find(p => p.id === service.imgId) || PlaceHolderImages[0];
-            return (
-              <Card key={index} className="group relative overflow-hidden border-none bg-secondary shadow-xl hover:shadow-2xl transition-all duration-500">
-                <div className="relative aspect-square overflow-hidden bg-black">
-                  <Image 
-                    src={img?.imageUrl || ''} 
-                    alt={service.title} 
-                    fill 
-                    className="object-cover group-hover:scale-110 transition-transform duration-700"
-                    data-ai-hint={img?.imageHint}
-                  />
-                  <div className="absolute inset-0 bg-gradient-to-t from-black/90 to-transparent"></div>
-                  <div className="absolute bottom-6 left-6 text-white">
-                    {service.icon}
-                  </div>
-                </div>
-                <CardHeader className="pt-8">
-                  <CardTitle className="text-2xl font-bold group-hover:text-primary transition-colors">{service.title}</CardTitle>
-                </CardHeader>
-                <CardContent>
-                  <p className="text-muted-foreground text-base leading-relaxed mb-6">{service.description}</p>
-                </CardContent>
-              </Card>
-            );
-          })}
+        <div className="max-w-7xl mx-auto">
+          <Carousel
+            opts={{
+              align: "start",
+              loop: false,
+            }}
+            className="w-full"
+          >
+            <CarouselContent className="-ml-4 md:-ml-8 lg:-ml-12">
+              {services.map((service, index) => {
+                const img = PlaceHolderImages.find(p => p.id === service.imgId) || PlaceHolderImages[0];
+                return (
+                  <CarouselItem key={index} className="pl-4 md:pl-8 lg:pl-12 basis-[85%] sm:basis-1/2 lg:basis-1/3">
+                    <Card className="h-full group relative overflow-hidden border-none bg-secondary shadow-xl hover:shadow-2xl transition-all duration-500 rounded-[2rem]">
+                      <div className="relative aspect-square overflow-hidden bg-black">
+                        <Image 
+                          src={img?.imageUrl || ''} 
+                          alt={service.title} 
+                          fill 
+                          className="object-cover group-hover:scale-110 transition-transform duration-700"
+                          data-ai-hint={img?.imageHint}
+                        />
+                        <div className="absolute inset-0 bg-gradient-to-t from-black/90 to-transparent"></div>
+                        <div className="absolute bottom-6 left-6 text-white">
+                          {service.icon}
+                        </div>
+                      </div>
+                      <CardHeader className="pt-8 px-6">
+                        <CardTitle className="text-xl md:text-2xl font-bold group-hover:text-primary transition-colors">{service.title}</CardTitle>
+                      </CardHeader>
+                      <CardContent className="px-6 pb-8">
+                        <p className="text-muted-foreground text-sm md:text-base leading-relaxed">{service.description}</p>
+                      </CardContent>
+                    </Card>
+                  </CarouselItem>
+                );
+              })}
+            </CarouselContent>
+          </Carousel>
+          
+          {/* Mobile Hint */}
+          <div className="md:hidden text-center mt-6 text-[10px] text-muted-foreground uppercase tracking-widest font-bold animate-pulse">
+            Desliza para ver más →
+          </div>
         </div>
 
         <div className="mt-24 md:mt-40 p-1 md:p-2 bg-gradient-to-br from-primary/20 via-transparent to-accent/20 rounded-[2.5rem] overflow-hidden shadow-2xl">
