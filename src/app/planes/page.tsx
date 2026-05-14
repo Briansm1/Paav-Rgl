@@ -132,7 +132,7 @@ export default function PlanesPage() {
                               idx === 0 ? "bg-gold hover:bg-gold/90 text-gold-foreground" : "bg-primary hover:bg-primary/90"
                             )}
                           >
-                            Elegir
+                            Elegir un plan
                             </Button>
                         </a>
                       </div>
@@ -229,11 +229,11 @@ export default function PlanesPage() {
               </div>
 
               <div className="pt-8 flex justify-center">
-                <a href={programDetails.options[0].whatsappLink} target="_blank" rel="noopener noreferrer" className="w-full max-w-xs">
+                <Link href="#opciones-plan" className="w-full max-w-xs">
                   <Button className="w-full bg-primary hover:bg-primary/90 rounded-xl h-12 font-bold transition-all">
-                    Elegir
-                    </Button>
-                </a>
+                    Elegir un plan
+                  </Button>
+                </Link>
               </div>
 
             </div>

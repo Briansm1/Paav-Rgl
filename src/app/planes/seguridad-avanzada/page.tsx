@@ -229,11 +229,11 @@ export default function PlanSeguridadAvanzadaPage() {
               </div>
 
               <div className="pt-8 flex justify-center">
-                <a href={programDetails.options[0].whatsappLink} target="_blank" rel="noopener noreferrer" className="w-full max-w-xs">
+                <Link href="#opciones-plan" className="w-full max-w-xs">
                   <Button className="w-full bg-primary hover:bg-primary/90 rounded-xl h-12 font-bold transition-all">
                     Elegir un plan
                   </Button>
-                </a>
+                </Link>
               </div>
 
             </div>
