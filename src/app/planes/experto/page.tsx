@@ -59,7 +59,7 @@ export default function PlanExpertoPage() {
         </div>
       </section>
 
-      <section className="pt-4 pb-12 md:py-20 bg-background">
+      <section className="pt-2 pb-12 md:py-16 bg-background">
         <div className="container mx-auto px-4">
           <div className="flex justify-center max-w-7xl mx-auto">
             {detailedPlans.map((plan, index) => (
@@ -202,11 +202,11 @@ export default function PlanExpertoPage() {
           <p className="text-muted-foreground mb-8 max-w-xl mx-auto text-center">
             Nuestro equipo está listo para ayudarte a resolver cualquier duda que tengas.
           </p>
-          <Link href="/#contacto">
+          <a href="https://wa.me/5492966265603?text=Hola%2C%20tengo%20algunas%20consultas%20sobre%20el%20Programa%20Experto" target="_blank" rel="noopener noreferrer">
             <Button variant="outline" size="lg" className="rounded-full border-primary text-primary hover:bg-primary/5 text-center">
               Hablar con un asesor
             </Button>
-          </Link>
+          </a>
         </div>
       </section>
 

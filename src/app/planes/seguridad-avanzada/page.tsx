@@ -72,7 +72,7 @@ export default function PlanSeguridadAvanzadaPage() {
         </div>
       </section>
 
-      <section className="pt-4 pb-12 md:py-20 bg-background">
+      <section className="pt-2 pb-12 md:py-16 bg-background">
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto">
             <div className="flex flex-col gap-10 p-6 md:p-12 rounded-[3rem] border bg-secondary shadow-2xl border-white/5 h-full w-full">
@@ -247,11 +247,11 @@ export default function PlanSeguridadAvanzadaPage() {
           <p className="text-muted-foreground mb-8 max-w-xl mx-auto text-center">
             Nuestro equipo está listo para ayudarte a resolver cualquier duda que tengas.
           </p>
-          <Link href="/#contacto">
+          <a href="https://wa.me/5492966265603?text=Hola%2C%20tengo%20algunas%20consultas%20sobre%20el%20Programa%20Seguridad%20Avanzada" target="_blank" rel="noopener noreferrer">
             <Button variant="outline" size="lg" className="rounded-full border-primary text-primary hover:bg-primary/5 text-center">
               Hablar con un asesor
             </Button>
-          </Link>
+          </a>
         </div>
       </section>
 
