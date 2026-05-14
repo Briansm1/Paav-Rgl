@@ -92,11 +92,8 @@ export const Contact = () => {
       createdAt: serverTimestamp(),
     };
 
-    // 1. Guardar la reseña en la colección principal
     addDoc(collection(firestore, 'reviews'), reviewData)
       .then(() => {
-        // 2. Disparar el envío de email automático a través de la colección 'mail'
-        // Esto asume que tienes la extensión "Trigger Email" configurada en Firebase
         addDoc(collection(firestore, 'mail'), {
           to: academyEmail,
           message: {
@@ -349,7 +346,7 @@ export const Contact = () => {
                       className="w-full border-primary text-primary hover:bg-primary/5 rounded-xl h-10 text-xs font-bold gap-2"
                     >
                       <Send className="w-3 h-3" />
-                      O terminar por email manual
+                      Terminar por email manual
                     </Button>
                   </div>
                 </form>
