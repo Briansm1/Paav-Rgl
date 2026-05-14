@@ -45,6 +45,9 @@ export default function RootLayout({
   return (
     <html lang="es" className="dark">
       <head>
+        <link rel="icon" href="https://i.imgur.com/kQtT1h5.jpeg" type="image/jpeg" />
+        <link rel="shortcut icon" href="https://i.imgur.com/kQtT1h5.jpeg" />
+        <link rel="apple-touch-icon" href="https://i.imgur.com/kQtT1h5.jpeg" />
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
         <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
