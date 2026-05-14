@@ -41,11 +41,12 @@ export const AiAssistant = () => {
   };
 
   return (
-    <div className="fixed bottom-6 right-6 z-[100]">
+    <div className="fixed bottom-8 right-28 z-[100]">
       {!isOpen && (
         <Button 
           onClick={() => setIsOpen(true)}
           className="w-16 h-16 rounded-full shadow-2xl bg-primary hover:bg-primary/90 flex items-center justify-center animate-bounce hover:animate-none"
+          aria-label="Abrir asistente IA"
         >
           <MessageSquare className="w-8 h-8 text-white" />
         </Button>
