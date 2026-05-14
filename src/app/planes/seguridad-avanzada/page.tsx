@@ -34,7 +34,7 @@ const programDetails = {
   ],
   outcomes: [
     'Mejorar coordinación y control del vehículo.',
-    'Ejecutar maniobras pendientes con la técnica correcta.',
+    'Ejecutar maniobras con técnica correcta.',
     'Corregir vicios malos de conducción.',
     'Ganar seguridad en situaciones que hoy generan tensión.',
     'Manejar con fluidez y confianza real.'
@@ -60,7 +60,7 @@ export default function PlanSeguridadAvanzadaPage() {
     <main className="min-h-screen bg-background">
       <Header />
       
-      <section className="pt-16 pb-16 md:pt-20 md:pb-20 bg-secondary/30 border-b border-white/5 flex items-center justify-center">
+      <section className="pt-28 pb-12 md:pt-40 md:pb-20 bg-secondary/30 border-b border-white/5 flex items-center justify-center">
         <div className="container mx-auto px-4 text-center">
           <Link href="/#planes" className="inline-flex items-center gap-2 text-primary font-bold mb-4 hover:underline">
             <ArrowLeft className="w-4 h-4" />
