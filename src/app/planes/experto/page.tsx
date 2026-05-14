@@ -102,7 +102,7 @@ export default function PlanExpertoPage() {
                       </p>
                       <a href={plan.whatsappLink} target="_blank" rel="noopener noreferrer" className="w-full max-w-xs">
                         <Button className="w-full bg-primary hover:bg-primary/90 rounded-xl h-12 font-bold transition-all">
-                          Elegir
+                          Elegir un plan
                         </Button>
                       </a>
                     </div>
@@ -186,7 +186,7 @@ export default function PlanExpertoPage() {
                 <div className="pt-4 flex justify-center">
                   <a href={plan.whatsappLink} target="_blank" rel="noopener noreferrer" className="w-full max-w-xs">
                     <Button className="w-full bg-primary hover:bg-primary/90 rounded-xl h-12 font-bold transition-all">
-                      Elegir
+                      Elegir un plan
                     </Button>
                   </a>
                 </div>
