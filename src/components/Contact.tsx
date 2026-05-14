@@ -1,7 +1,7 @@
 "use client";
 
 import React, { useState } from 'react';
-import { Mail, MessageSquare, MapPin, Image as ImageIcon, CheckCircle2, Loader2 } from 'lucide-react';
+import { Mail, MessageSquare, MapPin, Image as ImageIcon, CheckCircle2, Loader2, Send } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
 import { Textarea } from '@/components/ui/textarea';
@@ -26,7 +26,7 @@ import {
 } from "@/components/ui/select";
 import { useToast } from '@/hooks/use-toast';
 import { collection, addDoc, serverTimestamp } from 'firebase/firestore';
-import { initializeFirebase } from '@/firebase';
+import { useFirestore } from '@/firebase/provider';
 import { errorEmitter } from '@/firebase/error-emitter';
 import { FirestorePermissionError } from '@/firebase/errors';
 
@@ -42,11 +42,10 @@ export const Contact = () => {
   const { toast } = useToast();
   const [fileName, setFileName] = useState<string | null>(null);
   const [isSubmitting, setIsSubmitting] = useState(false);
-  const { firestore } = initializeFirebase();
+  const firestore = useFirestore();
   
-  const phoneNumber = "542966265603";
-  const whatsappUrl = `https://wa.me/${phoneNumber}`;
-  const emailAddress = "pilotosasesalvolante@gmail.com";
+  const academyEmail = "pilotosasesalvolante@gmail.com";
+  const whatsappUrl = "https://wa.me/542966265603";
 
   const form = useForm<z.infer<typeof formSchema>>({
     resolver: zodResolver(formSchema),
@@ -67,6 +66,18 @@ export const Contact = () => {
     }
   };
 
+  const handleManualEmail = () => {
+    const values = form.getValues();
+    const subject = encodeURIComponent(`Nueva Reseña de Estudiante: ${values.name}`);
+    const body = encodeURIComponent(
+      `Nombre: ${values.name}\n` +
+      `Email: ${values.email}\n` +
+      `Calificación: ${values.rating} estrellas\n\n` +
+      `Reseña:\n${values.review}`
+    );
+    window.location.href = `mailto:${academyEmail}?subject=${subject}&body=${body}`;
+  };
+
   async function onSubmit(values: z.infer<typeof formSchema>) {
     if (!firestore) return;
     
@@ -81,12 +92,34 @@ export const Contact = () => {
       createdAt: serverTimestamp(),
     };
 
+    // 1. Guardar la reseña en la colección principal
     addDoc(collection(firestore, 'reviews'), reviewData)
       .then(() => {
+        // 2. Disparar el envío de email automático a través de la colección 'mail'
+        // Esto asume que tienes la extensión "Trigger Email" configurada en Firebase
+        addDoc(collection(firestore, 'mail'), {
+          to: academyEmail,
+          message: {
+            subject: `¡Nueva Reseña de ${values.name}!`,
+            text: `Has recibido una nueva calificación de ${values.rating} estrellas.\n\nReseña: ${values.review}\n\nDe: ${values.name} (${values.email})`,
+            html: `
+              <div style="font-family: sans-serif; padding: 20px; border: 1px solid #eee; border-radius: 10px;">
+                <h2 style="color: #213547;">Nueva Reseña en la Web</h2>
+                <p><strong>Alumno:</strong> ${values.name}</p>
+                <p><strong>Email:</strong> ${values.email}</p>
+                <p><strong>Calificación:</strong> ${values.rating} estrellas</p>
+                <hr style="border: 0; border-top: 1px solid #eee; margin: 20px 0;">
+                <p style="font-style: italic; color: #555;">"${values.review}"</p>
+              </div>
+            `,
+          },
+        }).catch(err => console.warn("Fallo al crear trigger de email, pero la reseña se guardó."));
+
         toast({
           title: "¡Reseña enviada!",
-          description: "Tu experiencia se ha guardado correctamente. ¡Gracias!",
+          description: "Tu experiencia se ha guardado correctamente y hemos notificado a la academia.",
         });
+        
         form.reset();
         setFileName(null);
       })
@@ -97,6 +130,12 @@ export const Contact = () => {
           requestResourceData: reviewData,
         });
         errorEmitter.emit('permission-error', permissionError);
+        
+        toast({
+          variant: "destructive",
+          title: "Error al enviar",
+          description: "Hubo un problema al conectar con la base de datos. Puedes intentar enviarlo por email manualmente.",
+        });
       })
       .finally(() => {
         setIsSubmitting(false);
@@ -155,10 +194,10 @@ export const Contact = () => {
                   <div className="overflow-hidden">
                     <p className="font-bold text-base md:text-lg mb-1">Consultas o propuestas</p>
                     <a 
-                      href={`mailto:${emailAddress}`}
+                      href={`mailto:${academyEmail}`}
                       className="text-sm md:text-base text-muted-foreground font-medium hover:text-primary transition-colors no-underline break-words block"
                     >
-                      {emailAddress}
+                      {academyEmail}
                     </a>
                   </div>
                 </div>
@@ -286,20 +325,33 @@ export const Contact = () => {
                       </FormItem>
                     )}
                   />
-                  <Button 
-                    type="submit" 
-                    disabled={isSubmitting}
-                    className="w-full h-12 md:h-14 bg-primary hover:bg-primary/90 text-white text-base md:text-lg font-bold rounded-xl shadow-lg shadow-primary/20 transition-all active:scale-[0.98] flex items-center justify-center gap-2"
-                  >
-                    {isSubmitting ? (
-                      <>
-                        <Loader2 className="w-5 h-5 animate-spin" />
-                        Enviando...
-                      </>
-                    ) : (
-                      "Enviar reseña"
-                    )}
-                  </Button>
+
+                  <div className="flex flex-col gap-3">
+                    <Button 
+                      type="submit" 
+                      disabled={isSubmitting}
+                      className="w-full h-12 md:h-14 bg-primary hover:bg-primary/90 text-white text-base md:text-lg font-bold rounded-xl shadow-lg shadow-primary/20 transition-all active:scale-[0.98] flex items-center justify-center gap-2"
+                    >
+                      {isSubmitting ? (
+                        <>
+                          <Loader2 className="w-5 h-5 animate-spin" />
+                          Enviando...
+                        </>
+                      ) : (
+                        "Enviar reseña"
+                      )}
+                    </Button>
+                    
+                    <Button 
+                      type="button"
+                      variant="outline"
+                      onClick={handleManualEmail}
+                      className="w-full border-primary text-primary hover:bg-primary/5 rounded-xl h-10 text-xs font-bold gap-2"
+                    >
+                      <Send className="w-3 h-3" />
+                      O terminar por email manual
+                    </Button>
+                  </div>
                 </form>
               </Form>
               
