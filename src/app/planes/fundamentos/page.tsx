@@ -60,7 +60,7 @@ export default function PlanFundamentosPage() {
     <main className="min-h-screen bg-background">
       <Header />
       
-      <section className="pt-28 pb-12 md:pt-40 md:pb-20 bg-secondary/30 border-b border-white/5 flex items-center justify-center">
+      <section className="pt-28 pb-4 md:pt-40 md:pb-12 bg-secondary/30 border-b border-white/5 flex items-center justify-center">
         <div className="container mx-auto px-4 text-center">
           <Link href="/#planes" className="inline-flex items-center gap-2 text-primary font-bold mb-4 hover:underline">
             <ArrowLeft className="w-4 h-4" />
@@ -72,7 +72,7 @@ export default function PlanFundamentosPage() {
         </div>
       </section>
 
-      <section className="py-12 md:py-20 bg-background">
+      <section className="pt-4 pb-12 md:py-20 bg-background">
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto">
             <div className="flex flex-col gap-10 p-6 md:p-12 rounded-[3rem] border bg-secondary shadow-2xl border-white/5 h-full w-full">
