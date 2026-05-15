@@ -12,14 +12,14 @@ export const Hero = () => {
   const heroImg = PlaceHolderImages.find(img => img.id === 'hero-bg');
 
   return (
-    <section id="inicio" className="relative h-[100svh] min-h-[600px] flex flex-col items-center pt-32 pb-20 md:pt-44 md:pb-32 overflow-hidden">
+    <section id="inicio" className="relative h-[100svh] min-h-[600px] flex flex-col items-center pt-32 pb-32 md:pt-40 md:pb-40 overflow-hidden">
       {/* Background Image Overlay */}
       <div className="absolute inset-0 z-0">
         <Image
           src={heroImg?.imageUrl || ''}
           alt={heroImg?.description || 'Driving school background'}
           fill
-          className="object-cover blur-[3px] scale-105 opacity-55"
+          className="object-cover blur-[5px] scale-105 opacity-55"
           priority
           data-ai-hint={heroImg?.imageHint}
         />
@@ -30,8 +30,8 @@ export const Hero = () => {
       </div>
 
       <div className="w-full max-w-[1440px] mx-auto px-4 md:px-6 relative z-20 flex-1 flex flex-col justify-between">
-        {/* Content Container */}
-        <div className="max-w-4xl text-left flex flex-col items-start gap-6 md:gap-10 mt-4 md:mt-8">
+        {/* Content Container - Adjusted to move up */}
+        <div className="max-w-4xl text-left flex flex-col items-start gap-6 md:gap-10 -mt-10 md:-mt-16">
           <div className="inline-flex items-center gap-2 bg-white/10 backdrop-blur-md border border-white/20 rounded-full px-4 py-1.5 animate-in fade-in slide-in-from-bottom-4 duration-700">
             <span className="text-[10px] md:text-xs font-bold text-white uppercase tracking-widest">La elección N°1 de la región</span>
           </div>
@@ -57,7 +57,7 @@ export const Hero = () => {
         </div>
         
         {/* Stats Container - Pushed to the bottom */}
-        <div className="flex items-center justify-start gap-4 sm:gap-10 md:gap-14 animate-in fade-in duration-1000 delay-500 pt-8 pb-4">
+        <div className="flex items-center justify-start gap-4 sm:gap-10 md:gap-14 animate-in fade-in duration-1000 delay-500 pt-8">
           <div className="flex flex-col items-center text-center min-w-[70px] md:min-w-[100px]">
             <p className="text-base sm:text-xl md:text-3xl font-bold text-gold leading-none">Equipo</p>
             <p className="text-[6px] sm:text-[8px] md:text-[10px] text-white/50 uppercase tracking-[0.2em] font-bold mt-2">CERTIFICADO</p>
