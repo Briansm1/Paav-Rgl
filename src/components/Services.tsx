@@ -61,11 +61,11 @@ export const Services = () => {
             Conducir es <span className="text-primary italic">más que solo manejar</span>
           </h2>
           <p className="text-lg md:text-xl text-muted-foreground leading-relaxed">
-            Revolucionamos la enseñanza vial combinando conocimiento de vanguardia con <span className="text-primary font-bold">nuestra metodología exclusiva</span> de 3 pilares: <span className="text-primary font-bold">mentalidad</span> para darte confianza, <span className="text-primary font-bold">teoría</span> para un aprendizaje sólido, y <span className="text-primary font-bold">tecnica</span> para el dominio total del vehículo. Más que enseñarte a manejar, te instruimos para ser un experto al volante
+            Revolucionamos la enseñanza vial combinando conocimiento de vanguardia con <span className="text-primary font-bold">nuestra metodología exclusiva</span> de 3 pilares: <span className="text-primary font-bold">mentalidad</span> para darte confianza, <span className="text-primary font-bold">teoría</span> para un aprendizaje sólido, y <span className="text-primary font-bold">técnica</span> para el dominio total del vehículo. Más que enseñarte a manejar, te instruimos para ser un experto al volante
           </p>
         </div>
 
-        <div className="max-w-7xl mx-auto">
+        <div className="max-w-7xl mx-auto flex justify-center">
           <Carousel
             opts={{
               align: "start",
@@ -73,7 +73,7 @@ export const Services = () => {
             }}
             className="w-full"
           >
-            <CarouselContent className="-ml-4 md:-ml-8 lg:-ml-12">
+            <CarouselContent className="-ml-4 md:-ml-8 lg:-ml-12 flex lg:justify-center">
               {services.map((service, index) => {
                 const img = PlaceHolderImages.find(p => p.id === service.imgId) || PlaceHolderImages[0];
                 return (
@@ -106,10 +106,6 @@ export const Services = () => {
               })}
             </CarouselContent>
           </Carousel>
-          
-          <div className="md:hidden text-center mt-6 text-[10px] text-muted-foreground uppercase tracking-widest font-bold animate-pulse">
-            Desliza para ver más →
-          </div>
         </div>
 
         <div className="mt-24 md:mt-40 p-1 md:p-2 bg-gradient-to-br from-primary/20 via-transparent to-accent/20 rounded-[2.5rem] overflow-hidden shadow-2xl mx-auto max-w-6xl">
