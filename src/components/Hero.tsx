@@ -12,7 +12,7 @@ export const Hero = () => {
   const heroImg = PlaceHolderImages.find(img => img.id === 'hero-bg');
 
   return (
-    <section id="inicio" className="relative h-[100svh] min-h-[600px] flex flex-col items-center pt-24 pb-24 md:pt-32 md:pb-32 overflow-hidden">
+    <section id="inicio" className="relative h-[100svh] min-h-[600px] flex flex-col items-center pt-20 pb-20 md:pt-32 md:pb-32 overflow-hidden">
       {/* Background Image Overlay */}
       <div className="absolute inset-0 z-0">
         <Image
@@ -31,17 +31,17 @@ export const Hero = () => {
 
       <div className="w-full max-w-[1440px] mx-auto px-4 md:px-6 relative z-20 flex-1 flex flex-col justify-between">
         {/* Content Container */}
-        <div className="max-w-4xl text-left flex flex-col items-start gap-8 md:gap-10 mt-4 md:mt-8">
+        <div className="max-w-4xl text-left flex flex-col items-start gap-12 md:gap-10 mt-6 md:mt-8">
           <div className="inline-flex items-center gap-2 bg-white/10 backdrop-blur-md border border-white/20 rounded-full px-4 py-1.5 animate-in fade-in slide-in-from-bottom-4 duration-700">
             <span className="text-[10px] md:text-xs font-bold text-white uppercase tracking-widest">La elección N°1 de la región</span>
           </div>
           
-          <div className="space-y-6 md:space-y-8">
+          <div className="space-y-8 md:space-y-8">
             <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold font-headline leading-[1.15] md:leading-[1.05] text-white animate-in fade-in slide-in-from-bottom-6 duration-1000 delay-100">
               Tu camino hacia la <span className="text-primary">libertad</span> comienza con nosotros
             </h1>
             
-            <p className="text-sm md:text-xl text-white/90 max-w-2xl animate-in fade-in slide-in-from-bottom-8 duration-1000 delay-200 leading-relaxed text-left font-medium">
+            <p className="text-base md:text-xl text-white/90 max-w-2xl animate-in fade-in slide-in-from-bottom-8 duration-1000 delay-200 leading-relaxed text-left font-medium">
               En nuestra academia, no solo te enseñamos a manejar; te preparamos para ser un conductor responsable, seguro y con total confianza en las calles.
             </p>
           </div>
@@ -57,7 +57,7 @@ export const Hero = () => {
         </div>
         
         {/* Stats Container - Pushed to the bottom */}
-        <div className="flex items-center justify-start gap-4 sm:gap-10 md:gap-14 animate-in fade-in duration-1000 delay-500 pt-8 pb-4">
+        <div className="flex items-center justify-start gap-4 sm:gap-10 md:gap-14 animate-in fade-in duration-1000 delay-500 pt-12 pb-6 md:pt-8 md:pb-4">
           <div className="flex flex-col items-center text-center min-w-[70px] md:min-w-[100px]">
             <p className="text-lg sm:text-xl md:text-3xl font-bold text-gold leading-none">Equipo</p>
             <p className="text-[6px] sm:text-[8px] md:text-[10px] text-white/50 uppercase tracking-[0.2em] font-bold mt-2">CERTIFICADO</p>
