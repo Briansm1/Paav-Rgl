@@ -53,7 +53,7 @@ export const Services = () => {
   return (
     <section id="servicios" className="py-20 md:py-32 bg-background">
       <div className="container mx-auto px-4 md:px-6">
-        <div className="text-left max-w-4xl mb-16 md:mb-24">
+        <div className="text-center max-w-4xl mx-auto mb-16 md:mb-24">
           <span className="inline-block px-4 py-1.5 mb-6 text-xs font-bold tracking-widest text-primary uppercase bg-primary/10 rounded-full">
             ¿Qué podemos ofrecerte?
           </span>
