@@ -65,7 +65,7 @@ export const Services = () => {
           </p>
         </div>
 
-        <div className="max-w-7xl">
+        <div className="max-w-7xl mx-auto">
           <Carousel
             opts={{
               align: "start",
@@ -94,10 +94,10 @@ export const Services = () => {
                           {service.icon}
                         </div>
                       </div>
-                      <CardHeader className="pt-8 px-6">
+                      <CardHeader className="pt-8 px-6 text-center lg:text-left">
                         <CardTitle className="text-xl md:text-2xl font-bold group-hover:text-primary transition-colors">{service.title}</CardTitle>
                       </CardHeader>
-                      <CardContent className="px-6 pb-8">
+                      <CardContent className="px-6 pb-8 text-center lg:text-left">
                         <p className="text-muted-foreground text-sm md:text-base leading-relaxed">{service.description}</p>
                       </CardContent>
                     </Card>
@@ -112,9 +112,9 @@ export const Services = () => {
           </div>
         </div>
 
-        <div className="mt-24 md:mt-40 p-1 md:p-2 bg-gradient-to-br from-primary/20 via-transparent to-accent/20 rounded-[2.5rem] overflow-hidden shadow-2xl">
+        <div className="mt-24 md:mt-40 p-1 md:p-2 bg-gradient-to-br from-primary/20 via-transparent to-accent/20 rounded-[2.5rem] overflow-hidden shadow-2xl mx-auto max-w-6xl">
           <div className="bg-secondary rounded-[2.4rem] p-8 md:p-16 flex flex-col lg:flex-row items-center gap-12 lg:gap-20">
-            <div className="lg:w-1/2 w-full">
+            <div className="lg:w-1/2 w-full text-center lg:text-left">
               <h3 className="text-3xl md:text-5xl font-bold mb-8 tracking-tight">
                 ¿Por qué somos los más elegidos?
               </h3>
@@ -124,7 +124,7 @@ export const Services = () => {
                   { icon: <Award className="w-6 h-6 text-primary" />, text: 'Guía profesional y experta: Nuestro equipo certificado te acompaña paso a paso, brindándote la tranquilidad y técnica que necesitas para dominar el volante.' },
                   { icon: <Clock className="w-6 h-6 text-primary" />, text: 'A tu propia medida: ¿Trabajas o estudias? No hay problema. Armamos un cronograma de clases que se adapte a tus tiempos.' }
                 ].map((item, i) => (
-                  <div key={i} className="flex items-start gap-5">
+                  <div key={i} className="flex flex-col sm:flex-row items-center lg:items-start gap-5">
                     <div className="shrink-0 mt-1 bg-primary/10 p-3 rounded-2xl shadow-inner">
                       {item.icon}
                     </div>
@@ -133,7 +133,7 @@ export const Services = () => {
                 ))}
               </div>
             </div>
-            <div className="lg:w-1/2 w-full relative h-[350px] md:h-[550px] rounded-3xl overflow-hidden shadow-2xl">
+            <div className="lg:w-1/2 w-full relative h-[300px] md:h-[500px] rounded-3xl overflow-hidden shadow-2xl">
               <video 
                 src="https://i.imgur.com/3YGoxMZ.mp4"
                 autoPlay
