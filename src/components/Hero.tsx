@@ -1,4 +1,3 @@
-
 "use client";
 
 import React from 'react';
@@ -12,38 +11,38 @@ export const Hero = () => {
   const heroImg = PlaceHolderImages.find(img => img.id === 'hero-bg');
 
   return (
-    <section id="inicio" className="relative min-h-[100svh] md:h-screen flex items-start md:items-center pt-24 md:pt-40 pb-12 overflow-hidden">
+    <section id="inicio" className="relative min-h-[100svh] md:h-screen flex items-start md:items-center pt-20 md:pt-32 pb-8 overflow-hidden">
       {/* Background Image Overlay */}
       <div className="absolute inset-0 z-0">
         <Image
           src={heroImg?.imageUrl || ''}
           alt={heroImg?.description || 'Driving school background'}
           fill
-          className="object-cover blur-[20px] scale-110 opacity-30"
+          className="object-cover blur-[8px] scale-105 opacity-40"
           priority
           data-ai-hint={heroImg?.imageHint}
         />
         {/* Gradient overlays for readability and transition */}
-        <div className="absolute inset-0 bg-gradient-to-b md:bg-gradient-to-r from-black/95 via-black/60 to-transparent"></div>
+        <div className="absolute inset-0 bg-gradient-to-b md:bg-gradient-to-r from-black/95 via-black/50 to-transparent"></div>
         {/* Bottom transition fade - deeper for smoother scroll feel */}
         <div className="absolute bottom-0 left-0 right-0 h-40 md:h-64 bg-gradient-to-t from-background via-background/95 to-transparent z-10"></div>
       </div>
 
       <div className="w-full max-w-[1440px] mx-auto px-4 md:px-6 relative z-20">
         <div className="max-w-4xl text-left">
-          <div className="inline-flex items-center gap-2 bg-white/10 backdrop-blur-md border border-white/20 rounded-full px-4 py-1.5 mb-8 md:mb-6 animate-in fade-in slide-in-from-bottom-4 duration-700">
+          <div className="inline-flex items-center gap-2 bg-white/10 backdrop-blur-md border border-white/20 rounded-full px-4 py-1.5 mb-6 md:mb-4 animate-in fade-in slide-in-from-bottom-4 duration-700">
             <span className="text-[10px] md:text-sm font-bold text-white uppercase tracking-wider">La elección N°1 de la región</span>
           </div>
           
-          <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold font-headline leading-[1.15] md:leading-[1.1] mb-8 md:mb-6 text-white animate-in fade-in slide-in-from-bottom-6 duration-1000 delay-100">
+          <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold font-headline leading-[1.15] md:leading-[1.1] mb-6 md:mb-4 text-white animate-in fade-in slide-in-from-bottom-6 duration-1000 delay-100">
             Tu camino hacia la <span className="text-primary">libertad</span> comienza con nosotros
           </h1>
           
-          <p className="text-base md:text-xl text-white/90 mb-10 md:mb-8 max-w-2xl animate-in fade-in slide-in-from-bottom-8 duration-1000 delay-200 leading-relaxed text-left">
+          <p className="text-base md:text-xl text-white/90 mb-8 md:mb-6 max-w-2xl animate-in fade-in slide-in-from-bottom-8 duration-1000 delay-200 leading-relaxed text-left">
             En nuestra academia, no solo te enseñamos a manejar; te preparamos para ser un conductor responsable, seguro y con total confianza en las calles
           </p>
           
-          <div className="flex flex-col sm:flex-row gap-4 mb-12 md:mb-8 animate-in fade-in slide-in-from-bottom-10 duration-1000 delay-300">
+          <div className="flex flex-col sm:flex-row gap-4 mb-8 md:mb-6 animate-in fade-in slide-in-from-bottom-10 duration-1000 delay-300">
             <Link href="#planes" className="w-full sm:w-auto">
               <Button size="lg" className="h-12 md:h-14 px-10 text-base md:text-lg bg-primary hover:bg-primary/90 rounded-full w-full font-bold shadow-2xl shadow-primary/20 transition-all hover:scale-105">
                 Conocer planes
