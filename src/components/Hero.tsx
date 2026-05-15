@@ -12,7 +12,7 @@ export const Hero = () => {
   const heroImg = PlaceHolderImages.find(img => img.id === 'hero-bg');
 
   return (
-    <section id="inicio" className="relative min-h-screen flex items-center pt-24 md:pt-28 pb-10 overflow-hidden">
+    <section id="inicio" className="relative min-h-[90vh] md:min-h-screen flex items-center pt-32 md:pt-28 pb-16 md:pb-10 overflow-hidden">
       {/* Background Image Overlay */}
       <div className="absolute inset-0 z-0">
         <Image
@@ -28,46 +28,46 @@ export const Hero = () => {
 
       <div className="container mx-auto px-4 relative z-10">
         <div className="max-w-4xl">
-          <div className="inline-flex items-center gap-2 bg-white/10 backdrop-blur-md border border-white/20 rounded-full px-4 py-1.5 mb-4 animate-in fade-in slide-in-from-bottom-4 duration-700">
+          <div className="inline-flex items-center gap-2 bg-white/10 backdrop-blur-md border border-white/20 rounded-full px-4 py-1.5 mb-8 md:mb-6 animate-in fade-in slide-in-from-bottom-4 duration-700">
             <span className="text-sm md:text-base font-bold text-white">La elección N°1 de la región</span>
           </div>
           
-          <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold font-headline leading-[1.1] mb-4 text-white animate-in fade-in slide-in-from-bottom-6 duration-1000 delay-100">
+          <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold font-headline leading-[1.15] md:leading-[1.1] mb-8 md:mb-6 text-white animate-in fade-in slide-in-from-bottom-6 duration-1000 delay-100">
             Tu camino hacia la libertad comienza con nosotros
           </h1>
           
-          <p className="text-lg sm:text-xl md:text-xl text-white/80 mb-6 max-w-2xl animate-in fade-in slide-in-from-bottom-8 duration-1000 delay-200 leading-relaxed">
+          <p className="text-lg sm:text-xl md:text-xl text-white/80 mb-12 md:mb-10 max-w-2xl animate-in fade-in slide-in-from-bottom-8 duration-1000 delay-200 leading-relaxed">
             En nuestra academia, no solo te enseñamos a manejar; te preparamos para ser un conductor responsable, seguro y con total confianza en las calles
           </p>
           
-          <div className="flex flex-col sm:flex-row gap-4 animate-in fade-in slide-in-from-bottom-10 duration-1000 delay-300">
+          <div className="flex flex-col sm:flex-row gap-5 animate-in fade-in slide-in-from-bottom-10 duration-1000 delay-300">
             <Link href="#planes" className="w-full sm:w-auto">
-              <Button size="lg" className="h-12 md:h-14 px-10 text-lg bg-primary hover:bg-primary/90 rounded-full w-full font-bold">
+              <Button size="lg" className="h-14 md:h-16 px-10 text-lg bg-primary hover:bg-primary/90 rounded-full w-full font-bold shadow-2xl shadow-primary/20">
                 Conocer planes
                 <ChevronRight className="ml-2 w-5 h-5" />
               </Button>
             </Link>
           </div>
           
-          <div className="mt-8 md:mt-10 flex items-center gap-6 sm:gap-12 md:gap-16 animate-in fade-in duration-1000 delay-500">
-            <div className="text-center">
-              <p className="text-2xl md:text-4xl font-bold text-gold">Equipo</p>
-              <p className="text-[10px] md:text-xs text-white/50 uppercase tracking-widest font-bold mt-1">CERTIFICADO Y CALIFICADO</p>
+          <div className="mt-16 md:mt-12 flex flex-wrap items-center gap-8 sm:gap-12 md:gap-16 animate-in fade-in duration-1000 delay-500">
+            <div className="text-center md:text-left">
+              <p className="text-3xl md:text-4xl font-bold text-gold">Equipo</p>
+              <p className="text-[10px] md:text-xs text-white/50 uppercase tracking-widest font-bold mt-1">CERTIFICADO</p>
             </div>
-            <div className="w-px h-10 bg-white/20"></div>
-            <div className="text-center">
-              <p className="text-2xl md:text-4xl font-bold text-gold">+5 años</p>
+            <div className="hidden sm:block w-px h-10 bg-white/20"></div>
+            <div className="text-center md:text-left">
+              <p className="text-3xl md:text-4xl font-bold text-gold">+5 años</p>
               <p className="text-[10px] md:text-xs text-white/50 uppercase tracking-widest font-bold mt-1">FORMANDO ASES</p>
             </div>
-            <div className="w-px h-10 bg-white/20"></div>
-            <div className="text-center">
-              <p className="text-2xl md:text-4xl font-bold text-gold">5/5</p>
-              <div className="flex justify-center gap-0.5 mt-1">
-                <Star className="w-3 h-3 text-yellow-400 fill-yellow-400" />
-                <Star className="w-3 h-3 text-yellow-400 fill-yellow-400" />
-                <Star className="w-3 h-3 text-yellow-400 fill-yellow-400" />
-                <Star className="w-3 h-3 text-yellow-400 fill-yellow-400" />
-                <Star className="w-3 h-3 text-yellow-400 fill-yellow-400" />
+            <div className="hidden sm:block w-px h-10 bg-white/20"></div>
+            <div className="text-center md:text-left">
+              <p className="text-3xl md:text-4xl font-bold text-gold">5/5</p>
+              <div className="flex justify-center md:justify-start gap-0.5 mt-1">
+                <Star className="w-4 h-4 text-yellow-400 fill-yellow-400" />
+                <Star className="w-4 h-4 text-yellow-400 fill-yellow-400" />
+                <Star className="w-4 h-4 text-yellow-400 fill-yellow-400" />
+                <Star className="w-4 h-4 text-yellow-400 fill-yellow-400" />
+                <Star className="w-4 h-4 text-yellow-400 fill-yellow-400" />
               </div>
               <p className="text-[10px] md:text-xs text-white/50 uppercase tracking-widest font-bold mt-1">LOS MÁS RECOMENDADOS</p>
             </div>
