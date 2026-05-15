@@ -49,27 +49,31 @@ export const Hero = () => {
             </Link>
           </div>
           
-          <div className="mt-16 md:mt-12 flex flex-wrap items-center gap-8 sm:gap-12 md:gap-16 animate-in fade-in duration-1000 delay-500">
-            <div className="text-center md:text-left">
-              <p className="text-3xl md:text-4xl font-bold text-gold">Equipo</p>
-              <p className="text-[10px] md:text-xs text-white/50 uppercase tracking-widest font-bold mt-1">CERTIFICADO</p>
+          <div className="mt-16 md:mt-12 flex items-center justify-between sm:justify-start gap-4 sm:gap-12 md:gap-16 animate-in fade-in duration-1000 delay-500 max-w-sm sm:max-w-none">
+            <div className="text-center md:text-left flex-1 sm:flex-none">
+              <p className="text-xl sm:text-3xl md:text-4xl font-bold text-gold">Equipo</p>
+              <p className="text-[8px] sm:text-[10px] md:text-xs text-white/50 uppercase tracking-widest font-bold mt-1">CERTIFICADO</p>
             </div>
-            <div className="hidden sm:block w-px h-10 bg-white/20"></div>
-            <div className="text-center md:text-left">
-              <p className="text-3xl md:text-4xl font-bold text-gold">+5 años</p>
-              <p className="text-[10px] md:text-xs text-white/50 uppercase tracking-widest font-bold mt-1">FORMANDO ASES</p>
+            
+            <div className="w-px h-8 sm:h-10 bg-white/20"></div>
+            
+            <div className="text-center md:text-left flex-1 sm:flex-none">
+              <p className="text-xl sm:text-3xl md:text-4xl font-bold text-gold">+5 años</p>
+              <p className="text-[8px] sm:text-[10px] md:text-xs text-white/50 uppercase tracking-widest font-bold mt-1">FORMANDO ASES</p>
             </div>
-            <div className="hidden sm:block w-px h-10 bg-white/20"></div>
-            <div className="text-center md:text-left">
-              <p className="text-3xl md:text-4xl font-bold text-gold">5/5</p>
+            
+            <div className="w-px h-8 sm:h-10 bg-white/20"></div>
+            
+            <div className="text-center md:text-left flex-1 sm:flex-none">
+              <p className="text-xl sm:text-3xl md:text-4xl font-bold text-gold">5/5</p>
               <div className="flex justify-center md:justify-start gap-0.5 mt-1">
-                <Star className="w-4 h-4 text-yellow-400 fill-yellow-400" />
-                <Star className="w-4 h-4 text-yellow-400 fill-yellow-400" />
-                <Star className="w-4 h-4 text-yellow-400 fill-yellow-400" />
-                <Star className="w-4 h-4 text-yellow-400 fill-yellow-400" />
-                <Star className="w-4 h-4 text-yellow-400 fill-yellow-400" />
+                <Star className="w-3 h-3 sm:w-4 sm:h-4 text-yellow-400 fill-yellow-400" />
+                <Star className="w-3 h-3 sm:w-4 sm:h-4 text-yellow-400 fill-yellow-400" />
+                <Star className="w-3 h-3 sm:w-4 sm:h-4 text-yellow-400 fill-yellow-400" />
+                <Star className="w-3 h-3 sm:w-4 sm:h-4 text-yellow-400 fill-yellow-400" />
+                <Star className="w-3 h-3 sm:w-4 sm:h-4 text-yellow-400 fill-yellow-400" />
               </div>
-              <p className="text-[10px] md:text-xs text-white/50 uppercase tracking-widest font-bold mt-1">LOS MÁS RECOMENDADOS</p>
+              <p className="text-[8px] sm:text-[10px] md:text-xs text-white/50 uppercase tracking-widest font-bold mt-1">LOS MÁS RECOMENDADOS</p>
             </div>
           </div>
         </div>
