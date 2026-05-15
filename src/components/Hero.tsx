@@ -12,7 +12,7 @@ export const Hero = () => {
   const heroImg = PlaceHolderImages.find(img => img.id === 'hero-bg');
 
   return (
-    <section id="inicio" className="relative h-[100svh] min-h-[100svh] flex flex-col items-center py-20 md:py-32 overflow-hidden bg-black">
+    <section id="inicio" className="relative h-[100svh] min-h-[100svh] flex flex-col items-center pt-28 pb-12 md:py-32 overflow-hidden bg-black">
       {/* Background Image Overlay */}
       <div className="absolute inset-0 z-0">
         <Image
@@ -26,27 +26,27 @@ export const Hero = () => {
         {/* Gradient overlays for readability and transition */}
         <div className="absolute inset-0 bg-gradient-to-b md:bg-gradient-to-r from-black/80 via-black/40 to-transparent"></div>
         {/* Bottom transition fade - increased height to hide next section overlap */}
-        <div className="absolute bottom-0 left-0 right-0 h-40 bg-gradient-to-t from-background via-background/90 to-transparent z-10"></div>
+        <div className="absolute bottom-0 left-0 right-0 h-40 bg-gradient-to-t from-background via-background to-transparent z-10"></div>
       </div>
 
       <div className="w-full max-w-[1440px] mx-auto px-4 md:px-6 relative z-20 flex-1 flex flex-col justify-between h-full">
         {/* Content Container - Adjusted for mobile visibility and spacing */}
-        <div className="max-w-4xl text-left flex flex-col items-start gap-8 md:gap-10 -mt-10 md:mt-3">
+        <div className="max-w-4xl text-left flex flex-col items-start gap-8 md:gap-10 mt-2 md:mt-3">
           <div className="inline-flex items-center gap-2 bg-white/10 backdrop-blur-md border border-white/20 rounded-full px-4 py-1.5 animate-in fade-in slide-in-from-bottom-4 duration-700">
             <span className="text-[10px] md:text-xs font-bold text-white uppercase tracking-widest">La elección N°1 de la región</span>
           </div>
           
           <div className="space-y-6 md:space-y-8">
-            <h1 className="text-4xl sm:text-5xl md:text-5xl lg:text-6xl font-bold font-headline leading-[1.1] md:leading-[1.05] text-white animate-in fade-in slide-in-from-bottom-6 duration-1000 delay-100">
+            <h1 className="text-5xl sm:text-6xl md:text-5xl lg:text-6xl font-bold font-headline leading-[1.1] md:leading-[1.05] text-white animate-in fade-in slide-in-from-bottom-6 duration-1000 delay-100">
               Tu camino hacia la <span className="text-primary">libertad</span> comienza con nosotros
             </h1>
             
-            <p className="text-base sm:text-lg md:text-xl text-white/90 max-w-2xl animate-in fade-in slide-in-from-bottom-8 duration-1000 delay-200 leading-relaxed text-left font-medium">
+            <p className="text-lg sm:text-xl md:text-xl text-white/90 max-w-2xl animate-in fade-in slide-in-from-bottom-8 duration-1000 delay-200 leading-relaxed text-left font-medium">
               En nuestra academia, no solo te enseñamos a manejar; te preparamos para ser un conductor responsable, seguro y con total confianza en las calles
             </p>
           </div>
           
-          <div className="flex flex-col sm:flex-row gap-4 animate-in fade-in slide-in-from-bottom-10 duration-1000 delay-300 w-full sm:w-auto mt-2 md:mt-0">
+          <div className="flex flex-col sm:flex-row gap-4 animate-in fade-in slide-in-from-bottom-10 duration-1000 delay-300 w-full sm:w-auto mt-4 md:mt-0">
             <Link href="#planes" className="w-full sm:w-auto">
               <Button size="lg" className="h-14 md:h-16 px-10 md:px-12 text-lg bg-primary hover:bg-primary/90 rounded-full w-full font-bold shadow-2xl shadow-primary/20 transition-all hover:scale-105 active:scale-95">
                 Conocer planes
@@ -59,29 +59,29 @@ export const Hero = () => {
         {/* Stats Container - Pushed to the bottom */}
         <div className="flex items-center justify-start gap-6 sm:gap-10 md:gap-14 animate-in fade-in duration-1000 delay-500 pt-8 pb-12 md:pb-0">
           <div className="flex flex-col items-center text-center min-w-[80px] md:min-w-[100px]">
-            <p className="text-lg sm:text-xl md:text-3xl font-bold text-gold leading-none">Equipo</p>
-            <p className="text-[8px] sm:text-[8px] md:text-[10px] text-white/50 uppercase tracking-[0.2em] font-bold mt-2">CERTIFICADO</p>
+            <p className="text-xl sm:text-2xl md:text-3xl font-bold text-gold leading-none">Equipo</p>
+            <p className="text-[8px] sm:text-[9px] md:text-[10px] text-white/50 uppercase tracking-[0.2em] font-bold mt-2">CERTIFICADO</p>
           </div>
           
           <div className="w-px h-12 md:h-14 bg-white/20"></div>
           
           <div className="flex flex-col items-center text-center min-w-[80px] md:min-w-[100px]">
-            <p className="text-lg sm:text-xl md:text-3xl font-bold text-gold leading-none">+5 años</p>
-            <p className="text-[8px] sm:text-[8px] md:text-[10px] text-white/50 uppercase tracking-[0.2em] font-bold mt-2">FORMANDO ASES</p>
+            <p className="text-xl sm:text-2xl md:text-3xl font-bold text-gold leading-none">+5 años</p>
+            <p className="text-[8px] sm:text-[9px] md:text-[10px] text-white/50 uppercase tracking-[0.2em] font-bold mt-2">FORMANDO ASES</p>
           </div>
           
           <div className="w-px h-12 md:h-14 bg-white/20"></div>
           
           <div className="flex flex-col items-center text-center min-w-[80px] md:min-w-[100px]">
             <div className="flex flex-col items-center">
-              <p className="text-lg sm:text-xl md:text-3xl font-bold text-gold leading-none">5/5</p>
+              <p className="text-xl sm:text-2xl md:text-3xl font-bold text-gold leading-none">5/5</p>
               <div className="flex gap-0.5 mt-1.5 justify-center">
                 {[...Array(5)].map((_, i) => (
                   <Star key={i} className="w-2 md:w-4 h-2 md:h-4 text-yellow-400 fill-yellow-400" />
                 ))}
               </div>
             </div>
-            <p className="text-[8px] sm:text-[8px] md:text-[10px] text-white/50 uppercase tracking-[0.2em] font-bold mt-2">RECOMENDADOS</p>
+            <p className="text-[8px] sm:text-[9px] md:text-[10px] text-white/50 uppercase tracking-[0.2em] font-bold mt-2">RECOMENDADOS</p>
           </div>
         </div>
       </div>
