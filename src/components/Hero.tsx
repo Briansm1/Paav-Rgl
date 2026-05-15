@@ -12,14 +12,14 @@ export const Hero = () => {
   const heroImg = PlaceHolderImages.find(img => img.id === 'hero-bg');
 
   return (
-    <section id="inicio" className="relative h-[100svh] md:h-screen flex flex-col items-center pt-20 md:pt-28 pb-6 overflow-hidden">
+    <section id="inicio" className="relative h-[100svh] md:h-screen flex flex-col items-center pt-16 md:pt-24 pb-6 overflow-hidden">
       {/* Background Image Overlay */}
       <div className="absolute inset-0 z-0">
         <Image
           src={heroImg?.imageUrl || ''}
           alt={heroImg?.description || 'Driving school background'}
           fill
-          className="object-cover blur-[4px] scale-105 opacity-50"
+          className="object-cover blur-[3px] scale-105 opacity-50"
           priority
           data-ai-hint={heroImg?.imageHint}
         />
@@ -29,18 +29,18 @@ export const Hero = () => {
         <div className="absolute bottom-0 left-0 right-0 h-32 bg-gradient-to-t from-background via-background/80 to-transparent z-10"></div>
       </div>
 
-      <div className="w-full max-w-[1440px] mx-auto px-4 md:px-6 relative z-20 flex-1 flex flex-col justify-center py-6 md:py-8">
-        <div className="max-w-4xl text-left flex flex-col items-start gap-4 md:gap-6">
+      <div className="w-full max-w-[1440px] mx-auto px-4 md:px-6 relative z-20 flex-1 flex flex-col justify-center">
+        <div className="max-w-4xl text-left flex flex-col items-start gap-3 md:gap-4 mt-4 md:mt-0">
           <div className="inline-flex items-center gap-2 bg-white/10 backdrop-blur-md border border-white/20 rounded-full px-3 py-1 animate-in fade-in slide-in-from-bottom-4 duration-700">
             <span className="text-[10px] md:text-xs font-bold text-white uppercase tracking-wider">La elección N°1 de la región</span>
           </div>
           
-          <div className="space-y-4 md:space-y-6">
-            <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-7xl font-bold font-headline leading-[1.1] md:leading-[1.05] text-white animate-in fade-in slide-in-from-bottom-6 duration-1000 delay-100">
+          <div className="space-y-3 md:space-y-4">
+            <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold font-headline leading-[1.1] md:leading-[1.05] text-white animate-in fade-in slide-in-from-bottom-6 duration-1000 delay-100">
               Tu camino hacia la <span className="text-primary">libertad</span> comienza con nosotros
             </h1>
             
-            <p className="text-sm md:text-xl text-white/90 max-w-2xl animate-in fade-in slide-in-from-bottom-8 duration-1000 delay-200 leading-relaxed text-left font-medium">
+            <p className="text-sm md:text-lg text-white/90 max-w-2xl animate-in fade-in slide-in-from-bottom-8 duration-1000 delay-200 leading-relaxed text-left font-medium">
               En nuestra academia, no solo te enseñamos a manejar; te preparamos para ser un conductor responsable, seguro y con total confianza en las calles.
             </p>
           </div>
@@ -55,7 +55,7 @@ export const Hero = () => {
           </div>
         </div>
         
-        <div className="flex items-center justify-start gap-4 sm:gap-10 md:gap-14 animate-in fade-in duration-1000 delay-500 pt-8 md:pt-12">
+        <div className="flex items-center justify-start gap-4 sm:gap-10 md:gap-14 animate-in fade-in duration-1000 delay-500 pt-6 md:pt-10">
           <div className="flex flex-col items-center text-center min-w-[70px] md:min-w-[80px]">
             <p className="text-lg sm:text-xl md:text-3xl font-bold text-gold leading-none">Equipo</p>
             <p className="text-[6px] sm:text-[8px] md:text-[10px] text-white/50 uppercase tracking-[0.2em] font-bold mt-1">CERTIFICADO</p>
