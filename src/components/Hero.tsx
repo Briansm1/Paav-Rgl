@@ -12,38 +12,38 @@ export const Hero = () => {
   const heroImg = PlaceHolderImages.find(img => img.id === 'hero-bg');
 
   return (
-    <section id="inicio" className="relative min-h-[100svh] md:h-screen flex items-start md:items-center pt-28 md:pt-32 pb-8 overflow-hidden">
+    <section id="inicio" className="relative min-h-[100svh] md:h-screen flex items-start md:items-center pt-24 md:pt-40 pb-12 overflow-hidden">
       {/* Background Image Overlay */}
       <div className="absolute inset-0 z-0">
         <Image
           src={heroImg?.imageUrl || ''}
           alt={heroImg?.description || 'Driving school background'}
           fill
-          className="object-cover blur-[15px] scale-110 opacity-30"
+          className="object-cover blur-[20px] scale-110 opacity-30"
           priority
           data-ai-hint={heroImg?.imageHint}
         />
         {/* Gradient overlays for readability and transition */}
-        <div className="absolute inset-0 bg-gradient-to-b md:bg-gradient-to-r from-black/95 via-black/50 to-transparent"></div>
+        <div className="absolute inset-0 bg-gradient-to-b md:bg-gradient-to-r from-black/95 via-black/60 to-transparent"></div>
         {/* Bottom transition fade - deeper for smoother scroll feel */}
         <div className="absolute bottom-0 left-0 right-0 h-40 md:h-64 bg-gradient-to-t from-background via-background/95 to-transparent z-10"></div>
       </div>
 
       <div className="w-full max-w-[1440px] mx-auto px-4 md:px-6 relative z-20">
         <div className="max-w-4xl text-left">
-          <div className="inline-flex items-center gap-2 bg-white/10 backdrop-blur-md border border-white/20 rounded-full px-4 py-1.5 mb-6 animate-in fade-in slide-in-from-bottom-4 duration-700">
+          <div className="inline-flex items-center gap-2 bg-white/10 backdrop-blur-md border border-white/20 rounded-full px-4 py-1.5 mb-8 md:mb-6 animate-in fade-in slide-in-from-bottom-4 duration-700">
             <span className="text-[10px] md:text-sm font-bold text-white uppercase tracking-wider">La elección N°1 de la región</span>
           </div>
           
-          <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold font-headline leading-[1.15] md:leading-[1.1] mb-6 md:mb-6 text-white animate-in fade-in slide-in-from-bottom-6 duration-1000 delay-100">
+          <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold font-headline leading-[1.15] md:leading-[1.1] mb-8 md:mb-6 text-white animate-in fade-in slide-in-from-bottom-6 duration-1000 delay-100">
             Tu camino hacia la <span className="text-primary">libertad</span> comienza con nosotros
           </h1>
           
-          <p className="text-base md:text-xl text-white/90 mb-8 md:mb-8 max-w-2xl animate-in fade-in slide-in-from-bottom-8 duration-1000 delay-200 leading-relaxed text-left">
+          <p className="text-base md:text-xl text-white/90 mb-10 md:mb-8 max-w-2xl animate-in fade-in slide-in-from-bottom-8 duration-1000 delay-200 leading-relaxed text-left">
             En nuestra academia, no solo te enseñamos a manejar; te preparamos para ser un conductor responsable, seguro y con total confianza en las calles
           </p>
           
-          <div className="flex flex-col sm:flex-row gap-4 mb-6 md:mb-8 animate-in fade-in slide-in-from-bottom-10 duration-1000 delay-300">
+          <div className="flex flex-col sm:flex-row gap-4 mb-12 md:mb-8 animate-in fade-in slide-in-from-bottom-10 duration-1000 delay-300">
             <Link href="#planes" className="w-full sm:w-auto">
               <Button size="lg" className="h-12 md:h-14 px-10 text-base md:text-lg bg-primary hover:bg-primary/90 rounded-full w-full font-bold shadow-2xl shadow-primary/20 transition-all hover:scale-105">
                 Conocer planes
@@ -52,7 +52,7 @@ export const Hero = () => {
             </Link>
           </div>
           
-          <div className="flex items-center justify-start gap-4 sm:gap-10 md:gap-14 animate-in fade-in duration-1000 delay-500 pb-20 md:pb-0">
+          <div className="flex items-center justify-start gap-4 sm:gap-10 md:gap-14 animate-in fade-in duration-1000 delay-500">
             <div className="text-center min-w-[70px]">
               <p className="text-lg sm:text-2xl md:text-3xl font-bold text-gold leading-none">Equipo</p>
               <p className="text-[7px] sm:text-[9px] md:text-[10px] text-white/50 uppercase tracking-[0.2em] font-bold mt-1">CERTIFICADO</p>
