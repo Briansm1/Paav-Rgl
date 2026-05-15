@@ -1,3 +1,4 @@
+
 "use client";
 
 import React from 'react';
@@ -33,7 +34,7 @@ export const Hero = () => {
           </div>
           
           <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold font-headline leading-[1.1] mb-4 text-white animate-in fade-in slide-in-from-bottom-6 duration-1000 delay-100">
-            Tu camino hacia la <span className="text-primary">libertad</span> comienza con nosotros
+            Tu camino hacia la libertad comienza con nosotros
           </h1>
           
           <p className="text-lg sm:text-xl md:text-xl text-white/80 mb-6 max-w-2xl animate-in fade-in slide-in-from-bottom-8 duration-1000 delay-200 leading-relaxed">
@@ -61,7 +62,14 @@ export const Hero = () => {
             </div>
             <div className="w-px h-10 bg-white/20"></div>
             <div className="text-center">
-              <p className="text-2xl md:text-4xl font-bold text-gold">4.9/5</p>
+              <p className="text-2xl md:text-4xl font-bold text-gold">5/5</p>
+              <div className="flex justify-center gap-0.5 mt-1">
+                <Star className="w-3 h-3 text-yellow-400 fill-yellow-400" />
+                <Star className="w-3 h-3 text-yellow-400 fill-yellow-400" />
+                <Star className="w-3 h-3 text-yellow-400 fill-yellow-400" />
+                <Star className="w-3 h-3 text-yellow-400 fill-yellow-400" />
+                <Star className="w-3 h-3 text-yellow-400 fill-yellow-400" />
+              </div>
               <p className="text-[10px] md:text-xs text-white/50 uppercase tracking-widest font-bold mt-1">LOS MÁS RECOMENDADOS</p>
             </div>
           </div>
