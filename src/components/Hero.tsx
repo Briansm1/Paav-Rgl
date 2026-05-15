@@ -12,21 +12,21 @@ export const Hero = () => {
   const heroImg = PlaceHolderImages.find(img => img.id === 'hero-bg');
 
   return (
-    <section id="inicio" className="relative min-h-[100svh] md:h-screen flex items-center pt-24 md:pt-32 pb-8 overflow-hidden">
+    <section id="inicio" className="relative min-h-[100svh] md:h-screen flex items-start md:items-center pt-28 md:pt-32 pb-8 overflow-hidden">
       {/* Background Image Overlay */}
       <div className="absolute inset-0 z-0">
         <Image
           src={heroImg?.imageUrl || ''}
           alt={heroImg?.description || 'Driving school background'}
           fill
-          className="object-cover blur-[12px] scale-110 opacity-40"
+          className="object-cover blur-[15px] scale-110 opacity-30"
           priority
           data-ai-hint={heroImg?.imageHint}
         />
         {/* Gradient overlays for readability and transition */}
-        <div className="absolute inset-0 bg-gradient-to-b md:bg-gradient-to-r from-black/95 via-black/40 to-transparent"></div>
+        <div className="absolute inset-0 bg-gradient-to-b md:bg-gradient-to-r from-black/95 via-black/50 to-transparent"></div>
         {/* Bottom transition fade - deeper for smoother scroll feel */}
-        <div className="absolute bottom-0 left-0 right-0 h-40 md:h-64 bg-gradient-to-t from-background via-background/90 to-transparent z-10"></div>
+        <div className="absolute bottom-0 left-0 right-0 h-40 md:h-64 bg-gradient-to-t from-background via-background/95 to-transparent z-10"></div>
       </div>
 
       <div className="w-full max-w-[1440px] mx-auto px-4 md:px-6 relative z-20">
@@ -39,11 +39,11 @@ export const Hero = () => {
             Tu camino hacia la <span className="text-primary">libertad</span> comienza con nosotros
           </h1>
           
-          <p className="text-base md:text-xl text-white/90 mb-8 md:mb-10 max-w-2xl animate-in fade-in slide-in-from-bottom-8 duration-1000 delay-200 leading-relaxed text-left">
+          <p className="text-base md:text-xl text-white/90 mb-8 md:mb-8 max-w-2xl animate-in fade-in slide-in-from-bottom-8 duration-1000 delay-200 leading-relaxed text-left">
             En nuestra academia, no solo te enseñamos a manejar; te preparamos para ser un conductor responsable, seguro y con total confianza en las calles
           </p>
           
-          <div className="flex flex-col sm:flex-row gap-4 mb-10 md:mb-12 animate-in fade-in slide-in-from-bottom-10 duration-1000 delay-300">
+          <div className="flex flex-col sm:flex-row gap-4 mb-6 md:mb-8 animate-in fade-in slide-in-from-bottom-10 duration-1000 delay-300">
             <Link href="#planes" className="w-full sm:w-auto">
               <Button size="lg" className="h-12 md:h-14 px-10 text-base md:text-lg bg-primary hover:bg-primary/90 rounded-full w-full font-bold shadow-2xl shadow-primary/20 transition-all hover:scale-105">
                 Conocer planes
