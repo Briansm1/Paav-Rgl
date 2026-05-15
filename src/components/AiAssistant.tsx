@@ -1,3 +1,4 @@
+
 "use client";
 
 import React, { useState } from 'react';
@@ -41,19 +42,19 @@ export const AiAssistant = () => {
   };
 
   return (
-    <div className="fixed bottom-8 right-28 z-[100]">
+    <div className="fixed bottom-6 right-24 md:bottom-8 md:right-28 z-[100]">
       {!isOpen && (
         <Button 
           onClick={() => setIsOpen(true)}
-          className="w-16 h-16 rounded-full shadow-2xl bg-primary hover:bg-primary/90 flex items-center justify-center animate-bounce hover:animate-none"
+          className="w-14 h-14 md:w-16 md:h-16 rounded-full shadow-2xl bg-primary hover:bg-primary/90 flex items-center justify-center animate-bounce hover:animate-none"
           aria-label="Abrir asistente IA"
         >
-          <MessageSquare className="w-8 h-8 text-white" />
+          <MessageSquare className="w-7 h-7 md:w-8 md:h-8 text-white" />
         </Button>
       )}
 
       {isOpen && (
-        <Card className="w-80 md:w-96 shadow-2xl border-none overflow-hidden animate-in zoom-in duration-200 origin-bottom-right">
+        <Card className="w-72 md:w-96 shadow-2xl border-none overflow-hidden animate-in zoom-in duration-200 origin-bottom-right">
           <CardHeader className="bg-primary p-4 flex flex-row items-center justify-between text-white">
             <div className="flex items-center gap-2">
               <Bot className="w-6 h-6" />
@@ -65,7 +66,7 @@ export const AiAssistant = () => {
           </CardHeader>
           
           <CardContent className="p-0 bg-background">
-            <ScrollArea className="h-[400px] p-4">
+            <ScrollArea className="h-[350px] md:h-[400px] p-4">
               <div className="space-y-4">
                 {messages.map((m, i) => (
                   <div key={i} className={`flex ${m.role === 'user' ? 'justify-end' : 'justify-start'}`}>
@@ -100,7 +101,7 @@ export const AiAssistant = () => {
               <Input 
                 value={input}
                 onChange={(e) => setInput(e.target.value)}
-                placeholder="Haz una pregunta..." 
+                placeholder="Preguntar..." 
                 className="flex-grow rounded-full h-10 px-4 focus-visible:ring-primary"
               />
               <Button type="submit" disabled={isLoading} className="rounded-full w-10 h-10 p-0 bg-primary hover:bg-primary/90">
