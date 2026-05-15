@@ -29,7 +29,7 @@ export const Hero = () => {
         <div className="absolute bottom-0 left-0 right-0 h-64 bg-gradient-to-t from-background via-background/60 to-transparent z-10"></div>
       </div>
 
-      <div className="container mx-auto px-4 relative z-20">
+      <div className="w-full max-w-[1440px] mx-auto px-4 md:px-8 relative z-20">
         <div className="max-w-4xl">
           <div className="inline-flex items-center gap-2 bg-white/10 backdrop-blur-md border border-white/20 rounded-full px-4 py-1.5 mb-8 md:mb-6 animate-in fade-in slide-in-from-bottom-4 duration-700">
             <span className="text-sm md:text-base font-bold text-white">La elección N°1 de la región</span>
@@ -52,22 +52,22 @@ export const Hero = () => {
             </Link>
           </div>
           
-          <div className="mt-16 md:mt-12 flex items-center justify-between gap-2 sm:gap-12 md:gap-16 animate-in fade-in duration-1000 delay-500 max-w-full md:max-w-none pb-8 md:pb-0">
-            <div className="text-center md:text-left flex-1 sm:flex-none">
+          <div className="mt-16 md:mt-12 flex items-center justify-start gap-4 sm:gap-12 md:gap-16 animate-in fade-in duration-1000 delay-500 pb-8 md:pb-0">
+            <div className="text-center md:text-left">
               <p className="text-lg sm:text-2xl md:text-4xl font-bold text-gold">Equipo</p>
               <p className="text-[7px] sm:text-[10px] md:text-xs text-white/50 uppercase tracking-widest font-bold mt-1">CERTIFICADO</p>
             </div>
             
             <div className="w-px h-8 sm:h-10 bg-white/20"></div>
             
-            <div className="text-center md:text-left flex-1 sm:flex-none">
+            <div className="text-center md:text-left">
               <p className="text-lg sm:text-2xl md:text-4xl font-bold text-gold">+5 años</p>
               <p className="text-[7px] sm:text-[10px] md:text-xs text-white/50 uppercase tracking-widest font-bold mt-1">FORMANDO ASES</p>
             </div>
             
             <div className="w-px h-8 sm:h-10 bg-white/20"></div>
             
-            <div className="text-center md:text-left flex-1 sm:flex-none">
+            <div className="text-center md:text-left">
               <p className="text-lg sm:text-2xl md:text-4xl font-bold text-gold">5/5</p>
               <div className="flex justify-center md:justify-start gap-0.5 mt-1">
                 {[...Array(5)].map((_, i) => (

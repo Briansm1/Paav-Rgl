@@ -1,3 +1,4 @@
+
 "use client";
 
 import React, { useState, useEffect } from 'react';
@@ -81,7 +82,7 @@ export const Header = () => {
           : "py-4"
       )}
     >
-      <div className="container mx-auto px-4 flex items-center justify-between">
+      <div className="w-full max-w-[1440px] mx-auto px-4 md:px-8 flex items-center justify-between">
         <Link 
           href="/#inicio" 
           className="flex items-center gap-2 group relative z-50"
