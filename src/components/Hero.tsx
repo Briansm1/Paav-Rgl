@@ -12,7 +12,7 @@ export const Hero = () => {
   const heroImg = PlaceHolderImages.find(img => img.id === 'hero-bg');
 
   return (
-    <section id="inicio" className="relative h-[100svh] flex flex-col items-center pt-28 pb-28 md:pt-32 md:pb-32 overflow-hidden">
+    <section id="inicio" className="relative h-[100svh] flex flex-col items-center py-20 md:py-32 overflow-hidden">
       {/* Background Image Overlay */}
       <div className="absolute inset-0 z-0">
         <Image
@@ -31,7 +31,7 @@ export const Hero = () => {
 
       <div className="w-full max-w-[1440px] mx-auto px-4 md:px-6 relative z-20 flex-1 flex flex-col justify-between h-full">
         {/* Content Container */}
-        <div className="max-w-4xl text-left flex flex-col items-start gap-5 md:gap-10 mt-6 md:mt-10">
+        <div className="max-w-4xl text-left flex flex-col items-start gap-6 md:gap-10 mt-4 md:mt-10">
           <div className="inline-flex items-center gap-2 bg-white/10 backdrop-blur-md border border-white/20 rounded-full px-4 py-1.5 animate-in fade-in slide-in-from-bottom-4 duration-700">
             <span className="text-[10px] md:text-xs font-bold text-white uppercase tracking-widest">La elección N°1 de la región</span>
           </div>
@@ -42,7 +42,7 @@ export const Hero = () => {
             </h1>
             
             <p className="text-sm md:text-xl text-white/90 max-w-2xl animate-in fade-in slide-in-from-bottom-8 duration-1000 delay-200 leading-relaxed text-left font-medium">
-              En nuestra academia, no solo te enseñamos a manejar; te preparamos para ser un conductor responsable, seguro y con total confianza en las calles.
+              En nuestra academia, no solo te enseñamos a manejar; te preparamos para ser un conductor responsable, seguro y con total confianza en las calles
             </p>
           </div>
           
