@@ -12,7 +12,7 @@ export const Hero = () => {
   const heroImg = PlaceHolderImages.find(img => img.id === 'hero-bg');
 
   return (
-    <section id="inicio" className="relative min-h-[95vh] md:min-h-screen flex items-center pt-32 md:pt-28 pb-20 md:pb-10 overflow-hidden">
+    <section id="inicio" className="relative min-h-[95vh] md:min-h-screen flex items-center pt-32 md:pt-28 pb-32 md:pb-10 overflow-hidden">
       {/* Background Image Overlay */}
       <div className="absolute inset-0 z-0">
         <Image
@@ -25,8 +25,8 @@ export const Hero = () => {
         />
         {/* Gradient overlays for readability and transition */}
         <div className="absolute inset-0 bg-gradient-to-b md:bg-gradient-to-r from-background/95 via-background/80 md:via-background/70 to-background/40 md:to-transparent"></div>
-        {/* Bottom transition fade */}
-        <div className="absolute bottom-0 left-0 right-0 h-32 bg-gradient-to-t from-background to-transparent z-10"></div>
+        {/* Bottom transition fade - Smoother and deeper for "scroll feel" */}
+        <div className="absolute bottom-0 left-0 right-0 h-64 bg-gradient-to-t from-background via-background/60 to-transparent z-10"></div>
       </div>
 
       <div className="container mx-auto px-4 relative z-20">
@@ -52,7 +52,7 @@ export const Hero = () => {
             </Link>
           </div>
           
-          <div className="mt-16 md:mt-12 flex items-center justify-between gap-2 sm:gap-12 md:gap-16 animate-in fade-in duration-1000 delay-500 max-w-full md:max-w-none">
+          <div className="mt-16 md:mt-12 flex items-center justify-between gap-2 sm:gap-12 md:gap-16 animate-in fade-in duration-1000 delay-500 max-w-full md:max-w-none pb-8 md:pb-0">
             <div className="text-center md:text-left flex-1 sm:flex-none">
               <p className="text-lg sm:text-2xl md:text-4xl font-bold text-gold">Equipo</p>
               <p className="text-[7px] sm:text-[10px] md:text-xs text-white/50 uppercase tracking-widest font-bold mt-1">CERTIFICADO</p>
@@ -80,7 +80,7 @@ export const Hero = () => {
         </div>
       </div>
 
-      {/* Scroll indicator for better UX */}
+      {/* Scroll indicator */}
       <div className="absolute bottom-8 left-1/2 -translate-x-1/2 z-30 animate-bounce hidden md:block">
         <ChevronDown className="w-6 h-6 text-white/30" />
       </div>

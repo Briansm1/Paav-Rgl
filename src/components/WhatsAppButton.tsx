@@ -19,13 +19,13 @@ export const WhatsAppButton = () => {
       )}
       aria-label="Contactar por WhatsApp"
     >
-      {/* Tooltip moderno */}
-      <div className="absolute -top-12 right-0 bg-white text-slate-900 px-4 py-2 rounded-xl text-sm font-bold shadow-xl opacity-0 group-hover:opacity-100 transition-opacity pointer-events-none whitespace-nowrap border border-slate-100">
+      {/* Tooltip */}
+      <div className="absolute -top-12 right-0 bg-white text-slate-900 px-4 py-2 rounded-xl text-sm font-bold shadow-xl opacity-0 group-hover:opacity-100 transition-opacity pointer-events-none whitespace-nowrap border border-slate-100 hidden md:block">
         ¿Querés elegir un plan a medida?
         <div className="absolute bottom-[-6px] right-6 w-3 h-3 bg-white border-r border-b border-slate-100 rotate-45"></div>
       </div>
       
-      {/* Logo oficial de WhatsApp mediante SVG inline */}
+      {/* Logo oficial de WhatsApp */}
       <svg 
         viewBox="0 0 448 512" 
         className="w-8 h-8 md:w-9 md:h-9 fill-current" 
