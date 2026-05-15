@@ -1,4 +1,3 @@
-
 "use client";
 
 import React, { useState, useEffect } from 'react';
@@ -82,17 +81,17 @@ export const Header = () => {
           : "py-4"
       )}
     >
-      <div className="w-full max-w-[1440px] mx-auto px-4 md:px-8 flex items-center justify-between">
+      <div className="w-full max-w-[1440px] mx-auto px-4 md:px-6 flex items-center justify-between">
         <Link 
           href="/#inicio" 
-          className="flex items-center gap-2 group relative z-50"
+          className="flex items-center gap-0 group relative z-50 -ml-1 md:-ml-2"
           onClick={() => {
             setActiveSection('/#inicio');
             setMobileMenuOpen(false);
           }}
         >
           {logoImg ? (
-            <div className="relative h-12 w-48 md:h-14 md:w-56 transition-all duration-300">
+            <div className="relative h-12 w-48 md:h-14 md:w-60 transition-all duration-300">
               <Image 
                 src={logoImg.imageUrl} 
                 alt={logoImg.description} 
