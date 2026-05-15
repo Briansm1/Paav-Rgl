@@ -113,6 +113,8 @@ export const Testimonials = () => {
                             src={headerImg.imageUrl} 
                             alt={`Logro de ${t.name}`} 
                             fill 
+                            priority={index < 3}
+                            sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                             className="object-cover transition-transform duration-500 group-hover:scale-105"
                             data-ai-hint={headerImg.imageHint}
                           />
@@ -146,7 +148,6 @@ export const Testimonials = () => {
               <CarouselNext className="h-12 w-12 -right-6 bg-card border-white/10 text-primary hover:bg-primary hover:text-white transition-all shadow-xl" />
             </div>
 
-            {/* Pagination Dots for Mobile & Desktop */}
             <div className="flex justify-center gap-2 mt-12">
               {Array.from({ length: count }).map((_, i) => (
                 <button
@@ -163,7 +164,6 @@ export const Testimonials = () => {
               ))}
             </div>
 
-            {/* Hint for mobile scrolling */}
             <div className="md:hidden text-center mt-4 text-[10px] text-muted-foreground uppercase tracking-widest font-bold animate-pulse">
               Desliza para ver más →
             </div>

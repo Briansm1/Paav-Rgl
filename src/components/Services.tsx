@@ -10,7 +10,6 @@ import {
   CarouselItem,
 } from "@/components/ui/carousel";
 
-// Componente para el icono de volante
 const SteeringWheel = ({ className }: { className?: string }) => (
   <svg 
     xmlns="http://www.w3.org/2000/svg" 
@@ -86,6 +85,8 @@ export const Services = () => {
                           src={img?.imageUrl || ''} 
                           alt={service.title} 
                           fill 
+                          priority={index < 3}
+                          sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                           className="object-cover group-hover:scale-110 transition-transform duration-700"
                           data-ai-hint={img?.imageHint}
                         />
@@ -107,7 +108,6 @@ export const Services = () => {
             </CarouselContent>
           </Carousel>
           
-          {/* Mobile Hint */}
           <div className="md:hidden text-center mt-6 text-[10px] text-muted-foreground uppercase tracking-widest font-bold animate-pulse">
             Desliza para ver más →
           </div>
