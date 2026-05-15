@@ -31,13 +31,13 @@ export const Hero = () => {
 
       <div className="w-full max-w-[1440px] mx-auto px-4 md:px-6 relative z-20 flex-1 flex flex-col justify-between">
         {/* Content Container */}
-        <div className="max-w-4xl text-left flex flex-col items-start gap-6 md:gap-8 mt-4 md:mt-4">
+        <div className="max-w-4xl text-left flex flex-col items-start gap-8 md:gap-10 mt-4 md:mt-8">
           <div className="inline-flex items-center gap-2 bg-white/10 backdrop-blur-md border border-white/20 rounded-full px-4 py-1.5 animate-in fade-in slide-in-from-bottom-4 duration-700">
             <span className="text-[10px] md:text-xs font-bold text-white uppercase tracking-widest">La elección N°1 de la región</span>
           </div>
           
-          <div className="space-y-4 md:space-y-6">
-            <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold font-headline leading-[1.1] md:leading-[1.05] text-white animate-in fade-in slide-in-from-bottom-6 duration-1000 delay-100">
+          <div className="space-y-6 md:space-y-8">
+            <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold font-headline leading-[1.15] md:leading-[1.05] text-white animate-in fade-in slide-in-from-bottom-6 duration-1000 delay-100">
               Tu camino hacia la <span className="text-primary">libertad</span> comienza con nosotros
             </h1>
             
@@ -46,9 +46,9 @@ export const Hero = () => {
             </p>
           </div>
           
-          <div className="flex flex-col sm:flex-row gap-4 animate-in fade-in slide-in-from-bottom-10 duration-1000 delay-300 w-full sm:w-auto mt-2">
+          <div className="flex flex-col sm:flex-row gap-4 animate-in fade-in slide-in-from-bottom-10 duration-1000 delay-300 w-full sm:w-auto">
             <Link href="#planes" className="w-full sm:w-auto">
-              <Button size="lg" className="h-12 md:h-16 px-8 md:px-12 text-base md:text-lg bg-primary hover:bg-primary/90 rounded-full w-full font-bold shadow-2xl shadow-primary/20 transition-all hover:scale-105 active:scale-95">
+              <Button size="lg" className="h-14 md:h-16 px-8 md:px-12 text-base md:text-lg bg-primary hover:bg-primary/90 rounded-full w-full font-bold shadow-2xl shadow-primary/20 transition-all hover:scale-105 active:scale-95">
                 Conocer planes
                 <ChevronRight className="ml-2 w-5 h-5 md:w-6 md:h-6" />
               </Button>
