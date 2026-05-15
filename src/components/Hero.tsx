@@ -1,3 +1,4 @@
+
 "use client";
 
 import React from 'react';
@@ -11,26 +12,26 @@ export const Hero = () => {
   const heroImg = PlaceHolderImages.find(img => img.id === 'hero-bg');
 
   return (
-    <section id="inicio" className="relative min-h-[100svh] md:h-screen flex items-center pt-20 md:pt-24 pb-12 overflow-hidden">
+    <section id="inicio" className="relative min-h-[100svh] md:h-screen flex items-center pt-28 md:pt-36 pb-12 overflow-hidden">
       {/* Background Image Overlay */}
       <div className="absolute inset-0 z-0">
         <Image
           src={heroImg?.imageUrl || ''}
           alt={heroImg?.description || 'Driving school background'}
           fill
-          className="object-cover blur-[5px] scale-110 opacity-60"
+          className="object-cover blur-[8px] scale-110 opacity-50"
           priority
           data-ai-hint={heroImg?.imageHint}
         />
         {/* Gradient overlays for readability and transition */}
         <div className="absolute inset-0 bg-gradient-to-b md:bg-gradient-to-r from-black/90 via-black/40 to-transparent"></div>
         {/* Bottom transition fade - deeper for smoother scroll feel */}
-        <div className="absolute bottom-0 left-0 right-0 h-40 md:h-64 bg-gradient-to-t from-background via-background/60 to-transparent z-10"></div>
+        <div className="absolute bottom-0 left-0 right-0 h-40 md:h-72 bg-gradient-to-t from-background via-background/80 to-transparent z-10"></div>
       </div>
 
       <div className="w-full max-w-[1440px] mx-auto px-4 md:px-6 relative z-20">
         <div className="max-w-4xl text-left">
-          <div className="inline-flex items-center gap-2 bg-white/10 backdrop-blur-md border border-white/20 rounded-full px-4 py-1.5 mb-4 animate-in fade-in slide-in-from-bottom-4 duration-700">
+          <div className="inline-flex items-center gap-2 bg-white/10 backdrop-blur-md border border-white/20 rounded-full px-4 py-1.5 mb-6 animate-in fade-in slide-in-from-bottom-4 duration-700">
             <span className="text-[10px] md:text-sm font-bold text-white uppercase tracking-wider">La elección N°1 de la región</span>
           </div>
           
@@ -51,7 +52,7 @@ export const Hero = () => {
             </Link>
           </div>
           
-          <div className="flex items-center justify-start gap-4 sm:gap-10 md:gap-14 animate-in fade-in duration-1000 delay-500 pb-12 md:pb-0">
+          <div className="flex items-center justify-start gap-6 sm:gap-10 md:gap-14 animate-in fade-in duration-1000 delay-500 pb-20 md:pb-0">
             <div className="text-left">
               <p className="text-xl sm:text-2xl md:text-3xl font-bold text-gold">Equipo</p>
               <p className="text-[8px] sm:text-[9px] md:text-[10px] text-white/50 uppercase tracking-[0.2em] font-bold mt-0.5">CERTIFICADO</p>
