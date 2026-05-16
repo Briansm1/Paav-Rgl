@@ -4,7 +4,7 @@
 import React, { useState, useEffect } from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
-import { Menu, X, ChevronDown, Instagram, Facebook, Youtube } from 'lucide-react';
+import { Menu, X, ChevronDown, Instagram, Facebook, Youtube, BookOpen, GraduationCap } from 'lucide-react';
 import { cn } from '@/lib/utils';
 import { Button } from '@/components/ui/button';
 import { PlaceHolderImages } from '@/app/lib/placeholder-images';
@@ -55,8 +55,11 @@ export const Header = () => {
     { name: 'Nuestra metodología', href: '/#servicios' },
     { name: 'Casos de éxito', href: '/#testimonios' },
     { name: 'Programas', href: '/#planes' },
-    { name: 'Productos', href: '/#productos' },
-    { name: 'Preguntas frecuentes', href: '/#faq' },
+  ];
+
+  const productLinks = [
+    { name: 'Libros digitales', href: '/#productos-libros', icon: <BookOpen className="w-4 h-4" /> },
+    { name: 'Cursos', href: '/#productos-cursos', icon: <GraduationCap className="w-4 h-4" /> },
   ];
 
   const socialLinks = [
@@ -134,6 +137,43 @@ export const Header = () => {
           
           <DropdownMenu>
             <DropdownMenuTrigger className="flex items-center gap-1 text-sm lg:text-base font-bold text-slate-300 hover:text-white outline-none transition-colors">
+              Productos
+              <ChevronDown className="w-4 h-4" />
+            </DropdownMenuTrigger>
+            <DropdownMenuContent className="bg-black border-white/10 text-white p-2 min-w-[180px]">
+              {productLinks.map((product) => (
+                <DropdownMenuItem key={product.name} asChild>
+                  <Link 
+                    href={product.href} 
+                    className="flex items-center gap-3 p-2 hover:bg-white/10 rounded-md cursor-pointer transition-colors"
+                  >
+                    <span className="text-primary">{product.icon}</span>
+                    <span className="font-bold text-sm">{product.name}</span>
+                  </Link>
+                </DropdownMenuItem>
+              ))}
+            </DropdownMenuContent>
+          </DropdownMenu>
+
+          <Link
+            href="/#faq"
+            onClick={() => setActiveSection('/#faq')}
+            className={cn(
+              "relative text-sm lg:text-base font-bold transition-colors duration-300",
+              activeSection === '/#faq' 
+                ? "text-primary" 
+                : "text-slate-300 hover:text-white"
+            )}
+          >
+            Preguntas frecuentes
+            <span className={cn(
+              "absolute -bottom-1 left-0 w-full h-0.5 bg-primary transition-transform duration-300 origin-left",
+              activeSection === '/#faq' ? "scale-x-100" : "scale-x-0"
+            )} />
+          </Link>
+
+          <DropdownMenu>
+            <DropdownMenuTrigger className="flex items-center gap-1 text-sm lg:text-base font-bold text-slate-300 hover:text-white outline-none transition-colors">
               Redes
               <ChevronDown className="w-4 h-4" />
             </DropdownMenuTrigger>
@@ -173,10 +213,10 @@ export const Header = () => {
 
       {/* Mobile Nav Overlay */}
       <div className={cn(
-        "fixed inset-0 bg-black z-40 flex flex-col items-center justify-center transition-all duration-500 md:hidden",
+        "fixed inset-0 bg-black z-40 flex flex-col items-center justify-center transition-all duration-500 md:hidden overflow-y-auto",
         mobileMenuOpen ? "opacity-100 visible" : "opacity-0 invisible pointer-events-none"
       )}>
-        <nav className="flex flex-col items-center gap-6 p-6 w-full max-w-xs text-center">
+        <nav className="flex flex-col items-center gap-5 p-6 w-full max-w-xs text-center">
           {navLinks.map((link) => (
             <Link
               key={link.name}
@@ -194,8 +234,36 @@ export const Header = () => {
             </Link>
           ))}
           
-          <div className="w-full border-t border-white/10 pt-6 mt-2">
-            <p className="text-slate-500 text-xs font-bold uppercase tracking-widest mb-4">Nuestras Redes</p>
+          <div className="flex flex-col items-center gap-3 py-2 border-y border-white/5 w-full">
+            <span className="text-primary font-black uppercase tracking-[0.2em] text-[10px]">Productos</span>
+            {productLinks.map((product) => (
+              <Link
+                key={product.name}
+                href={product.href}
+                className="text-xl font-bold text-white hover:text-primary transition-colors"
+                onClick={() => setMobileMenuOpen(false)}
+              >
+                {product.name}
+              </Link>
+            ))}
+          </div>
+
+          <Link
+            href="/#faq"
+            className={cn(
+              "text-2xl font-bold tracking-tight transition-colors",
+              activeSection === '/#faq' ? "text-primary" : "text-white"
+            )}
+            onClick={() => {
+              setActiveSection('/#faq');
+              setMobileMenuOpen(false);
+            }}
+          >
+            Preguntas frecuentes
+          </Link>
+          
+          <div className="w-full pt-4 mt-2">
+            <p className="text-slate-500 text-[10px] font-black uppercase tracking-[0.2em] mb-4">Nuestras Redes</p>
             <div className="flex justify-center gap-6">
               {socialLinks.map((social) => (
                 <a 
