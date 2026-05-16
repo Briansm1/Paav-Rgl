@@ -193,12 +193,6 @@ export const Header = () => {
               ))}
             </DropdownMenuContent>
           </DropdownMenu>
-
-          <Link href="/#planes">
-            <Button className="bg-green-600 hover:bg-green-700 text-white rounded-full px-6 font-bold shadow-lg shadow-green-600/20 h-10 text-sm">
-              Quiero empezar
-            </Button>
-          </Link>
         </nav>
 
         {/* Mobile Toggle */}
@@ -279,12 +273,6 @@ export const Header = () => {
               ))}
             </div>
           </div>
-
-          <Link href="/#planes" onClick={() => setMobileMenuOpen(false)} className="mt-6 w-full">
-            <Button size="lg" className="bg-green-600 hover:bg-green-700 text-white w-full h-14 text-lg rounded-xl font-bold">
-              Inscribirme ahora
-            </Button>
-          </Link>
         </nav>
       </div>
     </header>
