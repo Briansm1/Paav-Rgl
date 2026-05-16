@@ -79,6 +79,29 @@ export const Header = () => {
     },
   ];
 
+  const renderNavLink = (link: typeof navLinks[0]) => (
+    <Link
+      key={link.name}
+      href={link.href}
+      onClick={() => {
+        setActiveSection(link.href);
+        setMobileMenuOpen(false);
+      }}
+      className={cn(
+        "relative text-sm lg:text-base font-bold transition-colors duration-300",
+        activeSection === link.href 
+          ? "text-primary" 
+          : "text-slate-300 hover:text-white"
+      )}
+    >
+      {link.name}
+      <span className={cn(
+        "absolute -bottom-1 left-0 w-full h-0.5 bg-primary transition-transform duration-300 origin-left",
+        activeSection === link.href ? "scale-x-100" : "scale-x-0"
+      )} />
+    </Link>
+  );
+
   return (
     <header
       className={cn(
@@ -117,26 +140,10 @@ export const Header = () => {
 
         {/* Desktop Nav */}
         <nav className="hidden md:flex items-center gap-6 lg:gap-8">
-          {navLinks.map((link) => (
-            <Link
-              key={link.name}
-              href={link.href}
-              onClick={() => setActiveSection(link.href)}
-              className={cn(
-                "relative text-sm lg:text-base font-bold transition-colors duration-300",
-                activeSection === link.href 
-                  ? "text-primary" 
-                  : "text-slate-300 hover:text-white"
-              )}
-            >
-              {link.name}
-              <span className={cn(
-                "absolute -bottom-1 left-0 w-full h-0.5 bg-primary transition-transform duration-300 origin-left",
-                activeSection === link.href ? "scale-x-100" : "scale-x-0"
-              )} />
-            </Link>
-          ))}
+          {/* Primeros 4 links (Inicio, Metodología, Casos, Programas) */}
+          {navLinks.slice(0, 4).map(renderNavLink)}
           
+          {/* Dropdown Productos - Después de Programas */}
           <DropdownMenu>
             <DropdownMenuTrigger className="flex items-center gap-1 text-sm lg:text-base font-bold text-slate-300 hover:text-white outline-none transition-colors">
               Productos
@@ -157,6 +164,10 @@ export const Header = () => {
             </DropdownMenuContent>
           </DropdownMenu>
 
+          {/* Resto de links (Preguntas frecuentes) */}
+          {navLinks.slice(4).map(renderNavLink)}
+
+          {/* Dropdown Redes */}
           <DropdownMenu>
             <DropdownMenuTrigger className="flex items-center gap-1 text-sm lg:text-base font-bold text-slate-300 hover:text-white outline-none transition-colors">
               Redes
@@ -196,7 +207,8 @@ export const Header = () => {
         mobileMenuOpen ? "opacity-100 visible" : "opacity-0 invisible pointer-events-none"
       )}>
         <nav className="flex flex-col items-center gap-4 p-6 w-full max-w-sm text-center">
-          {navLinks.map((link) => (
+          {/* Primeros 4 links (Inicio, Metodología, Casos, Programas) */}
+          {navLinks.slice(0, 4).map((link) => (
             <Link
               key={link.name}
               href={link.href}
@@ -213,6 +225,7 @@ export const Header = () => {
             </Link>
           ))}
           
+          {/* Submenú Productos - Después de Programas */}
           <div className="w-full flex flex-col items-center py-2">
             <button 
               onClick={() => setMobileProductsOpen(!mobileProductsOpen)}
@@ -238,6 +251,24 @@ export const Header = () => {
               ))}
             </div>
           </div>
+
+          {/* Resto de links (Preguntas frecuentes) */}
+          {navLinks.slice(4).map((link) => (
+            <Link
+              key={link.name}
+              href={link.href}
+              className={cn(
+                "text-2xl font-bold tracking-tight transition-colors py-2",
+                activeSection === link.href ? "text-primary" : "text-white"
+              )}
+              onClick={() => {
+                setActiveSection(link.href);
+                setMobileMenuOpen(false);
+              }}
+            >
+              {link.name}
+            </Link>
+          ))}
 
           <div className="w-full pt-4">
             <Link href="/#planes" onClick={() => setMobileMenuOpen(false)}>
