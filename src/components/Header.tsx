@@ -6,7 +6,6 @@ import Link from 'next/link';
 import Image from 'next/image';
 import { Menu, X, ChevronDown, Instagram, Facebook, Youtube, BookOpen, GraduationCap } from 'lucide-react';
 import { cn } from '@/lib/utils';
-import { Button } from '@/components/ui/button';
 import { PlaceHolderImages } from '@/app/lib/placeholder-images';
 import {
   DropdownMenu,
@@ -34,7 +33,7 @@ export const Header = () => {
     const handleScroll = () => {
       setIsScrolled(window.scrollY > 20);
 
-      const sections = ['inicio', 'servicios', 'testimonios', 'planes', 'productos', 'faq'];
+      const sections = ['inicio', 'servicios', 'testimonios', 'planes', 'faq'];
       const current = sections.find(section => {
         const element = document.getElementById(section);
         if (element) {
@@ -55,6 +54,7 @@ export const Header = () => {
     { name: 'Nuestra metodología', href: '/#servicios' },
     { name: 'Casos de éxito', href: '/#testimonios' },
     { name: 'Programas', href: '/#planes' },
+    { name: 'Preguntas frecuentes', href: '/#faq' },
   ];
 
   const productLinks = [
@@ -155,23 +155,6 @@ export const Header = () => {
             </DropdownMenuContent>
           </DropdownMenu>
 
-          <Link
-            href="/#faq"
-            onClick={() => setActiveSection('/#faq')}
-            className={cn(
-              "relative text-sm lg:text-base font-bold transition-colors duration-300",
-              activeSection === '/#faq' 
-                ? "text-primary" 
-                : "text-slate-300 hover:text-white"
-            )}
-          >
-            Preguntas frecuentes
-            <span className={cn(
-              "absolute -bottom-1 left-0 w-full h-0.5 bg-primary transition-transform duration-300 origin-left",
-              activeSection === '/#faq' ? "scale-x-100" : "scale-x-0"
-            )} />
-          </Link>
-
           <DropdownMenu>
             <DropdownMenuTrigger className="flex items-center gap-1 text-sm lg:text-base font-bold text-slate-300 hover:text-white outline-none transition-colors">
               Redes
@@ -241,20 +224,6 @@ export const Header = () => {
               </Link>
             ))}
           </div>
-
-          <Link
-            href="/#faq"
-            className={cn(
-              "text-2xl font-bold tracking-tight transition-colors",
-              activeSection === '/#faq' ? "text-primary" : "text-white"
-            )}
-            onClick={() => {
-              setActiveSection('/#faq');
-              setMobileMenuOpen(false);
-            }}
-          >
-            Preguntas frecuentes
-          </Link>
           
           <div className="w-full pt-4 mt-2">
             <p className="text-slate-500 text-[10px] font-black uppercase tracking-[0.2em] mb-4">Nuestras Redes</p>
@@ -268,7 +237,7 @@ export const Header = () => {
                   className="text-white hover:text-primary transition-colors"
                   aria-label={social.name}
                 >
-                  <span className="[&>svg]:w-6 [&>svg]:h-6 text-white">{social.icon}</span>
+                  <span className="[&>svg]:w-7 [&>svg]:h-7 text-white">{social.icon}</span>
                 </a>
               ))}
             </div>
