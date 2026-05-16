@@ -4,7 +4,7 @@
 import React, { useState, useEffect } from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
-import { Menu, X, ChevronDown, Instagram, Facebook, Youtube, BookOpen, GraduationCap, ChevronRight } from 'lucide-react';
+import { Menu, X, ChevronDown, Instagram, Facebook, Youtube, Book, Laptop, GraduationCap, ChevronRight } from 'lucide-react';
 import { cn } from '@/lib/utils';
 import { PlaceHolderImages } from '@/app/lib/placeholder-images';
 import {
@@ -60,8 +60,8 @@ export const Header = () => {
   ];
 
   const productLinks = [
-    { name: 'Libros digitales', href: '/#productos-libros', icon: <BookOpen className="w-4 h-4" /> },
-    { name: 'Cursos', href: '/#productos-cursos', icon: <GraduationCap className="w-4 h-4" /> },
+    { name: 'Libros digitales', href: '/#productos-libros', icon: <Book className="w-4 h-4" /> },
+    { name: 'Cursos', href: '/#productos-cursos', icon: <Laptop className="w-4 h-4" /> },
   ];
 
   const socialLinks = [
