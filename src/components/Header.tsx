@@ -34,7 +34,7 @@ export const Header = () => {
     const handleScroll = () => {
       setIsScrolled(window.scrollY > 20);
 
-      const sections = ['inicio', 'servicios', 'testimonios', 'planes', 'faq'];
+      const sections = ['inicio', 'servicios', 'testimonios', 'planes', 'productos', 'faq'];
       const current = sections.find(section => {
         const element = document.getElementById(section);
         if (element) {
@@ -55,6 +55,7 @@ export const Header = () => {
     { name: 'Nuestra metodología', href: '/#servicios' },
     { name: 'Casos de éxito', href: '/#testimonios' },
     { name: 'Programas', href: '/#planes' },
+    { name: 'Productos', href: '/#productos' },
     { name: 'Preguntas frecuentes', href: '/#faq' },
   ];
 
