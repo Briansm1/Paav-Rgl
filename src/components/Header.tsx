@@ -4,7 +4,7 @@
 import React, { useState, useEffect } from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
-import { Menu, X, ChevronDown, Instagram, Facebook, Youtube, BookOpen, GraduationCap } from 'lucide-react';
+import { Menu, X, ChevronDown, Instagram, Facebook, Youtube, BookOpen, GraduationCap, ChevronRight } from 'lucide-react';
 import { cn } from '@/lib/utils';
 import { PlaceHolderImages } from '@/app/lib/placeholder-images';
 import {
@@ -13,10 +13,12 @@ import {
   DropdownMenuItem,
   DropdownMenuTrigger,
 } from "@/components/ui/dropdown-menu";
+import { Button } from '@/components/ui/button';
 
 export const Header = () => {
   const [isScrolled, setIsScrolled] = useState(false);
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+  const [mobileProductsOpen, setMobileProductsOpen] = useState(false);
   const [activeSection, setActiveSection] = useState('#inicio');
 
   const logoImg = PlaceHolderImages.find(img => img.id === 'academy-logo');
@@ -190,16 +192,16 @@ export const Header = () => {
 
       {/* Mobile Nav Overlay */}
       <div className={cn(
-        "fixed inset-0 bg-black z-40 flex flex-col items-center justify-center transition-all duration-500 md:hidden overflow-y-auto",
+        "fixed inset-0 bg-black z-40 flex flex-col items-center justify-center transition-all duration-500 md:hidden overflow-y-auto pt-16",
         mobileMenuOpen ? "opacity-100 visible" : "opacity-0 invisible pointer-events-none"
       )}>
-        <nav className="flex flex-col items-center gap-5 p-6 w-full max-w-xs text-center">
+        <nav className="flex flex-col items-center gap-4 p-6 w-full max-w-sm text-center">
           {navLinks.map((link) => (
             <Link
               key={link.name}
               href={link.href}
               className={cn(
-                "text-2xl font-bold tracking-tight transition-colors",
+                "text-2xl font-bold tracking-tight transition-colors py-2",
                 activeSection === link.href ? "text-primary" : "text-white"
               )}
               onClick={() => {
@@ -211,21 +213,42 @@ export const Header = () => {
             </Link>
           ))}
           
-          <div className="flex flex-col items-center gap-3 py-2 border-y border-white/5 w-full">
-            <span className="text-primary font-black uppercase tracking-[0.2em] text-[10px]">Productos</span>
-            {productLinks.map((product) => (
-              <Link
-                key={product.name}
-                href={product.href}
-                className="text-xl font-bold text-white hover:text-primary transition-colors"
-                onClick={() => setMobileMenuOpen(false)}
-              >
-                {product.name}
-              </Link>
-            ))}
+          <div className="w-full flex flex-col items-center py-2">
+            <button 
+              onClick={() => setMobileProductsOpen(!mobileProductsOpen)}
+              className="flex items-center gap-2 text-2xl font-bold text-white py-2 focus:outline-none"
+            >
+              Productos
+              <ChevronDown className={cn("w-5 h-5 transition-transform", mobileProductsOpen && "rotate-180")} />
+            </button>
+            <div className={cn(
+              "flex flex-col items-center gap-3 overflow-hidden transition-all duration-300 w-full bg-white/5 rounded-2xl",
+              mobileProductsOpen ? "max-h-48 py-4 mt-2 opacity-100" : "max-h-0 py-0 opacity-0"
+            )}>
+              {productLinks.map((product) => (
+                <Link
+                  key={product.name}
+                  href={product.href}
+                  className="text-lg font-bold text-slate-300 hover:text-primary transition-colors flex items-center gap-2"
+                  onClick={() => setMobileMenuOpen(false)}
+                >
+                  {product.icon}
+                  {product.name}
+                </Link>
+              ))}
+            </div>
+          </div>
+
+          <div className="w-full pt-4">
+            <Link href="/#planes" onClick={() => setMobileMenuOpen(false)}>
+              <Button className="w-full h-12 bg-primary hover:bg-primary/90 rounded-full font-bold text-lg flex items-center justify-center gap-2">
+                Conocer planes
+                <ChevronRight className="w-5 h-5" />
+              </Button>
+            </Link>
           </div>
           
-          <div className="w-full pt-4 mt-2">
+          <div className="w-full pt-8 mt-4 border-t border-white/10">
             <p className="text-slate-500 text-[10px] font-black uppercase tracking-[0.2em] mb-4">Nuestras Redes</p>
             <div className="flex justify-center gap-6">
               {socialLinks.map((social) => (
