@@ -19,7 +19,7 @@ export const Hero = () => {
           src={heroImg?.imageUrl || ''}
           alt={heroImg?.description || 'Driving school background'}
           fill
-          className="object-cover object-left md:object-center blur-[2px] md:blur-[5px] scale-105 opacity-60 md:opacity-55"
+          className="object-cover object-right md:object-center blur-[2px] md:blur-[5px] scale-105 opacity-60 md:opacity-55"
           priority
           data-ai-hint={heroImg?.imageHint}
         />
@@ -31,8 +31,8 @@ export const Hero = () => {
       </div>
 
       <div className="w-full max-w-[1440px] mx-auto px-4 md:px-6 relative z-20 flex-1 flex flex-col justify-between h-full">
-        {/* Content Container */}
-        <div className="max-w-4xl text-left flex flex-col items-start gap-4 md:gap-8 mt-2 md:mt-4">
+        {/* Content Container - Positioned higher based on previous user requests */}
+        <div className="max-w-4xl text-left flex flex-col items-start gap-4 md:gap-8 mt-1 md:mt-2">
           <div className="inline-flex items-center gap-2 bg-white/10 backdrop-blur-md border border-white/20 rounded-full px-4 py-1.5 animate-in fade-in slide-in-from-bottom-4 duration-700">
             <span className="text-[10px] md:text-xs font-bold text-white uppercase tracking-widest">La elección N°1 de la región</span>
           </div>
@@ -57,7 +57,7 @@ export const Hero = () => {
           </div>
         </div>
         
-        {/* Stats Container - Positioned higher on mobile to avoid overlap with floating buttons */}
+        {/* Stats Container - pb-28 on mobile to avoid WhatsApp button overlap */}
         <div className="flex items-center justify-start gap-6 sm:gap-10 md:gap-14 animate-in fade-in duration-1000 delay-500 pt-6 pb-28 md:pb-12">
           <div className="flex flex-col items-center text-center min-w-[70px] md:min-w-[100px]">
             <p className="text-xl sm:text-2xl md:text-3xl font-bold text-gold leading-none">Equipo</p>
