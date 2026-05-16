@@ -142,12 +142,12 @@ export const Header = () => {
             </DropdownMenuTrigger>
             <DropdownMenuContent className="bg-black border-white/10 text-white p-2 min-w-[180px]">
               {productLinks.map((product) => (
-                <DropdownMenuItem key={product.name} asChild>
+                <DropdownMenuItem key={product.name} asChild className="focus:bg-primary focus:text-white cursor-pointer">
                   <Link 
                     href={product.href} 
-                    className="flex items-center gap-3 p-2 hover:bg-white/10 rounded-md cursor-pointer transition-colors"
+                    className="flex items-center gap-3 p-2 rounded-md transition-colors"
                   >
-                    <span className="text-primary">{product.icon}</span>
+                    <span className="text-white">{product.icon}</span>
                     <span className="font-bold text-sm">{product.name}</span>
                   </Link>
                 </DropdownMenuItem>
@@ -179,14 +179,14 @@ export const Header = () => {
             </DropdownMenuTrigger>
             <DropdownMenuContent className="bg-black border-white/10 text-white p-2 min-w-[160px]">
               {socialLinks.map((social) => (
-                <DropdownMenuItem key={social.name} asChild>
+                <DropdownMenuItem key={social.name} asChild className="focus:bg-primary focus:text-white cursor-pointer">
                   <a 
                     href={social.href} 
                     target="_blank" 
                     rel="noopener noreferrer"
-                    className="flex items-center gap-3 p-2 hover:bg-white/10 rounded-md cursor-pointer transition-colors"
+                    className="flex items-center gap-3 p-2 rounded-md transition-colors"
                   >
-                    <span className="text-primary">{social.icon}</span>
+                    <span className="text-white">{social.icon}</span>
                     <span className="font-bold text-sm">{social.name}</span>
                   </a>
                 </DropdownMenuItem>
@@ -268,7 +268,7 @@ export const Header = () => {
                   className="text-white hover:text-primary transition-colors"
                   aria-label={social.name}
                 >
-                  <span className="[&>svg]:w-6 [&>svg]:h-6">{social.icon}</span>
+                  <span className="[&>svg]:w-6 [&>svg]:h-6 text-white">{social.icon}</span>
                 </a>
               ))}
             </div>
