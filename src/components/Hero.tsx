@@ -19,7 +19,7 @@ export const Hero = () => {
           src={heroImg?.imageUrl || ''}
           alt={heroImg?.description || 'Driving school background'}
           fill
-          className="object-cover blur-[2px] md:blur-[5px] scale-105 opacity-60 md:opacity-55"
+          className="object-cover object-left md:object-center blur-[2px] md:blur-[5px] scale-105 opacity-60 md:opacity-55"
           priority
           data-ai-hint={heroImg?.imageHint}
         />
@@ -38,11 +38,11 @@ export const Hero = () => {
           </div>
           
           <div className="space-y-4 md:space-y-6">
-            <h1 className="text-5xl sm:text-6xl md:text-5xl lg:text-6xl font-bold font-headline leading-[1.1] md:leading-[1.05] text-white animate-in fade-in slide-in-from-bottom-6 duration-1000 delay-100">
+            <h1 className="text-4xl sm:text-5xl md:text-5xl lg:text-6xl font-bold font-headline leading-[1.1] md:leading-[1.05] text-white animate-in fade-in slide-in-from-bottom-6 duration-1000 delay-100">
               Tu camino hacia la <span className="text-primary">libertad</span> comienza con nosotros
             </h1>
             
-            <p className="text-xl sm:text-xl md:text-xl text-white/90 max-w-2xl animate-in fade-in slide-in-from-bottom-8 duration-1000 delay-200 leading-relaxed text-left font-medium">
+            <p className="text-lg sm:text-xl md:text-xl text-white/90 max-w-2xl animate-in fade-in slide-in-from-bottom-8 duration-1000 delay-200 leading-relaxed text-left font-medium">
               En nuestra academia, no solo te enseñamos a manejar; te preparamos para ser un conductor responsable, seguro y con total confianza en las calles
             </p>
           </div>
@@ -58,7 +58,7 @@ export const Hero = () => {
         </div>
         
         {/* Stats Container - Positioned higher on mobile to avoid overlap with floating buttons */}
-        <div className="flex items-center justify-start gap-6 sm:gap-10 md:gap-14 animate-in fade-in duration-1000 delay-500 pt-6 pb-24 md:pb-12">
+        <div className="flex items-center justify-start gap-6 sm:gap-10 md:gap-14 animate-in fade-in duration-1000 delay-500 pt-6 pb-28 md:pb-12">
           <div className="flex flex-col items-center text-center min-w-[70px] md:min-w-[100px]">
             <p className="text-xl sm:text-2xl md:text-3xl font-bold text-gold leading-none">Equipo</p>
             <p className="text-[9px] md:text-[10px] text-white/50 uppercase tracking-[0.2em] font-bold mt-2">CERTIFICADO</p>
