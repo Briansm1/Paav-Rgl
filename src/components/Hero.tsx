@@ -1,3 +1,4 @@
+
 "use client";
 
 import React from 'react';
@@ -56,8 +57,8 @@ export const Hero = () => {
           </div>
         </div>
         
-        {/* Stats Container - Positioned at the very bottom padding */}
-        <div className="flex items-center justify-start gap-6 sm:gap-10 md:gap-14 animate-in fade-in duration-1000 delay-500 pt-6 pb-8 md:pb-12">
+        {/* Stats Container - Positioned higher on mobile to avoid overlap with floating buttons */}
+        <div className="flex items-center justify-start gap-6 sm:gap-10 md:gap-14 animate-in fade-in duration-1000 delay-500 pt-6 pb-24 md:pb-12">
           <div className="flex flex-col items-center text-center min-w-[70px] md:min-w-[100px]">
             <p className="text-xl sm:text-2xl md:text-3xl font-bold text-gold leading-none">Equipo</p>
             <p className="text-[9px] md:text-[10px] text-white/50 uppercase tracking-[0.2em] font-bold mt-2">CERTIFICADO</p>
