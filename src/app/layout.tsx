@@ -4,18 +4,16 @@ import { FirebaseClientProvider } from '@/firebase/client-provider';
 import { Toaster } from '@/components/ui/toaster';
 
 export const metadata: Metadata = {
-  title: 'Pilotos - Ases al Volante | Academia de Conducción en Río Gallegos',
-  description: 'Tu academia de confianza para aprender a conducir con seguridad y profesionalismo en Río Gallegos. Cursos personalizados, instructores expertos y vehículos modernos para tu licencia.',
-  keywords: ['conducción', 'clases de manejo', 'Río Gallegos', 'licencia de conducir', 'seguridad vial', 'academia de manejo', 'aprender a manejar'],
-  authors: [{ name: 'Pilotos - Ases al Volante' }],
+  title: 'Autoescuela en Río Gallegos | Pilotos ases al volante',
+  description: 'Aprendé a conducir en Río Gallegos de forma segura. Equipo calificado, vehículos modernos y horarios flexibles. ¡Desbloqueá tu mejor versión al volante hoy!',
   icons: {
     icon: 'https://i.imgur.com/kQtT1h5.jpeg',
     shortcut: 'https://i.imgur.com/kQtT1h5.jpeg',
     apple: 'https://i.imgur.com/kQtT1h5.jpeg',
   },
   openGraph: {
-    title: 'Pilotos - Ases al Volante | Academia de Conducción',
-    description: 'Aprende a conducir con seguridad y confianza. Tu libertad empieza con nosotros.',
+    title: 'Autoescuela en Río Gallegos | Pilotos ases al volante',
+    description: 'Aprendé a conducir en Río Gallegos de forma segura. Equipo calificado, vehículos modernos y horarios flexibles. ¡Desbloqueá tu mejor versión al volante hoy!',
     url: 'https://pilotosasesalvolante.com',
     siteName: 'Pilotos - Ases al Volante',
     images: [
@@ -31,8 +29,8 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Pilotos - Ases al Volante | Academia de Conducción',
-    description: 'Aprende a conducir con seguridad y profesionalismo.',
+    title: 'Autoescuela en Río Gallegos | Pilotos ases al volante',
+    description: 'Aprendé a conducir en Río Gallegos de forma segura. Equipo calificado, vehículos modernos y horarios flexibles. ¡Desbloqueá tu mejor versión al volante hoy!',
     images: ['https://i.imgur.com/v6PauaL.png'],
   },
 };
