@@ -1,4 +1,3 @@
-
 "use client";
 
 import React, { useEffect, useState } from 'react';
@@ -53,10 +52,10 @@ export const Gallery = () => {
                     src={img.imageUrl} 
                     alt={img.description} 
                     fill 
-                    className="object-cover transition-transform duration-700 group-hover:scale-110"
+                    className="object-cover transition-all duration-500"
                     data-ai-hint={img.imageHint}
                   />
-                  <div className="absolute inset-0 bg-black/20 group-hover:bg-black/10 transition-colors duration-500"></div>
+                  <div className="absolute inset-0 bg-black/10 group-hover:bg-transparent transition-colors duration-500"></div>
                 </div>
               </CarouselItem>
             ))}
