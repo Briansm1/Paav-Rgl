@@ -32,7 +32,7 @@ export const Gallery = () => {
           Momentos Pilotos
         </span>
         <h2 className="text-4xl md:text-5xl font-bold font-headline mb-4 tracking-tight">
-          Nuestra <span className="text-primary italic">galería</span>
+          Galería de <span className="text-primary italic">clases</span>
         </h2>
       </div>
 
