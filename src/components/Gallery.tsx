@@ -1,3 +1,4 @@
+
 "use client";
 
 import React, { useEffect, useState } from 'react';
@@ -46,8 +47,8 @@ export const Gallery = () => {
         >
           <CarouselContent className="-ml-2 md:-ml-4">
             {galleryImages.map((img, index) => (
-              <CarouselItem key={index} className="pl-2 basis-1/3 sm:basis-1/2 lg:basis-1/3">
-                <div className="relative aspect-[8/10] rounded-xl md:rounded-[2rem] overflow-hidden shadow-xl transition-all duration-700 group">
+              <CarouselItem key={index} className="pl-2 basis-1/2 sm:basis-1/2 lg:basis-1/3">
+                <div className="relative aspect-[8/10] rounded-xl md:rounded-[2rem] overflow-hidden shadow-xl transition-all duration-700">
                   <Image 
                     src={img.imageUrl} 
                     alt={img.description} 
@@ -55,7 +56,7 @@ export const Gallery = () => {
                     className="object-cover"
                     data-ai-hint={img.imageHint}
                   />
-                  <div className="absolute inset-0 bg-black/20 group-hover:bg-transparent transition-colors duration-500"></div>
+                  <div className="absolute inset-0 bg-black/10"></div>
                 </div>
               </CarouselItem>
             ))}
