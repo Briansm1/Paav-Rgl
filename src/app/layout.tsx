@@ -7,7 +7,9 @@ export const metadata: Metadata = {
   title: 'Autoescuela en Río Gallegos | Pilotos ases al volante',
   description: 'Aprendé a conducir en Río Gallegos de forma segura. Equipo calificado, vehículos modernos y horarios flexibles. ¡Desbloqueá tu mejor versión al volante hoy!',
   icons: {
-    icon: 'https://i.imgur.com/kQtT1h5.jpeg',
+    icon: [
+      { url: 'https://i.imgur.com/kQtT1h5.jpeg', type: 'image/jpeg' },
+    ],
     shortcut: 'https://i.imgur.com/kQtT1h5.jpeg',
     apple: 'https://i.imgur.com/kQtT1h5.jpeg',
   },
@@ -43,9 +45,6 @@ export default function RootLayout({
   return (
     <html lang="es" className="dark">
       <head>
-        <link rel="icon" href="https://i.imgur.com/kQtT1h5.jpeg" type="image/jpeg" />
-        <link rel="shortcut icon" href="https://i.imgur.com/kQtT1h5.jpeg" />
-        <link rel="apple-touch-icon" href="https://i.imgur.com/kQtT1h5.jpeg" />
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
         <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
