@@ -1,7 +1,7 @@
 "use client";
 
 import React, { useState } from 'react';
-import { Mail, MessageSquare, MapPin, Image as ImageIcon, CheckCircle2, Loader2, Send } from 'lucide-react';
+import { Mail, MessageSquare, MapPin, Image as ImageIcon, Send } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
 import { Textarea } from '@/components/ui/textarea';
@@ -25,10 +25,6 @@ import {
   SelectValue,
 } from "@/components/ui/select";
 import { useToast } from '@/hooks/use-toast';
-import { collection, addDoc, serverTimestamp } from 'firebase/firestore';
-import { useFirestore } from '@/firebase/provider';
-import { errorEmitter } from '@/firebase/error-emitter';
-import { FirestorePermissionError } from '@/firebase/errors';
 
 const formSchema = z.object({
   name: z.string().min(2, { message: 'El nombre es obligatorio' }),
@@ -41,11 +37,9 @@ const formSchema = z.object({
 export const Contact = () => {
   const { toast } = useToast();
   const [fileName, setFileName] = useState<string | null>(null);
-  const [isSubmitting, setIsSubmitting] = useState(false);
-  const firestore = useFirestore();
   
   const academyEmail = "pilotosasesalvolante@gmail.com";
-  const whatsappUrl = "https://wa.me/542966265603";
+  const whatsappUrl = "https://wa.me/5492966265603";
 
   const form = useForm<z.infer<typeof formSchema>>({
     resolver: zodResolver(formSchema),
@@ -66,78 +60,26 @@ export const Contact = () => {
     }
   };
 
-  const handleManualEmail = () => {
-    const values = form.getValues();
-    const subject = encodeURIComponent(`Nueva Reseña de Estudiante: ${values.name}`);
+  const onSubmit = (values: z.infer<typeof formSchema>) => {
+    // Generar el cuerpo del mail con los datos del formulario
+    const subject = encodeURIComponent(`Reseña de Estudiante: ${values.name}`);
     const body = encodeURIComponent(
-      `Nombre: ${values.name}\n` +
-      `Email: ${values.email}\n` +
-      `Calificación: ${values.rating} estrellas\n\n` +
-      `Reseña:\n${values.review}`
+      `¡Hola Pilotos! Aquí te envío mi reseña:\n\n` +
+      `• Nombre: ${values.name}\n` +
+      `• Email: ${values.email}\n` +
+      `• Calificación: ${values.rating} estrellas\n\n` +
+      `Mi Experiencia:\n"${values.review}"\n\n` +
+      `[IMPORTANTE: Si tienes la foto de tu licencia, por favor ADJÚNTALA a este correo antes de enviar]`
     );
+    
+    // Abrir cliente de mail
     window.location.href = `mailto:${academyEmail}?subject=${subject}&body=${body}`;
+    
+    toast({
+      title: "Abriendo correo...",
+      description: "Se abrirá tu aplicación de mail para que envíes la reseña. ¡No olvides adjuntar la foto!",
+    });
   };
-
-  async function onSubmit(values: z.infer<typeof formSchema>) {
-    if (!firestore) return;
-    
-    setIsSubmitting(true);
-    
-    const reviewData = {
-      name: values.name,
-      email: values.email,
-      rating: values.rating,
-      review: values.review,
-      licenseImageName: fileName || null,
-      createdAt: serverTimestamp(),
-    };
-
-    addDoc(collection(firestore, 'reviews'), reviewData)
-      .then(() => {
-        addDoc(collection(firestore, 'mail'), {
-          to: academyEmail,
-          message: {
-            subject: `¡Nueva Reseña de ${values.name}!`,
-            text: `Has recibido una nueva calificación de ${values.rating} estrellas.\n\nReseña: ${values.review}\n\nDe: ${values.name} (${values.email})`,
-            html: `
-              <div style="font-family: sans-serif; padding: 20px; border: 1px solid #eee; border-radius: 10px;">
-                <h2 style="color: #213547;">Nueva Reseña en la Web</h2>
-                <p><strong>Alumno:</strong> ${values.name}</p>
-                <p><strong>Email:</strong> ${values.email}</p>
-                <p><strong>Calificación:</strong> ${values.rating} estrellas</p>
-                <hr style="border: 0; border-top: 1px solid #eee; margin: 20px 0;">
-                <p style="font-style: italic; color: #555;">"${values.review}"</p>
-              </div>
-            `,
-          },
-        }).catch(err => console.warn("Fallo al crear trigger de email, pero la reseña se guardó."));
-
-        toast({
-          title: "¡Reseña enviada!",
-          description: "Tu experiencia se ha guardado correctamente y hemos notificado a la academia.",
-        });
-        
-        form.reset();
-        setFileName(null);
-      })
-      .catch(async (error) => {
-        const permissionError = new FirestorePermissionError({
-          path: 'reviews',
-          operation: 'create',
-          requestResourceData: reviewData,
-        });
-        errorEmitter.emit('permission-error', permissionError);
-        
-        toast({
-          variant: "destructive",
-          title: "Error al enviar",
-          description: "Hubo un problema al conectar con la base de datos. Puedes intentar enviarlo por email manualmente.",
-        });
-      })
-      .finally(() => {
-        setIsSubmitting(false);
-      });
-  }
 
   return (
     <section id="contacto" className="py-20 md:py-32 bg-background">
@@ -207,7 +149,7 @@ export const Contact = () => {
               <div className="mb-8 text-center md:text-left">
                 <h4 className="text-xl md:text-3xl font-bold mb-3 md:mb-4 tracking-tight">Cuéntanos tu experiencia</h4>
                 <p className="text-sm md:text-base text-muted-foreground">
-                  Tu opinión será guardada en nuestro sistema para seguir mejorando día a día.
+                  Al enviar, se abrirá tu aplicación de correo para terminar el proceso.
                 </p>
               </div>
               
@@ -285,20 +227,20 @@ export const Contact = () => {
                             <div className="flex flex-col items-center justify-center border-2 border-dashed border-white/10 rounded-2xl p-4 md:p-6 bg-white/5 group-hover:bg-white/10 transition-colors">
                               {fileName ? (
                                 <div className="flex items-center gap-3 text-primary font-medium">
-                                  <CheckCircle2 className="w-5 h-5" />
+                                  <Send className="w-5 h-5" />
                                   <span className="text-xs md:text-sm truncate max-w-[150px] md:max-w-[200px]">{fileName}</span>
                                 </div>
                               ) : (
                                 <>
                                   <ImageIcon className="w-6 h-6 md:w-8 md:h-8 text-muted-foreground mb-2" />
-                                  <p className="text-[10px] md:text-xs text-muted-foreground font-medium">Click o arrastra para subir foto</p>
+                                  <p className="text-[10px] md:text-xs text-muted-foreground font-medium">Click para seleccionar (adjúntala luego en el mail)</p>
                                 </>
                               )}
                             </div>
                           </div>
                         </FormControl>
                         <FormDescription className="text-[10px] md:text-[11px] text-slate-400 italic leading-tight">
-                          No te preocupes por la privacidad: taparemos tus datos sensibles antes de publicar tu logro.
+                          El sistema te pedirá adjuntar esta foto manualmente al abrir tu correo electrónico.
                         </FormDescription>
                         <FormMessage />
                       </FormItem>
@@ -323,32 +265,13 @@ export const Contact = () => {
                     )}
                   />
 
-                  <div className="flex flex-col gap-3">
-                    <Button 
-                      type="submit" 
-                      disabled={isSubmitting}
-                      className="w-full h-12 md:h-14 bg-primary hover:bg-primary/90 text-white text-base md:text-lg font-bold rounded-xl shadow-lg shadow-primary/20 transition-all active:scale-[0.98] flex items-center justify-center gap-2"
-                    >
-                      {isSubmitting ? (
-                        <>
-                          <Loader2 className="w-5 h-5 animate-spin" />
-                          Enviando...
-                        </>
-                      ) : (
-                        "Enviar reseña"
-                      )}
-                    </Button>
-                    
-                    <Button 
-                      type="button"
-                      variant="outline"
-                      onClick={handleManualEmail}
-                      className="w-full border-primary text-primary hover:bg-primary/5 rounded-xl h-10 text-xs font-bold gap-2"
-                    >
-                      <Send className="w-3 h-3" />
-                      Terminar por email manual
-                    </Button>
-                  </div>
+                  <Button 
+                    type="submit" 
+                    className="w-full h-12 md:h-14 bg-primary hover:bg-primary/90 text-white text-base md:text-lg font-bold rounded-xl shadow-lg shadow-primary/20 transition-all active:scale-[0.98] flex items-center justify-center gap-2"
+                  >
+                    Enviar por correo
+                    <Send className="w-5 h-5" />
+                  </Button>
                 </form>
               </Form>
               
