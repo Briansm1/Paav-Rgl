@@ -44,18 +44,19 @@ export const Gallery = () => {
           }} 
           className="w-full"
         >
-          <CarouselContent className="-ml-4">
+          <CarouselContent className="-ml-2 md:-ml-4">
             {galleryImages.map((img, index) => (
-              <CarouselItem key={index} className="pl-4 basis-full sm:basis-1/2 lg:basis-1/3">
-                <div className="relative aspect-[4/5] rounded-[2rem] overflow-hidden group shadow-xl">
+              <CarouselItem key={index} className="pl-2 basis-1/3 sm:basis-1/2 lg:basis-1/3">
+                <div className="relative aspect-[8/10] rounded-xl md:rounded-[2rem] overflow-hidden shadow-xl transition-all duration-700 group">
                   <Image 
                     src={img.imageUrl} 
                     alt={img.description} 
                     fill 
-                    className="object-cover transition-all duration-500"
+                    className="object-cover"
                     data-ai-hint={img.imageHint}
                   />
-                  <div className="absolute inset-0 bg-black/10 group-hover:bg-transparent transition-colors duration-500"></div>
+                  {/* Capa de nitidez/brillo: Las imágenes son un poco más oscuras por defecto y se aclaran al estar activas (simulado con el flujo del carrusel) */}
+                  <div className="absolute inset-0 bg-black/20 group-hover:bg-transparent transition-colors duration-500"></div>
                 </div>
               </CarouselItem>
             ))}
