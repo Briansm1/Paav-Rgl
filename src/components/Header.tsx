@@ -60,7 +60,7 @@ export const Header = () => {
 
   const productLinks = [
     { name: 'Libros digitales', href: '/#productos-libros', icon: <Book className="w-4 h-4" /> },
-    { name: 'Cursos', href: '/#productos-cursos', icon: <Laptop className="w-4 h-4" /> },
+    { name: 'Cursos online', href: '/#productos-cursos', icon: <Laptop className="w-4 h-4" /> },
   ];
 
   const socialLinks = [
