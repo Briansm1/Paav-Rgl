@@ -1,6 +1,6 @@
 "use client";
 
-import React, { useState } from 'react';
+import React from 'react';
 import { Mail, MessageSquare, MapPin, Image as ImageIcon, Send } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
@@ -15,7 +15,6 @@ import {
   FormItem,
   FormLabel,
   FormMessage,
-  FormDescription,
 } from '@/components/ui/form';
 import {
   Select,
@@ -31,12 +30,10 @@ const formSchema = z.object({
   email: z.string().email({ message: 'Email inválido' }),
   rating: z.string().min(1, { message: 'La calificación es obligatoria' }),
   review: z.string().min(10, { message: 'Por favor escribe una reseña más detallada' }),
-  licenseImage: z.any().optional(),
 });
 
 export const Contact = () => {
   const { toast } = useToast();
-  const [fileName, setFileName] = useState<string | null>(null);
   
   const academyEmail = "pilotosasesalvolante@gmail.com";
   const whatsappUrl = "https://wa.me/5492966265603";
@@ -48,20 +45,10 @@ export const Contact = () => {
       email: '',
       rating: '5',
       review: '',
-      licenseImage: undefined,
     },
   });
 
-  const handleFileChange = (e: React.ChangeEvent<HTMLInputElement>) => {
-    const file = e.target.files?.[0];
-    if (file) {
-      setFileName(file.name);
-      form.setValue('licenseImage', file);
-    }
-  };
-
   const onSubmit = (values: z.infer<typeof formSchema>) => {
-    // Generar el cuerpo del mail con los datos del formulario
     const subject = encodeURIComponent(`Reseña de Estudiante: ${values.name}`);
     const body = encodeURIComponent(
       `¡Hola Pilotos! Aquí te envío mi reseña:\n\n` +
@@ -69,10 +56,9 @@ export const Contact = () => {
       `• Email: ${values.email}\n` +
       `• Calificación: ${values.rating} estrellas\n\n` +
       `Mi Experiencia:\n"${values.review}"\n\n` +
-      `[IMPORTANTE: Si tienes la foto de tu licencia, por favor ADJÚNTALA a este correo antes de enviar]`
+      `[IMPORTANTE: Por favor, ADJUNTA la foto de tu licencia a este correo antes de enviarlo si corresponde]`
     );
     
-    // Abrir cliente de mail
     window.location.href = `mailto:${academyEmail}?subject=${subject}&body=${body}`;
     
     toast({
@@ -149,7 +135,7 @@ export const Contact = () => {
               <div className="mb-8 text-center md:text-left">
                 <h4 className="text-xl md:text-3xl font-bold mb-3 md:mb-4 tracking-tight">Cuéntanos tu experiencia</h4>
                 <p className="text-sm md:text-base text-muted-foreground">
-                  Al enviar, se abrirá tu aplicación de correo para terminar el proceso.
+                  Al enviar, se abrirá tu aplicación de correo para completar el proceso.
                 </p>
               </div>
               
@@ -210,42 +196,16 @@ export const Contact = () => {
                     />
                   </div>
 
-                  <FormField
-                    control={form.control}
-                    name="licenseImage"
-                    render={() => (
-                      <FormItem className="space-y-3">
-                        <FormLabel>Foto de tu licencia (opcional)</FormLabel>
-                        <FormControl>
-                          <div className="relative group">
-                            <input
-                              type="file"
-                              accept="image/*"
-                              onChange={handleFileChange}
-                              className="absolute inset-0 w-full h-full opacity-0 cursor-pointer z-10"
-                            />
-                            <div className="flex flex-col items-center justify-center border-2 border-dashed border-white/10 rounded-2xl p-4 md:p-6 bg-white/5 group-hover:bg-white/10 transition-colors">
-                              {fileName ? (
-                                <div className="flex items-center gap-3 text-primary font-medium">
-                                  <Send className="w-5 h-5" />
-                                  <span className="text-xs md:text-sm truncate max-w-[150px] md:max-w-[200px]">{fileName}</span>
-                                </div>
-                              ) : (
-                                <>
-                                  <ImageIcon className="w-6 h-6 md:w-8 md:h-8 text-muted-foreground mb-2" />
-                                  <p className="text-[10px] md:text-xs text-muted-foreground font-medium">Click para seleccionar (adjúntala luego en el mail)</p>
-                                </>
-                              )}
-                            </div>
-                          </div>
-                        </FormControl>
-                        <FormDescription className="text-[10px] md:text-[11px] text-slate-400 italic leading-tight">
-                          El sistema te pedirá adjuntar esta foto manualmente al abrir tu correo electrónico.
-                        </FormDescription>
-                        <FormMessage />
-                      </FormItem>
-                    )}
-                  />
+                  {/* Reminder about the license photo attachment in email */}
+                  <div className="bg-primary/10 border border-primary/20 rounded-2xl p-5 md:p-6 mb-4">
+                    <div className="flex items-center gap-3 text-primary font-bold mb-2 text-sm md:text-base">
+                      <ImageIcon className="w-5 h-5 shrink-0" />
+                      <span>Recordatorio importante</span>
+                    </div>
+                    <p className="text-xs md:text-sm text-slate-300 leading-relaxed italic">
+                      Cuando se abra tu aplicación de correo, <strong>no olvides adjuntar la foto de tu licencia</strong> antes de darle a enviar.
+                    </p>
+                  </div>
 
                   <FormField
                     control={form.control}
