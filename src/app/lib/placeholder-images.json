@@ -87,39 +87,75 @@
     },
     {
       "id": "gallery-1",
-      "description": "Clase práctica en la calle",
-      "imageUrl": "https://picsum.photos/seed/gallery1/800/1000",
+      "description": "Clase práctica 1",
+      "imageUrl": "https://i.imgur.com/UvLVyl7.png",
       "imageHint": "driving lesson"
     },
     {
       "id": "gallery-2",
-      "description": "Instructor explicando maniobras",
-      "imageUrl": "https://picsum.photos/seed/gallery2/800/1000",
-      "imageHint": "driving instructor"
+      "description": "Clase práctica 2",
+      "imageUrl": "https://i.imgur.com/gVuIi2o.png",
+      "imageHint": "driving lesson"
     },
     {
       "id": "gallery-3",
-      "description": "Alumno estacionando",
-      "imageUrl": "https://picsum.photos/seed/gallery3/800/1000",
-      "imageHint": "parking car"
+      "description": "Clase práctica 3",
+      "imageUrl": "https://i.imgur.com/nbXcpsX.png",
+      "imageHint": "driving lesson"
     },
     {
       "id": "gallery-4",
-      "description": "Interior de vehículo de práctica",
-      "imageUrl": "https://picsum.photos/seed/gallery4/800/1000",
-      "imageHint": "car interior"
+      "description": "Clase práctica 4",
+      "imageUrl": "https://i.imgur.com/gVVjpsz.png",
+      "imageHint": "driving lesson"
     },
     {
       "id": "gallery-5",
-      "description": "Estudiante feliz con su licencia",
-      "imageUrl": "https://picsum.photos/seed/gallery5/800/1000",
-      "imageHint": "happy driver"
+      "description": "Clase práctica 5",
+      "imageUrl": "https://i.imgur.com/4sq930Q.png",
+      "imageHint": "driving lesson"
     },
     {
       "id": "gallery-6",
-      "description": "Circuito de examen práctico",
-      "imageUrl": "https://picsum.photos/seed/gallery6/800/1000",
-      "imageHint": "driving circuit"
+      "description": "Clase práctica 6",
+      "imageUrl": "https://i.imgur.com/ERybbkD.png",
+      "imageHint": "driving lesson"
+    },
+    {
+      "id": "gallery-7",
+      "description": "Clase práctica 7",
+      "imageUrl": "https://i.imgur.com/UODC85Z.png",
+      "imageHint": "driving lesson"
+    },
+    {
+      "id": "gallery-8",
+      "description": "Clase práctica 8",
+      "imageUrl": "https://i.imgur.com/1FU5oau.png",
+      "imageHint": "driving lesson"
+    },
+    {
+      "id": "gallery-9",
+      "description": "Clase práctica 9",
+      "imageUrl": "https://i.imgur.com/x8ywEAm.png",
+      "imageHint": "driving lesson"
+    },
+    {
+      "id": "gallery-10",
+      "description": "Clase práctica 10",
+      "imageUrl": "https://i.imgur.com/EuTHFjv.png",
+      "imageHint": "driving lesson"
+    },
+    {
+      "id": "gallery-11",
+      "description": "Clase práctica 11",
+      "imageUrl": "https://i.imgur.com/npGejgY.png",
+      "imageHint": "driving lesson"
+    },
+    {
+      "id": "gallery-12",
+      "description": "Clase práctica 12",
+      "imageUrl": "https://i.imgur.com/ab3sNZN.png",
+      "imageHint": "driving lesson"
     },
     {
       "id": "map-location",
