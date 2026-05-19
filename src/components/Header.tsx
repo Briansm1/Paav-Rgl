@@ -1,10 +1,9 @@
-
 "use client";
 
 import React, { useState, useEffect } from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
-import { Menu, X, ChevronDown, Instagram, Facebook, Youtube, Book, Laptop, GraduationCap, ChevronRight } from 'lucide-react';
+import { Menu, X, ChevronDown, Instagram, Facebook, Youtube, Book, Laptop, ChevronRight } from 'lucide-react';
 import { cn } from '@/lib/utils';
 import { PlaceHolderImages } from '@/app/lib/placeholder-images';
 import {
@@ -243,7 +242,10 @@ export const Header = () => {
                   key={product.name}
                   href={product.href}
                   className="text-lg font-bold text-slate-300 hover:text-primary transition-colors flex items-center gap-2"
-                  onClick={() => setMobileMenuOpen(false)}
+                  onClick={() => {
+                    setMobileMenuOpen(false);
+                    setMobileProductsOpen(false);
+                  }}
                 >
                   {product.icon}
                   {product.name}
