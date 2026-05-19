@@ -2,7 +2,6 @@
 import React from 'react';
 import Link from 'next/link';
 import { Button } from '@/components/ui/button';
-import { Medal } from 'lucide-react';
 import { cn } from '@/lib/utils';
 
 const plans = [
@@ -79,25 +78,6 @@ export const Pricing = () => {
               </div>
             </div>
           ))}
-        </div>
-        
-        <div className="mt-20 text-center max-w-4xl mx-auto px-4">
-          <div className="bg-secondary p-6 md:p-8 rounded-[2rem] border border-white/5 shadow-lg inline-flex flex-col items-center gap-6 text-center">
-            <div className="shrink-0 bg-primary/10 p-4 rounded-3xl">
-              <Medal className="w-10 h-10 text-primary" />
-            </div>
-            <div>
-              <h5 className="text-xl font-bold mb-1">¿Estás listo/a para convertirte en un verdadero as al volante?</h5>
-              <p className="text-muted-foreground text-sm md:text-base leading-relaxed max-w-2xl mx-auto">
-                Con nosotros vas a conocer las claves para dominar cualquier camino, bajo cualquier condición y así lograr pilotar las calles con seguridad real.
-              </p>
-            </div>
-            <Link href="#planes">
-              <Button size="lg" className="rounded-full bg-accent hover:bg-accent/90 text-white font-bold h-12 px-8">
-                Quiero ser un as
-              </Button>
-            </Link>
-          </div>
         </div>
       </div>
     </section>

@@ -6,11 +6,13 @@ import { PartnersTicker } from '@/components/PartnersTicker';
 import { Testimonials } from '@/components/Testimonials';
 import { Pricing } from '@/components/Pricing';
 import { Gallery } from '@/components/Gallery';
+import { CtaReady } from '@/components/CtaReady';
 import { Faq } from '@/components/Faq';
 import { Contact } from '@/components/Contact';
 import { Footer } from '@/components/Footer';
 import { ScrollReveal } from '@/components/ScrollReveal';
 import { WhatsAppButton } from '@/components/WhatsAppButton';
+import { AiAssistant } from '@/components/AiAssistant';
 
 export default function Home() {
   return (
@@ -30,16 +32,20 @@ export default function Home() {
         <Gallery />
       </ScrollReveal>
       <ScrollReveal delay={250}>
-        <PartnersTicker />
+        <CtaReady />
       </ScrollReveal>
       <ScrollReveal delay={300}>
-        <Faq />
+        <PartnersTicker />
       </ScrollReveal>
       <ScrollReveal delay={350}>
+        <Faq />
+      </ScrollReveal>
+      <ScrollReveal delay={400}>
         <Contact />
       </ScrollReveal>
       <Footer />
       <WhatsAppButton />
+      <AiAssistant />
     </main>
   );
 }
