@@ -94,37 +94,37 @@ export const PlaceHolderImages: ImagePlaceholder[] = [
   {
     "id": "gallery-1",
     "description": "Clase práctica en la calle",
-    "imageUrl": "https://picsum.photos/seed/gallery1/800/600",
+    "imageUrl": "https://picsum.photos/seed/gallery1/800/1000",
     "imageHint": "driving lesson"
   },
   {
     "id": "gallery-2",
     "description": "Instructor explicando maniobras",
-    "imageUrl": "https://picsum.photos/seed/gallery2/800/600",
+    "imageUrl": "https://picsum.photos/seed/gallery2/800/1000",
     "imageHint": "driving instructor"
   },
   {
     "id": "gallery-3",
     "description": "Alumno estacionando",
-    "imageUrl": "https://picsum.photos/seed/gallery3/800/600",
+    "imageUrl": "https://picsum.photos/seed/gallery3/800/1000",
     "imageHint": "parking car"
   },
   {
     "id": "gallery-4",
     "description": "Interior de vehículo de práctica",
-    "imageUrl": "https://picsum.photos/seed/gallery4/800/600",
+    "imageUrl": "https://picsum.photos/seed/gallery4/800/1000",
     "imageHint": "car interior"
   },
   {
     "id": "gallery-5",
     "description": "Estudiante feliz con su licencia",
-    "imageUrl": "https://picsum.photos/seed/gallery5/800/600",
+    "imageUrl": "https://picsum.photos/seed/gallery5/800/1000",
     "imageHint": "happy driver"
   },
   {
     "id": "gallery-6",
     "description": "Circuito de examen práctico",
-    "imageUrl": "https://picsum.photos/seed/gallery6/800/600",
+    "imageUrl": "https://picsum.photos/seed/gallery6/800/1000",
     "imageHint": "driving circuit"
   },
   {
