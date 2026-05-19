@@ -13,6 +13,7 @@ import {
   DropdownMenuTrigger,
 } from "@/components/ui/dropdown-menu";
 import { Button } from '@/components/ui/button';
+import { Badge } from '@/components/ui/badge';
 
 export const Header = () => {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -139,34 +140,35 @@ export const Header = () => {
 
         {/* Desktop Nav */}
         <nav className="hidden md:flex items-center gap-6 lg:gap-8">
-          {/* Primeros 4 links (Inicio, Metodología, Casos, Programas) */}
           {navLinks.slice(0, 4).map(renderNavLink)}
           
-          {/* Dropdown Productos - Después de Programas */}
           <DropdownMenu>
             <DropdownMenuTrigger className="flex items-center gap-1 text-sm lg:text-base font-bold text-slate-300 hover:text-white outline-none transition-colors">
               Productos
               <ChevronDown className="w-4 h-4" />
             </DropdownMenuTrigger>
-            <DropdownMenuContent className="bg-black border-white/10 text-white p-2 min-w-[180px]">
+            <DropdownMenuContent className="bg-black border-white/10 text-white p-2 min-w-[220px]">
               {productLinks.map((product) => (
-                <DropdownMenuItem key={product.name} asChild className="focus:bg-primary focus:text-white cursor-pointer">
+                <DropdownMenuItem key={product.name} asChild className="focus:bg-primary focus:text-white cursor-pointer group">
                   <Link 
                     href={product.href} 
-                    className="flex items-center gap-3 p-2 rounded-md transition-colors"
+                    className="flex items-center justify-between gap-3 p-2 rounded-md transition-colors w-full"
                   >
-                    <span className="text-white">{product.icon}</span>
-                    <span className="font-bold text-sm">{product.name}</span>
+                    <div className="flex items-center gap-3">
+                      <span className="text-white group-focus:text-white">{product.icon}</span>
+                      <span className="font-bold text-sm">{product.name}</span>
+                    </div>
+                    <Badge variant="outline" className="text-[8px] h-4 px-1.5 border-primary/50 text-primary uppercase font-black tracking-tighter shrink-0 group-focus:border-white/50 group-focus:text-white">
+                      Próximamente
+                    </Badge>
                   </Link>
                 </DropdownMenuItem>
               ))}
             </DropdownMenuContent>
           </DropdownMenu>
 
-          {/* Resto de links (Preguntas frecuentes) */}
           {navLinks.slice(4).map(renderNavLink)}
 
-          {/* Dropdown Redes */}
           <DropdownMenu>
             <DropdownMenuTrigger className="flex items-center gap-1 text-sm lg:text-base font-bold text-slate-300 hover:text-white outline-none transition-colors">
               Redes
@@ -205,8 +207,7 @@ export const Header = () => {
         "fixed inset-0 bg-black z-40 flex flex-col items-center justify-center transition-all duration-500 md:hidden overflow-y-auto pt-16",
         mobileMenuOpen ? "opacity-100 visible" : "opacity-0 invisible pointer-events-none"
       )}>
-        <nav className="flex flex-col items-center gap-4 p-6 w-full max-w-sm text-center">
-          {/* Primeros 4 links (Inicio, Metodología, Casos, Programas) */}
+        <nav className="flex flex-col items-center gap-4 p-6 w-full max-sm text-center">
           {navLinks.slice(0, 4).map((link) => (
             <Link
               key={link.name}
@@ -224,7 +225,6 @@ export const Header = () => {
             </Link>
           ))}
           
-          {/* Submenú Productos - Después de Programas */}
           <div className="w-full flex flex-col items-center py-2">
             <button 
               onClick={() => setMobileProductsOpen(!mobileProductsOpen)}
@@ -234,27 +234,30 @@ export const Header = () => {
               <ChevronDown className={cn("w-5 h-5 transition-transform", mobileProductsOpen && "rotate-180")} />
             </button>
             <div className={cn(
-              "flex flex-col items-center gap-3 overflow-hidden transition-all duration-300 w-full bg-white/5 rounded-2xl",
-              mobileProductsOpen ? "max-h-48 py-4 mt-2 opacity-100" : "max-h-0 py-0 opacity-0"
+              "flex flex-col items-center gap-5 overflow-hidden transition-all duration-300 w-full bg-white/5 rounded-2xl",
+              mobileProductsOpen ? "max-h-72 py-6 mt-2 opacity-100" : "max-h-0 py-0 opacity-0"
             )}>
               {productLinks.map((product) => (
-                <Link
-                  key={product.name}
-                  href={product.href}
-                  className="text-lg font-bold text-slate-300 hover:text-primary transition-colors flex items-center gap-2"
-                  onClick={() => {
-                    setMobileMenuOpen(false);
-                    setMobileProductsOpen(false);
-                  }}
-                >
-                  {product.icon}
-                  {product.name}
-                </Link>
+                <div key={product.name} className="flex flex-col items-center gap-1.5">
+                  <Link
+                    href={product.href}
+                    className="text-lg font-bold text-slate-300 hover:text-primary transition-colors flex items-center gap-2"
+                    onClick={() => {
+                      setMobileMenuOpen(false);
+                      setMobileProductsOpen(false);
+                    }}
+                  >
+                    {product.icon}
+                    {product.name}
+                  </Link>
+                  <Badge variant="outline" className="text-[10px] h-5 px-2 border-primary/50 text-primary uppercase font-black">
+                    Próximamente
+                  </Badge>
+                </div>
               ))}
             </div>
           </div>
 
-          {/* Resto de links (Preguntas frecuentes) */}
           {navLinks.slice(4).map((link) => (
             <Link
               key={link.name}
