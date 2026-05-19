@@ -25,7 +25,7 @@ export const Gallery = () => {
   }, [api]);
 
   return (
-    <section id="galeria" className="py-20 bg-background overflow-hidden">
+    <section id="galeria" className="pt-8 pb-20 md:pt-12 bg-background overflow-hidden">
       <div className="container mx-auto px-4 mb-12 text-center">
         <span className="inline-block px-4 py-1.5 mb-6 text-xs font-bold tracking-widest text-primary uppercase bg-primary/10 rounded-full">
           Momentos Pilotos
@@ -55,7 +55,6 @@ export const Gallery = () => {
                     className="object-cover"
                     data-ai-hint={img.imageHint}
                   />
-                  {/* Capa de nitidez/brillo: Las imágenes son un poco más oscuras por defecto y se aclaran al estar activas (simulado con el flujo del carrusel) */}
                   <div className="absolute inset-0 bg-black/20 group-hover:bg-transparent transition-colors duration-500"></div>
                 </div>
               </CarouselItem>
