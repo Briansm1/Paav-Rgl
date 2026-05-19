@@ -5,6 +5,7 @@ import { Services } from '@/components/Services';
 import { PartnersTicker } from '@/components/PartnersTicker';
 import { Testimonials } from '@/components/Testimonials';
 import { Pricing } from '@/components/Pricing';
+import { Gallery } from '@/components/Gallery';
 import { Faq } from '@/components/Faq';
 import { Contact } from '@/components/Contact';
 import { Footer } from '@/components/Footer';
@@ -24,6 +25,9 @@ export default function Home() {
       </ScrollReveal>
       <ScrollReveal delay={200}>
         <Pricing />
+      </ScrollReveal>
+      <ScrollReveal delay={225}>
+        <Gallery />
       </ScrollReveal>
       <ScrollReveal delay={250}>
         <PartnersTicker />
