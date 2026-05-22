@@ -4,7 +4,7 @@ import Link from 'next/link';
 import { Header } from '@/components/Header';
 import { Footer } from '@/components/Footer';
 import { Button } from '@/components/ui/button';
-import { ArrowLeft, UserCheck, Target, Clock, Gift, Check } from 'lucide-react';
+import { ArrowLeft, Target, Clock, Gift, Check } from 'lucide-react';
 
 const detailedPlans = [
   {
@@ -122,7 +122,7 @@ export default function PlanExpertoPage() {
                     {plan.targetAudience.map((item, i) => (
                       <div key={i} className="flex items-start gap-3 group">
                         <div className="mt-1 bg-primary/10 p-1 rounded-full shrink-0">
-                          <UserCheck className="w-3 h-3 text-primary" />
+                          <Check className="w-3 h-3 text-primary" />
                         </div>
                         <span className="text-sm text-foreground/90 font-medium leading-tight">{item}</span>
                       </div>

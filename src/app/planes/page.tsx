@@ -4,7 +4,7 @@ import Link from 'next/link';
 import { Header } from '@/components/Header';
 import { Footer } from '@/components/Footer';
 import { Button } from '@/components/ui/button';
-import { Check, ArrowLeft, UserCheck, Target, Clock, Gift, ShieldCheck } from 'lucide-react';
+import { Check, ArrowLeft, Target, Clock, Gift, ShieldCheck } from 'lucide-react';
 import { cn } from '@/lib/utils';
 
 const programDetails = {
@@ -151,7 +151,6 @@ export default function PlanesPage() {
               <div className="flex flex-col gap-8">
                 <div className="bg-black/20 p-6 rounded-[2rem] border border-white/5">
                   <h3 className="text-lg font-bold mb-4 flex items-center justify-center gap-2 text-foreground text-center">
-                    <UserCheck className="w-5 h-5 text-primary" />
                     ¿Para quién es?
                   </h3>
                   <div className="space-y-3">
