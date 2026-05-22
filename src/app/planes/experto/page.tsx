@@ -164,7 +164,6 @@ export default function PlanExpertoPage() {
 
                 <div className="w-full bg-accent/10 p-6 md:p-8 rounded-[2.5rem] border-2 border-accent/40 shadow-lg shadow-accent/5">
                   <h3 className="text-xl font-bold mb-8 flex items-center justify-center gap-3 text-accent text-center">
-                    <Gift className="w-6 h-6" />
                     Bonos de regalo
                   </h3>
                   <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">

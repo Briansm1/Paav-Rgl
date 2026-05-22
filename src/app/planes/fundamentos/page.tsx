@@ -170,7 +170,7 @@ export default function PlanFundamentosPage() {
                     ¿Qué vas a lograr?
                   </h3>
                   <div className="space-y-3">
-                    {programDetails.outcomes.map((item, i) => (
+                    {programDetails.targetAudience.map((item, i) => (
                       <div key={i} className="flex items-start gap-3">
                         <div className="mt-1 bg-accent/10 p-1 rounded-full shrink-0">
                           <Check className="w-3 h-3 text-accent" />
@@ -199,7 +199,6 @@ export default function PlanFundamentosPage() {
 
                 <div className="bg-accent/10 p-6 rounded-[2.5rem] border-2 border-accent/40 shadow-lg shadow-accent/5">
                   <h3 className="text-xl font-bold mb-8 flex items-center justify-center gap-3 text-accent text-center">
-                    <Gift className="w-6 h-6" />
                     Bonos de regalo
                   </h3>
                   <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
