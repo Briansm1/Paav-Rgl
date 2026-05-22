@@ -87,11 +87,11 @@ export const Contact = () => {
           </p>
         </div>
 
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 md:gap-20 items-stretch">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 md:gap-20 items-start">
           <div className="flex flex-col gap-10">
-            <div className="bg-secondary p-6 md:p-12 rounded-[2.5rem] shadow-xl border border-white/5 h-full flex flex-col justify-center">
+            <div className="bg-secondary p-8 md:p-10 lg:p-12 rounded-[2.5rem] shadow-xl border border-white/5">
               <h4 className="text-xl md:text-2xl font-bold mb-8 md:mb-10 tracking-tight text-center md:text-left">Canales de atención</h4>
-              <div className="space-y-8 md:space-y-10">
+              <div className="space-y-6 md:space-y-8">
                 <div className="flex items-start gap-4 md:gap-6">
                   <div className="bg-white/5 p-3 md:p-4 rounded-[1.2rem] shadow-sm shrink-0">
                     <MapPin className="w-5 h-5 md:w-6 md:h-6 text-primary" />
