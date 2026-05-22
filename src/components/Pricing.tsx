@@ -1,5 +1,7 @@
 
-import React from 'react';
+"use client";
+
+import React, { useState, useEffect } from 'react';
 import Link from 'next/link';
 import { Button } from '@/components/ui/button';
 import { cn } from '@/lib/utils';
@@ -28,7 +30,26 @@ const plans = [
   }
 ];
 
+const fontStyles = [
+  "italic font-serif",
+  "font-mono tracking-tighter uppercase",
+  "font-black italic",
+  "font-light italic tracking-tight",
+  "font-bold underline decoration-primary/30"
+];
+
 export const Pricing = () => {
+  const [styleIndex, setStyleIndex] = useState(0);
+  const [isMounted, setIsMounted] = useState(false);
+
+  useEffect(() => {
+    setIsMounted(true);
+    const interval = setInterval(() => {
+      setStyleIndex((prev) => (prev + 1) % fontStyles.length);
+    }, 2500);
+    return () => clearInterval(interval);
+  }, []);
+
   return (
     <section id="planes" className="relative pt-20 pb-8 md:pt-32 md:pb-12 bg-background overflow-hidden">
       {/* Top and Bottom fades */}
@@ -41,7 +62,16 @@ export const Pricing = () => {
             TU INVERSIÓN
           </span>
           <h2 className="text-4xl md:text-6xl font-bold font-headline mb-6 tracking-tight text-foreground text-center">
-            Planes pensados para alcanzar tu <span className="text-primary italic">mejor versión al volante</span>
+            Planes pensados para alcanzar tu mejor{" "}
+            <span 
+              className={cn(
+                "text-primary inline-block transition-all duration-700 min-w-[120px] md:min-w-[180px]",
+                isMounted ? fontStyles[styleIndex] : "italic"
+              )}
+            >
+              versión
+            </span>{" "}
+            al volante
           </h2>
           <p className="text-lg md:text-xl text-muted-foreground leading-relaxed">
             Al elegirnos tenés transparencia al 100% y calidad asegurada
