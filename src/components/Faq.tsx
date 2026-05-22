@@ -1,4 +1,3 @@
-
 "use client";
 
 import React from 'react';
@@ -28,7 +27,7 @@ const faqs = [
   },
   {
     question: "¿Es normal que tenga miedo a manejar?",
-    answer: "Es totalmente normal. Nuestra metodología se enfoca precisamente en la 'Mentalidad de piloto', ayudándote a gestionar los miedos y ganar confianza progresivamente en un entorno seguro."
+    answer: "Es totalmente normal. Nuestra metodología se enfoca precisamente en la mentalidad de piloto, ayudándote a gestionar los miedos y ganar confianza progresivamente en un entorno seguro."
   },
   {
     question: "¿Alquilan el auto para poder rendir el examen práctico?",
