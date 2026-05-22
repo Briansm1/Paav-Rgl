@@ -12,7 +12,7 @@ export const Footer = () => {
       <div className="container mx-auto px-4">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-12 mb-12 text-center">
           <div className="flex flex-col items-center space-y-6">
-            <Link href="#inicio" className="flex items-center gap-2">
+            <Link href="/#inicio" className="flex items-center gap-2">
               {logoImg ? (
                 <div className="relative h-16 w-64 md:h-20 md:w-80">
                   <Image 
@@ -40,7 +40,7 @@ export const Footer = () => {
                 className="text-slate-400 hover:text-primary transition-colors"
                 aria-label="Instagram"
               >
-                <Instagram className="w-5 h-5" />
+                <span className="w-5 h-5"><Instagram /></span>
               </a>
               <a 
                 href="https://www.facebook.com/profile.php?id=61576666433315" 
@@ -49,7 +49,7 @@ export const Footer = () => {
                 className="text-slate-400 hover:text-primary transition-colors"
                 aria-label="Facebook"
               >
-                <Facebook className="w-5 h-5" />
+                <span className="w-5 h-5"><Facebook /></span>
               </a>
               <a 
                 href="https://www.youtube.com/@pilotosasesalvolante" 
@@ -58,7 +58,7 @@ export const Footer = () => {
                 className="text-slate-400 hover:text-primary transition-colors"
                 aria-label="YouTube"
               >
-                <Youtube className="w-5 h-5" />
+                <span className="w-5 h-5"><Youtube /></span>
               </a>
               <a 
                 href="https://www.tiktok.com/@pilotos_asesalvolante" 
@@ -81,10 +81,10 @@ export const Footer = () => {
           <div className="flex flex-col items-center">
             <h4 className="text-lg font-bold mb-6">Enlaces Rápidos</h4>
             <ul className="space-y-4">
-              <li><Link href="#inicio" className="text-slate-400 hover:text-white transition-colors">Inicio</Link></li>
-              <li><Link href="#servicios" className="text-slate-400 hover:text-white transition-colors">Nuestros métodos</Link></li>
-              <li><Link href="#testimonios" className="text-slate-400 hover:text-white transition-colors">Referencias</Link></li>
-              <li><Link href="#planes" className="text-slate-400 hover:text-white transition-colors">Planes</Link></li>
+              <li><Link href="/#inicio" className="text-slate-400 hover:text-white transition-colors">Inicio</Link></li>
+              <li><Link href="/#servicios" className="text-slate-400 hover:text-white transition-colors">Nuestros métodos</Link></li>
+              <li><Link href="/#testimonios" className="text-slate-400 hover:text-white transition-colors">Referencias</Link></li>
+              <li><Link href="/#planes" className="text-slate-400 hover:text-white transition-colors">Planes</Link></li>
             </ul>
           </div>
 
