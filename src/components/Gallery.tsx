@@ -33,7 +33,7 @@ export const Gallery = () => {
         <Carousel 
           plugins={[
             AutoScroll({ 
-              speed: 1, 
+              speed: 2, 
               stopOnInteraction: false, 
               stopOnMouseEnter: false 
             })
