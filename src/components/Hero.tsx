@@ -26,12 +26,12 @@ export const Hero = () => {
         {/* Gradient overlays for readability */}
         <div className="absolute inset-0 bg-gradient-to-b md:bg-gradient-to-r from-black/70 via-black/30 to-transparent"></div>
         
-        {/* Bottom transition fade - Starts precisely after the yellow items */}
-        <div className="absolute bottom-0 left-0 right-0 h-8 md:h-12 bg-gradient-to-t from-background to-transparent z-10"></div>
+        {/* Bottom transition fade - Large and smooth */}
+        <div className="absolute bottom-0 left-0 right-0 h-32 bg-gradient-to-t from-background to-transparent z-10"></div>
       </div>
 
       <div className="w-full max-w-[1440px] mx-auto px-4 md:px-6 relative z-20 flex-1 flex flex-col justify-between h-full">
-        {/* Content Container - Positioned higher based on previous user requests */}
+        {/* Content Container */}
         <div className="max-w-4xl text-left flex flex-col items-start gap-4 md:gap-8 mt-1 md:mt-2">
           <div className="inline-flex items-center gap-2 bg-white/10 backdrop-blur-md border border-white/20 rounded-full px-4 py-1.5 animate-in fade-in slide-in-from-bottom-4 duration-700">
             <span className="text-[10px] md:text-xs font-bold text-white uppercase tracking-widest">La elección N°1 de la región</span>
@@ -57,7 +57,7 @@ export const Hero = () => {
           </div>
         </div>
         
-        {/* Stats Container - pb-28 on mobile to avoid WhatsApp button overlap */}
+        {/* Stats Container */}
         <div className="flex items-center justify-start gap-6 sm:gap-10 md:gap-14 animate-in fade-in duration-1000 delay-500 pt-6 pb-28 md:pb-12">
           <div className="flex flex-col items-center text-center min-w-[70px] md:min-w-[100px]">
             <p className="text-xl sm:text-2xl md:text-3xl font-bold text-gold leading-none">Equipo</p>

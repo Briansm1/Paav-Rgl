@@ -6,8 +6,12 @@ import { Medal } from 'lucide-react';
 
 export const CtaReady = () => {
   return (
-    <section className="py-20 bg-background">
-      <div className="container mx-auto px-4 text-center max-w-4xl">
+    <section className="relative py-20 bg-background overflow-hidden">
+      {/* Top and Bottom fades */}
+      <div className="absolute top-0 left-0 right-0 h-32 bg-gradient-to-b from-background via-background/50 to-transparent pointer-events-none z-10"></div>
+      <div className="absolute bottom-0 left-0 right-0 h-32 bg-gradient-to-t from-background via-background/50 to-transparent pointer-events-none z-10"></div>
+
+      <div className="container mx-auto px-4 text-center max-w-4xl relative z-10">
         <div className="bg-secondary p-8 md:p-12 rounded-[2.5rem] border border-white/5 shadow-2xl inline-flex flex-col items-center gap-8 text-center transition-all hover:scale-[1.01]">
           <div className="shrink-0 bg-primary/10 p-5 rounded-3xl shadow-inner">
             <Medal className="w-12 h-12 text-primary" />

@@ -26,8 +26,12 @@ export const Gallery = () => {
   }, [api]);
 
   return (
-    <section id="galeria" className="pt-8 pb-20 md:pt-12 bg-background overflow-hidden">
-      <div className="container mx-auto px-4 mb-12 text-center">
+    <section id="galeria" className="relative pt-8 pb-20 md:pt-12 bg-background overflow-hidden">
+      {/* Top and Bottom fades */}
+      <div className="absolute top-0 left-0 right-0 h-32 bg-gradient-to-b from-background via-background/50 to-transparent pointer-events-none z-10"></div>
+      <div className="absolute bottom-0 left-0 right-0 h-32 bg-gradient-to-t from-background via-background/50 to-transparent pointer-events-none z-10"></div>
+
+      <div className="container mx-auto px-4 mb-12 text-center relative z-10">
         <span className="inline-block px-4 py-1.5 mb-6 text-xs font-bold tracking-widest text-primary uppercase bg-primary/10 rounded-full">
           Momentos Pilotos
         </span>
@@ -36,7 +40,7 @@ export const Gallery = () => {
         </h2>
       </div>
 
-      <div className="max-w-7xl mx-auto px-4">
+      <div className="max-w-7xl mx-auto px-4 relative z-10">
         <Carousel 
           setApi={setApi}
           opts={{ 

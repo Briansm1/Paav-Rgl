@@ -1,3 +1,4 @@
+
 import React from 'react';
 import Link from 'next/link';
 import { Button } from '@/components/ui/button';
@@ -29,8 +30,12 @@ const plans = [
 
 export const Pricing = () => {
   return (
-    <section id="planes" className="pt-20 pb-8 md:pt-32 md:pb-12 bg-background">
-      <div className="container mx-auto px-4">
+    <section id="planes" className="relative pt-20 pb-8 md:pt-32 md:pb-12 bg-background overflow-hidden">
+      {/* Top and Bottom fades */}
+      <div className="absolute top-0 left-0 right-0 h-32 bg-gradient-to-b from-background via-background/50 to-transparent pointer-events-none z-10"></div>
+      <div className="absolute bottom-0 left-0 right-0 h-32 bg-gradient-to-t from-background via-background/50 to-transparent pointer-events-none z-10"></div>
+
+      <div className="container mx-auto px-4 relative z-10">
         <div className="text-center max-w-3xl mx-auto mb-16">
           <span className="inline-block px-4 py-1.5 mb-6 text-xs font-bold tracking-widest text-primary uppercase bg-primary/10 rounded-full border border-primary/20">
             TU INVERSIÓN

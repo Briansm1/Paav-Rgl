@@ -10,16 +10,17 @@ export const PartnersTicker = () => {
 
   return (
     <section className="relative py-16 bg-black overflow-hidden">
-      {/* Subtle fade to bridge with Pricing or CtaReady above */}
-      <div className="absolute top-0 left-0 right-0 h-16 bg-gradient-to-b from-background to-transparent pointer-events-none"></div>
+      {/* Subtle fades to bridge with sections around it */}
+      <div className="absolute top-0 left-0 right-0 h-32 bg-gradient-to-b from-background via-background/50 to-transparent pointer-events-none z-10"></div>
+      <div className="absolute bottom-0 left-0 right-0 h-32 bg-gradient-to-t from-background via-background/50 to-transparent pointer-events-none z-10"></div>
       
-      <div className="container mx-auto px-4 mb-10 relative z-10">
+      <div className="container mx-auto px-4 mb-10 relative z-20">
         <h4 className="text-center text-[10px] md:text-xs font-bold text-slate-500 uppercase tracking-[0.3em]">
           Comercios amigos y socios estratégicos
         </h4>
       </div>
       
-      <div className="container mx-auto px-4 relative z-10">
+      <div className="container mx-auto px-4 relative z-20">
         <div className="flex flex-row justify-center items-center gap-8 md:gap-24">
           {partners.map((partner, index) => (
             <div 
@@ -39,9 +40,6 @@ export const PartnersTicker = () => {
           ))}
         </div>
       </div>
-
-      {/* Subtle fade to bridge with FAQ below */}
-      <div className="absolute bottom-0 left-0 right-0 h-16 bg-gradient-to-t from-secondary/10 to-transparent pointer-events-none"></div>
     </section>
   );
 };

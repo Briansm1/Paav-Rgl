@@ -25,7 +25,7 @@ const testimonials = [
   },
   {
     name: 'Candelaria Pereyra',
-    content: '¡Holi! La verdad, súper conforme con las clases. Me sorprendió haber aprendido un montón en poco tiempo y el hecho de que después practiqué con autos reales y no conos me dejó muy sorprendida. Brian es súper buena onda: explica re bien, es claro, paciente ante todo, súper seguro y divertido. ¡10/10!',
+    content: '¡Holi! La verdad, súper conforme con las clases. Mi sorprendió haber aprendido un montón en poco tiempo y el hecho de que después practiqué con autos reales y no conos me dejó muy sorprendida. Brian es súper buena onda: explica re bien, es claro, paciente ante todo, súper seguro y divertido. ¡10/10!',
     headerImageId: 'achievement-candelaria',
     role: 'Egresada'
   },
@@ -83,8 +83,8 @@ export const Testimonials = () => {
     <section id="testimonios" className="relative py-24 md:py-36 overflow-hidden">
       {/* Background with soft transitions */}
       <div className="absolute inset-0 bg-secondary/30 z-0">
-        <div className="absolute top-0 left-0 right-0 h-32 bg-gradient-to-b from-background to-transparent"></div>
-        <div className="absolute bottom-0 left-0 right-0 h-32 bg-gradient-to-t from-background to-transparent"></div>
+        <div className="absolute top-0 left-0 right-0 h-48 bg-gradient-to-b from-background via-background/60 to-transparent"></div>
+        <div className="absolute bottom-0 left-0 right-0 h-48 bg-gradient-to-t from-background via-background/60 to-transparent"></div>
       </div>
 
       <div className="container mx-auto px-4 relative z-10">
@@ -112,7 +112,7 @@ export const Testimonials = () => {
                 
                 return (
                   <CarouselItem key={index} className="pl-4 basis-full sm:basis-1/2 lg:basis-1/3 py-4">
-                    <Card className="h-full border-none shadow-lg rounded-[2.5rem] bg-card border border-white/5 relative overflow-hidden flex flex-col group hover:scale-[1.01] transition-all duration-300">
+                    <Card className="h-full border-none shadow-lg rounded-[2.5rem] bg-card border border-white/5 relative overflow-hidden flex flex-col group transition-all duration-300">
                       {headerImg && (
                         <div className="relative aspect-[16/10] w-full overflow-hidden border-b border-white/5">
                           <Image 

@@ -53,8 +53,9 @@ const services = [
 export const Services = () => {
   return (
     <section id="servicios" className="relative py-24 md:py-36 bg-background">
-      {/* Bottom fade to bridge the gap with the next section if it has a different bg */}
-      <div className="absolute bottom-0 left-0 right-0 h-32 bg-gradient-to-t from-secondary/5 to-transparent pointer-events-none"></div>
+      {/* Top and Bottom fades */}
+      <div className="absolute top-0 left-0 right-0 h-32 bg-gradient-to-b from-background via-background/50 to-transparent pointer-events-none z-10"></div>
+      <div className="absolute bottom-0 left-0 right-0 h-32 bg-gradient-to-t from-background via-background/50 to-transparent pointer-events-none z-10"></div>
       
       <div className="container mx-auto px-4 md:px-6 relative z-10">
         <div className="text-center max-w-4xl mx-auto mb-16 md:mb-24">
@@ -90,7 +91,7 @@ export const Services = () => {
                           fill 
                           priority={index < 3}
                           sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
-                          className="object-cover group-hover:scale-110 transition-transform duration-700"
+                          className="object-cover transition-transform duration-700"
                           data-ai-hint={img?.imageHint}
                         />
                         <div className="absolute inset-0 bg-gradient-to-t from-black/90 to-transparent"></div>

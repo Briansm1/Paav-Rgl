@@ -1,3 +1,4 @@
+
 "use client";
 
 import React from 'react';
@@ -68,8 +69,12 @@ export const Contact = () => {
   };
 
   return (
-    <section id="contacto" className="py-20 md:py-32 bg-background">
-      <div className="container mx-auto px-4">
+    <section id="contacto" className="relative py-20 md:py-32 bg-background overflow-hidden">
+      {/* Top and Bottom fades */}
+      <div className="absolute top-0 left-0 right-0 h-32 bg-gradient-to-b from-background via-background/50 to-transparent pointer-events-none z-10"></div>
+      <div className="absolute bottom-0 left-0 right-0 h-32 bg-gradient-to-t from-background via-background/50 to-transparent pointer-events-none z-10"></div>
+
+      <div className="container mx-auto px-4 relative z-20">
         <div className="text-center max-w-3xl mx-auto mb-16 md:mb-24">
           <span className="inline-block px-4 py-1.5 mb-6 text-xs font-bold tracking-widest text-primary uppercase bg-primary/10 rounded-full">
             Nuestra Comunidad
