@@ -31,11 +31,10 @@ const plans = [
 ];
 
 const fontStyles = [
-  "italic font-serif",
-  "font-mono tracking-tighter uppercase",
-  "font-black italic",
-  "font-light italic tracking-tight",
-  "font-bold underline decoration-primary/30"
+  "italic font-serif", // Cursiva
+  "font-body font-bold", // Poppins
+  "font-montserrat font-black uppercase tracking-widest", // Montserrat
+  "font-code font-medium tracking-tighter" // Mono
 ];
 
 export const Pricing = () => {
