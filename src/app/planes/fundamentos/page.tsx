@@ -216,8 +216,8 @@ export default function PlanFundamentosPage() {
                       >
                         <div className="relative">
                           <span className="absolute inset-0 rounded-full bg-accent animate-ping opacity-75"></span>
-                          <div className="relative w-10 h-10 rounded-full bg-accent text-white flex items-center justify-center font-bold text-lg">
-                            {i + 1}
+                          <div className="relative w-10 h-10 rounded-full bg-accent text-white flex items-center justify-center group-hover:scale-110 transition-transform shadow-lg shadow-accent/20">
+                            <Gift className="w-5 h-5" />
                           </div>
                         </div>
                         <span className="text-xs md:text-sm text-foreground/90 font-bold leading-snug">

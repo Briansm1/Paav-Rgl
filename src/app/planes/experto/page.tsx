@@ -24,7 +24,7 @@ const detailedPlans = [
       'Mayor seguridad en puntos complejos de la conducción',
       'Corrección personalizada',
       'Confianza inmediata en aquello que hoy te genera duda',
-      'Salir con sensación de dominio y control del vehículo'
+      'Salir con sensación de dominio and control del vehículo'
     ],
     features: [
       'Vehículo para las clases prácticas',
@@ -172,8 +172,8 @@ export default function PlanExpertoPage() {
                       <div key={i} className="flex flex-col items-center text-center gap-3 group">
                         <div className="relative">
                           <span className="absolute inset-0 rounded-full bg-accent animate-ping opacity-75"></span>
-                          <div className="relative w-10 h-10 rounded-full bg-accent text-white flex items-center justify-center font-bold text-lg group-hover:scale-110 transition-transform">
-                            {i + 1}
+                          <div className="relative w-10 h-10 rounded-full bg-accent text-white flex items-center justify-center group-hover:scale-110 transition-transform shadow-lg shadow-accent/20">
+                            <Gift className="w-5 h-5" />
                           </div>
                         </div>
                         <span className="text-xs md:text-sm text-foreground/90 font-bold leading-snug">

@@ -210,17 +210,17 @@ export default function PlanSeguridadAvanzadaPage() {
                       <div 
                         key={i} 
                         className={cn(
-                          "flex flex-col items-center text-center gap-2",
+                          "flex flex-col items-center text-center gap-3 group",
                           i === programDetails.bonuses.length - 1 && i % 2 === 0 && "sm:col-span-2"
                         )}
                       >
                         <div className="relative">
                           <span className="absolute inset-0 rounded-full bg-accent animate-ping opacity-75"></span>
-                          <div className="relative w-7 h-7 rounded-full bg-accent text-white flex items-center justify-center font-bold text-sm">
-                            {i + 1}
+                          <div className="relative w-10 h-10 rounded-full bg-accent text-white flex items-center justify-center group-hover:scale-110 transition-transform shadow-lg shadow-accent/20">
+                            <Gift className="w-5 h-5" />
                           </div>
                         </div>
-                        <span className="text-xs text-foreground/90 font-bold leading-tight">
+                        <span className="text-xs md:text-sm text-foreground/90 font-bold leading-snug">
                           {bono}
                         </span>
                       </div>

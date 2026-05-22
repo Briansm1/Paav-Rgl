@@ -1,3 +1,4 @@
+
 import React from 'react';
 import Link from 'next/link';
 import { Header } from '@/components/Header';
@@ -215,8 +216,8 @@ export default function PlanesPage() {
                       >
                         <div className="relative">
                           <span className="absolute inset-0 rounded-full bg-accent animate-ping opacity-75"></span>
-                          <div className="relative w-7 h-7 rounded-full bg-accent text-white flex items-center justify-center font-bold text-sm">
-                            {i + 1}
+                          <div className="relative w-8 h-8 rounded-full bg-accent text-white flex items-center justify-center shadow-lg shadow-accent/20">
+                            <Gift className="w-4 h-4" />
                           </div>
                         </div>
                         <span className="text-xs text-foreground/90 font-bold leading-tight">
