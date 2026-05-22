@@ -52,8 +52,11 @@ const services = [
 
 export const Services = () => {
   return (
-    <section id="servicios" className="py-20 md:py-32 bg-background">
-      <div className="container mx-auto px-4 md:px-6">
+    <section id="servicios" className="relative py-24 md:py-36 bg-background">
+      {/* Bottom fade to bridge the gap with the next section if it has a different bg */}
+      <div className="absolute bottom-0 left-0 right-0 h-32 bg-gradient-to-t from-secondary/5 to-transparent pointer-events-none"></div>
+      
+      <div className="container mx-auto px-4 md:px-6 relative z-10">
         <div className="text-center max-w-4xl mx-auto mb-16 md:mb-24">
           <span className="inline-block px-4 py-1.5 mb-6 text-xs font-bold tracking-widest text-primary uppercase bg-primary/10 rounded-full">
             ¿Qué podemos ofrecerte?

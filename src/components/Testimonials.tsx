@@ -80,9 +80,15 @@ export const Testimonials = () => {
   }, [api]);
 
   return (
-    <section id="testimonios" className="py-20 md:py-32 bg-secondary/30 overflow-hidden">
-      <div className="container mx-auto px-4">
-        <div className="text-center mb-12 md:mb-16">
+    <section id="testimonios" className="relative py-24 md:py-36 overflow-hidden">
+      {/* Background with soft transitions */}
+      <div className="absolute inset-0 bg-secondary/30 z-0">
+        <div className="absolute top-0 left-0 right-0 h-32 bg-gradient-to-b from-background to-transparent"></div>
+        <div className="absolute bottom-0 left-0 right-0 h-32 bg-gradient-to-t from-background to-transparent"></div>
+      </div>
+
+      <div className="container mx-auto px-4 relative z-10">
+        <div className="text-center mb-16 md:mb-20">
           <span className="inline-block px-4 py-1.5 mb-6 text-xs font-bold tracking-widest text-accent uppercase bg-accent/10 rounded-full border border-accent/20">
             Casos de éxito
           </span>
