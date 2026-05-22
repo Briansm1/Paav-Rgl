@@ -214,12 +214,7 @@ export default function PlanesPage() {
                           i === programDetails.bonuses.length - 1 && i % 2 === 0 && "sm:col-span-2"
                         )}
                       >
-                        <div className="relative">
-                          <span className="absolute inset-0 rounded-full bg-accent animate-ping opacity-75"></span>
-                          <div className="relative w-8 h-8 rounded-full bg-accent text-white flex items-center justify-center shadow-lg shadow-accent/20">
-                            <Gift className="w-4 h-4" />
-                          </div>
-                        </div>
+                        <Gift className="w-5 h-5 text-accent" />
                         <span className="text-xs text-foreground/90 font-bold leading-tight">
                           {bono}
                         </span>

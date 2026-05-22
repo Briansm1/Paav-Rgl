@@ -214,12 +214,7 @@ export default function PlanSeguridadAvanzadaPage() {
                           i === programDetails.bonuses.length - 1 && i % 2 === 0 && "sm:col-span-2"
                         )}
                       >
-                        <div className="relative">
-                          <span className="absolute inset-0 rounded-full bg-accent animate-ping opacity-75"></span>
-                          <div className="relative w-10 h-10 rounded-full bg-accent text-white flex items-center justify-center group-hover:scale-110 transition-transform shadow-lg shadow-accent/20">
-                            <Gift className="w-5 h-5" />
-                          </div>
-                        </div>
+                        <Gift className="w-6 h-6 text-accent" />
                         <span className="text-xs md:text-sm text-foreground/90 font-bold leading-snug">
                           {bono}
                         </span>
