@@ -1,29 +1,18 @@
 
 "use client";
 
-import React, { useEffect, useState } from 'react';
+import React from 'react';
 import Image from 'next/image';
 import { 
   Carousel, 
   CarouselContent, 
   CarouselItem, 
-  type CarouselApi
 } from '@/components/ui/carousel';
+import AutoScroll from 'embla-carousel-auto-scroll';
 import { PlaceHolderImages } from '@/app/lib/placeholder-images';
 
 export const Gallery = () => {
-  const [api, setApi] = useState<CarouselApi>();
   const galleryImages = PlaceHolderImages.filter(img => img.id.startsWith('gallery-'));
-
-  useEffect(() => {
-    if (!api) return;
-
-    const intervalId = setInterval(() => {
-      api.scrollNext();
-    }, 3000);
-
-    return () => clearInterval(intervalId);
-  }, [api]);
 
   return (
     <section id="galeria" className="relative pt-8 pb-20 md:pt-12 bg-background overflow-hidden">
@@ -42,17 +31,24 @@ export const Gallery = () => {
 
       <div className="max-w-7xl mx-auto px-4 relative z-10">
         <Carousel 
-          setApi={setApi}
+          plugins={[
+            AutoScroll({ 
+              speed: 1, 
+              stopOnInteraction: false, 
+              stopOnMouseEnter: false 
+            })
+          ]}
           opts={{ 
             align: "start", 
             loop: true,
+            dragFree: true,
           }} 
           className="w-full"
         >
           <CarouselContent className="-ml-2 md:-ml-4">
             {galleryImages.map((img, index) => (
-              <CarouselItem key={index} className="pl-2 basis-1/2 sm:basis-1/2 lg:basis-1/3">
-                <div className="relative aspect-[8/10] rounded-xl md:rounded-[2rem] overflow-hidden shadow-xl transition-all duration-700">
+              <CarouselItem key={index} className="pl-2 basis-1/2 md:basis-1/3">
+                <div className="relative aspect-[8/10] rounded-xl md:rounded-[2rem] overflow-hidden shadow-xl">
                   <Image 
                     src={img.imageUrl} 
                     alt={img.description} 
