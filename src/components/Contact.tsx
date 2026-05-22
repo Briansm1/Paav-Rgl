@@ -88,53 +88,7 @@ export const Contact = () => {
         </div>
 
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 md:gap-20 items-start">
-          <div className="flex flex-col gap-10">
-            <div className="bg-secondary p-8 md:p-10 lg:p-12 rounded-[2.5rem] shadow-xl border border-white/5">
-              <h4 className="text-xl md:text-2xl font-bold mb-8 md:mb-10 tracking-tight text-center md:text-left">Canales de atención</h4>
-              <div className="space-y-6 md:space-y-8">
-                <div className="flex items-start gap-4 md:gap-6">
-                  <div className="bg-white/5 p-3 md:p-4 rounded-[1.2rem] shadow-sm shrink-0">
-                    <MapPin className="w-5 h-5 md:w-6 md:h-6 text-primary" />
-                  </div>
-                  <div>
-                    <p className="font-bold text-base md:text-lg mb-1">Zona de cobertura</p>
-                    <p className="text-sm md:text-base text-muted-foreground leading-relaxed">Río Gallegos, Santa Cruz, Argentina, Z9400</p>
-                  </div>
-                </div>
-                <div className="flex items-start gap-4 md:gap-6">
-                  <div className="bg-white/5 p-3 md:p-4 rounded-[1.2rem] shadow-sm shrink-0">
-                    <MessageSquare className="w-5 h-5 md:w-6 md:h-6 text-primary" />
-                  </div>
-                  <div>
-                    <p className="font-bold text-base md:text-lg mb-1">WhatsApp</p>
-                    <a 
-                      href={whatsappUrl}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="text-sm md:text-base text-muted-foreground font-medium hover:text-primary transition-colors block"
-                    >
-                      +54 2966 265603
-                    </a>
-                  </div>
-                </div>
-                <div className="flex items-start gap-4 md:gap-6">
-                  <div className="bg-white/5 p-3 md:p-4 rounded-[1.2rem] shadow-sm shrink-0">
-                    <Mail className="w-5 h-5 md:w-6 md:h-6 text-primary" />
-                  </div>
-                  <div className="overflow-hidden">
-                    <p className="font-bold text-base md:text-lg mb-1">Consultas o propuestas</p>
-                    <a 
-                      href={`mailto:${academyEmail}`}
-                      className="text-sm md:text-base text-muted-foreground font-medium hover:text-primary transition-colors no-underline break-words block"
-                    >
-                      {academyEmail}
-                    </a>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-
+          {/* Formulario Primero */}
           <div className="flex flex-col gap-10">
             <div className="bg-card p-6 md:p-12 rounded-[2.5rem] shadow-2xl border border-white/5 h-full">
               <div className="mb-8 text-center md:text-left">
@@ -243,6 +197,54 @@ export const Contact = () => {
               <p className="mt-6 text-center text-[10px] text-muted-foreground uppercase tracking-widest font-bold">
                 ¡GRACIAS POR CONFIAR EN NOSOTROS!
               </p>
+            </div>
+          </div>
+
+          {/* Canales de Atención Después */}
+          <div className="flex flex-col gap-10">
+            <div className="bg-secondary p-8 md:p-10 lg:p-12 rounded-[2.5rem] shadow-xl border border-white/5">
+              <h4 className="text-xl md:text-2xl font-bold mb-8 md:mb-10 tracking-tight text-center md:text-left">Canales de atención</h4>
+              <div className="space-y-6 md:space-y-8">
+                <div className="flex items-start gap-4 md:gap-6">
+                  <div className="bg-white/5 p-3 md:p-4 rounded-[1.2rem] shadow-sm shrink-0">
+                    <MapPin className="w-5 h-5 md:w-6 md:h-6 text-primary" />
+                  </div>
+                  <div>
+                    <p className="font-bold text-base md:text-lg mb-1">Zona de cobertura</p>
+                    <p className="text-sm md:text-base text-muted-foreground leading-relaxed">Río Gallegos, Santa Cruz, Argentina, Z9400</p>
+                  </div>
+                </div>
+                <div className="flex items-start gap-4 md:gap-6">
+                  <div className="bg-white/5 p-3 md:p-4 rounded-[1.2rem] shadow-sm shrink-0">
+                    <MessageSquare className="w-5 h-5 md:w-6 md:h-6 text-primary" />
+                  </div>
+                  <div>
+                    <p className="font-bold text-base md:text-lg mb-1">WhatsApp</p>
+                    <a 
+                      href={whatsappUrl}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="text-sm md:text-base text-muted-foreground font-medium hover:text-primary transition-colors block"
+                    >
+                      +54 2966 265603
+                    </a>
+                  </div>
+                </div>
+                <div className="flex items-start gap-4 md:gap-6">
+                  <div className="bg-white/5 p-3 md:p-4 rounded-[1.2rem] shadow-sm shrink-0">
+                    <Mail className="w-5 h-5 md:w-6 md:h-6 text-primary" />
+                  </div>
+                  <div className="overflow-hidden">
+                    <p className="font-bold text-base md:text-lg mb-1">Consultas o propuestas</p>
+                    <a 
+                      href={`mailto:${academyEmail}`}
+                      className="text-sm md:text-base text-muted-foreground font-medium hover:text-primary transition-colors no-underline break-words block"
+                    >
+                      {academyEmail}
+                    </a>
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
         </div>
