@@ -4,7 +4,7 @@ import Link from 'next/link';
 import { Header } from '@/components/Header';
 import { Footer } from '@/components/Footer';
 import { Button } from '@/components/ui/button';
-import { ArrowLeft, Target, Clock, Gift, Check } from 'lucide-react';
+import { ArrowLeft, Clock, Gift, Check } from 'lucide-react';
 
 const detailedPlans = [
   {
@@ -138,7 +138,7 @@ export default function PlanExpertoPage() {
                     {plan.outcomes.map((item, i) => (
                       <div key={i} className="flex items-start gap-3 group">
                         <div className="mt-1 bg-accent/10 p-1 rounded-full shrink-0">
-                          <Target className="w-3 h-3 text-accent" />
+                          <Check className="w-3 h-3 text-accent" />
                         </div>
                         <span className="text-sm text-foreground/90 font-medium leading-tight">{item}</span>
                       </div>
