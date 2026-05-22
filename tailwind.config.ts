@@ -92,10 +92,15 @@ export default {
             height: '0',
           },
         },
+        'pulse-soft': {
+          '0%, 100%': { transform: 'scale(1)', opacity: '1' },
+          '50%': { transform: 'scale(1.08)', opacity: '0.85' },
+        },
       },
       animation: {
         'accordion-down': 'accordion-down 0.2s ease-out',
         'accordion-up': 'accordion-up 0.2s ease-out',
+        'pulse-soft': 'pulse-soft 2.5s ease-in-out infinite',
       },
     },
   },
