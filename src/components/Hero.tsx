@@ -26,8 +26,8 @@ export const Hero = () => {
         {/* Gradient overlays for readability */}
         <div className="absolute inset-0 bg-gradient-to-b md:bg-gradient-to-r from-black/70 via-black/30 to-transparent"></div>
         
-        {/* Bottom transition fade - Large and smooth */}
-        <div className="absolute bottom-0 left-0 right-0 h-32 bg-gradient-to-t from-background to-transparent z-10"></div>
+        {/* Bottom transition fade - Extra large and smooth for seamless union */}
+        <div className="absolute bottom-0 left-0 right-0 h-64 bg-gradient-to-t from-background via-background/80 to-transparent z-10"></div>
       </div>
 
       <div className="w-full max-w-[1440px] mx-auto px-4 md:px-6 relative z-20 flex-1 flex flex-col justify-between h-full">
