@@ -94,13 +94,13 @@ export default {
         },
         'pulse-soft': {
           '0%, 100%': { transform: 'scale(1)', opacity: '1' },
-          '50%': { transform: 'scale(1.08)', opacity: '0.85' },
+          '50%': { transform: 'scale(1.05)', opacity: '0.9' },
         },
       },
       animation: {
         'accordion-down': 'accordion-down 0.2s ease-out',
         'accordion-up': 'accordion-up 0.2s ease-out',
-        'pulse-soft': 'pulse-soft 2.5s ease-in-out infinite',
+        'pulse-soft': 'pulse-soft 4s ease-in-out infinite',
       },
     },
   },
