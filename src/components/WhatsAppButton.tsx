@@ -3,7 +3,6 @@
 
 import React from 'react';
 import { cn } from '@/lib/utils';
-import { Pointer } from 'lucide-react';
 
 export const WhatsAppButton = () => {
   const phoneNumber = "542966265603"; 
@@ -18,7 +17,7 @@ export const WhatsAppButton = () => {
           rel="noopener noreferrer"
           className={cn(
             "flex items-center justify-center w-14 h-14 md:w-16 md:h-16 rounded-full shadow-2xl",
-            "bg-[#25D366] text-white transition-all duration-300 active:scale-95"
+            "bg-[#25D366] text-white transition-all duration-300 active:scale-95 animate-button-click-sim"
           )}
           aria-label="Contactar por WhatsApp"
         >
@@ -38,9 +37,11 @@ export const WhatsAppButton = () => {
           </svg>
         </a>
 
-        {/* Hand pointer animation */}
-        <div className="absolute -bottom-1 -right-1 animate-hand-click pointer-events-none drop-shadow-[0_5px_15px_rgba(0,0,0,0.5)]">
-          <Pointer className="w-8 h-8 text-white fill-primary -rotate-12" />
+        {/* Mouse cursor animation */}
+        <div className="absolute -bottom-1 -right-1 animate-cursor-click pointer-events-none drop-shadow-[0_2px_10px_rgba(0,0,0,0.3)]">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="white" stroke="black" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="-rotate-12">
+            <path d="M3 3l7.07 16.97 2.51-7.39 7.39-2.51L3 3z" />
+          </svg>
         </div>
       </div>
     </div>

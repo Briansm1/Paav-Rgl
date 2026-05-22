@@ -1,3 +1,4 @@
+
 import type {Config} from 'tailwindcss';
 
 export default {
@@ -102,12 +103,16 @@ export default {
           '0%, 100%': { transform: 'scale(1)' },
           '50%': { transform: 'scale(1.08)' },
         },
-        'hand-click': {
-          '0%, 100%': { transform: 'translate(10px, 10px) scale(1)', opacity: '0' },
-          '20%': { transform: 'translate(0, 0) scale(1)', opacity: '1' },
-          '30%': { transform: 'translate(-2px, -2px) scale(0.85)', opacity: '1' },
-          '40%': { transform: 'translate(0, 0) scale(1)', opacity: '1' },
-          '80%': { transform: 'translate(0, 0) scale(1)', opacity: '1' },
+        'cursor-click': {
+          '0%, 100%': { transform: 'translate(15px, 15px) scale(1.1)', opacity: '0' },
+          '20%': { transform: 'translate(0, 0) scale(1.1)', opacity: '1' },
+          '30%': { transform: 'translate(-2px, -2px) scale(0.9)', opacity: '1' },
+          '40%': { transform: 'translate(0, 0) scale(1.1)', opacity: '1' },
+          '80%': { transform: 'translate(0, 0) scale(1.1)', opacity: '1' },
+        },
+        'button-click-sim': {
+          '0%, 25%, 35%, 100%': { transform: 'scale(1)' },
+          '30%': { transform: 'scale(0.93)' },
         }
       },
       animation: {
@@ -115,7 +120,8 @@ export default {
         'accordion-up': 'accordion-up 0.2s ease-out',
         'pulse-soft': 'pulse-soft 4s ease-in-out infinite',
         'heartbeat': 'heartbeat 2s ease-in-out infinite',
-        'hand-click': 'hand-click 4s ease-in-out infinite',
+        'cursor-click': 'cursor-click 4s ease-in-out infinite',
+        'button-click-sim': 'button-click-sim 4s ease-in-out infinite',
       },
     },
   },
