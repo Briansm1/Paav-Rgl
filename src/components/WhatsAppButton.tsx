@@ -17,8 +17,8 @@ export const WhatsAppButton = () => {
           rel="noopener noreferrer"
           className={cn(
             "flex items-center justify-center w-14 h-14 md:w-16 md:h-16 rounded-full",
-            "bg-[#25D366] text-white transition-all duration-150 shadow-2xl hover:shadow-xl",
-            "active:translate-y-1 active:shadow-sm active:scale-95"
+            "bg-[#25D366] text-white transition-all duration-300 shadow-2xl hover:shadow-none",
+            "active:translate-y-1.5 transition-transform"
           )}
           aria-label="Contactar por WhatsApp"
         >
@@ -28,7 +28,6 @@ export const WhatsAppButton = () => {
             <div className="absolute bottom-[-6px] right-6 w-3 h-3 bg-white border-r border-b border-slate-100 rotate-45"></div>
           </div>
           
-          {/* Logo oficial de WhatsApp */}
           <svg 
             viewBox="0 0 448 512" 
             className="w-8 h-8 md:w-9 md:h-9 fill-current" 

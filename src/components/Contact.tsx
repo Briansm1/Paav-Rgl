@@ -1,8 +1,8 @@
 
 "use client";
 
-import React from 'react';
-import { Mail, MessageSquare, MapPin, Image as ImageIcon, Send } from 'lucide-react';
+import React, { useState } from 'react';
+import { Mail, MessageSquare, MapPin, Image as ImageIcon, Send, Loader2 } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
 import { Textarea } from '@/components/ui/textarea';
@@ -25,6 +25,10 @@ import {
   SelectValue,
 } from "@/components/ui/select";
 import { useToast } from '@/hooks/use-toast';
+import { useFirestore } from '@/firebase/provider';
+import { collection, addDoc, serverTimestamp } from 'firebase/firestore';
+import { errorEmitter } from '@/firebase/error-emitter';
+import { FirestorePermissionError } from '@/firebase/errors';
 
 const formSchema = z.object({
   name: z.string().min(2, { message: 'El nombre es obligatorio' }),
@@ -35,6 +39,8 @@ const formSchema = z.object({
 
 export const Contact = () => {
   const { toast } = useToast();
+  const firestore = useFirestore();
+  const [isSubmitting, setIsSubmitting] = useState(false);
   
   const academyEmail = "pilotosasesalvolante@gmail.com";
   const whatsappUrl = "https://wa.me/5492966265603";
@@ -49,28 +55,51 @@ export const Contact = () => {
     },
   });
 
-  const onSubmit = (values: z.infer<typeof formSchema>) => {
-    const subject = encodeURIComponent(`Reseña de Estudiante: ${values.name}`);
-    const body = encodeURIComponent(
-      `¡Hola Pilotos! Aquí te envío mi reseña:\n\n` +
-      `• Nombre: ${values.name}\n` +
-      `• Email: ${values.email}\n` +
-      `• Calificación: ${values.rating} estrellas\n\n` +
-      `Mi Experiencia:\n"${values.review}"\n\n` +
-      `[IMPORTANTE: Por favor, ADJUNTA la foto de tu licencia a este correo antes de enviarlo si corresponde]`
-    );
+  const onSubmit = async (values: z.infer<typeof formSchema>) => {
+    setIsSubmitting(true);
     
-    window.location.href = `mailto:${academyEmail}?subject=${subject}&body=${body}`;
-    
-    toast({
-      title: "Abriendo correo...",
-      description: "Se abrirá tu aplicación de mail para que envíes la reseña. ¡No olvides adjuntar la foto!",
-    });
+    try {
+      // Guardar en Firestore
+      await addDoc(collection(firestore, 'reviews'), {
+        ...values,
+        createdAt: serverTimestamp(),
+      });
+
+      // Flujo de correo como respaldo/acción secundaria
+      const subject = encodeURIComponent(`Reseña de Estudiante: ${values.name}`);
+      const body = encodeURIComponent(
+        `¡Hola Pilotos! Aquí te envío mi reseña:\n\n` +
+        `• Nombre: ${values.name}\n` +
+        `• Email: ${values.email}\n` +
+        `• Calificación: ${values.rating} estrellas\n\n` +
+        `Mi Experiencia:\n"${values.review}"\n\n` +
+        `[IMPORTANTE: Por favor, ADJUNTA la foto de tu licencia a este correo antes de enviarlo si corresponde]`
+      );
+      
+      toast({
+        title: "¡Reseña guardada!",
+        description: "Gracias por tu opinión. Ahora abriremos tu correo para que adjuntes tu licencia.",
+      });
+
+      setTimeout(() => {
+        window.location.href = `mailto:${academyEmail}?subject=${subject}&body=${body}`;
+        setIsSubmitting(false);
+        form.reset();
+      }, 1500);
+
+    } catch (e: any) {
+      setIsSubmitting(false);
+      const permissionError = new FirestorePermissionError({
+        path: 'reviews',
+        operation: 'create',
+        requestResourceData: values,
+      });
+      errorEmitter.emit('permission-error', permissionError);
+    }
   };
 
   return (
     <section id="contacto" className="relative py-20 md:py-32 bg-background overflow-hidden">
-      {/* Top and Bottom fades */}
       <div className="absolute top-0 left-0 right-0 h-32 bg-gradient-to-b from-background via-background/50 to-transparent pointer-events-none z-10"></div>
       <div className="absolute bottom-0 left-0 right-0 h-32 bg-gradient-to-t from-background via-background/50 to-transparent pointer-events-none z-10"></div>
 
@@ -88,13 +117,12 @@ export const Contact = () => {
         </div>
 
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 md:gap-20 items-start">
-          {/* Formulario Primero */}
           <div className="flex flex-col gap-10">
             <div className="bg-card p-6 md:p-12 rounded-[2.5rem] shadow-2xl border border-white/5 h-full">
               <div className="mb-8 text-center md:text-left">
                 <h4 className="text-xl md:text-3xl font-bold mb-3 md:mb-4 tracking-tight">Cuéntanos tu experiencia</h4>
                 <p className="text-sm md:text-base text-muted-foreground">
-                  Al enviar, se abrirá tu aplicación de correo para completar el proceso.
+                  Tu reseña se guardará en nuestra comunidad y se abrirá tu correo para adjuntar la foto de tu licencia.
                 </p>
               </div>
               
@@ -155,7 +183,6 @@ export const Contact = () => {
                     />
                   </div>
 
-                  {/* Reminder about the license photo attachment in email */}
                   <div className="bg-primary/10 border border-primary/20 rounded-2xl p-5 md:p-6 mb-4">
                     <div className="flex items-center gap-3 text-primary font-bold mb-2 text-sm md:text-base">
                       <ImageIcon className="w-5 h-5 shrink-0" />
@@ -186,10 +213,20 @@ export const Contact = () => {
 
                   <Button 
                     type="submit" 
+                    disabled={isSubmitting}
                     className="w-full h-12 md:h-14 bg-primary hover:bg-primary/90 text-white text-base md:text-lg font-bold rounded-xl shadow-lg shadow-primary/20 transition-all active:scale-[0.98] flex items-center justify-center gap-2"
                   >
-                    Enviar por correo
-                    <Send className="w-5 h-5" />
+                    {isSubmitting ? (
+                      <>
+                        <Loader2 className="w-5 h-5 animate-spin" />
+                        Guardando...
+                      </>
+                    ) : (
+                      <>
+                        Enviar reseña
+                        <Send className="w-5 h-5" />
+                      </>
+                    )}
                   </Button>
                 </form>
               </Form>
@@ -200,7 +237,6 @@ export const Contact = () => {
             </div>
           </div>
 
-          {/* Canales de Atención Después */}
           <div className="flex flex-col gap-10">
             <div className="bg-secondary p-8 md:p-10 lg:p-12 rounded-[2.5rem] shadow-xl border border-white/5">
               <h4 className="text-xl md:text-2xl font-bold mb-8 md:mb-10 tracking-tight text-center md:text-left">Canales de atención</h4>
