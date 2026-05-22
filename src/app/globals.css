@@ -27,27 +27,6 @@
     --gold: 47 95% 43%;
     --gold-foreground: 0 0% 100%;
   }
-  .dark {
-    --background: 0 0% 0%;
-    --foreground: 218 71% 96%;
-    --card: 0 0% 7%;
-    --card-foreground: 218 71% 96%;
-    --popover: 0 0% 7%;
-    --popover-foreground: 218 71% 96%;
-    --primary: 213 74% 52%;
-    --primary-foreground: 0 0% 100%;
-    --secondary: 0 0% 12%;
-    --secondary-foreground: 213 74% 52%;
-    --muted: 0 0% 10%;
-    --muted-foreground: 220 10% 60%;
-    --accent: 25 100% 50%;
-    --accent-foreground: 0 0% 100%;
-    --border: 0 0% 15%;
-    --input: 0 0% 15%;
-    --ring: 25 100% 50%;
-    --gold: 47 95% 43%;
-    --gold-foreground: 0 0% 100%;
-  }
 }
 
 @layer base {
@@ -56,5 +35,8 @@
   }
   body {
     @apply bg-background text-foreground scroll-smooth font-body;
+  }
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-title tracking-tight;
   }
 }
