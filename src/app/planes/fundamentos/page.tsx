@@ -104,7 +104,7 @@ export default function PlanFundamentosPage() {
 
                     <div className="space-y-4">
                       <div className="flex flex-col items-center">
-                        <span className="text-[10px] font-bold text-slate-400 uppercase tracking-widest mb-1">Transferencia</span>
+                        <span className="text-[10px] font-bold text-slate-400 uppercase tracking-widest mb-1">TRANSFERENCIA O EFECTIVO</span>
                         <p className="text-4xl md:text-5xl font-black text-green-500 tracking-tighter">{option.transferPrice}</p>
                         <span className="mt-2 text-[10px] font-bold bg-green-500/20 text-green-500 px-3 py-1 rounded-full border border-green-500/30">
                           {option.savings}

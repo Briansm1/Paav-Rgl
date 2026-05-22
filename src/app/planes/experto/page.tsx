@@ -73,7 +73,7 @@ export default function PlanExpertoPage() {
                   <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 w-full bg-black/40 p-6 md:p-8 rounded-3xl border border-white/10 shadow-inner">
                     <div className="flex flex-col items-center justify-center gap-4 sm:border-r border-white/10 sm:pr-6">
                       <div className="flex flex-col items-center gap-1">
-                        <span className="text-[10px] md:text-xs font-bold text-slate-400 uppercase tracking-widest">Transferencia</span>
+                        <span className="text-[10px] md:text-xs font-bold text-slate-400 uppercase tracking-widest">TRANSFERENCIA O EFECTIVO</span>
                       </div>
                       <p className="text-3xl md:text-5xl font-black text-green-500 text-center tracking-tighter">
                         {plan.transferPrice}
