@@ -1,3 +1,4 @@
+
 import React from 'react';
 import Link from 'next/link';
 import { Header } from '@/components/Header';
@@ -101,7 +102,7 @@ export default function PlanExpertoPage() {
                         {plan.sessions}
                       </p>
                       <a href={plan.whatsappLink} target="_blank" rel="noopener noreferrer" className="w-full max-w-xs">
-                        <Button className="w-full bg-primary hover:bg-primary/90 rounded-xl h-12 font-bold transition-all">
+                        <Button className="w-full bg-primary hover:bg-primary/90 rounded-xl h-12 font-bold animate-heartbeat transition-all">
                           Elegir un plan
                         </Button>
                       </a>
@@ -185,7 +186,7 @@ export default function PlanExpertoPage() {
 
                 <div className="pt-4 flex justify-center">
                   <Link href="#precios" className="w-full max-w-xs">
-                    <Button className="w-full bg-primary hover:bg-primary/90 rounded-xl h-12 font-bold transition-all">
+                    <Button className="w-full bg-primary hover:bg-primary/90 rounded-xl h-12 font-bold animate-heartbeat transition-all">
                       Elegir un plan
                     </Button>
                   </Link>

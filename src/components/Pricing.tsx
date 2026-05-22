@@ -73,7 +73,7 @@ export const Pricing = () => {
                 <Link href={plan.href} className="w-full">
                   <Button 
                     className={cn(
-                      "w-full h-14 rounded-2xl text-base font-bold transition-all active:scale-95 shadow-lg bg-primary hover:bg-primary/90 text-white"
+                      "w-full h-14 rounded-2xl text-base font-bold transition-all active:scale-95 shadow-lg bg-primary hover:bg-primary/90 text-white animate-heartbeat"
                     )}
                   >
                     Conocer los planes

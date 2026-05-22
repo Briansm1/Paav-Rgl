@@ -1,3 +1,4 @@
+
 import React from 'react';
 import Link from 'next/link';
 import { Header } from '@/components/Header';
@@ -128,7 +129,7 @@ export default function PlanSeguridadAvanzadaPage() {
                         <a href={option.whatsappLink} target="_blank" rel="noopener noreferrer" className="w-full">
                           <Button 
                             className={cn(
-                              "w-full rounded-xl h-12 font-bold transition-all group-hover:scale-[1.02]",
+                              "w-full rounded-xl h-12 font-bold animate-heartbeat transition-all group-hover:scale-[1.02]",
                               idx === 0 ? "bg-gold hover:bg-gold/90 text-gold-foreground" : "bg-primary hover:bg-primary/90"
                             )}
                           >
@@ -229,8 +230,8 @@ export default function PlanSeguridadAvanzadaPage() {
               </div>
 
               <div className="pt-8 flex justify-center">
-                <Link href="#opciones-plan" className="w-full max-w-xs">
-                  <Button className="w-full bg-primary hover:bg-primary/90 rounded-xl h-12 font-bold transition-all">
+                <Link href="#opciones-plan" className="w-full max-sm:max-w-none">
+                  <Button className="w-full bg-primary hover:bg-primary/90 rounded-xl h-12 font-bold animate-heartbeat transition-all">
                     Elegir un plan
                   </Button>
                 </Link>
