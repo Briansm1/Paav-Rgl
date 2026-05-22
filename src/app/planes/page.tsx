@@ -1,6 +1,5 @@
 
 import React from 'react';
-import React from 'react';
 import Link from 'next/link';
 import { Header } from '@/components/Header';
 import { Footer } from '@/components/Footer';
@@ -130,7 +129,7 @@ export default function PlanesPage() {
                         <a href={option.whatsappLink} target="_blank" rel="noopener noreferrer" className="w-full">
                           <Button 
                             className={cn(
-                              "w-full rounded-xl h-12 font-bold transition-all group-hover:scale-[1.02]",
+                              "w-full rounded-xl h-12 font-bold transition-all group-hover:scale-[1.02] animate-heartbeat",
                               idx === 0 ? "bg-gold hover:bg-gold/90 text-gold-foreground" : "bg-primary hover:bg-primary/90"
                             )}
                           >
@@ -200,7 +199,6 @@ export default function PlanesPage() {
 
                 <div className="bg-accent/10 p-6 rounded-[2rem] border-2 border-accent/40 shadow-lg shadow-accent/5">
                   <h3 className="text-xl font-bold mb-8 flex items-center justify-center gap-3 text-accent text-center">
-                    <Gift className="w-6 h-6" />
                     Bonos de regalo
                   </h3>
                   <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
@@ -224,7 +222,7 @@ export default function PlanesPage() {
 
               <div className="pt-8 flex justify-center">
                 <Link href="#opciones-plan" className="w-full max-w-xs">
-                  <Button className="w-full bg-primary hover:bg-primary/90 rounded-xl h-12 font-bold transition-all">
+                  <Button className="w-full bg-primary hover:bg-primary/90 rounded-xl h-12 font-bold transition-all animate-heartbeat">
                     Elegir un plan
                   </Button>
                 </Link>

@@ -15,7 +15,7 @@ export const WhatsAppButton = () => {
       rel="noopener noreferrer"
       className={cn(
         "fixed bottom-6 right-6 md:bottom-8 md:right-8 z-[100] flex items-center justify-center w-14 h-14 md:w-16 md:h-16 rounded-full shadow-2xl group",
-        "bg-[#25D366] text-white animate-heartbeat hover:animate-none transition-all duration-300"
+        "bg-[#25D366] text-white animate-heartbeat transition-all duration-300"
       )}
       aria-label="Contactar por WhatsApp"
     >
