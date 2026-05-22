@@ -2,6 +2,7 @@ import type {Metadata} from 'next';
 import './globals.css';
 import { FirebaseClientProvider } from '@/firebase/client-provider';
 import { Toaster } from '@/components/ui/toaster';
+import { WhatsAppButton } from '@/components/WhatsAppButton';
 
 export const metadata: Metadata = {
   title: 'Autoescuela en Río Gallegos | Pilotos ases al volante',
@@ -52,6 +53,7 @@ export default function RootLayout({
         <FirebaseClientProvider>
           {children}
           <Toaster />
+          <WhatsAppButton />
         </FirebaseClientProvider>
       </body>
     </html>
