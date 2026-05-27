@@ -230,7 +230,7 @@ export const Contact = () => {
 
                   {/* Campo de imagen adjunta */}
                   <div className="space-y-2">
-                    <FormLabel>Adjuntar foto de tu logro (opcional)</FormLabel>
+                    <FormLabel>Adjuntar foto de tu licencia (opcional)</FormLabel>
                     <div 
                       onClick={() => fileInputRef.current?.click()}
                       className="cursor-pointer border-2 border-dashed border-white/10 rounded-xl p-4 flex flex-col items-center justify-center gap-2 hover:bg-white/5 transition-colors bg-white/5"
