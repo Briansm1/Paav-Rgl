@@ -61,7 +61,7 @@ export default function PlanSeguridadAvanzadaPage() {
     <main className="min-h-screen bg-background">
       <Header />
       
-      <section className="pt-24 pb-12 md:pt-32 md:pb-20 bg-secondary/30 border-b border-white/5 flex items-center justify-center">
+      <section className="pt-24 pb-4 md:pt-32 md:pb-10 bg-secondary/30 border-b border-white/5 flex items-center justify-center">
         <div className="container mx-auto px-4 text-center">
           <Link href="/#planes" className="inline-flex items-center gap-2 text-primary font-bold mb-4 hover:underline">
             <ArrowLeft className="w-4 h-4" />
