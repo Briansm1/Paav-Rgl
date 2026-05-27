@@ -128,7 +128,7 @@ export const Contact = () => {
           <div className="flex flex-col gap-10">
             <div className="bg-card p-6 md:p-12 rounded-[2.5rem] shadow-2xl border border-white/5 h-full">
               <div className="mb-8 text-center md:text-left">
-                <h4 className="text-xl md:text-3xl font-bold mb-3 md:mb-4 tracking-tight">Cuéntanos tu experiencia</h4>
+                <h4 className="text-xl md:text-3xl font-bold mb-3 md:mb-4 tracking-tight">Contanos tu experiencia</h4>
                 <p className="text-sm md:text-base text-muted-foreground">
                   Tu reseña se enviará automáticamente a nuestro equipo de soporte.
                 </p>
@@ -199,7 +199,7 @@ export const Contact = () => {
                         <FormLabel>Tu reseña</FormLabel>
                         <FormControl>
                           <Textarea 
-                            placeholder="Cuéntanos qué fue lo que más te gustó..." 
+                            placeholder="Contanos qué fue lo que más te gustó..." 
                             className="rounded-xl bg-white/5 border-white/10 focus:ring-primary text-white min-h-[100px] md:min-h-[120px]" 
                             {...field} 
                           />
