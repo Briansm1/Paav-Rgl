@@ -1,8 +1,8 @@
 
 "use client";
 
-import React, { useState } from 'react';
-import { Mail, MessageSquare, MapPin, Image as ImageIcon, Send, Loader2 } from 'lucide-react';
+import React, { useState, useRef } from 'react';
+import { Mail, MessageSquare, MapPin, Image as ImageIcon, Send, Loader2, Upload, X } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
 import { Textarea } from '@/components/ui/textarea';
@@ -41,6 +41,8 @@ export const Contact = () => {
   const { toast } = useToast();
   const firestore = useFirestore();
   const [isSubmitting, setIsSubmitting] = useState(false);
+  const [selectedImage, setSelectedImage] = useState<File | null>(null);
+  const fileInputRef = useRef<HTMLInputElement>(null);
   
   const academyEmail = "soporte@pilotosasesalvolante.shop";
   const whatsappUrl = "https://wa.me/5492966265603";
@@ -55,28 +57,43 @@ export const Contact = () => {
     },
   });
 
+  const handleImageChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+    if (e.target.files && e.target.files[0]) {
+      setSelectedImage(e.target.files[0]);
+    }
+  };
+
+  const removeImage = () => {
+    setSelectedImage(null);
+    if (fileInputRef.current) fileInputRef.current.value = '';
+  };
+
   const onSubmit = async (values: z.infer<typeof formSchema>) => {
     setIsSubmitting(true);
     
     try {
-      // 1. Guardar en la colección de reseñas (para visualización en la web)
-      addDoc(collection(firestore, 'reviews'), {
+      // 1. Guardar en la colección de reseñas
+      const reviewData = {
         ...values,
+        licenseImage: selectedImage ? selectedImage.name : null,
         createdAt: serverTimestamp(),
-      });
+      };
 
-      // 2. Disparar el correo automático vía colección 'mail' (Trigger Email extension)
+      addDoc(collection(firestore, 'reviews'), reviewData);
+
+      // 2. Disparar el correo automático vía colección 'mail'
       addDoc(collection(firestore, 'mail'), {
         to: academyEmail,
         message: {
           subject: `Nueva Reseña de Estudiante: ${values.name}`,
-          text: `Se ha recibido una nueva reseña.\n\nNombre: ${values.name}\nEmail: ${values.email}\nCalificación: ${values.rating} estrellas\nReseña: ${values.review}`,
+          text: `Se ha recibido una nueva reseña.\n\nNombre: ${values.name}\nEmail: ${values.email}\nCalificación: ${values.rating} estrellas\nReseña: ${values.review}${selectedImage ? `\nImagen adjunta: ${selectedImage.name}` : ''}`,
           html: `
             <div style="font-family: sans-serif; padding: 20px; color: #333; max-width: 600px; border: 1px solid #eee; border-radius: 12px;">
               <h2 style="color: #2563eb; border-bottom: 2px solid #2563eb; padding-bottom: 10px;">Nueva Reseña Recibida</h2>
               <p style="font-size: 16px;"><strong>Nombre:</strong> ${values.name}</p>
               <p style="font-size: 16px;"><strong>Email:</strong> ${values.email}</p>
               <p style="font-size: 16px;"><strong>Calificación:</strong> ${values.rating} / 5 estrellas</p>
+              ${selectedImage ? `<p style="font-size: 16px;"><strong>Imagen adjunta:</strong> ${selectedImage.name}</p>` : ''}
               <div style="margin-top: 20px; padding: 15px; background-color: #f3f4f6; border-left: 4px solid #2563eb; border-radius: 4px;">
                 <p style="margin: 0; font-style: italic; line-height: 1.6;">"${values.review}"</p>
               </div>
@@ -93,6 +110,8 @@ export const Contact = () => {
 
       // Resetear formulario y estado
       form.reset();
+      setSelectedImage(null);
+      if (fileInputRef.current) fileInputRef.current.value = '';
       setIsSubmitting(false);
 
     } catch (e: any) {
@@ -208,6 +227,39 @@ export const Contact = () => {
                       </FormItem>
                     )}
                   />
+
+                  {/* Campo de imagen adjunta */}
+                  <div className="space-y-2">
+                    <FormLabel>Adjuntar foto de tu logro (opcional)</FormLabel>
+                    <div 
+                      onClick={() => fileInputRef.current?.click()}
+                      className="cursor-pointer border-2 border-dashed border-white/10 rounded-xl p-4 flex flex-col items-center justify-center gap-2 hover:bg-white/5 transition-colors bg-white/5"
+                    >
+                      <input 
+                        type="file" 
+                        ref={fileInputRef} 
+                        onChange={handleImageChange} 
+                        accept="image/*" 
+                        className="hidden" 
+                      />
+                      {selectedImage ? (
+                        <div className="flex items-center gap-2 w-full justify-between bg-primary/20 p-2 rounded-lg border border-primary/30">
+                          <div className="flex items-center gap-2 overflow-hidden">
+                            <ImageIcon className="w-4 h-4 text-primary shrink-0" />
+                            <span className="text-xs text-primary font-bold truncate">{selectedImage.name}</span>
+                          </div>
+                          <button type="button" onClick={(e) => { e.stopPropagation(); removeImage(); }}>
+                            <X className="w-4 h-4 text-primary hover:text-white" />
+                          </button>
+                        </div>
+                      ) : (
+                        <>
+                          <Upload className="w-6 h-6 text-muted-foreground" />
+                          <span className="text-xs text-muted-foreground font-medium">Presiona para subir una foto</span>
+                        </>
+                      )}
+                    </div>
+                  </div>
 
                   <Button 
                     type="submit" 
