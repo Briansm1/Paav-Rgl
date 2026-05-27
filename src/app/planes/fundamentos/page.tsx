@@ -61,7 +61,7 @@ export default function PlanFundamentosPage() {
     <main className="min-h-screen bg-background">
       <Header />
       
-      <section className="pt-28 pb-4 md:pt-40 md:pb-12 bg-secondary/30 border-b border-white/5 flex items-center justify-center">
+      <section className="pt-24 pb-12 md:pt-32 md:pb-20 bg-secondary/30 border-b border-white/5 flex items-center justify-center">
         <div className="container mx-auto px-4 text-center">
           <Link href="/#planes" className="inline-flex items-center gap-2 text-primary font-bold mb-4 hover:underline">
             <ArrowLeft className="w-4 h-4" />
@@ -149,7 +149,6 @@ export default function PlanFundamentosPage() {
               </div>
 
               <div className="flex flex-col gap-8">
-                {/* Contenido adicional omitido por brevedad, se mantiene igual */}
                 <div className="bg-black/20 p-6 rounded-[2rem] border border-white/5">
                   <h3 className="text-lg font-bold mb-4 flex items-center justify-center gap-2 text-foreground text-center">
                     ¿Para quién es?
