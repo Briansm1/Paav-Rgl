@@ -167,7 +167,7 @@ export default function PlanExpertoPage() {
                     Bonos de regalo
                   </h3>
                   <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
-                    {plan.bonuses.map((bono, i) => (
+                    {detailedPlans[0].bonuses.map((bono, i) => (
                       <div key={i} className="flex flex-col items-center text-center gap-3 group">
                         <Gift className="w-6 h-6 text-accent" />
                         <span className="text-xs md:text-sm text-foreground/90 font-bold leading-snug">
@@ -199,7 +199,7 @@ export default function PlanExpertoPage() {
           </p>
           <a href="https://wa.me/5492966265603?text=Hola%2C%20tengo%20algunas%20consultas%20sobre%20el%20Programa%20Experto" target="_blank" rel="noopener noreferrer">
             <Button variant="outline" size="lg" className="rounded-full border-primary text-primary hover:bg-primary/5 text-center">
-              Hablar con un asesor
+              Hablar con alguien del equipo
             </Button>
           </a>
         </div>

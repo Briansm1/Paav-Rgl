@@ -170,7 +170,7 @@ export default function PlanSeguridadAvanzadaPage() {
                     ¿Qué vas a lograr?
                   </h3>
                   <div className="space-y-3">
-                    {programDetails.outcomes.map((item, i) => (
+                    {programDetails.targetAudience.map((item, i) => (
                       <div key={i} className="flex items-start gap-3">
                         <div className="mt-1 bg-accent/10 p-1 rounded-full shrink-0">
                           <Check className="w-3 h-3 text-accent" />
@@ -241,7 +241,7 @@ export default function PlanSeguridadAvanzadaPage() {
           </p>
           <a href="https://wa.me/5492966265603?text=Hola%2C%20tengo%20algunas%20consultas%20sobre%20el%20Programa%20Seguridad%20Avanzada" target="_blank" rel="noopener noreferrer">
             <Button variant="outline" size="lg" className="rounded-full border-primary text-primary hover:bg-primary/5 text-center">
-              Hablar con un asesor
+              Hablar con alguien del equipo
             </Button>
           </a>
         </div>
