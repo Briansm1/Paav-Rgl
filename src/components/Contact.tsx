@@ -1,8 +1,7 @@
-
 "use client";
 
 import React, { useState, useRef } from 'react';
-import { Mail, MessageSquare, MapPin, Image as ImageIcon, Send, Loader2, Upload, X } from 'lucide-react';
+import { Mail, MessageSquare, MapPin, Image as ImageIcon, Send, Loader2, Upload, X, ShieldCheck } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
 import { Textarea } from '@/components/ui/textarea';
@@ -229,8 +228,17 @@ export const Contact = () => {
                   />
 
                   {/* Campo de imagen adjunta */}
-                  <div className="space-y-2">
-                    <FormLabel>Adjuntar foto de tu licencia (opcional)</FormLabel>
+                  <div className="space-y-3">
+                    <div className="space-y-1">
+                      <FormLabel>Adjuntar foto de tu licencia (opcional)</FormLabel>
+                      <div className="flex items-start gap-2 bg-primary/5 p-3 rounded-lg border border-primary/10">
+                        <ShieldCheck className="w-4 h-4 text-primary shrink-0 mt-0.5" />
+                        <p className="text-[11px] text-muted-foreground leading-snug">
+                          <strong>Tu privacidad es prioridad:</strong> Antes de compartir tu reseña, nuestro equipo se encargará de tapar cualquier dato sensible o personal de tu licencia para proteger tu identidad.
+                        </p>
+                      </div>
+                    </div>
+                    
                     <div 
                       onClick={() => fileInputRef.current?.click()}
                       className="cursor-pointer border-2 border-dashed border-white/10 rounded-xl p-4 flex flex-col items-center justify-center gap-2 hover:bg-white/5 transition-colors bg-white/5"
