@@ -24,7 +24,7 @@ export const Hero = () => {
           data-ai-hint={heroImg?.imageHint}
         />
         {/* Top transition fade - Smooth union with fixed header */}
-        <div className="absolute top-0 left-0 right-0 h-40 bg-gradient-to-b from-black via-black/80 to-transparent z-10"></div>
+        <div className="absolute top-0 left-0 right-0 h-64 bg-gradient-to-b from-black via-black/80 to-transparent z-10"></div>
         
         {/* Readable gradient overlays */}
         <div className="absolute inset-0 bg-gradient-to-b md:bg-gradient-to-r from-black/70 via-black/30 to-transparent"></div>
