@@ -78,7 +78,7 @@ export default function PlanSeguridadAvanzadaPage() {
           <div className="max-w-4xl mx-auto">
             <div className="flex flex-col gap-10 p-6 md:p-12 rounded-[3rem] border bg-secondary shadow-2xl border-white/5 h-full w-full">
               
-              <div id="opciones-plan" className="flex flex-row md:grid md:grid-cols-2 gap-6 pt-6 overflow-x-auto md:overflow-x-visible pb-4 md:pb-0 snap-x snap-mandatory scrollbar-hide">
+              <div id="opciones-plan" className="flex flex-row md:grid md:grid-cols-2 gap-6 pt-6 overflow-x-auto md:overflow-x-visible pb-4 md:pb-0 snap-x snap-mandatory scrollbar-hide px-2">
                 {programDetails.options.map((option, idx) => (
                   <div 
                     key={idx} 
@@ -125,7 +125,7 @@ export default function PlanSeguridadAvanzadaPage() {
                         <span className="text-sm">{option.sessions}</span>
                       </div>
 
-                      <div className="pt-2 flex justify-center">
+                      <div className="pt-2 flex justify-center px-2">
                         <a href={option.whatsappLink} target="_blank" rel="noopener noreferrer" className="w-full">
                           <Button 
                             className={cn(
@@ -149,6 +149,7 @@ export default function PlanSeguridadAvanzadaPage() {
               </div>
 
               <div className="flex flex-col gap-8">
+                {/* Contenido adicional omitido por brevedad */}
                 <div className="bg-black/20 p-6 rounded-[2rem] border border-white/5">
                   <h3 className="text-lg font-bold mb-4 flex items-center justify-center gap-2 text-foreground text-center">
                     ¿Para quién es?
@@ -220,7 +221,7 @@ export default function PlanSeguridadAvanzadaPage() {
                 </div>
               </div>
 
-              <div className="pt-8 flex justify-center">
+              <div className="pt-8 flex justify-center px-4">
                 <Link href="#opciones-plan" className="w-full max-sm:max-w-none">
                   <Button className="w-full bg-primary hover:bg-primary/90 rounded-xl h-12 font-bold animate-heartbeat transition-all">
                     Elegir un plan

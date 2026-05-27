@@ -6,7 +6,7 @@ import { Medal } from 'lucide-react';
 
 export const CtaReady = () => {
   return (
-    <section className="relative py-20 bg-background overflow-hidden">
+    <section className="relative py-20 bg-background overflow-hidden px-4">
       {/* Top and Bottom fades */}
       <div className="absolute top-0 left-0 right-0 h-32 bg-gradient-to-b from-background via-background/50 to-transparent pointer-events-none z-10"></div>
       <div className="absolute bottom-0 left-0 right-0 h-32 bg-gradient-to-t from-background via-background/50 to-transparent pointer-events-none z-10"></div>
@@ -16,7 +16,7 @@ export const CtaReady = () => {
           <div className="shrink-0 bg-primary/10 p-5 rounded-3xl shadow-inner">
             <Medal className="w-12 h-12 text-primary" />
           </div>
-          <div className="space-y-4">
+          <div className="space-y-4 px-2">
             <h3 className="text-2xl md:text-3xl font-bold tracking-tight">
               Estás a una sola decisión de convertirte en un/una as al volante
             </h3>
@@ -24,11 +24,13 @@ export const CtaReady = () => {
               Con nosotros vas a conocer las claves para dominar cualquier camino, bajo cualquier condición y así lograr pilotar las calles con seguridad real.
             </p>
           </div>
-          <Link href="#planes">
-            <Button size="lg" className="h-14 px-10 rounded-full bg-accent hover:bg-accent/90 text-white font-bold text-lg transition-all active:scale-95 shadow-md border-none animate-heartbeat">
-              Quiero empezar
-            </Button>
-          </Link>
+          <div className="px-4">
+            <Link href="#planes">
+              <Button size="lg" className="h-14 px-10 rounded-full bg-accent hover:bg-accent/90 text-white font-bold text-lg transition-all active:scale-95 shadow-md border-none animate-heartbeat">
+                Quiero empezar
+              </Button>
+            </Link>
+          </div>
         </div>
       </div>
     </section>

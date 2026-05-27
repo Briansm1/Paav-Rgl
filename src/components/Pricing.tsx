@@ -56,7 +56,7 @@ export const Pricing = () => {
       <div className="absolute bottom-0 left-0 right-0 h-32 bg-gradient-to-t from-background via-background/50 to-transparent pointer-events-none z-10"></div>
 
       <div className="container mx-auto px-4 relative z-10">
-        <div className="text-center max-w-3xl mx-auto mb-16">
+        <div className="text-center max-w-3xl mx-auto mb-16 px-4">
           <span className="inline-block px-4 py-1.5 mb-6 text-xs font-bold tracking-widest text-primary uppercase bg-primary/10 rounded-full border border-primary/20">
             TU INVERSIÓN
           </span>
@@ -77,7 +77,7 @@ export const Pricing = () => {
           </p>
         </div>
 
-        <div className="flex flex-row md:grid md:grid-cols-3 gap-6 md:gap-8 max-w-7xl mx-auto overflow-x-auto md:overflow-x-visible pb-8 md:pb-0 snap-x snap-mandatory scrollbar-hide">
+        <div className="flex flex-row md:grid md:grid-cols-3 gap-6 md:gap-8 max-w-7xl mx-auto overflow-x-auto md:overflow-x-visible pb-8 md:pb-0 snap-x snap-mandatory scrollbar-hide px-2 md:px-0">
           {plans.map((plan, index) => (
             <div 
               key={index} 
@@ -98,7 +98,7 @@ export const Pricing = () => {
                 <p className="text-muted-foreground text-sm leading-relaxed font-medium mb-6">{plan.description}</p>
               </div>
 
-              <div className="mt-auto relative z-10 w-full">
+              <div className="mt-auto relative z-10 w-full px-2">
                 <Link href={plan.href} className="w-full">
                   <Button 
                     className={cn(
