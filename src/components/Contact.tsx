@@ -1,3 +1,4 @@
+
 "use client";
 
 import React, { useState, useRef } from 'react';
@@ -44,7 +45,7 @@ export const Contact = () => {
   const fileInputRef = useRef<HTMLInputElement>(null);
   
   const academyEmail = "soporte@pilotosasesalvolante.shop";
-  const whatsappUrl = "https://wa.me/5492966265603";
+  const academyWhatsApp = "5492966265603";
 
   const form = useForm<z.infer<typeof formSchema>>({
     resolver: zodResolver(formSchema),
@@ -71,7 +72,7 @@ export const Contact = () => {
     setIsSubmitting(true);
     
     try {
-      // 1. Guardar en la colección de reseñas
+      // 1. Guardar en la colección de reseñas para el historial
       const reviewData = {
         ...values,
         licenseImage: selectedImage ? selectedImage.name : null,
@@ -80,20 +81,21 @@ export const Contact = () => {
 
       addDoc(collection(firestore, 'reviews'), reviewData);
 
-      // 2. Disparar el correo automático vía colección 'mail'
+      // 2. Disparar el correo automático vía colección 'mail' (Extensión Trigger Email)
+      // Usamos un array en 'to' para asegurar compatibilidad total con la extensión
       addDoc(collection(firestore, 'mail'), {
-        to: academyEmail,
+        to: [academyEmail],
         message: {
           subject: `Nueva Reseña de Estudiante: ${values.name}`,
           text: `Se ha recibido una nueva reseña.\n\nNombre: ${values.name}\nEmail: ${values.email}\nCalificación: ${values.rating} estrellas\nReseña: ${values.review}${selectedImage ? `\nImagen adjunta: ${selectedImage.name}` : ''}`,
           html: `
             <div style="font-family: sans-serif; padding: 20px; color: #333; max-width: 600px; border: 1px solid #eee; border-radius: 12px;">
-              <h2 style="color: #2563eb; border-bottom: 2px solid #2563eb; padding-bottom: 10px;">Nueva Reseña Recibida</h2>
+              <h2 style="color: #213584; border-bottom: 2px solid #213584; padding-bottom: 10px;">Nueva Reseña Recibida</h2>
               <p style="font-size: 16px;"><strong>Nombre:</strong> ${values.name}</p>
               <p style="font-size: 16px;"><strong>Email:</strong> ${values.email}</p>
               <p style="font-size: 16px;"><strong>Calificación:</strong> ${values.rating} / 5 estrellas</p>
               ${selectedImage ? `<p style="font-size: 16px;"><strong>Imagen adjunta:</strong> ${selectedImage.name}</p>` : ''}
-              <div style="margin-top: 20px; padding: 15px; background-color: #f3f4f6; border-left: 4px solid #2563eb; border-radius: 4px;">
+              <div style="margin-top: 20px; padding: 15px; background-color: #f3f4f6; border-left: 4px solid #213584; border-radius: 4px;">
                 <p style="margin: 0; font-style: italic; line-height: 1.6;">"${values.review}"</p>
               </div>
               <p style="margin-top: 20px; font-size: 12px; color: #666;">Este es un mensaje automático enviado desde el sitio web de Pilotos - Ases al Volante.</p>
@@ -106,6 +108,17 @@ export const Contact = () => {
         title: "¡Reseña enviada!",
         description: "Muchas gracias por tu opinión. El equipo la recibirá a la brevedad.",
       });
+
+      // 3. Notificación vía WhatsApp (Aviso inmediato)
+      const whatsappText = encodeURIComponent(
+        `*Nueva Reseña Recibida*\n\n` +
+        `*Nombre:* ${values.name}\n` +
+        `*Calificación:* ${values.rating} ⭐\n` +
+        `*Reseña:* "${values.review}"\n` +
+        `${selectedImage ? `*Imagen:* Adjunta en el email` : ''}`
+      );
+      
+      window.open(`https://wa.me/${academyWhatsApp}?text=${whatsappText}`, '_blank');
 
       // Resetear formulario y estado
       form.reset();
@@ -148,7 +161,7 @@ export const Contact = () => {
               <div className="mb-8 text-center md:text-left">
                 <h4 className="text-xl md:text-3xl font-bold mb-3 md:mb-4 tracking-tight">Contanos tu experiencia</h4>
                 <p className="text-sm md:text-base text-muted-foreground">
-                  Tu reseña se enviará automáticamente a nuestro equipo de soporte.
+                  Tu reseña se enviará automáticamente a nuestro equipo y se te abrirá un aviso por WhatsApp.
                 </p>
               </div>
               
@@ -315,7 +328,7 @@ export const Contact = () => {
                   <div>
                     <p className="font-bold text-base md:text-lg mb-1">WhatsApp</p>
                     <a 
-                      href={whatsappUrl}
+                      href={`https://wa.me/${academyWhatsApp}`}
                       target="_blank"
                       rel="noopener noreferrer"
                       className="text-sm md:text-base text-muted-foreground font-medium hover:text-primary transition-colors block"
