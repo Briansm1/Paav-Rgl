@@ -42,7 +42,7 @@ export const Contact = () => {
   const firestore = useFirestore();
   const [isSubmitting, setIsSubmitting] = useState(false);
   
-  const academyEmail = "pilotosasesalvolante@gmail.com";
+  const academyEmail = "soporte@pilotosasesalvolante.shop";
   const whatsappUrl = "https://wa.me/5492966265603";
 
   const form = useForm<z.infer<typeof formSchema>>({
@@ -59,33 +59,41 @@ export const Contact = () => {
     setIsSubmitting(true);
     
     try {
-      // Guardar en Firestore
-      await addDoc(collection(firestore, 'reviews'), {
+      // 1. Guardar en la colección de reseñas (para visualización en la web)
+      addDoc(collection(firestore, 'reviews'), {
         ...values,
         createdAt: serverTimestamp(),
       });
 
-      // Flujo de correo como respaldo/acción secundaria
-      const subject = encodeURIComponent(`Reseña de Estudiante: ${values.name}`);
-      const body = encodeURIComponent(
-        `¡Hola Pilotos! Aquí te envío mi reseña:\n\n` +
-        `• Nombre: ${values.name}\n` +
-        `• Email: ${values.email}\n` +
-        `• Calificación: ${values.rating} estrellas\n\n` +
-        `Mi Experiencia:\n"${values.review}"\n\n` +
-        `[IMPORTANTE: Por favor, ADJUNTA la foto de tu licencia a este correo antes de enviarlo si corresponde]`
-      );
+      // 2. Disparar el correo automático vía colección 'mail' (Trigger Email extension)
+      addDoc(collection(firestore, 'mail'), {
+        to: academyEmail,
+        message: {
+          subject: `Nueva Reseña de Estudiante: ${values.name}`,
+          text: `Se ha recibido una nueva reseña.\n\nNombre: ${values.name}\nEmail: ${values.email}\nCalificación: ${values.rating} estrellas\nReseña: ${values.review}`,
+          html: `
+            <div style="font-family: sans-serif; padding: 20px; color: #333; max-width: 600px; border: 1px solid #eee; border-radius: 12px;">
+              <h2 style="color: #2563eb; border-bottom: 2px solid #2563eb; padding-bottom: 10px;">Nueva Reseña Recibida</h2>
+              <p style="font-size: 16px;"><strong>Nombre:</strong> ${values.name}</p>
+              <p style="font-size: 16px;"><strong>Email:</strong> ${values.email}</p>
+              <p style="font-size: 16px;"><strong>Calificación:</strong> ${values.rating} / 5 estrellas</p>
+              <div style="margin-top: 20px; padding: 15px; background-color: #f3f4f6; border-left: 4px solid #2563eb; border-radius: 4px;">
+                <p style="margin: 0; font-style: italic; line-height: 1.6;">"${values.review}"</p>
+              </div>
+              <p style="margin-top: 20px; font-size: 12px; color: #666;">Este es un mensaje automático enviado desde el sitio web de Pilotos - Ases al Volante.</p>
+            </div>
+          `
+        }
+      });
       
       toast({
-        title: "¡Reseña guardada!",
-        description: "Gracias por tu opinión. Ahora abriremos tu correo para que adjuntes tu licencia.",
+        title: "¡Reseña enviada!",
+        description: "Muchas gracias por tu opinión. El equipo la recibirá a la brevedad.",
       });
 
-      setTimeout(() => {
-        window.location.href = `mailto:${academyEmail}?subject=${subject}&body=${body}`;
-        setIsSubmitting(false);
-        form.reset();
-      }, 1500);
+      // Resetear formulario y estado
+      form.reset();
+      setIsSubmitting(false);
 
     } catch (e: any) {
       setIsSubmitting(false);
@@ -122,7 +130,7 @@ export const Contact = () => {
               <div className="mb-8 text-center md:text-left">
                 <h4 className="text-xl md:text-3xl font-bold mb-3 md:mb-4 tracking-tight">Cuéntanos tu experiencia</h4>
                 <p className="text-sm md:text-base text-muted-foreground">
-                  Tu reseña se guardará en nuestra comunidad y se abrirá tu correo para adjuntar la foto de tu licencia.
+                  Tu reseña se enviará automáticamente a nuestro equipo de soporte.
                 </p>
               </div>
               
@@ -183,16 +191,6 @@ export const Contact = () => {
                     />
                   </div>
 
-                  <div className="bg-primary/10 border border-primary/20 rounded-2xl p-5 md:p-6 mb-4">
-                    <div className="flex items-center gap-3 text-primary font-bold mb-2 text-sm md:text-base">
-                      <ImageIcon className="w-5 h-5 shrink-0" />
-                      <span>Recordatorio importante</span>
-                    </div>
-                    <p className="text-xs md:text-sm text-slate-300 leading-relaxed italic">
-                      Cuando se abra tu aplicación de correo, <strong>no olvides adjuntar la foto de tu licencia</strong> antes de darle a enviar.
-                    </p>
-                  </div>
-
                   <FormField
                     control={form.control}
                     name="review"
@@ -219,7 +217,7 @@ export const Contact = () => {
                     {isSubmitting ? (
                       <>
                         <Loader2 className="w-5 h-5 animate-spin" />
-                        Guardando...
+                        Enviando...
                       </>
                     ) : (
                       <>
