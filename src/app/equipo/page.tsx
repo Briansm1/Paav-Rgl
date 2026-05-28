@@ -62,7 +62,7 @@ export default function EquipoPage() {
                     </div>
                     <div className="flex flex-wrap justify-center lg:justify-start gap-2">
                       {member.specialties.map((spec, i) => (
-                        <span key={i} className="px-3 py-1 bg-white/5 border border-white/10 rounded-full text-xs font-medium text-slate-300">
+                        <span key={i} className="px-3 py-1 bg-white/5 border border-white/10 rounded-full text-[10px] font-bold text-slate-300 uppercase tracking-widest">
                           {spec}
                         </span>
                       ))}
