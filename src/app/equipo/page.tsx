@@ -33,9 +33,6 @@ export default function EquipoPage() {
           <h1 className="text-3xl md:text-5xl font-bold font-headline mb-4 text-foreground">
             Nuestro <span className="text-primary">Equipo</span>
           </h1>
-          <p className="text-muted-foreground max-w-2xl mx-auto text-lg">
-            Conocé a los profesionales que te acompañarán en tu camino hacia la libertad al volante.
-          </p>
         </div>
       </section>
 
