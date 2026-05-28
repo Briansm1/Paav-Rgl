@@ -38,6 +38,16 @@ const digitalBooks = [
     features: ['Simulacros de examen', 'Normativas locales', 'Seguridad vial'],
     imageUrl: PlaceHolderImages.find(img => img.id === 'book-teoria')?.imageUrl || '',
     whatsappLink: "https://wa.me/5492966265603?text=Hola!%20Quiero%20comprar%20el%20libro%20*Programa%20ases%20de%20la%20mecánica*"
+  },
+  {
+    id: 'book-experto',
+    title: 'Programa piloto experto',
+    price: '$14.999',
+    description: 'Dominá la conducción en condiciones adversas: lluvia, noche y rutas de montaña. El nivel definitivo de seguridad vial.',
+    longDescription: 'Este programa avanzado está diseñado para conductores que buscan la excelencia. Aprenderás técnicas de conducción defensiva extrema, cómo reaccionar ante imprevistos climáticos y los secretos para dominar la ruta con la mentalidad de un piloto profesional.',
+    features: ['Conducción nocturna', 'Gestión de riesgos', 'Técnicas de ruta'],
+    imageUrl: PlaceHolderImages.find(img => img.id === 'book-experto')?.imageUrl || '',
+    whatsappLink: "https://wa.me/5492966265603?text=Hola!%20Quiero%20comprar%20el%20libro%20*Programa%20piloto%20experto*"
   }
 ];
 
@@ -46,7 +56,7 @@ export default function LibrosDigitalesPage() {
     <main className="min-h-screen bg-background">
       <Header />
       
-      {/* Header Section - Balanced margins to match plans and team sections */}
+      {/* Header Section */}
       <section className="pt-24 pb-6 md:pt-32 md:pb-6 bg-secondary/30 border-b border-white/5 flex items-center justify-center">
         <div className="container mx-auto px-4 text-center">
           <Link href="/#inicio" className="inline-flex items-center gap-2 text-primary font-bold mb-3 hover:underline">
@@ -62,7 +72,7 @@ export default function LibrosDigitalesPage() {
       {/* Library Grid Section */}
       <section className="py-16 md:py-24 bg-background">
         <div className="container mx-auto px-4">
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10 lg:gap-14 max-w-7xl mx-auto">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10 lg:gap-10 max-w-7xl mx-auto">
             {digitalBooks.map((book) => (
               <div key={book.id} className="group flex flex-col bg-secondary/40 rounded-[2.5rem] border border-white/5 overflow-hidden transition-all duration-300 hover:shadow-2xl hover:shadow-primary/5 hover:border-primary/20">
                 {/* Book Cover Image Area */}
@@ -72,6 +82,7 @@ export default function LibrosDigitalesPage() {
                     alt={book.title} 
                     fill 
                     className="object-cover transition-transform duration-500 group-hover:scale-110"
+                    data-ai-hint="book cover"
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent opacity-60"></div>
                   <div className="absolute bottom-6 left-6 right-6">
@@ -87,10 +98,10 @@ export default function LibrosDigitalesPage() {
                     <Star className="w-4 h-4 text-gold fill-gold" />
                     <span className="text-[10px] font-bold text-slate-400 uppercase tracking-widest">Material Exclusivo</span>
                   </div>
-                  <h3 className="text-2xl font-bold mb-4 text-white group-hover:text-primary transition-colors">
+                  <h3 className="text-xl font-bold mb-4 text-white group-hover:text-primary transition-colors leading-tight">
                     {book.title}
                   </h3>
-                  <p className="text-muted-foreground text-sm leading-relaxed mb-8 flex-grow">
+                  <p className="text-muted-foreground text-xs leading-relaxed mb-8 flex-grow">
                     {book.description}
                   </p>
 

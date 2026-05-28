@@ -100,67 +100,67 @@ export const PlaceHolderImages: ImagePlaceholder[] = [
   {
     "id": "gallery-2",
     "description": "Clase práctica 2",
-    "imageUrl": "https://i.imgur.com/gVuIi2o.png",
+    "imageUrl": "https://i.imgur.com/v6PauaL.png",
     "imageHint": "driving lesson"
   },
   {
     "id": "gallery-3",
     "description": "Clase práctica 3",
-    "imageUrl": "https://i.imgur.com/nbXcpsX.png",
+    "imageUrl": "https://i.imgur.com/yo6Y693.jpeg",
     "imageHint": "driving lesson"
   },
   {
     "id": "gallery-4",
     "description": "Clase práctica 4",
-    "imageUrl": "https://i.imgur.com/gVVjpsz.png",
+    "imageUrl": "https://i.imgur.com/4AK2c4Q.jpeg",
     "imageHint": "driving lesson"
   },
   {
     "id": "gallery-5",
     "description": "Clase práctica 5",
-    "imageUrl": "https://i.imgur.com/4sq930Q.png",
+    "imageUrl": "https://i.imgur.com/9ocLjBF.jpeg",
     "imageHint": "driving lesson"
   },
   {
     "id": "gallery-6",
     "description": "Clase práctica 6",
-    "imageUrl": "https://i.imgur.com/ERybbkD.png",
+    "imageUrl": "https://i.imgur.com/E0sIJCA.jpeg",
     "imageHint": "driving lesson"
   },
   {
     "id": "gallery-7",
     "description": "Clase práctica 7",
-    "imageUrl": "https://i.imgur.com/UODC85Z.png",
+    "imageUrl": "https://i.imgur.com/dbY1ZRh.png",
     "imageHint": "driving lesson"
   },
   {
     "id": "gallery-8",
     "description": "Clase práctica 8",
-    "imageUrl": "https://i.imgur.com/1FU5oau.png",
+    "imageUrl": "https://picsum.photos/seed/gallery8/800/600",
     "imageHint": "driving lesson"
   },
   {
     "id": "gallery-9",
     "description": "Clase práctica 9",
-    "imageUrl": "https://i.imgur.com/x8ywEAm.png",
+    "imageUrl": "https://picsum.photos/seed/gallery9/800/600",
     "imageHint": "driving lesson"
   },
   {
     "id": "gallery-10",
     "description": "Clase práctica 10",
-    "imageUrl": "https://i.imgur.com/EuTHFjv.png",
+    "imageUrl": "https://picsum.photos/seed/gallery10/800/600",
     "imageHint": "driving lesson"
   },
   {
     "id": "gallery-11",
     "description": "Clase práctica 11",
-    "imageUrl": "https://i.imgur.com/npGejgY.png",
+    "imageUrl": "https://picsum.photos/seed/gallery11/800/600",
     "imageHint": "driving lesson"
   },
   {
     "id": "gallery-12",
     "description": "Clase práctica 12",
-    "imageUrl": "https://i.imgur.com/ab3sNZN.png",
+    "imageUrl": "https://picsum.photos/seed/gallery12/800/600",
     "imageHint": "driving lesson"
   },
   {
@@ -228,5 +228,29 @@ export const PlaceHolderImages: ImagePlaceholder[] = [
     "description": "Certificación Brian",
     "imageUrl": "https://i.imgur.com/Cz0exuI.png",
     "imageHint": "certificate"
+  },
+  {
+    "id": "book-novato",
+    "description": "Programa conductor seguro",
+    "imageUrl": "https://picsum.photos/seed/book1/400/600",
+    "imageHint": "book cover"
+  },
+  {
+    "id": "book-maniobras",
+    "description": "Programa aprobado a la primera",
+    "imageUrl": "https://picsum.photos/seed/book2/400/600",
+    "imageHint": "book design"
+  },
+  {
+    "id": "book-teoria",
+    "description": "Programa ases de la mecánica",
+    "imageUrl": "https://picsum.photos/seed/book3/400/600",
+    "imageHint": "book professional"
+  },
+  {
+    "id": "book-experto",
+    "description": "Programa piloto experto",
+    "imageUrl": "https://picsum.photos/seed/book4/400/600",
+    "imageHint": "fast car"
   }
 ];
