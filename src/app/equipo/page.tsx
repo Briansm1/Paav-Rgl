@@ -12,7 +12,7 @@ const teamMembers = [
   {
     name: 'Brian',
     role: 'Instructor Principal y Fundador',
-    description: 'Especialista en mentalidad al volante y técnicas de conducción defensiva. Con más de 5 años formando conductores que hoy circulan con total autonomía y seguridad.',
+    description: 'Especialista en mentalidad al volante y técnicas de conducción defensiva. Con más de 5 años formando conductores que hoy circulan con completa autonomía y seguridad.',
     profileImg: PlaceHolderImages.find(img => img.id === 'instructor-brian-profile')?.imageUrl || '',
     certImg: PlaceHolderImages.find(img => img.id === 'instructor-brian-cert')?.imageUrl || '',
     specialties: ['Mentalidad de piloto', 'Estacionamiento de precisión', 'Gestión del miedo'],
