@@ -95,7 +95,7 @@ export default function EquipoPage() {
                     <div className="bg-gradient-to-br from-primary/10 to-transparent p-8 md:p-12 rounded-[2.5rem] border border-primary/20 shadow-lg">
                       <div className="flex flex-col gap-10">
                         <div className="w-full space-y-6">
-                          <h3 className="text-2xl md:text-3xl font-bold flex items-center gap-3">
+                          <h3 className="text-2xl font-bold flex items-center gap-3">
                             <Award className="w-7 h-7 text-gold" />
                             Certificación Profesional
                           </h3>
