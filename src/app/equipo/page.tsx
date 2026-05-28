@@ -1,12 +1,19 @@
 
-import React from 'react';
+import React from 'export default function EquipoPage()';
 import Image from 'next/image';
 import Link from 'next/link';
 import { Header } from '@/components/Header';
 import { Footer } from '@/components/Footer';
 import { Button } from '@/components/ui/button';
-import { ArrowLeft, Award, ShieldCheck, CheckCircle2 } from 'lucide-react';
+import { ArrowLeft, Award, ShieldCheck, CheckCircle2, Eye } from 'lucide-react';
 import { PlaceHolderImages } from '@/app/lib/placeholder-images';
+import {
+  Dialog,
+  DialogContent,
+  DialogTrigger,
+  DialogTitle,
+  DialogDescription,
+} from "@/components/ui/dialog";
 
 const teamMembers = [
   {
@@ -93,21 +100,32 @@ export default function EquipoPage() {
                     </div>
 
                     <div className="bg-gradient-to-br from-primary/10 to-transparent p-8 md:p-12 rounded-[2.5rem] border border-primary/20 shadow-lg">
-                      <div className="flex flex-col gap-10">
-                        <div className="w-full space-y-6">
-                          <h3 className="text-2xl font-bold flex items-center gap-3">
-                            <Award className="w-7 h-7 text-gold" />
-                            Certificación profesional
-                          </h3>
-                        </div>
-                        <div className="w-full relative aspect-[3/2] rounded-3xl overflow-hidden shadow-inner border border-white/10 bg-black/40">
-                          <Image 
-                            src={member.certImg} 
-                            alt={`Certificación de ${member.name}`} 
-                            fill 
-                            className="object-contain p-2"
-                          />
-                        </div>
+                      <div className="flex flex-col gap-8 items-center md:items-start">
+                        <h3 className="text-2xl font-bold flex items-center gap-3">
+                          <Award className="w-7 h-7 text-gold" />
+                          Certificación profesional
+                        </h3>
+                        
+                        <Dialog>
+                          <DialogTrigger asChild>
+                            <Button className="rounded-2xl bg-primary hover:bg-primary/90 text-white gap-3 font-bold px-10 h-16 text-lg shadow-xl shadow-primary/20 animate-heartbeat transition-all active:scale-95">
+                              <Eye className="w-6 h-6" />
+                              Ver
+                            </Button>
+                          </DialogTrigger>
+                          <DialogContent className="max-w-4xl p-2 bg-secondary/95 border-white/10 backdrop-blur-xl sm:rounded-[2.5rem]">
+                            <DialogTitle className="text-center font-bold text-xl py-4">Certificación profesional - {member.name}</DialogTitle>
+                            <DialogDescription className="sr-only">Imagen de la certificación profesional del instructor</DialogDescription>
+                            <div className="relative aspect-[3/2] w-full rounded-2xl overflow-hidden bg-black/40">
+                              <Image 
+                                src={member.certImg} 
+                                alt={`Certificación de ${member.name}`} 
+                                fill 
+                                className="object-contain"
+                              />
+                            </div>
+                          </DialogContent>
+                        </Dialog>
                       </div>
                     </div>
                   </div>
