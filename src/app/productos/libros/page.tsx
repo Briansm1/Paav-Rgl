@@ -21,13 +21,13 @@ const digitalBooks = [
   },
   {
     id: 'book-maniobras',
-    title: 'Maniobras Maestras',
+    title: 'Programa aprobado a la primera',
     price: '$12.499',
     description: 'Dominá el estacionamiento y las maniobras más complejas con nuestra técnica de precisión. Incluye gráficos detallados.',
     longDescription: '¿Estacionar es tu pesadilla? En este e-book desglosamos cada maniobra de estacionamiento (paralelo, a 45° y 90°) con puntos de referencia exactos y trucos de instructor que no te enseñan en otros lados. Ganá precisión milimétrica.',
     features: ['Estacionamiento perfecto', 'Giros en espacios reducidos', 'Uso de espejos'],
     imageUrl: PlaceHolderImages.find(img => img.id === 'book-maniobras')?.imageUrl || '',
-    whatsappLink: "https://wa.me/5492966265603?text=Hola!%20Quiero%20comprar%20el%20libro%20*Maniobras%20Maestras*"
+    whatsappLink: "https://wa.me/5492966265603?text=Hola!%20Quiero%20comprar%20el%20libro%20*Programa%20aprobado%20a%20la%20primera*"
   },
   {
     id: 'book-teoria',
@@ -47,9 +47,9 @@ export default function LibrosDigitalesPage() {
       <Header />
       
       {/* Header Section - Balanced margins to match plans and team sections */}
-      <section className="pt-24 pb-4 md:pt-32 md:pb-10 bg-secondary/30 border-b border-white/5 flex items-center justify-center">
+      <section className="pt-24 pb-6 md:pt-32 md:pb-6 bg-secondary/30 border-b border-white/5 flex items-center justify-center">
         <div className="container mx-auto px-4 text-center">
-          <Link href="/#inicio" className="inline-flex items-center gap-2 text-primary font-bold mb-4 hover:underline">
+          <Link href="/#inicio" className="inline-flex items-center gap-2 text-primary font-bold mb-3 hover:underline">
             <ArrowLeft className="w-4 h-4" />
             Volver al inicio
           </Link>
@@ -120,7 +120,7 @@ export default function LibrosDigitalesPage() {
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto bg-black/40 p-10 md:p-16 rounded-[3rem] border border-white/10 shadow-2xl text-center">
             <div className="inline-flex p-5 bg-primary/10 rounded-3xl mb-8">
-              <Book className="w-12 h-12 text-primary" />
+              < Book className="w-12 h-12 text-primary" />
             </div>
             <h2 className="text-3xl md:text-4xl font-bold mb-6">¿Por qué elegir nuestros libros?</h2>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8 text-left mt-10">
@@ -149,3 +149,4 @@ export default function LibrosDigitalesPage() {
     </main>
   );
 }
+
