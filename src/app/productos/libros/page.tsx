@@ -11,13 +11,13 @@ import { PlaceHolderImages } from '@/app/lib/placeholder-images';
 const digitalBooks = [
   {
     id: 'book-novato',
-    title: 'Guía del Conductor Novato',
+    title: 'Programa conductor seguro',
     price: '$9.999',
     description: 'El manual esencial para quienes están dando sus primeros pasos. Enfoque en mentalidad, gestión del miedo y los pilares básicos del control del vehículo.',
     longDescription: 'Este libro digital te llevará de la mano en el proceso de perder el miedo al volante. Descubrirás técnicas psicológicas para mantener la calma y una guía paso a paso sobre los fundamentos técnicos que todo conductor principiante debe dominar antes de salir a la calle.',
     features: ['Control emocional', 'Fundamentos técnicos', 'Checklist pre-conducción'],
     imageUrl: PlaceHolderImages.find(img => img.id === 'book-novato')?.imageUrl || '',
-    whatsappLink: "https://wa.me/5492966265603?text=Hola!%20Quiero%20comprar%20el%20libro%20*Guía%20del%20Conductor%20Novato*"
+    whatsappLink: "https://wa.me/5492966265603?text=Hola!%20Quiero%20comprar%20el%20libro%20*Programa%20conductor%20seguro*"
   },
   {
     id: 'book-maniobras',
