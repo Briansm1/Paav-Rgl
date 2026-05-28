@@ -1,4 +1,6 @@
 
+'use client';
+
 import React from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
@@ -42,7 +44,7 @@ const digitalBooks = [
   {
     id: 'book-experto',
     title: 'Programa ases de la teoría',
-    price: '$14.999',
+    price: '$13.999',
     description: 'Más que leyes, situaciones reales. La guía definitiva para aprobar el examen teórico y conducir con conocimiento real de la calle.',
     longDescription: 'Olvidate de memorizar leyes aburridas. Este manual te enseña el marco legal aplicado a situaciones cotidianas del tráfico. Es la herramienta definitiva para aprobar el examen teórico y conducir con conocimiento real de tus derechos y obligaciones.',
     features: ['Simulacros de examen', 'Normativas locales', 'Seguridad vial'],
