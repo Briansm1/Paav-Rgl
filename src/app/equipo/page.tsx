@@ -83,7 +83,7 @@ export default function EquipoPage() {
                       <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                         <div className="flex items-start gap-4">
                           <CheckCircle2 className="w-5 h-5 text-primary shrink-0 mt-1" />
-                          <p className="text-foreground/90 font-medium">Instructor Certificado con aval nacional</p>
+                          <p className="text-foreground/90 font-medium">Instructor certificado con aval nacional</p>
                         </div>
                         <div className="flex items-start gap-4">
                           <CheckCircle2 className="w-5 h-5 text-primary shrink-0 mt-1" />
