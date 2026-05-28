@@ -31,13 +31,13 @@ const digitalBooks = [
   },
   {
     id: 'book-teoria',
-    title: 'Teoría Vial Aplicada',
+    title: 'Programa ases de la mecánica',
     price: '$8.999',
     description: 'Más que leyes, situaciones reales. Preparate para el examen teórico y para entender la calle con una mirada profesional.',
     longDescription: 'Olvidate de memorizar leyes aburridas. Este manual te enseña el marco legal aplicado a situaciones cotidianas del tráfico en Río Gallegos. Es la herramienta definitiva para aprobar el examen teórico y conducir con conocimiento real de tus derechos y obligaciones.',
     features: ['Simulacros de examen', 'Normativas locales', 'Seguridad vial'],
     imageUrl: PlaceHolderImages.find(img => img.id === 'book-teoria')?.imageUrl || '',
-    whatsappLink: "https://wa.me/5492966265603?text=Hola!%20Quiero%20comprar%20el%20libro%20*Teoría%20Vial%20Aplicada*"
+    whatsappLink: "https://wa.me/5492966265603?text=Hola!%20Quiero%20comprar%20el%20libro%20*Programa%20ases%20de%20la%20mecánica*"
   }
 ];
 
@@ -149,4 +149,3 @@ export default function LibrosDigitalesPage() {
     </main>
   );
 }
-
