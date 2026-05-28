@@ -232,7 +232,7 @@ export const PlaceHolderImages: ImagePlaceholder[] = [
   {
     "id": "book-novato",
     "description": "Programa conductor seguro",
-    "imageUrl": "https://picsum.photos/seed/book1/400/600",
+    "imageUrl": "https://i.imgur.com/eF51yhR.png",
     "imageHint": "book cover"
   },
   {
@@ -249,8 +249,8 @@ export const PlaceHolderImages: ImagePlaceholder[] = [
   },
   {
     "id": "book-experto",
-    "description": "Programa piloto experto",
+    "description": "Programa ases de la teoría",
     "imageUrl": "https://picsum.photos/seed/book4/400/600",
-    "imageHint": "fast car"
+    "imageHint": "book theory"
   }
 ];
