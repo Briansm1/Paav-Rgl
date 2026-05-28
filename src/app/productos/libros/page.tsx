@@ -33,21 +33,21 @@ const digitalBooks = [
     id: 'book-teoria',
     title: 'Programa ases de la mecánica',
     price: '$8.999',
-    description: 'Más que leyes, situaciones reales. Preparate para el examen teórico y para entender la calle con una mirada profesional.',
-    longDescription: 'Olvidate de memorizar leyes aburridas. Este manual te enseña el marco legal aplicado a situaciones cotidianas del tráfico en Río Gallegos. Es la herramienta definitiva para aprobar el examen teórico y conducir con conocimiento real de tus derechos y obligaciones.',
-    features: ['Simulacros de examen', 'Normativas locales', 'Seguridad vial'],
+    description: 'Aprendé lo esencial sobre el cuidado de tu vehículo: fluidos, neumáticos y mantenimiento preventivo para evitar problemas.',
+    longDescription: 'En este manual práctico aprenderás a identificar los componentes vitales de tu auto. Desde cómo revisar el aceite y el refrigerante hasta el cambio correcto de un neumático. Es la guía indispensable para que nunca te quedes a pie.',
+    features: ['Mantenimiento preventivo', 'Cambio de neumáticos', 'Fluidos y niveles'],
     imageUrl: PlaceHolderImages.find(img => img.id === 'book-teoria')?.imageUrl || '',
     whatsappLink: "https://wa.me/5492966265603?text=Hola!%20Quiero%20comprar%20el%20libro%20*Programa%20ases%20de%20la%20mecánica*"
   },
   {
     id: 'book-experto',
-    title: 'Programa piloto experto',
+    title: 'Programa ases de la teoría',
     price: '$14.999',
-    description: 'Dominá la conducción en condiciones adversas: lluvia, noche y rutas de montaña. El nivel definitivo de seguridad vial.',
-    longDescription: 'Este programa avanzado está diseñado para conductores que buscan la excelencia. Aprenderás técnicas de conducción defensiva extrema, cómo reaccionar ante imprevistos climáticos y los secretos para dominar la ruta con la mentalidad de un piloto profesional.',
-    features: ['Conducción nocturna', 'Gestión de riesgos', 'Técnicas de ruta'],
+    description: 'Más que leyes, situaciones reales. La guía definitiva para aprobar el examen teórico y conducir con conocimiento real de la calle.',
+    longDescription: 'Olvidate de memorizar leyes aburridas. Este manual te enseña el marco legal aplicado a situaciones cotidianas del tráfico. Es la herramienta definitiva para aprobar el examen teórico y conducir con conocimiento real de tus derechos y obligaciones.',
+    features: ['Simulacros de examen', 'Normativas locales', 'Seguridad vial'],
     imageUrl: PlaceHolderImages.find(img => img.id === 'book-experto')?.imageUrl || '',
-    whatsappLink: "https://wa.me/5492966265603?text=Hola!%20Quiero%20comprar%20el%20libro%20*Programa%20piloto%20experto*"
+    whatsappLink: "https://wa.me/5492966265603?text=Hola!%20Quiero%20comprar%20el%20libro%20*Programa%20ases%20de%20la%20teoría*"
   }
 ];
 
