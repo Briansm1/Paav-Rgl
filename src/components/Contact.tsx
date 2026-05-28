@@ -289,7 +289,7 @@ export const Contact = () => {
                     <Mail className="w-5 h-5 md:w-6 md:h-6 text-primary" />
                   </div>
                   <div className="overflow-hidden">
-                    <p className="font-bold text-base md:text-lg mb-1">Email directo</p>
+                    <p className="font-bold text-base md:text-lg mb-1">Email</p>
                     <a 
                       href={`mailto:${academyEmail}`}
                       className="text-sm md:text-base text-muted-foreground font-medium hover:text-primary transition-colors no-underline break-words block"
