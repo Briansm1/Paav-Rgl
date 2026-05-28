@@ -5,7 +5,7 @@ import Link from 'next/link';
 import { Header } from '@/components/Header';
 import { Footer } from '@/components/Footer';
 import { Button } from '@/components/ui/button';
-import { ArrowLeft, Book, ShoppingCart, Info, Star } from 'lucide-react';
+import { ArrowLeft, Book, Star } from 'lucide-react';
 import { PlaceHolderImages } from '@/app/lib/placeholder-images';
 
 const digitalBooks = [
@@ -108,13 +108,11 @@ export default function LibrosDigitalesPage() {
                   <div className="flex flex-col gap-3">
                     <a href={book.whatsappLink} target="_blank" rel="noopener noreferrer" className="w-full">
                       <Button className="w-full h-12 rounded-xl bg-green-600 hover:bg-green-700 text-white font-bold gap-2 transition-colors border-none">
-                        <ShoppingCart className="w-4 h-4" />
                         Comprar ahora
                       </Button>
                     </a>
                     <Link href={`#${book.id}`} className="w-full">
                       <Button variant="outline" className="w-full h-12 rounded-xl border-white/10 text-slate-300 hover:bg-white/5 gap-2">
-                        <Info className="w-4 h-4" />
                         Ver más
                       </Button>
                     </Link>
