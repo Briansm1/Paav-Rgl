@@ -212,7 +212,7 @@ export const Contact = () => {
                         <Info className="w-4 h-4 text-primary" />
                       </div>
                       <p className="text-xs md:text-sm text-foreground/80 leading-relaxed font-medium">
-                        <strong>No olvides adjuntar la foto:</strong> Cuando se abra tu e-mail, recordá adjuntar la foto de tu licencia para que podamos compartir tu logro.
+                        <strong>Importante:</strong> Cuando se abra tu e-mail, recordá adjuntar la foto de tu licencia para que podamos compartir tu logro.
                       </p>
                     </div>
                     
