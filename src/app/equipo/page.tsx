@@ -7,13 +7,6 @@ import { Footer } from '@/components/Footer';
 import { Button } from '@/components/ui/button';
 import { ArrowLeft, Award, ShieldCheck, CheckCircle2, Eye } from 'lucide-react';
 import { PlaceHolderImages } from '@/app/lib/placeholder-images';
-import {
-  Dialog,
-  DialogContent,
-  DialogTrigger,
-  DialogTitle,
-  DialogDescription,
-} from "@/components/ui/dialog";
 
 const teamMembers = [
   {
@@ -21,7 +14,7 @@ const teamMembers = [
     role: 'Instructor Principal y Fundador',
     description: 'Especialista en mentalidad al volante y técnicas de conducción defensiva. Con más de 5 años formando conductores que hoy circulan con completa autonomía y seguridad.',
     profileImg: PlaceHolderImages.find(img => img.id === 'instructor-brian-profile')?.imageUrl || '',
-    certImg: PlaceHolderImages.find(img => img.id === 'instructor-brian-cert')?.imageUrl || '',
+    certUrl: 'https://drive.google.com/file/d/1V6xtlebZbeOtOUkfx6eshNXJAywFtkh2/view?usp=sharing',
     specialties: ['MENTALIDAD DE PILOTO', 'ESTACIONAMIENTO DE PRECISIÓN', 'GESTIÓN DEL MIEDO'],
   }
 ];
@@ -107,26 +100,17 @@ export default function EquipoPage() {
                           Certificación profesional
                         </h3>
                         
-                        <Dialog>
-                          <DialogTrigger asChild>
-                            <Button className="rounded-2xl bg-primary hover:bg-primary/90 text-white gap-3 font-bold px-10 h-16 text-lg transition-all active:scale-95">
-                              <Eye className="w-6 h-6" />
-                              Ver
-                            </Button>
-                          </DialogTrigger>
-                          <DialogContent className="max-w-4xl p-0 bg-secondary/95 border-white/10 backdrop-blur-xl sm:rounded-[2.5rem] overflow-hidden">
-                            <DialogTitle className="text-center font-bold text-xl py-4 text-white">Certificación profesional - {member.name}</DialogTitle>
-                            <DialogDescription className="sr-only">Imagen de la certificación profesional del instructor</DialogDescription>
-                            <div className="relative aspect-[3/2] w-full bg-black/40">
-                              <Image 
-                                src={member.certImg} 
-                                alt={`Certificación de ${member.name}`} 
-                                fill 
-                                className="object-contain"
-                              />
-                            </div>
-                          </DialogContent>
-                        </Dialog>
+                        <a 
+                          href={member.certUrl} 
+                          target="_blank" 
+                          rel="noopener noreferrer"
+                          className="no-underline"
+                        >
+                          <Button className="rounded-2xl bg-primary hover:bg-primary/90 text-white gap-3 font-bold px-10 h-16 text-lg transition-all active:scale-95 shadow-none border-none">
+                            <Eye className="w-6 h-6" />
+                            Ver
+                          </Button>
+                        </a>
                       </div>
                     </div>
                   </div>
