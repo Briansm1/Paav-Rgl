@@ -123,7 +123,7 @@ export default function EquipoPage() {
 
       <section className="py-20 bg-secondary/20 border-t border-white/5">
         <div className="container mx-auto px-4 text-center max-w-3xl">
-          <h2 className="text-3xl md:text-4xl font-bold mb-6">¿Listo para empezar tus clases?</h2>
+          <h2 className="text-3xl md:text-4xl font-bold mb-6">Es hora de poner primera...</h2>
           <p className="text-muted-foreground text-lg mb-10">
             Sumate a la academia N°1 de la región y aprendé con profesionales que realmente se preocupan por tu progreso.
           </p>
