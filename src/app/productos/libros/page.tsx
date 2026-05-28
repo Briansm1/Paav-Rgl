@@ -46,14 +46,14 @@ export default function LibrosDigitalesPage() {
     <main className="min-h-screen bg-background">
       <Header />
       
-      {/* Header Section */}
-      <section className="pt-24 pb-6 md:pt-32 md:pb-10 bg-secondary/30 border-b border-white/5 flex items-center justify-center">
+      {/* Header Section - Balanced margins to match plans and team sections */}
+      <section className="pt-24 pb-4 md:pt-32 md:pb-10 bg-secondary/30 border-b border-white/5 flex items-center justify-center">
         <div className="container mx-auto px-4 text-center">
-          <Link href="/#inicio" className="inline-flex items-center gap-2 text-primary font-bold mb-3 hover:underline">
+          <Link href="/#inicio" className="inline-flex items-center gap-2 text-primary font-bold mb-4 hover:underline">
             <ArrowLeft className="w-4 h-4" />
             Volver al inicio
           </Link>
-          <h1 className="text-3xl md:text-5xl font-bold font-headline mb-0 text-white">
+          <h1 className="text-3xl md:text-5xl font-bold font-headline mb-0 text-white text-center">
             Nuestros <span className="text-primary">libros digitales</span>
           </h1>
         </div>
@@ -96,7 +96,7 @@ export default function LibrosDigitalesPage() {
 
                   <div className="flex flex-col gap-3">
                     <a href={book.whatsappLink} target="_blank" rel="noopener noreferrer" className="w-full">
-                      <Button className="w-full h-12 rounded-xl bg-primary hover:bg-primary/90 text-white font-bold gap-2">
+                      <Button className="w-full h-12 rounded-xl bg-green-600 hover:bg-green-700 text-white font-bold gap-2 transition-colors border-none">
                         <ShoppingCart className="w-4 h-4" />
                         Comprar ahora
                       </Button>
