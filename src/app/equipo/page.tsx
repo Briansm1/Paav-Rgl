@@ -21,7 +21,7 @@ const teamMembers = [
     role: 'Instructor Principal y Fundador',
     description: 'Especialista en mentalidad al volante y técnicas de conducción defensiva. Con más de 5 años formando conductores que hoy circulan con completa autonomía y seguridad.',
     profileImg: PlaceHolderImages.find(img => img.id === 'instructor-brian-profile')?.imageUrl || '',
-    certImg: 'https://i.imgur.com/Cz0exuI.png',
+    certImg: 'https://i.imgur.com/afhDn7N.png',
     specialties: ['MENTALIDAD DE PILOTO', 'ESTACIONAMIENTO DE PRECISIÓN', 'GESTIÓN DEL MIEDO'],
   }
 ];
@@ -113,10 +113,10 @@ export default function EquipoPage() {
                               Ver
                             </Button>
                           </DialogTrigger>
-                          <DialogContent className="max-w-4xl p-2 bg-secondary/95 border-white/10 backdrop-blur-xl sm:rounded-[2.5rem]">
+                          <DialogContent className="max-w-4xl p-0 bg-secondary/95 border-white/10 backdrop-blur-xl sm:rounded-[2.5rem] overflow-hidden">
                             <DialogTitle className="text-center font-bold text-xl py-4">Certificación profesional - {member.name}</DialogTitle>
                             <DialogDescription className="sr-only">Imagen de la certificación profesional del instructor</DialogDescription>
-                            <div className="relative aspect-[3/2] w-full rounded-2xl overflow-hidden bg-black/40">
+                            <div className="relative aspect-[3/2] w-full bg-black/40">
                               <Image 
                                 src={member.certImg} 
                                 alt={`Certificación de ${member.name}`} 
