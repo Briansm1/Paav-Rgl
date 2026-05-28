@@ -1,5 +1,5 @@
 
-import React from 'export default function EquipoPage()';
+import React from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
 import { Header } from '@/components/Header';
@@ -22,7 +22,7 @@ const teamMembers = [
     description: 'Especialista en mentalidad al volante y técnicas de conducción defensiva. Con más de 5 años formando conductores que hoy circulan con completa autonomía y seguridad.',
     profileImg: PlaceHolderImages.find(img => img.id === 'instructor-brian-profile')?.imageUrl || '',
     certImg: 'https://i.imgur.com/Cz0exuI.png',
-    specialties: ['Mentalidad de piloto', 'Estacionamiento de precisión', 'Gestión del miedo'],
+    specialties: ['MENTALIDAD DE PILOTO', 'ESTACIONAMIENTO DE PRECISIÓN', 'GESTIÓN DEL MIEDO'],
   }
 ];
 
@@ -108,7 +108,7 @@ export default function EquipoPage() {
                         
                         <Dialog>
                           <DialogTrigger asChild>
-                            <Button className="rounded-2xl bg-primary hover:bg-primary/90 text-white gap-3 font-bold px-10 h-16 text-lg shadow-xl shadow-primary/20 animate-heartbeat transition-all active:scale-95">
+                            <Button className="rounded-2xl bg-primary hover:bg-primary/90 text-white gap-3 font-bold px-10 h-16 text-lg transition-all active:scale-95">
                               <Eye className="w-6 h-6" />
                               Ver
                             </Button>
