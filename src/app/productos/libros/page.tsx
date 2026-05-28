@@ -12,7 +12,7 @@ const digitalBooks = [
   {
     id: 'book-novato',
     title: 'Programa conductor seguro',
-    price: '$9.999',
+    price: '$17.999',
     description: 'El manual esencial para quienes están dando sus primeros pasos. Enfoque en mentalidad, gestión del miedo y los pilares básicos del control del vehículo.',
     longDescription: 'Este libro digital te llevará de la mano en el proceso de perder el miedo al volante. Descubrirás técnicas psicológicas para mantener la calma y una guía paso a paso sobre los fundamentos técnicos que todo conductor principiante debe dominar antes de salir a la calle.',
     features: ['Control emocional', 'Fundamentos técnicos', 'Checklist pre-conducción'],
