@@ -222,6 +222,24 @@
       "description": "Certificación Brian",
       "imageUrl": "https://i.imgur.com/Cz0exuI.png",
       "imageHint": "certificate"
+    },
+    {
+      "id": "book-novato",
+      "description": "Guía del Conductor Novato",
+      "imageUrl": "https://picsum.photos/seed/book1/400/600",
+      "imageHint": "book cover"
+    },
+    {
+      "id": "book-maniobras",
+      "description": "Maniobras Maestras",
+      "imageUrl": "https://picsum.photos/seed/book2/400/600",
+      "imageHint": "book design"
+    },
+    {
+      "id": "book-teoria",
+      "description": "Teoría Vial Aplicada",
+      "imageUrl": "https://picsum.photos/seed/book3/400/600",
+      "imageHint": "book professional"
     }
   ]
 }

@@ -1,3 +1,4 @@
+
 "use client";
 
 import React, { useState, useEffect } from 'react';
@@ -60,7 +61,7 @@ export const Header = () => {
   ];
 
   const productLinks = [
-    { name: 'Libros digitales', href: '/#productos-libros', icon: <Book className="w-4 h-4" /> },
+    { name: 'Libros digitales', href: '/productos/libros', icon: <Book className="w-4 h-4" /> },
     { name: 'Cursos online', href: '/#productos-cursos', icon: <Laptop className="w-4 h-4" /> },
   ];
 
@@ -158,9 +159,11 @@ export const Header = () => {
                       <span className="text-white group-focus:text-white">{product.icon}</span>
                       <span className="font-bold text-sm">{product.name}</span>
                     </div>
-                    <Badge variant="outline" className="text-[8px] h-4 px-1.5 border-primary/50 text-primary uppercase font-black tracking-tighter shrink-0 group-focus:border-white/50 group-focus:text-white">
-                      Próximamente
-                    </Badge>
+                    {product.name === 'Cursos online' && (
+                      <Badge variant="outline" className="text-[8px] h-4 px-1.5 border-primary/50 text-primary uppercase font-black tracking-tighter shrink-0 group-focus:border-white/50 group-focus:text-white">
+                        Próximamente
+                      </Badge>
+                    )}
                   </Link>
                 </DropdownMenuItem>
               ))}
@@ -250,9 +253,11 @@ export const Header = () => {
                     {product.icon}
                     {product.name}
                   </Link>
-                  <Badge variant="outline" className="text-[10px] h-5 px-2 border-primary/50 text-primary uppercase font-black">
-                    Próximamente
-                  </Badge>
+                  {product.name === 'Cursos online' && (
+                    <Badge variant="outline" className="text-[10px] h-5 px-2 border-primary/50 text-primary uppercase font-black">
+                      Próximamente
+                    </Badge>
+                  )}
                 </div>
               ))}
             </div>
