@@ -25,13 +25,13 @@ export default function EquipoPage() {
       <Header />
       
       {/* Header Section with balanced padding for centering */}
-      <section className="pt-24 pb-12 md:pt-32 md:pb-16 bg-secondary/30 border-b border-white/5 flex items-center justify-center">
+      <section className="pt-24 pb-8 md:pt-32 md:pb-10 bg-secondary/30 border-b border-white/5 flex items-center justify-center">
         <div className="container mx-auto px-4 text-center">
           <Link href="/#inicio" className="inline-flex items-center gap-2 text-primary font-bold mb-3 hover:underline">
             <ArrowLeft className="w-4 h-4" />
             Volver al inicio
           </Link>
-          <h1 className="text-3xl md:text-5xl font-bold font-headline mb-0 text-foreground">
+          <h1 className="text-3xl md:text-5xl font-bold font-headline mb-0 text-foreground text-center">
             Nuestro <span className="text-primary">equipo</span>
           </h1>
         </div>
