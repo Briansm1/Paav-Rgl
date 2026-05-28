@@ -14,7 +14,7 @@ const teamMembers = [
     role: 'Instructor Principal y Fundador',
     description: 'Especialista en mentalidad al volante y técnicas de conducción defensiva. Con más de 5 años formando conductores que hoy circulan con completa autonomía y seguridad.',
     profileImg: PlaceHolderImages.find(img => img.id === 'instructor-brian-profile')?.imageUrl || '',
-    certImg: PlaceHolderImages.find(img => img.id === 'instructor-brian-cert')?.imageUrl || '',
+    certImg: 'https://i.imgur.com/Cz0exuI.png',
     specialties: ['Mentalidad de piloto', 'Estacionamiento de precisión', 'Gestión del miedo'],
   }
 ];
@@ -93,19 +93,19 @@ export default function EquipoPage() {
                     </div>
 
                     <div className="bg-gradient-to-br from-primary/10 to-transparent p-8 md:p-12 rounded-[2.5rem] border border-primary/20 shadow-lg">
-                      <div className="flex flex-col md:flex-row gap-8 items-center">
-                        <div className="w-full md:w-1/2 space-y-6">
-                          <h3 className="text-2xl font-bold flex items-center gap-3">
-                            <Award className="w-6 h-6 text-gold" />
+                      <div className="flex flex-col gap-10">
+                        <div className="w-full space-y-6">
+                          <h3 className="text-2xl md:text-3xl font-bold flex items-center gap-3">
+                            <Award className="w-7 h-7 text-gold" />
                             Certificación Profesional
                           </h3>
                         </div>
-                        <div className="w-full md:w-1/2 relative aspect-[4/3] rounded-2xl overflow-hidden shadow-inner border border-white/10 bg-black/40">
+                        <div className="w-full relative aspect-[16/10] md:aspect-[21/9] rounded-3xl overflow-hidden shadow-inner border border-white/10 bg-black/40">
                           <Image 
                             src={member.certImg} 
                             alt={`Certificación de ${member.name}`} 
                             fill 
-                            className="object-contain p-2"
+                            className="object-contain p-4 md:p-8"
                           />
                         </div>
                       </div>
