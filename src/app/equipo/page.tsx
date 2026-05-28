@@ -97,7 +97,7 @@ export default function EquipoPage() {
                         <div className="w-full space-y-6">
                           <h3 className="text-2xl font-bold flex items-center gap-3">
                             <Award className="w-7 h-7 text-gold" />
-                            Certificación Profesional
+                            Certificación profesional
                           </h3>
                         </div>
                         <div className="w-full relative aspect-[3/2] rounded-3xl overflow-hidden shadow-inner border border-white/10 bg-black/40">
