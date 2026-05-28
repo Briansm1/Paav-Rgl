@@ -53,12 +53,11 @@ const services = [
 export const Services = () => {
   return (
     <section id="servicios" className="relative py-24 md:py-36 bg-background">
-      {/* Top and Bottom fades - Extra large for seamless transition from Hero */}
       <div className="absolute top-0 left-0 right-0 h-64 bg-gradient-to-b from-background via-background/80 to-transparent pointer-events-none z-10"></div>
       <div className="absolute bottom-0 left-0 right-0 h-32 bg-gradient-to-t from-background via-background/50 to-transparent pointer-events-none z-10"></div>
       
       <div className="container mx-auto px-4 md:px-6 relative z-10">
-        <div className="text-center max-w-4xl mx-auto mb-16 md:mb-24">
+        <div className="text-center max-w-4xl mx-auto mb-16 md:mb-24 px-4">
           <span className="inline-block px-4 py-1.5 mb-6 text-xs font-bold tracking-widest text-primary uppercase bg-primary/10 rounded-full">
             ¿Qué podemos ofrecerte?
           </span>
@@ -70,7 +69,7 @@ export const Services = () => {
           </p>
         </div>
 
-        <div className="max-w-7xl mx-auto flex justify-center">
+        <div className="max-w-7xl mx-auto">
           <Carousel
             opts={{
               align: "start",
@@ -82,8 +81,8 @@ export const Services = () => {
               {services.map((service, index) => {
                 const img = PlaceHolderImages.find(p => p.id === service.imgId) || PlaceHolderImages[0];
                 return (
-                  <CarouselItem key={index} className="pl-4 md:pl-8 lg:pl-12 basis-[85%] sm:basis-1/2 lg:basis-1/3">
-                    <Card className="h-full group relative overflow-hidden border-none bg-secondary shadow-xl hover:shadow-2xl transition-all duration-500 rounded-[2rem]">
+                  <CarouselItem key={index} className="pl-4 md:pl-8 lg:pl-12 basis-[85%] sm:basis-1/2 lg:basis-1/3 py-4">
+                    <Card className="h-full group relative overflow-hidden border-none bg-secondary shadow-xl hover:shadow-2xl transition-all duration-500 rounded-[2.5rem]">
                       <div className="relative aspect-square overflow-hidden bg-black">
                         <Image 
                           src={img?.imageUrl || ''} 
@@ -110,6 +109,10 @@ export const Services = () => {
                 );
               })}
             </CarouselContent>
+            
+            <div className="md:hidden text-center mt-6 text-[10px] text-muted-foreground uppercase tracking-[0.2em] font-black animate-pulse">
+              Desliza para ver nuestros pilares →
+            </div>
           </Carousel>
         </div>
 

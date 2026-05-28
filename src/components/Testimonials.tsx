@@ -81,14 +81,13 @@ export const Testimonials = () => {
 
   return (
     <section id="testimonios" className="relative py-24 md:py-36 overflow-hidden">
-      {/* Background with soft transitions */}
       <div className="absolute inset-0 bg-secondary/30 z-0">
         <div className="absolute top-0 left-0 right-0 h-48 bg-gradient-to-b from-background via-background/60 to-transparent"></div>
         <div className="absolute bottom-0 left-0 right-0 h-48 bg-gradient-to-t from-background via-background/60 to-transparent"></div>
       </div>
 
       <div className="container mx-auto px-4 relative z-10">
-        <div className="text-center mb-16 md:mb-20">
+        <div className="text-center mb-16 md:mb-20 px-4">
           <span className="inline-block px-4 py-1.5 mb-6 text-xs font-bold tracking-widest text-accent uppercase bg-accent/10 rounded-full border border-accent/20">
             Casos de éxito
           </span>
@@ -111,8 +110,8 @@ export const Testimonials = () => {
                 const headerImg = t.headerImageId ? PlaceHolderImages.find(p => p.id === t.headerImageId) : null;
                 
                 return (
-                  <CarouselItem key={index} className="pl-4 basis-full sm:basis-1/2 lg:basis-1/3 py-4">
-                    <Card className="h-full border-none shadow-lg rounded-[2.5rem] bg-card border border-white/5 relative overflow-hidden flex flex-col group transition-all duration-300">
+                  <CarouselItem key={index} className="pl-4 basis-[85%] sm:basis-1/2 lg:basis-1/3 py-4">
+                    <Card className="h-full border-none shadow-xl rounded-[2.5rem] bg-card border border-white/5 relative overflow-hidden flex flex-col group transition-all duration-300 hover:shadow-2xl">
                       {headerImg && (
                         <div className="relative aspect-[16/10] w-full overflow-hidden border-b border-white/5">
                           <Image 
@@ -170,8 +169,8 @@ export const Testimonials = () => {
               ))}
             </div>
 
-            <div className="md:hidden text-center mt-4 text-[10px] text-muted-foreground uppercase tracking-widest font-bold animate-pulse">
-              Desliza para ver más →
+            <div className="md:hidden text-center mt-6 text-[10px] text-muted-foreground uppercase tracking-[0.2em] font-black animate-pulse">
+              Desliza para ver más referencias →
             </div>
           </Carousel>
         </div>

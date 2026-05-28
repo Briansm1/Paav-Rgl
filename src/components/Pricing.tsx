@@ -31,10 +31,10 @@ const plans = [
 ];
 
 const fontStyles = [
-  "italic font-serif", // Cursiva
-  "font-body font-bold", // Poppins
-  "font-montserrat font-black uppercase tracking-widest", // Montserrat
-  "font-code font-medium tracking-tighter" // Mono
+  "italic font-serif", 
+  "font-body font-bold", 
+  "font-montserrat font-black uppercase tracking-widest", 
+  "font-code font-medium tracking-tighter"
 ];
 
 export const Pricing = () => {
@@ -51,7 +51,6 @@ export const Pricing = () => {
 
   return (
     <section id="planes" className="relative pt-20 pb-8 md:pt-32 md:pb-12 bg-background overflow-hidden">
-      {/* Top and Bottom fades */}
       <div className="absolute top-0 left-0 right-0 h-32 bg-gradient-to-b from-background via-background/50 to-transparent pointer-events-none z-10"></div>
       <div className="absolute bottom-0 left-0 right-0 h-32 bg-gradient-to-t from-background via-background/50 to-transparent pointer-events-none z-10"></div>
 
@@ -77,40 +76,46 @@ export const Pricing = () => {
           </p>
         </div>
 
-        <div className="flex flex-row md:grid md:grid-cols-3 gap-6 md:gap-8 max-w-7xl mx-auto overflow-x-auto md:overflow-x-visible pb-8 md:pb-0 snap-x snap-mandatory scrollbar-hide px-2 md:px-0">
-          {plans.map((plan, index) => (
-            <div 
-              key={index} 
-              className={cn(
-                "relative p-8 rounded-[2.5rem] border-2 bg-secondary shadow-xl transition-all duration-500 flex flex-col items-center text-center group overflow-hidden border-white/5",
-                "min-w-[280px] md:min-w-0 snap-center"
-              )}
-            >
-              <div className="absolute top-0 right-0 bg-accent text-white px-6 py-1.5 rounded-bl-2xl text-[10px] font-bold uppercase tracking-widest">
-                {plan.badge}
-              </div>
-              
-              <div className="mb-8 relative z-10 w-full">
-                <h4 className="text-2xl font-bold mb-4 text-foreground tracking-tight">{plan.name}</h4>
-                <div className="flex items-center justify-center gap-2 mb-4">
-                  <span className="text-3xl font-bold tracking-tight text-green-500">{plan.price}</span>
+        <div className="max-w-7xl mx-auto">
+          <div className="flex flex-row md:grid md:grid-cols-3 gap-6 md:gap-8 overflow-x-auto md:overflow-x-visible pb-8 md:pb-0 snap-x snap-mandatory scrollbar-hide px-2 md:px-0">
+            {plans.map((plan, index) => (
+              <div 
+                key={index} 
+                className={cn(
+                  "relative p-8 rounded-[2.5rem] border-2 bg-secondary shadow-xl transition-all duration-500 flex flex-col items-center text-center group overflow-hidden border-white/5",
+                  "min-w-[85%] sm:min-w-[280px] md:min-w-0 snap-center"
+                )}
+              >
+                <div className="absolute top-0 right-0 bg-accent text-white px-6 py-1.5 rounded-bl-2xl text-[10px] font-bold uppercase tracking-widest">
+                  {plan.badge}
                 </div>
-                <p className="text-muted-foreground text-sm leading-relaxed font-medium mb-6">{plan.description}</p>
-              </div>
+                
+                <div className="mb-8 relative z-10 w-full">
+                  <h4 className="text-2xl font-bold mb-4 text-foreground tracking-tight">{plan.name}</h4>
+                  <div className="flex items-center justify-center gap-2 mb-4">
+                    <span className="text-3xl font-bold tracking-tight text-green-500">{plan.price}</span>
+                  </div>
+                  <p className="text-muted-foreground text-sm leading-relaxed font-medium mb-6">{plan.description}</p>
+                </div>
 
-              <div className="mt-auto relative z-10 w-full px-2">
-                <Link href={plan.href} className="w-full">
-                  <Button 
-                    className={cn(
-                      "w-full h-14 rounded-2xl text-base font-bold transition-all active:scale-95 shadow-lg bg-primary hover:bg-primary/90 text-white animate-heartbeat"
-                    )}
-                  >
-                    Conocer los planes
-                  </Button>
-                </Link>
+                <div className="mt-auto relative z-10 w-full px-2">
+                  <Link href={plan.href} className="w-full">
+                    <Button 
+                      className={cn(
+                        "w-full h-14 rounded-2xl text-base font-bold transition-all active:scale-95 shadow-lg bg-primary hover:bg-primary/90 text-white animate-heartbeat"
+                      )}
+                    >
+                      Conocer los planes
+                    </Button>
+                  </Link>
+                </div>
               </div>
-            </div>
-          ))}
+            ))}
+          </div>
+          
+          <div className="md:hidden text-center mt-6 text-[10px] text-muted-foreground uppercase tracking-[0.2em] font-black animate-pulse px-4">
+            Desliza para comparar los planes →
+          </div>
         </div>
       </div>
     </section>
