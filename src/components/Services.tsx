@@ -82,7 +82,7 @@ export const Services = () => {
                 const img = PlaceHolderImages.find(p => p.id === service.imgId) || PlaceHolderImages[0];
                 return (
                   <CarouselItem key={index} className="pl-4 md:pl-8 lg:pl-12 basis-[85%] sm:basis-1/2 lg:basis-1/3 py-4">
-                    <Card className="h-full group relative overflow-hidden border-none bg-secondary shadow-xl hover:shadow-2xl transition-all duration-500 rounded-[2.5rem]">
+                    <Card className="h-full relative overflow-hidden border-none bg-secondary shadow-xl rounded-[2.5rem]">
                       <div className="relative aspect-square overflow-hidden bg-black">
                         <Image 
                           src={img?.imageUrl || ''} 
@@ -90,7 +90,7 @@ export const Services = () => {
                           fill 
                           priority={index < 3}
                           sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
-                          className="object-cover transition-transform duration-700"
+                          className="object-cover"
                           data-ai-hint={img?.imageHint}
                         />
                         <div className="absolute inset-0 bg-gradient-to-t from-black/90 to-transparent"></div>
@@ -99,7 +99,7 @@ export const Services = () => {
                         </div>
                       </div>
                       <CardHeader className="pt-8 px-6 text-center lg:text-left">
-                        <CardTitle className="text-xl md:text-2xl font-bold group-hover:text-primary transition-colors">{service.title}</CardTitle>
+                        <CardTitle className="text-xl md:text-2xl font-bold">{service.title}</CardTitle>
                       </CardHeader>
                       <CardContent className="px-6 pb-8 text-center lg:text-left">
                         <p className="text-muted-foreground text-sm md:text-base leading-relaxed">{service.description}</p>
