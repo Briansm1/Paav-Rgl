@@ -24,8 +24,8 @@ export default function EquipoPage() {
     <main className="min-h-screen bg-background">
       <Header />
       
-      {/* Header Section with balanced padding for centering */}
-      <section className="pt-24 pb-12 md:pt-32 md:pb-20 bg-secondary/30 border-b border-white/5 flex items-center justify-center">
+      {/* Header Section with reduced bottom padding for compactness */}
+      <section className="pt-24 pb-6 md:pt-32 md:pb-10 bg-secondary/30 border-b border-white/5 flex items-center justify-center">
         <div className="container mx-auto px-4 text-center">
           <Link href="/#inicio" className="inline-flex items-center gap-2 text-primary font-bold mb-3 hover:underline">
             <ArrowLeft className="w-4 h-4" />
@@ -37,8 +37,8 @@ export default function EquipoPage() {
         </div>
       </section>
 
-      {/* Team Content Section with reduced top padding */}
-      <section className="pt-10 pb-20 md:pt-16 md:pb-32 bg-background">
+      {/* Team Content Section with adjusted top padding to bring content higher */}
+      <section className="pt-8 pb-20 md:pt-12 md:pb-32 bg-background">
         <div className="container mx-auto px-4">
           <div className="space-y-24 md:space-y-32">
             {teamMembers.map((member, index) => (
