@@ -45,7 +45,7 @@ export default function EquipoPage() {
                   
                   {/* Profile Section */}
                   <div className="w-full lg:w-1/3 flex flex-col items-center lg:items-start text-center lg:text-left gap-6">
-                    <div className="relative w-48 h-48 md:w-64 md:h-64 rounded-[3rem] overflow-hidden shadow-2xl border-2 border-primary/20 bg-secondary">
+                    <div className="relative w-48 h-48 md:w-64 md:h-64 rounded-full overflow-hidden shadow-2xl border-2 border-primary/20 bg-secondary">
                       <Image 
                         src={member.profileImg} 
                         alt={member.name} 
