@@ -71,70 +71,77 @@ export const Contact = () => {
   const onSubmit = async (values: z.infer<typeof formSchema>) => {
     setIsSubmitting(true);
     
-    try {
-      // 1. Guardar en la colección de reseñas para el historial
-      const reviewData = {
-        ...values,
-        licenseImage: selectedImage ? selectedImage.name : null,
-        createdAt: serverTimestamp(),
-      };
+    // 1. Guardar en la colección de reseñas para el historial
+    const reviewData = {
+      ...values,
+      licenseImage: selectedImage ? selectedImage.name : null,
+      createdAt: serverTimestamp(),
+    };
 
-      addDoc(collection(firestore, 'reviews'), reviewData);
+    addDoc(collection(firestore, 'reviews'), reviewData)
+      .catch(async (error) => {
+        const permissionError = new FirestorePermissionError({
+          path: 'reviews',
+          operation: 'create',
+          requestResourceData: reviewData,
+        });
+        errorEmitter.emit('permission-error', permissionError);
+      });
 
-      // 2. Disparar el correo automático vía colección 'mail' (Extensión Trigger Email)
-      // Usamos un array en 'to' para asegurar compatibilidad total con la extensión
-      addDoc(collection(firestore, 'mail'), {
-        to: [academyEmail],
-        message: {
-          subject: `Nueva Reseña de Estudiante: ${values.name}`,
-          text: `Se ha recibido una nueva reseña.\n\nNombre: ${values.name}\nEmail: ${values.email}\nCalificación: ${values.rating} estrellas\nReseña: ${values.review}${selectedImage ? `\nImagen adjunta: ${selectedImage.name}` : ''}`,
-          html: `
-            <div style="font-family: sans-serif; padding: 20px; color: #333; max-width: 600px; border: 1px solid #eee; border-radius: 12px;">
-              <h2 style="color: #213584; border-bottom: 2px solid #213584; padding-bottom: 10px;">Nueva Reseña Recibida</h2>
-              <p style="font-size: 16px;"><strong>Nombre:</strong> ${values.name}</p>
-              <p style="font-size: 16px;"><strong>Email:</strong> ${values.email}</p>
-              <p style="font-size: 16px;"><strong>Calificación:</strong> ${values.rating} / 5 estrellas</p>
-              ${selectedImage ? `<p style="font-size: 16px;"><strong>Imagen adjunta:</strong> ${selectedImage.name}</p>` : ''}
-              <div style="margin-top: 20px; padding: 15px; background-color: #f3f4f6; border-left: 4px solid #213584; border-radius: 4px;">
-                <p style="margin: 0; font-style: italic; line-height: 1.6;">"${values.review}"</p>
-              </div>
-              <p style="margin-top: 20px; font-size: 12px; color: #666;">Este es un mensaje automático enviado desde el sitio web de Pilotos - Ases al Volante.</p>
+    // 2. Disparar el correo automático vía colección 'mail' (Extensión Trigger Email)
+    const mailData = {
+      to: academyEmail, // Enviamos como string directo para máxima compatibilidad
+      message: {
+        subject: `Nueva Reseña de Estudiante: ${values.name}`,
+        text: `Se ha recibido una nueva reseña.\n\nNombre: ${values.name}\nEmail: ${values.email}\nCalificación: ${values.rating} estrellas\nReseña: ${values.review}${selectedImage ? `\nImagen adjunta: ${selectedImage.name}` : ''}`,
+        html: `
+          <div style="font-family: sans-serif; padding: 20px; color: #333; max-width: 600px; border: 1px solid #eee; border-radius: 12px;">
+            <h2 style="color: #213584; border-bottom: 2px solid #213584; padding-bottom: 10px;">Nueva Reseña Recibida</h2>
+            <p style="font-size: 16px;"><strong>Nombre:</strong> ${values.name}</p>
+            <p style="font-size: 16px;"><strong>Email:</strong> ${values.email}</p>
+            <p style="font-size: 16px;"><strong>Calificación:</strong> ${values.rating} / 5 estrellas</p>
+            ${selectedImage ? `<p style="font-size: 16px;"><strong>Imagen adjunta:</strong> ${selectedImage.name}</p>` : ''}
+            <div style="margin-top: 20px; padding: 15px; background-color: #f3f4f6; border-left: 4px solid #213584; border-radius: 4px;">
+              <p style="margin: 0; font-style: italic; line-height: 1.6;">"${values.review}"</p>
             </div>
-          `
-        }
-      });
-      
-      toast({
-        title: "¡Reseña enviada!",
-        description: "Muchas gracias por tu opinión. El equipo la recibirá a la brevedad.",
-      });
+            <p style="margin-top: 20px; font-size: 12px; color: #666;">Este es un mensaje automático enviado desde el sitio web de Pilotos - Ases al Volante.</p>
+          </div>
+        `
+      }
+    };
 
-      // 3. Notificación vía WhatsApp (Aviso inmediato)
-      const whatsappText = encodeURIComponent(
-        `*Nueva Reseña Recibida*\n\n` +
-        `*Nombre:* ${values.name}\n` +
-        `*Calificación:* ${values.rating} ⭐\n` +
-        `*Reseña:* "${values.review}"\n` +
-        `${selectedImage ? `*Imagen:* Adjunta en el email` : ''}`
-      );
-      
-      window.open(`https://wa.me/${academyWhatsApp}?text=${whatsappText}`, '_blank');
-
-      // Resetear formulario y estado
-      form.reset();
-      setSelectedImage(null);
-      if (fileInputRef.current) fileInputRef.current.value = '';
-      setIsSubmitting(false);
-
-    } catch (e: any) {
-      setIsSubmitting(false);
-      const permissionError = new FirestorePermissionError({
-        path: 'reviews',
-        operation: 'create',
-        requestResourceData: values,
+    addDoc(collection(firestore, 'mail'), mailData)
+      .then(() => {
+        toast({
+          title: "¡Reseña enviada!",
+          description: "Muchas gracias por tu opinión. El equipo la recibirá a la brevedad.",
+        });
+      })
+      .catch(async (error) => {
+        const permissionError = new FirestorePermissionError({
+          path: 'mail',
+          operation: 'create',
+          requestResourceData: mailData,
+        });
+        errorEmitter.emit('permission-error', permissionError);
       });
-      errorEmitter.emit('permission-error', permissionError);
-    }
+    
+    // 3. Notificación vía WhatsApp (Aviso inmediato como respaldo)
+    const whatsappText = encodeURIComponent(
+      `*Nueva Reseña Recibida*\n\n` +
+      `*Nombre:* ${values.name}\n` +
+      `*Calificación:* ${values.rating} ⭐\n` +
+      `*Reseña:* "${values.review}"\n` +
+      `${selectedImage ? `*Imagen:* Adjunta en el email` : ''}`
+    );
+    
+    window.open(`https://wa.me/${academyWhatsApp}?text=${whatsappText}`, '_blank');
+
+    // Resetear formulario y estado local
+    form.reset();
+    setSelectedImage(null);
+    if (fileInputRef.current) fileInputRef.current.value = '';
+    setIsSubmitting(false);
   };
 
   return (

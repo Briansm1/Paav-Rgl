@@ -72,7 +72,7 @@
     },
     "/mail/{mailId}": {
       "schema": "MailTrigger",
-      "description": "Colección monitoreada por la extensión Trigger Email para enviar notificaciones."
+      "description": "Colección monitoreada por la extensión Trigger Email para enviar notificaciones automáticas."
     }
   }
 }
