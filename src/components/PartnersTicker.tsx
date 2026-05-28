@@ -9,10 +9,12 @@ export const PartnersTicker = () => {
   const partners = PlaceHolderImages.filter(img => img.id.startsWith('partner-'));
 
   return (
-    <section className="relative py-16 bg-black overflow-hidden">
-      {/* Subtle fades to bridge with sections around it */}
-      <div className="absolute top-0 left-0 right-0 h-32 bg-gradient-to-b from-background via-background/50 to-transparent pointer-events-none z-10"></div>
-      <div className="absolute bottom-0 left-0 right-0 h-32 bg-gradient-to-t from-background via-background/50 to-transparent pointer-events-none z-10"></div>
+    <section className="relative py-20 md:py-32 bg-black overflow-hidden">
+      {/* Smooth transitions */}
+      <div className="absolute inset-0 bg-gradient-to-b from-background via-secondary/5 to-background z-0">
+        <div className="absolute top-0 left-0 right-0 h-48 bg-gradient-to-b from-background via-background/80 to-transparent"></div>
+        <div className="absolute bottom-0 left-0 right-0 h-48 bg-gradient-to-t from-background via-background/80 to-transparent"></div>
+      </div>
       
       <div className="container mx-auto px-4 mb-10 relative z-20">
         <h4 className="text-center text-[10px] md:text-xs font-bold text-slate-500 uppercase tracking-[0.3em]">

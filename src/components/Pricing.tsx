@@ -50,13 +50,16 @@ export const Pricing = () => {
   }, []);
 
   return (
-    <section id="planes" className="relative pt-20 pb-8 md:pt-32 md:pb-12 bg-background overflow-hidden">
-      <div className="absolute top-0 left-0 right-0 h-32 bg-gradient-to-b from-background via-background/50 to-transparent pointer-events-none z-10"></div>
-      <div className="absolute bottom-0 left-0 right-0 h-32 bg-gradient-to-t from-background via-background/50 to-transparent pointer-events-none z-10"></div>
+    <section id="planes" className="relative py-20 md:py-32 bg-background overflow-hidden">
+      {/* Background soft transition */}
+      <div className="absolute inset-0 bg-gradient-to-b from-background via-secondary/10 to-background z-0">
+        <div className="absolute top-0 left-0 right-0 h-48 bg-gradient-to-b from-background via-background/60 to-transparent"></div>
+        <div className="absolute bottom-0 left-0 right-0 h-48 bg-gradient-to-t from-background via-background/60 to-transparent"></div>
+      </div>
 
       <div className="container mx-auto px-4 relative z-10">
         <div className="text-center max-w-3xl mx-auto mb-16 px-4">
-          <span className="inline-block px-4 py-1.5 mb-6 text-xs font-bold tracking-widest text-primary uppercase bg-primary/10 rounded-full border border-primary/20">
+          <span className="inline-block px-4 py-1.5 mb-6 text-xs font-bold tracking-widest text-primary uppercase bg-primary/10 rounded-full">
             TU INVERSIÓN
           </span>
           <h2 className="text-4xl md:text-6xl font-bold font-headline mb-6 tracking-tight text-foreground text-center">
@@ -82,7 +85,7 @@ export const Pricing = () => {
               <div 
                 key={index} 
                 className={cn(
-                  "relative p-8 rounded-[2.5rem] border-2 bg-secondary shadow-xl transition-all duration-500 flex flex-col items-center text-center group overflow-hidden border-white/5",
+                  "relative p-8 rounded-[2.5rem] bg-secondary shadow-xl transition-all duration-500 flex flex-col items-center text-center group overflow-hidden border border-white/5",
                   "min-w-[85%] sm:min-w-[280px] md:min-w-0 snap-center"
                 )}
               >

@@ -80,15 +80,16 @@ export const Testimonials = () => {
   }, [api]);
 
   return (
-    <section id="testimonios" className="relative py-24 md:py-36 overflow-hidden">
-      <div className="absolute inset-0 bg-secondary/30 z-0">
+    <section id="testimonios" className="relative py-20 md:py-32 overflow-hidden bg-background">
+      {/* Soft transition background */}
+      <div className="absolute inset-0 bg-gradient-to-b from-background via-secondary/20 to-background z-0">
         <div className="absolute top-0 left-0 right-0 h-48 bg-gradient-to-b from-background via-background/60 to-transparent"></div>
         <div className="absolute bottom-0 left-0 right-0 h-48 bg-gradient-to-t from-background via-background/60 to-transparent"></div>
       </div>
 
       <div className="container mx-auto px-4 relative z-10">
         <div className="text-center mb-16 md:mb-20 px-4">
-          <span className="inline-block px-4 py-1.5 mb-6 text-xs font-bold tracking-widest text-accent uppercase bg-accent/10 rounded-full border border-accent/20">
+          <span className="inline-block px-4 py-1.5 mb-6 text-xs font-bold tracking-widest text-accent uppercase bg-accent/10 rounded-full">
             Casos de éxito
           </span>
           <h3 className="text-4xl md:text-5xl font-bold font-headline text-foreground tracking-tight">
@@ -111,7 +112,7 @@ export const Testimonials = () => {
                 
                 return (
                   <CarouselItem key={index} className="pl-4 basis-[85%] sm:basis-1/2 lg:basis-1/3 py-4">
-                    <Card className="h-full border-none shadow-xl rounded-[2.5rem] bg-card border border-white/5 relative overflow-hidden flex flex-col group transition-all duration-300 hover:shadow-2xl">
+                    <Card className="h-full border-none shadow-xl rounded-[2.5rem] bg-card relative overflow-hidden flex flex-col group transition-all duration-300 hover:shadow-2xl">
                       {headerImg && (
                         <div className="relative aspect-[16/10] w-full overflow-hidden border-b border-white/5">
                           <Image 

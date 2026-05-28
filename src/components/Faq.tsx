@@ -1,3 +1,4 @@
+
 "use client";
 
 import React from 'react';
@@ -37,9 +38,9 @@ const faqs = [
 
 export const Faq = () => {
   return (
-    <section id="faq" className="relative py-24 md:py-36 overflow-hidden">
+    <section id="faq" className="relative py-20 md:py-32 overflow-hidden bg-background">
       {/* Background with soft transitions */}
-      <div className="absolute inset-0 bg-secondary/30 z-0">
+      <div className="absolute inset-0 bg-gradient-to-b from-background via-secondary/15 to-background z-0">
         <div className="absolute top-0 left-0 right-0 h-48 bg-gradient-to-b from-background via-background/60 to-transparent"></div>
         <div className="absolute bottom-0 left-0 right-0 h-48 bg-gradient-to-t from-background via-background/60 to-transparent"></div>
       </div>

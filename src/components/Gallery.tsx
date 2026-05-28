@@ -15,10 +15,12 @@ export const Gallery = () => {
   const galleryImages = PlaceHolderImages.filter(img => img.id.startsWith('gallery-'));
 
   return (
-    <section id="galeria" className="relative pt-4 pb-16 md:pt-8 bg-background overflow-hidden">
-      {/* Top and Bottom fades */}
-      <div className="absolute top-0 left-0 right-0 h-24 bg-gradient-to-b from-background via-background/50 to-transparent pointer-events-none z-10"></div>
-      <div className="absolute bottom-0 left-0 right-0 h-24 bg-gradient-to-t from-background via-background/50 to-transparent pointer-events-none z-10"></div>
+    <section id="galeria" className="relative py-20 md:py-32 bg-background overflow-hidden">
+      {/* Soft gradient transitions */}
+      <div className="absolute inset-0 bg-gradient-to-b from-background via-secondary/5 to-background z-0">
+        <div className="absolute top-0 left-0 right-0 h-32 bg-gradient-to-b from-background via-background/50 to-transparent"></div>
+        <div className="absolute bottom-0 left-0 right-0 h-32 bg-gradient-to-t from-background via-background/50 to-transparent"></div>
+      </div>
 
       <div className="container mx-auto px-4 mb-10 text-center relative z-10">
         <span className="inline-block px-4 py-1.5 mb-4 text-xs font-bold tracking-widest text-primary uppercase bg-primary/10 rounded-full">
@@ -48,7 +50,7 @@ export const Gallery = () => {
           <CarouselContent className="-ml-2 md:-ml-4">
             {galleryImages.map((img, index) => (
               <CarouselItem key={index} className="pl-2 basis-[45%] md:basis-1/3 lg:basis-1/4">
-                <div className="relative aspect-[4/5] rounded-2xl overflow-hidden shadow-2xl transition-all duration-500">
+                <div className="relative aspect-[4/5] rounded-[2rem] overflow-hidden shadow-2xl transition-all duration-500">
                   <Image 
                     src={img.imageUrl} 
                     alt={img.description} 
