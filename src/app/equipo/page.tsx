@@ -99,9 +99,6 @@ export default function EquipoPage() {
                             <Award className="w-6 h-6 text-gold" />
                             Certificación Profesional
                           </h3>
-                          <p className="text-slate-400 leading-relaxed">
-                            Contamos con las acreditaciones necesarias para brindarte una formación teórica y práctica de primer nivel, cumpliendo con todos los marcos legales y de seguridad.
-                          </p>
                         </div>
                         <div className="w-full md:w-1/2 relative aspect-[4/3] rounded-2xl overflow-hidden shadow-inner border border-white/10 bg-black/40">
                           <Image 
