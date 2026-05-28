@@ -24,9 +24,10 @@ export default function EquipoPage() {
     <main className="min-h-screen bg-background">
       <Header />
       
-      <section className="pt-20 pb-8 md:pt-28 md:pb-12 bg-secondary/30 border-b border-white/5">
+      {/* Header Section with reduced padding */}
+      <section className="pt-20 pb-6 md:pt-24 md:pb-8 bg-secondary/30 border-b border-white/5">
         <div className="container mx-auto px-4 text-center">
-          <Link href="/#inicio" className="inline-flex items-center gap-2 text-primary font-bold mb-4 hover:underline">
+          <Link href="/#inicio" className="inline-flex items-center gap-2 text-primary font-bold mb-3 hover:underline">
             <ArrowLeft className="w-4 h-4" />
             Volver al inicio
           </Link>
@@ -36,12 +37,13 @@ export default function EquipoPage() {
         </div>
       </section>
 
-      <section className="py-20 md:py-32 bg-background">
+      {/* Team Content Section with reduced top padding */}
+      <section className="pt-10 pb-20 md:pt-16 md:pb-32 bg-background">
         <div className="container mx-auto px-4">
           <div className="space-y-24 md:space-y-32">
             {teamMembers.map((member, index) => (
               <div key={index} className="max-w-6xl mx-auto">
-                <div className="flex flex-col lg:flex-row gap-12 lg:gap-20 items-center lg:items-start">
+                <div className="flex flex-col lg:flex-row gap-10 lg:gap-20 items-center lg:items-start">
                   
                   {/* Profile Section */}
                   <div className="w-full lg:w-1/3 flex flex-col items-center lg:items-start text-center lg:text-left gap-6">
@@ -68,7 +70,7 @@ export default function EquipoPage() {
                   </div>
 
                   {/* Details & Certificate Section */}
-                  <div className="w-full lg:w-2/3 space-y-12">
+                  <div className="w-full lg:w-2/3 space-y-10">
                     <div className="bg-secondary p-8 md:p-12 rounded-[2.5rem] border border-white/5 shadow-xl">
                       <h3 className="text-2xl font-bold mb-6 flex items-center gap-3 text-white">
                         <ShieldCheck className="w-6 h-6 text-primary" />
