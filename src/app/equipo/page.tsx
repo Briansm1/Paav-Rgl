@@ -31,7 +31,7 @@ export default function EquipoPage() {
             Volver al inicio
           </Link>
           <h1 className="text-3xl md:text-5xl font-bold font-headline mb-4 text-foreground">
-            Nuestro <span className="text-primary">Equipo</span>
+            Nuestro <span className="text-primary">equipo</span>
           </h1>
         </div>
       </section>
