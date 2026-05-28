@@ -15,6 +15,8 @@ const digitalBooks = [
     id: 'book-novato',
     title: 'Programa conductor seguro',
     price: '$17.999',
+    originalPrice: '$59.999',
+    discount: '70% OFF',
     description: 'El manual esencial para quienes están dando sus primeros pasos. Enfoque en mentalidad, gestión del miedo y los pilares básicos del control del vehículo.',
     longDescription: 'Este libro digital te llevará de la mano en el proceso de perder el miedo al volante. Descubrirás técnicas psicológicas para mantener la calma y una guía paso a paso sobre los fundamentos técnicos que todo conductor principiante debe dominar antes de salir a la calle.',
     features: ['Control emocional', 'Fundamentos técnicos', 'Checklist pre-conducción'],
@@ -25,6 +27,8 @@ const digitalBooks = [
     id: 'book-maniobras',
     title: 'Programa aprobado a la primera',
     price: '$3.999',
+    originalPrice: '$13.400',
+    discount: '70% OFF',
     description: 'Dominá el estacionamiento y las maniobras más complejas con nuestra técnica de precisión. Incluye gráficos detallados.',
     longDescription: '¿Estacionar es tu pesadilla? En este e-book desglosamos cada maniobra de estacionamiento (paralelo, a 45° y 90°) con puntos de referencia exactos y trucos de instructor que no te enseñan en otros lados. Ganá precisión milimétrica.',
     features: ['Estacionamiento perfecto', 'Giros en espacios reducidos', 'Uso de espejos'],
@@ -35,6 +39,8 @@ const digitalBooks = [
     id: 'book-teoria',
     title: 'Programa ases de la mecánica',
     price: '$6.999',
+    originalPrice: '$23.300',
+    discount: '70% OFF',
     description: 'Aprendé lo esencial sobre el cuidado de tu vehículo: fluidos, neumáticos y mantenimiento preventivo para evitar problemas.',
     longDescription: 'En este manual práctico aprenderás a identificar los componentes vitales de tu auto. Desde cómo revisar el aceite y el refrigerante hasta el cambio correcto de un neumático. Es la guía indispensable para que nunca te quedes a pie.',
     features: ['Mantenimiento preventivo', 'Cambio de neumáticos', 'Fluidos y niveles'],
@@ -45,6 +51,8 @@ const digitalBooks = [
     id: 'book-experto',
     title: 'Programa ases de la teoría',
     price: '$13.999',
+    originalPrice: '$46.600',
+    discount: '70% OFF',
     description: 'Más que leyes, situaciones reales. La guía definitiva para aprobar el examen teórico y conducir con conocimiento real de la calle.',
     longDescription: 'Olvidate de memorizar leyes aburridas. Este manual te enseña el marco legal aplicado a situaciones cotidianas del tráfico. Es la herramienta definitiva para aprobar el examen teórico y conducir con conocimiento real de tus derechos y obligaciones.',
     features: ['Simulacros de examen', 'Normativas locales', 'Seguridad vial'],
@@ -87,8 +95,17 @@ export default function LibrosDigitalesPage() {
                     data-ai-hint="book cover"
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent opacity-60"></div>
-                  <div className="absolute bottom-6 left-6 right-6">
-                    <span className="bg-primary text-white text-sm font-bold px-3 py-1 rounded-full shadow-lg">
+                  
+                  {/* Discount Badge */}
+                  <div className="absolute top-4 right-4 bg-accent text-white text-[10px] font-black px-3 py-1.5 rounded-full shadow-lg border border-white/20">
+                    {book.discount}
+                  </div>
+
+                  <div className="absolute bottom-6 left-6 right-6 flex flex-col gap-1">
+                    <span className="text-white/60 text-xs font-bold line-through">
+                      {book.originalPrice}
+                    </span>
+                    <span className="bg-primary text-white text-sm font-bold px-3 py-1 rounded-full shadow-lg w-fit">
                       {book.price}
                     </span>
                   </div>
