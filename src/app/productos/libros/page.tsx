@@ -22,7 +22,7 @@ const digitalBooks = [
   {
     id: 'book-maniobras',
     title: 'Programa aprobado a la primera',
-    price: '$4.999',
+    price: '$3.999',
     description: 'Dominá el estacionamiento y las maniobras más complejas con nuestra técnica de precisión. Incluye gráficos detallados.',
     longDescription: '¿Estacionar es tu pesadilla? En este e-book desglosamos cada maniobra de estacionamiento (paralelo, a 45° y 90°) con puntos de referencia exactos y trucos de instructor que no te enseñan en otros lados. Ganá precisión milimétrica.',
     features: ['Estacionamiento perfecto', 'Giros en espacios reducidos', 'Uso de espejos'],
