@@ -1,8 +1,8 @@
 
 "use client";
 
-import React, { useState, useRef } from 'react';
-import { Mail, MessageSquare, MapPin, Image as ImageIcon, Send, Loader2, Upload, X, ShieldCheck } from 'lucide-react';
+import React, { useState } from 'react';
+import { Mail, MessageSquare, MapPin, Send, Loader2, ShieldCheck, Info } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
 import { Textarea } from '@/components/ui/textarea';
@@ -41,8 +41,6 @@ export const Contact = () => {
   const { toast } = useToast();
   const firestore = useFirestore();
   const [isSubmitting, setIsSubmitting] = useState(false);
-  const [selectedImage, setSelectedImage] = useState<File | null>(null);
-  const fileInputRef = useRef<HTMLInputElement>(null);
   
   const academyEmail = "soporte@pilotosasesalvolante.shop";
 
@@ -56,24 +54,12 @@ export const Contact = () => {
     },
   });
 
-  const handleImageChange = (e: React.ChangeEvent<HTMLInputElement>) => {
-    if (e.target.files && e.target.files[0]) {
-      setSelectedImage(e.target.files[0]);
-    }
-  };
-
-  const removeImage = () => {
-    setSelectedImage(null);
-    if (fileInputRef.current) fileInputRef.current.value = '';
-  };
-
   const onSubmit = async (values: z.infer<typeof formSchema>) => {
     setIsSubmitting(true);
     
     // 1. Guardar en la colección de reseñas para el historial interno
     const reviewData = {
       ...values,
-      licenseImage: selectedImage ? selectedImage.name : null,
       createdAt: serverTimestamp(),
     };
 
@@ -96,16 +82,14 @@ export const Contact = () => {
       `Email: ${values.email}\n` +
       `Calificación: ${values.rating} estrellas\n\n` +
       `Reseña:\n"${values.review}"\n\n` +
-      `${selectedImage ? `(Nota: He adjuntado la foto de mi licencia a este correo)` : ''}\n\n` +
+      `(Recordatorio: Adjuntar aquí la foto de mi licencia para la referencia)\n\n` +
       `Saludos!`
     );
 
-    // 3. Notificar al usuario que debe enviar el mail y adjuntar la imagen
+    // 3. Notificar al usuario
     toast({
       title: "Abriendo tu correo...",
-      description: selectedImage 
-        ? "Por favor, recordá adjuntar la foto que seleccionaste en el email que se abrirá a continuación."
-        : "Se abrirá tu aplicación de correo para enviar la reseña.",
+      description: "Se abrirá tu aplicación de correo. ¡No olvides adjuntar la foto de tu licencia!",
     });
 
     // 4. Abrir cliente de correo
@@ -114,8 +98,6 @@ export const Contact = () => {
       
       // Resetear formulario después de un momento
       form.reset();
-      setSelectedImage(null);
-      if (fileInputRef.current) fileInputRef.current.value = '';
       setIsSubmitting(false);
     }, 1500);
   };
@@ -223,45 +205,24 @@ export const Contact = () => {
                     )}
                   />
 
-                  {/* Campo de imagen adjunta */}
-                  <div className="space-y-3">
-                    <div className="space-y-1">
-                      <FormLabel>Adjuntar foto de tu licencia (opcional)</FormLabel>
-                      <div className="flex items-start gap-2 bg-primary/5 p-3 rounded-lg border border-primary/10">
-                        <ShieldCheck className="w-4 h-4 text-primary shrink-0 mt-0.5" />
-                        <p className="text-[11px] text-muted-foreground leading-snug">
-                          <strong>Tu privacidad es prioridad:</strong> Una vez que nos envíes el correo, nuestro equipo cubrirá tus datos sensibles antes de compartir la referencia.
-                        </p>
+                  {/* Bloque de recordatorio y privacidad */}
+                  <div className="bg-secondary/50 p-5 rounded-2xl border border-white/5 space-y-4">
+                    <div className="flex items-start gap-3">
+                      <div className="bg-primary/20 p-2 rounded-lg shrink-0">
+                        <Info className="w-4 h-4 text-primary" />
                       </div>
+                      <p className="text-xs md:text-sm text-foreground/80 leading-relaxed font-medium">
+                        <strong>No olvides adjuntar la foto:</strong> Cuando se abra tu e-mail, recordá adjuntar la foto de tu licencia para que podamos compartir tu logro.
+                      </p>
                     </div>
                     
-                    <div 
-                      onClick={() => fileInputRef.current?.click()}
-                      className="cursor-pointer border-2 border-dashed border-white/10 rounded-xl p-4 flex flex-col items-center justify-center gap-2 hover:bg-white/5 transition-colors bg-white/5"
-                    >
-                      <input 
-                        type="file" 
-                        ref={fileInputRef} 
-                        onChange={handleImageChange} 
-                        accept="image/*" 
-                        className="hidden" 
-                      />
-                      {selectedImage ? (
-                        <div className="flex items-center gap-2 w-full justify-between bg-primary/20 p-2 rounded-lg border border-primary/30">
-                          <div className="flex items-center gap-2 overflow-hidden">
-                            <ImageIcon className="w-4 h-4 text-primary shrink-0" />
-                            <span className="text-xs text-primary font-bold truncate">{selectedImage.name}</span>
-                          </div>
-                          <button type="button" onClick={(e) => { e.stopPropagation(); removeImage(); }}>
-                            <X className="w-4 h-4 text-primary hover:text-white" />
-                          </button>
-                        </div>
-                      ) : (
-                        <>
-                          <Upload className="w-6 h-6 text-muted-foreground" />
-                          <span className="text-xs text-muted-foreground font-medium">Seleccioná una foto para adjuntar luego</span>
-                        </>
-                      )}
+                    <div className="flex items-start gap-3">
+                      <div className="bg-green-500/20 p-2 rounded-lg shrink-0">
+                        <ShieldCheck className="w-4 h-4 text-green-500" />
+                      </div>
+                      <p className="text-xs md:text-sm text-foreground/80 leading-relaxed font-medium">
+                        <strong>Tu privacidad es prioridad:</strong> Nosotros nos encargamos de tapar todos tus datos sensibles (DNI, domicilio, etc.) antes de usar la foto como referencia.
+                      </p>
                     </div>
                   </div>
 
