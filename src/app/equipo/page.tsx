@@ -61,6 +61,7 @@ export default function EquipoPage() {
                         alt={member.name} 
                         fill 
                         className="object-cover"
+                        style={{ objectPosition: 'center 15%' }}
                       />
                     </div>
                     <div className="space-y-2">
