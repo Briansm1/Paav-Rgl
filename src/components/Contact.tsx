@@ -45,7 +45,6 @@ export const Contact = () => {
   const fileInputRef = useRef<HTMLInputElement>(null);
   
   const academyEmail = "soporte@pilotosasesalvolante.shop";
-  const academyWhatsApp = "5492966265603";
 
   const form = useForm<z.infer<typeof formSchema>>({
     resolver: zodResolver(formSchema),
@@ -71,7 +70,7 @@ export const Contact = () => {
   const onSubmit = async (values: z.infer<typeof formSchema>) => {
     setIsSubmitting(true);
     
-    // 1. Guardar en la colección de reseñas para el historial
+    // 1. Guardar en la colección de reseñas para el historial interno
     const reviewData = {
       ...values,
       licenseImage: selectedImage ? selectedImage.name : null,
@@ -88,60 +87,37 @@ export const Contact = () => {
         errorEmitter.emit('permission-error', permissionError);
       });
 
-    // 2. Disparar el correo automático vía colección 'mail' (Extensión Trigger Email)
-    const mailData = {
-      to: academyEmail, // Enviamos como string directo para máxima compatibilidad
-      message: {
-        subject: `Nueva Reseña de Estudiante: ${values.name}`,
-        text: `Se ha recibido una nueva reseña.\n\nNombre: ${values.name}\nEmail: ${values.email}\nCalificación: ${values.rating} estrellas\nReseña: ${values.review}${selectedImage ? `\nImagen adjunta: ${selectedImage.name}` : ''}`,
-        html: `
-          <div style="font-family: sans-serif; padding: 20px; color: #333; max-width: 600px; border: 1px solid #eee; border-radius: 12px;">
-            <h2 style="color: #213584; border-bottom: 2px solid #213584; padding-bottom: 10px;">Nueva Reseña Recibida</h2>
-            <p style="font-size: 16px;"><strong>Nombre:</strong> ${values.name}</p>
-            <p style="font-size: 16px;"><strong>Email:</strong> ${values.email}</p>
-            <p style="font-size: 16px;"><strong>Calificación:</strong> ${values.rating} / 5 estrellas</p>
-            ${selectedImage ? `<p style="font-size: 16px;"><strong>Imagen adjunta:</strong> ${selectedImage.name}</p>` : ''}
-            <div style="margin-top: 20px; padding: 15px; background-color: #f3f4f6; border-left: 4px solid #213584; border-radius: 4px;">
-              <p style="margin: 0; font-style: italic; line-height: 1.6;">"${values.review}"</p>
-            </div>
-            <p style="margin-top: 20px; font-size: 12px; color: #666;">Este es un mensaje automático enviado desde el sitio web de Pilotos - Ases al Volante.</p>
-          </div>
-        `
-      }
-    };
-
-    addDoc(collection(firestore, 'mail'), mailData)
-      .then(() => {
-        toast({
-          title: "¡Reseña enviada!",
-          description: "Muchas gracias por tu opinión. El equipo la recibirá a la brevedad.",
-        });
-      })
-      .catch(async (error) => {
-        const permissionError = new FirestorePermissionError({
-          path: 'mail',
-          operation: 'create',
-          requestResourceData: mailData,
-        });
-        errorEmitter.emit('permission-error', permissionError);
-      });
-    
-    // 3. Notificación vía WhatsApp (Aviso inmediato como respaldo)
-    const whatsappText = encodeURIComponent(
-      `*Nueva Reseña Recibida*\n\n` +
-      `*Nombre:* ${values.name}\n` +
-      `*Calificación:* ${values.rating} ⭐\n` +
-      `*Reseña:* "${values.review}"\n` +
-      `${selectedImage ? `*Imagen:* Adjunta en el email` : ''}`
+    // 2. Preparar el correo manual (mailto)
+    const subject = encodeURIComponent(`Nueva Reseña de Estudiante: ${values.name}`);
+    const body = encodeURIComponent(
+      `Hola equipo de Pilotos - Ases al Volante,\n\n` +
+      `Quiero compartir mi experiencia:\n\n` +
+      `Nombre: ${values.name}\n` +
+      `Email: ${values.email}\n` +
+      `Calificación: ${values.rating} estrellas\n\n` +
+      `Reseña:\n"${values.review}"\n\n` +
+      `${selectedImage ? `(Nota: He adjuntado la foto de mi licencia a este correo)` : ''}\n\n` +
+      `Saludos!`
     );
-    
-    window.open(`https://wa.me/${academyWhatsApp}?text=${whatsappText}`, '_blank');
 
-    // Resetear formulario y estado local
-    form.reset();
-    setSelectedImage(null);
-    if (fileInputRef.current) fileInputRef.current.value = '';
-    setIsSubmitting(false);
+    // 3. Notificar al usuario que debe enviar el mail y adjuntar la imagen
+    toast({
+      title: "Abriendo tu correo...",
+      description: selectedImage 
+        ? "Por favor, recordá adjuntar la foto que seleccionaste en el email que se abrirá a continuación."
+        : "Se abrirá tu aplicación de correo para enviar la reseña.",
+    });
+
+    // 4. Abrir cliente de correo
+    setTimeout(() => {
+      window.location.href = `mailto:${academyEmail}?subject=${subject}&body=${body}`;
+      
+      // Resetear formulario después de un momento
+      form.reset();
+      setSelectedImage(null);
+      if (fileInputRef.current) fileInputRef.current.value = '';
+      setIsSubmitting(false);
+    }, 1500);
   };
 
   return (
@@ -168,7 +144,7 @@ export const Contact = () => {
               <div className="mb-8 text-center md:text-left">
                 <h4 className="text-xl md:text-3xl font-bold mb-3 md:mb-4 tracking-tight">Contanos tu experiencia</h4>
                 <p className="text-sm md:text-base text-muted-foreground">
-                  Tu reseña se enviará automáticamente a nuestro equipo y se te abrirá un aviso por WhatsApp.
+                  Al completar el formulario, se abrirá tu aplicación de correo para que nos envíes la reseña de forma segura.
                 </p>
               </div>
               
@@ -254,7 +230,7 @@ export const Contact = () => {
                       <div className="flex items-start gap-2 bg-primary/5 p-3 rounded-lg border border-primary/10">
                         <ShieldCheck className="w-4 h-4 text-primary shrink-0 mt-0.5" />
                         <p className="text-[11px] text-muted-foreground leading-snug">
-                          <strong>Tu privacidad es prioridad:</strong> Antes de compartir tu reseña, nuestro equipo se encargará de tapar cualquier dato sensible o personal de tu licencia para proteger tu identidad.
+                          <strong>Tu privacidad es prioridad:</strong> Una vez que nos envíes el correo, nuestro equipo cubrirá tus datos sensibles antes de compartir la referencia.
                         </p>
                       </div>
                     </div>
@@ -283,7 +259,7 @@ export const Contact = () => {
                       ) : (
                         <>
                           <Upload className="w-6 h-6 text-muted-foreground" />
-                          <span className="text-xs text-muted-foreground font-medium">Presiona para subir una foto</span>
+                          <span className="text-xs text-muted-foreground font-medium">Seleccioná una foto para adjuntar luego</span>
                         </>
                       )}
                     </div>
@@ -297,11 +273,11 @@ export const Contact = () => {
                     {isSubmitting ? (
                       <>
                         <Loader2 className="w-5 h-5 animate-spin" />
-                        Enviando...
+                        Procesando...
                       </>
                     ) : (
                       <>
-                        Enviar reseña
+                        Enviar reseña por email
                         <Send className="w-5 h-5" />
                       </>
                     )}
@@ -325,7 +301,7 @@ export const Contact = () => {
                   </div>
                   <div>
                     <p className="font-bold text-base md:text-lg mb-1">Zona de cobertura</p>
-                    <p className="text-sm md:text-base text-muted-foreground leading-relaxed">Río Gallegos, Santa Cruz, Argentina, Z9400</p>
+                    <p className="text-sm md:text-base text-muted-foreground leading-relaxed">Río Gallegos, Santa Cruz, Argentina</p>
                   </div>
                 </div>
                 <div className="flex items-start gap-4 md:gap-6">
@@ -335,12 +311,12 @@ export const Contact = () => {
                   <div>
                     <p className="font-bold text-base md:text-lg mb-1">WhatsApp</p>
                     <a 
-                      href={`https://wa.me/${academyWhatsApp}`}
+                      href="https://wa.me/5492966265603"
                       target="_blank"
                       rel="noopener noreferrer"
                       className="text-sm md:text-base text-muted-foreground font-medium hover:text-primary transition-colors block"
                     >
-                      +54 2966 265603
+                      +54 9 2966 265603
                     </a>
                   </div>
                 </div>
@@ -349,7 +325,7 @@ export const Contact = () => {
                     <Mail className="w-5 h-5 md:w-6 md:h-6 text-primary" />
                   </div>
                   <div className="overflow-hidden">
-                    <p className="font-bold text-base md:text-lg mb-1">Consultas o propuestas</p>
+                    <p className="font-bold text-base md:text-lg mb-1">Email directo</p>
                     <a 
                       href={`mailto:${academyEmail}`}
                       className="text-sm md:text-base text-muted-foreground font-medium hover:text-primary transition-colors no-underline break-words block"
