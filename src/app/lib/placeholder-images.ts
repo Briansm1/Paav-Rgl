@@ -220,13 +220,13 @@ export const PlaceHolderImages: ImagePlaceholder[] = [
   {
     "id": "instructor-brian-profile",
     "description": "Brian - Instructor Principal",
-    "imageUrl": "https://picsum.photos/seed/brian-prof/400/400",
+    "imageUrl": "https://i.imgur.com/afhDn7N.png",
     "imageHint": "man profile"
   },
   {
     "id": "instructor-brian-cert",
     "description": "Certificación Brian",
-    "imageUrl": "https://i.imgur.com/afhDn7N.png",
+    "imageUrl": "https://i.imgur.com/Cz0exuI.png",
     "imageHint": "certificate"
   }
 ];

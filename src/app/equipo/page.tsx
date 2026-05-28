@@ -21,7 +21,7 @@ const teamMembers = [
     role: 'Instructor Principal y Fundador',
     description: 'Especialista en mentalidad al volante y técnicas de conducción defensiva. Con más de 5 años formando conductores que hoy circulan con completa autonomía y seguridad.',
     profileImg: PlaceHolderImages.find(img => img.id === 'instructor-brian-profile')?.imageUrl || '',
-    certImg: 'https://i.imgur.com/afhDn7N.png',
+    certImg: PlaceHolderImages.find(img => img.id === 'instructor-brian-cert')?.imageUrl || '',
     specialties: ['MENTALIDAD DE PILOTO', 'ESTACIONAMIENTO DE PRECISIÓN', 'GESTIÓN DEL MIEDO'],
   }
 ];
@@ -79,7 +79,7 @@ export default function EquipoPage() {
                   {/* Details & Certificate Section */}
                   <div className="w-full lg:w-2/3 space-y-12">
                     <div className="bg-secondary p-8 md:p-12 rounded-[2.5rem] border border-white/5 shadow-xl">
-                      <h3 className="text-2xl font-bold mb-6 flex items-center gap-3">
+                      <h3 className="text-2xl font-bold mb-6 flex items-center gap-3 text-white">
                         <ShieldCheck className="w-6 h-6 text-primary" />
                         Sobre su formación
                       </h3>
@@ -101,7 +101,7 @@ export default function EquipoPage() {
 
                     <div className="bg-gradient-to-br from-primary/10 to-transparent p-8 md:p-12 rounded-[2.5rem] border border-primary/20 shadow-lg">
                       <div className="flex flex-col sm:flex-row gap-8 items-center justify-between">
-                        <h3 className="text-2xl font-bold flex items-center gap-3">
+                        <h3 className="text-2xl font-bold flex items-center gap-3 text-white">
                           <Award className="w-7 h-7 text-gold" />
                           Certificación profesional
                         </h3>
@@ -114,7 +114,7 @@ export default function EquipoPage() {
                             </Button>
                           </DialogTrigger>
                           <DialogContent className="max-w-4xl p-0 bg-secondary/95 border-white/10 backdrop-blur-xl sm:rounded-[2.5rem] overflow-hidden">
-                            <DialogTitle className="text-center font-bold text-xl py-4">Certificación profesional - {member.name}</DialogTitle>
+                            <DialogTitle className="text-center font-bold text-xl py-4 text-white">Certificación profesional - {member.name}</DialogTitle>
                             <DialogDescription className="sr-only">Imagen de la certificación profesional del instructor</DialogDescription>
                             <div className="relative aspect-[3/2] w-full bg-black/40">
                               <Image 
