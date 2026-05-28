@@ -216,5 +216,17 @@ export const PlaceHolderImages: ImagePlaceholder[] = [
     "description": "Socio Estratégico 2",
     "imageUrl": "https://i.imgur.com/1CDCJEJ.png",
     "imageHint": "partner logo"
+  },
+  {
+    "id": "instructor-brian-profile",
+    "description": "Brian - Instructor Principal",
+    "imageUrl": "https://picsum.photos/seed/brian-prof/400/400",
+    "imageHint": "man profile"
+  },
+  {
+    "id": "instructor-brian-cert",
+    "description": "Certificación Brian",
+    "imageUrl": "https://picsum.photos/seed/brian-cert/600/400",
+    "imageHint": "certificate"
   }
 ];
