@@ -57,6 +57,11 @@ export const Hero = () => {
                 <ChevronRight className="ml-2 w-6 h-6" />
               </Button>
             </Link>
+            <Link href="#servicios" className="w-full sm:w-auto">
+              <Button size="lg" variant="outline" className="h-14 md:h-16 px-10 md:px-12 text-lg border-white/20 text-white hover:bg-white/10 rounded-full w-full font-bold transition-all active:scale-95 bg-transparent">
+                Ver equipo
+              </Button>
+            </Link>
           </div>
         </div>
         
