@@ -32,7 +32,7 @@ const digitalBooks = [
   {
     id: 'book-teoria',
     title: 'Programa ases de la mecánica',
-    price: '$8.999',
+    price: '$6.999',
     description: 'Aprendé lo esencial sobre el cuidado de tu vehículo: fluidos, neumáticos y mantenimiento preventivo para evitar problemas.',
     longDescription: 'En este manual práctico aprenderás a identificar los componentes vitales de tu auto. Desde cómo revisar el aceite y el refrigerante hasta el cambio correcto de un neumático. Es la guía indispensable para que nunca te quedes a pie.',
     features: ['Mantenimiento preventivo', 'Cambio de neumáticos', 'Fluidos y niveles'],
@@ -107,12 +107,12 @@ export default function LibrosDigitalesPage() {
 
                   <div className="flex flex-col gap-3">
                     <a href={book.whatsappLink} target="_blank" rel="noopener noreferrer" className="w-full">
-                      <Button className="w-full h-12 rounded-xl bg-green-600 hover:bg-green-700 text-white font-bold gap-2 transition-colors border-none">
+                      <Button className="w-full h-12 rounded-xl bg-green-600 hover:bg-green-700 text-white font-bold transition-colors border-none">
                         Comprar ahora
                       </Button>
                     </a>
                     <Link href={`#${book.id}`} className="w-full">
-                      <Button variant="outline" className="w-full h-12 rounded-xl border-white/10 text-slate-300 hover:bg-white/5 gap-2">
+                      <Button variant="outline" className="w-full h-12 rounded-xl border-white/10 text-slate-300 hover:bg-white/5">
                         Ver más
                       </Button>
                     </Link>
