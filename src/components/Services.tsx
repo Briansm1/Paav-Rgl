@@ -66,7 +66,7 @@ export const Services = () => {
             Conducir es <span className="text-primary italic">más que solo manejar</span>
           </h2>
           <p className="text-lg md:text-xl text-muted-foreground leading-relaxed">
-            Revolucionamos la enseñanza vial combinando conocimiento de vanguardia con <span className="text-primary font-bold">nuestra metodología exclusiva</span> de 3 pilares: <span className="text-primary font-bold">mentalidad</span> para darte confianza, <span className="text-primary font-bold">teoría</span> para un aprendizaje sólido, y <span className="text-primary font-bold">técnica</span> para el dominio total del vehículo
+            Revolucionamos la enseñanza vial combinando conocimiento de vanguardia con <span className="text-primary font-bold">nuestra metodología exclusiva</span> de 3 pilares: <span className="text-primary font-bold">mentalidad</span> para darte confianza, <span className="text-primary font-bold">teoría</span> para un aprendizaje sólido, y <span className="text-primary font-bold">tecnica</span> para el dominio total del vehículo
           </p>
         </div>
 
@@ -121,7 +121,7 @@ export const Services = () => {
               </h3>
               <div className="grid grid-cols-1 gap-8">
                 {[
-                  { icon: <ShieldCheck className="w-6 h-6 text-primary" />, text: 'Aprendizaje en un entorno real: Practica en vehículos modernos, seguros y con el máximo confort, exactamente iguales a los que vas a manejar cuando tengas tu licencia.' },
+                  { icon: <ShieldCheck className="w-6 h-6 text-primary" />, text: 'Aprendizaje en un entorno real: Practica en vehículos modernos, seguros y con el máximo confort.' },
                   { icon: <Award className="w-6 h-6 text-primary" />, text: 'Guía profesional y experta: Nuestro equipo certificado te acompaña paso a paso, brindándote la tranquilidad y técnica que necesitas para dominar el volante.' },
                   { icon: <Clock className="w-6 h-6 text-primary" />, text: 'A tu propia medida: ¿Trabajas o estudias? No hay problema. Armamos un cronograma de clases que se adapte a tus tiempos.' }
                 ].map((item, i) => (
