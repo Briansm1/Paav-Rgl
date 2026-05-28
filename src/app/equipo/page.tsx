@@ -60,7 +60,7 @@ export default function EquipoPage() {
                         src={member.profileImg} 
                         alt={member.name} 
                         fill 
-                        className="object-cover object-top"
+                        className="object-cover"
                       />
                     </div>
                     <div className="space-y-2">
