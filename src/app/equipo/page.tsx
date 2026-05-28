@@ -100,12 +100,12 @@ export default function EquipoPage() {
                             Certificación Profesional
                           </h3>
                         </div>
-                        <div className="w-full relative aspect-[16/10] md:aspect-[21/9] rounded-3xl overflow-hidden shadow-inner border border-white/10 bg-black/40">
+                        <div className="w-full relative aspect-[3/2] rounded-3xl overflow-hidden shadow-inner border border-white/10 bg-black/40">
                           <Image 
                             src={member.certImg} 
                             alt={`Certificación de ${member.name}`} 
                             fill 
-                            className="object-contain p-4 md:p-8"
+                            className="object-contain p-2"
                           />
                         </div>
                       </div>
