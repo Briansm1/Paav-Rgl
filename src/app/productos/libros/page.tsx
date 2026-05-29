@@ -13,6 +13,7 @@ const digitalBooks = [
   {
     id: 'book-novato',
     title: 'Programa conductor seguro',
+    specialBadge: '9 en 1',
     price: '$17.999',
     originalPrice: '$59.999',
     discount: '70% OFF',
@@ -96,6 +97,11 @@ export default function LibrosDigitalesPage() {
 
                 <div className="p-8 flex flex-col flex-grow items-center text-center">
                   <div className="flex justify-center gap-2 mb-3">
+                    {'specialBadge' in book && book.specialBadge && (
+                      <div className="bg-gold text-gold-foreground text-[10px] font-black px-2.5 py-1 rounded-full shadow-sm border border-white/10 uppercase tracking-tighter">
+                        {book.specialBadge}
+                      </div>
+                    )}
                     <div className="bg-accent text-white text-[10px] font-black px-2.5 py-1 rounded-full shadow-sm border border-white/10 uppercase tracking-tighter">
                       {book.discount}
                     </div>
