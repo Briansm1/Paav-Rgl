@@ -238,7 +238,7 @@ export const PlaceHolderImages: ImagePlaceholder[] = [
   {
     "id": "book-maniobras",
     "description": "Programa aprobado a la primera",
-    "imageUrl": "https://picsum.photos/seed/book2/2048/2048",
+    "imageUrl": "https://i.imgur.com/BxOSl6D.jpeg",
     "imageHint": "book design"
   },
   {
