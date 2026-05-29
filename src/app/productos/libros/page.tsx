@@ -104,7 +104,7 @@ export default function LibrosDigitalesPage() {
       </section>
 
       <section className="py-8 md:py-24 bg-background">
-        <div className="container mx-auto px-4">
+        <div className="container mx-auto px-8 md:px-4">
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 md:gap-10 max-w-7xl mx-auto">
             {digitalBooks.map((book) => (
               <div key={book.id} className="group flex flex-col bg-secondary/40 rounded-[2rem] md:rounded-[2.5rem] border border-white/5 overflow-hidden transition-all duration-300 hover:shadow-2xl hover:shadow-primary/5 hover:border-primary/20">
@@ -170,7 +170,7 @@ export default function LibrosDigitalesPage() {
       </section>
 
       <section className="py-20 bg-secondary/20 border-t border-white/5">
-        <div className="container mx-auto px-4">
+        <div className="container mx-auto px-8 md:px-4">
           <div className="max-w-4xl mx-auto bg-black/40 p-10 md:p-16 rounded-[3rem] border border-white/10 shadow-2xl text-center">
             <div className="inline-flex p-5 bg-primary/10 rounded-3xl mb-8">
               < Book className="w-12 h-12 text-primary" />
