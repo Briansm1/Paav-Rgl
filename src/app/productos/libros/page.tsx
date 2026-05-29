@@ -166,7 +166,7 @@ export default function LibrosDigitalesPage() {
                 <p className="text-muted-foreground text-sm">Optimizado para que lo puedas leer cómodamente desde tu celular en cualquier momento.</p>
               </div>
               <div className="space-y-2">
-                <p className="font-bold text-white">Puntos de Referencia</p>
+                <p className="font-bold text-white">Puntos de referencia</p>
                 <p className="text-muted-foreground text-sm">Incluimos los mismos puntos de referencia que usamos en nuestras clases prácticas en Río Gallegos.</p>
               </div>
             </div>
