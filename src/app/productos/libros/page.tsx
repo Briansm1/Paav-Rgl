@@ -158,7 +158,7 @@ export default function LibrosDigitalesPage() {
                 <p className="text-muted-foreground text-sm">Recibís el material directamente por WhatsApp. Apenas realizás la compra, nos avisas y te damos el acceso.</p>
               </div>
               <div className="space-y-2">
-                <p className="font-bold text-white">Actualización Permanente</p>
+                <p className="font-bold text-white">Actualización permanente</p>
                 <p className="text-muted-foreground text-sm">Cada vez que actualizamos una norma o técnica, recibís la nueva versión gratis.</p>
               </div>
               <div className="space-y-2">
