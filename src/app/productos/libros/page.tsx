@@ -95,9 +95,9 @@ export default function LibrosDigitalesPage() {
                   />
                 </div>
 
-                <div className="p-8 flex flex-col flex-grow">
-                  {/* Badges row */}
-                  <div className="flex gap-2 mb-3">
+                <div className="p-8 flex flex-col flex-grow items-center text-center">
+                  {/* Badges row centered */}
+                  <div className="flex justify-center gap-2 mb-3">
                     <div className="bg-accent text-white text-[10px] font-black px-2.5 py-1 rounded-full shadow-sm border border-white/10 uppercase tracking-tighter">
                       {book.discount}
                     </div>
@@ -106,18 +106,16 @@ export default function LibrosDigitalesPage() {
                     </div>
                   </div>
 
-                  <div className="flex items-center justify-between mb-4">
-                    <div className="flex items-center gap-2">
-                      <Star className="w-4 h-4 text-gold fill-gold" />
-                      <span className="text-[10px] font-bold text-slate-400 uppercase tracking-widest">MATERIAL EXCLUSIVO</span>
-                    </div>
+                  <div className="flex items-center justify-center gap-2 mb-4">
+                    <Star className="w-4 h-4 text-gold fill-gold" />
+                    <span className="text-[10px] font-bold text-slate-400 uppercase tracking-widest">MATERIAL EXCLUSIVO</span>
                   </div>
 
                   <h3 className="text-xl font-bold mb-2 text-white leading-tight">
                     {book.title}
                   </h3>
 
-                  <div className="flex items-center gap-3 mb-6">
+                  <div className="flex items-center justify-center gap-3 mb-6">
                     <span className="text-white/40 text-sm font-bold line-through">
                       {book.originalPrice}
                     </span>
@@ -130,7 +128,7 @@ export default function LibrosDigitalesPage() {
                     {book.description}
                   </p>
 
-                  <div className="flex flex-col gap-3">
+                  <div className="flex flex-col gap-3 w-full">
                     <a href={book.whatsappLink} target="_blank" rel="noopener noreferrer" className="w-full">
                       <Button className="w-full h-12 rounded-xl bg-green-600 hover:bg-green-700 text-white font-bold transition-colors border-none">
                         Comprar ahora
