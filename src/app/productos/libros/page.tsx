@@ -155,7 +155,7 @@ export default function LibrosDigitalesPage() {
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8 text-left mt-10">
               <div className="space-y-2">
                 <p className="font-bold text-white">Acceso inmediato</p>
-                <p className="text-muted-foreground text-sm">Recibís el material en PDF directamente en tu mail o WhatsApp apenas realizás la compra.</p>
+                <p className="text-muted-foreground text-sm">Recibís el material directamente por WhatsApp. Apenas realizás la compra, nos avisas y te damos el acceso.</p>
               </div>
               <div className="space-y-2">
                 <p className="font-bold text-white">Actualización Permanente</p>
