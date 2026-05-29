@@ -154,7 +154,7 @@ export default function LibrosDigitalesPage() {
             <h2 className="text-3xl md:text-4xl font-bold mb-6">¿Por qué elegir nuestros libros?</h2>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8 text-left mt-10">
               <div className="space-y-2">
-                <p className="font-bold text-white">Acceso Inmediato</p>
+                <p className="font-bold text-white">Acceso inmediato</p>
                 <p className="text-muted-foreground text-sm">Recibís el material en PDF directamente en tu mail o WhatsApp apenas realizás la compra.</p>
               </div>
               <div className="space-y-2">
