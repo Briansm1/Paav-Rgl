@@ -94,73 +94,73 @@ export const PlaceHolderImages: ImagePlaceholder[] = [
   {
     "id": "gallery-1",
     "description": "Clase práctica 1",
-    "imageUrl": "https://i.imgur.com/UvLVyl7.png",
+    "imageUrl": "https://i.imgur.com/WiZAj6v.jpeg",
     "imageHint": "driving lesson"
   },
   {
     "id": "gallery-2",
     "description": "Clase práctica 2",
-    "imageUrl": "https://i.imgur.com/v6PauaL.png",
+    "imageUrl": "https://i.imgur.com/jv82W8E.jpeg",
     "imageHint": "driving lesson"
   },
   {
     "id": "gallery-3",
     "description": "Clase práctica 3",
-    "imageUrl": "https://i.imgur.com/yo6Y693.jpeg",
+    "imageUrl": "https://i.imgur.com/4oubLLI.jpeg",
     "imageHint": "driving lesson"
   },
   {
     "id": "gallery-4",
     "description": "Clase práctica 4",
-    "imageUrl": "https://i.imgur.com/4AK2c4Q.jpeg",
+    "imageUrl": "https://i.imgur.com/N9vQoSk.jpeg",
     "imageHint": "driving lesson"
   },
   {
     "id": "gallery-5",
     "description": "Clase práctica 5",
-    "imageUrl": "https://i.imgur.com/9ocLjBF.jpeg",
+    "imageUrl": "https://i.imgur.com/iXF2cJm.jpeg",
     "imageHint": "driving lesson"
   },
   {
     "id": "gallery-6",
     "description": "Clase práctica 6",
-    "imageUrl": "https://i.imgur.com/E0sIJCA.jpeg",
+    "imageUrl": "https://i.imgur.com/X7FLvYs.jpeg",
     "imageHint": "driving lesson"
   },
   {
     "id": "gallery-7",
     "description": "Clase práctica 7",
-    "imageUrl": "https://i.imgur.com/dbY1ZRh.png",
+    "imageUrl": "https://i.imgur.com/hQkTyZf.jpeg",
     "imageHint": "driving lesson"
   },
   {
     "id": "gallery-8",
     "description": "Clase práctica 8",
-    "imageUrl": "https://picsum.photos/seed/gallery8/800/600",
+    "imageUrl": "https://i.imgur.com/TevS1et.jpeg",
     "imageHint": "driving lesson"
   },
   {
     "id": "gallery-9",
     "description": "Clase práctica 9",
-    "imageUrl": "https://picsum.photos/seed/gallery9/800/600",
+    "imageUrl": "https://i.imgur.com/DLyunXq.jpeg",
     "imageHint": "driving lesson"
   },
   {
     "id": "gallery-10",
     "description": "Clase práctica 10",
-    "imageUrl": "https://picsum.photos/seed/gallery10/800/600",
+    "imageUrl": "https://i.imgur.com/EXhuvH9.jpeg",
     "imageHint": "driving lesson"
   },
   {
     "id": "gallery-11",
     "description": "Clase práctica 11",
-    "imageUrl": "https://picsum.photos/seed/gallery11/800/600",
+    "imageUrl": "https://i.imgur.com/VdCZLNq.jpeg",
     "imageHint": "driving lesson"
   },
   {
     "id": "gallery-12",
     "description": "Clase práctica 12",
-    "imageUrl": "https://picsum.photos/seed/gallery12/800/600",
+    "imageUrl": "https://i.imgur.com/QOq0iqD.jpeg",
     "imageHint": "driving lesson"
   },
   {
