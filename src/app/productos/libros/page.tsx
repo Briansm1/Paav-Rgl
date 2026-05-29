@@ -109,7 +109,7 @@ export default function LibrosDigitalesPage() {
                     </div>
                   </div>
 
-                  <h3 className="text-xl font-bold mb-2 text-white group-hover:text-primary transition-colors leading-tight">
+                  <h3 className="text-xl font-bold mb-2 text-white leading-tight">
                     {book.title}
                   </h3>
 
