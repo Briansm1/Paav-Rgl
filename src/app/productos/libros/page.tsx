@@ -57,7 +57,7 @@ const digitalBooks = [
     longDescription: 'Olvidate de memorizar leyes aburridas. Este manual te enseña el marco legal aplicado a situaciones cotidianas del tráfico. Es la herramienta definitiva para aprobar el examen teórico y conducir con conocimiento real de tus derechos y obligaciones.',
     features: ['Simulacros de examen', 'Normativas locales', 'Seguridad vial'],
     imageUrl: PlaceHolderImages.find(img => img.id === 'book-experto')?.imageUrl || '',
-    whatsappLink: "https://wa.me/5492966265603?text=Hola!%20Quiero%20comprar%20el%20libro%20*Programa%20ases%20de%20la%20teoría*"
+    whatsappLink: "https://mpago.li/1ochaL6"
   }
 ];
 
