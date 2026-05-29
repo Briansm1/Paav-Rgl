@@ -55,7 +55,7 @@ const digitalBooks = [
     price: '$13.999',
     originalPrice: '$46.600',
     discount: '70% OFF',
-    description: 'Más que leyes, situaciones reales. La guía definitiva para aprobar el examen teórico y conducir con conocimiento real de la calle.',
+    description: 'Leyes, manuales, resúmenes, guías + 1 simulacro de prueba teórica con +85 preguntas, pensados para que aprendas de verdad y llegues al examen teórico con mucha seguridad y apruebes. Vas a encontrar contenidos clave sobre normativa vial, ley 24.449, señales de tránsito, documentación obligatoria, seguridad vial, conducción responsable, actuación ante siniestros, conocimientos prácticos para el conductor y actualizaciones recientes de la legislación. Además, el simulacro teórico te permite poner a prueba lo aprendido, detectar errores y prepararte mejor para rendir con confianza. Es una formación completa para adquirir conocimientos profundos y estudiar de forma más ordenada.',
     longDescription: 'Olvidate de memorizar leyes aburridas. Este manual te enseña el marco legal aplicado a situaciones cotidianas del tráfico. Es la herramienta definitiva para aprobar el examen teórico y conducir con conocimiento real de tus derechos y obligaciones.',
     features: ['Simulacros de examen', 'Normativas locales', 'Seguridad vial'],
     imageUrl: PlaceHolderImages.find(img => img.id === 'book-experto')?.imageUrl || '',
