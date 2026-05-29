@@ -24,7 +24,7 @@ const digitalBooks = [
   },
   {
     id: 'book-maniobras',
-    title: 'Programa aprobado a la primera',
+    title: 'Programa aprobar a la primera',
     price: '$3.999',
     originalPrice: '$13.400',
     discount: '70% OFF',
