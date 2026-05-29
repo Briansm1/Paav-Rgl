@@ -3,6 +3,7 @@ import './globals.css';
 import { FirebaseClientProvider } from '@/firebase/client-provider';
 import { Toaster } from '@/components/ui/toaster';
 import { WhatsAppButton } from '@/components/WhatsAppButton';
+import Script from 'next/script';
 
 export const metadata: Metadata = {
   metadataBase: new URL('https://pilotosasesalvolante.com'),
@@ -60,6 +61,21 @@ export default function RootLayout({
         <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
         <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Montserrat:wght@900&family=Poppins:wght@400;500;600;700;900&display=swap" rel="stylesheet" />
         <link rel="icon" href="https://i.imgur.com/kQtT1h5.jpeg" type="image/jpeg" />
+        
+        {/* Google Analytics */}
+        <Script
+          src="https://www.googletagmanager.com/gtag/js?id=G-TXZ2N74HT0"
+          strategy="afterInteractive"
+        />
+        <Script id="google-analytics" strategy="afterInteractive">
+          {`
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+
+            gtag('config', 'G-TXZ2N74HT0');
+          `}
+        </Script>
       </head>
       <body className="font-body antialiased">
         <FirebaseClientProvider>
