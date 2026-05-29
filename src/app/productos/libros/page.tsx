@@ -91,37 +91,40 @@ export default function LibrosDigitalesPage() {
                     src={book.imageUrl} 
                     alt={book.title} 
                     fill 
-                    className="object-cover transition-transform duration-500 group-hover:scale-110"
+                    className="object-cover transition-transform duration-500 group-hover:scale-105"
                     sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 25vw"
                     priority
                     data-ai-hint="book cover"
                   />
-                  <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent opacity-60"></div>
-                  
-                  {/* Discount Badge */}
-                  <div className="absolute top-4 right-4 bg-accent text-white text-[10px] font-black px-3 py-1.5 rounded-full shadow-lg border border-white/20">
-                    {book.discount}
-                  </div>
-
-                  <div className="absolute bottom-6 left-6 right-6 flex flex-col gap-1">
-                    <span className="text-white/60 text-xs font-bold line-through">
-                      {book.originalPrice}
-                    </span>
-                    <span className="bg-primary text-white text-sm font-bold px-3 py-1 rounded-full shadow-lg w-fit">
-                      {book.price}
-                    </span>
-                  </div>
                 </div>
 
                 {/* Content Area */}
                 <div className="p-8 flex flex-col flex-grow">
-                  <div className="flex items-center gap-2 mb-3">
-                    <Star className="w-4 h-4 text-gold fill-gold" />
-                    <span className="text-[10px] font-bold text-slate-400 uppercase tracking-widest">Material Exclusivo</span>
+                  <div className="flex items-center justify-between mb-4">
+                    <div className="flex items-center gap-2">
+                      <Star className="w-4 h-4 text-gold fill-gold" />
+                      <span className="text-[10px] font-bold text-slate-400 uppercase tracking-widest">Exclusivo</span>
+                    </div>
+                    {/* Discount Badge moved here */}
+                    <div className="bg-accent text-white text-[10px] font-black px-2.5 py-1 rounded-full shadow-lg border border-white/10">
+                      {book.discount}
+                    </div>
                   </div>
-                  <h3 className="text-xl font-bold mb-4 text-white group-hover:text-primary transition-colors leading-tight">
+
+                  <h3 className="text-xl font-bold mb-2 text-white group-hover:text-primary transition-colors leading-tight">
                     {book.title}
                   </h3>
+
+                  {/* Pricing Info moved here */}
+                  <div className="flex items-center gap-3 mb-6">
+                    <span className="text-white/40 text-sm font-bold line-through">
+                      {book.originalPrice}
+                    </span>
+                    <span className="text-green-500 text-lg font-black tracking-tight">
+                      {book.price}
+                    </span>
+                  </div>
+
                   <p className="text-muted-foreground text-xs leading-relaxed mb-8 flex-grow">
                     {book.description}
                   </p>
