@@ -1,4 +1,3 @@
-
 'use client';
 
 import React, { useState } from 'react';
@@ -19,7 +18,7 @@ const digitalBooks = [
     price: '$17.999',
     originalPrice: '$59.999',
     discount: '70% OFF',
-    description: 'Eliminá el miedo a manejar y dominá el tránsito real en solo días, aplicando protocolos de reacción inmediata. Dejás de "sobre pensar" y empezás a operar con CONTROL TOTAL. Un programa blindado de 9 módulos prácticos que transforman tu mente y tu manejo: 1. Método ases al volante: El sistema paso a paso para ganar criterio. 2. Lectura de tránsito: Anticipá movimientos de otros antes de que pasen. 3. Checklist de despegue: Rutina de 3 min. para anular la ansiedad inicial. 4. Manual anti-errores: Cómo evitar las 12 trampas del principiante. 5. Hoja de ruta de 7 días: Tu plan de entrenamiento diario. 6. Sistema anti-pánico: Herramientas para desbloquearte en tiempo real. 7. Volver al volante: Reinicio de confianza post-sustos o choques. 8. Adiós a la película mental: Cómo apagar el pensamiento catastrófico. 9. Mentalidad de piloto: El cambio de identidad de "no sirvo" a "estoy entrenado". Probá el método por 7 días. Si aplicando las técnicas no sentís que tenés más control, te devolvemos cada centavo. El riesgo lo corremos nosotros, vos solo conseguís tu libertad.',
+    description: 'Eliminá el miedo a manejar y dominá el tránsito real en solo días, aplicando protocolos de reacción inmediata. Dejás de "sobre pensar" y empezás a operar con CONTROL TOTAL. Un programa blindado de 9 módulos prácticos que transforman tu mente y tu manejo: 1. Método ases al volante: El sistema paso a paso para ganar criterio. 2. Lectura de tránsito: Anticipá movimientos de otros antes de que pasen. 3. Checklist de despegue: Rutina de 3 min. para anular la ansiedad inicial. 4. Manual anti-errores: Cómo evitar las 12 trampas del principiante. 5. Hoja de ruta de 7 días: Tu plan de entrenamiento diario. 6. Sistema anti-pánico: Herramientas para desbloquearte en tiempo real. 7. Volver al volante: Reinicio de confianza post-sustos or choques. 8. Adiós a la película mental: Cómo apagar el pensamiento catastrófico. 9. Mentalidad de piloto: El cambio de identidad de "no sirvo" a "estoy entrenado". Probá el método por 7 días. Si aplicando las técnicas no sentís que tenés más control, te devolvemos cada centavo. El riesgo lo corremos nosotros, vos solo conseguís tu libertad.',
     longDescription: 'Este libro digital te llevará de la mano en el proceso de perder el miedo al volante. Descubrirás técnicas psicológicas para mantener la calma y una guía paso a paso sobre los fundamentos técnicos que todo conductor principiante debe dominar antes de salir a la calle.',
     features: ['Control emocional', 'Fundamentos técnicos', 'Checklist pre-conducción'],
     imageUrl: PlaceHolderImages.find(img => img.id === 'book-novato')?.imageUrl || '',
@@ -92,9 +91,9 @@ export default function LibrosDigitalesPage() {
     <main className="min-h-screen bg-background">
       <Header />
       
-      <section className="pt-24 pb-12 md:pt-36 md:pb-24 bg-secondary/30 border-b border-white/5 flex items-center justify-center">
+      <section className="pt-24 pb-6 md:pt-32 md:pb-10 bg-secondary/30 border-b border-white/5 flex items-center justify-center">
         <div className="container mx-auto px-4 text-center">
-          <Link href="/#inicio" className="inline-flex items-center gap-2 text-primary font-bold mb-4 hover:underline">
+          <Link href="/#inicio" className="inline-flex items-center gap-2 text-primary font-bold mb-3 hover:underline">
             <ArrowLeft className="w-4 h-4" />
             Volver al inicio
           </Link>
