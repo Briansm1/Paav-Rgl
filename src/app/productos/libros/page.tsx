@@ -1,4 +1,3 @@
-
 'use client';
 
 import React from 'react';
@@ -45,7 +44,7 @@ const digitalBooks = [
     longDescription: 'En este manual práctico aprenderás a identificar los componentes vitales de tu auto. Desde cómo revisar el aceite y el refrigerante hasta el cambio correcto de un neumático. Es la guía indispensable para que nunca te quedes a pie.',
     features: ['Mantenimiento preventivo', 'Cambio de neumáticos', 'Fluidos y niveles'],
     imageUrl: PlaceHolderImages.find(img => img.id === 'book-teoria')?.imageUrl || '',
-    whatsappLink: "https://wa.me/5492966265603?text=Hola!%20Quiero%20comprar%20el%20libro%20*Programa%20ases%20de%20la%20mecánica*"
+    whatsappLink: "https://mpago.li/2uSG2jd"
   },
   {
     id: 'book-experto',
