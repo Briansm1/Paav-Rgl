@@ -7,7 +7,7 @@ import { WhatsAppButton } from '@/components/WhatsAppButton';
 export const metadata: Metadata = {
   metadataBase: new URL('https://pilotosasesalvolante.com'),
   title: 'Autoescuela en Río Gallegos | Pilotos ases al volante',
-  description: 'Aprendé a conducir en Río Gallegos de forma segura. Academia de conducción líder con equipo calificado, vehículos modernos y horarios flexibles. ¡Desbloqueá tu mejor versión al volante hoy!',
+  description: 'Aprendé a manejar con Pilotos ases al volante Autoescuela en Río Gallegos. Clases de manejo para principiantes, preparación para licencia de conducir, prácticas personalizadas y acompañamiento para examen práctico. Obtene más información en nuestra página web.',
   keywords: [
     'autoescuela río gallegos',
     'academia de conducción',
@@ -26,7 +26,7 @@ export const metadata: Metadata = {
   },
   openGraph: {
     title: 'Autoescuela en Río Gallegos | Pilotos ases al volante',
-    description: 'Aprendé a conducir en Río Gallegos de forma segura. La academia N°1 con instructores certificados y metodología de vanguardia.',
+    description: 'Aprendé a manejar con Pilotos ases al volante Autoescuela en Río Gallegos. Clases de manejo para principiantes, preparación para licencia de conducir, prácticas personalizadas y acompañamiento para examen práctico. Obtene más información en nuestra página web.',
     url: 'https://pilotosasesalvolante.com',
     siteName: 'Pilotos - Ases al Volante',
     images: [
@@ -43,7 +43,7 @@ export const metadata: Metadata = {
   twitter: {
     card: 'summary_large_image',
     title: 'Autoescuela en Río Gallegos | Pilotos ases al volante',
-    description: 'Convertite en un as al volante con nuestra academia en Río Gallegos. Seguridad y confianza desde el primer día.',
+    description: 'Aprendé a manejar con Pilotos ases al volante Autoescuela en Río Gallegos. Clases de manejo para principiantes, preparación para licencia de conducir, prácticas personalizadas y acompañamiento para examen práctico. Obtene más información en nuestra página web.',
     images: ['https://i.imgur.com/v6PauaL.png'],
   },
 };
