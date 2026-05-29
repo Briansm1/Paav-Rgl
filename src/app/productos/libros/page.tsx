@@ -67,9 +67,9 @@ const ExpandableDescription = ({ text }: { text: string }) => {
   const [isExpanded, setIsExpanded] = useState(false);
   
   return (
-    <div className="mb-4 md:mb-8 flex-grow">
+    <div className="mb-6 md:mb-10 flex-grow">
       <p className={cn(
-        "text-muted-foreground text-[11px] md:text-xs leading-relaxed transition-all duration-300",
+        "text-muted-foreground text-sm md:text-base leading-relaxed transition-all duration-300",
         !isExpanded && "line-clamp-4 md:line-clamp-5"
       )}>
         {text}
@@ -77,7 +77,7 @@ const ExpandableDescription = ({ text }: { text: string }) => {
       {text.length > 80 && (
         <button 
           onClick={() => setIsExpanded(!isExpanded)}
-          className="text-primary text-[10px] md:text-[10px] font-bold uppercase mt-1.5 hover:underline tracking-widest"
+          className="text-primary text-xs md:text-xs font-bold uppercase mt-2 hover:underline tracking-widest"
         >
           {isExpanded ? 'Ver menos' : 'Ver más'}
         </button>
@@ -104,8 +104,8 @@ export default function LibrosDigitalesPage() {
       </section>
 
       <section className="py-8 md:py-24 bg-background">
-        <div className="container mx-auto px-8 md:px-4">
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 md:gap-10 max-w-7xl mx-auto">
+        <div className="container mx-auto px-6 md:px-4">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 md:gap-10 max-w-7xl mx-auto">
             {digitalBooks.map((book) => (
               <div key={book.id} className="group flex flex-col bg-secondary/40 rounded-[2rem] md:rounded-[2.5rem] border border-white/5 overflow-hidden transition-all duration-300 hover:shadow-2xl hover:shadow-primary/5 hover:border-primary/20">
                 <div className="relative aspect-square w-full bg-secondary overflow-hidden">
@@ -120,44 +120,44 @@ export default function LibrosDigitalesPage() {
                   />
                 </div>
 
-                <div className="p-6 md:p-8 flex flex-col flex-grow items-center text-center">
-                  <div className="flex flex-wrap justify-center gap-2 mb-3 md:mb-4">
+                <div className="p-8 md:p-8 flex flex-col flex-grow items-center text-center">
+                  <div className="flex flex-wrap justify-center gap-2 mb-4 md:mb-5">
                     {'specialBadge' in book && book.specialBadge && (
-                      <div className="bg-primary text-white text-[10px] md:text-[11px] font-black px-2.5 py-1 rounded-full shadow-sm border border-white/10 uppercase tracking-tighter">
+                      <div className="bg-primary text-white text-xs md:text-sm font-black px-3 py-1.5 rounded-full shadow-sm border border-white/10 uppercase tracking-tighter">
                         {book.specialBadge}
                       </div>
                     )}
-                    <div className="bg-accent text-white text-[10px] md:text-[11px] font-black px-2.5 py-1 rounded-full shadow-sm border border-white/10 uppercase tracking-tighter">
+                    <div className="bg-accent text-white text-xs md:text-sm font-black px-3 py-1.5 rounded-full shadow-sm border border-white/10 uppercase tracking-tighter">
                       {book.discount}
                     </div>
-                    <div className="bg-primary/20 text-primary text-[10px] md:text-[11px] font-black px-2.5 py-1 rounded-full shadow-sm border border-primary/20 uppercase tracking-tighter">
+                    <div className="bg-primary/20 text-primary text-xs md:text-sm font-black px-3 py-1.5 rounded-full shadow-sm border border-primary/20 uppercase tracking-tighter">
                       3 CSI
                     </div>
                   </div>
 
-                  <div className="flex items-center justify-center gap-2 mb-3 md:mb-4">
-                    <Star className="w-4 h-4 text-gold fill-gold" />
-                    <span className="text-[10px] md:text-[10px] font-bold text-slate-400 uppercase tracking-widest">MATERIAL EXCLUSIVO</span>
+                  <div className="flex items-center justify-center gap-2 mb-4 md:mb-5">
+                    <Star className="w-5 h-5 text-gold fill-gold" />
+                    <span className="text-xs md:text-xs font-bold text-slate-400 uppercase tracking-widest">MATERIAL EXCLUSIVO</span>
                   </div>
 
-                  <h3 className="text-xl md:text-xl font-bold mb-2 md:mb-3 text-white leading-tight h-[2.8em] md:h-auto flex items-center justify-center line-clamp-2">
+                  <h3 className="text-2xl md:text-2xl font-bold mb-3 md:mb-4 text-white leading-tight h-[2.8em] md:h-auto flex items-center justify-center line-clamp-2">
                     {book.title}
                   </h3>
 
-                  <div className="flex items-center justify-center gap-3 md:gap-4 mb-4 md:mb-6">
-                    <span className="text-red-500/60 text-sm md:text-sm font-bold line-through">
+                  <div className="flex items-center justify-center gap-4 md:gap-5 mb-6 md:mb-8">
+                    <span className="text-red-500/60 text-base md:text-lg font-bold line-through">
                       {book.originalPrice}
                     </span>
-                    <span className="text-green-500 text-2xl md:text-2xl font-black tracking-tight">
+                    <span className="text-green-500 text-3xl md:text-3xl font-black tracking-tight">
                       {book.price}
                     </span>
                   </div>
 
                   <ExpandableDescription text={book.description} />
 
-                  <div className="flex flex-col gap-3 w-full mt-auto pt-2">
+                  <div className="flex flex-col gap-3 w-full mt-auto pt-4">
                     <a href={book.whatsappLink} target="_blank" rel="noopener noreferrer" className="w-full">
-                      <Button className="w-full h-12 md:h-12 rounded-xl bg-green-600 hover:bg-green-700 text-white text-sm md:text-sm font-bold transition-colors border-none">
+                      <Button className="w-full h-14 md:h-14 rounded-xl bg-green-600 hover:bg-green-700 text-white text-base md:text-base font-bold transition-colors border-none">
                         Comprar ahora
                       </Button>
                     </a>
@@ -170,28 +170,28 @@ export default function LibrosDigitalesPage() {
       </section>
 
       <section className="py-20 bg-secondary/20 border-t border-white/5">
-        <div className="container mx-auto px-8 md:px-4">
+        <div className="container mx-auto px-6 md:px-4">
           <div className="max-w-4xl mx-auto bg-black/40 p-10 md:p-16 rounded-[3rem] border border-white/10 shadow-2xl text-center">
-            <div className="inline-flex p-5 bg-primary/10 rounded-3xl mb-8">
-              < Book className="w-12 h-12 text-primary" />
+            <div className="inline-flex p-6 bg-primary/10 rounded-3xl mb-8">
+              < Book className="w-14 h-14 text-primary" />
             </div>
-            <h2 className="text-3xl md:text-4xl font-bold mb-6">¿Por qué elegir nuestros libros?</h2>
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-8 text-left mt-10">
-              <div className="space-y-2">
-                <p className="font-bold text-white">Acceso inmediato</p>
-                <p className="text-muted-foreground text-sm">Recibís el material directamente por WhatsApp. Apenas realizás la compra, nos avisas y te damos el acceso.</p>
+            <h2 className="text-3xl md:text-5xl font-bold mb-8">¿Por qué elegir nuestros libros?</h2>
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-10 text-left mt-10">
+              <div className="space-y-3">
+                <p className="font-bold text-white text-lg">Acceso inmediato</p>
+                <p className="text-muted-foreground text-sm md:text-base">Recibís el material directamente por WhatsApp. Apenas realizás la compra, nos avisas y te damos el acceso.</p>
               </div>
-              <div className="space-y-2">
-                <p className="font-bold text-white">Actualización permanente</p>
-                <p className="text-muted-foreground text-sm">Cada vez que actualizamos una norma o técnica, recibís la nueva versión gratis.</p>
+              <div className="space-y-3">
+                <p className="font-bold text-white text-lg">Actualización permanente</p>
+                <p className="text-muted-foreground text-sm md:text-base">Cada vez que actualizamos una norma o técnica, recibís la nueva versión gratis.</p>
               </div>
-              <div className="space-y-2">
-                <p className="font-bold text-white">Diseño para móviles</p>
-                <p className="text-muted-foreground text-sm">Optimizado para que lo puedas leer cómodamente desde tu celular en cualquier momento.</p>
+              <div className="space-y-3">
+                <p className="font-bold text-white text-lg">Diseño para móviles</p>
+                <p className="text-muted-foreground text-sm md:text-base">Optimizado para que lo puedas leer cómodamente desde tu celular en cualquier momento.</p>
               </div>
-              <div className="space-y-2">
-                <p className="font-bold text-white">Puntos de referencia</p>
-                <p className="text-muted-foreground text-sm">Incluimos los mismos puntos de referencia que usamos en nuestras clases prácticas en Río Gallegos.</p>
+              <div className="space-y-3">
+                <p className="font-bold text-white text-lg">Puntos de referencia</p>
+                <p className="text-muted-foreground text-sm md:text-base">Incluimos los mismos puntos de referencia que usamos en nuestras clases prácticas en Río Gallegos.</p>
               </div>
             </div>
           </div>
