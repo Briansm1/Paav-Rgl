@@ -33,7 +33,7 @@ const digitalBooks = [
     longDescription: '¿Estacionar es tu pesadilla? En este e-book desglosamos cada maniobra de estacionamiento (paralelo, a 45° y 90°) con puntos de referencia exactos y trucos de instructor que no te enseñan en otros lados. Ganá precisión milimétrica.',
     features: ['Estacionamiento perfecto', 'Giros en espacios reducidos', 'Uso de espejos'],
     imageUrl: PlaceHolderImages.find(img => img.id === 'book-maniobras')?.imageUrl || '',
-    whatsappLink: "https://wa.me/5492966265603?text=Hola!%20Quiero%20comprar%20el%20libro%20*Programa%20aprobado%20a%20la%20primera*"
+    whatsappLink: "https://mpago.li/2uCr7Wp"
   },
   {
     id: 'book-teoria',
