@@ -244,7 +244,7 @@ export const PlaceHolderImages: ImagePlaceholder[] = [
   {
     "id": "book-teoria",
     "description": "Programa ases de la mecánica",
-    "imageUrl": "https://picsum.photos/seed/book3/2048/2048",
+    "imageUrl": "https://i.imgur.com/AjHOrFL.jpeg",
     "imageHint": "book professional"
   },
   {
