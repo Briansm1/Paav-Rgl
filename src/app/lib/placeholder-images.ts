@@ -238,19 +238,19 @@ export const PlaceHolderImages: ImagePlaceholder[] = [
   {
     "id": "book-maniobras",
     "description": "Programa aprobado a la primera",
-    "imageUrl": "https://picsum.photos/seed/book2/400/600",
+    "imageUrl": "https://picsum.photos/seed/book2/2048/2048",
     "imageHint": "book design"
   },
   {
     "id": "book-teoria",
     "description": "Programa ases de la mecánica",
-    "imageUrl": "https://picsum.photos/seed/book3/400/600",
+    "imageUrl": "https://picsum.photos/seed/book3/2048/2048",
     "imageHint": "book professional"
   },
   {
     "id": "book-experto",
     "description": "Programa ases de la teoría",
-    "imageUrl": "https://picsum.photos/seed/book4/400/600",
+    "imageUrl": "https://picsum.photos/seed/book4/2048/2048",
     "imageHint": "book theory"
   }
 ];

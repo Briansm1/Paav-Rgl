@@ -85,13 +85,15 @@ export default function LibrosDigitalesPage() {
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10 lg:gap-10 max-w-7xl mx-auto">
             {digitalBooks.map((book) => (
               <div key={book.id} className="group flex flex-col bg-secondary/40 rounded-[2.5rem] border border-white/5 overflow-hidden transition-all duration-300 hover:shadow-2xl hover:shadow-primary/5 hover:border-primary/20">
-                {/* Book Cover Image Area */}
-                <div className="relative aspect-[4/5] w-full bg-secondary overflow-hidden">
+                {/* Book Cover Image Area - Square aspect ratio for 2048x2048 */}
+                <div className="relative aspect-square w-full bg-secondary overflow-hidden">
                   <Image 
                     src={book.imageUrl} 
                     alt={book.title} 
                     fill 
                     className="object-cover transition-transform duration-500 group-hover:scale-110"
+                    sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 25vw"
+                    priority
                     data-ai-hint="book cover"
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent opacity-60"></div>
