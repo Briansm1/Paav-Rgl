@@ -30,7 +30,7 @@ const digitalBooks = [
     price: '$3.999',
     originalPrice: '$13.400',
     discount: '70% OFF',
-    description: 'Dominá el estacionamiento y las maniobras más complejas con nuestra técnica de precisión. Incluye gráficos detallados.',
+    description: 'Estrategia + acción rápida El sistema definitivo para dominar los nervios y rendir tu examen práctico con total seguridad. Este combo unifica la táctica mental profunda con la ejecución inmediata para que no dejes tu aprobado al azar: 1. El método (entrenamiento): descubrí exactamente cómo piensa un evaluador, dominá el paso a paso de los 8 escenarios más críticos del examen y aprendé el protocolo exacto para recuperarte de cualquier error sin entrar en pánico. 2. El checklist: tu botón de emergencia. Una rutina táctica de 90 segundos para aplicar justo antes de subir al auto, diseñada para anclar tu cuerpo, enfocar tu mente y evitar el bloqueo en el momento decisivo.',
     longDescription: '¿Estacionar es tu pesadilla? En este e-book desglosamos cada maniobra de estacionamiento (paralelo, a 45° y 90°) con puntos de referencia exactos y trucos de instructor que no te enseñan en otros lados. Ganá precisión milimétrica.',
     features: ['Estacionamiento perfecto', 'Giros en espacios reducidos', 'Uso de espejos'],
     imageUrl: PlaceHolderImages.find(img => img.id === 'book-maniobras')?.imageUrl || '',
