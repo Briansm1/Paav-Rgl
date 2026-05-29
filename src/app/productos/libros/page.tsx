@@ -50,6 +50,7 @@ const digitalBooks = [
   {
     id: 'book-experto',
     title: 'Programa ases de la teoría',
+    specialBadge: '10 x 1',
     price: '$13.999',
     originalPrice: '$46.600',
     discount: '70% OFF',
