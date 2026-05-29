@@ -105,7 +105,7 @@ export default function LibrosDigitalesPage() {
                   <div className="flex items-center justify-between mb-4">
                     <div className="flex items-center gap-2">
                       <Star className="w-4 h-4 text-gold fill-gold" />
-                      <span className="text-[10px] font-bold text-slate-400 uppercase tracking-widest">Exclusivo</span>
+                      <span className="text-[10px] font-bold text-slate-400 uppercase tracking-widest">MATERIAL EXCLUSIVO</span>
                     </div>
                   </div>
 
