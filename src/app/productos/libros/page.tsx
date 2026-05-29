@@ -1,6 +1,6 @@
 'use client';
 
-import React from 'react';
+import React, { useState } from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
 import { Header } from '@/components/Header';
@@ -8,6 +8,7 @@ import { Footer } from '@/components/Footer';
 import { Button } from '@/components/ui/button';
 import { ArrowLeft, Book, Star } from 'lucide-react';
 import { PlaceHolderImages } from '@/app/lib/placeholder-images';
+import { cn } from '@/lib/utils';
 
 const digitalBooks = [
   {
@@ -61,6 +62,29 @@ const digitalBooks = [
     whatsappLink: "https://mpago.li/1ochaL6"
   }
 ];
+
+const ExpandableDescription = ({ text }: { text: string }) => {
+  const [isExpanded, setIsExpanded] = useState(false);
+  
+  return (
+    <div className="mb-8 flex-grow">
+      <p className={cn(
+        "text-muted-foreground text-xs leading-relaxed transition-all duration-300",
+        !isExpanded && "line-clamp-5"
+      )}>
+        {text}
+      </p>
+      {text.length > 150 && (
+        <button 
+          onClick={() => setIsExpanded(!isExpanded)}
+          className="text-primary text-[10px] font-bold uppercase mt-2 hover:underline tracking-widest"
+        >
+          {isExpanded ? 'Ver menos' : 'Ver más'}
+        </button>
+      )}
+    </div>
+  );
+};
 
 export default function LibrosDigitalesPage() {
   return (
@@ -129,9 +153,7 @@ export default function LibrosDigitalesPage() {
                     </span>
                   </div>
 
-                  <p className="text-muted-foreground text-xs leading-relaxed mb-8 flex-grow">
-                    {book.description}
-                  </p>
+                  <ExpandableDescription text={book.description} />
 
                   <div className="flex flex-col gap-3 w-full">
                     <a href={book.whatsappLink} target="_blank" rel="noopener noreferrer" className="w-full">
