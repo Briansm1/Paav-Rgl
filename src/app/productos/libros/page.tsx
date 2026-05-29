@@ -66,7 +66,6 @@ export default function LibrosDigitalesPage() {
     <main className="min-h-screen bg-background">
       <Header />
       
-      {/* Header Section */}
       <section className="pt-24 pb-6 md:pt-32 md:pb-6 bg-secondary/30 border-b border-white/5 flex items-center justify-center">
         <div className="container mx-auto px-4 text-center">
           <Link href="/#inicio" className="inline-flex items-center gap-2 text-primary font-bold mb-3 hover:underline">
@@ -79,13 +78,11 @@ export default function LibrosDigitalesPage() {
         </div>
       </section>
 
-      {/* Library Grid Section */}
       <section className="py-16 md:py-24 bg-background">
         <div className="container mx-auto px-4">
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10 lg:gap-10 max-w-7xl mx-auto">
             {digitalBooks.map((book) => (
               <div key={book.id} className="group flex flex-col bg-secondary/40 rounded-[2.5rem] border border-white/5 overflow-hidden transition-all duration-300 hover:shadow-2xl hover:shadow-primary/5 hover:border-primary/20">
-                {/* Book Cover Image Area - Square aspect ratio for 2048x2048 */}
                 <div className="relative aspect-square w-full bg-secondary overflow-hidden">
                   <Image 
                     src={book.imageUrl} 
@@ -96,18 +93,19 @@ export default function LibrosDigitalesPage() {
                     priority
                     data-ai-hint="book cover"
                   />
+                  {/* Discount Badge on the image */}
+                  <div className="absolute top-4 right-4 z-10">
+                    <div className="bg-accent text-white text-[10px] font-black px-2.5 py-1 rounded-full shadow-lg border border-white/10">
+                      {book.discount}
+                    </div>
+                  </div>
                 </div>
 
-                {/* Content Area */}
                 <div className="p-8 flex flex-col flex-grow">
                   <div className="flex items-center justify-between mb-4">
                     <div className="flex items-center gap-2">
                       <Star className="w-4 h-4 text-gold fill-gold" />
                       <span className="text-[10px] font-bold text-slate-400 uppercase tracking-widest">Exclusivo</span>
-                    </div>
-                    {/* Discount Badge moved here */}
-                    <div className="bg-accent text-white text-[10px] font-black px-2.5 py-1 rounded-full shadow-lg border border-white/10">
-                      {book.discount}
                     </div>
                   </div>
 
@@ -115,7 +113,6 @@ export default function LibrosDigitalesPage() {
                     {book.title}
                   </h3>
 
-                  {/* Pricing Info moved here */}
                   <div className="flex items-center gap-3 mb-6">
                     <span className="text-white/40 text-sm font-bold line-through">
                       {book.originalPrice}
@@ -148,7 +145,6 @@ export default function LibrosDigitalesPage() {
         </div>
       </section>
 
-      {/* Benefits Section */}
       <section className="py-20 bg-secondary/20 border-t border-white/5">
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto bg-black/40 p-10 md:p-16 rounded-[3rem] border border-white/10 shadow-2xl text-center">
