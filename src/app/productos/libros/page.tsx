@@ -93,15 +93,19 @@ export default function LibrosDigitalesPage() {
                     priority
                     data-ai-hint="book cover"
                   />
-                  {/* Discount Badge on the image */}
-                  <div className="absolute top-4 right-4 z-10">
-                    <div className="bg-accent text-white text-[10px] font-black px-2.5 py-1 rounded-full shadow-lg border border-white/10">
-                      {book.discount}
-                    </div>
-                  </div>
                 </div>
 
                 <div className="p-8 flex flex-col flex-grow">
+                  {/* Badges row */}
+                  <div className="flex gap-2 mb-3">
+                    <div className="bg-accent text-white text-[10px] font-black px-2.5 py-1 rounded-full shadow-sm border border-white/10 uppercase tracking-tighter">
+                      {book.discount}
+                    </div>
+                    <div className="bg-primary text-white text-[10px] font-black px-2.5 py-1 rounded-full shadow-sm border border-white/10 uppercase tracking-tighter">
+                      3 CSI
+                    </div>
+                  </div>
+
                   <div className="flex items-center justify-between mb-4">
                     <div className="flex items-center gap-2">
                       <Star className="w-4 h-4 text-gold fill-gold" />
