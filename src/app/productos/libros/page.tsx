@@ -67,17 +67,17 @@ const ExpandableDescription = ({ text }: { text: string }) => {
   const [isExpanded, setIsExpanded] = useState(false);
   
   return (
-    <div className="mb-8 flex-grow">
+    <div className="mb-4 md:mb-8 flex-grow">
       <p className={cn(
-        "text-muted-foreground text-xs leading-relaxed transition-all duration-300",
-        !isExpanded && "line-clamp-5"
+        "text-muted-foreground text-[10px] md:text-xs leading-relaxed transition-all duration-300",
+        !isExpanded && "line-clamp-3 md:line-clamp-5"
       )}>
         {text}
       </p>
-      {text.length > 150 && (
+      {text.length > 100 && (
         <button 
           onClick={() => setIsExpanded(!isExpanded)}
-          className="text-primary text-[10px] font-bold uppercase mt-2 hover:underline tracking-widest"
+          className="text-primary text-[9px] md:text-[10px] font-bold uppercase mt-1.5 hover:underline tracking-widest"
         >
           {isExpanded ? 'Ver menos' : 'Ver más'}
         </button>
@@ -103,61 +103,61 @@ export default function LibrosDigitalesPage() {
         </div>
       </section>
 
-      <section className="py-16 md:py-24 bg-background">
-        <div className="container mx-auto px-4">
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10 lg:gap-10 max-w-7xl mx-auto">
+      <section className="py-8 md:py-24 bg-background">
+        <div className="container mx-auto px-2 md:px-4">
+          <div className="grid grid-cols-2 md:grid-cols-2 lg:grid-cols-4 gap-3 md:gap-10 max-w-7xl mx-auto">
             {digitalBooks.map((book) => (
-              <div key={book.id} className="group flex flex-col bg-secondary/40 rounded-[2.5rem] border border-white/5 overflow-hidden transition-all duration-300 hover:shadow-2xl hover:shadow-primary/5 hover:border-primary/20">
+              <div key={book.id} className="group flex flex-col bg-secondary/40 rounded-[1.5rem] md:rounded-[2.5rem] border border-white/5 overflow-hidden transition-all duration-300 hover:shadow-2xl hover:shadow-primary/5 hover:border-primary/20">
                 <div className="relative aspect-square w-full bg-secondary overflow-hidden">
                   <Image 
                     src={book.imageUrl} 
                     alt={book.title} 
                     fill 
                     className="object-cover transition-transform duration-500 group-hover:scale-105"
-                    sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 25vw"
+                    sizes="(max-width: 768px) 50vw, (max-width: 1200px) 50vw, 25vw"
                     priority
                     data-ai-hint="book cover"
                   />
                 </div>
 
-                <div className="p-8 flex flex-col flex-grow items-center text-center">
-                  <div className="flex justify-center gap-2 mb-3">
+                <div className="p-3 md:p-8 flex flex-col flex-grow items-center text-center">
+                  <div className="flex flex-wrap justify-center gap-1 md:gap-2 mb-2 md:mb-3">
                     {'specialBadge' in book && book.specialBadge && (
-                      <div className="bg-primary text-white text-[10px] font-black px-2.5 py-1 rounded-full shadow-sm border border-white/10 uppercase tracking-tighter">
+                      <div className="bg-primary text-white text-[8px] md:text-[11px] font-black px-1.5 md:px-2.5 py-0.5 md:py-1 rounded-full shadow-sm border border-white/10 uppercase tracking-tighter">
                         {book.specialBadge}
                       </div>
                     )}
-                    <div className="bg-accent text-white text-[10px] font-black px-2.5 py-1 rounded-full shadow-sm border border-white/10 uppercase tracking-tighter">
+                    <div className="bg-accent text-white text-[8px] md:text-[11px] font-black px-1.5 md:px-2.5 py-0.5 md:py-1 rounded-full shadow-sm border border-white/10 uppercase tracking-tighter">
                       {book.discount}
                     </div>
-                    <div className="bg-primary text-white text-[10px] font-black px-2.5 py-1 rounded-full shadow-sm border border-white/10 uppercase tracking-tighter">
+                    <div className="bg-primary/20 text-primary text-[8px] md:text-[11px] font-black px-1.5 md:px-2.5 py-0.5 md:py-1 rounded-full shadow-sm border border-primary/20 uppercase tracking-tighter hidden md:block">
                       3 CSI
                     </div>
                   </div>
 
-                  <div className="flex items-center justify-center gap-2 mb-4">
-                    <Star className="w-4 h-4 text-gold fill-gold" />
-                    <span className="text-[10px] font-bold text-slate-400 uppercase tracking-widest">MATERIAL EXCLUSIVO</span>
+                  <div className="flex items-center justify-center gap-1 md:gap-2 mb-2 md:mb-4">
+                    <Star className="w-3 h-3 md:w-4 md:h-4 text-gold fill-gold" />
+                    <span className="text-[8px] md:text-[10px] font-bold text-slate-400 uppercase tracking-widest">MATERIAL EXCLUSIVO</span>
                   </div>
 
-                  <h3 className="text-xl font-bold mb-2 text-white leading-tight">
+                  <h3 className="text-sm md:text-xl font-bold mb-1 md:mb-2 text-white leading-tight h-[2.8em] md:h-auto flex items-center justify-center line-clamp-2">
                     {book.title}
                   </h3>
 
-                  <div className="flex items-center justify-center gap-3 mb-6">
-                    <span className="text-red-500/60 text-sm font-bold line-through">
+                  <div className="flex items-center justify-center gap-2 md:gap-3 mb-3 md:mb-6">
+                    <span className="text-red-500/60 text-[10px] md:text-sm font-bold line-through">
                       {book.originalPrice}
                     </span>
-                    <span className="text-green-500 text-lg font-black tracking-tight">
+                    <span className="text-green-500 text-sm md:text-xl font-black tracking-tight">
                       {book.price}
                     </span>
                   </div>
 
                   <ExpandableDescription text={book.description} />
 
-                  <div className="flex flex-col gap-3 w-full">
+                  <div className="flex flex-col gap-3 w-full mt-auto">
                     <a href={book.whatsappLink} target="_blank" rel="noopener noreferrer" className="w-full">
-                      <Button className="w-full h-12 rounded-xl bg-green-600 hover:bg-green-700 text-white font-bold transition-colors border-none">
+                      <Button className="w-full h-9 md:h-12 rounded-lg md:rounded-xl bg-green-600 hover:bg-green-700 text-white text-[10px] md:text-sm font-bold transition-colors border-none px-2">
                         Comprar ahora
                       </Button>
                     </a>
