@@ -5,8 +5,20 @@ import { Toaster } from '@/components/ui/toaster';
 import { WhatsAppButton } from '@/components/WhatsAppButton';
 
 export const metadata: Metadata = {
+  metadataBase: new URL('https://pilotosasesalvolante.com'),
   title: 'Autoescuela en Río Gallegos | Pilotos ases al volante',
-  description: 'Aprendé a conducir en Río Gallegos de forma segura. Equipo calificado, vehículos modernos y horarios flexibles. ¡Desbloqueá tu mejor versión al volante hoy!',
+  description: 'Aprendé a conducir en Río Gallegos de forma segura. Academia de conducción líder con equipo calificado, vehículos modernos y horarios flexibles. ¡Desbloqueá tu mejor versión al volante hoy!',
+  keywords: [
+    'autoescuela río gallegos',
+    'academia de conducción',
+    'aprender a manejar',
+    'clases de manejo santa cruz',
+    'licencia de conducir río gallegos',
+    'escuela de manejo',
+    'pilotos ases al volante',
+    'seguridad vial',
+    'examen de conducir'
+  ],
   icons: {
     icon: 'https://i.imgur.com/kQtT1h5.jpeg',
     shortcut: 'https://i.imgur.com/kQtT1h5.jpeg',
@@ -14,7 +26,7 @@ export const metadata: Metadata = {
   },
   openGraph: {
     title: 'Autoescuela en Río Gallegos | Pilotos ases al volante',
-    description: 'Aprendé a conducir en Río Gallegos de forma segura. Equipo calificado, vehículos modernos y horarios flexibles. ¡Desbloqueá tu mejor versión al volante hoy!',
+    description: 'Aprendé a conducir en Río Gallegos de forma segura. La academia N°1 con instructores certificados y metodología de vanguardia.',
     url: 'https://pilotosasesalvolante.com',
     siteName: 'Pilotos - Ases al Volante',
     images: [
@@ -22,7 +34,7 @@ export const metadata: Metadata = {
         url: 'https://i.imgur.com/v6PauaL.png',
         width: 1200,
         height: 630,
-        alt: 'Pilotos Academia de Conducción',
+        alt: 'Pilotos Academia de Conducción en Río Gallegos',
       },
     ],
     locale: 'es_AR',
@@ -31,7 +43,7 @@ export const metadata: Metadata = {
   twitter: {
     card: 'summary_large_image',
     title: 'Autoescuela en Río Gallegos | Pilotos ases al volante',
-    description: 'Aprendé a conducir en Río Gallegos de forma segura. Equipo calificado, vehículos modernos y horarios flexibles. ¡Desbloqueá tu mejor versión al volante hoy!',
+    description: 'Convertite en un as al volante con nuestra academia en Río Gallegos. Seguridad y confianza desde el primer día.',
     images: ['https://i.imgur.com/v6PauaL.png'],
   },
 };
