@@ -96,7 +96,6 @@ export default function LibrosDigitalesPage() {
                 </div>
 
                 <div className="p-8 flex flex-col flex-grow items-center text-center">
-                  {/* Badges row centered */}
                   <div className="flex justify-center gap-2 mb-3">
                     <div className="bg-accent text-white text-[10px] font-black px-2.5 py-1 rounded-full shadow-sm border border-white/10 uppercase tracking-tighter">
                       {book.discount}
@@ -116,7 +115,7 @@ export default function LibrosDigitalesPage() {
                   </h3>
 
                   <div className="flex items-center justify-center gap-3 mb-6">
-                    <span className="text-white/40 text-sm font-bold line-through">
+                    <span className="text-red-500/60 text-sm font-bold line-through">
                       {book.originalPrice}
                     </span>
                     <span className="text-green-500 text-lg font-black tracking-tight">
