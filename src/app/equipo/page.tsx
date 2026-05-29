@@ -129,7 +129,7 @@ export default function EquipoPage() {
           </p>
           <Link href="/#planes">
             <Button size="lg" className="h-14 px-12 rounded-full bg-primary hover:bg-primary/90 font-bold text-lg animate-heartbeat">
-              Ver programas disponibles
+              Ver planes disponibles
             </Button>
           </Link>
         </div>
