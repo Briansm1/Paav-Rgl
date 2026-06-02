@@ -18,7 +18,7 @@ export const PartnersTicker = () => {
       
       <div className="container mx-auto px-4 mb-10 relative z-20">
         <h4 className="text-center text-[10px] md:text-xs font-bold text-slate-500 uppercase tracking-[0.3em]">
-          Comercios amigos y socios estratégicos
+          socios estratégicos
         </h4>
       </div>
       
