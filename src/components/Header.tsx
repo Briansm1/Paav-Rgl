@@ -66,18 +66,9 @@ export const Header = () => {
   ];
 
   const socialLinks = [
-    { name: 'Instagram', href: 'https://www.instagram.com/pilotos.asesalvolante/', icon: <Instagram className="w-4 h-4" /> },
-    { name: 'Facebook', href: 'https://www.facebook.com/profile.php?id=61576666433315', icon: <Facebook className="w-4 h-4" /> },
+    { name: 'Instagram', href: 'https://www.instagram.com/pilotosaav.autoescuela/', icon: <Instagram className="w-4 h-4" /> },
+    { name: 'Facebook', href: 'https://www.facebook.com/autoescuela.riogallegos.pilotosasesalvolante', icon: <Facebook className="w-4 h-4" /> },
     { name: 'YouTube', href: 'https://www.youtube.com/@pilotosasesalvolante', icon: <Youtube className="w-4 h-4" /> },
-    { 
-      name: 'TikTok', 
-      href: 'https://www.tiktok.com/@pilotos_asesalvolante', 
-      icon: (
-        <svg viewBox="0 0 448 512" className="w-4 h-4 fill-current" xmlns="http://www.w3.org/2000/svg">
-          <path d="M448 209.91a210.06 210.06 0 0 1-122.77-39.25v178.72A162.55 162.55 0 1 1 185 188.31v89.89a74.62 74.62 0 1 0 52.23 71.18V0h88a121.18 121.18 0 0 0 1.86 22.17h.1a122.18 122.18 0 0 0 103.81 102.39 121.43 121.43 0 0 0 67 20.14z"/>
-        </svg>
-      ) 
-    },
   ];
 
   const renderNavLink = (link: typeof navLinks[0]) => (
