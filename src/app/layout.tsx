@@ -7,7 +7,7 @@ import Script from 'next/script';
 
 export const metadata: Metadata = {
   metadataBase: new URL('https://pilotosasesalvolante.com'),
-  title: 'Autoescuela en Río Gallegos | Pilotos ases al volante',
+  title: 'Pilotos ases al volante | Autoescuela en Río Gallegos',
   description: 'Aprendé a manejar con Pilotos ases al volante Autoescuela en Río Gallegos. Clases de manejo para principiantes, preparación para licencia de conducir, prácticas personalizadas y acompañamiento para examen práctico. Obtene más información en nuestra página web.',
   keywords: [
     'autoescuela río gallegos',
@@ -26,7 +26,7 @@ export const metadata: Metadata = {
     apple: 'https://i.imgur.com/kQtT1h5.jpeg',
   },
   openGraph: {
-    title: 'Autoescuela en Río Gallegos | Pilotos ases al volante',
+    title: 'Pilotos ases al volante | Autoescuela en Río Gallegos',
     description: 'Aprendé a manejar con Pilotos ases al volante Autoescuela en Río Gallegos. Clases de manejo para principiantes, preparación para licencia de conducir, prácticas personalizadas y acompañamiento para examen práctico. Obtene más información en nuestra página web.',
     url: 'https://pilotosasesalvolante.com',
     siteName: 'Pilotos - Ases al Volante',
@@ -43,7 +43,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Autoescuela en Río Gallegos | Pilotos ases al volante',
+    title: 'Pilotos ases al volante | Autoescuela en Río Gallegos',
     description: 'Aprendé a manejar con Pilotos ases al volante Autoescuela en Río Gallegos. Clases de manejo para principiantes, preparación para licencia de conducir, prácticas personalizadas y acompañamiento para examen práctico. Obtene más información en nuestra página web.',
     images: ['https://i.imgur.com/v6PauaL.png'],
   },
