@@ -83,11 +83,10 @@ export const Hero = () => {
           <div className="w-px h-10 md:h-14 bg-white/20"></div>
           
           <div className="flex flex-col items-center text-center min-w-[70px] md:min-w-[100px]">
-            <div className="flex flex-col items-center">
-              <p className="text-xl sm:text-2xl md:text-3xl font-bold text-gold leading-none">5/5</p>
-              <div className="flex gap-0.5 mt-1.5 justify-center">
+            <div className="flex flex-col items-center justify-center h-full">
+              <div className="flex gap-0.5 justify-center py-1">
                 {[...Array(5)].map((_, i) => (
-                  <Star key={i} className="w-3 md:w-4 h-3 md:h-4 text-yellow-400 fill-yellow-400" />
+                  <Star key={i} className="w-4 h-4 md:w-5 md:h-5 text-yellow-400 fill-yellow-400" />
                 ))}
               </div>
             </div>
