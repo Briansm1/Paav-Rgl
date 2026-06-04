@@ -46,7 +46,7 @@ export const AiAssistant = () => {
       {!isOpen && (
         <Button 
           onClick={() => setIsOpen(true)}
-          className="w-14 h-14 md:w-16 md:h-16 rounded-full shadow-2xl bg-primary hover:bg-primary/90 flex items-center justify-center animate-bounce hover:animate-none"
+          className="w-14 h-14 md:w-16 md:h-16 rounded-full bg-primary hover:bg-primary/90 flex items-center justify-center animate-bounce hover:animate-none shadow-none border-none"
           aria-label="Abrir asistente IA"
         >
           <MessageSquare className="w-7 h-7 md:w-8 md:h-8 text-white" />
@@ -104,7 +104,7 @@ export const AiAssistant = () => {
                 placeholder="Preguntar..." 
                 className="flex-grow rounded-full h-10 px-4 focus-visible:ring-primary"
               />
-              <Button type="submit" disabled={isLoading} className="rounded-full w-10 h-10 p-0 bg-primary hover:bg-primary/90">
+              <Button type="submit" disabled={isLoading} className="rounded-full w-10 h-10 p-0 bg-primary hover:bg-primary/90 shadow-none border-none">
                 <Send className="w-4 h-4" />
               </Button>
             </form>

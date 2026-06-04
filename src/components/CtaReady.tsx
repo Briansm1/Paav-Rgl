@@ -28,7 +28,7 @@ export const CtaReady = () => {
           </div>
           <div className="px-4">
             <Link href="#planes">
-              <Button size="lg" className="h-14 px-10 rounded-full bg-accent hover:bg-accent/90 text-white font-bold text-lg transition-all active:scale-95 shadow-md border-none animate-heartbeat">
+              <Button size="lg" className="h-14 px-10 rounded-full bg-accent hover:bg-accent/90 text-white font-bold text-lg transition-all active:scale-95 shadow-none border-none animate-heartbeat">
                 Quiero empezar
               </Button>
             </Link>

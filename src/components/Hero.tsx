@@ -52,7 +52,7 @@ export const Hero = () => {
           
           <div className="flex flex-col sm:flex-row gap-4 animate-in fade-in slide-in-from-bottom-10 duration-1000 delay-300 w-full sm:w-auto mt-4 md:mt-0 px-2 sm:px-0">
             <Link href="#planes" className="w-full sm:w-auto">
-              <Button size="lg" className="h-14 md:h-16 px-10 md:px-12 text-lg bg-primary hover:bg-primary/90 rounded-full w-full font-bold shadow-2xl shadow-primary/20 animate-heartbeat transition-all active:scale-95">
+              <Button size="lg" className="h-14 md:h-16 px-10 md:px-12 text-lg bg-primary hover:bg-primary/90 rounded-full w-full font-bold transition-all active:scale-95 shadow-none border-none">
                 Conocer planes
                 <ChevronRight className="ml-2 w-6 h-6" />
               </Button>
