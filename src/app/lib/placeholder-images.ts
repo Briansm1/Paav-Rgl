@@ -237,9 +237,9 @@ export const PlaceHolderImages: ImagePlaceholder[] = [
   },
   {
     "id": "book-maniobras",
-    "description": "Programa aprobado a la primera",
-    "imageUrl": "https://i.imgur.com/BxOSl6D.jpeg",
-    "imageHint": "book design"
+    "description": "Programa aprobar a la primera",
+    "imageUrl": "https://i.imgur.com/QJ0Z6IW.jpeg",
+    "imageHint": "book cover"
   },
   {
     "id": "book-teoria",

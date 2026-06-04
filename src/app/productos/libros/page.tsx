@@ -1,3 +1,4 @@
+
 'use client';
 
 import React, { useState } from 'react';
@@ -113,7 +114,7 @@ export default function LibrosDigitalesPage() {
                     src={book.imageUrl} 
                     alt={book.title} 
                     fill 
-                    className="object-cover transition-transform duration-500 group-hover:scale-105"
+                    className="object-cover"
                     sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 25vw"
                     priority
                     data-ai-hint="book cover"
