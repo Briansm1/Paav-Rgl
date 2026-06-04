@@ -189,12 +189,12 @@ export default function LibrosDigitalesPage() {
           <div className="max-w-7xl mx-auto pt-10 border-t border-white/5">
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
               {benefits.map((benefit, i) => (
-                <div key={i} className="flex flex-col items-center sm:items-start text-center sm:text-left gap-3">
+                <div key={i} className="flex flex-col items-center text-center gap-3">
                   <div className="flex items-center gap-3">
                     <CheckCircle2 className="w-6 h-6 text-primary shrink-0" />
                     <h4 className="font-bold text-white text-lg tracking-tight">{benefit.title}</h4>
                   </div>
-                  <p className="text-muted-foreground text-sm leading-relaxed pl-9">
+                  <p className="text-muted-foreground text-sm leading-relaxed">
                     {benefit.desc}
                   </p>
                 </div>
