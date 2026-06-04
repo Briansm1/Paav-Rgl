@@ -77,7 +77,7 @@ const benefits = [
     desc: 'Optimizado para leer cómodamente desde tu celular.'
   },
   {
-    title: 'Garantía de 30 días',
+    title: 'Garantía',
     desc: 'Si el contenido no cumple tus expectativas, tenés 30 días de garantía.'
   }
 ];
@@ -186,7 +186,6 @@ export default function LibrosDigitalesPage() {
             ))}
           </div>
 
-          {/* New complementary benefits section */}
           <div className="max-w-7xl mx-auto pt-10 border-t border-white/5">
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
               {benefits.map((benefit, i) => (
