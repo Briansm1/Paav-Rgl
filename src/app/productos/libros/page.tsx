@@ -7,7 +7,7 @@ import Link from 'next/link';
 import { Header } from '@/components/Header';
 import { Footer } from '@/components/Footer';
 import { Button } from '@/components/ui/button';
-import { ArrowLeft, Book, Star } from 'lucide-react';
+import { ArrowLeft, Book, Star, CheckCircle2 } from 'lucide-react';
 import { PlaceHolderImages } from '@/app/lib/placeholder-images';
 import { cn } from '@/lib/utils';
 
@@ -64,6 +64,25 @@ const digitalBooks = [
   }
 ];
 
+const benefits = [
+  {
+    title: 'Acceso inmediato',
+    desc: 'Recibís el material directamente por WhatsApp al instante.'
+  },
+  {
+    title: 'Actualización permanente',
+    desc: 'Recibís nuevas versiones gratis ante cualquier cambio.'
+  },
+  {
+    title: 'Diseño para móviles',
+    desc: 'Optimizado para leer cómodamente desde tu celular.'
+  },
+  {
+    title: 'Puntos de referencia',
+    desc: 'Mismos puntos técnicos que usamos en clases prácticas.'
+  }
+];
+
 const ExpandableDescription = ({ text }: { text: string }) => {
   const [isExpanded, setIsExpanded] = useState(false);
   
@@ -104,9 +123,9 @@ export default function LibrosDigitalesPage() {
         </div>
       </section>
 
-      <section className="py-8 md:py-24 bg-background">
+      <section className="py-8 md:py-20 bg-background">
         <div className="container mx-auto px-6 md:px-4">
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 md:gap-10 max-w-7xl mx-auto">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 md:gap-10 max-w-7xl mx-auto mb-20">
             {digitalBooks.map((book) => (
               <div key={book.id} className="group flex flex-col bg-secondary/40 rounded-[2rem] md:rounded-[2.5rem] border border-white/5 overflow-hidden transition-all duration-300 hover:shadow-2xl hover:shadow-primary/5 hover:border-primary/20">
                 <div className="relative aspect-square w-full bg-secondary overflow-hidden">
@@ -167,33 +186,21 @@ export default function LibrosDigitalesPage() {
               </div>
             ))}
           </div>
-        </div>
-      </section>
 
-      <section className="py-20 bg-secondary/20 border-t border-white/5">
-        <div className="container mx-auto px-6 md:px-4">
-          <div className="max-w-4xl mx-auto bg-black/40 p-10 md:p-16 rounded-[3rem] border border-white/10 shadow-2xl text-center">
-            <div className="inline-flex p-6 bg-primary/10 rounded-3xl mb-8">
-              < Book className="w-14 h-14 text-primary" />
-            </div>
-            <h2 className="text-3xl md:text-5xl font-bold mb-8">¿Por qué elegir nuestros libros?</h2>
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-10 text-left mt-10">
-              <div className="space-y-3">
-                <p className="font-bold text-white text-lg">Acceso inmediato</p>
-                <p className="text-muted-foreground text-sm md:text-base">Recibís el material directamente por WhatsApp. Apenas realizás la compra, nos avisas y te damos el acceso.</p>
-              </div>
-              <div className="space-y-3">
-                <p className="font-bold text-white text-lg">Actualización permanente</p>
-                <p className="text-muted-foreground text-sm md:text-base">Cada vez que actualizamos una norma o técnica, recibís la nueva versión gratis.</p>
-              </div>
-              <div className="space-y-3">
-                <p className="font-bold text-white text-lg">Diseño para móviles</p>
-                <p className="text-muted-foreground text-sm md:text-base">Optimizado para que lo puedas leer cómodamente desde tu celular en cualquier momento.</p>
-              </div>
-              <div className="space-y-3">
-                <p className="font-bold text-white text-lg">Puntos de referencia</p>
-                <p className="text-muted-foreground text-sm md:text-base">Incluimos los mismos puntos de referencia que usamos en nuestras clases prácticas en Río Gallegos.</p>
-              </div>
+          {/* New complementary benefits section */}
+          <div className="max-w-7xl mx-auto pt-10 border-t border-white/5">
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
+              {benefits.map((benefit, i) => (
+                <div key={i} className="flex flex-col items-center sm:items-start text-center sm:text-left gap-3">
+                  <div className="flex items-center gap-3">
+                    <CheckCircle2 className="w-6 h-6 text-primary shrink-0" />
+                    <h4 className="font-bold text-white text-lg tracking-tight">{benefit.title}</h4>
+                  </div>
+                  <p className="text-muted-foreground text-sm leading-relaxed pl-9">
+                    {benefit.desc}
+                  </p>
+                </div>
+              ))}
             </div>
           </div>
         </div>
@@ -203,3 +210,4 @@ export default function LibrosDigitalesPage() {
     </main>
   );
 }
+
