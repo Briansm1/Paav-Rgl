@@ -182,7 +182,7 @@ export default function LibrosDigitalesPage() {
                     </a>
                     <div className="flex flex-col items-center gap-2">
                       <p className="text-[10px] md:text-[11px] font-bold text-slate-500 uppercase tracking-tight">
-                        Pago seguro a través de
+                        PAGO SEGURO POR
                       </p>
                       <div className="relative h-8 w-32">
                         <Image 
