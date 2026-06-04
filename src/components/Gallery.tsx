@@ -33,10 +33,10 @@ export const Gallery = () => {
             </h2>
           </div>
 
-          <div className="relative px-2 md:px-0">
-            {/* Horizontal Fades to create the "disintegrating" effect at the edges */}
-            <div className="absolute left-0 top-0 bottom-0 w-8 md:w-20 bg-gradient-to-r from-background via-background/40 to-transparent z-20 pointer-events-none"></div>
-            <div className="absolute right-0 top-0 bottom-0 w-8 md:w-20 bg-gradient-to-l from-background via-background/40 to-transparent z-20 pointer-events-none"></div>
+          <div className="relative px-0 md:px-0">
+            {/* Horizontal Fades - Ampliados y suavizados para que el inicio sea imperceptible */}
+            <div className="absolute left-0 top-0 bottom-0 w-24 md:w-64 bg-gradient-to-r from-background via-background/70 via-background/20 to-transparent z-20 pointer-events-none"></div>
+            <div className="absolute right-0 top-0 bottom-0 w-24 md:w-64 bg-gradient-to-l from-background via-background/70 via-background/20 to-transparent z-20 pointer-events-none"></div>
             
             <Carousel 
               plugins={[
