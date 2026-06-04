@@ -18,7 +18,7 @@ const digitalBooks = [
     price: '$17.999',
     originalPrice: '$59.999',
     discount: '70% OFF',
-    description: 'Eliminá el miedo a manejar y dominá el tránsito real en solo días, aplicando protocolos de reacción inmediata. Dejás de "sobre pensar" y empezás a operar con CONTROL TOTAL. Un programa blindado de 9 módulos prácticos que transforman tu mente y tu manejo: 1. Método ases al volante: El sistema paso a paso para ganar criterio. 2. Lectura de tránsito: Anticipá movimientos de otros antes de que pasen. 3. Checklist de despegue: Rutina de 3 min. para anular la ansiedad inicial. 4. Manual anti-errores: Cómo evitar las 12 trampas del principiante. 5. Hoja de ruta de 7 días: Tu plan de entrenamiento diario. 6. Sistema anti-pánico: Herramientas para desbloquearte en tiempo real. 7. Volver al volante: Reinicio de confianza post-sustos o choques. 8. Adiós a la película mental: Cómo apagar el pensamiento catastrófico. 9. Mentalidad de piloto: El cambio de identidad de "no sirvo" a "estoy entrenado". Probá el método por 7 días. Si aplicando las técnicas no sentís que tenés más control, te devolvemos cada centavo. El riesgo lo corremos nosotros, vos solo conseguís tu libertad.',
+    description: 'Eliminá el miedo a manejar y dominá el tránsito real en solo días, aplicando protocolos de reacción inmediata. Dejás de "sobre pensar" y empezás a operar con CONTROL TOTAL. Un programa blindado de 9 módulos prácticos que transforman tu mente y tu manejo: 1. Método ases al volante: El sistema paso a paso para ganar criterio. 2. Lectura de tránsito: Anticipá movimientos de otros antes de que pasen. 3. Checklist de despegue: Rutina de 3 min. para anular la ansiedad inicial. 4. Manual anti-errores: Cómo evitar las 12 trampas del principiante. 5. Hoja de ruta de 7 días: Tu plan de entrenamiento diario. 6. Sistema anti-pánico: Herramientas para desbloquearte en tiempo real. 7. Volver al volante: Reinicio de confianza post-sustos or choques. 8. Adiós a la película mental: Cómo apagar el pensamiento catastrófico. 9. Mentalidad de piloto: El cambio de identidad de "no sirvo" a "estoy entrenado". Probá el método por 7 días. Si aplicando las técnicas no sentís que tenés más control, te devolvemos cada centavo. El riesgo lo corremos nosotros, vos solo conseguís tu libertad.',
     longDescription: 'Este libro digital te llevará de la mano en el proceso de perder el miedo al volante. Descubrirás técnicas psicológicas para mantener la calma y una guía paso a paso sobre los fundamentos técnicos que todo conductor principiante debe dominar antes de salir a la calle.',
     features: ['Control emocional', 'Fundamentos técnicos', 'Checklist pre-conducción'],
     imageUrl: PlaceHolderImages.find(img => img.id === 'book-novato')?.imageUrl || '',
@@ -197,14 +197,17 @@ export default function LibrosDigitalesPage() {
           </div>
 
           <div className="max-w-7xl mx-auto pt-10 border-t border-white/5">
-            <div className="grid grid-cols-2 lg:grid-cols-3 gap-x-4 gap-y-10 md:gap-8">
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-y-12 md:gap-8">
               {benefits.map((benefit, i) => (
-                <div key={i} className="flex flex-col items-center text-center gap-3">
-                  <div className="flex flex-col md:flex-row items-center gap-2 md:gap-3">
-                    <CheckCircle2 className="w-6 h-6 text-primary shrink-0" />
-                    <h4 className="font-bold text-white text-sm md:text-lg tracking-tight leading-tight">{benefit.title}</h4>
+                <div key={i} className={cn(
+                  "flex flex-col items-center text-center gap-4 px-4",
+                  i === benefits.length - 1 && i % 2 === 0 && "sm:col-span-2 lg:col-span-1"
+                )}>
+                  <div className="flex flex-col items-center gap-3">
+                    <CheckCircle2 className="w-8 h-8 md:w-7 md:h-7 text-primary shrink-0" />
+                    <h4 className="font-bold text-white text-lg md:text-xl tracking-tight leading-tight">{benefit.title}</h4>
                   </div>
-                  <p className="text-muted-foreground text-[10px] md:text-sm leading-relaxed px-1">
+                  <p className="text-muted-foreground text-sm md:text-base leading-relaxed max-w-xs">
                     {benefit.desc}
                   </p>
                 </div>
