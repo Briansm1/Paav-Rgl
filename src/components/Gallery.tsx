@@ -45,9 +45,6 @@ export const Gallery = () => {
             <h2 className="text-3xl md:text-5xl font-bold font-headline mb-4 tracking-tight">
               Galería de <span className="text-primary italic">clases</span>
             </h2>
-            <p className="text-muted-foreground text-sm md:text-base max-w-md mx-auto">
-              Tocá la imagen para descubrir cómo son nuestras prácticas reales en la calle.
-            </p>
           </div>
 
           {/* Stack Container */}
