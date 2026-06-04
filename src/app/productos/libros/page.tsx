@@ -77,8 +77,8 @@ const benefits = [
     desc: 'Optimizado para leer cómodamente desde tu celular.'
   },
   {
-    title: 'Puntos de referencia',
-    desc: 'Mismos puntos técnicos que usamos en clases prácticas.'
+    title: 'Garantía de 30 días',
+    desc: 'Si el contenido no cumple tus expectativas, tenés 30 días de garantía.'
   }
 ];
 
