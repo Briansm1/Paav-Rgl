@@ -16,7 +16,7 @@ export const Gallery = () => {
 
   return (
     <section id="galeria" className="relative py-20 md:py-32 bg-background overflow-hidden">
-      {/* Soft gradient transitions */}
+      {/* Soft gradient transitions - Vertical */}
       <div className="absolute inset-0 bg-gradient-to-b from-background via-secondary/5 to-background z-0">
         <div className="absolute top-0 left-0 right-0 h-32 bg-gradient-to-b from-background via-background/50 to-transparent"></div>
         <div className="absolute bottom-0 left-0 right-0 h-32 bg-gradient-to-t from-background via-background/50 to-transparent"></div>
@@ -31,7 +31,11 @@ export const Gallery = () => {
         </h2>
       </div>
 
-      <div className="max-w-7xl mx-auto px-0 relative z-10">
+      <div className="max-w-full mx-auto px-0 relative z-10">
+        {/* Horizontal Fades to prevent hard cuts */}
+        <div className="absolute left-0 top-0 bottom-0 w-24 md:w-48 bg-gradient-to-r from-background to-transparent z-20 pointer-events-none"></div>
+        <div className="absolute right-0 top-0 bottom-0 w-24 md:w-48 bg-gradient-to-l from-background to-transparent z-20 pointer-events-none"></div>
+        
         <Carousel 
           plugins={[
             AutoScroll({ 
