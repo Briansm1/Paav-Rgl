@@ -1,4 +1,3 @@
-
 'use client';
 
 import React, { useState } from 'react';
@@ -71,7 +70,7 @@ const benefits = [
   },
   {
     title: 'Actualización permanente',
-    desc: 'Recibís nuevas versiones gratis ante cualquier cambio.'
+    desc: 'Recibís nuevas versiones GRATIS ante cualquier cambio.'
   },
   {
     title: 'Diseño para móviles',
@@ -210,4 +209,3 @@ export default function LibrosDigitalesPage() {
     </main>
   );
 }
-
