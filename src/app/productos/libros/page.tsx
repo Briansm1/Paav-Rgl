@@ -39,8 +39,8 @@ const digitalBooks = [
   {
     id: 'book-teoria',
     title: 'Programa ases de la mecánica',
-    price: '$6.999',
-    originalPrice: '$23.300',
+    price: '$8.999',
+    originalPrice: '$29.999',
     discount: '70% OFF',
     description: 'Es una formación completa diseñada para llevarte desde cero hasta un nivel avanzado en mecánica de autos y motos. A través de documentos precisos y material complementario, vas a aprender de manera práctica y ordenada cómo funciona cada sistema, cómo detectar fallas, realizar diagnósticos, comprender reparaciones, adquirir conocimientos sólidos para desenvolverte con mayor seguridad en el mundo de la mecánica y mucho más.',
     longDescription: 'En este manual práctico aprenderás a identificar los componentes vitales de tu auto. Desde cómo revisar el aceite y el refrigerante hasta el cambio correcto de un neumático. Es la guía indispensable para que nunca te quedes a pie.',
