@@ -6,7 +6,7 @@ import Link from 'next/link';
 import { Header } from '@/components/Header';
 import { Footer } from '@/components/Footer';
 import { Button } from '@/components/ui/button';
-import { ArrowLeft, Book, Star, CheckCircle2, ShieldCheck } from 'lucide-react';
+import { ArrowLeft, Star, CheckCircle2 } from 'lucide-react';
 import { PlaceHolderImages } from '@/app/lib/placeholder-images';
 import { cn } from '@/lib/utils';
 
@@ -180,8 +180,19 @@ export default function LibrosDigitalesPage() {
                         Comprar ahora
                       </Button>
                     </a>
-                    <div className="flex items-center gap-1.5 text-[10px] md:text-xs font-bold text-slate-400 uppercase tracking-tight">
-                      <span className="text-blue-400">🤝</span> Pago seguro por Mercado Pago
+                    <div className="flex flex-col items-center gap-2">
+                      <p className="text-[10px] md:text-[11px] font-bold text-slate-500 uppercase tracking-tight">
+                        Pago seguro a través de
+                      </p>
+                      <div className="relative h-8 w-32">
+                        <Image 
+                          src="https://i.imgur.com/KOwnXBh.jpeg" 
+                          alt="Mercado Pago" 
+                          fill 
+                          className="object-contain"
+                          data-ai-hint="mercado pago"
+                        />
+                      </div>
                     </div>
                   </div>
                 </div>
