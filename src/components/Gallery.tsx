@@ -48,17 +48,15 @@ export const Gallery = () => {
           </div>
 
           {/* Stack Container */}
-          <div className="relative w-full max-w-[320px] md:max-w-[400px] aspect-[4/5] cursor-pointer" onClick={nextImage}>
+          <div className="relative w-full max-w-[320px] md:max-w-[400px] aspect-[4/5] cursor-pointer touch-manipulation" onClick={nextImage}>
             {getStackedImages().reverse().map((img, i) => {
-              // i es la posición en el array invertido (2, 1, 0)
-              // La tarjeta frontal es la que tiene stackPosition 0
               const pos = img.stackPosition;
               
               return (
                 <div
                   key={`${img.id}-${pos}`}
                   className={cn(
-                    "absolute inset-0 rounded-[2.5rem] overflow-hidden shadow-2xl transition-all duration-500 ease-in-out border border-white/10",
+                    "absolute inset-0 rounded-[2.5rem] overflow-hidden shadow-2xl transition-all duration-500 ease-in-out border border-white/10 bg-secondary",
                     pos === 0 && "z-30 scale-100 opacity-100 translate-y-0",
                     pos === 1 && "z-20 scale-[0.92] opacity-60 translate-y-6 md:translate-y-8",
                     pos === 2 && "z-10 scale-[0.84] opacity-30 translate-y-12 md:translate-y-16"
@@ -72,6 +70,9 @@ export const Gallery = () => {
                     alt={img.description} 
                     fill 
                     className="object-cover"
+                    sizes="(max-width: 768px) 320px, 400px"
+                    priority={pos === 0}
+                    loading={pos === 0 ? undefined : "lazy"}
                     data-ai-hint={img.imageHint}
                   />
                   {/* Overlay sutil para la frontal */}
