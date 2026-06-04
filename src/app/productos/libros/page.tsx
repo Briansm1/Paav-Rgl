@@ -6,7 +6,7 @@ import Link from 'next/link';
 import { Header } from '@/components/Header';
 import { Footer } from '@/components/Footer';
 import { Button } from '@/components/ui/button';
-import { ArrowLeft, Book, Star, CheckCircle2 } from 'lucide-react';
+import { ArrowLeft, Book, Star, CheckCircle2, ShieldCheck } from 'lucide-react';
 import { PlaceHolderImages } from '@/app/lib/placeholder-images';
 import { cn } from '@/lib/utils';
 
@@ -174,12 +174,15 @@ export default function LibrosDigitalesPage() {
 
                   <ExpandableDescription text={book.description} />
 
-                  <div className="flex flex-col gap-3 w-full mt-auto pt-4">
+                  <div className="flex flex-col gap-4 w-full mt-auto pt-4 items-center">
                     <a href={book.whatsappLink} target="_blank" rel="noopener noreferrer" className="w-full">
                       <Button className="w-full h-14 md:h-14 rounded-xl bg-green-600 hover:bg-green-700 text-white text-base md:text-base font-bold transition-colors border-none">
                         Comprar ahora
                       </Button>
                     </a>
+                    <div className="flex items-center gap-1.5 text-[10px] md:text-xs font-bold text-slate-400 uppercase tracking-tight">
+                      <span className="text-blue-400">🤝</span> Pago seguro por Mercado Pago
+                    </div>
                   </div>
                 </div>
               </div>
