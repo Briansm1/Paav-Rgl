@@ -186,7 +186,7 @@ export default function LibrosDigitalesPage() {
                       </p>
                       <div className="relative h-8 w-32">
                         <Image 
-                          src="https://i.imgur.com/KOwnXBh.jpeg" 
+                          src="https://i.imgur.com/bWGTO94.png" 
                           alt="Mercado Pago" 
                           fill 
                           className="object-contain"
