@@ -69,10 +69,6 @@ const benefits = [
     desc: 'Recibís el material directamente por WhatsApp al instante.'
   },
   {
-    title: 'Actualización permanente',
-    desc: 'Recibís nuevas versiones GRATIS ante cualquier cambio.'
-  },
-  {
     title: 'Diseño para móviles',
     desc: 'Optimizado para leer cómodamente desde tu celular.'
   },
@@ -176,7 +172,7 @@ export default function LibrosDigitalesPage() {
 
                   <div className="flex flex-col gap-4 w-full mt-auto pt-4 items-center">
                     <a href={book.whatsappLink} target="_blank" rel="noopener noreferrer" className="w-full">
-                      <Button className="w-full h-14 md:h-14 rounded-xl bg-green-600 hover:bg-green-700 text-white text-base md:text-base font-bold transition-colors border-none">
+                      <Button className="w-full h-14 md:h-14 rounded-xl bg-green-600 hover:bg-green-700 text-white text-base md:text-base font-bold transition-colors border-none shadow-none">
                         Comprar ahora
                       </Button>
                     </a>
@@ -201,7 +197,7 @@ export default function LibrosDigitalesPage() {
           </div>
 
           <div className="max-w-7xl mx-auto pt-10 border-t border-white/5">
-            <div className="grid grid-cols-2 lg:grid-cols-4 gap-x-4 gap-y-10 md:gap-8">
+            <div className="grid grid-cols-2 lg:grid-cols-3 gap-x-4 gap-y-10 md:gap-8">
               {benefits.map((benefit, i) => (
                 <div key={i} className="flex flex-col items-center text-center gap-3">
                   <div className="flex flex-col md:flex-row items-center gap-2 md:gap-3">
