@@ -78,7 +78,7 @@ const benefits = [
   },
   {
     title: 'Garantía',
-    desc: 'Si el contenido no cumple tus expectativas, tenés 30 días de garantía.'
+    desc: 'Si el contenido no cumple tus expectativas, tenés 30 días para pedir la devolución. Sin preguntas.'
   }
 ];
 
