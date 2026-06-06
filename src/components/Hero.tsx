@@ -46,7 +46,7 @@ export const Hero = () => {
             </h1>
             
             <p className="text-lg sm:text-xl md:text-xl text-white/90 max-w-2xl animate-in fade-in slide-in-from-bottom-8 duration-1000 delay-200 leading-relaxed text-left font-medium">
-              En nuestra academia, no solo te enseñamos a manejar; te preparamos para ser un conductor responsable, seguro y con total confianza en las calles
+              En nuestra academia, no solo te preparas para manejar; con nuestros métodos infalibles te preparas para ser un conductor responsable, seguro y con 100% de confianza en las calles
             </p>
           </div>
           
@@ -58,7 +58,7 @@ export const Hero = () => {
               </Button>
             </Link>
             <Link href="/equipo" className="w-full sm:w-auto">
-              <Button size="lg" variant="outline" className="h-14 md:h-16 px-10 md:px-12 text-lg border-white/20 text-white hover:bg-white/10 rounded-full w-full font-bold transition-all active:scale-95 bg-transparent flex items-center justify-center gap-2">
+              <Button size="lg" variant="outline" className="h-14 md:h-16 px-10 md:px-12 text-lg border-white/20 text-white hover:bg-white/10 rounded-full w-full font-bold transition-all active:scale-95 bg-transparent flex items-center justify-center gap-2 shadow-none">
                 <Users className="w-5 h-5" />
                 Ver equipo
               </Button>
