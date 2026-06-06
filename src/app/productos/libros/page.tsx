@@ -13,7 +13,7 @@ import { cn } from '@/lib/utils';
 const digitalBooks = [
   {
     id: 'book-novato',
-    title: 'Programa conductor seguro',
+    title: 'Programa conductor experto',
     specialBadge: '9 x 1',
     price: '$17.999',
     originalPrice: '$59.999',
@@ -197,17 +197,14 @@ export default function LibrosDigitalesPage() {
           </div>
 
           <div className="max-w-7xl mx-auto pt-10 border-t border-white/5">
-            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-y-12 md:gap-8">
+            <div className="flex flex-col gap-12 md:gap-8">
               {benefits.map((benefit, i) => (
-                <div key={i} className={cn(
-                  "flex flex-col items-center text-center gap-4 px-4",
-                  i === benefits.length - 1 && i % 2 === 0 && "sm:col-span-2 lg:col-span-1"
-                )}>
+                <div key={i} className="flex flex-col items-center text-center gap-4 px-4">
                   <div className="flex flex-col items-center gap-3">
-                    <CheckCircle2 className="w-8 h-8 md:w-7 md:h-7 text-primary shrink-0" />
-                    <h4 className="font-bold text-white text-lg md:text-xl tracking-tight leading-tight">{benefit.title}</h4>
+                    <CheckCircle2 className="w-10 h-10 md:w-8 md:h-8 text-primary shrink-0" />
+                    <h4 className="font-bold text-white text-xl md:text-2xl tracking-tight leading-tight">{benefit.title}</h4>
                   </div>
-                  <p className="text-muted-foreground text-sm md:text-base leading-relaxed max-w-xs">
+                  <p className="text-muted-foreground text-base md:text-lg leading-relaxed max-w-lg">
                     {benefit.desc}
                   </p>
                 </div>

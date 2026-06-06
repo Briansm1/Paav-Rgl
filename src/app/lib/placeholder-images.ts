@@ -231,7 +231,7 @@ export const PlaceHolderImages: ImagePlaceholder[] = [
   },
   {
     "id": "book-novato",
-    "description": "Programa conductor seguro",
+    "description": "Programa conductor experto",
     "imageUrl": "https://i.imgur.com/JVaLtxx.png",
     "imageHint": "book cover"
   },
