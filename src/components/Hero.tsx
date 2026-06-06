@@ -42,7 +42,7 @@ export const Hero = () => {
           
           <div className="space-y-4 md:space-y-6">
             <h1 className="text-4xl sm:text-5xl md:text-5xl lg:text-6xl font-bold font-headline leading-[1.1] md:leading-[1.05] text-white animate-in fade-in slide-in-from-bottom-6 duration-1000 delay-100">
-              Tu camino hacia la <span className="text-primary">libertad</span> comienza con nosotros
+              Tu camino hacia la <span className="text-primary">libertad</span> empieza con nosotros
             </h1>
             
             <p className="text-lg sm:text-xl md:text-xl text-white/90 max-w-2xl animate-in fade-in slide-in-from-bottom-8 duration-1000 delay-200 leading-relaxed text-left font-medium">
