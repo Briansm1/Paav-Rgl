@@ -1,4 +1,3 @@
-
 import React from 'react';
 import Link from 'next/link';
 import { Header } from '@/components/Header';
@@ -85,11 +84,11 @@ export default function PlanSeguridadAvanzadaPage() {
                     className={cn(
                       "flex flex-col gap-6 p-6 md:p-8 rounded-[2rem] bg-black/40 border transition-all duration-300 shadow-inner relative overflow-hidden group",
                       "min-w-[280px] md:min-w-0 snap-center",
-                      idx === 0 ? "border-gold/40 bg-gold/5 ring-1 ring-gold/20" : "border-white/10"
+                      idx === 0 ? "border-purple/40 bg-purple/5 ring-1 ring-purple/20" : "border-white/10"
                     )}
                   >
                     {idx === 0 && (
-                      <div className="absolute top-0 left-1/2 -translate-x-1/2 bg-gold text-gold-foreground px-4 py-1 rounded-b-xl flex items-center shadow-lg z-20">
+                      <div className="absolute top-0 left-1/2 -translate-x-1/2 bg-purple text-purple-foreground px-4 py-1 rounded-b-xl flex items-center shadow-lg z-20">
                         <span className="text-[10px] font-black uppercase tracking-widest whitespace-nowrap">MÁS POPULAR</span>
                       </div>
                     )}
@@ -97,7 +96,7 @@ export default function PlanSeguridadAvanzadaPage() {
                     <div className="text-center pt-4">
                       <h3 className={cn(
                         "text-2xl font-bold tracking-tight uppercase",
-                        idx === 0 ? "text-gold" : "text-white"
+                        idx === 0 ? "text-purple" : "text-white"
                       )}>
                         {option.name}
                       </h3>
@@ -130,7 +129,7 @@ export default function PlanSeguridadAvanzadaPage() {
                           <Button 
                             className={cn(
                               "w-full rounded-xl h-12 font-bold animate-heartbeat transition-all group-hover:scale-[1.02] shadow-none border-none",
-                              idx === 0 ? "bg-gold hover:bg-gold/90 text-gold-foreground" : "bg-primary hover:bg-primary/90"
+                              idx === 0 ? "bg-purple hover:bg-purple/90 text-purple-foreground" : "bg-primary hover:bg-primary/90"
                             )}
                           >
                             Elegir un plan
