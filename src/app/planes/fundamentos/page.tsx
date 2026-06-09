@@ -51,7 +51,7 @@ const programDetails = {
     'Como realizar un cambio de neumático',
     'Simulador de examen teórico con +85 preguntas',
     'Descuentos exclusivos en nuestros productos digitales',
-    'Descuentos exclusivos con nuestros comercios amigos y socios'
+    'Descuentos exclusivos con nuestros comercios socios'
   ]
 };
 
@@ -119,9 +119,9 @@ export default function PlanFundamentosPage() {
                         </span>
                       </div>
 
-                      <div className="pt-4 border-t border-white/10 flex items-center justify-center gap-2 text-primary font-bold px-2">
+                      <div className="pt-4 border-t border-white/10 flex items-center justify-center gap-2 text-primary font-bold px-2 text-center">
                         <Clock className="w-4 h-4 shrink-0" />
-                        <span className="text-sm text-center leading-tight">{option.sessions}</span>
+                        <span className="text-sm leading-tight">{option.sessions}</span>
                       </div>
 
                       <div className="pt-2 flex justify-center px-2">
@@ -169,7 +169,7 @@ export default function PlanFundamentosPage() {
                     ¿Qué vas a lograr?
                   </h3>
                   <div className="space-y-3">
-                    {programDetails.targetAudience.map((item, i) => (
+                    {programDetails.outcomes.map((item, i) => (
                       <div key={i} className="flex items-start gap-3">
                         <div className="mt-1 bg-accent/10 p-1 rounded-full shrink-0">
                           <Check className="w-3 h-3 text-accent" />
