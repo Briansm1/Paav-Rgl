@@ -32,7 +32,7 @@ const faqs = [
   },
   {
     question: "¿Alquilan el auto para poder rendir el examen práctico?",
-    answer: "Sí, contamos con el servicio de alquiler del auto con personal para el examen práctico. De hecho, todos nuestros alumnos tienen un descuento especial para que puedan rendir con el mismo vehículo con el que practicaron, ganando así mayor seguridad y confianza en ese momento clave."
+    answer: "Sí, contamos con el servicio de alquiler del auto con personal para el examen práctico. De hecho, todos nuestros alumnos tienen un descuento especial para que puedan rendir con el mismo vehículo con el que practicaron, ganando así mayor seguridad y confianza en ese momento clave. Escribinos para pasarte precios y más información."
   }
 ];
 
