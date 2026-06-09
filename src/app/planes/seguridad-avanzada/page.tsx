@@ -120,9 +120,9 @@ export default function PlanSeguridadAvanzadaPage() {
                         </span>
                       </div>
 
-                      <div className="pt-4 border-t border-white/10 flex items-center justify-center gap-2 text-primary font-bold">
-                        <Clock className="w-4 h-4" />
-                        <span className="text-sm">{option.sessions}</span>
+                      <div className="pt-4 border-t border-white/10 flex items-center justify-center gap-2 text-primary font-bold px-2">
+                        <Clock className="w-4 h-4 shrink-0" />
+                        <span className="text-sm text-center leading-tight">{option.sessions}</span>
                       </div>
 
                       <div className="pt-2 flex justify-center px-2">
