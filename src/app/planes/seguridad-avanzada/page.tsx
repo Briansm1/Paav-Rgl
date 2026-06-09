@@ -16,7 +16,7 @@ const programDetails = {
       transferPrice: '$165.999',
       cardPrice: '$255.999',
       savings: 'Ahorro de $90.000',
-      sessions: '4 sesiones de prácticas dinámicas',
+      sessions: "4 sesiones de prácticas dinámicas (50' c/u)",
       whatsappLink: "https://wa.me/5492966265603?text=Hola%2C%20vengo%20desde%20la%20web%20y%20quiero%20contratar%20el%20*plan%20as*%20de%20*4%20sesiones*"
     },
     {
@@ -24,7 +24,7 @@ const programDetails = {
       transferPrice: '$198.999',
       cardPrice: '$305.999',
       savings: 'Ahorro de $108.000',
-      sessions: '5 sesiones de prácticas dinámicas',
+      sessions: "5 sesiones de prácticas dinámicas (50' c/u)",
       whatsappLink: "https://wa.me/5492966265603?text=Hola%2C%20vengo%20desde%20la%20web%20y%20quiero%20contratar%20el%20*plan%20diamante*%20de%20*5%20sesiones*"
     }
   ],
@@ -129,7 +129,7 @@ export default function PlanSeguridadAvanzadaPage() {
                         <a href={option.whatsappLink} target="_blank" rel="noopener noreferrer" className="w-full">
                           <Button 
                             className={cn(
-                              "w-full rounded-xl h-12 font-bold animate-heartbeat transition-all group-hover:scale-[1.02]",
+                              "w-full rounded-xl h-12 font-bold animate-heartbeat transition-all group-hover:scale-[1.02] shadow-none border-none",
                               idx === 0 ? "bg-gold hover:bg-gold/90 text-gold-foreground" : "bg-primary hover:bg-primary/90"
                             )}
                           >
@@ -222,7 +222,7 @@ export default function PlanSeguridadAvanzadaPage() {
 
               <div className="pt-8 flex justify-center px-4">
                 <Link href="#opciones-plan" className="w-full max-sm:max-w-none">
-                  <Button className="w-full bg-primary hover:bg-primary/90 rounded-xl h-12 font-bold animate-heartbeat transition-all">
+                  <Button className="w-full bg-primary hover:bg-primary/90 rounded-xl h-12 font-bold animate-heartbeat transition-all shadow-none border-none">
                     Elegir un plan
                   </Button>
                 </Link>
@@ -240,7 +240,7 @@ export default function PlanSeguridadAvanzadaPage() {
             Nuestro equipo está listo para ayudarte a resolver cualquier duda que tengas.
           </p>
           <a href="https://wa.me/5492966265603?text=Hola%2C%20tengo%20algunas%20consultas%20sobre%20el%20Programa%20Seguridad%20Avanzada" target="_blank" rel="noopener noreferrer">
-            <Button variant="outline" size="lg" className="rounded-full border-primary text-primary hover:bg-primary/5 text-center">
+            <Button variant="outline" size="lg" className="rounded-full border-primary text-primary hover:bg-primary/5 text-center shadow-none">
               Hablar con alguien del equipo
             </Button>
           </a>

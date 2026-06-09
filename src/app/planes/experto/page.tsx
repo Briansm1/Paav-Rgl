@@ -12,7 +12,7 @@ const detailedPlans = [
     transferPrice: '$86.999',
     cardPrice: '$133.999',
     savings: 'Ahorro de $47.000',
-    sessions: '2 sesiones de prácticas dinámicas',
+    sessions: "2 sesiones de prácticas dinámicas (50' c/u)",
     fullDesc: 'Diseñado para personas que ya tienen conocimientos o licencia y quieren ganar más seguridad en maniobras complejas, estacionamiento o circular en tráfico.',
     targetAudience: [
       'Para quienes quieren realizar una simulación completa del examen práctico y ver en que situación está',
@@ -102,7 +102,7 @@ export default function PlanExpertoPage() {
                         {plan.sessions}
                       </p>
                       <a href={plan.whatsappLink} target="_blank" rel="noopener noreferrer" className="w-full max-w-xs">
-                        <Button className="w-full bg-primary hover:bg-primary/90 rounded-xl h-12 font-bold animate-heartbeat transition-all">
+                        <Button className="w-full bg-primary hover:bg-primary/90 rounded-xl h-12 font-bold animate-heartbeat transition-all shadow-none border-none">
                           Elegir un plan
                         </Button>
                       </a>
@@ -180,7 +180,7 @@ export default function PlanExpertoPage() {
 
                 <div className="pt-4 flex justify-center px-2">
                   <Link href="#precios" className="w-full max-w-xs">
-                    <Button className="w-full bg-primary hover:bg-primary/90 rounded-xl h-12 font-bold animate-heartbeat transition-all">
+                    <Button className="w-full bg-primary hover:bg-primary/90 rounded-xl h-12 font-bold animate-heartbeat transition-all shadow-none border-none">
                       Elegir un plan
                     </Button>
                   </Link>
@@ -198,7 +198,7 @@ export default function PlanExpertoPage() {
             Nuestro equipo está listo para ayudarte a resolver cualquier duda que tengas.
           </p>
           <a href="https://wa.me/5492966265603?text=Hola%2C%20tengo%20algunas%20consultas%20sobre%20el%20Programa%20Experto" target="_blank" rel="noopener noreferrer">
-            <Button variant="outline" size="lg" className="rounded-full border-primary text-primary hover:bg-primary/5 text-center">
+            <Button variant="outline" size="lg" className="rounded-full border-primary text-primary hover:bg-primary/5 text-center shadow-none">
               Hablar con alguien del equipo
             </Button>
           </a>
