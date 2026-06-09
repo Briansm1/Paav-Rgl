@@ -218,6 +218,12 @@ export const PlaceHolderImages: ImagePlaceholder[] = [
     "imageHint": "partner logo"
   },
   {
+    "id": "partner-3",
+    "description": "Socio Estratégico 3",
+    "imageUrl": "https://i.imgur.com/Tiwx1Mc.png",
+    "imageHint": "partner logo"
+  },
+  {
     "id": "instructor-brian-profile",
     "description": "Brian - Instructor Principal",
     "imageUrl": "https://i.imgur.com/afhDn7N.png",
