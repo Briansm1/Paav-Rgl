@@ -96,7 +96,7 @@ export const Footer = () => {
         </div>
 
         <div className="mt-8 text-center text-[10px] tracking-widest text-slate-600 font-bold uppercase">
-          DESARROLLADO POR <a href="https://www.exvolusion.com" target="_blank" rel="noopener noreferrer" className="hover:text-primary transition-colors">WWW.EXVOLUSION.COM</a>
+          DESARROLLADO POR <a href="https://www.exvolusion.com" target="_blank" rel="noopener noreferrer" className="hover:text-primary transition-colors">EXVOLUSIÓN</a>
         </div>
       </div>
     </footer>
