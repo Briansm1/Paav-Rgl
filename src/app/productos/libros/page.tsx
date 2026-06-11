@@ -1,3 +1,4 @@
+
 'use client';
 
 import React, { useState } from 'react';
@@ -113,7 +114,7 @@ export default function LibrosDigitalesPage() {
             Volver al inicio
           </Link>
           <h1 className="text-3xl md:text-5xl font-bold font-headline mb-0 text-white text-center">
-            Nuestros <span className="text-primary">libros digitales</span>
+            Nuestros <span className="text-primary">programas digitales</span>
           </h1>
         </div>
       </section>
