@@ -116,6 +116,22 @@ export default function PlanExpertoPage() {
 
                 <div className="w-full bg-black/20 p-6 rounded-[2rem] border border-white/5">
                   <h3 className="text-lg font-bold mb-4 flex items-center justify-center gap-2 text-foreground text-center">
+                    ¿Qué incluye?
+                  </h3>
+                  <div className="space-y-3">
+                    {plan.features.map((feature, i) => (
+                      <div key={i} className="flex items-start gap-3 group">
+                        <div className="mt-1 bg-green-500/10 p-1 rounded-full shrink-0">
+                          <Check className="w-3 h-3 text-green-500" />
+                        </div>
+                        <span className="text-sm text-foreground/90 font-medium leading-tight">{feature}</span>
+                      </div>
+                    ))}
+                  </div>
+                </div>
+
+                <div className="w-full bg-black/20 p-6 rounded-[2rem] border border-white/5">
+                  <h3 className="text-lg font-bold mb-4 flex items-center justify-center gap-2 text-foreground text-center">
                     ¿Para quién es?
                   </h3>
                   <div className="space-y-3">
@@ -141,22 +157,6 @@ export default function PlanExpertoPage() {
                           <Check className="w-3 h-3 text-accent" />
                         </div>
                         <span className="text-sm text-foreground/90 font-medium leading-tight">{item}</span>
-                      </div>
-                    ))}
-                  </div>
-                </div>
-
-                <div className="w-full bg-black/20 p-6 rounded-[2rem] border border-white/5">
-                  <h3 className="text-lg font-bold mb-4 flex items-center justify-center gap-2 text-foreground text-center">
-                    ¿Qué incluye?
-                  </h3>
-                  <div className="space-y-3">
-                    {plan.features.map((feature, i) => (
-                      <div key={i} className="flex items-start gap-3 group">
-                        <div className="mt-1 bg-green-500/10 p-1 rounded-full shrink-0">
-                          <Check className="w-3 h-3 text-green-500" />
-                        </div>
-                        <span className="text-sm text-foreground/90 font-medium leading-tight">{feature}</span>
                       </div>
                     ))}
                   </div>
