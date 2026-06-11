@@ -37,7 +37,7 @@ const detailedPlans = [
       'Como identificar los diferentes fluidos de un auto y como controlarlos',
       'Como realizar un cambio de neumático',
       'Simulador de examen teórico con +85 preguntas',
-      'Descuentos exclusivos en nuestros productos digitales'
+      '10% off en nuestros productos digitales'
     ],
     whatsappLink: "https://wa.me/5492966265603?text=Hola%2C%20vengo%20desde%20la%20web%20y%20quiero%20contratar%20el%20*plan%20experto*%20de%20*2%20sesiones*"
   }

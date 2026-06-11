@@ -1,3 +1,4 @@
+
 import React from 'react';
 import Link from 'next/link';
 import { Header } from '@/components/Header';
@@ -50,7 +51,7 @@ const programDetails = {
     'Como identificar los diferentes fluidos de un auto y como controlarlos',
     'Como realizar un cambio de neumático',
     'Simulador de examen teórico con +85 preguntas',
-    'Descuentos exclusivos en nuestros productos digitales',
+    '10% off en nuestros productos digitales',
     'Descuentos exclusivos con nuestros comercios socios'
   ]
 };
