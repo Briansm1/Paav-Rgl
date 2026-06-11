@@ -16,7 +16,7 @@ const programDetails = {
       transferPrice: '$311.999',
       cardPrice: '$479.999',
       savings: 'Ahorro de $168.000',
-      sessions: "8 sesiones de prácticas dinámicas (50' c/u)",
+      sessions: "8 sesiones dinámicas (50' c/u)",
       whatsappLink: "https://wa.me/5492966265603?text=Hola%2C%20vengo%20desde%20la%20web%20y%20quiero%20contratar%20el%20*plan%20oro*%20de%20*8%20sesiones*"
     },
     {
@@ -24,7 +24,7 @@ const programDetails = {
       transferPrice: '$369.999',
       cardPrice: '$569.999',
       savings: 'Ahorro de $200.000',
-      sessions: "10 sesiones de prácticas dinámicas (50' c/u)",
+      sessions: "10 sesiones dinámicas (50' c/u)",
       whatsappLink: "https://wa.me/5492966265603?text=Hola%2C%20vengo%20desde%20la%20web%20y%20quiero%20contratar%20el%20*plan%20rookie*%20de%20*10%20sesiones*"
     }
   ],

@@ -12,7 +12,7 @@ const detailedPlans = [
     transferPrice: '$86.999',
     cardPrice: '$133.999',
     savings: 'Ahorro de $47.000',
-    sessions: "2 sesiones de prácticas dinámicas (50' c/u)",
+    sessions: "2 sesiones dinámicas (50' c/u)",
     fullDesc: 'Diseñado para personas que ya tienen conocimientos o licencia y quieren ganar más seguridad en maniobras complejas, estacionamiento o circular en tráfico.',
     targetAudience: [
       'Para quienes quieren realizar una simulación completa del examen práctico y ver en que situación está',
