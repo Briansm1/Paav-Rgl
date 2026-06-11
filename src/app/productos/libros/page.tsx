@@ -74,7 +74,7 @@ const benefits = [
   },
   {
     title: 'Garantía',
-    desc: 'Tenés 30 días para pedir la devolución. Sin ninguna pregunta.'
+    desc: 'Tenés 30 días para pedir la devolución. Nos escribís por WhatsApp y gestionamos el reintegro. Sin ninguna pregunta.'
   }
 ];
 
