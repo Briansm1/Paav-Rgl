@@ -1,4 +1,3 @@
-
 "use client";
 
 import React from 'react';
@@ -6,7 +5,7 @@ import Image from 'next/image';
 import Link from 'next/link';
 import { Button } from '@/components/ui/button';
 import { PlaceHolderImages } from '@/app/lib/placeholder-images';
-import { ChevronRight, Star, ChevronDown, Users } from 'lucide-react';
+import { ChevronRight, Star, ChevronDown } from 'lucide-react';
 
 export const Hero = () => {
   const heroImg = PlaceHolderImages.find(img => img.id === 'hero-bg');
@@ -55,12 +54,6 @@ export const Hero = () => {
               <Button size="lg" className="h-14 md:h-16 px-10 md:px-12 text-lg bg-primary hover:bg-primary/90 rounded-full w-full font-bold transition-all active:scale-95 shadow-none border-none">
                 Conocer planes
                 <ChevronRight className="ml-2 w-6 h-6" />
-              </Button>
-            </Link>
-            <Link href="/equipo" className="w-full sm:w-auto">
-              <Button size="lg" variant="outline" className="h-14 md:h-16 px-10 md:px-12 text-lg border-white/20 text-white hover:bg-white/10 rounded-full w-full font-bold transition-all active:scale-95 bg-transparent flex items-center justify-center gap-2 shadow-none">
-                <Users className="w-5 h-5" />
-                Ver equipo
               </Button>
             </Link>
           </div>
