@@ -9,15 +9,15 @@ import { ChevronRight, Star, ChevronDown } from 'lucide-react';
 
 export const Hero = () => {
   const heroImg = PlaceHolderImages.find(img => img.id === 'hero-bg');
-  const [starCount, setStarCount] = useState(0);
+  const [starCount, setStarCount] = useState(1); // Empezamos en 1 para que la primera siempre esté encendida
 
   useEffect(() => {
     const interval = setInterval(() => {
       setStarCount((prev) => {
-        if (prev >= 5) return 0;
+        if (prev >= 5) return 1; // Volver a 1 en lugar de 0
         return prev + 1;
       });
-    }, 400); // Velocidad de aparición de las estrellas
+    }, 400);
     return () => clearInterval(interval);
   }, []);
 
@@ -92,10 +92,11 @@ export const Hero = () => {
                 {[...Array(5)].map((_, i) => (
                   <Star 
                     key={i} 
+                    strokeWidth={0} // Elimina el contorno
                     className={`w-4 h-4 md:w-5 md:h-5 transition-all duration-300 ${
                       i < starCount 
                         ? "text-yellow-400 fill-yellow-400 scale-110" 
-                        : "text-white/10 fill-transparent scale-100"
+                        : "text-white/10 fill-white/10 scale-100" // Relleno sólido suave en lugar de transparente
                     }`} 
                   />
                 ))}
