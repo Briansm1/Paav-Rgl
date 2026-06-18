@@ -1,6 +1,6 @@
 "use client";
 
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
 import { Button } from '@/components/ui/button';
@@ -9,6 +9,17 @@ import { ChevronRight, Star, ChevronDown } from 'lucide-react';
 
 export const Hero = () => {
   const heroImg = PlaceHolderImages.find(img => img.id === 'hero-bg');
+  const [starCount, setStarCount] = useState(0);
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setStarCount((prev) => {
+        if (prev >= 5) return 0;
+        return prev + 1;
+      });
+    }, 400); // Velocidad de aparición de las estrellas
+    return () => clearInterval(interval);
+  }, []);
 
   return (
     <section id="inicio" className="relative h-[100svh] min-h-[100svh] flex flex-col items-center pt-24 pb-0 md:pt-32 md:pb-0 lg:pt-36 lg:pb-0 overflow-hidden bg-black">
@@ -77,9 +88,16 @@ export const Hero = () => {
           
           <div className="flex flex-col items-center text-center min-w-[70px] md:min-w-[100px]">
             <div className="flex flex-col items-center justify-center h-full">
-              <div className="flex gap-0.5 justify-center py-1">
+              <div className="flex gap-0.5 justify-center py-1 min-h-[20px] md:min-h-[24px]">
                 {[...Array(5)].map((_, i) => (
-                  <Star key={i} className="w-4 h-4 md:w-5 md:h-5 text-yellow-400 fill-yellow-400" />
+                  <Star 
+                    key={i} 
+                    className={`w-4 h-4 md:w-5 md:h-5 transition-all duration-300 ${
+                      i < starCount 
+                        ? "text-yellow-400 fill-yellow-400 scale-110" 
+                        : "text-white/10 fill-transparent scale-100"
+                    }`} 
+                  />
                 ))}
               </div>
             </div>
