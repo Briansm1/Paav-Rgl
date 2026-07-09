@@ -12,21 +12,24 @@ const plans = [
     price: 'Desde $86.999',
     description: 'Para quienes quieren reforzar alguna maniobra puntual o realizar un simulacro de examen práctico con todos los ejercicios',
     badge: 'NIVEL SUPERIOR',
-    href: '/planes/experto'
+    href: '/planes/experto',
+    buttonText: 'Elegir plan de 2 sesiones'
   },
   {
     name: 'Programa puesta a punto',
     price: 'Desde $165.999',
     description: 'Para quienes quieran aprender o reforzar maniobras del examen práctico o mejorar la técnica del día a día',
     badge: 'NIVEL INTERMEDIO',
-    href: '/planes/seguridad-avanzada'
+    href: '/planes/seguridad-avanzada',
+    buttonText: 'Elegir plan de 4 o 5 sesiones'
   },
   {
     name: 'Programa fundamentos',
     price: 'Desde $311.999',
     description: 'Formación de conductores 100% seguros desde el primer contacto con el volante.  Aprendizaje progresivo y sin estrés. Desarrollamos las habilidades necesarias para mantener el control absoluto del vehículo frente a las exigencias diarias de la región, incluyendo las técnicas correctas para manejar con fuertes ráfagas de viento, transitar con seguridad sobre ripio o lidiar con escarcha en la calzada.',
     badge: 'NIVEL INICIAL',
-    href: '/planes/fundamentos'
+    href: '/planes/fundamentos',
+    buttonText: 'Elegir plan de 8 o 10 clases'
   }
 ];
 
@@ -108,7 +111,7 @@ export const Pricing = () => {
                         "w-full h-14 rounded-2xl text-base font-bold transition-all active:scale-95 bg-primary hover:bg-primary/90 text-white shadow-none border-none"
                       )}
                     >
-                      Conocer los planes
+                      {plan.buttonText}
                     </Button>
                   </Link>
                 </div>
