@@ -126,7 +126,7 @@ export const Contact = () => {
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 md:gap-20 items-start">
           <div className="flex flex-col gap-10">
             <div className="bg-card p-6 md:p-12 rounded-[2.5rem] shadow-2xl border border-white/5 h-full">
-              <div className="mb-8 text-center md:text-left">
+              <div className="mb-8 text-center">
                 <h4 className="text-xl md:text-3xl font-bold mb-3 md:mb-4 tracking-tight">Contanos tu experiencia</h4>
                 <p className="text-sm md:text-base text-muted-foreground">
                   Al completar el formulario, se abrirá tu aplicación de correo para que nos envíes la reseña de forma segura.
@@ -257,7 +257,7 @@ export const Contact = () => {
 
           <div className="flex flex-col gap-10">
             <div className="bg-secondary p-8 md:p-10 lg:p-12 rounded-[2.5rem] shadow-xl border border-white/5">
-              <h4 className="text-xl md:text-2xl font-bold mb-8 md:mb-10 tracking-tight text-center md:text-left">Canales de atención</h4>
+              <h4 className="text-xl md:text-2xl font-bold mb-8 md:mb-10 tracking-tight text-center">Canales de atención</h4>
               <div className="space-y-6 md:space-y-8">
                 <div className="flex items-start gap-4 md:gap-6">
                   <div className="bg-white/5 p-3 md:p-4 rounded-[1.2rem] shadow-sm shrink-0">
