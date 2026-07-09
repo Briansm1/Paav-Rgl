@@ -8,12 +8,12 @@ import { cn } from '@/lib/utils';
 
 const plans = [
   {
-    name: 'Programa simulacro de examen',
-    price: 'Desde $86.999',
-    description: 'Precisión total y superación del examen práctico.  Realizamos un simulacro exacto de las maniobras que se evalúan en la prueba oficial. Corregimos detalles puntuales para que vayas a rendir con la certeza de saber exactamente qué hacer y cómo ejecutarlo a la perfección, ahorrando tiempo y frustraciones.',
-    badge: 'NIVEL SUPERIOR',
-    href: '/planes/experto',
-    buttonText: 'Elegir plan de 2 sesiones'
+    name: 'Programa fundamentos',
+    price: 'Desde $311.999',
+    description: 'Formación de conductores 100% seguros desde el primer contacto con el volante.  Aprendizaje progresivo y sin estrés. Desarrollamos las habilidades necesarias para mantener el control absoluto del vehículo frente a las exigencias diarias de la región, incluyendo las técnicas correctas para manejar con fuertes ráfagas de viento, transitar con seguridad sobre ripio o lidiar con escarcha en la calzada.',
+    badge: 'NIVEL INICIAL',
+    href: '/planes/fundamentos',
+    buttonText: 'Elegir plan de 8 o 10 sesiones'
   },
   {
     name: 'Programa puesta a punto',
@@ -24,12 +24,12 @@ const plans = [
     buttonText: 'Elegir plan de 4 o 5 sesiones'
   },
   {
-    name: 'Programa fundamentos',
-    price: 'Desde $311.999',
-    description: 'Formación de conductores 100% seguros desde el primer contacto con el volante.  Aprendizaje progresivo y sin estrés. Desarrollamos las habilidades necesarias para mantener el control absoluto del vehículo frente a las exigencias diarias de la región, incluyendo las técnicas correctas para manejar con fuertes ráfagas de viento, transitar con seguridad sobre ripio o lidiar con escarcha en la calzada.',
-    badge: 'NIVEL INICIAL',
-    href: '/planes/fundamentos',
-    buttonText: 'Elegir plan de 8 o 10 sesiones'
+    name: 'Programa simulacro de examen',
+    price: 'Desde $86.999',
+    description: 'Precisión total y superación del examen práctico.  Realizamos un simulacro exacto de las maniobras que se evalúan en la prueba oficial. Corregimos detalles puntuales para que vayas a rendir con la certeza de saber exactamente qué hacer y cómo ejecutarlo a la perfección, ahorrando tiempo y frustraciones.',
+    badge: 'NIVEL SUPERIOR',
+    href: '/planes/experto',
+    buttonText: 'Elegir plan de 2 sesiones'
   }
 ];
 
