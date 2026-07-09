@@ -1,3 +1,4 @@
+
 "use client";
 
 import React, { useState, useEffect } from 'react';
@@ -56,7 +57,7 @@ export const Hero = () => {
             </h1>
             
             <p className="text-lg sm:text-xl md:text-xl text-white/90 max-w-2xl animate-in fade-in slide-in-from-bottom-8 duration-1000 delay-200 leading-relaxed text-left font-medium">
-              En nuestra academia, no solo te preparas para manejar; con nuestros métodos infalibles te preparas para ser un conductor responsable, seguro y con 100% de confianza en las calles
+              En nuestra autoescuela, no solo te preparas para manejar; con nuestros métodos infalibles te preparas para ser un conductor responsable, seguro y con 100% de confianza en las calles
             </p>
           </div>
           
