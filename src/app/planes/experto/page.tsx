@@ -39,7 +39,7 @@ const detailedPlans = [
       'Simulador de examen teórico con +85 preguntas',
       '10% off en nuestros productos digitales'
     ],
-    whatsappLink: "https://wa.me/5492966265603?text=Hola%2C%20vengo%20desde%20la%20web%20y%20quiero%20contratar%20el%20*plan%20experto*%20de%20*2%20sesiones*"
+    whatsappLink: "https://wa.me/5492966265603?text=Hola%2C%20vengo%20desde%20la%20web%20y%20quiero%20contratar%20el%20*plan%20simulacro%20de%20examen*%20de%20*2%20sesiones*"
   }
 ];
 
@@ -55,7 +55,7 @@ export default function PlanExpertoPage() {
             Volver a los programas
           </Link>
           <h1 className="text-3xl md:text-5xl font-bold font-headline mb-0 text-white">
-            Programa <span className="text-primary">experto</span>
+            Programa <span className="text-primary">simulacro de examen</span>
           </h1>
         </div>
       </section>
@@ -197,7 +197,7 @@ export default function PlanExpertoPage() {
           <p className="text-muted-foreground mb-8 max-w-xl mx-auto text-center">
             Nuestro equipo está listo para ayudarte a resolver cualquier duda que tengas.
           </p>
-          <a href="https://wa.me/5492966265603?text=Hola%2C%20tengo%20algunas%20consultas%20sobre%20el%20Programa%20Experto" target="_blank" rel="noopener noreferrer">
+          <a href="https://wa.me/5492966265603?text=Hola%2C%20tengo%20algunas%20consultas%20sobre%20el%20Programa%20Simulacro%20de%20Examen" target="_blank" rel="noopener noreferrer">
             <Button variant="outline" size="lg" className="rounded-full border-primary text-primary hover:bg-primary/5 text-center shadow-none">
               Hablar con alguien del equipo
             </Button>

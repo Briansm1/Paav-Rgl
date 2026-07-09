@@ -8,7 +8,7 @@ import { cn } from '@/lib/utils';
 
 const plans = [
   {
-    name: 'Programa experto',
+    name: 'Programa simulacro de examen',
     price: 'Desde $86.999',
     description: 'Para quienes quieren reforzar alguna maniobra puntual o realizar un simulacro de examen práctico con todos los ejercicios',
     badge: 'NIVEL SUPERIOR',
