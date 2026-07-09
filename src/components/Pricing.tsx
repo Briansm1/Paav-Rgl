@@ -29,7 +29,7 @@ const plans = [
     description: 'Formación de conductores 100% seguros desde el primer contacto con el volante.  Aprendizaje progresivo y sin estrés. Desarrollamos las habilidades necesarias para mantener el control absoluto del vehículo frente a las exigencias diarias de la región, incluyendo las técnicas correctas para manejar con fuertes ráfagas de viento, transitar con seguridad sobre ripio o lidiar con escarcha en la calzada.',
     badge: 'NIVEL INICIAL',
     href: '/planes/fundamentos',
-    buttonText: 'Elegir plan de 8 o 10 clases'
+    buttonText: 'Elegir plan de 8 o 10 sesiones'
   }
 ];
 
