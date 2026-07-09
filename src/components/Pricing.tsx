@@ -18,7 +18,7 @@ const plans = [
   {
     name: 'Programa puesta a punto',
     price: 'Desde $165.999',
-    description: 'Para quienes quieran aprender o reforzar maniobras del examen práctico o mejorar la técnica del día a día',
+    description: 'El puente entre saber mover el auto y saber circular con verdadera confianza. Ideal para quienes tienen nociones previas pero aún sienten inseguridad. Nos enfocamos en erradicar vicios de manejo, perfeccionar el estacionamiento en espacios reducidos y ganar agilidad en el tránsito fluido.',
     badge: 'NIVEL INTERMEDIO',
     href: '/planes/seguridad-avanzada',
     buttonText: 'Elegir plan de 4 o 5 sesiones'
