@@ -8,7 +8,7 @@ import { Check, ArrowLeft, Clock, Gift } from 'lucide-react';
 import { cn } from '@/lib/utils';
 
 const programDetails = {
-  name: 'Programa seguridad avanzada',
+  name: 'Programa puesta a punto',
   description: 'Diseñado para personas que buscan aprender maniobras concretas o mejorar el conocimiento actual, prepararse para el examen práctico o conseguir confianza y seguridad al volante.',
   options: [
     {
@@ -68,7 +68,7 @@ export default function PlanSeguridadAvanzadaPage() {
             Volver a los programas
           </Link>
           <h1 className="text-3xl md:text-5xl font-bold font-headline mb-0 text-white text-center">
-            Programa <span className="text-primary">seguridad avanzada</span>
+            Programa <span className="text-primary">puesta a punto</span>
           </h1>
         </div>
       </section>
@@ -239,7 +239,7 @@ export default function PlanSeguridadAvanzadaPage() {
           <p className="text-muted-foreground mb-8 max-w-xl mx-auto text-center">
             Nuestro equipo está listo para ayudarte a resolver cualquier duda que tengas.
           </p>
-          <a href="https://wa.me/5492966265603?text=Hola%2C%20tengo%20algunas%20consultas%20sobre%20el%20Programa%20Seguridad%20Avanzada" target="_blank" rel="noopener noreferrer">
+          <a href="https://wa.me/5492966265603?text=Hola%2C%20tengo%20algunas%20consultas%20sobre%20el%20Programa%20Puesta%20a%20Punto" target="_blank" rel="noopener noreferrer">
             <Button variant="outline" size="lg" className="rounded-full border-primary text-primary hover:bg-primary/5 text-center shadow-none">
               Hablar con alguien del equipo
             </Button>

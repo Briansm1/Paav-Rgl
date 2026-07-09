@@ -15,7 +15,7 @@ const plans = [
     href: '/planes/experto'
   },
   {
-    name: 'Programa seguridad avanzada',
+    name: 'Programa puesta a punto',
     price: 'Desde $165.999',
     description: 'Para quienes quieran aprender o reforzar maniobras del examen práctico o mejorar la técnica del día a día',
     badge: 'NIVEL INTERMEDIO',
