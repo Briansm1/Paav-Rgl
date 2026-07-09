@@ -10,7 +10,7 @@ const plans = [
   {
     name: 'Programa simulacro de examen',
     price: 'Desde $86.999',
-    description: 'Para quienes quieren reforzar alguna maniobra puntual o realizar un simulacro de examen práctico con todos los ejercicios',
+    description: 'Precisión total y superación del examen práctico.  Realizamos un simulacro exacto de las maniobras que se evalúan en la prueba oficial. Corregimos detalles puntuales para que vayas a rendir con la certeza de saber exactamente qué hacer y cómo ejecutarlo a la perfección, ahorrando tiempo y frustraciones.',
     badge: 'NIVEL SUPERIOR',
     href: '/planes/experto',
     buttonText: 'Elegir plan de 2 sesiones'
