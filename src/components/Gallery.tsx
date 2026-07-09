@@ -40,7 +40,7 @@ export const Gallery = () => {
         <div className="max-w-7xl mx-auto flex flex-col items-center">
           <div className="mb-12 md:mb-20 text-center">
             <span className="inline-block px-4 py-1.5 mb-4 text-xs font-bold tracking-widest text-primary uppercase bg-primary/10 rounded-full">
-              Momentos Pilotos
+              momentos piloto
             </span>
             <h2 className="text-3xl md:text-5xl font-bold font-headline mb-4 tracking-tight">
               Galería de <span className="text-primary italic">clases</span>
