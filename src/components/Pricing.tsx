@@ -24,7 +24,7 @@ const plans = [
   {
     name: 'Programa fundamentos',
     price: 'Desde $311.999',
-    description: 'Ideal para quienes quieren empezar desde cero y aprender con técnica profesional desde el comienzo',
+    description: 'Formación de conductores 100% seguros desde el primer contacto con el volante.  Aprendizaje progresivo y sin estrés. Desarrollamos las habilidades necesarias para mantener el control absoluto del vehículo frente a las exigencias diarias de la región, incluyendo las técnicas correctas para manejar con fuertes ráfagas de viento, transitar con seguridad sobre ripio o lidiar con escarcha en la calzada.',
     badge: 'NIVEL INICIAL',
     href: '/planes/fundamentos'
   }
