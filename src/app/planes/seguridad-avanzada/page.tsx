@@ -133,7 +133,7 @@ export default function PlanSeguridadAvanzadaPage() {
                               idx === 0 ? "bg-purple hover:bg-purple/90 text-purple-foreground" : "bg-primary hover:bg-primary/90"
                             )}
                           >
-                            Elegir un plan
+                            Elegir
                           </Button>
                         </a>
                       </div>
@@ -223,7 +223,7 @@ export default function PlanSeguridadAvanzadaPage() {
               <div className="pt-8 flex justify-center px-4">
                 <Link href="#opciones-plan" className="w-full max-sm:max-w-none">
                   <Button className="w-full bg-primary hover:bg-primary/90 rounded-xl h-12 font-bold animate-heartbeat transition-all shadow-none border-none">
-                    Elegir un plan
+                    Elegir
                   </Button>
                 </Link>
               </div>

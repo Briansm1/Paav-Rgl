@@ -103,7 +103,7 @@ export default function PlanExpertoPage() {
                       </p>
                       <a href={plan.whatsappLink} target="_blank" rel="noopener noreferrer" className="w-full max-w-xs">
                         <Button className="w-full bg-primary hover:bg-primary/90 rounded-xl h-12 font-bold animate-heartbeat transition-all shadow-none border-none">
-                          Elegir un plan
+                          Elegir
                         </Button>
                       </a>
                     </div>
@@ -151,7 +151,7 @@ export default function PlanExpertoPage() {
                     ¿Qué vas a lograr?
                   </h3>
                   <div className="space-y-3">
-                    {plan.outcomes.map((item, i) => (
+                    {detailedPlans[0].outcomes.map((item, i) => (
                       <div key={i} className="flex items-start gap-3 group">
                         <div className="mt-1 bg-accent/10 p-1 rounded-full shrink-0">
                           <Check className="w-3 h-3 text-accent" />
@@ -181,7 +181,7 @@ export default function PlanExpertoPage() {
                 <div className="pt-4 flex justify-center px-2">
                   <Link href="#precios" className="w-full max-w-xs">
                     <Button className="w-full bg-primary hover:bg-primary/90 rounded-xl h-12 font-bold animate-heartbeat transition-all shadow-none border-none">
-                      Elegir un plan
+                      Elegir
                     </Button>
                   </Link>
                 </div>
