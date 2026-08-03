@@ -1,4 +1,3 @@
-
 "use client";
 
 import React, { useState, useEffect } from 'react';
@@ -10,12 +9,12 @@ import { ChevronRight, Star, ChevronDown } from 'lucide-react';
 
 export const Hero = () => {
   const heroImg = PlaceHolderImages.find(img => img.id === 'hero-bg');
-  const [starCount, setStarCount] = useState(1); // Empezamos en 1 para que la primera siempre esté encendida
+  const [starCount, setStarCount] = useState(1);
 
   useEffect(() => {
     const interval = setInterval(() => {
       setStarCount((prev) => {
-        if (prev >= 5) return 1; // Volver a 1 en lugar de 0
+        if (prev >= 5) return 1;
         return prev + 1;
       });
     }, 400);
@@ -32,20 +31,20 @@ export const Hero = () => {
           fill
           className="object-cover object-center blur-[2px] md:blur-[5px] scale-105 opacity-60 md:opacity-55"
           priority
+          sizes="100vw"
           data-ai-hint={heroImg?.imageHint}
         />
-        {/* Top transition fade - Smooth union with fixed header */}
+        {/* Top transition fade */}
         <div className="absolute top-0 left-0 right-0 h-64 bg-gradient-to-b from-black via-black/80 to-transparent z-10"></div>
         
         {/* Readable gradient overlays */}
         <div className="absolute inset-0 bg-gradient-to-b md:bg-gradient-to-r from-black/70 via-black/30 to-transparent"></div>
         
-        {/* Bottom transition fade - Seamless union with services section */}
+        {/* Bottom transition fade */}
         <div className="absolute bottom-0 left-0 right-0 h-64 bg-gradient-to-t from-background via-background/80 to-transparent z-10"></div>
       </div>
 
       <div className="w-full max-w-[1440px] mx-auto px-4 md:px-6 relative z-20 flex-1 flex flex-col justify-between h-full">
-        {/* Content Container */}
         <div className="max-w-4xl text-left flex flex-col items-start gap-4 md:gap-8 mt-1 md:mt-2">
           <div className="inline-flex items-center gap-2 bg-white/10 backdrop-blur-md border border-white/20 rounded-full px-4 py-1.5 animate-in fade-in slide-in-from-bottom-4 duration-700">
             <span className="text-[10px] md:text-xs font-bold text-white uppercase tracking-widest">La elección N°1 de la región</span>
@@ -71,7 +70,6 @@ export const Hero = () => {
           </div>
         </div>
         
-        {/* Stats Container */}
         <div className="flex items-center justify-start gap-6 sm:gap-10 md:gap-14 animate-in fade-in duration-1000 delay-500 pt-6 pb-28 md:pb-12">
           <div className="flex flex-col items-center text-center min-w-[70px] md:min-w-[100px]">
             <p className="text-xl sm:text-2xl md:text-3xl font-bold text-gold leading-none">Equipo</p>
@@ -93,11 +91,11 @@ export const Hero = () => {
                 {[...Array(5)].map((_, i) => (
                   <Star 
                     key={i} 
-                    strokeWidth={0} // Elimina el contorno
+                    strokeWidth={0}
                     className={`w-4 h-4 md:w-5 md:h-5 transition-all duration-300 ${
                       i < starCount 
                         ? "text-yellow-400 fill-yellow-400 scale-110" 
-                        : "text-white/10 fill-white/10 scale-100" // Relleno sólido suave en lugar de transparente
+                        : "text-white/10 fill-white/10 scale-100"
                     }`} 
                   />
                 ))}
@@ -108,7 +106,6 @@ export const Hero = () => {
         </div>
       </div>
 
-      {/* Scroll indicator - Only desktop */}
       <div className="absolute bottom-6 left-1/2 -translate-x-1/2 z-30 animate-bounce opacity-40 hover:opacity-100 transition-opacity hidden sm:block">
         <ChevronDown className="w-8 h-8 text-white" />
       </div>

@@ -1,4 +1,3 @@
-
 "use client";
 
 import React from 'react';
@@ -15,7 +14,6 @@ export const Gallery = () => {
   const galleryImages = PlaceHolderImages.filter(img => img.id.startsWith('gallery-'));
   const galleryVideos = PlaceHolderImages.filter(img => img.id.startsWith('gallery-video-'));
 
-  // Interleave images and videos
   const combinedMedia = [];
   const maxLength = Math.max(galleryImages.length, galleryVideos.length);
   
@@ -26,7 +24,6 @@ export const Gallery = () => {
 
   return (
     <section id="galeria" className="relative py-20 md:py-32 bg-background overflow-hidden">
-      {/* Fondos degradados para suavizar la sección */}
       <div className="absolute inset-0 bg-gradient-to-b from-background via-secondary/5 to-background z-0">
         <div className="absolute top-0 left-0 right-0 h-32 bg-gradient-to-b from-background via-background/50 to-transparent"></div>
         <div className="absolute bottom-0 left-0 right-0 h-32 bg-gradient-to-t from-background via-background/50 to-transparent"></div>
@@ -72,6 +69,7 @@ export const Gallery = () => {
                             loop 
                             muted 
                             playsInline 
+                            preload="none"
                             className="w-full h-full object-cover"
                           />
                         ) : (
@@ -80,7 +78,7 @@ export const Gallery = () => {
                             alt={media.description} 
                             fill 
                             className="object-cover transition-transform duration-700 group-hover:scale-110"
-                            sizes="(max-width: 768px) 75vw, (max-width: 1024px) 33vw, 25vw"
+                            sizes="(max-width: 640px) 75vw, (max-width: 768px) 50vw, (max-width: 1024px) 33vw, 25vw"
                             data-ai-hint={media.imageHint}
                           />
                         )}
