@@ -67,12 +67,6 @@ export const Gallery = () => {
               </CarouselContent>
             </Carousel>
           </div>
-
-          <div className="mt-12 text-center">
-            <p className="text-slate-500 font-bold text-[10px] uppercase tracking-[0.3em] animate-pulse">
-              Deslizamiento automático activo
-            </p>
-          </div>
         </div>
       </div>
     </section>
