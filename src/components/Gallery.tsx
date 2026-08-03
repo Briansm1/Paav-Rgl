@@ -1,32 +1,18 @@
 
 "use client";
 
-import React, { useState } from 'react';
+import React from 'react';
 import Image from 'next/image';
 import { PlaceHolderImages } from '@/app/lib/placeholder-images';
-import { cn } from '@/lib/utils';
-import { ChevronRight, MousePointer2 } from 'lucide-react';
+import {
+  Carousel,
+  CarouselContent,
+  CarouselItem,
+} from "@/components/ui/carousel";
+import AutoScroll from "embla-carousel-auto-scroll";
 
 export const Gallery = () => {
   const galleryImages = PlaceHolderImages.filter(img => img.id.startsWith('gallery-'));
-  const [currentIndex, setCurrentIndex] = useState(0);
-
-  const nextImage = () => {
-    setCurrentIndex((prev) => (prev + 1) % galleryImages.length);
-  };
-
-  // Obtenemos las próximas 3 imágenes para mostrar en la pila
-  const getStackedImages = () => {
-    const stacked = [];
-    for (let i = 0; i < 3; i++) {
-      const index = (currentIndex + i) % galleryImages.length;
-      stacked.push({
-        ...galleryImages[index],
-        stackPosition: i
-      });
-    }
-    return stacked;
-  };
 
   return (
     <section id="galeria" className="relative py-20 md:py-32 bg-background overflow-hidden">
@@ -47,60 +33,45 @@ export const Gallery = () => {
             </h2>
           </div>
 
-          {/* Stack Container */}
-          <div className="relative w-full max-w-[320px] md:max-w-[400px] aspect-[4/5] cursor-pointer touch-manipulation" onClick={nextImage}>
-            {getStackedImages().reverse().map((img, i) => {
-              const pos = img.stackPosition;
-              
-              return (
-                <div
-                  key={`${img.id}-${pos}`}
-                  className={cn(
-                    "absolute inset-0 rounded-[2.5rem] overflow-hidden shadow-2xl transition-all duration-500 ease-in-out border border-white/10 bg-secondary",
-                    pos === 0 && "z-30 scale-100 opacity-100 translate-y-0",
-                    pos === 1 && "z-20 scale-[0.92] opacity-60 translate-y-6 md:translate-y-8",
-                    pos === 2 && "z-10 scale-[0.84] opacity-30 translate-y-12 md:translate-y-16"
-                  )}
-                  style={{
-                    transformOrigin: 'bottom center'
-                  }}
-                >
-                  <Image 
-                    src={img.imageUrl} 
-                    alt={img.description} 
-                    fill 
-                    className="object-cover"
-                    sizes="(max-width: 768px) 320px, 400px"
-                    priority={pos === 0}
-                    loading={pos === 0 ? undefined : "lazy"}
-                    data-ai-hint={img.imageHint}
-                  />
-                  {/* Overlay sutil para la frontal */}
-                  {pos === 0 && (
-                    <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent flex items-end justify-center p-8">
-                      <div className="flex items-center gap-2 text-white/80 bg-white/10 backdrop-blur-md px-4 py-2 rounded-full border border-white/20 animate-pulse">
-                        <MousePointer2 className="w-4 h-4" />
-                        <span className="text-xs font-bold uppercase tracking-widest">Siguiente</span>
-                      </div>
+          <div className="w-full">
+            <Carousel
+              opts={{
+                align: "start",
+                loop: true,
+              }}
+              plugins={[
+                AutoScroll({
+                  speed: 1,
+                  stopOnInteraction: false,
+                  stopOnMouseEnter: true,
+                }),
+              ]}
+              className="w-full"
+            >
+              <CarouselContent className="-ml-4">
+                {galleryImages.map((img, index) => (
+                  <CarouselItem key={index} className="pl-4 basis-[75%] sm:basis-1/2 md:basis-1/3 lg:basis-1/4">
+                    <div className="relative aspect-[4/5] rounded-[2rem] md:rounded-[2.5rem] overflow-hidden border border-white/10 shadow-2xl bg-secondary group">
+                      <Image 
+                        src={img.imageUrl} 
+                        alt={img.description} 
+                        fill 
+                        className="object-cover transition-transform duration-700 group-hover:scale-110"
+                        sizes="(max-width: 768px) 75vw, (max-width: 1024px) 33vw, 25vw"
+                        data-ai-hint={img.imageHint}
+                      />
+                      <div className="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
                     </div>
-                  )}
-                </div>
-              );
-            })}
+                  </CarouselItem>
+                ))}
+              </CarouselContent>
+            </Carousel>
           </div>
 
-          {/* Indicador de progreso */}
-          <div className="mt-20 md:mt-28 flex items-center gap-4">
-            <div className="text-slate-500 font-bold text-sm tracking-widest">
-              {String(currentIndex + 1).padStart(2, '0')} / {String(galleryImages.length).padStart(2, '0')}
-            </div>
-            <div className="h-px w-12 bg-white/10"></div>
-            <button 
-              onClick={nextImage}
-              className="group flex items-center gap-2 text-primary font-bold text-sm uppercase tracking-[0.2em] hover:text-white transition-colors"
-            >
-              Ver más <ChevronRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
-            </button>
+          <div className="mt-12 text-center">
+            <p className="text-slate-500 font-bold text-[10px] uppercase tracking-[0.3em] animate-pulse">
+              Deslizamiento automático activo
+            </p>
           </div>
         </div>
       </div>
