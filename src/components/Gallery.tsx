@@ -13,6 +13,16 @@ import AutoScroll from "embla-carousel-auto-scroll";
 
 export const Gallery = () => {
   const galleryImages = PlaceHolderImages.filter(img => img.id.startsWith('gallery-'));
+  const galleryVideos = PlaceHolderImages.filter(img => img.id.startsWith('gallery-video-'));
+
+  // Interleave images and videos
+  const combinedMedia = [];
+  const maxLength = Math.max(galleryImages.length, galleryVideos.length);
+  
+  for (let i = 0; i < maxLength; i++) {
+    if (i < galleryImages.length) combinedMedia.push(galleryImages[i]);
+    if (i < galleryVideos.length) combinedMedia.push(galleryVideos[i]);
+  }
 
   return (
     <section id="galeria" className="relative py-20 md:py-32 bg-background overflow-hidden">
@@ -43,27 +53,42 @@ export const Gallery = () => {
                 AutoScroll({
                   speed: 1,
                   stopOnInteraction: false,
-                  stopOnMouseEnter: true,
+                  stopOnMouseEnter: false,
                 }),
               ]}
               className="w-full"
             >
               <CarouselContent className="-ml-4">
-                {galleryImages.map((img, index) => (
-                  <CarouselItem key={index} className="pl-4 basis-[75%] sm:basis-1/2 md:basis-1/3 lg:basis-1/4">
-                    <div className="relative aspect-[4/5] rounded-[2rem] md:rounded-[2.5rem] overflow-hidden border border-white/10 shadow-2xl bg-secondary group">
-                      <Image 
-                        src={img.imageUrl} 
-                        alt={img.description} 
-                        fill 
-                        className="object-cover transition-transform duration-700 group-hover:scale-110"
-                        sizes="(max-width: 768px) 75vw, (max-width: 1024px) 33vw, 25vw"
-                        data-ai-hint={img.imageHint}
-                      />
-                      <div className="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
-                    </div>
-                  </CarouselItem>
-                ))}
+                {combinedMedia.map((media, index) => {
+                  const isVideo = media.imageUrl.endsWith('.mp4');
+                  
+                  return (
+                    <CarouselItem key={index} className="pl-4 basis-[75%] sm:basis-1/2 md:basis-1/3 lg:basis-1/4">
+                      <div className="relative aspect-[4/5] rounded-[2rem] md:rounded-[2.5rem] overflow-hidden border border-white/10 shadow-2xl bg-secondary group">
+                        {isVideo ? (
+                          <video 
+                            src={media.imageUrl} 
+                            autoPlay 
+                            loop 
+                            muted 
+                            playsInline 
+                            className="w-full h-full object-cover"
+                          />
+                        ) : (
+                          <Image 
+                            src={media.imageUrl} 
+                            alt={media.description} 
+                            fill 
+                            className="object-cover transition-transform duration-700 group-hover:scale-110"
+                            sizes="(max-width: 768px) 75vw, (max-width: 1024px) 33vw, 25vw"
+                            data-ai-hint={media.imageHint}
+                          />
+                        )}
+                        <div className="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                      </div>
+                    </CarouselItem>
+                  );
+                })}
               </CarouselContent>
             </Carousel>
           </div>

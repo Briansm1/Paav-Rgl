@@ -158,6 +158,36 @@ export const PlaceHolderImages: ImagePlaceholder[] = [
     "imageHint": "driving lesson"
   },
   {
+    "id": "gallery-video-1",
+    "description": "Video clase 1",
+    "imageUrl": "https://i.imgur.com/ozG4fdz.mp4",
+    "imageHint": "driving video"
+  },
+  {
+    "id": "gallery-video-2",
+    "description": "Video clase 2",
+    "imageUrl": "https://i.imgur.com/fGEdMYz.mp4",
+    "imageHint": "driving video"
+  },
+  {
+    "id": "gallery-video-3",
+    "description": "Video clase 3",
+    "imageUrl": "https://i.imgur.com/HI5NmnM.mp4",
+    "imageHint": "driving video"
+  },
+  {
+    "id": "gallery-video-4",
+    "description": "Video clase 4",
+    "imageUrl": "https://i.imgur.com/IjdH41W.mp4",
+    "imageHint": "driving video"
+  },
+  {
+    "id": "gallery-video-5",
+    "description": "Video clase 5",
+    "imageUrl": "https://i.imgur.com/AlrJ859.mp4",
+    "imageHint": "driving video"
+  },
+  {
     "id": "map-location",
     "description": "Mapa con la ubicación de la academia",
     "imageUrl": "https://picsum.photos/seed/map/800/600",
