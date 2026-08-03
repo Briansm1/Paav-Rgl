@@ -116,12 +116,6 @@ export const PlaceHolderImages: ImagePlaceholder[] = [
     "imageHint": "driving lesson"
   },
   {
-    "id": "gallery-5",
-    "description": "Clase práctica 5",
-    "imageUrl": "https://i.imgur.com/iXF2cJm.jpeg",
-    "imageHint": "driving lesson"
-  },
-  {
     "id": "gallery-6",
     "description": "Clase práctica 6",
     "imageUrl": "https://i.imgur.com/X7FLvYs.jpeg",
