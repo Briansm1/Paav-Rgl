@@ -32,7 +32,11 @@ const digitalBooks = [
     discount: '70% OFF',
     description: 'Prepará tu mente para rendir con más confianza. Pensado para quienes quieren trabajar sus nervios, mejorar su seguridad y llegar al examen práctico con una mentalidad más preparada.',
     longDescription: '¿Estacionar es tu pesadilla? En este e-book desglosamos cada maniobra de estacionamiento (paralelo, a 45° y 90°) con puntos de referencia exactos y trucos de instructor que no te enseñan en otros lados. Ganá precisión milimétrica.',
-    features: ['El Método (8 escenarios críticos)', 'Protocolo de recuperación', 'Checklist táctico de 90s'],
+    features: [
+      'Preparación mental y emocional antes del examen',
+      'Estrategias para controlar nervios y presión',
+      'Herramientas para afrontar la evaluación con mayor tranquilidad'
+    ],
     imageUrl: PlaceHolderImages.find(img => img.id === 'book-maniobras')?.imageUrl || '',
     whatsappLink: "https://mpago.li/2uCr7Wp"
   },
@@ -62,7 +66,11 @@ const digitalBooks = [
     discount: '70% OFF',
     description: 'Reforzá tus conocimientos de conducción. Un recurso para estudiar normas, señales y conceptos importantes antes del examen teórico.',
     longDescription: 'Olvidate de memorizar leyes aburridas. Este manual te enseña el marco legal aplicado a situaciones cotidianas del tráfico. Es la herramienta definitiva para aprobar el examen teórico y conducir con conocimiento real de tus derechos y obligaciones.',
-    features: ['Material de estudio vial', 'Señales y normas de tránsito', 'Simulador con +85 preguntas'],
+    features: [
+      'Material de estudio vial',
+      'Señales y normas de tránsito',
+      'Simulador con +85 preguntas'
+    ],
     imageUrl: PlaceHolderImages.find(img => img.id === 'book-experto')?.imageUrl || '',
     whatsappLink: "https://mpago.li/1ochaL6"
   }
