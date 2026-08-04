@@ -49,7 +49,7 @@ const faqs = [
   },
   {
     question: "¿Tengo que tener auto para las prácticas?",
-    answer: "No, nosotros te brindamos el vehículo para todas tus clases. Trabajamos con unidades modernas, seguras y equipadas para que tu aprendizaje sea totalmente tranquilo y profesional."
+    answer: "No necesariamente, nosotros te brindamos el vehículo para todas tus clases. Trabajamos con unidades modernas, seguras y equipadas para que tu aprendizaje sea increíble y profesional."
   },
   {
     question: "¿En qué ubicación se dan clases?",
