@@ -6,7 +6,7 @@ import Link from 'next/link';
 import { Header } from '@/components/Header';
 import { Footer } from '@/components/Footer';
 import { Button } from '@/components/ui/button';
-import { ArrowLeft, Star, CheckCircle2 } from 'lucide-react';
+import { ArrowLeft, CheckCircle2 } from 'lucide-react';
 import { PlaceHolderImages } from '@/app/lib/placeholder-images';
 import { cn } from '@/lib/utils';
 
@@ -172,8 +172,7 @@ export default function LibrosDigitalesPage() {
                     </div>
                   </div>
 
-                  <div className="flex items-center justify-center gap-2 mb-4 md:mb-5">
-                    <Star className="w-5 h-5 text-gold fill-gold" />
+                  <div className="flex items-center justify-center mb-4 md:mb-5">
                     <span className="text-xs md:text-xs font-bold text-slate-400 uppercase tracking-widest">MATERIAL EXCLUSIVO</span>
                   </div>
 
@@ -198,7 +197,7 @@ export default function LibrosDigitalesPage() {
                     {book.features.map((feature, i) => (
                       <div key={i} className="flex items-start gap-2.5">
                         <CheckCircle2 className="w-4 h-4 text-primary shrink-0 mt-0.5" />
-                        <span className="text-xs text-foreground/90 font-medium leading-tight">{feature}</span>
+                        <span className="text-xs text-foreground/90 font-medium leading-tight">{feature}.</span>
                       </div>
                     ))}
                   </div>
