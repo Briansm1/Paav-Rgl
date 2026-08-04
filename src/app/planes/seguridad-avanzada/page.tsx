@@ -36,11 +36,11 @@ const programDetails = {
     'Tienen licencia o conocimientos previos y quieren mejorar su técnica de conducción.'
   ],
   outcomes: [
-    'Mejorar coordinación y control del vehículo.',
-    'Ejecutar maniobras con técnica correcta.',
-    'Corregir vicios malos de conducción.',
-    'Ganar seguridad en situaciones que hoy generan tensión.',
-    'Manejar con fluidez y confianza real.'
+    'Mejorar el control del vehículo y la coordinación al conducir.',
+    'Practicar maniobras específicas con una técnica correcta.',
+    'Corregir hábitos de conducción y mejorar tu forma de manejar.',
+    'Ganar mayor tranquilidad en situaciones que hoy te generan inseguridad.',
+    'Conducir de forma más fluida y segura.'
   ],
   features: [
     'Vehículo disponible para tus clases prácticas.',
@@ -204,6 +204,7 @@ export default function PlanSeguridadAvanzadaPage() {
                   <h3 className="text-lg font-bold mb-4 flex items-center justify-center gap-2 text-foreground text-center">
                     ¿Qué vas a lograr?
                   </h3>
+                  <p className="text-sm text-foreground/80 mb-4 font-medium text-center italic">Con este programa vas a:</p>
                   <div className="space-y-3">
                     {programDetails.outcomes.map((item, i) => (
                       <div key={i} className="flex items-start gap-3">
@@ -234,7 +235,7 @@ export default function PlanSeguridadAvanzadaPage() {
                       >
                         <Gift className="w-6 h-6 text-accent" />
                         <span className="text-xs md:text-sm text-foreground/90 font-bold leading-snug">
-                          {bono}.
+                          {bono}
                         </span>
                       </div>
                     ))}
