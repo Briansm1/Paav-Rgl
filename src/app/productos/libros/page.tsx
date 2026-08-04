@@ -18,7 +18,7 @@ const digitalBooks = [
     price: '$14.999',
     originalPrice: '$49.999',
     discount: '70% OFF',
-    description: 'Dominá el tránsito y eliminá el miedo a manejar. Dejá de sobrepensar cada maniobra. Este programa te entrega protocolos de reacción inmediata para que superes la inseguridad y empieces a operar con control total desde el primer día. Tu transformación en 9 módulos prácticos: Recibís un sistema paso a paso para ganar criterio en la calle, vas a anticipar los movimientos del entorno antes de que sucedan, tendrás una rutina de 3 minutos para anular la ansiedad antes de arrancar, descubrirás cómo esquivar las 12 trampas clásicas del principiante, obtendrás un plan de entrenamiento diario estructurado, incluye herramientas para desbloquearte en pleno tránsito real, un reinicio rápido de confianza tras un choque o un susto, freno automático al pensamiento catastrófico y vas a pasar de dudar de vos mismo a tener la certeza de un conductor entrenado.',
+    description: 'Mejorá tu seguridad y criterio al volante. Para quienes quieren superar miedos, mejorar su toma de decisiones y conducir con más confianza. Incluye: ✓ Guía práctica de conducción. ✓ Ejercicios aplicados. ✓ Material de entrenamiento.',
     longDescription: 'Este libro digital te llevará de la mano en el proceso de perder el miedo al volante. Descubrirás técnicas psicológicas para mantener la calma y una guía paso a paso sobre los fundamentos técnicos que todo conductor principiante debe dominar antes de salir a la calle.',
     features: ['Control emocional', 'Fundamentos técnicos', 'Checklist pre-conducción'],
     imageUrl: PlaceHolderImages.find(img => img.id === 'book-novato')?.imageUrl || '',
