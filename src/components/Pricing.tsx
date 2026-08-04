@@ -66,16 +66,15 @@ export const Pricing = () => {
             TU INVERSIÓN
           </span>
           <h2 className="text-4xl md:text-6xl font-bold font-headline mb-6 tracking-tight text-foreground text-center">
-            Planes pensados para alcanzar tu mejor{" "}
+            Elegí el plan que se adapta a tu{" "}
             <span 
               className={cn(
                 "text-primary inline-block transition-all duration-700 min-w-[120px] md:min-w-[180px]",
                 isMounted ? fontStyles[styleIndex] : "italic"
               )}
             >
-              versión
-            </span>{" "}
-            al volante
+              experiencia
+            </span>
           </h2>
           <p className="text-lg md:text-xl text-muted-foreground leading-relaxed">
             Al elegirnos tenés transparencia al 100% y calidad asegurada
