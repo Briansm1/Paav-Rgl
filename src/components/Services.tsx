@@ -43,7 +43,7 @@ const services = [
   },
   {
     title: 'Técnica de conducción',
-    description: 'Desarrollamos tus habilidades mediante una práctica estructurada para que logres el dominio total del vehículo y conviertas el manejo en algo natural y fluido.',
+    description: 'Practicá el control del vehículo y las maniobras necesarias para conducir de manera segura y fluida.',
     icon: <SteeringWheel className="w-10 h-10 text-primary" />,
     imgId: 'tecnica'
   }
