@@ -51,7 +51,7 @@ const programDetails = {
     'Aprendé a identificar y revisar los fluidos básicos de un auto.',
     'Conocé cómo actuar ante situaciones comunes, como realizar un cambio de neumático.',
     'Simulador de examen teórico con +85 preguntas',
-    '10% off en nuestros productos digitales',
+    'Accedé a descuentos en nuestros productos digitales',
     'Descuentos exclusivos con nuestros comercios socios'
   ]
 };

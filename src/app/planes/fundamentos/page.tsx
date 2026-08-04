@@ -31,13 +31,13 @@ const programDetails = {
     }
   ],
   targetAudience: [
-    'Nunca manejaron and quieren empezar desde cero.',
-    'Tienen poca experiencia and necesitan construir una base sólida.',
+    'Nunca manejaron y quieren empezar desde cero.',
+    'Tienen poca experiencia y necesitan construir una base sólida.',
     'Tienen licencia, pero todavía no se sienten preparados para conducir solos.'
   ],
   outcomes: [
-    'Familiarizarte con el vehículo and sus controles principales.',
-    'Realizar maniobras básicas con mayor seguridad and técnica.',
+    'Familiarizarte con el vehículo y sus controles principales.',
+    'Realizar maniobras básicas con mayor seguridad y técnica.',
     'Trabajar la confianza para conducir con más tranquilidad.',
     'Llegar mejor preparado a tu examen práctico.',
     'Contar con una base sólida para seguir desarrollando tu conducción.'
@@ -47,13 +47,13 @@ const programDetails = {
     'Acceso a nuestra comunidad privada de alumnos/as.',
     'Formación teórica aplicada a situaciones reales de conducción.',
     'Descuento en alquiler del vehículo para tu examen práctico.',
-    'Orientación sobre requisitos and trámites para gestionar tu licencia.'
+    'Orientación sobre requisitos y trámites para gestionar tu licencia.'
   ],
   bonuses: [
-    'Aprendé a identificar and revisar los fluidos básicos de un auto.',
+    'Aprendé a identificar y revisar los fluidos básicos de un auto.',
     'Conocé cómo actuar ante situaciones comunes, como realizar un cambio de neumático.',
     'Simulador de examen teórico con +85 preguntas',
-    '10% off en nuestros productos digitales',
+    'Accedé a descuentos en nuestros productos digitales',
     'Descuentos exclusivos con nuestros comercios socios'
   ]
 };
