@@ -37,7 +37,7 @@ const services = [
     imgId: 'mentalidad'
   },
   {
-    title: 'Teoría basada en el marco legal y al tráfico real',
+    title: 'Teoría y manejo preventivo',
     description: 'Profundizamos en las normas de tránsito y el manejo preventivo para que logres anticiparte al entorno y tomes decisiones inteligentes en la calle.',
     icon: <BookOpen className="w-10 h-10 text-primary" />,
     imgId: 'service-theory'
@@ -66,7 +66,7 @@ export const Services = () => {
             Confianza, criterio y técnica <span className="text-primary italic">al volante</span>
           </h2>
           <p className="text-lg md:text-xl text-muted-foreground leading-relaxed">
-            Nuestra formación combina <span className="text-primary font-bold">preparación emocional</span>, <span className="text-primary font-bold">conocimientos de tránsito</span> y <span className="text-primary font-bold">práctica</span> para que avances de manera clara y progresiva.
+            Nuestra formación combina preparación emocional, conocimientos de tránsito y práctica para que avances de manera clara y progresiva.
           </p>
         </div>
 
