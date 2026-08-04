@@ -48,7 +48,7 @@ const faqs = [
     answer: "Nuestras sesiones de prácticas dinámicas duran 50 minutos."
   },
   {
-    question: "¿Tengo que tener auto para las prácticas?",
+    question: "¿Tengo que tener auto para las clases?",
     answer: "No necesariamente, nosotros te brindamos el vehículo para todas tus clases. Trabajamos con unidades modernas, seguras y equipadas para que tu aprendizaje sea increíble y profesional."
   },
   {
