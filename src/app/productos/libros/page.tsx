@@ -66,15 +66,15 @@ const digitalBooks = [
 const benefits = [
   {
     title: 'Acceso inmediato',
-    desc: 'Recibís el material directamente por WhatsApp al instante.'
+    desc: 'Recibí el material directamente después de tu compra.'
   },
   {
-    title: 'Diseño para móviles',
-    desc: 'Optimizado para leer cómodamente desde tu celular.'
+    title: 'Diseñado para aprender desde cualquier lugar',
+    desc: 'Consultá el contenido cómodamente desde tu celular.'
   },
   {
-    title: 'Garantía',
-    desc: 'Tenés 30 días para pedir la devolución. Nos escribís por WhatsApp y gestionamos el reintegro. Sin ninguna pregunta.'
+    title: 'Compra segura',
+    desc: 'Contás con garantía y soporte durante el proceso.'
   }
 ];
 
@@ -203,6 +203,9 @@ export default function LibrosDigitalesPage() {
           </div>
 
           <div className="max-w-7xl mx-auto pt-10 border-t border-white/5">
+            <h2 className="text-3xl md:text-4xl font-bold text-white text-center mb-16">
+              ¿Por qué elegir nuestros recursos digitales?
+            </h2>
             <div className="flex flex-col gap-12 md:gap-8">
               {benefits.map((benefit, i) => (
                 <div key={i} className="flex flex-col items-center text-center gap-4 px-4">
