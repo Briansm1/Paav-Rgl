@@ -28,11 +28,12 @@ const detailedPlans = [
       'Salir con sensación de dominio and control del vehículo'
     ],
     features: [
-      'Vehículo para las clases prácticas',
-      'Acceso a la comunidad privada',
-      'Formación teórica aplicada a situaciones reales y sobre el marco legal',
-      'Descuento en el uso del auto para el examen práctico - 5% off',
-      'Asesoría sobre los requisitos y trámites para gestionar la licencia de conducir'
+      'Vehículo disponible para realizar las prácticas.',
+      'Simulación de situaciones del examen práctico.',
+      'Corrección de maniobras y aspectos a mejorar.',
+      'Repaso de conocimientos necesarios para la conducción.',
+      'Descuento en alquiler del vehículo para rendir el examen práctico.',
+      'Orientación sobre requisitos y trámites de la licencia.'
     ],
     bonuses: [
       'Aprendé a identificar y revisar los fluidos básicos de un auto.',
