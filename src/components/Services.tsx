@@ -63,7 +63,7 @@ export const Services = () => {
             NUESTRA METODOLOGÍA
           </span>
           <h2 className="text-4xl md:text-6xl font-bold font-headline mb-6 tracking-tight text-foreground">
-            Confianza, criterio y <span className="text-primary italic">técnica al volante</span>
+            Confianza, criterio y técnica <span className="text-primary italic">al volante</span>
           </h2>
           <p className="text-lg md:text-xl text-muted-foreground leading-relaxed">
             Revolucionamos la enseñanza vial combinando conocimiento de vanguardia con <span className="text-primary font-bold">nuestra metodología exclusiva</span> de 3 pilares: <span className="text-primary font-bold">mentalidad</span> para darte confianza, <span className="text-primary font-bold">teoría</span> para un aprendizaje sólido, y <span className="text-primary font-bold">tecnica</span> para el dominio total del vehículo
