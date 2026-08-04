@@ -18,9 +18,9 @@ const digitalBooks = [
     price: '$14.999',
     originalPrice: '$49.999',
     discount: '70% OFF',
-    description: 'Mejorá tu seguridad y criterio al volante. Para quienes quieren superar miedos, mejorar su toma de decisiones y conducir con más confianza. Incluye: ✓ Guía práctica de conducción. ✓ Ejercicios aplicados. ✓ Material de entrenamiento.',
+    description: 'Mejorá tu seguridad y criterio al volante. Para quienes quieren superar miedos, mejorar su toma de decisiones y conducir con más confianza.',
     longDescription: 'Este libro digital te llevará de la mano en el proceso de perder el miedo al volante. Descubrirás técnicas psicológicas para mantener la calma y una guía paso a paso sobre los fundamentos técnicos que todo conductor principiante debe dominar antes de salir a la calle.',
-    features: ['Control emocional', 'Fundamentos técnicos', 'Checklist pre-conducción'],
+    features: ['Guía práctica de conducción', 'Ejercicios aplicados', 'Material de entrenamiento'],
     imageUrl: PlaceHolderImages.find(img => img.id === 'book-novato')?.imageUrl || '',
     whatsappLink: "https://mpago.li/1UBsjWk"
   },
@@ -30,9 +30,9 @@ const digitalBooks = [
     price: '$3.999',
     originalPrice: '$13.400',
     discount: '70% OFF',
-    description: 'El sistema definitivo para dominar los nervios y no dejar tu licencia al azar. Este programa unifica táctica mental profunda con ejecución inmediata para que rindas con el control absoluto de la situación. Tu plan de aprobación incluye: 1. El Método (Entrenamiento): Descubrí exactamente cómo piensa el evaluador. Dominá el paso a paso de los 8 escenarios más críticos de la prueba y aprendé el protocolo exacto para recuperarte de cualquier error en vivo, sin entrar en pánico. 2. El Checklist (Tu Botón de Emergencia): Una rutina táctica de 90 segundos para aplicar justo antes de subir al auto. Diseñada para anular la tensión física, enfocar tu mente al 100% y evitar el temido bloqueo en el momento decisivo.',
+    description: 'El sistema definitivo para dominar los nervios y no dejar tu licencia al azar. Este programa unifica táctica mental profunda con ejecución inmediata para que rindas con el control absoluto de la situación.',
     longDescription: '¿Estacionar es tu pesadilla? En este e-book desglosamos cada maniobra de estacionamiento (paralelo, a 45° y 90°) con puntos de referencia exactos y trucos de instructor que no te enseñan en otros lados. Ganá precisión milimétrica.',
-    features: ['Estacionamiento perfecto', 'Giros en espacios reducidos', 'Uso de espejos'],
+    features: ['El Método (8 escenarios críticos)', 'Protocolo de recuperación', 'Checklist táctico de 90s'],
     imageUrl: PlaceHolderImages.find(img => img.id === 'book-maniobras')?.imageUrl || '',
     whatsappLink: "https://mpago.li/2uCr7Wp"
   },
@@ -42,9 +42,9 @@ const digitalBooks = [
     price: '$8.999',
     originalPrice: '$29.999',
     discount: '70% OFF',
-    description: 'Una formación completa diseñada para transformar tu entendimiento automotriz. A través de documentos precisos y material complementario, vas a adquirir el conocimiento técnico para dejar de depender de terceros y desenvolverte con total seguridad en el mundo de la mecánica. Tu transformación con este material: Dominio integral: Aprendé de manera práctica y ordenada el funcionamiento exacto de cada sistema del vehículo. Diagnóstico preciso: Desarrollá la capacidad de detectar fallas y realizar diagnósticos certeros antes de que el problema se agrave. Criterio de reparación: Comprendé a fondo cómo se ejecutan los arreglos para tomar el control de la situación y evitar gastos innecesarios. Seguridad y autonomía: Construí una base sólida de conocimientos aplicables, ya sea para el mantenimiento de tus propios vehículos o para dar tus primeros pasos en el sector.',
+    description: 'Una formación completa diseñada para transformar tu entendimiento automotriz. Adquirí el conocimiento técnico para dejar de depender de terceros y desenvolverte con total seguridad.',
     longDescription: 'En este manual práctico aprenderás a identificar los componentes vitales de tu auto. Desde cómo revisar el aceite y el refrigerante hasta el cambio correcto de un neumático. Es la guía indispensable para que nunca te quedes a pie.',
-    features: ['Mantenimiento preventivo', 'Cambio de neumáticos', 'Fluidos y niveles'],
+    features: ['Dominio integral de sistemas', 'Diagnóstico preciso de fallas', 'Criterio de reparación autónomo'],
     imageUrl: PlaceHolderImages.find(img => img.id === 'book-teoria')?.imageUrl || '',
     whatsappLink: "https://mpago.li/2uSG2jd"
   },
@@ -55,9 +55,9 @@ const digitalBooks = [
     price: '$14.999',
     originalPrice: '$49.999',
     discount: '70% OFF',
-    description: 'Aprobá tu examen teórico en el primer intento y sin estrés. Olvidate de estudiar con información desordenada o desactualizada. Este paquete de materiales te brinda exactamente lo que necesitás para asimilar el contenido rápido, rendir con total seguridad y asegurar tu licencia. Todo lo que incluye tu preparación: Librería de estudio estructurada (Leyes, manuales, resúmenes y guías optimizadas), Contenido oficial al día (Ley 24.449, señales, seguridad vial y protocolos ante siniestros) y Simulacro de Examen con +85 preguntas para evaluar tu nivel real antes del día clave.',
+    description: 'Aprobá tu examen teórico en el primer intento y sin estrés. Olvidate de estudiar con información desordenada o desactualizada.',
     longDescription: 'Olvidate de memorizar leyes aburridas. Este manual te enseña el marco legal aplicado a situaciones cotidianas del tráfico. Es la herramienta definitiva para aprobar el examen teórico y conducir con conocimiento real de tus derechos y obligaciones.',
-    features: ['Simulacros de examen', 'Normativas locales', 'Seguridad vial'],
+    features: ['Librería de estudio estructurada', 'Leyes y manuales actualizados', 'Simulacro con +85 preguntas'],
     imageUrl: PlaceHolderImages.find(img => img.id === 'book-experto')?.imageUrl || '',
     whatsappLink: "https://mpago.li/1ochaL6"
   }
@@ -82,17 +82,17 @@ const ExpandableDescription = ({ text }: { text: string }) => {
   const [isExpanded, setIsExpanded] = useState(false);
   
   return (
-    <div className="mb-6 md:mb-10 flex-grow">
+    <div className="mb-4 flex-grow">
       <p className={cn(
         "text-muted-foreground text-sm md:text-base leading-relaxed transition-all duration-300",
-        !isExpanded && "line-clamp-4 md:line-clamp-5"
+        !isExpanded && "line-clamp-3"
       )}>
         {text}
       </p>
       {text.length > 80 && (
         <button 
           onClick={() => setIsExpanded(!isExpanded)}
-          className="text-primary text-xs md:text-xs font-bold uppercase mt-2 hover:underline tracking-widest"
+          className="text-primary text-xs font-bold uppercase mt-2 hover:underline tracking-widest"
         >
           {isExpanded ? 'Ver menos' : 'Ver más'}
         </button>
@@ -115,7 +115,7 @@ export default function LibrosDigitalesPage() {
           </Link>
           <div className="flex flex-col gap-2">
             <h1 className="text-3xl md:text-5xl font-bold font-headline mb-0 text-white text-center">
-              Recursos <span className="text-primary">digitales</span> para mejorar tu conducción
+              Recursos digitales para mejorar tu conducción
             </h1>
             <p className="text-sm md:text-lg font-bold text-slate-400 uppercase tracking-[0.2em] text-center max-w-4xl mx-auto">
               Material práctico para reforzar conocimientos, prepararte para el examen y desarrollar mejores hábitos al volante
@@ -151,9 +151,6 @@ export default function LibrosDigitalesPage() {
                     <div className="bg-accent text-white text-xs md:text-sm font-black px-3 py-1.5 rounded-full shadow-sm border border-white/10 uppercase tracking-tighter">
                       {book.discount}
                     </div>
-                    <div className="bg-primary/20 text-primary text-xs md:text-sm font-black px-3 py-1.5 rounded-full shadow-sm border border-primary/20 uppercase tracking-tighter">
-                      3 CSI
-                    </div>
                   </div>
 
                   <div className="flex items-center justify-center gap-2 mb-4 md:mb-5">
@@ -161,11 +158,11 @@ export default function LibrosDigitalesPage() {
                     <span className="text-xs md:text-xs font-bold text-slate-400 uppercase tracking-widest">MATERIAL EXCLUSIVO</span>
                   </div>
 
-                  <h3 className="text-2xl md:text-2xl font-bold mb-3 md:mb-4 text-white leading-tight h-[2.8em] md:h-auto flex items-center justify-center line-clamp-2">
+                  <h3 className="text-xl md:text-2xl font-bold mb-3 md:mb-4 text-white leading-tight h-[2.8em] md:h-auto flex items-center justify-center line-clamp-2">
                     {book.title}
                   </h3>
 
-                  <div className="flex items-center justify-center gap-4 md:gap-5 mb-6 md:mb-8">
+                  <div className="flex items-center justify-center gap-4 md:gap-5 mb-6">
                     <span className="text-red-500/60 text-base md:text-lg font-bold line-through">
                       {book.originalPrice}
                     </span>
@@ -176,7 +173,18 @@ export default function LibrosDigitalesPage() {
 
                   <ExpandableDescription text={book.description} />
 
-                  <div className="flex flex-col gap-4 w-full mt-auto pt-4 items-center">
+                  {/* Clean and separated Checklist */}
+                  <div className="w-full space-y-2 mb-8 text-left bg-white/5 p-4 rounded-2xl border border-white/10">
+                    <p className="text-[10px] font-black text-primary uppercase tracking-[0.2em] mb-3">Incluye:</p>
+                    {book.features.map((feature, i) => (
+                      <div key={i} className="flex items-start gap-2.5">
+                        <CheckCircle2 className="w-4 h-4 text-primary shrink-0 mt-0.5" />
+                        <span className="text-xs text-foreground/90 font-medium leading-tight">{feature}</span>
+                      </div>
+                    ))}
+                  </div>
+
+                  <div className="flex flex-col gap-4 w-full mt-auto items-center">
                     <a href={book.whatsappLink} target="_blank" rel="noopener noreferrer" className="w-full">
                       <Button className="w-full h-14 md:h-14 rounded-xl bg-green-600 hover:bg-green-700 text-white text-base md:text-base font-bold transition-colors border-none shadow-none">
                         Comprar ahora
