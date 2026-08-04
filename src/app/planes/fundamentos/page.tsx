@@ -204,7 +204,7 @@ export default function PlanFundamentosPage() {
                   <h3 className="text-lg font-bold mb-4 flex items-center justify-center gap-2 text-foreground text-center">
                     ¿Qué vas a lograr?
                   </h3>
-                  <p className="text-sm text-foreground/80 mb-4 font-medium text-center italic">Al finalizar el plan vas a:</p>
+                  <p className="text-sm text-foreground/80 mb-4 font-medium text-center italic">Al finalizar el programa vas a:</p>
                   <div className="space-y-3">
                     {programDetails.outcomes.map((item, i) => (
                       <div key={i} className="flex items-start gap-3">
