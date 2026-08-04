@@ -9,7 +9,7 @@ import { cn } from '@/lib/utils';
 
 const programDetails = {
   name: 'Programa puesta a punto',
-  description: 'Diseñado para personas que buscan aprender maniobras concretas o mejorar el conocimiento actual, prepararse para el examen práctico o conseguir confianza y seguridad al volante.',
+  description: 'Diseñado para personas que ya tienen conocimientos básicos y quieren mejorar aspectos específicos de su conducción. Trabajamos maniobras, técnica y situaciones reales para que puedas conducir con mayor tranquilidad y control.',
   options: [
     {
       name: 'Plan as',
