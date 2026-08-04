@@ -74,7 +74,7 @@ export default function PlanFundamentosPage() {
               Programa <span className="text-primary">fundamentos</span>
             </h1>
             <p className="text-sm md:text-lg font-bold text-slate-400 uppercase tracking-[0.3em] text-center">
-              Empezá a conducir con una base sólida y acompañamiento profesional.
+              Empezá a conducir con una base sólida y acompañamiento profesional
             </p>
           </div>
         </div>
