@@ -116,37 +116,44 @@ export const Services = () => {
           </Carousel>
         </div>
 
-        <div className="mt-24 md:mt-40 p-1 md:p-2 bg-gradient-to-br from-primary/20 via-transparent to-accent/20 rounded-[2.5rem] overflow-hidden shadow-2xl mx-auto max-w-6xl">
-          <div className="bg-secondary rounded-[2.4rem] p-8 md:p-16 flex flex-col lg:flex-row items-center gap-12 lg:gap-20">
-            <div className="lg:w-1/2 w-full text-center lg:text-left">
-              <h3 className="text-3xl md:text-5xl font-bold mb-8 tracking-tight">
-                Una formación adaptada a tu proceso
-              </h3>
-              <div className="grid grid-cols-1 gap-8">
+        <div className="mt-24 md:mt-40 p-1 md:p-2 bg-gradient-to-br from-primary/20 via-transparent to-accent/20 rounded-[2.5rem] overflow-hidden shadow-2xl mx-auto max-w-[1400px]">
+          <div className="bg-secondary rounded-[2.4rem] p-8 md:p-12 lg:p-16">
+            <div className="grid grid-cols-1 lg:grid-cols-3 items-center gap-12 lg:gap-16">
+              {/* Columna 1: Título */}
+              <div className="text-center lg:text-left">
+                <h3 className="text-3xl md:text-4xl lg:text-5xl font-bold tracking-tight leading-[1.1]">
+                  Una formación <span className="text-primary italic">adaptada</span> a tu proceso
+                </h3>
+              </div>
+
+              {/* Columna 2: Video */}
+              <div className="relative aspect-[4/3] w-full rounded-3xl overflow-hidden shadow-2xl border border-white/5 bg-black">
+                <video 
+                  src="https://i.imgur.com/3YGoxMZ.mp4"
+                  autoPlay
+                  loop
+                  muted
+                  playsInline
+                  preload="none"
+                  className="w-full h-full object-cover"
+                />
+              </div>
+
+              {/* Columna 3: Incisos/Beneficios */}
+              <div className="space-y-8">
                 {[
                   { icon: <ShieldCheck className="w-6 h-6 text-primary" />, text: 'Aprendizaje en un entorno real: Practica en vehículos modernos, seguros y con el máximo confort.' },
-                  { icon: <Award className="w-6 h-6 text-primary" />, text: 'Guía profesional y experta: Nuestro equipo certificado te acompaña paso a paso, brindándote la tranquilidad y técnica que necesitas para dominar el volante.' },
-                  { icon: <ShieldCheck className="w-6 h-6 text-primary" />, text: 'A tu propia medida: ¿Trabajas o estudias? No hay problema. Armamos un cronograma de clases que se adapte a tus tiempos.' }
+                  { icon: <Award className="w-6 h-6 text-primary" />, text: 'Guía profesional y experta: Equipo certificado que te acompaña paso a paso con tranquilidad.' },
+                  { icon: <Clock className="w-6 h-6 text-primary" />, text: 'A tu propia medida: Armamos un cronograma de clases que se adapte 100% a tus tiempos.' }
                 ].map((item, i) => (
-                  <div key={i} className="flex flex-col sm:flex-row items-center lg:items-start gap-5">
-                    <div className="shrink-0 mt-1 bg-primary/10 p-3 rounded-2xl shadow-inner">
+                  <div key={i} className="flex gap-4 items-start">
+                    <div className="shrink-0 bg-primary/10 p-2.5 rounded-xl shadow-inner">
                       {item.icon}
                     </div>
-                    <p className="text-foreground/80 font-medium text-lg md:text-xl leading-relaxed">{item.text}</p>
+                    <p className="text-foreground/80 font-medium text-sm md:text-base leading-relaxed">{item.text}</p>
                   </div>
                 ))}
               </div>
-            </div>
-            <div className="lg:w-1/2 w-full relative h-[300px] md:h-[500px] rounded-3xl overflow-hidden shadow-2xl">
-              <video 
-                src="https://i.imgur.com/3YGoxMZ.mp4"
-                autoPlay
-                loop
-                muted
-                playsInline
-                preload="none"
-                className="w-full h-full object-cover"
-              />
             </div>
           </div>
         </div>
