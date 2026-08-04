@@ -31,7 +31,7 @@ export const Footer = () => {
               )}
             </Link>
             <p className="text-slate-400 max-w-sm">
-              Formando conductores responsables con seguridad y excelencia desde el primer día. Tu libertad empieza con una educación vial sólida.
+              Formando conductores responsables, seguros y confiados desde el primer día. Tu libertad empieza con una educación vial sólida.
             </p>
             <div className="flex gap-4 justify-center">
               <a 
