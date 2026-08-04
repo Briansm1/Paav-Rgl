@@ -15,7 +15,7 @@ const programDetails = {
       name: 'Plan oro',
       transferPrice: '$311.999',
       cardPrice: '$479.999',
-      savings: 'Ahorro de $168.000',
+      savings: 'AHORRO DE $168.000',
       sessions: "8 sesiones dinámicas (50' c/u)",
       whatsappLink: "https://wa.me/5492966265603?text=Hola%2C%20vengo%20desde%20la%20web%20y%20quiero%20contratar%20el%20*plan%20oro*%20de%20*8%20sesiones*",
       miniChecklist: ["Para empezar", "Primer contacto con el vehículo", "Bases de conducción"]
@@ -24,7 +24,7 @@ const programDetails = {
       name: 'Plan rookie',
       transferPrice: '$369.999',
       cardPrice: '$569.999',
-      savings: 'Ahorro de $200.000',
+      savings: 'AHORRO DE $200.000',
       sessions: "10 sesiones dinámicas (50' c/u)",
       whatsappLink: "https://wa.me/5492966265603?text=Hola%2C%20vengo%20desde%20la%20web%20y%20quiero%20contratar%20el%20*plan%20rookie*%20de%20*10%20sesiones*",
       miniChecklist: ["Más práctica", "Más tiempo de acompañamiento", "Mayor desarrollo de habilidades"]
@@ -43,11 +43,11 @@ const programDetails = {
     'Construir confianza real para manejar solo'
   ],
   features: [
-    'Vehículo para las clases prácticas',
-    'Acceso a la comunidad privada',
-    'Formación teórica aplicada a situaciones reales y sobre el marco legal',
-    'Descuento en el uso del auto para el examen práctico - 15% off',
-    'Asesoría sobre los requisitos y trámites para gestionar la licencia de conducir'
+    'Vehículo disponible para tus clases prácticas',
+    'Acceso a nuestra comunidad privada de alumnos',
+    'Formación teórica aplicada a situaciones reales de conducción',
+    'Descuento en alquiler del vehículo para tu examen práctico',
+    'Orientación sobre requisitos y trámites para gestionar tu licencia'
   ],
   bonuses: [
     'Como identificar los diferentes fluidos de un auto y como controlarlos',
@@ -115,7 +115,7 @@ export default function PlanFundamentosPage() {
                         <span className="text-[10px] font-bold text-slate-400 uppercase tracking-widest mb-1">TRANSFERENCIA O EFECTIVO</span>
                         <p className="text-4xl md:text-5xl font-black text-green-500 tracking-tighter">{option.transferPrice}</p>
                         <span className="mt-2 text-[10px] font-bold bg-green-500/20 text-green-500 px-3 py-1 rounded-full border border-green-500/30 uppercase tracking-tight">
-                          {option.savings.toUpperCase()}
+                          {option.savings}
                         </span>
                       </div>
 
@@ -269,4 +269,3 @@ export default function PlanFundamentosPage() {
     </main>
   );
 }
-
