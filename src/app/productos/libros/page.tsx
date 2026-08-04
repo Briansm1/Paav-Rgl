@@ -44,7 +44,12 @@ const digitalBooks = [
     discount: '70% OFF',
     description: 'Conocé mejor tu vehículo. Aprendé los conceptos básicos del funcionamiento del auto y adquirí conocimientos útiles para cuidarlo y entenderlo mejor.',
     longDescription: 'En este manual práctico aprenderás a identificar los componentes vitales de tu auto. Desde cómo revisar el aceite y el refrigerante hasta el cambio correcto de un neumático. Es la guía indispensable para que nunca te quedes a pie.',
-    features: ['Dominio integral de sistemas', 'Diagnóstico preciso de fallas', 'Criterio de reparación autónomo'],
+    features: [
+      'Fundamentos de mecánica básica y avanzada',
+      'Identificación de componentes del vehículo',
+      'Diagnóstico preciso de fallas',
+      'Consejos prácticos de mantenimiento'
+    ],
     imageUrl: PlaceHolderImages.find(img => img.id === 'book-teoria')?.imageUrl || '',
     whatsappLink: "https://mpago.li/2uSG2jd"
   },
