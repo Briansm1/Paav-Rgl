@@ -31,9 +31,9 @@ const programDetails = {
     }
   ],
   targetAudience: [
-    'Para personas que ya manejan, pero no se sienten 100% seguras.',
-    'Para quienes van a sacar su licencia y necesitan reforzar práctica o maniobras puntuales.',
-    'Para quienes tienen licencia pero quieren afianzar técnica y precisión.'
+    'Ya tienen experiencia manejando, pero quieren ganar más confianza al volante.',
+    'Necesitan practicar maniobras específicas antes de rendir su examen práctico.',
+    'Tienen licencia o conocimientos previos y quieren mejorar su técnica de conducción.'
   ],
   outcomes: [
     'Mejorar coordinación y control del vehículo.',
@@ -187,6 +187,7 @@ export default function PlanSeguridadAvanzadaPage() {
                   <h3 className="text-lg font-bold mb-4 flex items-center justify-center gap-2 text-foreground text-center">
                     ¿Este programa es para vos?
                   </h3>
+                  <p className="text-sm text-foreground/80 mb-4 font-medium text-center italic">Está pensado para personas que:</p>
                   <div className="space-y-3">
                     {programDetails.targetAudience.map((item, i) => (
                       <div key={i} className="flex items-start gap-3">
