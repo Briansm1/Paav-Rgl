@@ -32,7 +32,7 @@ const SteeringWheel = ({ className }: { className?: string }) => (
 const services = [
   {
     title: 'Mentalidad de piloto',
-    description: 'Trabajamos la gestión de tus emociones al volante para que logres superar los miedos y conduzcas con total seguridad y confianza.',
+    description: 'Aprendé a gestionar los nervios, eliminar los miedos y ganar confianza para tomar decisiones con mayor seguridad al volante.',
     icon: <Brain className="w-10 h-10 text-primary" />,
     imgId: 'mentalidad'
   },
