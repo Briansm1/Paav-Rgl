@@ -150,7 +150,7 @@ export const Services = () => {
                   { 
                     icon: <Award className="w-6 h-6 text-primary" />, 
                     title: 'Acompañamiento paso a paso:',
-                    text: 'Nuestro equipo certificado te guía durante cada clase para resolver tus dudas, mejorar tu técnica y avanzar con mayor seguridad.' 
+                    text: 'Nuestro equipo certificado por la ANSV y la experiencia en la calle te guía durante cada clase para resolver tus dudas, mejorar tu técnica y avanzar con mayor seguridad.' 
                   },
                   { 
                     icon: <Clock className="w-6 h-6 text-primary" />, 
