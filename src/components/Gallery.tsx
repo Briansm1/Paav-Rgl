@@ -38,6 +38,9 @@ export const Gallery = () => {
             <h2 className="text-3xl md:text-5xl font-bold font-headline mb-4 tracking-tight">
               Así vivimos cada <span className="text-primary italic">clase</span>
             </h2>
+            <p className="text-lg md:text-xl text-muted-foreground leading-relaxed max-w-3xl mx-auto">
+              Conocé nuestros vehículos y algunos momentos de las clases prácticas durante el proceso de formación.
+            </p>
           </div>
 
           <div className="w-full">
