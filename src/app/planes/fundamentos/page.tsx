@@ -264,7 +264,7 @@ export default function PlanFundamentosPage() {
           </p>
           <a href="https://wa.me/5492966265603?text=Hola%2C%20tengo%20algunas%20consultas%20sobre%20el%20Programa%20Fundamentos" target="_blank" rel="noopener noreferrer">
             <Button variant="outline" size="lg" className="rounded-full border-primary text-primary hover:bg-primary/5 text-center shadow-none">
-              Consultar mi plan ideal
+              Conocer mi plan ideal
             </Button>
           </a>
         </div>
