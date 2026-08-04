@@ -50,7 +50,7 @@ const programDetails = {
     'Orientación sobre requisitos y trámites para gestionar tu licencia.'
   ],
   bonuses: [
-    'Como identificar los diferentes fluidos de un auto y como controlarlos',
+    'Aprendé a identificar y revisar los fluidos básicos de un auto.',
     'Como realizar un cambio de neumático',
     'Simulador de examen teórico con +85 preguntas',
     '10% off en nuestros productos digitales',
