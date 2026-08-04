@@ -80,7 +80,7 @@ export default function PlanExpertoPage() {
                         {plan.transferPrice}
                       </p>
                       <span className="text-[10px] md:text-xs font-bold bg-green-500/20 text-green-500 px-3 py-1 rounded-full text-center border border-green-500/30 uppercase tracking-tight">
-                        {plan.savings}
+                        {plan.savings.toUpperCase()}
                       </span>
                     </div>
                     
@@ -163,9 +163,12 @@ export default function PlanExpertoPage() {
                 </div>
 
                 <div className="w-full bg-accent/10 p-6 md:p-8 rounded-[2.5rem] border-2 border-accent/40 shadow-lg shadow-accent/5">
-                  <h3 className="text-xl font-bold mb-8 flex items-center justify-center gap-3 text-accent text-center">
+                  <h3 className="text-xl font-bold mb-2 flex items-center justify-center gap-3 text-accent text-center">
                     BONOS INCLUIDOS
                   </h3>
+                  <p className="text-sm text-foreground/80 mb-8 text-center max-w-lg mx-auto leading-relaxed">
+                    Además de tus clases, recibís recursos complementarios para prepararte mejor como conductor.
+                  </p>
                   <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
                     {detailedPlans[0].bonuses.map((bono, i) => (
                       <div key={i} className="flex flex-col items-center text-center gap-3 group">

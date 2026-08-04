@@ -198,9 +198,12 @@ export default function PlanSeguridadAvanzadaPage() {
                 </div>
 
                 <div className="bg-accent/10 p-6 rounded-[2rem] border-2 border-accent/40 shadow-lg shadow-accent/5">
-                  <h3 className="text-xl font-bold mb-8 flex items-center justify-center gap-3 text-accent text-center">
+                  <h3 className="text-xl font-bold mb-2 flex items-center justify-center gap-3 text-accent text-center">
                     BONOS INCLUIDOS
                   </h3>
+                  <p className="text-sm text-foreground/80 mb-8 text-center max-w-lg mx-auto leading-relaxed">
+                    Además de tus clases, recibís recursos complementarios para prepararte mejor como conductor.
+                  </p>
                   <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
                     {programDetails.bonuses.map((bono, i) => (
                       <div 
