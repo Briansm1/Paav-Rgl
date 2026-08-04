@@ -44,7 +44,7 @@ const programDetails = {
   ],
   features: [
     'Vehículo disponible para tus clases prácticas',
-    'Acceso a nuestra comunidad privada de alumnos',
+    'Acceso a nuestra comunidad privada de alumnos/as',
     'Formación teórica aplicada a situaciones reales de conducción',
     'Descuento en alquiler del vehículo para tu examen práctico',
     'Orientación sobre requisitos y trámites para gestionar tu licencia'
