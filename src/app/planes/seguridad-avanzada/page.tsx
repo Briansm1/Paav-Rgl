@@ -41,11 +41,11 @@ const programDetails = {
     'Manejar con fluidez y confianza real.'
   ],
   features: [
-    'Vehículo para las clases prácticas',
-    'Acceso a la comunidad privada',
-    'Formación teórica aplicada a situaciones reales y sobre el marco legal',
-    'Descuento en el uso del auto para el examen práctico - 10% off',
-    'Asesoría sobre los requisitos y trámites para gestionar la licencia de conducir'
+    'Vehículo para las clases prácticas.',
+    'Acceso a la comunidad privada.',
+    'Formación teórica aplicada a situaciones reales y sobre el marco legal.',
+    'Descuento en el uso del auto para el examen práctico - 10% off.',
+    'Asesoría sobre los requisitos y trámites para gestionar la licencia de conducir.'
   ],
   bonuses: [
     'Aprendé a identificar y revisar los fluidos básicos de un auto.',
@@ -67,9 +67,14 @@ export default function PlanSeguridadAvanzadaPage() {
             <ArrowLeft className="w-4 h-4" />
             Volver a los programas
           </Link>
-          <h1 className="text-3xl md:text-5xl font-bold font-headline mb-0 text-white text-center">
-            Programa <span className="text-primary">puesta a punto</span>
-          </h1>
+          <div className="flex flex-col gap-2">
+            <h1 className="text-3xl md:text-5xl font-bold font-headline mb-0 text-white text-center">
+              Programa <span className="text-primary">puesta a punto</span>
+            </h1>
+            <p className="text-sm md:text-lg font-bold text-slate-400 uppercase tracking-[0.3em] text-center">
+              Mejorá tu conducción y reforzá tus habilidades al volante
+            </p>
+          </div>
         </div>
       </section>
 
@@ -215,7 +220,7 @@ export default function PlanSeguridadAvanzadaPage() {
                       >
                         <Gift className="w-6 h-6 text-accent" />
                         <span className="text-xs md:text-sm text-foreground/90 font-bold leading-snug">
-                          {bono}
+                          {bono}.
                         </span>
                       </div>
                     ))}
