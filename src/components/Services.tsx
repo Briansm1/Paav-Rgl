@@ -1,4 +1,3 @@
-
 import React from 'react';
 import Image from 'next/image';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
@@ -38,7 +37,7 @@ const services = [
   },
   {
     title: 'Teoría y manejo preventivo',
-    description: 'Profundizamos en las normas de tránsito y el manejo preventivo para que logres anticiparte al entorno y tomes decisiones inteligentes en la calle.',
+    description: 'Conocé las normas de tránsito y aprendé a identificar riesgos antes de que se conviertan en un problema.',
     icon: <BookOpen className="w-10 h-10 text-primary" />,
     imgId: 'service-theory'
   },
