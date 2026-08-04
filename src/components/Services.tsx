@@ -66,7 +66,7 @@ export const Services = () => {
             Confianza, criterio y técnica <span className="text-primary italic">al volante</span>
           </h2>
           <p className="text-lg md:text-xl text-muted-foreground leading-relaxed">
-            Revolucionamos la enseñanza vial combinando conocimiento de vanguardia con <span className="text-primary font-bold">nuestra metodología exclusiva</span> de 3 pilares: <span className="text-primary font-bold">mentalidad</span> para darte confianza, <span className="text-primary font-bold">teoría</span> para un aprendizaje sólido, y <span className="text-primary font-bold">tecnica</span> para el dominio total del vehículo
+            Nuestra formación combina <span className="text-primary font-bold">preparación emocional</span>, <span className="text-primary font-bold">conocimientos de tránsito</span> y <span className="text-primary font-bold">práctica</span> para que avances de manera clara y progresiva.
           </p>
         </div>
 
@@ -145,6 +145,7 @@ export const Services = () => {
                 loop
                 muted
                 playsInline
+                preload="none"
                 className="w-full h-full object-cover"
               />
             </div>
