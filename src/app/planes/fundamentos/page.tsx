@@ -17,7 +17,8 @@ const programDetails = {
       cardPrice: '$479.999',
       savings: 'Ahorro de $168.000',
       sessions: "8 sesiones dinámicas (50' c/u)",
-      whatsappLink: "https://wa.me/5492966265603?text=Hola%2C%20vengo%20desde%20la%20web%20y%20quiero%20contratar%20el%20*plan%20oro*%20de%20*8%20sesiones*"
+      whatsappLink: "https://wa.me/5492966265603?text=Hola%2C%20vengo%20desde%20la%20web%20y%20quiero%20contratar%20el%20*plan%20oro*%20de%20*8%20sesiones*",
+      miniChecklist: ["Para empezar", "Primer contacto con el vehículo", "Bases de conducción"]
     },
     {
       name: 'Plan rookie',
@@ -25,7 +26,8 @@ const programDetails = {
       cardPrice: '$569.999',
       savings: 'Ahorro de $200.000',
       sessions: "10 sesiones dinámicas (50' c/u)",
-      whatsappLink: "https://wa.me/5492966265603?text=Hola%2C%20vengo%20desde%20la%20web%20y%20quiero%20contratar%20el%20*plan%20rookie*%20de%20*10%20sesiones*"
+      whatsappLink: "https://wa.me/5492966265603?text=Hola%2C%20vengo%20desde%20la%20web%20y%20quiero%20contratar%20el%20*plan%20rookie*%20de%20*10%20sesiones*",
+      miniChecklist: ["Más práctica", "Más tiempo de acompañamiento", "Mayor desarrollo de habilidades"]
     }
   ],
   targetAudience: [
@@ -132,11 +134,7 @@ export default function PlanFundamentosPage() {
                         </div>
                         
                         <div className="flex flex-wrap justify-center gap-x-3 gap-y-1 mt-1">
-                          {[
-                            "Para empezar",
-                            "Primer contacto con el vehículo",
-                            "Bases de conducción"
-                          ].map((item, i) => (
+                          {option.miniChecklist.map((item, i) => (
                             <div key={i} className="flex items-center gap-1.5 whitespace-nowrap">
                               <Check className="w-2.5 h-2.5 text-green-500" />
                               <span className="text-[9px] font-bold text-slate-400 uppercase tracking-tight">{item}</span>
