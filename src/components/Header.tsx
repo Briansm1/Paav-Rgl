@@ -57,7 +57,7 @@ export const Header = () => {
     { name: 'Nuestra metodología', href: '/#servicios' },
     { name: 'Casos de éxito', href: '/#testimonios' },
     { name: 'Planes', href: '/#planes' },
-    { name: 'Preguntas frecuentes', href: '/#faq' },
+    { name: 'FAQ', href: '/#faq' },
   ];
 
   const productLinks = [
