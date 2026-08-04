@@ -93,7 +93,7 @@ export const Testimonials = () => {
             EXPERIENCIAS REALES
           </span>
           <h3 className="text-4xl md:text-5xl font-bold font-headline text-foreground tracking-tight">
-            Nuestros alumnos <span className="text-primary italic">hablan</span>
+            Lo que vivieron nuestros <span className="text-primary italic">alumnos</span>
           </h3>
         </div>
 
