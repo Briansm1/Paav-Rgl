@@ -21,11 +21,11 @@ const detailedPlans = [
       'Quieren trabajar la confianza y los nervios antes de enfrentarse al examen.'
     ],
     outcomes: [
-      'Presición en maniobras clave',
-      'Mayor seguridad en puntos complejos de la conducción',
-      'Corrección personalizada',
-      'Confianza inmediata en aquello que hoy te genera duda',
-      'Salir con sensación de dominio and control del vehículo'
+      'Identificar los aspectos que necesitás mejorar antes del examen.',
+      'Practicar maniobras clave y situaciones frecuentes de evaluación.',
+      'Corregir errores puntuales con acompañamiento profesional.',
+      'Llegar al examen con mayor preparación y tranquilidad.',
+      'Tener más claridad sobre qué reforzar antes de rendir.'
     ],
     features: [
       'Vehículo disponible para realizar las prácticas.',
@@ -170,8 +170,9 @@ export default function PlanExpertoPage() {
                   <h3 className="text-lg font-bold mb-4 flex items-center justify-center gap-2 text-foreground text-center">
                     ¿Qué vas a lograr?
                   </h3>
+                  <p className="text-sm text-foreground/80 mb-4 font-medium text-center italic">Con este programa vas a:</p>
                   <div className="space-y-3">
-                    {detailedPlans[0].outcomes.map((item, i) => (
+                    {plan.outcomes.map((item, i) => (
                       <div key={i} className="flex items-start gap-3 group">
                         <div className="mt-1 bg-accent/10 p-1 rounded-full shrink-0">
                           <Check className="w-3 h-3 text-accent" />
