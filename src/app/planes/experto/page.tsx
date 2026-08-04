@@ -14,7 +14,7 @@ const detailedPlans = [
     savings: 'Ahorro de $47.000',
     sessions: "2 sesiones dinámicas (50' c/u)",
     miniChecklist: ["Preparación final para tu examen práctico"],
-    fullDesc: 'Diseñado para personas que ya tienen conocimientos o licencia y quieren ganar más seguridad en maniobras complejas, estacionamiento o circular en tráfico.',
+    fullDesc: 'Diseñado para personas que están próximas a rendir el examen práctico y quieren reforzar maniobras, estacionamiento y situaciones de circulación antes de la evaluación.',
     targetAudience: [
       'Para quienes quieren realizar una simulación completa del examen práctico y ver en que situación está',
       'Para quienes necesitan mejorar alguna maniobra en particular',
