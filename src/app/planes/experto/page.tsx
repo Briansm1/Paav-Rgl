@@ -13,6 +13,7 @@ const detailedPlans = [
     cardPrice: '$133.999',
     savings: 'Ahorro de $47.000',
     sessions: "2 sesiones dinámicas (50' c/u)",
+    miniChecklist: ["Preparación final para tu examen práctico"],
     fullDesc: 'Diseñado para personas que ya tienen conocimientos o licencia y quieren ganar más seguridad en maniobras complejas, estacionamiento o circular en tráfico.',
     targetAudience: [
       'Para quienes quieren realizar una simulación completa del examen práctico y ver en que situación está',
@@ -59,7 +60,7 @@ export default function PlanExpertoPage() {
               Programa <span className="text-primary">simulacro de examen</span>
             </h1>
             <p className="text-sm md:text-lg font-bold text-slate-400 uppercase tracking-[0.3em] text-center">
-              Preparate para rendir con práctica enfocada y corrección de detalles
+              Preparate para rendir con práctica enfocada y con corrección de detalles
             </p>
           </div>
         </div>
@@ -102,10 +103,22 @@ export default function PlanExpertoPage() {
                     </div>
 
                     <div className="col-span-full pt-4 border-t border-white/10 mt-2 flex flex-col items-center gap-4 px-2">
-                      <p className="text-center font-bold text-slate-300 flex items-center justify-center gap-2 text-base md:text-lg">
-                        <Clock className="w-5 h-5 text-primary" />
-                        {plan.sessions}
-                      </p>
+                      <div className="flex flex-col items-center gap-2">
+                        <p className="text-center font-bold text-slate-300 flex items-center justify-center gap-2 text-base md:text-lg">
+                          <Clock className="w-5 h-5 text-primary" />
+                          {plan.sessions}
+                        </p>
+                        
+                        <div className="flex flex-wrap justify-center gap-x-3 gap-y-1 mt-1">
+                          {plan.miniChecklist.map((item, i) => (
+                            <div key={i} className="flex items-center gap-1.5 whitespace-nowrap">
+                              <Check className="w-2.5 h-2.5 text-green-500" />
+                              <span className="text-[9px] font-bold text-slate-400 uppercase tracking-tight">{item}</span>
+                            </div>
+                          ))}
+                        </div>
+                      </div>
+
                       <a href={plan.whatsappLink} target="_blank" rel="noopener noreferrer" className="w-full max-w-xs">
                         <Button className="w-full bg-primary hover:bg-primary/90 rounded-xl h-12 font-bold animate-heartbeat transition-all shadow-none border-none">
                           Elegir
