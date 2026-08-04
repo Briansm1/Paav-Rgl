@@ -113,9 +113,14 @@ export default function LibrosDigitalesPage() {
             <ArrowLeft className="w-4 h-4" />
             Volver al inicio
           </Link>
-          <h1 className="text-3xl md:text-5xl font-bold font-headline mb-0 text-white text-center">
-            Recursos <span className="text-primary">digitales</span> para aprender y mejorar tu conducción
-          </h1>
+          <div className="flex flex-col gap-2">
+            <h1 className="text-3xl md:text-5xl font-bold font-headline mb-0 text-white text-center">
+              Recursos <span className="text-primary">digitales</span> para aprender y mejorar tu conducción
+            </h1>
+            <p className="text-sm md:text-lg font-bold text-slate-400 uppercase tracking-[0.2em] text-center max-w-4xl mx-auto">
+              Material práctico para reforzar conocimientos, prepararte para el examen y desarrollar mejores hábitos al volante
+            </p>
+          </div>
         </div>
       </section>
 
