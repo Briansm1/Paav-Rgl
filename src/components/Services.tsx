@@ -42,7 +42,7 @@ const services = [
     imgId: 'service-theory'
   },
   {
-    title: 'Técnica profesional aplicable',
+    title: 'Técnica de conducción',
     description: 'Desarrollamos tus habilidades mediante una práctica estructurada para que logres el dominio total del vehículo y conviertas el manejo en algo natural y fluido.',
     icon: <SteeringWheel className="w-10 h-10 text-primary" />,
     imgId: 'tecnica'
@@ -126,7 +126,7 @@ export const Services = () => {
                 {[
                   { icon: <ShieldCheck className="w-6 h-6 text-primary" />, text: 'Aprendizaje en un entorno real: Practica en vehículos modernos, seguros y con el máximo confort.' },
                   { icon: <Award className="w-6 h-6 text-primary" />, text: 'Guía profesional y experta: Nuestro equipo certificado te acompaña paso a paso, brindándote la tranquilidad y técnica que necesitas para dominar el volante.' },
-                  { icon: <Clock className="w-6 h-6 text-primary" />, text: 'A tu propia medida: ¿Trabajas o estudias? No hay problema. Armamos un cronograma de clases que se adapte a tus tiempos.' }
+                  { icon: <ShieldCheck className="w-6 h-6 text-primary" />, text: 'A tu propia medida: ¿Trabajas o estudias? No hay problema. Armamos un cronograma de clases que se adapte a tus tiempos.' }
                 ].map((item, i) => (
                   <div key={i} className="flex flex-col sm:flex-row items-center lg:items-start gap-5">
                     <div className="shrink-0 mt-1 bg-primary/10 p-3 rounded-2xl shadow-inner">
