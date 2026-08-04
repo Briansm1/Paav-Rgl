@@ -1,3 +1,4 @@
+
 "use client";
 
 import React, { useState, useEffect } from 'react';
@@ -47,7 +48,7 @@ export const Hero = () => {
       <div className="w-full max-w-[1440px] mx-auto px-4 md:px-6 relative z-20 flex-1 flex flex-col justify-between h-full">
         <div className="max-w-4xl text-left flex flex-col items-start gap-4 md:gap-8 mt-1 md:mt-2">
           <div className="inline-flex items-center gap-2 bg-white/10 backdrop-blur-md border border-white/20 rounded-full px-4 py-1.5 animate-in fade-in slide-in-from-bottom-4 duration-700">
-            <span className="text-[10px] md:text-xs font-bold text-white uppercase tracking-widest">La elección N°1 de la región</span>
+            <span className="text-[10px] md:text-xs font-bold text-white uppercase tracking-widest">AUTOESCUELA EN RÍO GALLEGOS</span>
           </div>
           
           <div className="space-y-4 md:space-y-6">
