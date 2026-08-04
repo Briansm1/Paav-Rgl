@@ -79,7 +79,7 @@ export default function PlanExpertoPage() {
                       <p className="text-3xl md:text-5xl font-black text-green-500 text-center tracking-tighter">
                         {plan.transferPrice}
                       </p>
-                      <span className="text-[10px] md:text-xs font-bold bg-green-500/20 text-green-500 px-3 py-1 rounded-full text-center border border-green-500/30">
+                      <span className="text-[10px] md:text-xs font-bold bg-green-500/20 text-green-500 px-3 py-1 rounded-full text-center border border-green-500/30 uppercase tracking-tight">
                         {plan.savings}
                       </span>
                     </div>
@@ -91,8 +91,8 @@ export default function PlanExpertoPage() {
                       <p className="text-3xl md:text-5xl font-black text-primary text-center tracking-tighter">
                         {plan.cardPrice}
                       </p>
-                      <span className="mt-1 text-[10px] font-bold bg-primary/20 text-primary px-3 py-1 rounded-full text-center border border-primary/30">
-                        6 cuotas sin interés
+                      <span className="mt-1 text-[10px] font-bold bg-primary/20 text-primary px-3 py-1 rounded-full text-center border border-primary/30 uppercase tracking-tight">
+                        6 CUOTAS SIN INTERÉS
                       </span>
                     </div>
 

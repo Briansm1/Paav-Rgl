@@ -112,16 +112,16 @@ export default function PlanFundamentosPage() {
                       <div className="flex flex-col items-center">
                         <span className="text-[10px] font-bold text-slate-400 uppercase tracking-widest mb-1">TRANSFERENCIA O EFECTIVO</span>
                         <p className="text-4xl md:text-5xl font-black text-green-500 tracking-tighter">{option.transferPrice}</p>
-                        <span className="mt-2 text-[10px] font-bold bg-green-500/20 text-green-500 px-3 py-1 rounded-full border border-green-500/30">
-                          {option.savings}
+                        <span className="mt-2 text-[10px] font-bold bg-green-500/20 text-green-500 px-3 py-1 rounded-full border border-green-500/30 uppercase tracking-tight">
+                          {option.savings.toUpperCase()}
                         </span>
                       </div>
 
                       <div className="pt-4 border-t border-white/5 flex flex-col items-center">
                         <span className="text-[10px] font-bold text-slate-400 uppercase tracking-widest mb-1">TARJETA DE CRÉDITO</span>
                         <p className="text-4xl md:text-5xl font-black text-primary tracking-tighter">{option.cardPrice}</p>
-                        <span className="mt-1 text-[10px] font-bold bg-primary/20 text-primary px-3 py-1 rounded-full text-center border border-primary/30">
-                          6 cuotas sin interés
+                        <span className="mt-1 text-[10px] font-bold bg-primary/20 text-primary px-3 py-1 rounded-full text-center border border-primary/30 uppercase tracking-tight">
+                          6 CUOTAS SIN INTERÉS
                         </span>
                       </div>
 
@@ -131,7 +131,6 @@ export default function PlanFundamentosPage() {
                           <span className="text-sm leading-tight">{option.sessions}</span>
                         </div>
                         
-                        {/* Highlights Checklist */}
                         <div className="flex flex-wrap justify-center gap-x-3 gap-y-1 mt-1">
                           {[
                             "Para empezar",
