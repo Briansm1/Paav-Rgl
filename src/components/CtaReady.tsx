@@ -23,7 +23,7 @@ export const CtaReady = () => {
               Estás a un paso de convertirte en un/una as al volante
             </h3>
             <p className="text-muted-foreground text-base md:text-lg leading-relaxed max-w-2xl mx-auto">
-              Con nosotros vas a conocer las claves para dominar cualquier camino, bajo cualquier condición y así lograr pilotar las calles con seguridad real
+              ¡No hay excusas, nada ni nadie puede detenerte, estamos para acompañarte hasta el final y lograr el resultado que esperas!
             </p>
           </div>
           <div className="px-4">
