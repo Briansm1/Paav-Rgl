@@ -24,6 +24,10 @@ const faqs = [
     )
   },
   {
+    question: "¿Qué plan debería elegir?",
+    answer: "Depende de tu experiencia y objetivo. Contamos con opciones para personas que empiezan, alumnos que quieren mejorar su manejo y quienes buscan prepararse para el examen práctico."
+  },
+  {
     question: "¿Cuánto dura cada clase?",
     answer: "Nuestras sesiones de prácticas dinámicas duran 50 minutos. Es lo ideal para optimizar tu aprendizaje sin agotarte, permitiéndote fijar los conocimientos de manera efectiva en cada encuentro."
   },
