@@ -39,9 +39,9 @@ const digitalBooks = [
     description: 'Prepará tu mente para rendir con más confianza. Pensado para quienes quieren trabajar sus nervios, mejorar su seguridad y llegar al examen práctico con una mentalidad más preparada.',
     longDescription: '¿Estacionar es tu pesadilla? En este e-book desglosamos cada maniobra de estacionamiento (paralelo, a 45° y 90°) con puntos de referencia exactos y trucos de instructor que no te enseñan en otros lados. Ganá precisión milimétrica.',
     features: [
-      'Preparación mental y emocional antes del examen',
-      'Estrategias para controlar nervios y presión',
-      'Herramientas para afrontar la evaluación con mayor tranquilidad'
+      'Preparación mental y emocional antes del examen.',
+      'Estrategias para controlar nervios y presión.',
+      'Herramientas para afrontar la evaluación con mayor tranquilidad.'
     ],
     imageUrl: PlaceHolderImages.find(img => img.id === 'book-maniobras')?.imageUrl || '',
     whatsappLink: "https://mpago.li/2uCr7Wp"
@@ -55,10 +55,10 @@ const digitalBooks = [
     description: 'Conocé mejor tu vehículo. Aprendé los conceptos básicos del funcionamiento del auto y adquirí conocimientos útiles para cuidarlo y entenderlo mejor.',
     longDescription: 'En este manual práctico aprenderás a identificar los componentes vitales de tu auto. Desde cómo revisar el aceite y el refrigerante hasta el cambio correcto de un neumático. Es la guía indispensable para que nunca te quedes a pie.',
     features: [
-      'Fundamentos de mecánica básica y avanzada',
-      'Identificación de componentes del vehículo',
-      'Diagnóstico preciso de fallas',
-      'Consejos prácticos de mantenimiento'
+      'Fundamentos de mecánica básica y avanzada.',
+      'Identificación de componentes del vehículo.',
+      'Diagnóstico preciso de fallas.',
+      'Consejos prácticos de mantenimiento.'
     ],
     imageUrl: PlaceHolderImages.find(img => img.id === 'book-teoria')?.imageUrl || '',
     whatsappLink: "https://mpago.li/2uSG2jd"
@@ -73,9 +73,9 @@ const digitalBooks = [
     description: 'Reforzá tus conocimientos de conducción. Un recurso para estudiar normas, señales y conceptos importantes antes del examen teórico.',
     longDescription: 'Olvidate de memorizar leyes aburridas. Este manual te enseña el marco legal aplicado a situaciones cotidianas del tráfico. Es la herramienta definitiva para aprobar el examen teórico y conducir con conocimiento real de tus derechos y obligaciones.',
     features: [
-      'Material de estudio vial',
-      'Señales y normas de tránsito',
-      'Simulador con +85 preguntas'
+      'Material de estudio vial.',
+      'Señales y normas de tránsito.',
+      'Simulador con +85 preguntas.'
     ],
     imageUrl: PlaceHolderImages.find(img => img.id === 'book-experto')?.imageUrl || '',
     whatsappLink: "https://mpago.li/1ochaL6"
