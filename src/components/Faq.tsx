@@ -2,6 +2,7 @@
 "use client";
 
 import React from 'react';
+import Link from 'next/link';
 import {
   Accordion,
   AccordionContent,
@@ -10,6 +11,18 @@ import {
 } from "@/components/ui/accordion";
 
 const faqs = [
+  {
+    question: "¿Puedo aprender a conducir si nunca manejé antes?",
+    answer: (
+      <>
+        Sí. El programa{" "}
+        <Link href="/planes/fundamentos" className="text-primary hover:underline font-bold">
+          Fundamentos
+        </Link>{" "}
+        está pensado para personas que comienzan desde cero o tienen poca experiencia.
+      </>
+    )
+  },
   {
     question: "¿Cuánto dura cada clase?",
     answer: "Nuestras sesiones de prácticas dinámicas duran 50 minutos. Es lo ideal para optimizar tu aprendizaje sin agotarte, permitiéndote fijar los conocimientos de manera efectiva en cada encuentro."
