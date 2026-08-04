@@ -15,7 +15,7 @@ const faqs = [
     question: "¿Puedo aprender a conducir si nunca manejé antes?",
     answer: (
       <>
-        Sí. El programa{" "}
+        Claro que sí. El programa{" "}
         <Link href="/planes/fundamentos" className="text-primary hover:underline font-bold">
           Fundamentos
         </Link>{" "}
