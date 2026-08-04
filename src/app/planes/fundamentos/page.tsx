@@ -36,18 +36,18 @@ const programDetails = {
     'Tienen licencia, pero todavía no se sienten preparados para conducir solos.'
   ],
   outcomes: [
-    'Comprender el vehículo y dominarlo',
-    'Ejecutar maniobras con técnica correcta',
-    'Eliminar el miedo e inseguridad al volante',
-    'Llegar al examen con preparación estratégica',
-    'Construir confianza real para manejar solo'
+    'Familiarizarte con el vehículo y sus controles principales.',
+    'Realizar maniobras básicas con mayor seguridad y técnica.',
+    'Trabajar la confianza para conducir con más tranquilidad.',
+    'Llegar mejor preparado a tu examen práctico.',
+    'Contar con una base sólida para seguir desarrollando tu conducción.'
   ],
   features: [
-    'Vehículo disponible para tus clases prácticas',
-    'Acceso a nuestra comunidad privada de alumnos/as',
-    'Formación teórica aplicada a situaciones reales de conducción',
-    'Descuento en alquiler del vehículo para tu examen práctico',
-    'Orientación sobre requisitos y trámites para gestionar tu licencia'
+    'Vehículo disponible para tus clases prácticas.',
+    'Acceso a nuestra comunidad privada de alumnos/as.',
+    'Formación teórica aplicada a situaciones reales de conducción.',
+    'Descuento en alquiler del vehículo para tu examen práctico.',
+    'Orientación sobre requisitos y trámites para gestionar tu licencia.'
   ],
   bonuses: [
     'Como identificar los diferentes fluidos de un auto y como controlarlos',
@@ -204,6 +204,7 @@ export default function PlanFundamentosPage() {
                   <h3 className="text-lg font-bold mb-4 flex items-center justify-center gap-2 text-foreground text-center">
                     ¿Qué vas a lograr?
                   </h3>
+                  <p className="text-sm text-foreground/80 mb-4 font-medium text-center italic">Al finalizar el plan vas a:</p>
                   <div className="space-y-3">
                     {programDetails.outcomes.map((item, i) => (
                       <div key={i} className="flex items-start gap-3">
