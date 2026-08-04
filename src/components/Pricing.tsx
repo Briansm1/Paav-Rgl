@@ -66,14 +66,14 @@ export const Pricing = () => {
             TU INVERSIÓN
           </span>
           <h2 className="text-4xl md:text-6xl font-bold font-headline mb-6 tracking-tight text-foreground text-center">
-            Elegí el plan que se adapta a tu{" "}
+            Elegí el plan ideal para tu{" "}
             <span 
               className={cn(
                 "text-primary inline-block transition-all duration-700 min-w-[120px] md:min-w-[180px]",
                 isMounted ? fontStyles[styleIndex] : "italic"
               )}
             >
-              experiencia
+              nivel
             </span>
           </h2>
           <p className="text-lg md:text-xl text-muted-foreground leading-relaxed">
