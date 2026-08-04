@@ -31,9 +31,9 @@ const programDetails = {
     }
   ],
   targetAudience: [
-    'Para quienes no tengan experiencia y empiezan desde 0',
-    'Para quienes tienen conocimientos muy básicos y quieren aprender desde cero con un método eficaz, estructura sólida y seguridad vial',
-    'Para quienes tienen licencia pero no saben conducir'
+    'Nunca manejaron y quieren empezar desde cero.',
+    'Tienen poca experiencia y necesitan construir una base sólida.',
+    'Tienen licencia, pero todavía no se sienten preparados para conducir solos.'
   ],
   outcomes: [
     'Comprender el vehículo y dominarlo',
@@ -187,6 +187,7 @@ export default function PlanFundamentosPage() {
                   <h3 className="text-lg font-bold mb-4 flex items-center justify-center gap-2 text-foreground text-center">
                     ¿Este programa es para vos?
                   </h3>
+                  <p className="text-sm text-foreground/80 mb-4 font-medium text-center italic">Está pensado para personas que:</p>
                   <div className="space-y-3">
                     {programDetails.targetAudience.map((item, i) => (
                       <div key={i} className="flex items-start gap-3">
