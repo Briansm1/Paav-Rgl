@@ -30,7 +30,7 @@ const digitalBooks = [
     price: '$3.999',
     originalPrice: '$13.400',
     discount: '70% OFF',
-    description: 'Preparate mejor para tu examen teórico. Pensado para quienes quieren estudiar de forma organizada y reforzar sus conocimientos antes de rendir.',
+    description: 'Prepará tu mente para rendir con más confianza. Pensado para quienes quieren trabajar sus nervios, mejorar su seguridad y llegar al examen práctico con una mentalidad más preparada.',
     longDescription: '¿Estacionar es tu pesadilla? En este e-book desglosamos cada maniobra de estacionamiento (paralelo, a 45° y 90°) con puntos de referencia exactos y trucos de instructor que no te enseñan en otros lados. Ganá precisión milimétrica.',
     features: ['El Método (8 escenarios críticos)', 'Protocolo de recuperación', 'Checklist táctico de 90s'],
     imageUrl: PlaceHolderImages.find(img => img.id === 'book-maniobras')?.imageUrl || '',
