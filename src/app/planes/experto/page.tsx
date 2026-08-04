@@ -54,9 +54,14 @@ export default function PlanExpertoPage() {
             <ArrowLeft className="w-4 h-4" />
             Volver a los programas
           </Link>
-          <h1 className="text-3xl md:text-5xl font-bold font-headline mb-0 text-white">
-            Programa <span className="text-primary">simulacro de examen</span>
-          </h1>
+          <div className="flex flex-col gap-2">
+            <h1 className="text-3xl md:text-5xl font-bold font-headline mb-0 text-white">
+              Programa <span className="text-primary">simulacro de examen</span>
+            </h1>
+            <p className="text-sm md:text-lg font-bold text-slate-400 uppercase tracking-[0.3em] text-center">
+              Preparate para rendir con práctica enfocada y corrección de detalles
+            </p>
+          </div>
         </div>
       </section>
 
@@ -202,7 +207,7 @@ export default function PlanExpertoPage() {
           </p>
           <a href="https://wa.me/5492966265603?text=Hola%2C%20tengo%20algunas%20consultas%20sobre%20el%20Programa%20Simulacro%20de%20Examen" target="_blank" rel="noopener noreferrer">
             <Button variant="outline" size="lg" className="rounded-full border-primary text-primary hover:bg-primary/5 text-center shadow-none">
-              Conocer mi plan ideal
+              Consultar mi plan ideal
             </Button>
           </a>
         </div>
