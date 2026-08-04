@@ -116,7 +116,7 @@ export const Contact = () => {
             Nuestra Comunidad
           </span>
           <h2 className="text-3xl md:text-6xl font-bold font-headline mb-6 tracking-tight text-foreground">
-            Tu opinión es <span className="text-primary italic">nuestro motor</span>
+            Formá parte de nuestra <span className="text-primary italic">comunidad</span>
           </h2>
           <p className="text-base md:text-xl text-muted-foreground leading-relaxed">
             Compartinos tu experiencia y ayuda a otros a iniciar su camino hacia la libertad e independencia
