@@ -16,9 +16,9 @@ const detailedPlans = [
     miniChecklist: ["Preparación final para tu examen práctico"],
     fullDesc: 'Diseñado para personas que están próximas a rendir el examen práctico y quieren reforzar maniobras, estacionamiento y situaciones de circulación antes de la evaluación.',
     targetAudience: [
-      'Para quienes quieren realizar una simulación completa del examen práctico y ver en que situación está',
-      'Para quienes necesitan mejorar alguna maniobra en particular',
-      'Para quienes necesiten saber como trabajar la mentalidad a la hora de estar al volante'
+      'Están próximas a rendir el examen práctico y quieren conocer su nivel antes de presentarse.',
+      'Necesitan reforzar una maniobra específica o corregir detalles de su conducción.',
+      'Quieren trabajar la confianza y los nervios antes de enfrentarse al examen.'
     ],
     outcomes: [
       'Presición en maniobras clave',
@@ -153,6 +153,7 @@ export default function PlanExpertoPage() {
                   <h3 className="text-lg font-bold mb-4 flex items-center justify-center gap-2 text-foreground text-center">
                     ¿Este programa es para vos?
                   </h3>
+                  <p className="text-sm text-foreground/80 mb-4 font-medium text-center italic">Está pensado para personas que:</p>
                   <div className="space-y-3">
                     {plan.targetAudience.map((item, i) => (
                       <div key={i} className="flex items-start gap-3 group">
