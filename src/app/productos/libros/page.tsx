@@ -106,6 +106,7 @@ export default function LibrosDigitalesPage() {
     <main className="min-h-screen bg-background">
       <Header />
       
+      {/* Header Section */}
       <section className="pt-24 pb-6 md:pt-32 md:pb-10 bg-secondary/30 border-b border-white/5 flex items-center justify-center">
         <div className="container mx-auto px-4 text-center">
           <Link href="/#inicio" className="inline-flex items-center gap-2 text-primary font-bold mb-3 hover:underline">
@@ -113,7 +114,7 @@ export default function LibrosDigitalesPage() {
             Volver al inicio
           </Link>
           <h1 className="text-3xl md:text-5xl font-bold font-headline mb-0 text-white text-center">
-            Nuestros <span className="text-primary">programas digitales</span>
+            Recursos <span className="text-primary">digitales</span> para aprender y mejorar tu conducción
           </h1>
         </div>
       </section>
