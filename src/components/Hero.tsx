@@ -81,7 +81,7 @@ export const Hero = () => {
           
           <div className="flex flex-col items-center text-center min-w-[70px] md:min-w-[100px]">
             <p className="text-xl sm:text-2xl md:text-3xl font-bold text-gold leading-none">+5 años</p>
-            <p className="text-[9px] md:text-[10px] text-white/50 uppercase tracking-[0.2em] font-bold mt-2">FORMANDO ASES</p>
+            <p className="text-[9px] md:text-[10px] text-white/50 uppercase tracking-[0.2em] font-bold mt-2">formando conductores</p>
           </div>
           
           <div className="w-px h-10 md:h-14 bg-white/20"></div>
