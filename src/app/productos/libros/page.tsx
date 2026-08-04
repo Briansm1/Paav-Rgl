@@ -42,7 +42,7 @@ const digitalBooks = [
     price: '$8.999',
     originalPrice: '$29.999',
     discount: '70% OFF',
-    description: 'Una formación completa diseñada para transformar tu entendimiento automotriz. Adquirí el conocimiento técnico para dejar de depender de terceros y desenvolverte con total seguridad.',
+    description: 'Conocé mejor tu vehículo. Aprendé los conceptos básicos del funcionamiento del auto y adquirí conocimientos útiles para cuidarlo y entenderlo mejor.',
     longDescription: 'En este manual práctico aprenderás a identificar los componentes vitales de tu auto. Desde cómo revisar el aceite y el refrigerante hasta el cambio correcto de un neumático. Es la guía indispensable para que nunca te quedes a pie.',
     features: ['Dominio integral de sistemas', 'Diagnóstico preciso de fallas', 'Criterio de reparación autónomo'],
     imageUrl: PlaceHolderImages.find(img => img.id === 'book-teoria')?.imageUrl || '',
@@ -57,7 +57,7 @@ const digitalBooks = [
     discount: '70% OFF',
     description: 'Reforzá tus conocimientos de conducción. Un recurso para estudiar normas, señales y conceptos importantes antes del examen teórico.',
     longDescription: 'Olvidate de memorizar leyes aburridas. Este manual te enseña el marco legal aplicado a situaciones cotidianas del tráfico. Es la herramienta definitiva para aprobar el examen teórico y conducir con conocimiento real de tus derechos y obligaciones.',
-    features: ['Librería de estudio estructurada', 'Leyes y manuales actualizados', 'Simulacro con +85 preguntas'],
+    features: ['Material de estudio vial', 'Señales y normas de tránsito', 'Simulador con +85 preguntas'],
     imageUrl: PlaceHolderImages.find(img => img.id === 'book-experto')?.imageUrl || '',
     whatsappLink: "https://mpago.li/1ochaL6"
   }
