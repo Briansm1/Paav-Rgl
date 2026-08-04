@@ -90,7 +90,7 @@ export const Testimonials = () => {
       <div className="container mx-auto px-4 relative z-10">
         <div className="text-center mb-16 md:mb-20 px-4">
           <span className="inline-block px-4 py-1.5 mb-6 text-xs font-bold tracking-widest text-accent uppercase bg-accent/10 rounded-full">
-            Casos de éxito
+            EXPERIENCIAS REALES
           </span>
           <h3 className="text-4xl md:text-5xl font-bold font-headline text-foreground tracking-tight">
             Nuestros alumnos <span className="text-primary italic">hablan</span>
