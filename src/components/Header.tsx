@@ -274,7 +274,7 @@ export const Header = () => {
           <div className="w-full pt-4">
             <Link href="/#planes" onClick={() => setMobileMenuOpen(false)}>
               <Button className="w-full h-12 bg-primary hover:bg-primary/90 rounded-full font-bold text-lg flex items-center justify-center gap-2">
-                Conocer planes
+                Ver planes
                 <ChevronRight className="w-5 h-5" />
               </Button>
             </Link>
