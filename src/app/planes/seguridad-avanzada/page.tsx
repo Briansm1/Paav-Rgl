@@ -17,7 +17,8 @@ const programDetails = {
       cardPrice: '$255.999',
       savings: 'AHORRO DE $90.000',
       sessions: "4 sesiones dinámicas (50' c/u)",
-      whatsappLink: "https://wa.me/5492966265603?text=Hola%2C%20vengo%20desde%20la%20web%20y%20quiero%20contratar%20el%20*plan%20as*%20de%20*4%20sesiones*"
+      whatsappLink: "https://wa.me/5492966265603?text=Hola%2C%20vengo%20desde%20la%20web%20y%20quiero%20contratar%20el%20*plan%20as*%20de%20*4%20sesiones*",
+      miniChecklist: ["Refuerzo de habilidades"]
     },
     {
       name: 'Plan diamante',
@@ -25,7 +26,8 @@ const programDetails = {
       cardPrice: '$305.999',
       savings: 'AHORRO DE $108.000',
       sessions: "5 sesiones dinámicas (50' c/u)",
-      whatsappLink: "https://wa.me/5492966265603?text=Hola%2C%20vengo%20desde%20la%20web%20y%20quiero%20contratar%20el%20*plan%20diamante*%20de%20*5%20sesiones*"
+      whatsappLink: "https://wa.me/5492966265603?text=Hola%2C%20vengo%20desde%20la%20web%20y%20quiero%20contratar%20el%20*plan%20diamante*%20de%20*5%20sesiones*",
+      miniChecklist: ["Mayor práctica y dominio"]
     }
   ],
   targetAudience: [
@@ -125,9 +127,20 @@ export default function PlanSeguridadAvanzadaPage() {
                         </span>
                       </div>
 
-                      <div className="pt-4 border-t border-white/10 flex items-center justify-center gap-2 text-primary font-bold px-2 text-center">
-                        <Clock className="w-4 h-4 shrink-0" />
-                        <span className="text-sm leading-tight">{option.sessions}</span>
+                      <div className="pt-4 border-t border-white/10 flex flex-col items-center gap-2">
+                        <div className="flex items-center justify-center gap-2 text-primary font-bold px-2 text-center">
+                          <Clock className="w-4 h-4 shrink-0" />
+                          <span className="text-sm leading-tight">{option.sessions}</span>
+                        </div>
+                        
+                        <div className="flex flex-wrap justify-center gap-x-3 gap-y-1 mt-1">
+                          {option.miniChecklist.map((item, i) => (
+                            <div key={i} className="flex items-center gap-1.5 whitespace-nowrap">
+                              <Check className="w-2.5 h-2.5 text-green-500" />
+                              <span className="text-[9px] font-bold text-slate-400 uppercase tracking-tight">{item}</span>
+                            </div>
+                          ))}
+                        </div>
                       </div>
 
                       <div className="pt-2 flex justify-center px-2">
@@ -202,7 +215,7 @@ export default function PlanSeguridadAvanzadaPage() {
                   </div>
                 </div>
 
-                <div className="bg-accent/10 p-6 rounded-[2rem] border-2 border-accent/40 shadow-lg shadow-accent/5">
+                <div className="bg-accent/10 p-6 rounded-[2.5rem] border-2 border-accent/40 shadow-lg shadow-accent/5">
                   <h3 className="text-xl font-bold mb-2 flex items-center justify-center gap-3 text-accent text-center">
                     Bonos incluidos
                   </h3>
