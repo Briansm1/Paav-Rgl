@@ -54,7 +54,7 @@ const programDetails = {
     'Conocé cómo actuar ante situaciones comunes, como realizar un cambio de neumático.',
     'Simulador de examen teórico con +85 preguntas',
     'Accedé a descuentos en nuestros productos digitales',
-    'beneficios exclusivos con comercios asociados'
+    'Beneficios exclusivos con comercios asociados'
   ]
 };
 

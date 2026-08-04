@@ -15,7 +15,7 @@ const programDetails = {
       name: 'Plan as',
       transferPrice: '$165.999',
       cardPrice: '$255.999',
-      savings: 'Ahorro de $90.000',
+      savings: 'AHORRO DE $90.000',
       sessions: "4 sesiones dinámicas (50' c/u)",
       whatsappLink: "https://wa.me/5492966265603?text=Hola%2C%20vengo%20desde%20la%20web%20y%20quiero%20contratar%20el%20*plan%20as*%20de%20*4%20sesiones*"
     },
@@ -23,7 +23,7 @@ const programDetails = {
       name: 'Plan diamante',
       transferPrice: '$198.999',
       cardPrice: '$305.999',
-      savings: 'Ahorro de $108.000',
+      savings: 'AHORRO DE $108.000',
       sessions: "5 sesiones dinámicas (50' c/u)",
       whatsappLink: "https://wa.me/5492966265603?text=Hola%2C%20vengo%20desde%20la%20web%20y%20quiero%20contratar%20el%20*plan%20diamante*%20de%20*5%20sesiones*"
     }
@@ -52,7 +52,7 @@ const programDetails = {
     'Conocé cómo actuar ante situaciones comunes, como realizar un cambio de neumático.',
     'Simulador de examen teórico con +85 preguntas',
     'Accedé a descuentos en nuestros productos digitales',
-    'beneficios exclusivos con comercios asociados'
+    'Beneficios exclusivos con comercios asociados'
   ]
 };
 
