@@ -57,7 +57,7 @@ export const Hero = () => {
             </h1>
             
             <p className="text-lg sm:text-xl md:text-xl text-white/90 max-w-2xl animate-in fade-in slide-in-from-bottom-8 duration-1000 delay-200 leading-relaxed text-left font-medium">
-              Avanzá paso a paso con acompañamiento profesional y clases organizadas según tu disponibilidad
+              Tendrás acompañamiento profesional y sesiones organizadas según tu disponibilidad; clases teóricas y prácticas para principiantes, conductores que quieren mejorar y alumnos que se preparan para el examen práctico
             </p>
           </div>
           
