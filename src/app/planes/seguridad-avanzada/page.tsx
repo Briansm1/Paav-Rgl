@@ -167,7 +167,7 @@ export default function PlanSeguridadAvanzadaPage() {
 
                 <div className="bg-black/20 p-6 rounded-[2rem] border border-white/5">
                   <h3 className="text-lg font-bold mb-4 flex items-center justify-center gap-2 text-foreground text-center">
-                    ¿Para quién es?
+                    ¿Este programa es para vos?
                   </h3>
                   <div className="space-y-3">
                     {programDetails.targetAudience.map((item, i) => (
