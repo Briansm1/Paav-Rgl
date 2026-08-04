@@ -74,7 +74,7 @@ const benefits = [
   },
   {
     title: 'Compra segura',
-    desc: 'Contás con garantía y soporte durante el proceso.'
+    desc: 'Contás con garantía y soporte durante el proceso. Tenés 30 días para pedir la devolución. Nos escribís por WhatsApp y gestionamos el reintegro.'
   }
 ];
 
