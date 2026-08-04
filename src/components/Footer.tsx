@@ -78,7 +78,6 @@ export const Footer = () => {
             <h4 className="text-lg font-bold mb-6">Servicios</h4>
             <ul className="space-y-4">
               <li className="text-slate-400">Formación para conducir autos</li>
-              <li className="text-slate-400">Formación para conducir motos</li>
               <li className="text-slate-400">Programas digitales</li>
               <li className="text-slate-400">Asesoría personalizada para gestionar tu licencia de conducir</li>
               <li className="text-slate-400">Alquiler del auto para rendir el examen práctico</li>
