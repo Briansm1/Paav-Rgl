@@ -79,7 +79,7 @@ export const Footer = () => {
             <ul className="space-y-4">
               <li className="text-slate-400">Técnicas de conducción</li>
               <li className="text-slate-400">Conocimientos viales y del marco legal</li>
-              <li className="text-slate-400">Asesoría personalizada para gestionar la licencia de conducir</li>
+              <li className="text-slate-400">Preparación mental y emocional al volante</li>
               <li className="text-slate-400">Alquiler del auto para rendir el examen práctico</li>
             </ul>
           </div>
