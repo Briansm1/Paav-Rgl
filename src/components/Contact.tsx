@@ -6,7 +6,7 @@ import { Users } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 
 export const Contact = () => {
-  const whatsappUrl = "https://wa.me/5492966265603?text=Hola!%20Quiero%20unirme%20a%20la%20comunidad%20de%20Pilotos";
+  const whatsappUrl = "https://chat.whatsapp.com/BxfXXnPa3gH8KBsnK4lcYv";
 
   return (
     <section id="contacto" className="relative py-20 md:py-32 bg-background overflow-hidden">
