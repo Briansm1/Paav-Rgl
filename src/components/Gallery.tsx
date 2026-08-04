@@ -36,7 +36,7 @@ export const Gallery = () => {
               momentos piloto
             </span>
             <h2 className="text-3xl md:text-5xl font-bold font-headline mb-4 tracking-tight">
-              Galería de <span className="text-primary italic">clases</span>
+              Así vivimos cada <span className="text-primary italic">clase</span>
             </h2>
           </div>
 
