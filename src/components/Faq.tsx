@@ -51,7 +51,7 @@ export const Faq = () => {
             Dudas comunes
           </span>
           <h2 className="text-4xl md:text-6xl font-bold font-headline mb-6 tracking-tight text-foreground">
-            Preguntas <span className="text-primary italic">frecuentes</span>
+            Todo lo que necesitás saber antes de <span className="text-primary italic">empezar</span>
           </h2>
         </div>
 
