@@ -2,7 +2,7 @@
 "use client";
 
 import React from 'react';
-import { ArrowRight, Users } from 'lucide-react';
+import { Users } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 
 export const Contact = () => {
@@ -31,8 +31,8 @@ export const Contact = () => {
 
         <div className="max-w-xl mx-auto">
           <div className="bg-card p-8 md:p-12 rounded-[2.5rem] shadow-2xl border border-white/5 text-center flex flex-col items-center gap-8">
-            <div className="bg-primary/10 p-5 rounded-3xl">
-              <Users className="w-10 h-10 text-primary" />
+            <div className="bg-purple/10 p-5 rounded-3xl">
+              <Users className="w-10 h-10 text-purple" />
             </div>
             
             <div className="w-full space-y-6">
@@ -44,10 +44,9 @@ export const Contact = () => {
               >
                 <Button 
                   size="lg" 
-                  className="w-full h-16 md:h-20 bg-primary hover:bg-primary/90 text-white text-xl md:text-2xl font-black rounded-2xl shadow-lg transition-all active:scale-[0.98] flex items-center justify-center gap-3 animate-heartbeat uppercase tracking-tighter border-none"
+                  className="w-full h-16 md:h-20 bg-purple hover:bg-purple/90 text-purple-foreground text-xl md:text-2xl font-black rounded-2xl shadow-lg transition-all active:scale-[0.98] flex items-center justify-center animate-heartbeat uppercase tracking-tighter border-none"
                 >
                   UNIRME GRATIS
-                  <ArrowRight className="w-6 h-6" />
                 </Button>
               </a>
               <p className="text-[10px] text-muted-foreground uppercase tracking-[0.2em] font-bold">
