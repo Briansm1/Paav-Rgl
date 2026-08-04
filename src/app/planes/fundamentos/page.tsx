@@ -67,9 +67,14 @@ export default function PlanFundamentosPage() {
             <ArrowLeft className="w-4 h-4" />
             Volver a los programas
           </Link>
-          <h1 className="text-3xl md:text-5xl font-bold font-headline mb-0 text-white text-center">
-            Programa <span className="text-primary">fundamentos</span>
-          </h1>
+          <div className="flex flex-col gap-2">
+            <h1 className="text-3xl md:text-5xl font-bold font-headline mb-0 text-white text-center">
+              Programa <span className="text-primary">fundamentos</span>
+            </h1>
+            <p className="text-sm md:text-lg font-bold text-slate-400 uppercase tracking-[0.3em] text-center">
+              Tu primer paso
+            </p>
+          </div>
         </div>
       </section>
 
