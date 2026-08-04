@@ -77,7 +77,7 @@ export const Pricing = () => {
             </span>
           </h2>
           <p className="text-lg md:text-xl text-muted-foreground leading-relaxed">
-            Al elegirnos tenés transparencia al 100% y calidad asegurada
+            Encontrá la opción que mejor se ajusta a tu experiencia y al objetivo que querés alcanzar al volante.
           </p>
         </div>
 
