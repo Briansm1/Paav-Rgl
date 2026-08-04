@@ -118,7 +118,7 @@ export const Contact = () => {
             Formá parte de nuestra <span className="text-primary italic">comunidad</span>
           </h2>
           <p className="text-base md:text-xl text-muted-foreground leading-relaxed">
-            Recibí información útil sobre conducción, novedades de la autoescuela, consejos para mejorar tu manejo y beneficios exclusivos para alumnos.
+            Recibí información clave sobre conducción, novedades de la autoescuela, consejos para mejorar tu manejo y beneficios exclusivos para alumnos.
           </p>
         </div>
 
