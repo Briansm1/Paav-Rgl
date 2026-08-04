@@ -32,6 +32,18 @@ const faqs = [
     answer: "Por supuesto. Los horarios se organizan según la disponibilidad de cada alumno/a."
   },
   {
+    question: "¿Cómo puedo comenzar?",
+    answer: (
+      <>
+        Podés consultar los planes disponibles en{" "}
+        <Link href="/#planes" className="text-primary hover:underline font-bold">
+          planes
+        </Link>{" "}
+        y luego contactarnos para recibir información adicional sobre la opción más adecuada para vos.
+      </>
+    )
+  },
+  {
     question: "¿Cuánto dura cada clase?",
     answer: "Nuestras sesiones de prácticas dinámicas duran 50 minutos. Es lo ideal para optimizar tu aprendizaje sin agotarte, permitiéndote fijar los conocimientos de manera efectiva en cada encuentro."
   },
