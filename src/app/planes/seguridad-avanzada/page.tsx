@@ -240,7 +240,7 @@ export default function PlanSeguridadAvanzadaPage() {
         <div className="container mx-auto px-4 text-center">
           <h2 className="text-3xl font-bold mb-4 text-center">¿Todavía tenés dudas sobre qué plan elegir?</h2>
           <p className="text-muted-foreground mb-8 max-w-xl mx-auto text-center">
-            Nuestro equipo está listo para ayudarte a resolver cualquier duda que tengas.
+            Nuestro equipo puede ayudarte a encontrar la opción más adecuada según tu experiencia y que queres lograr.
           </p>
           <a href="https://wa.me/5492966265603?text=Hola%2C%20tengo%20algunas%20consultas%20sobre%20el%20Programa%20Puesta%20a%20Punto" target="_blank" rel="noopener noreferrer">
             <Button variant="outline" size="lg" className="rounded-full border-primary text-primary hover:bg-primary/5 text-center shadow-none">
