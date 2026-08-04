@@ -36,8 +36,8 @@ const detailedPlans = [
     bonuses: [
       'Aprendé a identificar y revisar los fluidos básicos de un auto.',
       'Conocé cómo actuar ante situaciones comunes, como realizar un cambio de neumático.',
-      'Simulador de examen teórico con +85 preguntas',
-      'Accedé a descuentos en nuestros productos digitales'
+      'Simulador de examen teórico con +85 preguntas.',
+      'Accedé a descuentos en nuestros productos digitales.'
     ],
     whatsappLink: "https://wa.me/5492966265603?text=Hola%2C%20vengo%20desde%20la%20web%20y%20quiero%20contratar%20el%20*plan%20simulacro%20de%20examen*%20de%20*2%20sesiones*"
   }
