@@ -258,7 +258,7 @@ export default function PlanFundamentosPage() {
 
       <section className="py-16 bg-background border-t border-white/5">
         <div className="container mx-auto px-4 text-center">
-          <h2 className="text-3xl font-bold mb-4 text-center">¿Todavía tenés consultas?</h2>
+          <h2 className="text-3xl font-bold mb-4 text-center">¿Todavía tenés dudas sobre qué plan elegir?</h2>
           <p className="text-muted-foreground mb-8 max-w-xl mx-auto text-center">
             Nuestro equipo está listo para ayudarte a resolver cualquier duda que tengas.
           </p>
