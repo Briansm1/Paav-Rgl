@@ -244,7 +244,7 @@ export default function PlanSeguridadAvanzadaPage() {
           </p>
           <a href="https://wa.me/5492966265603?text=Hola%2C%20tengo%20algunas%20consultas%20sobre%20el%20Programa%20Puesta%20a%20Punto" target="_blank" rel="noopener noreferrer">
             <Button variant="outline" size="lg" className="rounded-full border-primary text-primary hover:bg-primary/5 text-center shadow-none">
-              Hablar con alguien del equipo
+              Consultar mi plan ideal
             </Button>
           </a>
         </div>
