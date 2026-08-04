@@ -50,7 +50,7 @@ export const Contact = () => {
                 </Button>
               </a>
               <p className="text-[10px] text-muted-foreground uppercase tracking-[0.2em] font-bold">
-                ACCESO DIRECTO POR WHATSAPP
+                ACCESO A LA COMUNIDAD DE WHATSAPP - SIN COSTO
               </p>
             </div>
           </div>
