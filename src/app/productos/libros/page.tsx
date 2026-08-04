@@ -20,7 +20,13 @@ const digitalBooks = [
     discount: '70% OFF',
     description: 'Mejorá tu seguridad y criterio al volante. Para quienes quieren superar miedos, mejorar su toma de decisiones y conducir con más confianza.',
     longDescription: 'Este libro digital te llevará de la mano en el proceso de perder el miedo al volante. Descubrirás técnicas psicológicas para mantener la calma y una guía paso a paso sobre los fundamentos técnicos que todo conductor principiante debe dominar antes de salir a la calle.',
-    features: ['Guía práctica de conducción', 'Ejercicios aplicados', 'Material de entrenamiento'],
+    features: [
+      'Sistema paso a paso para desarrollar criterio y seguridad al volante.',
+      'Técnicas para reducir nervios y controlar la ansiedad antes de conducir.',
+      'Herramientas para tomar mejores decisiones en situaciones reales de tránsito.',
+      'Identificación de errores y trampas comunes que afectan a conductores principiantes.',
+      'Plan de entrenamiento estructurado para mejorar progresivamente.'
+    ],
     imageUrl: PlaceHolderImages.find(img => img.id === 'book-novato')?.imageUrl || '',
     whatsappLink: "https://mpago.li/1UBsjWk"
   },
