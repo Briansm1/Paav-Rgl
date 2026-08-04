@@ -142,15 +142,30 @@ export const Services = () => {
               {/* Columna 3: Incisos/Beneficios */}
               <div className="space-y-8">
                 {[
-                  { icon: <ShieldCheck className="w-6 h-6 text-primary" />, text: 'Aprendizaje en un entorno real: Practica en vehículos modernos, seguros y con el máximo confort.' },
-                  { icon: <Award className="w-6 h-6 text-primary" />, text: 'Guía profesional y experta: Equipo certificado que te acompaña paso a paso con tranquilidad.' },
-                  { icon: <Clock className="w-6 h-6 text-primary" />, text: 'A tu propia medida: Armamos un cronograma de clases que se adapte 100% a tus tiempos.' }
+                  { 
+                    icon: <ShieldCheck className="w-6 h-6 text-primary" />, 
+                    title: 'Práctica en situaciones reales:',
+                    text: 'Realizá tus clases en vehículos modernos y desarrollá experiencia en escenarios reales de conducción.' 
+                  },
+                  { 
+                    icon: <Award className="w-6 h-6 text-primary" />, 
+                    title: 'Acompañamiento paso a paso:',
+                    text: 'Nuestro equipo certificado te guía durante cada clase para resolver tus dudas, mejorar tu técnica y avanzar con mayor seguridad.' 
+                  },
+                  { 
+                    icon: <Clock className="w-6 h-6 text-primary" />, 
+                    title: 'Clases según tu disponibilidad:',
+                    text: 'Organizamos un cronograma que se adapte a tus horarios, tanto si trabajás como si estudiás.' 
+                  }
                 ].map((item, i) => (
                   <div key={i} className="flex gap-4 items-start">
                     <div className="shrink-0 bg-primary/10 p-2.5 rounded-xl shadow-inner">
                       {item.icon}
                     </div>
-                    <p className="text-foreground/80 font-medium text-sm md:text-base leading-relaxed">{item.text}</p>
+                    <div>
+                      <p className="text-foreground font-bold text-sm md:text-base leading-tight mb-1">{item.title}</p>
+                      <p className="text-foreground/80 font-medium text-sm md:text-base leading-relaxed">{item.text}</p>
+                    </div>
                   </div>
                 ))}
               </div>
