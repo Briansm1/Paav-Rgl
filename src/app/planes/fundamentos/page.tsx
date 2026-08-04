@@ -9,7 +9,7 @@ import { cn } from '@/lib/utils';
 
 const programDetails = {
   name: 'Programa fundamentos',
-  description: 'La formación definitiva para quienes empiezan desde cero absoluto. Te acompañamos desde el primer contacto con el auto hasta convertirte en un conductor seguro y autónomo.',
+  description: 'Diseñado para personas que comienzan desde cero o tienen poca experiencia al volante. Te acompañamos desde tus primeras prácticas hasta desarrollar las bases necesarias para conducir con mayor confianza.',
   options: [
     {
       name: 'Plan oro',
@@ -269,3 +269,4 @@ export default function PlanFundamentosPage() {
     </main>
   );
 }
+
