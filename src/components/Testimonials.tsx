@@ -92,8 +92,8 @@ export const Testimonials = () => {
           <span className="inline-block px-4 py-1.5 mb-6 text-xs font-bold tracking-widest text-accent uppercase bg-accent/10 rounded-full">
             EXPERIENCIAS REALES
           </span>
-          <h3 className="text-4xl md:text-5xl font-bold font-headline text-foreground tracking-tight">
-            Lo que vivieron nuestros <span className="text-primary italic">alumnos</span>
+          <h3 className="text-4xl md:text-5xl font-bold font-headline text-foreground tracking-tight text-center">
+            Personas que confiaron en nuestro <span className="text-primary italic">método</span>
           </h3>
         </div>
 
