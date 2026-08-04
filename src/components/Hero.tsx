@@ -1,3 +1,4 @@
+
 "use client";
 
 import React, { useState, useEffect } from 'react';
@@ -56,7 +57,7 @@ export const Hero = () => {
             </h1>
             
             <p className="text-lg sm:text-xl md:text-xl text-white/90 max-w-2xl animate-in fade-in slide-in-from-bottom-8 duration-1000 delay-200 leading-relaxed text-left font-medium">
-              Clases teóricas y prácticas para empezar desde cero, mejorar tu manejo o prepararte para el examen práctico. Con acompañamiento profesional y horarios adaptados a tu disponibilidad.
+              Clases teóricas y prácticas para empezar desde cero, mejorar tu manejo o prepararte para el examen práctico. Avanzá con acompañamiento profesional y horarios adaptados a tu disponibilidad.
             </p>
           </div>
           
