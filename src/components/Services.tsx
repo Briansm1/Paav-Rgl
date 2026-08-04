@@ -60,7 +60,7 @@ export const Services = () => {
       <div className="container mx-auto px-4 md:px-6 relative z-10">
         <div className="text-center max-w-4xl mx-auto mb-16 md:mb-24 px-4">
           <span className="inline-block px-4 py-1.5 mb-6 text-xs font-bold tracking-widest text-primary uppercase bg-primary/10 rounded-full">
-            ¿Qué te brindamos?
+            NUESTRA METODOLOGÍA
           </span>
           <h2 className="text-4xl md:text-6xl font-bold font-headline mb-6 tracking-tight text-foreground">
             Conducir es <span className="text-primary italic">más que solo manejar</span>
