@@ -48,7 +48,7 @@ export const Faq = () => {
       <div className="container mx-auto px-4 relative z-10">
         <div className="text-center max-w-3xl mx-auto mb-16">
           <span className="inline-block px-4 py-1.5 mb-6 text-xs font-bold tracking-widest text-primary uppercase bg-primary/10 rounded-full">
-            Dudas comunes
+            preguntas comunes
           </span>
           <h2 className="text-4xl md:text-6xl font-bold font-headline mb-6 tracking-tight text-foreground">
             Todo lo que necesitás saber antes de <span className="text-primary italic">poner primera</span>
