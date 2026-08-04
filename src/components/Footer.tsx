@@ -77,7 +77,7 @@ export const Footer = () => {
           <div className="flex flex-col items-center">
             <h4 className="text-lg font-bold mb-6">Servicios</h4>
             <ul className="space-y-4">
-              <li className="text-slate-400">Técnicas de conducción</li>
+              <li className="text-slate-400">Técnicas de conducción profesional</li>
               <li className="text-slate-400">Conocimientos viales y del marco legal</li>
               <li className="text-slate-400">Preparación mental y emocional al volante</li>
               <li className="text-slate-400">Alquiler del auto para rendir el examen práctico</li>
