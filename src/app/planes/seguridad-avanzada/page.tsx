@@ -43,11 +43,11 @@ const programDetails = {
     'Manejar con fluidez y confianza real.'
   ],
   features: [
-    'Vehículo para las clases prácticas.',
-    'Acceso a la comunidad privada.',
-    'Formación teórica aplicada a situaciones reales y sobre el marco legal.',
-    'Descuento en el uso del auto para el examen práctico - 10% off.',
-    'Asesoría sobre los requisitos y trámites para gestionar la licencia de conducir.'
+    'Vehículo disponible para tus clases prácticas.',
+    'Prácticas enfocadas en tus necesidades de conducción.',
+    'Repaso de aspectos teóricos aplicados a situaciones reales.',
+    'Descuento en alquiler del vehículo para el examen práctico.',
+    'Orientación sobre requisitos y trámites para gestionar tu licencia.'
   ],
   bonuses: [
     'Aprendé a identificar y revisar los fluidos básicos de un auto.',
