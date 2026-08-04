@@ -125,9 +125,25 @@ export default function PlanFundamentosPage() {
                         </span>
                       </div>
 
-                      <div className="pt-4 border-t border-white/10 flex items-center justify-center gap-2 text-primary font-bold px-2 text-center">
-                        <Clock className="w-4 h-4 shrink-0" />
-                        <span className="text-sm leading-tight">{option.sessions}</span>
+                      <div className="pt-4 border-t border-white/10 flex flex-col items-center gap-2">
+                        <div className="flex items-center justify-center gap-2 text-primary font-bold px-2 text-center">
+                          <Clock className="w-4 h-4 shrink-0" />
+                          <span className="text-sm leading-tight">{option.sessions}</span>
+                        </div>
+                        
+                        {/* Highlights Checklist */}
+                        <div className="flex flex-wrap justify-center gap-x-3 gap-y-1 mt-1">
+                          {[
+                            "Para empezar",
+                            "Primer contacto con el vehículo",
+                            "Bases de conducción"
+                          ].map((item, i) => (
+                            <div key={i} className="flex items-center gap-1.5 whitespace-nowrap">
+                              <Check className="w-2.5 h-2.5 text-green-500" />
+                              <span className="text-[9px] font-bold text-slate-400 uppercase tracking-tight">{item}</span>
+                            </div>
+                          ))}
+                        </div>
                       </div>
 
                       <div className="pt-2 flex justify-center px-2">
