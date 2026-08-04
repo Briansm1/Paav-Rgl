@@ -45,7 +45,7 @@ const faqs = [
   },
   {
     question: "¿Cuánto dura cada clase?",
-    answer: "Nuestras sesiones de prácticas dinámicas duran 50 minutos. Es lo ideal para optimizar tu aprendizaje sin agotarte, permitiéndote fijar los conocimientos de manera efectiva en cada encuentro."
+    answer: "Nuestras sesiones de prácticas dinámicas duran 50 minutos."
   },
   {
     question: "¿En qué días y horarios son las clases?",
