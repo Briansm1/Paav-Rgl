@@ -24,14 +24,19 @@ const testimonials = [
     role: 'Egresada'
   },
   {
+    name: 'Julia Geoia',
+    content: '¡Hola! La verdad es que la academia es súper recomendable, tanto por la calidad de la enseñanza como por la atención. Pude superar mis miedos y también los conos jajaja. El profesor es un genio: tiene muchísima paciencia, es muy respetuoso y explica de manera clara y práctica.',
+    role: 'Egresada'
+  },
+  {
     name: 'Candelaria Pereyra',
     content: '¡Holi! La verdad, súper conforme con las clases. Mi sorprendió haber aprendido un montón en poco tiempo y el hecho de que después practiqué con autos reales y no conos me dejó muy sorprendida. Brian es súper buena onda: explica re bien, es claro, paciente ante todo, súper seguro y divertido. ¡10/10!',
     headerImageId: 'achievement-candelaria',
     role: 'Egresada'
   },
   {
-    name: 'Julia Geoia',
-    content: '¡Hola! La verdad es que la academia es súper recomendable, tanto por la calidad de la enseñanza como por la atención. Pude superar mis miedos y también los conos jajaja. El profesor es un genio: tiene muchísima paciencia, es muy respetuoso y explica de manera clara y práctica.',
+    name: 'Maria Silisque',
+    content: '¡EXCELENTE DIEZ! Recomiendo, super responsable, respetuoso y con una paciencia de oro. Gracias!!',
     role: 'Egresada'
   },
   {
@@ -41,20 +46,15 @@ const testimonials = [
     role: 'Egresado'
   },
   {
+    name: 'Javier Peña',
+    content: '¡Hola! recomiendo, todo excelente y práctico, me sirvió un montón.',
+    role: 'Egresado'
+  },
+  {
     name: 'Alejandra Merlo',
     content: 'Simplemente quería agradecer de corazón haberme cruzado con la academia. Era algo que me costaba un montón y que procrastiné mucho tiempo; gracias a la confianza, el apoyo y sobre todo la paciencia, pude lograrlo. ¡No se dan una idea de lo importante que esto es para mí!',
     headerImageId: 'achievement-alejandra',
     role: 'Egresada'
-  },
-  {
-    name: 'Maria Silisque',
-    content: '¡EXCELENTE DIEZ! Recomiendo, super responsable, respetuoso y con una paciencia de oro. Gracias!!',
-    role: 'Egresada'
-  },
-  {
-    name: 'Javier Peña',
-    content: '¡Hola! recomiendo, todo excelente y práctico, me sirvió un montón.',
-    role: 'Egresado'
   },
   {
     name: 'Maura Rivero',
