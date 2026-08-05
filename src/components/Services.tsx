@@ -57,17 +57,19 @@ export const Services = () => {
                 return (
                   <CarouselItem key={index} className="pl-4 basis-[85%] sm:basis-1/2 lg:basis-1/3 lg:pl-12">
                     <Card className="h-full relative overflow-hidden border-none bg-secondary shadow-xl rounded-[2.5rem] flex flex-col">
-                      <div className="relative aspect-square overflow-hidden bg-black">
-                        <Image 
-                          src={img?.imageUrl || ''} 
-                          alt={service.title} 
-                          fill 
-                          className="object-cover" 
-                          sizes="(max-width: 768px) 85vw, (max-width: 1200px) 50vw, 33vw"
-                        />
-                        <div className="absolute inset-0 bg-gradient-to-t from-black/90 to-transparent"></div>
+                      <div className="px-6 pt-6">
+                        <div className="relative aspect-[4/3] overflow-hidden rounded-3xl bg-black">
+                          <Image 
+                            src={img?.imageUrl || ''} 
+                            alt={service.title} 
+                            fill 
+                            className="object-cover" 
+                            sizes="(max-width: 768px) 85vw, (max-width: 1200px) 50vw, 33vw"
+                          />
+                          <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"></div>
+                        </div>
                       </div>
-                      <CardHeader className="pt-8 px-6 text-center lg:text-left">
+                      <CardHeader className="pt-6 px-6 text-center lg:text-left">
                         <CardTitle className="text-h3 font-sans font-semibold tracking-tight">{service.title}</CardTitle>
                       </CardHeader>
                       <CardContent className="px-6 pb-8 text-center lg:text-left flex-grow">
