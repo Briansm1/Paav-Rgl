@@ -64,7 +64,7 @@ const testimonials = [
   },
   {
     name: 'Alejandra Merlo',
-    content: 'Simplemente quería agradecer de corazón haberme cruzado con la academia. Era algo que me costaba un montón y que postergué muchísimo tiempo. Gracias a la confianza, el apoyo y la educación, y sobre todo a la PACIENCIA y empatía recibidas, pude lograrlo. ¡No se dan una idea de lo importante que es esto para mí y fue gracias a la ayuda de ustedes! ¡Gracias, gracias!',
+    content: 'Simplemente quería agradecer de corazón haberme cruzado con la academia. Era algo que me costaba un montón y que postergué muchísimo tiempo. Gracias a la confianza, el apoyo y la educación, y sobre todo a la PACIENCIA y empatía recibida, pude lograrlo. ¡No se dan una idea de lo importante que es esto para mí y fue gracias a la ayuda de ustedes! ¡Gracias, gracias!',
     headerImageId: 'achievement-alejandra',
     gender: 'f'
   },
