@@ -49,7 +49,7 @@ export const Hero = () => {
   }, []);
 
   return (
-    <section id="inicio" className="relative h-[100svh] min-h-[100svh] flex flex-col items-center pt-28 pb-10 md:pt-36 md:pb-16 lg:pt-40 lg:pb-0 overflow-hidden bg-black">
+    <section id="inicio" className="relative h-[100svh] min-h-[100svh] flex flex-col items-center pt-16 pb-10 md:pt-28 md:pb-16 lg:pt-32 lg:pb-0 overflow-hidden bg-black">
       <div className="absolute inset-0 z-0">
         <Image 
           src={heroImg?.imageUrl || ''} 
@@ -62,15 +62,15 @@ export const Hero = () => {
       </div>
 
       <div className="w-full max-w-[1440px] mx-auto px-6 lg:px-10 relative z-20 flex-1 flex flex-col justify-between h-full">
-        <div className="w-full flex flex-col md:flex-row justify-between items-center md:items-start gap-8">
+        <div className="w-full flex flex-col md:flex-row justify-between items-center md:items-start gap-4 md:gap-8">
           
           {/* Badge (First on Mobile, Second on Desktop) */}
-          <div className="order-1 md:order-2 inline-block px-4 py-2 text-sm md:text-eyebrow font-bold text-white uppercase tracking-[0.15em] bg-white/10 backdrop-blur-md border border-white/20 rounded-full animate-in fade-in slide-in-from-bottom-4 duration-700 whitespace-nowrap mb-4 md:mb-0">
+          <div className="order-1 md:order-2 inline-block px-4 py-2 text-sm md:text-eyebrow font-bold text-white uppercase tracking-[0.15em] bg-white/10 backdrop-blur-md border border-white/20 rounded-full animate-in fade-in slide-in-from-bottom-4 duration-700 whitespace-nowrap mb-2 md:mb-0">
             Autoescuela en Río Gallegos
           </div>
 
           {/* Main content block (Second on Mobile, First on Desktop) */}
-          <div className="order-2 md:order-1 max-w-3xl flex flex-col items-center text-center md:items-start md:text-left gap-6 md:gap-8">
+          <div className="order-2 md:order-1 max-w-3xl flex flex-col items-center text-center md:items-start md:text-left gap-4 md:gap-8">
             <div className="space-y-4 md:space-y-6">
               <h1 className="text-4xl sm:text-5xl md:text-h1 font-display font-semibold text-white drop-shadow-lg animate-in fade-in slide-in-from-bottom-6 duration-1000 delay-100 leading-[1.1]">
                 <span className="text-primary">Aprendé a conducir</span> con clases adaptadas a tu nivel
@@ -95,7 +95,7 @@ export const Hero = () => {
           </div>
         </div>
         
-        <div className="flex flex-wrap items-center justify-center lg:justify-start gap-y-6 gap-x-8 sm:gap-x-10 md:gap-x-14 animate-in fade-in duration-1000 delay-500 pt-8 pb-60 md:pb-32 w-full">
+        <div className="flex flex-wrap items-center justify-center lg:justify-start gap-y-4 gap-x-8 sm:gap-x-10 md:gap-x-14 animate-in fade-in duration-1000 delay-500 pt-8 pb-40 md:pb-24 w-full">
           <div className="flex flex-col items-center text-center lg:items-start lg:text-left">
             <p className="text-2xl md:text-h3 font-display font-bold text-gold leading-none">Equipo</p>
             <p className="text-[11px] md:text-eyebrow text-white/60 uppercase font-bold mt-1.5 tracking-wider">Certificado por la ANSV</p>
