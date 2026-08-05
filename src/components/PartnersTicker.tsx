@@ -8,7 +8,7 @@ import { PlaceHolderImages } from '@/app/lib/placeholder-images';
 // Mapeo de IDs de socios a sus respectivos links de Instagram
 // Puedes editar estos enlaces aquí mismo
 const partnerLinks: Record<string, string> = {
-  'partner-1': 'https://www.instagram.com/', 
+  'partner-1': 'https://www.instagram.com/exvolusion/', 
   'partner-2': 'https://www.instagram.com/',
   'partner-3': 'https://www.instagram.com/',
 };
