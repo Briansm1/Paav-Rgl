@@ -1,3 +1,4 @@
+
 "use client";
 
 import React from 'react';
@@ -11,16 +12,8 @@ import {
 import AutoScroll from "embla-carousel-auto-scroll";
 
 export const Gallery = () => {
-  const galleryImages = PlaceHolderImages.filter(img => img.id.startsWith('gallery-'));
-  const galleryVideos = PlaceHolderImages.filter(img => img.id.startsWith('gallery-video-'));
-
-  const combinedMedia = [];
-  const maxLength = Math.max(galleryImages.length, galleryVideos.length);
-  
-  for (let i = 0; i < maxLength; i++) {
-    if (i < galleryImages.length) combinedMedia.push(galleryImages[i]);
-    if (i < galleryVideos.length) combinedMedia.push(galleryVideos[i]);
-  }
+  // Filtramos todas las imágenes y videos que empiecen con 'gallery-'
+  const galleryMedia = PlaceHolderImages.filter(img => img.id.startsWith('gallery-'));
 
   return (
     <section id="galeria" className="relative py-20 md:py-32 bg-background overflow-hidden">
@@ -59,7 +52,7 @@ export const Gallery = () => {
               className="w-full"
             >
               <CarouselContent className="-ml-4">
-                {combinedMedia.map((media, index) => {
+                {galleryMedia.map((media, index) => {
                   const isVideo = media.imageUrl.endsWith('.mp4');
                   
                   return (

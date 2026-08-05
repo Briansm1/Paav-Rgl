@@ -92,100 +92,70 @@ export const PlaceHolderImages: ImagePlaceholder[] = [
     "imageHint": "man driver"
   },
   {
-    "id": "gallery-1",
-    "description": "Clase práctica 1",
-    "imageUrl": "https://i.imgur.com/WiZAj6v.jpeg",
-    "imageHint": "driving lesson"
-  },
-  {
-    "id": "gallery-2",
-    "description": "Clase práctica 2",
-    "imageUrl": "https://i.imgur.com/jv82W8E.jpeg",
-    "imageHint": "driving lesson"
-  },
-  {
-    "id": "gallery-3",
-    "description": "Clase práctica 3",
-    "imageUrl": "https://i.imgur.com/4oubLLI.jpeg",
-    "imageHint": "driving lesson"
-  },
-  {
-    "id": "gallery-4",
-    "description": "Clase práctica 4",
-    "imageUrl": "https://i.imgur.com/N9vQoSk.jpeg",
-    "imageHint": "driving lesson"
-  },
-  {
-    "id": "gallery-6",
-    "description": "Clase práctica 6",
-    "imageUrl": "https://i.imgur.com/X7FLvYs.jpeg",
-    "imageHint": "driving lesson"
-  },
-  {
-    "id": "gallery-7",
-    "description": "Clase práctica 7",
-    "imageUrl": "https://i.imgur.com/hQkTyZf.jpeg",
-    "imageHint": "driving lesson"
-  },
-  {
-    "id": "gallery-8",
-    "description": "Clase práctica 8",
-    "imageUrl": "https://i.imgur.com/TevS1et.jpeg",
-    "imageHint": "driving lesson"
-  },
-  {
-    "id": "gallery-9",
-    "description": "Clase práctica 9",
-    "imageUrl": "https://i.imgur.com/DLyunXq.jpeg",
-    "imageHint": "driving lesson"
-  },
-  {
-    "id": "gallery-10",
-    "description": "Clase práctica 10",
-    "imageUrl": "https://i.imgur.com/EXhuvH9.jpeg",
-    "imageHint": "driving lesson"
-  },
-  {
-    "id": "gallery-11",
-    "description": "Clase práctica 11",
-    "imageUrl": "https://i.imgur.com/VdCZLNq.jpeg",
-    "imageHint": "driving lesson"
-  },
-  {
-    "id": "gallery-12",
-    "description": "Clase práctica 12",
-    "imageUrl": "https://i.imgur.com/QOq0iqD.jpeg",
-    "imageHint": "driving lesson"
-  },
-  {
     "id": "gallery-video-1",
-    "description": "Video clase 1",
-    "imageUrl": "https://i.imgur.com/ozG4fdz.mp4",
-    "imageHint": "driving video"
+    "description": "Clase práctica video 1",
+    "imageUrl": "https://i.imgur.com/m6hlfHk.mp4",
+    "imageHint": "driving lesson"
   },
   {
     "id": "gallery-video-2",
-    "description": "Video clase 2",
-    "imageUrl": "https://i.imgur.com/fGEdMYz.mp4",
-    "imageHint": "driving video"
+    "description": "Clase práctica video 2",
+    "imageUrl": "https://i.imgur.com/t9z6sly.mp4",
+    "imageHint": "driving lesson"
   },
   {
     "id": "gallery-video-3",
-    "description": "Video clase 3",
-    "imageUrl": "https://i.imgur.com/HI5NmnM.mp4",
-    "imageHint": "driving video"
+    "description": "Clase práctica video 3",
+    "imageUrl": "https://i.imgur.com/GzR7RFw.mp4",
+    "imageHint": "driving lesson"
   },
   {
     "id": "gallery-video-4",
-    "description": "Video clase 4",
-    "imageUrl": "https://i.imgur.com/IjdH41W.mp4",
-    "imageHint": "driving video"
+    "description": "Clase práctica video 4",
+    "imageUrl": "https://i.imgur.com/cdZOX3f.mp4",
+    "imageHint": "driving lesson"
   },
   {
     "id": "gallery-video-5",
-    "description": "Video clase 5",
-    "imageUrl": "https://i.imgur.com/AlrJ859.mp4",
-    "imageHint": "driving video"
+    "description": "Clase práctica video 5",
+    "imageUrl": "https://i.imgur.com/aScUwde.mp4",
+    "imageHint": "driving lesson"
+  },
+  {
+    "id": "gallery-video-6",
+    "description": "Clase práctica video 6",
+    "imageUrl": "https://i.imgur.com/wAFvVQ9.mp4",
+    "imageHint": "driving lesson"
+  },
+  {
+    "id": "gallery-video-7",
+    "description": "Clase práctica video 7",
+    "imageUrl": "https://i.imgur.com/rD80JI7.mp4",
+    "imageHint": "driving lesson"
+  },
+  {
+    "id": "gallery-video-8",
+    "description": "Clase práctica video 8",
+    "imageUrl": "https://i.imgur.com/5vTsEFu.mp4",
+    "imageHint": "driving lesson"
+  },
+  {
+    "id": "gallery-video-9",
+    "description": "Clase práctica video 9",
+    "imageUrl": "https://i.imgur.com/2W15fxy.mp4",
+    "imageHint": "driving lesson"
+  },
+  {
+    "id": "gallery-video-10",
+    "description": "Clase práctica video 10",
+    "imageUrl": "https://i.imgur.com/OJrJ4mi.mp4",
+    "imageHint": "driving lesson"
+  },
+  {
+    "id": "gallery-img-1",
+    "description": "Clase práctica foto 1",
+    "imageUrl": "https://i.imgur.com/56m66TL.jpeg",
+    "imageHint": "driving lesson"
   },
   {
     "id": "map-location",
