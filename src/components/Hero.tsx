@@ -116,7 +116,7 @@ export const Hero = () => {
           </div>
         </div>
       </div>
-      <div className="absolute bottom-6 left-1/2 -translate-x-1/2 z-30 animate-bounce opacity-50">
+      <div className="absolute bottom-6 left-8 md:left-1/2 md:-translate-x-1/2 z-30 animate-bounce opacity-50">
         <ChevronDown className="w-6 h-6 md:w-8 md:h-8 text-white" />
       </div>
     </section>
