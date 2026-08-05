@@ -9,8 +9,8 @@ export const Footer = () => {
   return (
     <footer className="bg-black text-white py-16">
       <div className="container mx-auto px-4 lg:px-6">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-12 mb-12 text-center lg:text-left">
-          <div className="flex flex-col items-center lg:items-start space-y-6">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-12 mb-12 text-center">
+          <div className="flex flex-col items-center space-y-6">
             <Link href="/#inicio" className="flex items-center gap-2 py-2">
               {logoImg ? (
                 <div className="relative h-12 w-48 md:h-16 md:w-64 lg:h-20 lg:w-80">
@@ -22,16 +22,16 @@ export const Footer = () => {
                 </span>
               )}
             </Link>
-            <p className="text-slate-400 max-w-[68ch] text-body mx-auto lg:mx-0">
+            <p className="text-slate-400 max-w-[68ch] text-body mx-auto">
               Formando conductores responsables, seguros y confiados desde el primer día. Tu libertad empieza con una educación vial sólida.
             </p>
-            <div className="flex gap-2 justify-center lg:justify-start">
+            <div className="flex gap-2 justify-center">
               <a href="https://www.instagram.com/pilotosaav.autoescuela/" target="_blank" rel="noopener noreferrer" className="text-slate-400 hover:text-primary p-3 min-w-[44px] min-h-[44px] flex items-center justify-center"><Instagram className="w-6 h-6" /></a>
               <a href="https://www.facebook.com/autoescuela.riogallegos.pilotosasesalvolante/" target="_blank" rel="noopener noreferrer" className="text-slate-400 hover:text-primary p-3 min-w-[44px] min-h-[44px] flex items-center justify-center"><Facebook className="w-6 h-6" /></a>
               <a href="https://www.youtube.com/@pilotosasesalvolante" target="_blank" rel="noopener noreferrer" className="text-slate-400 hover:text-primary p-3 min-w-[44px] min-h-[44px] flex items-center justify-center"><Youtube className="w-6 h-6" /></a>
             </div>
           </div>
-          <div className="flex flex-col items-center lg:items-start">
+          <div className="flex flex-col items-center">
             <h4 className="text-eyebrow font-bold text-white uppercase tracking-[0.12em] mb-6">Enlaces Rápidos</h4>
             <ul className="space-y-4">
               <li><Link href="/#inicio" className="text-[16px] text-slate-400 hover:text-white py-2 block">Inicio</Link></li>
@@ -40,7 +40,7 @@ export const Footer = () => {
               <li><Link href="/#planes" className="text-[16px] text-slate-400 hover:text-white py-2 block">Planes</Link></li>
             </ul>
           </div>
-          <div className="flex flex-col items-center lg:items-start">
+          <div className="flex flex-col items-center">
             <h4 className="text-eyebrow font-bold text-white uppercase tracking-[0.12em] mb-6">Servicios</h4>
             <ul className="space-y-4">
               <li className="text-[16px] text-slate-400 py-1">Técnicas de conducción profesional</li>
