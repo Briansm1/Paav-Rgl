@@ -1,4 +1,3 @@
-
 "use client";
 
 import React from 'react';
@@ -9,7 +8,7 @@ import { PlaceHolderImages } from '@/app/lib/placeholder-images';
 // Puedes editar estos enlaces aquí mismo
 const partnerLinks: Record<string, string> = {
   'partner-1': 'https://www.instagram.com/exvolusion/', 
-  'partner-2': 'https://www.instagram.com/',
+  'partner-2': 'https://www.instagram.com/rahab.lashes/',
   'partner-3': 'https://www.instagram.com/',
 };
 
