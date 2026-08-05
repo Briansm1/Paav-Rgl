@@ -22,7 +22,7 @@ const services = [
   },
   {
     title: 'Técnicas de conducción',
-    description: 'Practicá el control del vehículo y las maniobras necesarias para conducir de manera segura y fluida.',
+    description: 'Practicá el control del vehículo y las maniobras necesarias para conducir de manera profesional y fluida.',
     imgId: 'tecnica'
   }
 ];
