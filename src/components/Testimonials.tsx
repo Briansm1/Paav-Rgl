@@ -92,7 +92,7 @@ export const Testimonials = () => {
             </p>
           </div>
 
-          <div className="w-full relative px-4 md:px-14">
+          <div className="w-full relative px-10 md:px-14">
             <Carousel
               opts={{
                 align: "start",
@@ -173,15 +173,8 @@ export const Testimonials = () => {
                 })}
               </CarouselContent>
               
-              <div className="hidden md:block">
-                <CarouselPrevious className="absolute -left-12 top-1/2 h-14 w-14 rounded-full border-primary/20 bg-secondary text-white hover:bg-primary hover:text-white transition-all duration-300" />
-                <CarouselNext className="absolute -right-12 top-1/2 h-14 w-14 rounded-full border-primary/20 bg-secondary text-white hover:bg-primary hover:text-white transition-all duration-300" />
-              </div>
-              
-              <div className="flex md:hidden justify-center gap-8 mt-12">
-                <CarouselPrevious className="static translate-y-0 h-16 w-16 rounded-full border-primary/20 bg-secondary text-white active:scale-90" />
-                <CarouselNext className="static translate-y-0 h-16 w-16 rounded-full border-primary/20 bg-secondary text-white active:scale-90" />
-              </div>
+              <CarouselPrevious className="absolute -left-8 md:-left-12 top-1/2 -translate-y-1/2 h-10 w-10 md:h-14 md:w-14 rounded-full border-primary/20 bg-secondary text-white hover:bg-primary hover:text-white transition-all duration-300" />
+              <CarouselNext className="absolute -right-8 md:-right-12 top-1/2 -translate-y-1/2 h-10 w-10 md:h-14 md:w-14 rounded-full border-primary/20 bg-secondary text-white hover:bg-primary hover:text-white transition-all duration-300" />
             </Carousel>
           </div>
         </div>
