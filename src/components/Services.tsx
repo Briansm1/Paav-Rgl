@@ -9,42 +9,20 @@ import {
   CarouselItem,
 } from "@/components/ui/carousel";
 
-const SteeringWheel = ({ className }: { className?: string }) => (
-  <svg 
-    xmlns="http://www.w3.org/2000/svg" 
-    viewBox="0 0 24 24" 
-    fill="none" 
-    stroke="currentColor" 
-    strokeWidth="2" 
-    strokeLinecap="round" 
-    strokeLinejoin="round" 
-    className={className}
-  >
-    <circle cx="12" cy="12" r="10" />
-    <circle cx="12" cy="12" r="2.5" />
-    <path d="M12 14.5v5.5" />
-    <path d="M9.5 10.5l-5-2.5" />
-    <path d="M14.5 10.5l5-2.5" />
-  </svg>
-);
-
 const services = [
   {
     title: 'Mentalidad de piloto',
     description: 'Aprendé a gestionar los nervios, eliminar los miedos y ganar confianza para tomar decisiones con mayor seguridad al volante.',
-    icon: <Brain className="w-10 h-10 text-primary" />,
     imgId: 'mentalidad'
   },
   {
     title: 'Teoría y manejo preventivo',
     description: 'Conocé las normas de tránsito y aprendé a identificar riesgos antes de que se conviertan en un problema.',
-    icon: <BookOpen className="w-10 h-10 text-primary" />,
     imgId: 'service-theory'
   },
   {
     title: 'Técnica de conducción',
     description: 'Practicá el control del vehículo y las maniobras necesarias para conducir de manera segura y fluida.',
-    icon: <SteeringWheel className="w-10 h-10 text-primary" />,
     imgId: 'tecnica'
   }
 ];
@@ -94,9 +72,6 @@ export const Services = () => {
                           data-ai-hint={img?.imageHint}
                         />
                         <div className="absolute inset-0 bg-gradient-to-t from-black/90 to-transparent"></div>
-                        <div className="absolute bottom-6 left-6 text-white">
-                          {service.icon}
-                        </div>
                       </div>
                       <CardHeader className="pt-8 px-6 text-center lg:text-left">
                         <CardTitle className="text-xl md:text-2xl font-bold">{service.title}</CardTitle>
