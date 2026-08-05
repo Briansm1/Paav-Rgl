@@ -1,14 +1,37 @@
 "use client";
 
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import { cn } from '@/lib/utils';
 
 export const WhatsAppButton = () => {
+  const [isVisible, setIsVisible] = useState(false);
   const phoneNumber = "542966265603"; 
   const whatsappUrl = `https://wa.me/${phoneNumber}`;
 
+  useEffect(() => {
+    const toggleVisibility = () => {
+      // Mostrar el botón después de scrollear 300px (cuando se sale del Hero)
+      if (window.scrollY > 300) {
+        setIsVisible(true);
+      } else {
+        setIsVisible(false);
+      }
+    };
+
+    window.addEventListener('scroll', toggleVisibility);
+    // Ejecutar una vez al montar por si la página ya tiene scroll
+    toggleVisibility();
+
+    return () => window.removeEventListener('scroll', toggleVisibility);
+  }, []);
+
   return (
-    <div className="fixed bottom-4 right-4 md:bottom-8 md:right-8 z-[110]">
+    <div className={cn(
+      "fixed bottom-4 right-4 md:bottom-8 md:right-8 z-[110] transition-all duration-500",
+      isVisible 
+        ? "translate-y-0 opacity-100 pointer-events-auto" 
+        : "translate-y-10 opacity-0 pointer-events-none"
+    )}>
       <div className="relative group">
         <a
           href={whatsappUrl}
