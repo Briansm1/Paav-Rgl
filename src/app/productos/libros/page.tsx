@@ -152,20 +152,11 @@ export default function LibrosDigitalesPage() {
                     <span className="text-sm md:text-sm font-bold text-slate-400 uppercase tracking-widest">MATERIAL EXCLUSIVO</span>
                   </div>
 
-                  <h3 className="text-2xl min-[375px]:text-3xl md:text-3xl font-bold mb-4 text-white leading-tight flex items-center justify-center text-center min-h-[2.5em]">
+                  <h3 className="text-2xl min-[375px]:text-3xl md:text-3xl font-bold mb-4 text-white leading-tight flex items-center justify-center text-center">
                     {book.title}
                   </h3>
 
-                  <div className="flex items-center justify-center gap-4 md:gap-5 mb-8">
-                    <span className="text-red-500/60 text-lg md:text-xl font-bold line-through">
-                      {book.originalPrice}
-                    </span>
-                    <span className="text-green-500 text-3xl md:text-4xl font-black tracking-tight">
-                      {book.price}
-                    </span>
-                  </div>
-
-                  <div className="mb-4 flex-grow">
+                  <div className="mb-6 flex-grow">
                     <p className="text-muted-foreground text-base md:text-lg leading-relaxed">
                       {book.description}
                     </p>
@@ -183,6 +174,16 @@ export default function LibrosDigitalesPage() {
                   </div>
 
                   <div className="flex flex-col gap-4 w-full mt-auto items-center">
+                    {/* Price moved before the button */}
+                    <div className="flex items-center justify-center gap-4 md:gap-5 mb-4">
+                      <span className="text-red-500/60 text-lg md:text-xl font-bold line-through">
+                        {book.originalPrice}
+                      </span>
+                      <span className="text-green-500 text-3xl md:text-4xl font-black tracking-tight">
+                        {book.price}
+                      </span>
+                    </div>
+
                     <a href={book.whatsappLink} target="_blank" rel="noopener noreferrer" className="w-full">
                       <Button className="w-full h-14 rounded-xl bg-green-600 hover:bg-green-700 text-white text-lg font-bold transition-colors border-none shadow-none">
                         Comprar ahora
