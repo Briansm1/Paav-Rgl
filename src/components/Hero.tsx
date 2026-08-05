@@ -62,7 +62,7 @@ export const Hero = () => {
       </div>
 
       <div className="w-full max-w-[1440px] mx-auto px-6 lg:px-10 relative z-20 flex-1 flex flex-col justify-between h-full">
-        <div className="max-w-4xl flex flex-col items-center text-center md:items-start md:text-left gap-6 md:gap-8 mt-4 md:mt-0">
+        <div className="max-w-4xl flex flex-col items-center text-center md:items-start md:text-left gap-6 md:gap-8 mt-0 md:mt-0">
           <div className="inline-block px-4 py-1.5 text-[11px] md:text-eyebrow font-bold text-white uppercase tracking-[0.15em] bg-white/10 backdrop-blur-md border border-white/20 rounded-full animate-in fade-in slide-in-from-bottom-4 duration-700">
             Autoescuela en Río Gallegos
           </div>
@@ -90,7 +90,7 @@ export const Hero = () => {
           </div>
         </div>
         
-        <div className="flex flex-wrap items-center justify-center lg:justify-start gap-y-4 gap-x-6 sm:gap-x-10 md:gap-x-14 animate-in fade-in duration-1000 delay-500 pt-8 pb-32 md:pb-24 w-full border-t border-white/5 bg-black/20 backdrop-blur-sm lg:bg-transparent lg:border-none lg:backdrop-blur-none">
+        <div className="flex flex-wrap items-center justify-center lg:justify-start gap-y-4 gap-x-6 sm:gap-x-10 md:gap-x-14 animate-in fade-in duration-1000 delay-500 pt-8 pb-48 md:pb-24 w-full border-t border-white/5 bg-black/20 backdrop-blur-sm lg:bg-transparent lg:border-none lg:backdrop-blur-none">
           <div className="flex flex-col items-center text-center lg:items-start lg:text-left">
             <p className="text-xl md:text-h3 font-display font-bold text-gold leading-none">Equipo</p>
             <p className="text-[9px] md:text-eyebrow text-white/60 uppercase font-bold mt-1.5 tracking-wider">Certificado por la ANSV</p>
