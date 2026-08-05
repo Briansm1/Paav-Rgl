@@ -62,7 +62,7 @@ export default function PlanExpertoPage() {
               Programa <span className="text-primary">simulacro de examen</span>
             </h1>
             <p className="text-lg md:text-2xl font-bold text-slate-400 uppercase tracking-[0.3em] text-center">
-              Preparate para rendir con práctica enfocada
+              EL ÚLTIMO PASO
             </p>
           </div>
         </div>
@@ -206,7 +206,7 @@ export default function PlanExpertoPage() {
                 </div>
 
                 <div className="pt-10 flex justify-center px-4">
-                  <Link href="#precios" className="w-full max-w-md">
+                  <Link href="#precios" className="w-full max-md:max-w-none">
                     <Button className="w-full h-16 md:h-16 bg-primary hover:bg-primary/90 rounded-xl text-xl font-bold animate-heartbeat transition-all shadow-none border-none">
                       Elegir un plan
                     </Button>
