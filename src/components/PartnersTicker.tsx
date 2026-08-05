@@ -14,17 +14,17 @@ export const PartnersTicker = () => {
     <section className="relative py-20 md:py-32 bg-black overflow-hidden border-t border-white/5">
       <div className="container mx-auto px-4 mb-12 relative z-20 text-center">
         <span className="kicker text-slate-500 uppercase tracking-[0.2em] font-bold text-xs">
-          SOCIOS ESTRATÉGICOS
+          SOCIOS
         </span>
       </div>
 
-      <div className="relative z-20 w-full overflow-hidden">
-        {/* Contenedor con la animación de scroll infinito */}
+      <div className="relative z-20 w-full overflow-hidden pointer-events-none">
+        {/* Contenedor con la animación de scroll infinito - No interactivo */}
         <div className="flex animate-scroll w-max gap-16 md:gap-32 items-center py-8">
           {duplicatedPartners.map((partner, index) => (
             <div 
               key={`${partner.id}-${index}`} 
-              className="grayscale transition-all duration-500 opacity-60 hover:opacity-100 shrink-0"
+              className="grayscale transition-all duration-500 opacity-60 shrink-0"
             >
               <div className="relative h-28 w-48 md:h-44 md:w-72 lg:h-64 lg:w-[480px]">
                 <Image 
