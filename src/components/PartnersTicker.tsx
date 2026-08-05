@@ -1,3 +1,4 @@
+
 "use client";
 
 import React from 'react';
@@ -6,23 +7,42 @@ import { PlaceHolderImages } from '@/app/lib/placeholder-images';
 
 export const PartnersTicker = () => {
   const partners = PlaceHolderImages.filter(img => img.id.startsWith('partner-'));
-  const duplicatedPartners = [...partners, ...partners];
+  // Duplicamos varias veces para asegurar un flujo continuo sin saltos visuales
+  const duplicatedPartners = [...partners, ...partners, ...partners, ...partners];
+
   return (
-    <section className="relative py-20 md:py-32 bg-black overflow-hidden">
+    <section className="relative py-20 md:py-32 bg-black overflow-hidden border-t border-white/5">
       <div className="container mx-auto px-4 mb-12 relative z-20 text-center">
-        <h4 className="kicker text-slate-500 uppercase">SOCIOS</h4>
+        <span className="kicker text-slate-500 uppercase tracking-[0.2em] font-bold text-xs">
+          SOCIOS ESTRATÉGICOS
+        </span>
       </div>
-      <div className="relative z-20 w-full overflow-hidden px-4">
-        <div className="flex flex-wrap justify-center items-center gap-8 md:gap-16 lg:gap-32 lg:w-fit lg:animate-scroll lg:flex-nowrap">
+
+      <div className="relative z-20 w-full overflow-hidden">
+        {/* Contenedor con la animación de scroll infinito */}
+        <div className="flex animate-scroll w-max gap-16 md:gap-32 items-center py-8">
           {duplicatedPartners.map((partner, index) => (
-            <div key={`${partner.id}-${index}`} className="grayscale hover:grayscale-0 transition-all duration-500 opacity-60 hover:opacity-100 shrink-0">
-              <div className="relative h-16 w-28 md:h-24 md:w-36 lg:h-36 lg:w-56">
-                <Image src={partner.imageUrl} alt={partner.description} fill className="object-contain" />
+            <div 
+              key={`${partner.id}-${index}`} 
+              className="grayscale transition-all duration-500 opacity-60 hover:opacity-100 shrink-0"
+            >
+              <div className="relative h-28 w-48 md:h-44 md:w-72 lg:h-64 lg:w-[480px]">
+                <Image 
+                  src={partner.imageUrl} 
+                  alt={partner.description} 
+                  fill 
+                  className="object-contain" 
+                  priority={index < 4}
+                />
               </div>
             </div>
           ))}
         </div>
       </div>
+      
+      {/* Overlay para suavizar los bordes del carrusel */}
+      <div className="absolute inset-y-0 left-0 w-20 md:w-40 bg-gradient-to-r from-black to-transparent z-30 pointer-events-none"></div>
+      <div className="absolute inset-y-0 right-0 w-20 md:w-40 bg-gradient-to-l from-black to-transparent z-30 pointer-events-none"></div>
     </section>
   );
 };
