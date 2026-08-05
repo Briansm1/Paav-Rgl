@@ -62,22 +62,22 @@ export const Hero = () => {
       </div>
 
       <div className="w-full max-w-[1440px] mx-auto px-6 lg:px-10 relative z-20 flex-1 flex flex-col justify-between h-full">
-        <div className="w-full flex flex-col-reverse md:flex-row justify-between items-center md:items-start gap-8">
+        <div className="w-full flex flex-col md:flex-row justify-between items-center md:items-start gap-8">
           {/* Main content block */}
           <div className="max-w-3xl flex flex-col items-center text-center md:items-start md:text-left gap-6 md:gap-8">
             <div className="space-y-4 md:space-y-6">
-              <h1 className="text-3xl sm:text-4xl md:text-h1 font-display font-semibold text-white drop-shadow-lg animate-in fade-in slide-in-from-bottom-6 duration-1000 delay-100 leading-[1.1]">
+              <h1 className="text-4xl sm:text-5xl md:text-h1 font-display font-semibold text-white drop-shadow-lg animate-in fade-in slide-in-from-bottom-6 duration-1000 delay-100 leading-[1.1]">
                 <span className="text-primary">Aprendé a conducir</span> con clases adaptadas a tu nivel
               </h1>
               
-              <p className="text-base md:text-body-lg text-white/90 max-w-[60ch] animate-in fade-in slide-in-from-bottom-8 duration-1000 delay-200 font-medium">
+              <p className="text-lg md:text-body-lg text-white/90 max-w-[60ch] animate-in fade-in slide-in-from-bottom-8 duration-1000 delay-200 font-medium">
                 Clases teóricas y prácticas para empezar desde cero, mejorar tu manejo o prepararte para el examen práctico. Avanzá con acompañamiento profesional y horarios adaptados a tu disponibilidad.
               </p>
             </div>
             
             <div className="flex flex-col sm:flex-row gap-4 animate-in fade-in slide-in-from-bottom-10 duration-1000 delay-300 w-full sm:w-auto">
               <Link href="#planes" className="w-full sm:w-auto">
-                <Button size="lg" className="h-14 md:h-16 px-10 md:px-12 text-lg bg-primary hover:bg-primary/90 rounded-full w-full font-bold transition-all active:scale-95 shadow-xl shadow-primary/20">
+                <Button size="lg" className="h-16 md:h-16 px-10 md:px-12 text-xl md:text-lg bg-primary hover:bg-primary/90 rounded-full w-full font-bold transition-all active:scale-95 shadow-xl shadow-primary/20">
                   <span className="inline-flex items-center min-w-[6rem] justify-center">
                     {typedText}
                     <span className="ml-1 w-[2px] h-5 bg-white animate-pulse" />
@@ -89,29 +89,29 @@ export const Hero = () => {
           </div>
 
           {/* Badge at the opposite side */}
-          <div className="inline-block px-4 py-1.5 text-[11px] md:text-eyebrow font-bold text-white uppercase tracking-[0.15em] bg-white/10 backdrop-blur-md border border-white/20 rounded-full animate-in fade-in slide-in-from-bottom-4 duration-700 whitespace-nowrap">
+          <div className="inline-block px-4 py-2 text-xs md:text-eyebrow font-bold text-white uppercase tracking-[0.15em] bg-white/10 backdrop-blur-md border border-white/20 rounded-full animate-in fade-in slide-in-from-bottom-4 duration-700 whitespace-nowrap">
             Autoescuela en Río Gallegos
           </div>
         </div>
         
-        <div className="flex flex-wrap items-center justify-center lg:justify-start gap-y-4 gap-x-6 sm:gap-x-10 md:gap-x-14 animate-in fade-in duration-1000 delay-500 pt-8 pb-48 md:pb-24 w-full">
+        <div className="flex flex-wrap items-center justify-center lg:justify-start gap-y-6 gap-x-8 sm:gap-x-10 md:gap-x-14 animate-in fade-in duration-1000 delay-500 pt-8 pb-48 md:pb-24 w-full">
           <div className="flex flex-col items-center text-center lg:items-start lg:text-left">
-            <p className="text-xl md:text-h3 font-display font-bold text-gold leading-none">Equipo</p>
-            <p className="text-[9px] md:text-eyebrow text-white/60 uppercase font-bold mt-1.5 tracking-wider">Certificado por la ANSV</p>
+            <p className="text-2xl md:text-h3 font-display font-bold text-gold leading-none">Equipo</p>
+            <p className="text-[11px] md:text-eyebrow text-white/60 uppercase font-bold mt-1.5 tracking-wider">Certificado por la ANSV</p>
           </div>
-          <div className="hidden sm:block w-px h-8 md:h-12 bg-white/20"></div>
+          
           <div className="flex flex-col items-center text-center lg:items-start lg:text-left">
-            <p className="text-xl md:text-h3 font-display font-bold text-gold leading-none">+5 años</p>
-            <p className="text-[9px] md:text-eyebrow text-white/60 uppercase font-bold mt-1.5 tracking-wider">formando conductores</p>
+            <p className="text-2xl md:text-h3 font-display font-bold text-gold leading-none">+5 años</p>
+            <p className="text-[11px] md:text-eyebrow text-white/60 uppercase font-bold mt-1.5 tracking-wider">formando conductores</p>
           </div>
-          <div className="hidden sm:block w-px h-8 md:h-12 bg-white/20"></div>
+          
           <div className="flex flex-col items-center text-center lg:items-start lg:text-left">
             <div className="flex gap-0.5 justify-center lg:justify-start py-1">
               {[...Array(5)].map((_, i) => (
-                <Star key={i} strokeWidth={0} className={cn("w-3.5 h-3.5 md:w-5 md:h-5 transition-all duration-300", i < starCount ? "text-yellow-400 fill-yellow-400 scale-110" : "text-white/10 fill-white/10")} />
+                <Star key={i} strokeWidth={0} className={cn("w-4 h-4 md:w-5 md:h-5 transition-all duration-300", i < starCount ? "text-yellow-400 fill-yellow-400 scale-110" : "text-white/10 fill-white/10")} />
               ))}
             </div>
-            <p className="text-[9px] md:text-eyebrow text-white/60 uppercase font-bold mt-1 tracking-wider">Recomendados</p>
+            <p className="text-[11px] md:text-eyebrow text-white/60 uppercase font-bold mt-1 tracking-wider">Recomendados</p>
           </div>
         </div>
       </div>
