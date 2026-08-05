@@ -24,12 +24,6 @@ const testimonials = [
     role: 'Egresada'
   },
   {
-    name: 'Damaris Peñaloza',
-    content: '',
-    headerImageId: 'achievement-damaris',
-    role: 'Egresada'
-  },
-  {
     name: 'Julia Geoia',
     content: '¡Hola! La verdad es que la academia es súper recomendable, tanto por la calidad de la enseñanza como por la atención. Pude superar mis miedos y también los conos jajaja. El profesor es un genio: tiene muchísima paciencia, es muy respetuoso y explica de manera clara y práctica.',
     role: 'Egresada'
@@ -134,11 +128,7 @@ export const Testimonials = () => {
                             fill 
                             priority={index < 3}
                             sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
-                            className={cn(
-                              "transition-transform duration-500 group-hover:scale-105",
-                              hasContent ? "object-cover" : "object-cover"
-                            )}
-                            style={!hasContent ? { objectPosition: 'center 90%' } : undefined}
+                            className="transition-transform duration-500 group-hover:scale-105 object-cover"
                             data-ai-hint={headerImg.imageHint}
                           />
                           {!hasContent && (
