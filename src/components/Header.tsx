@@ -19,6 +19,7 @@ export const Header = () => {
   const [isScrolled, setIsScrolled] = useState(false);
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const [mobileProductsOpen, setMobileProductsOpen] = useState(false);
+  const [mobileSocialsOpen, setMobileSocialsOpen] = useState(false);
   const [activeSection, setActiveSection] = useState('#inicio');
 
   const logoImg = PlaceHolderImages.find(img => img.id === 'academy-logo');
@@ -40,6 +41,15 @@ export const Header = () => {
     window.addEventListener('scroll', handleScroll);
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
+
+  // Cerrar menú al cambiar de sección
+  useEffect(() => {
+    if (mobileMenuOpen) {
+      document.body.style.overflow = 'hidden';
+    } else {
+      document.body.style.overflow = 'unset';
+    }
+  }, [mobileMenuOpen]);
 
   const navLinks = [
     { name: 'Inicio', href: '/#inicio' },
@@ -88,13 +98,13 @@ export const Header = () => {
       "fixed top-0 left-0 right-0 z-50 transition-all duration-300 bg-black border-b border-white/5",
       isScrolled || mobileMenuOpen ? "py-2 shadow-lg" : "py-4"
     )}>
-      <div className="w-full max-w-[1440px] mx-auto px-4 md:px-6 flex items-center justify-between">
-        <Link href="/#inicio" className="flex items-center group relative z-50 -ml-1 md:-ml-2" onClick={() => {
+      <div className="w-full max-w-[1440px] mx-auto px-4 lg:px-6 flex items-center justify-between">
+        <Link href="/#inicio" className="flex items-center group relative z-50 -ml-1 lg:-ml-2" onClick={() => {
           setActiveSection('/#inicio');
           setMobileMenuOpen(false);
         }}>
           {logoImg ? (
-            <div className="relative h-12 w-48 md:h-14 md:w-60 transition-all duration-300">
+            <div className="relative h-10 w-40 md:h-12 md:w-48 lg:h-14 lg:w-60 transition-all duration-300">
               <Image src={logoImg.imageUrl} alt={logoImg.description} fill className="object-contain" priority />
             </div>
           ) : (
@@ -104,7 +114,7 @@ export const Header = () => {
           )}
         </Link>
 
-        <nav className="hidden md:flex items-center gap-6 lg:gap-8">
+        <nav className="hidden lg:flex items-center gap-6 lg:gap-8">
           {navLinks.slice(0, 4).map(renderNavLink)}
           <DropdownMenu>
             <DropdownMenuTrigger className="flex items-center gap-1 text-[16px] font-medium text-slate-300 hover:text-white outline-none transition-colors">
@@ -146,32 +156,34 @@ export const Header = () => {
           </DropdownMenu>
         </nav>
 
-        <button className="md:hidden relative z-50 p-2 text-white" onClick={() => setMobileMenuOpen(!mobileMenuOpen)} aria-label="Toggle menu">
-          {mobileMenuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
+        <button className="lg:hidden relative z-50 p-3 min-w-[44px] min-h-[44px] text-white flex items-center justify-center" onClick={() => setMobileMenuOpen(!mobileMenuOpen)} aria-label="Toggle menu">
+          {mobileMenuOpen ? <X className="w-7 h-7" /> : <Menu className="w-7 h-7" />}
         </button>
       </div>
 
       <div className={cn(
-        "fixed inset-0 bg-black z-40 flex flex-col items-center justify-center transition-all duration-500 md:hidden overflow-y-auto pt-16",
+        "fixed inset-0 bg-black z-40 flex flex-col items-center justify-center transition-all duration-500 lg:hidden overflow-y-auto pt-16",
         mobileMenuOpen ? "opacity-100 visible" : "opacity-0 invisible pointer-events-none"
       )}>
-        <nav className="flex flex-col items-center gap-4 p-6 w-full max-sm text-center">
+        <nav className="flex flex-col items-center gap-4 p-6 w-full max-w-sm text-center">
           {navLinks.slice(0, 4).map((link) => (
-            <Link key={link.name} href={link.href} className={cn("text-2xl font-semibold tracking-tight py-2", activeSection === link.href ? "text-primary" : "text-white")} onClick={() => {
+            <Link key={link.name} href={link.href} className={cn("text-2xl font-semibold tracking-tight py-3 min-h-[44px] w-full block", activeSection === link.href ? "text-primary" : "text-white")} onClick={() => {
               setActiveSection(link.href);
               setMobileMenuOpen(false);
             }}>
               {link.name}
             </Link>
           ))}
-          <div className="w-full flex flex-col items-center py-2">
-            <button onClick={() => setMobileProductsOpen(!mobileProductsOpen)} className="flex items-center gap-2 text-2xl font-semibold text-white py-2">
+          
+          {/* Productos en Móvil */}
+          <div className="w-full flex flex-col items-center">
+            <button onClick={() => setMobileProductsOpen(!mobileProductsOpen)} className="flex items-center justify-center gap-2 text-2xl font-semibold text-white py-3 min-h-[44px] w-full">
               Productos <ChevronDown className={cn("w-5 h-5 transition-transform", mobileProductsOpen && "rotate-180")} />
             </button>
             <div className={cn("flex flex-col items-center gap-5 overflow-hidden transition-all duration-300 w-full bg-white/5 rounded-2xl", mobileProductsOpen ? "max-h-72 py-6 mt-2 opacity-100" : "max-h-0 py-0 opacity-0")}>
               {productLinks.map((product) => (
                 <div key={product.name} className="flex flex-col items-center gap-1.5">
-                  <Link href={product.href} className="text-lg font-semibold text-slate-300 hover:text-primary flex items-center gap-2" onClick={() => {
+                  <Link href={product.href} className="text-lg font-semibold text-slate-300 hover:text-primary flex items-center gap-2 py-2" onClick={() => {
                     setMobileMenuOpen(false);
                     setMobileProductsOpen(false);
                   }}>
@@ -184,17 +196,33 @@ export const Header = () => {
               ))}
             </div>
           </div>
+
+          {/* Redes en Móvil */}
+          <div className="w-full flex flex-col items-center">
+            <button onClick={() => setMobileSocialsOpen(!mobileSocialsOpen)} className="flex items-center justify-center gap-2 text-2xl font-semibold text-white py-3 min-h-[44px] w-full">
+              Redes <ChevronDown className={cn("w-5 h-5 transition-transform", mobileSocialsOpen && "rotate-180")} />
+            </button>
+            <div className={cn("flex flex-col items-center gap-5 overflow-hidden transition-all duration-300 w-full bg-white/5 rounded-2xl", mobileSocialsOpen ? "max-h-72 py-6 mt-2 opacity-100" : "max-h-0 py-0 opacity-0")}>
+              {socialLinks.map((social) => (
+                <a key={social.name} href={social.href} target="_blank" rel="noopener noreferrer" className="text-lg font-semibold text-slate-300 hover:text-primary flex items-center gap-2 py-2" onClick={() => setMobileMenuOpen(false)}>
+                  {social.icon} {social.name}
+                </a>
+              ))}
+            </div>
+          </div>
+
           {navLinks.slice(4).map((link) => (
-            <Link key={link.name} href={link.href} className={cn("text-2xl font-semibold tracking-tight py-2", activeSection === link.href ? "text-primary" : "text-white")} onClick={() => {
+            <Link key={link.name} href={link.href} className={cn("text-2xl font-semibold tracking-tight py-3 min-h-[44px] w-full block", activeSection === link.href ? "text-primary" : "text-white")} onClick={() => {
               setActiveSection(link.href);
               setMobileMenuOpen(false);
             }}>
               {link.name}
             </Link>
           ))}
+          
           <div className="w-full pt-4">
             <Link href="/#planes" onClick={() => setMobileMenuOpen(false)}>
-              <Button className="w-full h-12 bg-primary hover:bg-primary/90 rounded-full font-bold text-lg flex items-center justify-center gap-2">
+              <Button className="w-full h-14 bg-primary hover:bg-primary/90 rounded-full font-bold text-lg flex items-center justify-center gap-2">
                 Ver planes <ChevronRight className="w-5 h-5" />
               </Button>
             </Link>

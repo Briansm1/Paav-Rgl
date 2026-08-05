@@ -30,7 +30,7 @@ const services = [
 export const Services = () => {
   return (
     <section id="servicios" className="relative py-20 md:py-32 bg-background overflow-hidden">
-      <div className="container mx-auto px-4 md:px-6 relative z-10">
+      <div className="container mx-auto px-4 lg:px-6 relative z-10">
         <div className="text-center max-w-4xl mx-auto mb-16 md:mb-24 px-4">
           <span className="kicker kicker text-primary mb-6 inline-block bg-primary/10 px-4 py-1.5 rounded-full">
             NUESTRA METODOLOGÍA
@@ -44,29 +44,25 @@ export const Services = () => {
         </div>
 
         <div className="max-w-7xl mx-auto">
-          <Carousel opts={{ align: "start", loop: false }} className="w-full">
-            <CarouselContent className="-ml-4 md:-ml-8 lg:-ml-12 flex lg:justify-center">
-              {services.map((service, index) => {
-                const img = PlaceHolderImages.find(p => p.id === service.imgId) || PlaceHolderImages[0];
-                return (
-                  <CarouselItem key={index} className="pl-4 md:pl-8 lg:pl-12 basis-[85%] sm:basis-1/2 lg:basis-1/3 py-4">
-                    <Card className="h-full relative overflow-hidden border-none bg-secondary shadow-xl rounded-[2.5rem]">
-                      <div className="relative aspect-square overflow-hidden bg-black">
-                        <Image src={img?.imageUrl || ''} alt={service.title} fill className="object-cover" />
-                        <div className="absolute inset-0 bg-gradient-to-t from-black/90 to-transparent"></div>
-                      </div>
-                      <CardHeader className="pt-8 px-6 text-center lg:text-left">
-                        <CardTitle className="text-h3 font-sans font-semibold tracking-tight">{service.title}</CardTitle>
-                      </CardHeader>
-                      <CardContent className="px-6 pb-8 text-center lg:text-left">
-                        <p className="text-body text-muted-foreground max-w-[68ch]">{service.description}</p>
-                      </CardContent>
-                    </Card>
-                  </CarouselItem>
-                );
-              })}
-            </CarouselContent>
-          </Carousel>
+          <div className="grid grid-cols-1 lg:grid-cols-3 gap-6 lg:gap-12">
+            {services.map((service, index) => {
+              const img = PlaceHolderImages.find(p => p.id === service.imgId) || PlaceHolderImages[0];
+              return (
+                <Card key={index} className="h-full relative overflow-hidden border-none bg-secondary shadow-xl rounded-[2.5rem] flex flex-col">
+                  <div className="relative aspect-square overflow-hidden bg-black">
+                    <Image src={img?.imageUrl || ''} alt={service.title} fill className="object-cover" />
+                    <div className="absolute inset-0 bg-gradient-to-t from-black/90 to-transparent"></div>
+                  </div>
+                  <CardHeader className="pt-8 px-6 text-center lg:text-left">
+                    <CardTitle className="text-h3 font-sans font-semibold tracking-tight">{service.title}</CardTitle>
+                  </CardHeader>
+                  <CardContent className="px-6 pb-8 text-center lg:text-left flex-grow">
+                    <p className="text-body text-muted-foreground max-w-[68ch]">{service.description}</p>
+                  </CardContent>
+                </Card>
+              );
+            })}
+          </div>
         </div>
 
         <div className="mt-24 md:mt-40 p-1 bg-gradient-to-br from-primary/20 via-transparent to-accent/20 rounded-[2.5rem] overflow-hidden shadow-2xl mx-auto max-w-[1400px]">

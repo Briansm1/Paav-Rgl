@@ -54,7 +54,7 @@ export const Hero = () => {
         <div className="absolute inset-0 bg-gradient-to-b from-black via-black/40 to-background z-10"></div>
       </div>
 
-      <div className="w-full max-w-[1440px] mx-auto px-4 md:px-6 relative z-20 flex-1 flex flex-col justify-between h-full">
+      <div className="w-full max-w-[1440px] mx-auto px-4 lg:px-6 relative z-20 flex-1 flex flex-col justify-between h-full">
         <div className="max-w-4xl text-left flex flex-col items-start gap-4 md:gap-8 mt-1 md:mt-2">
           <div className="inline-block px-4 py-1.5 text-eyebrow font-semibold text-white uppercase tracking-[0.12em] bg-white/10 backdrop-blur-md border border-white/20 rounded-full animate-in fade-in slide-in-from-bottom-4 duration-700">
             AUTOESCUELA EN RÍO GALLEGOS
@@ -83,24 +83,24 @@ export const Hero = () => {
           </div>
         </div>
         
-        <div className="flex items-center justify-center lg:justify-start gap-6 sm:gap-10 md:gap-14 animate-in fade-in duration-1000 delay-500 pt-6 pb-28 md:pb-12 w-full">
+        <div className="flex flex-wrap items-center justify-center lg:justify-start gap-y-6 gap-x-6 sm:gap-x-10 md:gap-x-14 animate-in fade-in duration-1000 delay-500 pt-6 pb-28 md:pb-12 w-full">
           <div className="flex flex-col items-center text-center">
             <p className="text-h3 font-display font-bold text-gold leading-none">Equipo</p>
-            <p className="text-eyebrow text-white/50 uppercase font-bold mt-2">CERTIFICADO POR LA ANSV</p>
+            <p className="text-[10px] md:text-eyebrow text-white/50 uppercase font-bold mt-2">CERTIFICADO POR LA ANSV</p>
           </div>
-          <div className="w-px h-10 md:h-14 bg-white/20"></div>
+          <div className="hidden sm:block w-px h-10 md:h-14 bg-white/20"></div>
           <div className="flex flex-col items-center text-center">
             <p className="text-h3 font-display font-bold text-gold leading-none">+5 años</p>
-            <p className="text-eyebrow text-white/50 uppercase font-bold mt-2">formando conductores</p>
+            <p className="text-[10px] md:text-eyebrow text-white/50 uppercase font-bold mt-2">formando conductores</p>
           </div>
-          <div className="w-px h-10 md:h-14 bg-white/20"></div>
+          <div className="hidden sm:block w-px h-10 md:h-14 bg-white/20"></div>
           <div className="flex flex-col items-center text-center">
             <div className="flex gap-0.5 justify-center py-1">
               {[...Array(5)].map((_, i) => (
                 <Star key={i} strokeWidth={0} className={cn("w-4 h-4 md:w-5 md:h-5 transition-all duration-300", i < starCount ? "text-yellow-400 fill-yellow-400 scale-110" : "text-white/10 fill-white/10")} />
               ))}
             </div>
-            <p className="text-eyebrow text-white/50 uppercase font-bold mt-2">RECOMENDADOS</p>
+            <p className="text-[10px] md:text-eyebrow text-white/50 uppercase font-bold mt-2">RECOMENDADOS</p>
           </div>
         </div>
       </div>

@@ -1,4 +1,3 @@
-
 "use client";
 
 import React from 'react';
@@ -9,7 +8,7 @@ export const WhatsAppButton = () => {
   const whatsappUrl = `https://wa.me/${phoneNumber}`;
 
   return (
-    <div className="fixed bottom-6 right-6 md:bottom-8 md:right-8 z-[100]">
+    <div className="fixed bottom-4 right-4 md:bottom-8 md:right-8 z-[110]">
       <div className="relative group">
         <a
           href={whatsappUrl}

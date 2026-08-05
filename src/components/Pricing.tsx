@@ -35,7 +35,7 @@ const plans = [
 export const Pricing = () => {
   return (
     <section id="planes" className="relative py-20 md:py-32 bg-background overflow-hidden">
-      <div className="container mx-auto px-4 relative z-10">
+      <div className="container mx-auto px-4 lg:px-6 relative z-10">
         <div className="text-center max-w-3xl mx-auto mb-16 px-4">
           <span className="kicker text-primary mb-6 inline-block bg-primary/10 px-4 py-1.5 rounded-full">
             TU INVERSIÓN
@@ -49,14 +49,14 @@ export const Pricing = () => {
         </div>
 
         <div className="max-w-7xl mx-auto">
-          <div className="flex flex-row md:grid md:grid-cols-3 gap-6 md:gap-8 overflow-x-auto md:overflow-x-visible pb-8 px-2 md:px-0 scrollbar-hide snap-x snap-mandatory">
+          <div className="grid grid-cols-1 lg:grid-cols-3 gap-6 lg:gap-8">
             {plans.map((plan, index) => (
-              <div key={index} className="relative p-8 rounded-[2.5rem] bg-secondary shadow-xl transition-all duration-500 flex flex-col items-center text-center group border border-white/5 min-w-[85%] sm:min-w-[280px] md:min-w-0 snap-center">
+              <div key={index} className="relative p-8 rounded-[2.5rem] bg-secondary shadow-xl transition-all duration-500 flex flex-col items-center text-center group border border-white/5 w-full">
                 <div className="absolute top-0 right-0 bg-accent text-white px-6 py-1.5 rounded-bl-2xl text-eyebrow font-bold uppercase">
                   {plan.badge}
                 </div>
                 
-                <div className="mb-8 w-full">
+                <div className="mb-8 w-full flex-grow">
                   <h4 className="text-h3 font-display font-semibold mb-4 text-foreground">{plan.name}</h4>
                   <div className="flex items-center justify-center gap-2 mb-4">
                     <span className="text-h2 font-display font-semibold text-green-500 text-tabular leading-none">{plan.price}</span>
