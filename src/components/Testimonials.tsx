@@ -12,7 +12,7 @@ import {
 } from '@/components/ui/carousel';
 import { Card, CardContent } from '@/components/ui/card';
 import { PlaceHolderImages } from '@/app/lib/placeholder-images';
-import { Star, ChevronLeft, ChevronRight } from 'lucide-react';
+import { Star } from 'lucide-react';
 import { cn } from '@/lib/utils';
 
 const testimonials = [
@@ -85,7 +85,7 @@ export const Testimonials = () => {
             </p>
           </div>
 
-          <div className="w-full relative px-10 md:px-14">
+          <div className="w-full relative px-4 md:px-14">
             <Carousel
               opts={{
                 align: "start",
@@ -93,14 +93,14 @@ export const Testimonials = () => {
               }}
               className="w-full"
             >
-              <CarouselContent className="-ml-2 md:-ml-4">
+              <CarouselContent className="-ml-4">
                 {testimonials.map((t, index) => {
                   const headerImg = t.headerImageId ? PlaceHolderImages.find(p => p.id === t.headerImageId) : null;
                   const hasContent = t.content && t.content.trim().length > 0;
                   return (
-                    <CarouselItem key={index} className="pl-2 md:pl-4 basis-1/2 lg:basis-1/3">
+                    <CarouselItem key={index} className="pl-4 basis-full md:basis-1/2 lg:basis-1/3">
                       <div className="h-full transition-all duration-500 hover:scale-[1.02] active:scale-95 origin-center">
-                        <Card className="h-full border border-white/5 shadow-xl rounded-[1.5rem] md:rounded-[2.5rem] bg-card relative overflow-hidden flex flex-col group">
+                        <Card className="h-full border border-white/5 shadow-xl rounded-[1.5rem] md:rounded-[2.5rem] bg-card relative overflow-hidden flex flex-col group min-h-[400px]">
                           {headerImg && (
                             <div className={cn("relative w-full overflow-hidden border-b border-white/5 bg-black/20", hasContent ? "aspect-[16/10]" : "aspect-square")}>
                               <Image 
@@ -111,22 +111,22 @@ export const Testimonials = () => {
                               />
                             </div>
                           )}
-                          <CardContent className="p-4 md:p-8 flex flex-col flex-grow">
+                          <CardContent className="p-6 md:p-8 flex flex-col flex-grow">
                             {hasContent && (
-                              <div className="mb-4">
-                                <div className="flex gap-0.5 mb-2 md:mb-4">
+                              <div className="mb-6">
+                                <div className="flex gap-0.5 mb-4">
                                   {[...Array(5)].map((_, i) => (
-                                    <Star key={i} className="w-3 h-3 md:w-4 md:h-4 text-yellow-500 fill-yellow-500" />
+                                    <Star key={i} className="w-4 h-4 text-yellow-500 fill-yellow-500" />
                                   ))}
                                 </div>
-                                <p className="text-[12px] md:text-body text-muted-foreground leading-snug md:leading-[1.65] line-clamp-4 md:line-clamp-none italic">
+                                <p className="text-[15px] md:text-body text-muted-foreground leading-relaxed italic">
                                   "{t.content}"
                                 </p>
                               </div>
                             )}
-                            <div className="pt-3 md:pt-6 border-t border-white/5 mt-auto">
-                              <p className="font-bold text-[14px] md:text-body-lg text-foreground truncate">{t.name}</p>
-                              <p className="text-[10px] md:text-eyebrow font-black text-primary uppercase mt-0.5">
+                            <div className="pt-6 border-t border-white/5 mt-auto">
+                              <p className="font-bold text-lg md:text-body-lg text-foreground truncate">{t.name}</p>
+                              <p className="text-eyebrow font-black text-primary uppercase mt-0.5 tracking-wider">
                                 {t.gender === 'm' ? 'ALUMNO' : 'ALUMNA'}
                               </p>
                             </div>
@@ -143,9 +143,9 @@ export const Testimonials = () => {
                 <CarouselNext className="absolute -right-12 top-1/2 h-12 w-12 rounded-full border-primary/20 bg-secondary text-white hover:bg-primary hover:text-white transition-all duration-300" />
               </div>
               
-              <div className="flex md:hidden justify-center gap-4 mt-8">
-                <CarouselPrevious className="static translate-y-0 h-12 w-12 rounded-full border-primary/20 bg-secondary text-white active:scale-90" />
-                <CarouselNext className="static translate-y-0 h-12 w-12 rounded-full border-primary/20 bg-secondary text-white active:scale-90" />
+              <div className="flex md:hidden justify-center gap-6 mt-10">
+                <CarouselPrevious className="static translate-y-0 h-14 w-14 rounded-full border-primary/20 bg-secondary text-white active:scale-90" />
+                <CarouselNext className="static translate-y-0 h-14 w-14 rounded-full border-primary/20 bg-secondary text-white active:scale-90" />
               </div>
             </Carousel>
           </div>
