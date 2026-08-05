@@ -197,7 +197,7 @@ export default function LibrosDigitalesPage() {
                     {book.features.map((feature, i) => (
                       <div key={i} className="flex items-start gap-3">
                         <CheckCircle2 className="w-5 h-5 text-primary shrink-0 mt-0.5" />
-                        <span className="text-sm md:text-base text-foreground/90 font-medium leading-tight">{feature}.</span>
+                        <span className="text-sm md:text-base text-foreground/90 font-medium leading-tight">{feature}</span>
                       </div>
                     ))}
                   </div>
