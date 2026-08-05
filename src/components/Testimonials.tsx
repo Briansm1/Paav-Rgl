@@ -52,7 +52,7 @@ const testimonials = [
   },
   {
     name: 'Oscar Benítez',
-    content: 'Excelente, quiero agradecer al instructor de manejo por su profesionalismo, paciencia y compromiso en la formación de mi hija para obtener su carnet profesional. No solo enseña a conducir, enseña responsabilidad y seguridad. ¡Gracias por acompañarla en este paso tan importante! 🏁',
+    content: 'Excelente. Quiero agradecer al instructor de manejo por su profesionalismo, paciencia y compromiso en la formación de mi hija para obtener su licencia de conducir. No solo enseña a conducir, enseña responsabilidad y seguridad. ¡Gracias por acompañarla en este paso tan importante!',
     gender: 'm',
     role: 'PADRE DE ALUMNA'
   },
