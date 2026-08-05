@@ -1,3 +1,4 @@
+
 "use client";
 
 import React, { useState, useEffect } from 'react';
@@ -48,7 +49,7 @@ export const Hero = () => {
   }, []);
 
   return (
-    <section id="inicio" className="relative h-[100svh] min-h-[100svh] flex flex-col items-center pt-24 pb-0 md:pt-32 md:pb-0 lg:pt-36 lg:pb-0 overflow-hidden bg-black">
+    <section id="inicio" className="relative h-[100svh] min-h-[100svh] flex flex-col items-center pt-20 pb-0 md:pt-28 md:pb-0 lg:pt-32 lg:pb-0 overflow-hidden bg-black">
       <div className="absolute inset-0 z-0">
         <Image src={heroImg?.imageUrl || ''} alt={heroImg?.description || 'Autoescuela'} fill className="object-cover object-center blur-[2px] md:blur-[4px] scale-105 opacity-60" priority />
         <div className="absolute inset-0 bg-gradient-to-b from-black via-black/40 to-background z-10"></div>
@@ -83,7 +84,7 @@ export const Hero = () => {
           </div>
         </div>
         
-        <div className="flex flex-wrap items-center justify-center lg:justify-start gap-y-6 gap-x-6 sm:gap-x-10 md:gap-x-14 animate-in fade-in duration-1000 delay-500 pt-6 pb-28 md:pb-12 w-full">
+        <div className="flex flex-wrap items-center justify-center lg:justify-start gap-y-6 gap-x-6 sm:gap-x-10 md:gap-x-14 animate-in fade-in duration-1000 delay-500 pt-6 pb-40 md:pb-24 w-full">
           <div className="flex flex-col items-center text-center">
             <p className="text-h3 font-display font-bold text-gold leading-none">Equipo</p>
             <p className="text-[10px] md:text-eyebrow text-white/50 uppercase font-bold mt-2">CERTIFICADO POR LA ANSV</p>
