@@ -1,3 +1,4 @@
+
 "use client";
 
 import React from 'react';
@@ -48,6 +49,12 @@ const testimonials = [
     content: 'Muchísimas gracias a ustedes que me brindaron lo necesario para saber y comprender desde lo básico y más complejo al manejar. Muy cómodo en todas las clases, buena experiencia con ustedes. Pude aprobar los exámenes y conseguir mi licencia. Muchas gracias por la enseñanza y el acompañamiento. 🏁❤️',
     headerImageId: 'achievement-lautaro',
     gender: 'm'
+  },
+  {
+    name: 'Oscar Benítez',
+    content: 'Excelente, quiero agradecer al instructor de manejo por su profesionalismo, paciencia y compromiso en la formación de mi hija para obtener su carnet profesional. No solo enseña a conducir, enseña responsabilidad y seguridad. ¡Gracias por acompañarla en este paso tan importante! 🏁',
+    gender: 'm',
+    role: 'PADRE DE ALUMNA'
   },
   {
     name: 'Javier Peña',
@@ -104,7 +111,7 @@ export const Testimonials = () => {
               className="w-full"
             >
               <CarouselContent className="-ml-4">
-                {testimonials.map((t, index) => {
+                {testimonials.map((t: any, index) => {
                   const headerImg = t.headerImageId ? PlaceHolderImages.find(p => p.id === t.headerImageId) : null;
                   const hasContent = t.content && t.content.trim().length > 0;
                   
@@ -165,7 +172,7 @@ export const Testimonials = () => {
                             <div className="pt-8 border-t border-white/5 mt-auto">
                               <p className="font-bold text-xl md:text-2xl text-foreground truncate">{t.name}</p>
                               <p className="text-xs md:text-sm font-black text-primary uppercase mt-1 tracking-wider">
-                                {t.gender === 'm' ? 'ALUMNO' : 'ALUMNA'}
+                                {t.role || (t.gender === 'm' ? 'ALUMNO' : 'ALUMNA')}
                               </p>
                             </div>
                           </CardContent>
