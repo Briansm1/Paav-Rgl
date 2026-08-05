@@ -64,10 +64,10 @@ export const Hero = () => {
 
       {/* Content Container - Optimized for all devices */}
       <div className="w-full max-w-[1440px] mx-auto px-4 min-[375px]:px-6 lg:px-10 relative z-20 flex-1 flex flex-col justify-start md:justify-center pt-28 md:pt-32 pb-8 md:pb-12">
-        <div className="w-full flex flex-col justify-center items-center md:items-start gap-6 min-[375px]:gap-10 md:gap-14">
+        <div className="w-full flex flex-col justify-center items-center md:items-start gap-10 md:gap-14">
           
           {/* Main content block */}
-          <div className="w-full flex flex-col items-center text-center md:items-start md:text-left gap-6 min-[375px]:gap-8 md:gap-12">
+          <div className="w-full flex flex-col items-center text-center md:items-start md:text-left gap-10 md:gap-12">
             <div className="w-full space-y-4 min-[375px]:space-y-6 md:space-y-10">
               {/* Header block with Title and Badge */}
               <div className="flex flex-col md:flex-row items-center md:items-start justify-center md:justify-between gap-4 min-[375px]:gap-6 md:gap-8 w-full">
@@ -98,8 +98,8 @@ export const Hero = () => {
             </div>
           </div>
 
-          {/* Trust Indicators - Margins adjusted to move it up on mobile */}
-          <div className="flex flex-row flex-nowrap items-center justify-center md:justify-start gap-x-4 min-[375px]:gap-x-6 min-[420px]:gap-x-10 sm:gap-x-12 md:gap-x-16 animate-in fade-in duration-1000 delay-500 w-full mt-0 mb-10 md:mt-12 md:mb-0 overflow-visible">
+          {/* Trust Indicators - Symmetrical spacing */}
+          <div className="flex flex-row flex-nowrap items-center justify-center md:justify-start gap-x-4 min-[375px]:gap-x-6 min-[420px]:gap-x-10 sm:gap-x-12 md:gap-x-16 animate-in fade-in duration-1000 delay-500 w-full mb-10 md:mb-0 overflow-visible">
             <div className="flex flex-col items-center text-center md:items-start md:text-left shrink-0">
               <p className="text-[11px] min-[375px]:text-sm min-[420px]:text-base sm:text-xl md:text-2xl lg:text-h3 font-display font-bold text-gold leading-none">Equipo</p>
               <p className="text-[7px] min-[375px]:text-[8px] min-[420px]:text-[9px] md:text-xs lg:text-eyebrow text-white/80 uppercase font-black mt-1 tracking-widest whitespace-nowrap">Certificado ANSV</p>
