@@ -103,7 +103,7 @@ const ExpandableDescription = ({ text }: { text: string }) => {
   return (
     <div className="mb-4 flex-grow">
       <p className={cn(
-        "text-muted-foreground text-sm md:text-base leading-relaxed transition-all duration-300",
+        "text-muted-foreground text-base md:text-lg leading-relaxed transition-all duration-300",
         !isExpanded && "line-clamp-3"
       )}>
         {text}
@@ -111,7 +111,7 @@ const ExpandableDescription = ({ text }: { text: string }) => {
       {text.length > 80 && (
         <button 
           onClick={() => setIsExpanded(!isExpanded)}
-          className="text-primary text-xs font-bold uppercase mt-2 hover:underline tracking-widest"
+          className="text-primary text-sm font-bold uppercase mt-2 hover:underline tracking-widest"
         >
           {isExpanded ? 'Ver menos' : 'Ver más'}
         </button>
@@ -122,22 +122,22 @@ const ExpandableDescription = ({ text }: { text: string }) => {
 
 export default function LibrosDigitalesPage() {
   return (
-    <main className="min-h-screen bg-background">
+    <main className="min-h-screen bg-background text-body">
       <Header />
       
       {/* Header Section */}
       <section className="pt-24 pb-6 md:pt-32 md:pb-10 bg-secondary/30 border-b border-white/5 flex items-center justify-center">
         <div className="container mx-auto px-4 text-center">
-          <Link href="/#inicio" className="inline-flex items-center gap-2 text-primary font-bold mb-3 hover:underline">
-            <ArrowLeft className="w-4 h-4" />
+          <Link href="/#inicio" className="inline-flex items-center gap-2 text-primary font-bold mb-3 hover:underline text-lg">
+            <ArrowLeft className="w-5 h-5" />
             Volver al inicio
           </Link>
-          <div className="flex flex-col gap-2">
-            <h1 className="text-3xl md:text-5xl font-bold font-headline mb-0 text-white text-center">
-              Recursos digitales para mejorar tu conducción
+          <div className="flex flex-col gap-3">
+            <h1 className="text-h1 font-bold font-headline mb-0 text-white text-center">
+              Recursos digitales
             </h1>
-            <p className="text-sm md:text-lg font-bold text-slate-400 uppercase tracking-[0.2em] text-center max-w-4xl mx-auto">
-              Material práctico para reforzar conocimientos, prepararte para el examen y desarrollar mejores hábitos al volante
+            <p className="text-lg md:text-2xl font-bold text-slate-400 uppercase tracking-[0.2em] text-center max-w-4xl mx-auto">
+              Material práctico para reforzar conocimientos al volante
             </p>
           </div>
         </div>
@@ -163,28 +163,28 @@ export default function LibrosDigitalesPage() {
                 <div className="p-8 md:p-8 flex flex-col flex-grow items-center text-center">
                   <div className="flex flex-wrap justify-center gap-2 mb-4 md:mb-5">
                     {'specialBadge' in book && book.specialBadge && (
-                      <div className="bg-primary text-white text-xs md:text-sm font-black px-3 py-1.5 rounded-full shadow-sm border border-white/10 uppercase tracking-tighter">
+                      <div className="bg-primary text-white text-sm md:text-base font-black px-4 py-2 rounded-full shadow-sm border border-white/10 uppercase tracking-tighter">
                         {book.specialBadge}
                       </div>
                     )}
-                    <div className="bg-accent text-white text-xs md:text-sm font-black px-3 py-1.5 rounded-full shadow-sm border border-white/10 uppercase tracking-tighter">
+                    <div className="bg-accent text-white text-sm md:text-base font-black px-4 py-2 rounded-full shadow-sm border border-white/10 uppercase tracking-tighter">
                       {book.discount}
                     </div>
                   </div>
 
                   <div className="flex items-center justify-center mb-4 md:mb-5">
-                    <span className="text-xs md:text-xs font-bold text-slate-400 uppercase tracking-widest">MATERIAL EXCLUSIVO</span>
+                    <span className="text-sm md:text-sm font-bold text-slate-400 uppercase tracking-widest">MATERIAL EXCLUSIVO</span>
                   </div>
 
-                  <h3 className="text-xl md:text-2xl font-bold mb-3 md:mb-4 text-white leading-tight h-[2.8em] md:h-auto flex items-center justify-center line-clamp-2">
+                  <h3 className="text-2xl md:text-3xl font-bold mb-4 text-white leading-tight h-[2.8em] md:h-auto flex items-center justify-center line-clamp-2">
                     {book.title}
                   </h3>
 
-                  <div className="flex items-center justify-center gap-4 md:gap-5 mb-6">
-                    <span className="text-red-500/60 text-base md:text-lg font-bold line-through">
+                  <div className="flex items-center justify-center gap-4 md:gap-5 mb-8">
+                    <span className="text-red-500/60 text-lg md:text-xl font-bold line-through">
                       {book.originalPrice}
                     </span>
-                    <span className="text-green-500 text-3xl md:text-3xl font-black tracking-tight">
+                    <span className="text-green-500 text-3xl md:text-4xl font-black tracking-tight">
                       {book.price}
                     </span>
                   </div>
@@ -192,27 +192,27 @@ export default function LibrosDigitalesPage() {
                   <ExpandableDescription text={book.description} />
 
                   {/* Clean and separated Checklist */}
-                  <div className="w-full space-y-2 mb-8 text-left bg-white/5 p-4 rounded-2xl border border-white/10">
-                    <p className="text-[10px] font-black text-primary uppercase tracking-[0.2em] mb-3">Incluye:</p>
+                  <div className="w-full space-y-3 mb-8 text-left bg-white/5 p-6 rounded-2xl border border-white/10">
+                    <p className="text-xs font-black text-primary uppercase tracking-[0.2em] mb-4">Incluye:</p>
                     {book.features.map((feature, i) => (
-                      <div key={i} className="flex items-start gap-2.5">
-                        <CheckCircle2 className="w-4 h-4 text-primary shrink-0 mt-0.5" />
-                        <span className="text-xs text-foreground/90 font-medium leading-tight">{feature}.</span>
+                      <div key={i} className="flex items-start gap-3">
+                        <CheckCircle2 className="w-5 h-5 text-primary shrink-0 mt-0.5" />
+                        <span className="text-sm md:text-base text-foreground/90 font-medium leading-tight">{feature}.</span>
                       </div>
                     ))}
                   </div>
 
                   <div className="flex flex-col gap-4 w-full mt-auto items-center">
                     <a href={book.whatsappLink} target="_blank" rel="noopener noreferrer" className="w-full">
-                      <Button className="w-full h-14 md:h-14 rounded-xl bg-green-600 hover:bg-green-700 text-white text-base md:text-base font-bold transition-colors border-none shadow-none">
+                      <Button className="w-full h-16 md:h-16 rounded-xl bg-green-600 hover:bg-green-700 text-white text-lg md:text-xl font-bold transition-colors border-none shadow-none">
                         Comprar ahora
                       </Button>
                     </a>
-                    <div className="flex flex-col items-center gap-2">
-                      <p className="text-[10px] md:text-[11px] font-bold text-slate-500 uppercase tracking-tight">
+                    <div className="flex flex-col items-center gap-3">
+                      <p className="text-xs md:text-sm font-bold text-slate-500 uppercase tracking-tight">
                         PAGO SEGURO POR
                       </p>
-                      <div className="relative h-8 w-32">
+                      <div className="relative h-10 w-40">
                         <Image 
                           src="https://i.imgur.com/bWGTO94.png" 
                           alt="Mercado Pago" 
@@ -229,17 +229,17 @@ export default function LibrosDigitalesPage() {
           </div>
 
           <div className="max-w-7xl mx-auto pt-10 border-t border-white/5">
-            <h2 className="text-3xl md:text-4xl font-bold text-white text-center mb-16">
+            <h2 className="text-h2 font-bold text-white text-center mb-16">
               ¿Por qué elegir nuestros recursos digitales?
             </h2>
             <div className="flex flex-col gap-12 md:gap-8">
               {benefits.map((benefit, i) => (
                 <div key={i} className="flex flex-col items-center text-center gap-4 px-4">
                   <div className="flex flex-col items-center gap-3">
-                    <CheckCircle2 className="w-10 h-10 md:w-8 md:h-8 text-primary shrink-0" />
-                    <h4 className="font-bold text-white text-xl md:text-2xl tracking-tight leading-tight">{benefit.title}</h4>
+                    <CheckCircle2 className="w-12 h-12 md:w-10 md:h-10 text-primary shrink-0" />
+                    <h4 className="font-bold text-white text-2xl md:text-3xl tracking-tight leading-tight">{benefit.title}</h4>
                   </div>
-                  <p className="text-muted-foreground text-base md:text-lg leading-relaxed max-w-lg">
+                  <p className="text-muted-foreground text-lg md:text-xl leading-relaxed max-w-2xl">
                     {benefit.desc}
                   </p>
                 </div>

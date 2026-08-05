@@ -1,4 +1,3 @@
-
 "use client";
 
 import React from 'react';
@@ -100,7 +99,7 @@ export const Testimonials = () => {
                   return (
                     <CarouselItem key={index} className="pl-4 basis-full md:basis-1/2 lg:basis-1/3">
                       <div className="h-full transition-all duration-500 hover:scale-[1.02] active:scale-95 origin-center">
-                        <Card className="h-full border border-white/5 shadow-xl rounded-[1.5rem] md:rounded-[2.5rem] bg-card relative overflow-hidden flex flex-col group min-h-[400px]">
+                        <Card className="h-full border border-white/5 shadow-xl rounded-[1.5rem] md:rounded-[2.5rem] bg-card relative overflow-hidden flex flex-col group min-h-[450px]">
                           {headerImg && (
                             <div className={cn("relative w-full overflow-hidden border-b border-white/5 bg-black/20", hasContent ? "aspect-[16/10]" : "aspect-square")}>
                               <Image 
@@ -111,22 +110,22 @@ export const Testimonials = () => {
                               />
                             </div>
                           )}
-                          <CardContent className="p-6 md:p-8 flex flex-col flex-grow">
+                          <CardContent className="p-8 md:p-10 flex flex-col flex-grow">
                             {hasContent && (
-                              <div className="mb-6">
-                                <div className="flex gap-0.5 mb-4">
+                              <div className="mb-8">
+                                <div className="flex gap-1 mb-5">
                                   {[...Array(5)].map((_, i) => (
-                                    <Star key={i} className="w-4 h-4 text-yellow-500 fill-yellow-500" />
+                                    <Star key={i} className="w-5 h-5 text-yellow-500 fill-yellow-500" />
                                   ))}
                                 </div>
-                                <p className="text-[15px] md:text-body text-muted-foreground leading-relaxed italic">
+                                <p className="text-lg md:text-xl text-muted-foreground leading-relaxed italic">
                                   "{t.content}"
                                 </p>
                               </div>
                             )}
-                            <div className="pt-6 border-t border-white/5 mt-auto">
-                              <p className="font-bold text-lg md:text-body-lg text-foreground truncate">{t.name}</p>
-                              <p className="text-eyebrow font-black text-primary uppercase mt-0.5 tracking-wider">
+                            <div className="pt-8 border-t border-white/5 mt-auto">
+                              <p className="font-bold text-xl md:text-2xl text-foreground truncate">{t.name}</p>
+                              <p className="text-xs md:text-sm font-black text-primary uppercase mt-1 tracking-wider">
                                 {t.gender === 'm' ? 'ALUMNO' : 'ALUMNA'}
                               </p>
                             </div>
@@ -139,13 +138,13 @@ export const Testimonials = () => {
               </CarouselContent>
               
               <div className="hidden md:block">
-                <CarouselPrevious className="absolute -left-12 top-1/2 h-12 w-12 rounded-full border-primary/20 bg-secondary text-white hover:bg-primary hover:text-white transition-all duration-300" />
-                <CarouselNext className="absolute -right-12 top-1/2 h-12 w-12 rounded-full border-primary/20 bg-secondary text-white hover:bg-primary hover:text-white transition-all duration-300" />
+                <CarouselPrevious className="absolute -left-12 top-1/2 h-14 w-14 rounded-full border-primary/20 bg-secondary text-white hover:bg-primary hover:text-white transition-all duration-300" />
+                <CarouselNext className="absolute -right-12 top-1/2 h-14 w-14 rounded-full border-primary/20 bg-secondary text-white hover:bg-primary hover:text-white transition-all duration-300" />
               </div>
               
-              <div className="flex md:hidden justify-center gap-6 mt-10">
-                <CarouselPrevious className="static translate-y-0 h-14 w-14 rounded-full border-primary/20 bg-secondary text-white active:scale-90" />
-                <CarouselNext className="static translate-y-0 h-14 w-14 rounded-full border-primary/20 bg-secondary text-white active:scale-90" />
+              <div className="flex md:hidden justify-center gap-8 mt-12">
+                <CarouselPrevious className="static translate-y-0 h-16 w-16 rounded-full border-primary/20 bg-secondary text-white active:scale-90" />
+                <CarouselNext className="static translate-y-0 h-16 w-16 rounded-full border-primary/20 bg-secondary text-white active:scale-90" />
               </div>
             </Carousel>
           </div>
