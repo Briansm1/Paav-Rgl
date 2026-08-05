@@ -11,8 +11,9 @@ import {
 } from '@/components/ui/carousel';
 import { Card, CardContent } from '@/components/ui/card';
 import { PlaceHolderImages } from '@/app/lib/placeholder-images';
-import { Star } from 'lucide-react';
+import { Star, Instagram, ChevronRight } from 'lucide-react';
 import { cn } from '@/lib/utils';
+import { Button } from '@/components/ui/button';
 
 const testimonials = [
   {
@@ -64,6 +65,12 @@ const testimonials = [
     content: 'Si se pudo 💪🏻, muchísimas gracias por el acompañamiento.',
     headerImageId: 'achievement-damaris',
     gender: 'f'
+  },
+  {
+    isSocial: true,
+    name: '¡Ver más historias!',
+    content: 'Seguinos en Instagram para conocer más experiencias y el día a día de nuestra academia.',
+    gender: 'f'
   }
 ];
 
@@ -96,6 +103,34 @@ export const Testimonials = () => {
                 {testimonials.map((t, index) => {
                   const headerImg = t.headerImageId ? PlaceHolderImages.find(p => p.id === t.headerImageId) : null;
                   const hasContent = t.content && t.content.trim().length > 0;
+                  
+                  if (t.isSocial) {
+                    return (
+                      <CarouselItem key={index} className="pl-4 basis-full md:basis-1/2 lg:basis-1/3">
+                        <a 
+                          href="https://www.instagram.com/pilotosaav.autoescuela/" 
+                          target="_blank" 
+                          rel="noopener noreferrer"
+                          className="block h-full transition-all duration-500 hover:scale-[1.02] active:scale-95 origin-center"
+                        >
+                          <Card className="h-full border-2 border-primary/20 shadow-xl rounded-[1.5rem] md:rounded-[2.5rem] bg-primary/5 relative overflow-hidden flex flex-col group min-h-[450px] justify-center items-center text-center p-8 md:p-12">
+                            <div className="bg-primary/10 p-6 rounded-full mb-8 group-hover:bg-primary group-hover:text-white transition-colors duration-300">
+                              <Instagram className="w-16 h-16 text-primary group-hover:text-white" />
+                            </div>
+                            <h3 className="text-2xl md:text-3xl font-bold mb-4 text-white">¿Querés ver más?</h3>
+                            <p className="text-lg md:text-xl text-muted-foreground leading-relaxed mb-10">
+                              {t.content}
+                            </p>
+                            <Button className="h-14 px-8 rounded-full bg-primary hover:bg-primary/90 text-white font-bold text-lg gap-2">
+                              Ir a Instagram
+                              <ChevronRight className="w-5 h-5" />
+                            </Button>
+                          </Card>
+                        </a>
+                      </CarouselItem>
+                    );
+                  }
+
                   return (
                     <CarouselItem key={index} className="pl-4 basis-full md:basis-1/2 lg:basis-1/3">
                       <div className="h-full transition-all duration-500 hover:scale-[1.02] active:scale-95 origin-center">
