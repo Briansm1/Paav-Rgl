@@ -122,7 +122,7 @@ export const Testimonials = () => {
                               {t.content}
                             </p>
                             <Button className="h-14 px-8 rounded-full bg-primary hover:bg-primary/90 text-white font-bold text-lg gap-2">
-                              Ir a Instagram
+                              Ir
                               <ChevronRight className="w-5 h-5" />
                             </Button>
                           </Card>
