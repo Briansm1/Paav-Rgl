@@ -1,3 +1,4 @@
+
 "use client";
 
 import React from 'react';
@@ -12,7 +13,7 @@ const plans = [
     description: 'Ideal para quienes empiezan desde cero o tienen poca experiencia al volante. Aprendé las bases de la conducción, familiarizate con el vehículo y ganá seguridad paso a paso.',
     badge: 'NIVEL INICIAL',
     href: '/planes/fundamentos',
-    buttonText: 'Elegir plan'
+    buttonText: 'Elegir plan de 8 o 10 clases'
   },
   {
     name: 'Programa puesta a punto',
@@ -20,7 +21,7 @@ const plans = [
     description: 'Pensado para quienes ya tienen experiencia y quieren mejorar su manejo. Trabajá aspectos específicos de la conducción y reforzá tus habilidades.',
     badge: 'NIVEL INTERMEDIO',
     href: '/planes/seguridad-avanzada',
-    buttonText: 'Elegir plan'
+    buttonText: 'Elegir plan de 4 o 5 clases'
   },
   {
     name: 'Programa simulacro de examen',
@@ -28,7 +29,7 @@ const plans = [
     description: 'Para alumnos que quieren prepararse antes de rendir el examen práctico. Practicá maniobras y situaciones reales del examen.',
     badge: 'NIVEL SUPERIOR',
     href: '/planes/experto',
-    buttonText: 'Elegir plan'
+    buttonText: 'Elegir plan de 2 clases'
   }
 ];
 
