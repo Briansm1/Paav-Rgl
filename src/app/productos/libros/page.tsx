@@ -11,6 +11,22 @@ import { PlaceHolderImages } from '@/app/lib/placeholder-images';
 
 const digitalBooks = [
   {
+    id: 'book-maniobras',
+    title: 'Programa aprobar a la primera',
+    price: '$3.999',
+    originalPrice: '$13.400',
+    discount: '70% OFF',
+    description: 'Prepará tu mente para rendir con más confianza. Pensado para quienes quieren trabajar sus nervios, mejorar su seguridad y llegar al examen práctico con una mentalidad más preparada.',
+    longDescription: '¿Estacionar es tu pesadilla? En este e-book desglosamos cada maniobra de estacionamiento (paralelo, a 45° y 90°) con puntos de referencia exactos y trucos de instructor que no te enseñan en otros lados. Ganá precisión milimétrica.',
+    features: [
+      'Preparación mental y emocional antes del examen',
+      'Estrategias para controlar nervios y presión',
+      'Herramientas para afrontar la evaluación con mayor tranquilidad'
+    ],
+    imageUrl: PlaceHolderImages.find(img => img.id === 'book-maniobras')?.imageUrl || '',
+    whatsappLink: "https://mpago.li/2uCr7Wp"
+  },
+  {
     id: 'book-novato',
     title: 'Programa conductor experto',
     specialBadge: '9 x 1',
@@ -30,20 +46,21 @@ const digitalBooks = [
     whatsappLink: "https://mpago.li/1UBsjWk"
   },
   {
-    id: 'book-maniobras',
-    title: 'Programa aprobar a la primera',
-    price: '$3.999',
-    originalPrice: '$13.400',
+    id: 'book-experto',
+    title: 'Programa ases de la teoría',
+    specialBadge: '10 x 1',
+    price: '$14.999',
+    originalPrice: '$49.999',
     discount: '70% OFF',
-    description: 'Prepará tu mente para rendir con más confianza. Pensado para quienes quieren trabajar sus nervios, mejorar su seguridad y llegar al examen práctico con una mentalidad más preparada.',
-    longDescription: '¿Estacionar es tu pesadilla? En este e-book desglosamos cada maniobra de estacionamiento (paralelo, a 45° y 90°) con puntos de referencia exactos y trucos de instructor que no te enseñan en otros lados. Ganá precisión milimétrica.',
+    description: 'Reforzá tus conocimientos de conducción. Un recurso para estudiar normas, señales y conceptos importantes antes del examen teórico.',
+    longDescription: 'Olvidate de memorizar leyes aburridas. Este manual te enseña el marco legal aplicado a situaciones cotidianas del tráfico. Es la herramienta definitiva para aprobar el examen teórico y conducir con conocimiento real de tus derechos y obligaciones.',
     features: [
-      'Preparación mental y emocional antes del examen',
-      'Estrategias para controlar nervios y presión',
-      'Herramientas para afrontar la evaluación con mayor tranquilidad'
+      'Material de estudio vial',
+      'Señales y normas de tránsito',
+      'Simulador con +85 preguntas'
     ],
-    imageUrl: PlaceHolderImages.find(img => img.id === 'book-maniobras')?.imageUrl || '',
-    whatsappLink: "https://mpago.li/2uCr7Wp"
+    imageUrl: PlaceHolderImages.find(img => img.id === 'book-experto')?.imageUrl || '',
+    whatsappLink: "https://mpago.li/1ochaL6"
   },
   {
     id: 'book-teoria',
@@ -61,23 +78,6 @@ const digitalBooks = [
     ],
     imageUrl: PlaceHolderImages.find(img => img.id === 'book-teoria')?.imageUrl || '',
     whatsappLink: "https://mpago.li/2uSG2jd"
-  },
-  {
-    id: 'book-experto',
-    title: 'Programa ases de la teoría',
-    specialBadge: '10 x 1',
-    price: '$14.999',
-    originalPrice: '$49.999',
-    discount: '70% OFF',
-    description: 'Reforzá tus conocimientos de conducción. Un recurso para estudiar normas, señales y conceptos importantes antes del examen teórico.',
-    longDescription: 'Olvidate de memorizar leyes aburridas. Este manual te enseña el marco legal aplicado a situaciones cotidianas del tráfico. Es la herramienta definitiva para aprobar el examen teórico y conducir con conocimiento real de tus derechos y obligaciones.',
-    features: [
-      'Material de estudio vial',
-      'Señales y normas de tránsito',
-      'Simulador con +85 preguntas'
-    ],
-    imageUrl: PlaceHolderImages.find(img => img.id === 'book-experto')?.imageUrl || '',
-    whatsappLink: "https://mpago.li/1ochaL6"
   }
 ];
 
@@ -162,7 +162,6 @@ export default function LibrosDigitalesPage() {
                     </p>
                   </div>
 
-                  {/* Clean and separated Checklist */}
                   <div className="w-full space-y-3 mb-8 text-left bg-white/5 p-6 rounded-2xl border border-white/10">
                     <p className="text-xs font-black text-primary uppercase tracking-[0.2em] mb-4">Incluye:</p>
                     {book.features.map((feature, i) => (
@@ -174,7 +173,6 @@ export default function LibrosDigitalesPage() {
                   </div>
 
                   <div className="flex flex-col gap-4 w-full mt-auto items-center">
-                    {/* Price moved before the button */}
                     <div className="flex items-center justify-center gap-4 md:gap-5 mb-4">
                       <span className="text-red-500/60 text-lg md:text-xl font-bold line-through">
                         {book.originalPrice}
