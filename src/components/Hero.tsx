@@ -99,31 +99,31 @@ export const Hero = () => {
             </div>
           </div>
 
-          {/* Trust Indicators */}
-          <div className="flex flex-wrap items-center justify-center md:justify-start gap-y-6 gap-x-8 sm:gap-x-10 md:gap-x-14 animate-in fade-in duration-1000 delay-500 w-full mt-8 md:mt-12">
+          {/* Trust Indicators - Optimized for mobile scaling */}
+          <div className="flex flex-wrap items-center justify-center md:justify-start gap-y-6 gap-x-6 sm:gap-x-10 md:gap-x-14 animate-in fade-in duration-1000 delay-500 w-full mt-8 md:mt-12">
             <div className="flex flex-col items-center text-center md:items-start md:text-left">
-              <p className="text-2xl md:text-3xl lg:text-h3 font-display font-bold text-gold leading-none">Equipo</p>
-              <p className="text-[10px] md:text-xs lg:text-eyebrow text-white/80 uppercase font-black mt-1.5 tracking-widest">Certificado ANSV</p>
+              <p className="text-xl sm:text-2xl md:text-3xl lg:text-h3 font-display font-bold text-gold leading-none">Equipo</p>
+              <p className="text-[9px] sm:text-[10px] md:text-xs lg:text-eyebrow text-white/80 uppercase font-black mt-1.5 tracking-widest">Certificado ANSV</p>
             </div>
             
             <div className="flex flex-col items-center text-center md:items-start md:text-left">
-              <p className="text-2xl md:text-3xl lg:text-h3 font-display font-bold text-gold leading-none">+5 años</p>
-              <p className="text-[10px] md:text-xs lg:text-eyebrow text-white/80 uppercase font-black mt-1.5 tracking-widest">formando pilotos</p>
+              <p className="text-xl sm:text-2xl md:text-3xl lg:text-h3 font-display font-bold text-gold leading-none">+5 años</p>
+              <p className="text-[9px] sm:text-[10px] md:text-xs lg:text-eyebrow text-white/80 uppercase font-black mt-1.5 tracking-widest">formando pilotos</p>
             </div>
             
             <div className="flex flex-col items-center text-center md:items-start md:text-left">
               <div className="flex gap-1 justify-center md:justify-start py-1 md:py-1.5">
                 {[...Array(5)].map((_, i) => (
-                  <Star key={i} strokeWidth={0} className={cn("w-5 h-5 md:w-7 md:h-7 transition-all duration-300", i < starCount ? "text-yellow-400 fill-yellow-400 scale-110" : "text-white/20 fill-white/20")} />
+                  <Star key={i} strokeWidth={0} className={cn("w-4 h-4 sm:w-5 sm:h-5 md:w-7 md:h-7 transition-all duration-300", i < starCount ? "text-yellow-400 fill-yellow-400 scale-110" : "text-white/20 fill-white/20")} />
                 ))}
               </div>
-              <p className="text-[10px] md:text-xs lg:text-eyebrow text-white/80 uppercase font-black mt-1 tracking-widest">Recomendados</p>
+              <p className="text-[9px] sm:text-[10px] md:text-xs lg:text-eyebrow text-white/80 uppercase font-black mt-1 tracking-widest">Recomendados</p>
             </div>
           </div>
         </div>
       </div>
       
-      {/* Scroll arrow - Fixed at the left to avoid overlapping content in PC */}
+      {/* Scroll arrow - Fixed at the left to avoid overlapping content */}
       <div className="absolute bottom-8 left-8 z-30 animate-bounce opacity-50 hidden sm:block">
         <ChevronDown className="w-8 h-8 text-white" />
       </div>
