@@ -49,31 +49,37 @@ export const Hero = () => {
   }, []);
 
   return (
-    <section id="inicio" className="relative h-[100svh] min-h-[100svh] flex flex-col items-center pt-20 pb-0 md:pt-28 md:pb-0 lg:pt-32 lg:pb-0 overflow-hidden bg-black">
+    <section id="inicio" className="relative h-[100svh] min-h-[100svh] flex flex-col items-center pt-28 pb-10 md:pt-36 md:pb-16 lg:pt-40 lg:pb-0 overflow-hidden bg-black">
       <div className="absolute inset-0 z-0">
-        <Image src={heroImg?.imageUrl || ''} alt={heroImg?.description || 'Autoescuela'} fill className="object-cover object-center blur-[2px] md:blur-[4px] scale-105 opacity-60" priority />
-        <div className="absolute inset-0 bg-gradient-to-b from-black via-black/40 to-background z-10"></div>
+        <Image 
+          src={heroImg?.imageUrl || ''} 
+          alt={heroImg?.description || 'Autoescuela'} 
+          fill 
+          className="object-cover object-center blur-[1px] md:blur-[2px] scale-105 opacity-50" 
+          priority 
+        />
+        <div className="absolute inset-0 bg-gradient-to-b from-black via-black/60 to-background z-10"></div>
       </div>
 
-      <div className="w-full max-w-[1440px] mx-auto px-4 lg:px-6 relative z-20 flex-1 flex flex-col justify-between h-full">
-        <div className="max-w-4xl text-left flex flex-col items-start gap-4 md:gap-8 mt-1 md:mt-2">
-          <div className="inline-block px-4 py-1.5 text-eyebrow font-semibold text-white uppercase tracking-[0.12em] bg-white/10 backdrop-blur-md border border-white/20 rounded-full animate-in fade-in slide-in-from-bottom-4 duration-700">
-            AUTOESCUELA EN RÍO GALLEGOS
+      <div className="w-full max-w-[1440px] mx-auto px-6 lg:px-10 relative z-20 flex-1 flex flex-col justify-between h-full">
+        <div className="max-w-4xl flex flex-col items-center text-center md:items-start md:text-left gap-6 md:gap-8 mt-2 md:mt-0">
+          <div className="inline-block px-4 py-1.5 text-[11px] md:text-eyebrow font-bold text-white uppercase tracking-[0.15em] bg-white/10 backdrop-blur-md border border-white/20 rounded-full animate-in fade-in slide-in-from-bottom-4 duration-700">
+            Autoescuela en Río Gallegos
           </div>
           
           <div className="space-y-4 md:space-y-6">
-            <h1 className="text-h1 font-display font-semibold text-white drop-shadow-md animate-in fade-in slide-in-from-bottom-6 duration-1000 delay-100">
+            <h1 className="text-3xl sm:text-4xl md:text-h1 font-display font-semibold text-white drop-shadow-lg animate-in fade-in slide-in-from-bottom-6 duration-1000 delay-100 leading-[1.1]">
               <span className="text-primary">Aprendé a conducir</span> con clases adaptadas a tu nivel
             </h1>
             
-            <p className="text-body-lg text-white/90 max-w-[68ch] animate-in fade-in slide-in-from-bottom-8 duration-1000 delay-200 font-medium">
+            <p className="text-base md:text-body-lg text-white/90 max-w-[60ch] animate-in fade-in slide-in-from-bottom-8 duration-1000 delay-200 font-medium">
               Clases teóricas y prácticas para empezar desde cero, mejorar tu manejo o prepararte para el examen práctico. Avanzá con acompañamiento profesional y horarios adaptados a tu disponibilidad.
             </p>
           </div>
           
-          <div className="flex flex-col sm:flex-row gap-4 animate-in fade-in slide-in-from-bottom-10 duration-1000 delay-300 w-full sm:w-auto mt-4 md:mt-0">
+          <div className="flex flex-col sm:flex-row gap-4 animate-in fade-in slide-in-from-bottom-10 duration-1000 delay-300 w-full sm:w-auto mt-2 md:mt-0">
             <Link href="#planes" className="w-full sm:w-auto">
-              <Button size="lg" className="h-14 md:h-16 px-10 md:px-12 text-lg bg-primary hover:bg-primary/90 rounded-full w-full font-bold transition-all active:scale-95 shadow-lg shadow-primary/20">
+              <Button size="lg" className="h-14 md:h-16 px-10 md:px-12 text-lg bg-primary hover:bg-primary/90 rounded-full w-full font-bold transition-all active:scale-95 shadow-xl shadow-primary/20">
                 <span className="inline-flex items-center min-w-[6rem] justify-center">
                   {typedText}
                   <span className="ml-1 w-[2px] h-5 bg-white animate-pulse" />
@@ -84,29 +90,29 @@ export const Hero = () => {
           </div>
         </div>
         
-        <div className="flex flex-wrap items-center justify-center lg:justify-start gap-y-6 gap-x-6 sm:gap-x-10 md:gap-x-14 animate-in fade-in duration-1000 delay-500 pt-6 pb-40 md:pb-24 w-full">
-          <div className="flex flex-col items-center text-center">
-            <p className="text-h3 font-display font-bold text-gold leading-none">Equipo</p>
-            <p className="text-[10px] md:text-eyebrow text-white/50 uppercase font-bold mt-2">CERTIFICADO POR LA ANSV</p>
+        <div className="flex flex-wrap items-center justify-center lg:justify-start gap-y-4 gap-x-6 sm:gap-x-10 md:gap-x-14 animate-in fade-in duration-1000 delay-500 pt-8 pb-20 md:pb-24 w-full border-t border-white/5 bg-black/20 backdrop-blur-sm lg:bg-transparent lg:border-none lg:backdrop-blur-none">
+          <div className="flex flex-col items-center text-center lg:items-start lg:text-left">
+            <p className="text-xl md:text-h3 font-display font-bold text-gold leading-none">Equipo</p>
+            <p className="text-[9px] md:text-eyebrow text-white/60 uppercase font-bold mt-1.5 tracking-wider">Certificado por la ANSV</p>
           </div>
-          <div className="hidden sm:block w-px h-10 md:h-14 bg-white/20"></div>
-          <div className="flex flex-col items-center text-center">
-            <p className="text-h3 font-display font-bold text-gold leading-none">+5 años</p>
-            <p className="text-[10px] md:text-eyebrow text-white/50 uppercase font-bold mt-2">formando conductores</p>
+          <div className="hidden sm:block w-px h-8 md:h-12 bg-white/20"></div>
+          <div className="flex flex-col items-center text-center lg:items-start lg:text-left">
+            <p className="text-xl md:text-h3 font-display font-bold text-gold leading-none">+5 años</p>
+            <p className="text-[9px] md:text-eyebrow text-white/60 uppercase font-bold mt-1.5 tracking-wider">formando conductores</p>
           </div>
-          <div className="hidden sm:block w-px h-10 md:h-14 bg-white/20"></div>
-          <div className="flex flex-col items-center text-center">
-            <div className="flex gap-0.5 justify-center py-1">
+          <div className="hidden sm:block w-px h-8 md:h-12 bg-white/20"></div>
+          <div className="flex flex-col items-center text-center lg:items-start lg:text-left">
+            <div className="flex gap-0.5 justify-center lg:justify-start py-1">
               {[...Array(5)].map((_, i) => (
-                <Star key={i} strokeWidth={0} className={cn("w-4 h-4 md:w-5 md:h-5 transition-all duration-300", i < starCount ? "text-yellow-400 fill-yellow-400 scale-110" : "text-white/10 fill-white/10")} />
+                <Star key={i} strokeWidth={0} className={cn("w-3.5 h-3.5 md:w-5 md:h-5 transition-all duration-300", i < starCount ? "text-yellow-400 fill-yellow-400 scale-110" : "text-white/10 fill-white/10")} />
               ))}
             </div>
-            <p className="text-[10px] md:text-eyebrow text-white/50 uppercase font-bold mt-2">RECOMENDADOS</p>
+            <p className="text-[9px] md:text-eyebrow text-white/60 uppercase font-bold mt-1 tracking-wider">Recomendados</p>
           </div>
         </div>
       </div>
-      <div className="absolute bottom-6 left-1/2 -translate-x-1/2 z-30 animate-bounce opacity-40 hidden sm:block">
-        <ChevronDown className="w-8 h-8 text-white" />
+      <div className="absolute bottom-6 left-1/2 -translate-x-1/2 z-30 animate-bounce opacity-50">
+        <ChevronDown className="w-6 h-6 md:w-8 md:h-8 text-white" />
       </div>
     </section>
   );
