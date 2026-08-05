@@ -138,6 +138,7 @@ export const Testimonials = () => {
                               "transition-transform duration-500 group-hover:scale-105",
                               hasContent ? "object-cover" : "object-cover"
                             )}
+                            style={!hasContent ? { objectPosition: 'center 10%' } : undefined}
                             data-ai-hint={headerImg.imageHint}
                           />
                           {!hasContent && (
