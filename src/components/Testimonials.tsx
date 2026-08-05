@@ -34,6 +34,11 @@ const testimonials = [
     gender: 'f'
   },
   {
+    name: 'Agustín Vallejos',
+    content: '¡Qué tal, buenas tardes! Mi experiencia en la academia fue bastante positiva. El instructor con paciencia me indicó cómo colocar los espejos, cómo se hacían las maniobras, la observación de los errores que tuve para poder ayudarme, y la forma clara de explicarme. La verdad fue una experiencia bastante buena, sin quejas y muy agradecido, la verdad. 🏁',
+    gender: 'm'
+  },
+  {
     name: 'Maria Silisque',
     content: '¡EXCELENTE DIEZ! Recomiendo, super responsable, respetuoso y con una paciencia de oro. Gracias!!',
     gender: 'f'
