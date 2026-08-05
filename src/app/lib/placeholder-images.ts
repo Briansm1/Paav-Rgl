@@ -28,7 +28,7 @@ export const PlaceHolderImages: ImagePlaceholder[] = [
   {
     "id": "service-theory",
     "description": "Aula con gente aprendiendo teoría de conducción",
-    "imageUrl": "https://i.imgur.com/9ocLjBF.jpeg",
+    "imageUrl": "https://i.imgur.com/faHMggb.jpeg",
     "imageHint": "classroom study"
   },
   {
