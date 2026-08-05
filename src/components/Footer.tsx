@@ -57,9 +57,6 @@ export const Footer = () => {
             <Link href="#" className="hover:text-white py-2">Términos y Condiciones</Link>
             <Link href="#" className="hover:text-white py-2">Política de Cookies</Link>
           </div>
-          <div className="text-caption font-semibold tracking-widest text-slate-600 uppercase">
-            DESARROLLADO POR <a href="https://www.exvolusion.com" target="_blank" rel="noopener noreferrer" className="hover:text-primary py-2 px-1">EXVOLUSIÓN</a>
-          </div>
         </div>
       </div>
     </footer>
