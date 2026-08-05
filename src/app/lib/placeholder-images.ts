@@ -40,7 +40,7 @@ export const PlaceHolderImages: ImagePlaceholder[] = [
   {
     "id": "tecnica",
     "description": "Técnica y dominio del vehículo",
-    "imageUrl": "https://i.imgur.com/dbY1ZRh.png",
+    "imageUrl": "https://i.imgur.com/axRAgIJ.jpeg",
     "imageHint": "driving technique"
   },
   {
