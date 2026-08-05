@@ -60,6 +60,12 @@ const testimonials = [
     name: 'Maura Rivero',
     content: 'Brian, excelente profe, gracias por la paciencia y dedicación.',
     role: 'Egresada'
+  },
+  {
+    name: 'Damaris Peñaloza',
+    content: 'Si se pudo 💪🏻, muchísimas gracias por el acompañamiento.',
+    headerImageId: 'achievement-damaris',
+    role: 'Egresada'
   }
 ];
 

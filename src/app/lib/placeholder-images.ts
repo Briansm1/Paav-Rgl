@@ -232,7 +232,7 @@ export const PlaceHolderImages: ImagePlaceholder[] = [
   {
     "id": "achievement-damaris",
     "description": "Logro de Damaris Peñaloza",
-    "imageUrl": "https://i.imgur.com/CrgXPWW.jpeg",
+    "imageUrl": "https://i.imgur.com/v1beaNs.jpeg",
     "imageHint": "driving success"
   },
   {
