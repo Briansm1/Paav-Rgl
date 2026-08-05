@@ -21,7 +21,8 @@ const testimonials = [
     name: 'Daniela Rojas',
     content: 'Queríamos agradecerte por el acompañamiento en este proceso tan importante para nuestra hija, por ayudarla a perder sus miedos, a creer en que podía lograrlo y, sobre todo, a sentirse segura en cada movimiento. El mérito de esta licencia es de ella, pero sin tu ayuda no hubiese sido posible. Tu paciencia y técnicas son increíbles, y las palabras de aliento ya son de otro nivel. Muchísimas gracias, Brian, por estas semanas acompañándola en este proceso de aprendizaje.',
     headerImageId: 'achievement-daniela',
-    gender: 'f'
+    gender: 'f',
+    role: 'MADRE DE ALUMNA'
   },
   {
     name: 'Julia Geoia',
@@ -52,7 +53,7 @@ const testimonials = [
   },
   {
     name: 'Oscar Benítez',
-    content: 'Excelente. Quiero agradecer al instructor de manejo por su profesionalismo, paciencia y compromiso en la formación de mi hija para obtener su licencia de conducir. No solo enseña a conducir, enseña responsabilidad y seguridad. ¡Gracias por acompañarla en este paso tan importante!',
+    content: 'Excelente. Quiero agradecer al instructor de manejo por su profesionalismo, paciencia y compromiso en la formación de mi hija para obtener su licenciad de conducir. No solo enseña a conducir, enseña responsabilidad y seguridad. ¡Gracias por acompañarla en este paso tan importante!',
     gender: 'm',
     role: 'PADRE DE ALUMNA'
   },
