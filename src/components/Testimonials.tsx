@@ -1,4 +1,3 @@
-
 "use client";
 
 import React from 'react';
@@ -59,12 +58,6 @@ const testimonials = [
   {
     name: 'Maura Rivero',
     content: 'Brian, excelente profe, gracias por la paciencia y dedicación.',
-    gender: 'f'
-  },
-  {
-    name: 'Damaris Peñaloza',
-    content: 'Si se pudo 💪🏻, muchísimas gracias por el acompañamiento.',
-    headerImageId: 'achievement-damaris',
     gender: 'f'
   },
   {
