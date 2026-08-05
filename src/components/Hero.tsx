@@ -94,7 +94,7 @@ export const Hero = () => {
           </div>
         </div>
         
-        <div className="flex flex-wrap items-center justify-center lg:justify-start gap-y-4 gap-x-6 sm:gap-x-10 md:gap-x-14 animate-in fade-in duration-1000 delay-500 pt-8 pb-48 md:pb-24 w-full border-t border-white/5 lg:border-none">
+        <div className="flex flex-wrap items-center justify-center lg:justify-start gap-y-4 gap-x-6 sm:gap-x-10 md:gap-x-14 animate-in fade-in duration-1000 delay-500 pt-8 pb-48 md:pb-24 w-full">
           <div className="flex flex-col items-center text-center lg:items-start lg:text-left">
             <p className="text-xl md:text-h3 font-display font-bold text-gold leading-none">Equipo</p>
             <p className="text-[9px] md:text-eyebrow text-white/60 uppercase font-bold mt-1.5 tracking-wider">Certificado por la ANSV</p>
