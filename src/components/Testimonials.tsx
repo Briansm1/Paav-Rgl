@@ -66,6 +66,11 @@ const testimonials = [
     gender: 'f'
   },
   {
+    name: 'Pablo Ojeda',
+    content: 'Bueno. Primero que nada, agradecer a Brian por su paciencia y la facilidad que tiene a la hora de enseñar. Fue una experiencia buenísima, sin ningún inconveniente. Recomiendo ampliamente Pilotos ases al volante. 🏁',
+    gender: 'm'
+  },
+  {
     isSocial: true,
     name: '¡Ver más historias!',
     content: 'Seguinos en Instagram para conocer más experiencias y el día a día de nuestra academia.',
