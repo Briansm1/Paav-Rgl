@@ -47,10 +47,10 @@ export const Hero = () => {
 
   return (
     <section id="inicio" className="relative h-[100svh] min-h-[100svh] flex flex-col items-center overflow-hidden bg-black">
-      {/* Background Video - Replaces static Image */}
+      {/* Background Video */}
       <div className="absolute inset-0 z-0">
         <video 
-          src="https://i.imgur.com/PubXOVY.mp4"
+          src="https://i.imgur.com/Ahthk3T.mp4"
           autoPlay
           loop
           muted
