@@ -29,7 +29,7 @@ const testimonials = [
   },
   {
     name: 'Candelaria Pereyra',
-    content: 'Holi, la verdad, super conforme con las clases, me sorprendio haber aprendido un monton en poco tiempo y el hecho de que despues practique con autos reales y no conos, me dejo muy sorprendida por pensar de que no estaba lista. Brian el instructor, super buena onda, explica re bien y claro y paciente ante todo. Super seguro y divertido. Tengo amigos que quieren aprender, asi que les voy a recomendar a ustedes, 10/10. Muchísimas gracias.',
+    content: 'Holi, la verdad, súper conforme con las clases. Me sorprendió haber aprendido un montón en poco tiempo, y el hecho de que después practiqué con autos reales y no con conos me dejó muy sorprendida por pensar que no estaba lista. Brian, el instructor, tiene súper buena onda, explica re bien, claro y paciente ante todo. Súper seguro y divertido. Tengo amigos que quieren aprender, así que les voy a recomendar a ustedes, 10/10. Muchísimas gracias.',
     headerImageId: 'achievement-candelaria',
     gender: 'f'
   },
@@ -81,7 +81,7 @@ export const Testimonials = () => {
               Historias de quienes confiaron en <span className="text-primary">nosotros</span>
             </h2>
             <p className="text-body-lg text-muted-foreground max-w-[68ch] mx-auto font-sans">
-              Personas que llegaron con dudas o nervios y hoy cuentan cómo fue su proceso.
+              Personas que llegaron con dudas or nervios y hoy cuentan cómo fue su proceso.
             </p>
           </div>
 
