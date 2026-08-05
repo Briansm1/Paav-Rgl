@@ -62,7 +62,7 @@ export const Hero = () => {
       </div>
 
       {/* Content Container - Optimized for all devices */}
-      <div className="w-full max-w-[1440px] mx-auto px-4 min-[375px]:px-6 lg:px-10 relative z-20 flex-1 flex flex-col justify-start md:justify-center pt-[250px] md:pt-32 pb-8 md:pb-12">
+      <div className="w-full max-w-[1440px] mx-auto px-4 min-[375px]:px-6 lg:px-10 relative z-20 flex-1 flex flex-col justify-start md:justify-center pt-28 md:pt-32 pb-8 md:pb-12">
         <div className="w-full flex flex-col justify-center items-center md:items-start gap-6 min-[375px]:gap-10 md:gap-14">
           
           {/* Main content block */}
