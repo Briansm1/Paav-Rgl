@@ -88,13 +88,13 @@ export const Hero = () => {
             </div>
           </div>
 
-          {/* Badge moved to the opposite side (top-right on desktop) */}
+          {/* Badge at the opposite side */}
           <div className="inline-block px-4 py-1.5 text-[11px] md:text-eyebrow font-bold text-white uppercase tracking-[0.15em] bg-white/10 backdrop-blur-md border border-white/20 rounded-full animate-in fade-in slide-in-from-bottom-4 duration-700 whitespace-nowrap">
             Autoescuela en Río Gallegos
           </div>
         </div>
         
-        <div className="flex flex-wrap items-center justify-center lg:justify-start gap-y-4 gap-x-6 sm:gap-x-10 md:gap-x-14 animate-in fade-in duration-1000 delay-500 pt-8 pb-48 md:pb-24 w-full border-t border-white/5 bg-black/20 backdrop-blur-sm lg:bg-transparent lg:border-none lg:backdrop-blur-none">
+        <div className="flex flex-wrap items-center justify-center lg:justify-start gap-y-4 gap-x-6 sm:gap-x-10 md:gap-x-14 animate-in fade-in duration-1000 delay-500 pt-8 pb-48 md:pb-24 w-full border-t border-white/5 lg:border-none">
           <div className="flex flex-col items-center text-center lg:items-start lg:text-left">
             <p className="text-xl md:text-h3 font-display font-bold text-gold leading-none">Equipo</p>
             <p className="text-[9px] md:text-eyebrow text-white/60 uppercase font-bold mt-1.5 tracking-wider">Certificado por la ANSV</p>
