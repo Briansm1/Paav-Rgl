@@ -67,7 +67,7 @@ const testimonials = [
   },
   {
     name: 'Pablo Ojeda',
-    content: 'Bueno. Primero que nada, agradecer a Brian por su paciencia y la facilidad que tiene a la hora de enseñar. Fue una experiencia buenísima, sin ningún inconveniente. Recomiendo ampliamente Pilotos ases al volante. 🏁',
+    content: 'Bueno. Primero que nada, agradecer a Brian por su paciencia y la facilidad que tiene a la hora de enseñar. Fue una experiencia buenísima, sin ningún inconveniente. Los recomiendo ampliamente, sin la ayuda de ustedes no hubiese podido obtener mi licencia. 🏁',
     gender: 'm'
   },
   {
