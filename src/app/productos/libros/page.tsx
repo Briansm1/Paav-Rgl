@@ -1,3 +1,4 @@
+
 'use client';
 
 import React, { useState } from 'react';
@@ -21,11 +22,11 @@ const digitalBooks = [
     description: 'Mejorá tu seguridad y criterio al volante. Para quienes quieren superar miedos, mejorar su toma de decisiones y conducir con más confianza.',
     longDescription: 'Este libro digital te llevará de la mano en el proceso de perder el miedo al volante. Descubrirás técnicas psicológicas para mantener la calma y una guía paso a paso sobre los fundamentos técnicos que todo conductor principiante debe dominar antes de salir a la calle.',
     features: [
-      'Sistema paso a paso para desarrollar criterio y seguridad al volante.',
-      'Técnicas para reducir nervios y controlar la ansiedad antes de conducir.',
-      'Herramientas para tomar mejores decisiones en situaciones reales de tránsito.',
-      'Identificación de errores y trampas comunes que afectan a conductores principiantes.',
-      'Plan de entrenamiento estructurado para mejorar progresivamente.'
+      'Sistema paso a paso para desarrollar criterio y seguridad al volante',
+      'Técnicas para reducir nervios y controlar la ansiedad antes de conducir',
+      'Herramientas para tomar mejores decisiones en situaciones reales de tránsito',
+      'Identificación de errores y trampas comunes que afectan a conductores principiantes',
+      'Plan de entrenamiento estructurado para mejorar progresivamente'
     ],
     imageUrl: PlaceHolderImages.find(img => img.id === 'book-novato')?.imageUrl || '',
     whatsappLink: "https://mpago.li/1UBsjWk"
@@ -39,9 +40,9 @@ const digitalBooks = [
     description: 'Prepará tu mente para rendir con más confianza. Pensado para quienes quieren trabajar sus nervios, mejorar su seguridad y llegar al examen práctico con una mentalidad más preparada.',
     longDescription: '¿Estacionar es tu pesadilla? En este e-book desglosamos cada maniobra de estacionamiento (paralelo, a 45° y 90°) con puntos de referencia exactos y trucos de instructor que no te enseñan en otros lados. Ganá precisión milimétrica.',
     features: [
-      'Preparación mental y emocional antes del examen.',
-      'Estrategias para controlar nervios y presión.',
-      'Herramientas para afrontar la evaluación con mayor tranquilidad.'
+      'Preparación mental y emocional antes del examen',
+      'Estrategias para controlar nervios y presión',
+      'Herramientas para afrontar la evaluación con mayor tranquilidad'
     ],
     imageUrl: PlaceHolderImages.find(img => img.id === 'book-maniobras')?.imageUrl || '',
     whatsappLink: "https://mpago.li/2uCr7Wp"
@@ -55,10 +56,10 @@ const digitalBooks = [
     description: 'Conocé mejor tu vehículo. Aprendé los conceptos básicos del funcionamiento del auto y adquirí conocimientos útiles para cuidarlo y entenderlo mejor.',
     longDescription: 'En este manual práctico aprenderás a identificar los componentes vitales de tu auto. Desde cómo revisar el aceite y el refrigerante hasta el cambio correcto de un neumático. Es la guía indispensable para que nunca te quedes a pie.',
     features: [
-      'Fundamentos de mecánica básica y avanzada.',
-      'Identificación de componentes del vehículo.',
-      'Diagnóstico preciso de fallas.',
-      'Consejos prácticos de mantenimiento.'
+      'Fundamentos de mecánica básica y avanzada',
+      'Identificación de componentes del vehículo',
+      'Diagnóstico preciso de fallas',
+      'Consejos prácticos de mantenimiento'
     ],
     imageUrl: PlaceHolderImages.find(img => img.id === 'book-teoria')?.imageUrl || '',
     whatsappLink: "https://mpago.li/2uSG2jd"
@@ -73,9 +74,9 @@ const digitalBooks = [
     description: 'Reforzá tus conocimientos de conducción. Un recurso para estudiar normas, señales y conceptos importantes antes del examen teórico.',
     longDescription: 'Olvidate de memorizar leyes aburridas. Este manual te enseña el marco legal aplicado a situaciones cotidianas del tráfico. Es la herramienta definitiva para aprobar el examen teórico y conducir con conocimiento real de tus derechos y obligaciones.',
     features: [
-      'Material de estudio vial.',
-      'Señales y normas de tránsito.',
-      'Simulador con +85 preguntas.'
+      'Material de estudio vial',
+      'Señales y normas de tránsito',
+      'Simulador con +85 preguntas'
     ],
     imageUrl: PlaceHolderImages.find(img => img.id === 'book-experto')?.imageUrl || '',
     whatsappLink: "https://mpago.li/1ochaL6"
@@ -197,7 +198,7 @@ export default function LibrosDigitalesPage() {
                     {book.features.map((feature, i) => (
                       <div key={i} className="flex items-start gap-3">
                         <CheckCircle2 className="w-5 h-5 text-primary shrink-0 mt-0.5" />
-                        <span className="text-sm md:text-base text-foreground/90 font-medium leading-tight">{feature}</span>
+                        <span className="text-sm md:text-base text-foreground/90 font-medium leading-tight">{feature}.</span>
                       </div>
                     ))}
                   </div>
