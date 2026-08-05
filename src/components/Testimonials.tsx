@@ -126,7 +126,7 @@ export const Testimonials = () => {
                       {headerImg && (
                         <div className={cn(
                           "relative w-full overflow-hidden border-b border-white/5 bg-black/20",
-                          hasContent ? "aspect-[16/10]" : "aspect-square"
+                          hasContent ? "aspect-[16/10]" : "aspect-[4/5]"
                         )}>
                           <Image 
                             src={headerImg.imageUrl} 
@@ -136,13 +136,19 @@ export const Testimonials = () => {
                             sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                             className={cn(
                               "transition-transform duration-500 group-hover:scale-105",
-                              !hasContent ? "object-contain p-4" : "object-cover"
+                              hasContent ? "object-cover" : "object-cover"
                             )}
                             data-ai-hint={headerImg.imageHint}
                           />
+                          {!hasContent && (
+                            <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent z-10" />
+                          )}
                         </div>
                       )}
-                      <CardContent className={cn("p-8 flex flex-col", hasContent ? "flex-grow" : "mt-auto")}>
+                      <CardContent className={cn(
+                        "p-8 flex flex-col relative",
+                        hasContent ? "flex-grow" : "absolute bottom-0 left-0 right-0 z-20 text-white border-none pt-0"
+                      )}>
                         {hasContent && (
                           <div className="mb-6">
                             <div className="flex gap-0.5 mb-4">
@@ -156,9 +162,18 @@ export const Testimonials = () => {
                           </div>
                         )}
 
-                        <div className={cn("pt-6 border-t border-white/5", !hasContent && "border-0 pt-0")}>
-                          <p className="font-bold text-foreground text-lg tracking-tight">{t.name}</p>
-                          <p className="text-[10px] text-primary font-bold uppercase tracking-widest mt-1">{t.role} Pilotos</p>
+                        <div className={cn(
+                          "pt-6 border-t border-white/5",
+                          !hasContent && "border-none pt-0"
+                        )}>
+                          <p className={cn(
+                            "font-bold text-lg tracking-tight",
+                            !hasContent ? "text-white" : "text-foreground"
+                          )}>{t.name}</p>
+                          <p className={cn(
+                            "text-[10px] font-bold uppercase tracking-widest mt-1",
+                            !hasContent ? "text-primary-foreground/80" : "text-primary"
+                          )}>{t.role} Pilotos</p>
                         </div>
                       </CardContent>
                     </Card>
