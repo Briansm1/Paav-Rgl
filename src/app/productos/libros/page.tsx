@@ -1,7 +1,6 @@
-
 'use client';
 
-import React, { useState } from 'react';
+import React from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
 import { Header } from '@/components/Header';
@@ -9,7 +8,6 @@ import { Footer } from '@/components/Footer';
 import { Button } from '@/components/ui/button';
 import { ArrowLeft, CheckCircle2 } from 'lucide-react';
 import { PlaceHolderImages } from '@/app/lib/placeholder-images';
-import { cn } from '@/lib/utils';
 
 const digitalBooks = [
   {
@@ -98,29 +96,6 @@ const benefits = [
   }
 ];
 
-const ExpandableDescription = ({ text }: { text: string }) => {
-  const [isExpanded, setIsExpanded] = useState(false);
-  
-  return (
-    <div className="mb-4 flex-grow">
-      <p className={cn(
-        "text-muted-foreground text-base md:text-lg leading-relaxed transition-all duration-300",
-        !isExpanded && "line-clamp-3"
-      )}>
-        {text}
-      </p>
-      {text.length > 80 && (
-        <button 
-          onClick={() => setIsExpanded(!isExpanded)}
-          className="text-primary text-sm font-bold uppercase mt-2 hover:underline tracking-widest"
-        >
-          {isExpanded ? 'Ver menos' : 'Ver más'}
-        </button>
-      )}
-    </div>
-  );
-};
-
 export default function LibrosDigitalesPage() {
   return (
     <main className="min-h-screen bg-background text-body">
@@ -190,7 +165,11 @@ export default function LibrosDigitalesPage() {
                     </span>
                   </div>
 
-                  <ExpandableDescription text={book.description} />
+                  <div className="mb-4 flex-grow">
+                    <p className="text-muted-foreground text-base md:text-lg leading-relaxed">
+                      {book.description}
+                    </p>
+                  </div>
 
                   {/* Clean and separated Checklist */}
                   <div className="w-full space-y-3 mb-8 text-left bg-white/5 p-6 rounded-2xl border border-white/10">
