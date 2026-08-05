@@ -65,7 +65,7 @@ export const Hero = () => {
         <div className="w-full flex flex-col md:flex-row justify-between items-center md:items-start gap-8">
           
           {/* Badge (First on Mobile, Second on Desktop) */}
-          <div className="order-1 md:order-2 inline-block px-4 py-2 text-xs md:text-eyebrow font-bold text-white uppercase tracking-[0.15em] bg-white/10 backdrop-blur-md border border-white/20 rounded-full animate-in fade-in slide-in-from-bottom-4 duration-700 whitespace-nowrap mb-4 md:mb-0">
+          <div className="order-1 md:order-2 inline-block px-4 py-2 text-sm md:text-eyebrow font-bold text-white uppercase tracking-[0.15em] bg-white/10 backdrop-blur-md border border-white/20 rounded-full animate-in fade-in slide-in-from-bottom-4 duration-700 whitespace-nowrap mb-4 md:mb-0">
             Autoescuela en Río Gallegos
           </div>
 
@@ -95,7 +95,7 @@ export const Hero = () => {
           </div>
         </div>
         
-        <div className="flex flex-wrap items-center justify-center lg:justify-start gap-y-6 gap-x-8 sm:gap-x-10 md:gap-x-14 animate-in fade-in duration-1000 delay-500 pt-8 pb-48 md:pb-24 w-full">
+        <div className="flex flex-wrap items-center justify-center lg:justify-start gap-y-6 gap-x-8 sm:gap-x-10 md:gap-x-14 animate-in fade-in duration-1000 delay-500 pt-8 pb-60 md:pb-32 w-full">
           <div className="flex flex-col items-center text-center lg:items-start lg:text-left">
             <p className="text-2xl md:text-h3 font-display font-bold text-gold leading-none">Equipo</p>
             <p className="text-[11px] md:text-eyebrow text-white/60 uppercase font-bold mt-1.5 tracking-wider">Certificado por la ANSV</p>
