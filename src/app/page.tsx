@@ -1,7 +1,6 @@
 import { Header } from '@/components/Header';
 import { Hero } from '@/components/Hero';
 import { Services } from '@/components/Services';
-import { PartnersTicker } from '@/components/PartnersTicker';
 import { Testimonials } from '@/components/Testimonials';
 import { Pricing } from '@/components/Pricing';
 import { Gallery } from '@/components/Gallery';
@@ -43,9 +42,6 @@ export default function Home() {
       </ScrollReveal>
       <ScrollReveal delay={250}>
         <CtaReady />
-      </ScrollReveal>
-      <ScrollReveal delay={300}>
-        <PartnersTicker />
       </ScrollReveal>
       <ScrollReveal delay={350}>
         <Faq />
