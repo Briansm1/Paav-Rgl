@@ -63,8 +63,14 @@ export const Hero = () => {
 
       <div className="w-full max-w-[1440px] mx-auto px-6 lg:px-10 relative z-20 flex-1 flex flex-col justify-between h-full">
         <div className="w-full flex flex-col md:flex-row justify-between items-center md:items-start gap-8">
-          {/* Main content block */}
-          <div className="max-w-3xl flex flex-col items-center text-center md:items-start md:text-left gap-6 md:gap-8">
+          
+          {/* Badge (First on Mobile, Second on Desktop) */}
+          <div className="order-1 md:order-2 inline-block px-4 py-2 text-xs md:text-eyebrow font-bold text-white uppercase tracking-[0.15em] bg-white/10 backdrop-blur-md border border-white/20 rounded-full animate-in fade-in slide-in-from-bottom-4 duration-700 whitespace-nowrap mb-4 md:mb-0">
+            Autoescuela en Río Gallegos
+          </div>
+
+          {/* Main content block (Second on Mobile, First on Desktop) */}
+          <div className="order-2 md:order-1 max-w-3xl flex flex-col items-center text-center md:items-start md:text-left gap-6 md:gap-8">
             <div className="space-y-4 md:space-y-6">
               <h1 className="text-4xl sm:text-5xl md:text-h1 font-display font-semibold text-white drop-shadow-lg animate-in fade-in slide-in-from-bottom-6 duration-1000 delay-100 leading-[1.1]">
                 <span className="text-primary">Aprendé a conducir</span> con clases adaptadas a tu nivel
@@ -86,11 +92,6 @@ export const Hero = () => {
                 </Button>
               </Link>
             </div>
-          </div>
-
-          {/* Badge at the opposite side */}
-          <div className="inline-block px-4 py-2 text-xs md:text-eyebrow font-bold text-white uppercase tracking-[0.15em] bg-white/10 backdrop-blur-md border border-white/20 rounded-full animate-in fade-in slide-in-from-bottom-4 duration-700 whitespace-nowrap">
-            Autoescuela en Río Gallegos
           </div>
         </div>
         
