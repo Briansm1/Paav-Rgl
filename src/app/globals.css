@@ -4,19 +4,19 @@
 
 @layer base {
   :root {
-    --background: 0 0% 0%; /* Negro puro */
+    --background: 0 0% 0%;
     --foreground: 218 71% 96%;
-    --card: 0 0% 7%; /* Negro muy claro para tarjetas */
+    --card: 0 0% 7%;
     --card-foreground: 218 71% 96%;
     --popover: 0 0% 7%;
     --popover-foreground: 218 71% 96%;
-    --primary: 213 74% 52%; /* Azul */
+    --primary: 213 74% 52%;
     --primary-foreground: 0 0% 100%;
-    --secondary: 0 0% 12%; /* Gris oscuro para separación */
+    --secondary: 0 0% 12%;
     --secondary-foreground: 213 74% 52%;
     --muted: 0 0% 10%;
     --muted-foreground: 220 10% 60%;
-    --accent: 25 100% 50%; /* Naranja Vial Vibrante */
+    --accent: 25 100% 50%;
     --accent-foreground: 0 0% 100%;
     --destructive: 0 84.2% 60.2%;
     --destructive-foreground: 0 0% 98%;
@@ -26,19 +26,38 @@
     --radius: 0.75rem;
     --gold: 47 95% 43%;
     --gold-foreground: 0 0% 100%;
-    --purple: 271 100% 67%; /* Violeta F1 Fastest Lap */
+    --purple: 271 100% 67%;
     --purple-foreground: 0 0% 100%;
+  }
+
+  html {
+    -webkit-text-size-adjust: 100%;
+    scroll-behavior: smooth;
+  }
+
+  body {
+    @apply bg-background text-foreground font-sans text-body antialiased;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-display font-semibold text-balance tracking-tight;
+  }
+
+  h1 { @apply text-h1; }
+  h2 { @apply text-h2; }
+  h3 { @apply text-h3; }
+
+  p, li {
+    @apply max-w-[68ch];
+  }
+
+  *:focus-visible {
+    @apply outline outline-[3px] outline-primary outline-offset-2;
   }
 }
 
-@layer base {
-  * {
-    @apply border-border;
-  }
-  body {
-    @apply bg-background text-foreground scroll-smooth font-body;
-  }
-  h1, h2, h3, h4, h5, h6 {
-    @apply font-title tracking-tight;
+@layer utilities {
+  .text-tabular {
+    font-variant-numeric: tabular-nums lining-nums;
   }
 }

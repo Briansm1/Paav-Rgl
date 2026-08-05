@@ -4,26 +4,20 @@ import { FirebaseClientProvider } from '@/firebase/client-provider';
 import { Toaster } from '@/components/ui/toaster';
 import { WhatsAppButton } from '@/components/WhatsAppButton';
 import Script from 'next/script';
-import { Inter, Montserrat, Poppins } from 'next/font/google';
+import { Inter, Barlow_Condensed } from 'next/font/google';
 
 const inter = Inter({
   subsets: ['latin'],
   display: 'swap',
-  variable: '--font-inter',
+  variable: '--font-body',
+  weight: ['400', '500', '600', '700'],
 });
 
-const montserrat = Montserrat({
+const barlowCondensed = Barlow_Condensed({
   subsets: ['latin'],
   display: 'swap',
-  variable: '--font-montserrat',
-  weight: ['900'],
-});
-
-const poppins = Poppins({
-  subsets: ['latin'],
-  display: 'swap',
-  variable: '--font-poppins',
-  weight: ['400', '500', '600', '700', '900'],
+  variable: '--font-display',
+  weight: ['500', '600', '700'],
 });
 
 export const metadata: Metadata = {
@@ -76,9 +70,8 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="es" className={`dark ${inter.variable} ${montserrat.variable} ${poppins.variable}`}>
+    <html lang="es" className={`dark ${inter.variable} ${barlowCondensed.variable} antialiased`}>
       <head>
-        {/* Google Analytics */}
         <Script
           src="https://www.googletagmanager.com/gtag/js?id=G-TXZ2N74HT0"
           strategy="afterInteractive"
@@ -93,7 +86,6 @@ export default function RootLayout({
           `}
         </Script>
 
-        {/* Meta Pixel Code */}
         <Script id="meta-pixel" strategy="afterInteractive">
           {`
             !function(f,b,e,v,n,t,s)
@@ -109,7 +101,7 @@ export default function RootLayout({
           `}
         </Script>
       </head>
-      <body className="font-body antialiased">
+      <body className="font-sans min-h-screen bg-background text-foreground selection:bg-primary selection:text-white">
         <noscript>
           <img 
             height="1" 

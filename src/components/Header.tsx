@@ -1,4 +1,3 @@
-
 "use client";
 
 import React, { useState, useEffect } from 'react';
@@ -25,17 +24,8 @@ export const Header = () => {
   const logoImg = PlaceHolderImages.find(img => img.id === 'academy-logo');
 
   useEffect(() => {
-    if (!window.location.hash) {
-      window.scrollTo(0, 0);
-    }
-    
-    if ('scrollRestoration' in window.history) {
-      window.history.scrollRestoration = 'manual';
-    }
-
     const handleScroll = () => {
       setIsScrolled(window.scrollY > 20);
-
       const sections = ['inicio', 'servicios', 'testimonios', 'planes', 'faq'];
       const current = sections.find(section => {
         const element = document.getElementById(section);
@@ -47,7 +37,6 @@ export const Header = () => {
       });
       if (current) setActiveSection(`/#${current}`);
     };
-    
     window.addEventListener('scroll', handleScroll);
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
@@ -80,7 +69,7 @@ export const Header = () => {
         setMobileMenuOpen(false);
       }}
       className={cn(
-        "relative text-sm lg:text-base font-bold transition-colors duration-300",
+        "relative text-[16px] font-medium transition-colors duration-300",
         activeSection === link.href 
           ? "text-primary" 
           : "text-slate-300 hover:text-white"
@@ -95,63 +84,42 @@ export const Header = () => {
   );
 
   return (
-    <header
-      className={cn(
-        "fixed top-0 left-0 right-0 z-50 transition-all duration-300 bg-black border-b border-white/5",
-        isScrolled || mobileMenuOpen 
-          ? "py-2 shadow-lg" 
-          : "py-4"
-      )}
-    >
+    <header className={cn(
+      "fixed top-0 left-0 right-0 z-50 transition-all duration-300 bg-black border-b border-white/5",
+      isScrolled || mobileMenuOpen ? "py-2 shadow-lg" : "py-4"
+    )}>
       <div className="w-full max-w-[1440px] mx-auto px-4 md:px-6 flex items-center justify-between">
-        <Link 
-          href="/#inicio" 
-          className="flex items-center gap-0 group relative z-50 -ml-1 md:-ml-2"
-          onClick={() => {
-            setActiveSection('/#inicio');
-            setMobileMenuOpen(false);
-          }}
-        >
+        <Link href="/#inicio" className="flex items-center group relative z-50 -ml-1 md:-ml-2" onClick={() => {
+          setActiveSection('/#inicio');
+          setMobileMenuOpen(false);
+        }}>
           {logoImg ? (
             <div className="relative h-12 w-48 md:h-14 md:w-60 transition-all duration-300">
-              <Image 
-                src={logoImg.imageUrl} 
-                alt={logoImg.description} 
-                fill
-                className="object-contain"
-                priority
-                data-ai-hint={logoImg.imageHint}
-              />
+              <Image src={logoImg.imageUrl} alt={logoImg.description} fill className="object-contain" priority />
             </div>
           ) : (
-            <span className="text-xl md:text-2xl font-bold font-headline tracking-tight text-white">
+            <span className="text-xl md:text-2xl font-bold font-display tracking-tight text-white uppercase">
               Pilotos - <span className="text-primary">ases al volante</span>
             </span>
           )}
         </Link>
 
-        {/* Desktop Nav */}
         <nav className="hidden md:flex items-center gap-6 lg:gap-8">
           {navLinks.slice(0, 4).map(renderNavLink)}
-          
           <DropdownMenu>
-            <DropdownMenuTrigger className="flex items-center gap-1 text-sm lg:text-base font-bold text-slate-300 hover:text-white outline-none transition-colors">
-              Productos
-              <ChevronDown className="w-4 h-4" />
+            <DropdownMenuTrigger className="flex items-center gap-1 text-[16px] font-medium text-slate-300 hover:text-white outline-none transition-colors">
+              Productos <ChevronDown className="w-4 h-4" />
             </DropdownMenuTrigger>
             <DropdownMenuContent className="bg-black border-white/10 text-white p-2 min-w-[220px]">
               {productLinks.map((product) => (
                 <DropdownMenuItem key={product.name} asChild className="focus:bg-primary focus:text-white cursor-pointer group">
-                  <Link 
-                    href={product.href} 
-                    className="flex items-center justify-between gap-3 p-2 rounded-md transition-colors w-full"
-                  >
+                  <Link href={product.href} className="flex items-center justify-between gap-3 p-2 rounded-md w-full">
                     <div className="flex items-center gap-3">
                       <span className="text-white group-focus:text-white">{product.icon}</span>
-                      <span className="font-bold text-sm">{product.name}</span>
+                      <span className="font-semibold text-caption">{product.name}</span>
                     </div>
                     {product.name === 'Cursos online' && (
-                      <Badge variant="outline" className="text-[8px] h-4 px-1.5 border-primary/50 text-primary uppercase font-black tracking-tighter shrink-0 group-focus:border-white/50 group-focus:text-white">
+                      <Badge variant="outline" className="text-[10px] h-4 px-1.5 border-primary/50 text-primary uppercase font-black tracking-tighter group-focus:border-white/50 group-focus:text-white">
                         Próximamente
                       </Badge>
                     )}
@@ -160,25 +128,17 @@ export const Header = () => {
               ))}
             </DropdownMenuContent>
           </DropdownMenu>
-
           {navLinks.slice(4).map(renderNavLink)}
-
           <DropdownMenu>
-            <DropdownMenuTrigger className="flex items-center gap-1 text-sm lg:text-base font-bold text-slate-300 hover:text-white outline-none transition-colors">
-              Redes
-              <ChevronDown className="w-4 h-4" />
+            <DropdownMenuTrigger className="flex items-center gap-1 text-[16px] font-medium text-slate-300 hover:text-white outline-none transition-colors">
+              Redes <ChevronDown className="w-4 h-4" />
             </DropdownMenuTrigger>
             <DropdownMenuContent className="bg-black border-white/10 text-white p-2 min-w-[160px]">
               {socialLinks.map((social) => (
                 <DropdownMenuItem key={social.name} asChild className="focus:bg-primary focus:text-white cursor-pointer">
-                  <a 
-                    href={social.href} 
-                    target="_blank" 
-                    rel="noopener noreferrer"
-                    className="flex items-center gap-3 p-2 rounded-md transition-colors"
-                  >
+                  <a href={social.href} target="_blank" rel="noopener noreferrer" className="flex items-center gap-3 p-2 rounded-md">
                     <span className="text-white">{social.icon}</span>
-                    <span className="font-bold text-sm">{social.name}</span>
+                    <span className="font-semibold text-caption">{social.name}</span>
                   </a>
                 </DropdownMenuItem>
               ))}
@@ -186,116 +146,58 @@ export const Header = () => {
           </DropdownMenu>
         </nav>
 
-        {/* Mobile Toggle */}
-        <button
-          className="md:hidden relative z-50 p-2 text-white focus:outline-none"
-          onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-          aria-label="Toggle menu"
-        >
+        <button className="md:hidden relative z-50 p-2 text-white" onClick={() => setMobileMenuOpen(!mobileMenuOpen)} aria-label="Toggle menu">
           {mobileMenuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
         </button>
       </div>
 
-      {/* Mobile Nav Overlay */}
       <div className={cn(
         "fixed inset-0 bg-black z-40 flex flex-col items-center justify-center transition-all duration-500 md:hidden overflow-y-auto pt-16",
         mobileMenuOpen ? "opacity-100 visible" : "opacity-0 invisible pointer-events-none"
       )}>
         <nav className="flex flex-col items-center gap-4 p-6 w-full max-sm text-center">
           {navLinks.slice(0, 4).map((link) => (
-            <Link
-              key={link.name}
-              href={link.href}
-              className={cn(
-                "text-2xl font-bold tracking-tight transition-colors py-2",
-                activeSection === link.href ? "text-primary" : "text-white"
-              )}
-              onClick={() => {
-                setActiveSection(link.href);
-                setMobileMenuOpen(false);
-              }}
-            >
+            <Link key={link.name} href={link.href} className={cn("text-2xl font-semibold tracking-tight py-2", activeSection === link.href ? "text-primary" : "text-white")} onClick={() => {
+              setActiveSection(link.href);
+              setMobileMenuOpen(false);
+            }}>
               {link.name}
             </Link>
           ))}
-          
           <div className="w-full flex flex-col items-center py-2">
-            <button 
-              onClick={() => setMobileProductsOpen(!mobileProductsOpen)}
-              className="flex items-center gap-2 text-2xl font-bold text-white py-2 focus:outline-none"
-            >
-              Productos
-              <ChevronDown className={cn("w-5 h-5 transition-transform", mobileProductsOpen && "rotate-180")} />
+            <button onClick={() => setMobileProductsOpen(!mobileProductsOpen)} className="flex items-center gap-2 text-2xl font-semibold text-white py-2">
+              Productos <ChevronDown className={cn("w-5 h-5 transition-transform", mobileProductsOpen && "rotate-180")} />
             </button>
-            <div className={cn(
-              "flex flex-col items-center gap-5 overflow-hidden transition-all duration-300 w-full bg-white/5 rounded-2xl",
-              mobileProductsOpen ? "max-h-72 py-6 mt-2 opacity-100" : "max-h-0 py-0 opacity-0"
-            )}>
+            <div className={cn("flex flex-col items-center gap-5 overflow-hidden transition-all duration-300 w-full bg-white/5 rounded-2xl", mobileProductsOpen ? "max-h-72 py-6 mt-2 opacity-100" : "max-h-0 py-0 opacity-0")}>
               {productLinks.map((product) => (
                 <div key={product.name} className="flex flex-col items-center gap-1.5">
-                  <Link
-                    href={product.href}
-                    className="text-lg font-bold text-slate-300 hover:text-primary transition-colors flex items-center gap-2"
-                    onClick={() => {
-                      setMobileMenuOpen(false);
-                      setMobileProductsOpen(false);
-                    }}
-                  >
-                    {product.icon}
-                    {product.name}
+                  <Link href={product.href} className="text-lg font-semibold text-slate-300 hover:text-primary flex items-center gap-2" onClick={() => {
+                    setMobileMenuOpen(false);
+                    setMobileProductsOpen(false);
+                  }}>
+                    {product.icon} {product.name}
                   </Link>
                   {product.name === 'Cursos online' && (
-                    <Badge variant="outline" className="text-[10px] h-5 px-2 border-primary/50 text-primary uppercase font-black">
-                      Próximamente
-                    </Badge>
+                    <Badge variant="outline" className="text-[10px] h-5 px-2 border-primary/50 text-primary uppercase font-black">Próximamente</Badge>
                   )}
                 </div>
               ))}
             </div>
           </div>
-
           {navLinks.slice(4).map((link) => (
-            <Link
-              key={link.name}
-              href={link.href}
-              className={cn(
-                "text-2xl font-bold tracking-tight transition-colors py-2",
-                activeSection === link.href ? "text-primary" : "text-white"
-              )}
-              onClick={() => {
-                setActiveSection(link.href);
-                setMobileMenuOpen(false);
-              }}
-            >
+            <Link key={link.name} href={link.href} className={cn("text-2xl font-semibold tracking-tight py-2", activeSection === link.href ? "text-primary" : "text-white")} onClick={() => {
+              setActiveSection(link.href);
+              setMobileMenuOpen(false);
+            }}>
               {link.name}
             </Link>
           ))}
-
           <div className="w-full pt-4">
             <Link href="/#planes" onClick={() => setMobileMenuOpen(false)}>
               <Button className="w-full h-12 bg-primary hover:bg-primary/90 rounded-full font-bold text-lg flex items-center justify-center gap-2">
-                Ver planes
-                <ChevronRight className="w-5 h-5" />
+                Ver planes <ChevronRight className="w-5 h-5" />
               </Button>
             </Link>
-          </div>
-          
-          <div className="w-full pt-8 mt-4 border-t border-white/10">
-            <p className="text-slate-500 text-[10px] font-black uppercase tracking-[0.2em] mb-4">Nuestras Redes</p>
-            <div className="flex justify-center gap-6">
-              {socialLinks.map((social) => (
-                <a 
-                  key={social.name}
-                  href={social.href} 
-                  target="_blank" 
-                  rel="noopener noreferrer"
-                  className="text-white hover:text-primary transition-colors"
-                  aria-label={social.name}
-                >
-                  <span className="[&>svg]:w-7 [&>svg]:h-7 text-white">{social.icon}</span>
-                </a>
-              ))}
-            </div>
           </div>
         </nav>
       </div>

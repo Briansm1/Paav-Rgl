@@ -2,7 +2,7 @@ import React from 'react';
 import Image from 'next/image';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { PlaceHolderImages } from '@/app/lib/placeholder-images';
-import { BookOpen, Award, ShieldCheck, Brain, Clock } from 'lucide-react';
+import { ShieldCheck, Award, Clock } from 'lucide-react';
 import {
   Carousel,
   CarouselContent,
@@ -30,31 +30,21 @@ const services = [
 export const Services = () => {
   return (
     <section id="servicios" className="relative py-20 md:py-32 bg-background overflow-hidden">
-      {/* Top and Bottom transitions */}
-      <div className="absolute top-0 left-0 right-0 h-48 bg-gradient-to-b from-background via-background/50 to-transparent pointer-events-none z-10"></div>
-      <div className="absolute bottom-0 left-0 right-0 h-48 bg-gradient-to-t from-background via-background/50 to-transparent pointer-events-none z-10"></div>
-      
       <div className="container mx-auto px-4 md:px-6 relative z-10">
         <div className="text-center max-w-4xl mx-auto mb-16 md:mb-24 px-4">
-          <span className="inline-block px-4 py-1.5 mb-6 text-xs font-bold tracking-widest text-primary uppercase bg-primary/10 rounded-full">
+          <span className="kicker kicker text-primary mb-6 inline-block bg-primary/10 px-4 py-1.5 rounded-full">
             NUESTRA METODOLOGÍA
           </span>
-          <h2 className="text-4xl md:text-6xl font-bold font-headline mb-6 tracking-tight text-foreground">
-            Confianza, criterio y técnica <span className="text-primary italic">al volante</span>
+          <h2 className="text-h2 font-display text-foreground mb-6">
+            Confianza, criterio y técnica <span className="text-primary">al volante</span>
           </h2>
-          <p className="text-lg md:text-xl text-muted-foreground leading-relaxed">
+          <p className="text-body-lg text-muted-foreground mx-auto max-w-[68ch]">
             Nuestra formación combina preparación emocional, conocimientos de tránsito y práctica para que avances de manera clara y progresiva.
           </p>
         </div>
 
         <div className="max-w-7xl mx-auto">
-          <Carousel
-            opts={{
-              align: "start",
-              loop: false,
-            }}
-            className="w-full"
-          >
+          <Carousel opts={{ align: "start", loop: false }} className="w-full">
             <CarouselContent className="-ml-4 md:-ml-8 lg:-ml-12 flex lg:justify-center">
               {services.map((service, index) => {
                 const img = PlaceHolderImages.find(p => p.id === service.imgId) || PlaceHolderImages[0];
@@ -62,84 +52,45 @@ export const Services = () => {
                   <CarouselItem key={index} className="pl-4 md:pl-8 lg:pl-12 basis-[85%] sm:basis-1/2 lg:basis-1/3 py-4">
                     <Card className="h-full relative overflow-hidden border-none bg-secondary shadow-xl rounded-[2.5rem]">
                       <div className="relative aspect-square overflow-hidden bg-black">
-                        <Image 
-                          src={img?.imageUrl || ''} 
-                          alt={service.title} 
-                          fill 
-                          priority={index < 3}
-                          sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
-                          className="object-cover"
-                          data-ai-hint={img?.imageHint}
-                        />
+                        <Image src={img?.imageUrl || ''} alt={service.title} fill className="object-cover" />
                         <div className="absolute inset-0 bg-gradient-to-t from-black/90 to-transparent"></div>
                       </div>
                       <CardHeader className="pt-8 px-6 text-center lg:text-left">
-                        <CardTitle className="text-xl md:text-2xl font-bold tracking-tight">{service.title}</CardTitle>
+                        <CardTitle className="text-h3 font-sans font-semibold tracking-tight">{service.title}</CardTitle>
                       </CardHeader>
                       <CardContent className="px-6 pb-8 text-center lg:text-left">
-                        <p className="text-muted-foreground text-sm md:text-base leading-relaxed">{service.description}</p>
+                        <p className="text-body text-muted-foreground max-w-[68ch]">{service.description}</p>
                       </CardContent>
                     </Card>
                   </CarouselItem>
                 );
               })}
             </CarouselContent>
-            
-            <div className="md:hidden text-center mt-6 text-[10px] text-muted-foreground uppercase tracking-[0.2em] font-black animate-pulse">
-              Desliza para ver nuestros pilares →
-            </div>
           </Carousel>
         </div>
 
-        <div className="mt-24 md:mt-40 p-1 md:p-2 bg-gradient-to-br from-primary/20 via-transparent to-accent/20 rounded-[2.5rem] overflow-hidden shadow-2xl mx-auto max-w-[1400px]">
+        <div className="mt-24 md:mt-40 p-1 bg-gradient-to-br from-primary/20 via-transparent to-accent/20 rounded-[2.5rem] overflow-hidden shadow-2xl mx-auto max-w-[1400px]">
           <div className="bg-secondary rounded-[2.4rem] p-8 md:p-12 lg:p-16">
             <div className="grid grid-cols-1 lg:grid-cols-3 items-center gap-12 lg:gap-16">
-              {/* Columna 1: Título */}
               <div className="text-center lg:text-left">
-                <h3 className="text-3xl md:text-4xl lg:text-5xl font-bold tracking-tight leading-[1.1]">
-                  Una formación <span className="text-primary italic">adaptada</span> a tu proceso
+                <h3 className="text-h2 font-display leading-[1.1]">
+                  Una formación <span className="text-primary">adaptada</span> a tu proceso
                 </h3>
               </div>
-
-              {/* Columna 2: Video */}
               <div className="relative aspect-[4/3] w-full rounded-3xl overflow-hidden shadow-2xl border border-white/5 bg-black">
-                <video 
-                  src="https://i.imgur.com/3YGoxMZ.mp4"
-                  autoPlay
-                  loop
-                  muted
-                  playsInline
-                  preload="none"
-                  className="w-full h-full object-cover"
-                />
+                <video src="https://i.imgur.com/3YGoxMZ.mp4" autoPlay loop muted playsInline className="w-full h-full object-cover" />
               </div>
-
-              {/* Columna 3: Incisos/Beneficios */}
               <div className="space-y-8">
                 {[
-                  { 
-                    icon: <ShieldCheck className="w-6 h-6 text-primary" />, 
-                    title: 'Práctica en situaciones reales:',
-                    text: 'Realizá tus clases en vehículos modernos y desarrollá experiencia en escenarios reales de conducción.' 
-                  },
-                  { 
-                    icon: <Award className="w-6 h-6 text-primary" />, 
-                    title: 'Acompañamiento paso a paso:',
-                    text: 'Nuestro equipo certificado por la ANSV y la experiencia en la calle te guía durante cada clase para resolver tus dudas, mejorar tu técnica y avanzar con mayor seguridad.' 
-                  },
-                  { 
-                    icon: <Clock className="w-6 h-6 text-primary" />, 
-                    title: 'Clases según tu disponibilidad:',
-                    text: 'Organizamos un cronograma que se adapte a tus horarios, tanto si trabajás como si estudiás.' 
-                  }
+                  { icon: <ShieldCheck className="w-6 h-6 text-primary" />, title: 'Práctica en situaciones reales:', text: 'Realizá tus clases en vehículos modernos y desarrollá experiencia en escenarios reales de conducción.' },
+                  { icon: <Award className="w-6 h-6 text-primary" />, title: 'Acompañamiento paso a paso:', text: 'Nuestro equipo guía tu proceso para resolver dudas, mejorar tu técnica y avanzar con mayor seguridad.' },
+                  { icon: <Clock className="w-6 h-6 text-primary" />, title: 'Clases según tu disponibilidad:', text: 'Organizamos un cronograma que se adapte a tus horarios, tanto si trabajás como si estudiás.' }
                 ].map((item, i) => (
                   <div key={i} className="flex gap-4 items-start">
-                    <div className="shrink-0 bg-primary/10 p-2.5 rounded-xl shadow-inner">
-                      {item.icon}
-                    </div>
+                    <div className="shrink-0 bg-primary/10 p-2.5 rounded-xl">{item.icon}</div>
                     <div>
-                      <p className="text-foreground font-bold text-sm md:text-base leading-tight mb-1">{item.title}</p>
-                      <p className="text-foreground/80 font-medium text-sm md:text-base leading-relaxed">{item.text}</p>
+                      <p className="text-foreground font-semibold text-body leading-tight mb-1">{item.title}</p>
+                      <p className="text-foreground/80 font-normal text-body max-w-[68ch]">{item.text}</p>
                     </div>
                   </div>
                 ))}

@@ -1,4 +1,3 @@
-
 "use client";
 
 import React from 'react';
@@ -64,30 +63,23 @@ const faqs = [
 export const Faq = () => {
   return (
     <section id="faq" className="relative py-20 md:py-32 overflow-hidden bg-background">
-      {/* Background with soft transitions */}
-      <div className="absolute inset-0 bg-gradient-to-b from-background via-secondary/15 to-background z-0">
-        <div className="absolute top-0 left-0 right-0 h-48 bg-gradient-to-b from-background via-background/60 to-transparent"></div>
-        <div className="absolute bottom-0 left-0 right-0 h-48 bg-gradient-to-t from-background via-background/60 to-transparent"></div>
-      </div>
-
       <div className="container mx-auto px-4 relative z-10">
         <div className="text-center max-w-3xl mx-auto mb-16">
-          <span className="inline-block px-4 py-1.5 mb-6 text-xs font-bold tracking-widest text-primary uppercase bg-primary/10 rounded-full">
-            preguntas comunes
+          <span className="kicker text-primary mb-6 inline-block bg-primary/10 px-4 py-1.5 rounded-full">
+            PREGUNTAS COMUNES
           </span>
-          <h2 className="text-4xl md:text-6xl font-bold font-headline mb-6 tracking-tight text-foreground">
-            Todo lo que necesitás saber antes de <span className="text-primary italic">poner primera</span>
+          <h2 className="text-h2 font-display text-foreground mb-6">
+            Todo lo que necesitás saber antes de <span className="text-primary">poner primera</span>
           </h2>
         </div>
-
         <div className="max-w-3xl mx-auto bg-card p-6 md:p-10 rounded-[2.5rem] border border-white/5 shadow-2xl">
           <Accordion type="single" collapsible className="w-full">
             {faqs.map((faq, index) => (
               <AccordionItem key={index} value={`item-${index}`} className="border-white/5 last:border-0">
-                <AccordionTrigger className="text-left font-bold text-lg hover:text-primary transition-colors py-6">
+                <AccordionTrigger className="text-left font-semibold text-body-lg hover:text-primary transition-colors py-6 leading-[1.35]">
                   {faq.question}
                 </AccordionTrigger>
-                <AccordionContent className="text-muted-foreground text-base leading-relaxed pb-6">
+                <AccordionContent className="text-body text-muted-foreground leading-[1.6] pb-6 max-w-[68ch]">
                   {faq.answer}
                 </AccordionContent>
               </AccordionItem>

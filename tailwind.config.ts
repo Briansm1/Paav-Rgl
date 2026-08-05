@@ -10,11 +10,17 @@ export default {
   theme: {
     extend: {
       fontFamily: {
-        body: ['var(--font-inter)', 'sans-serif'],
-        title: ['var(--font-poppins)', 'sans-serif'],
-        headline: ['var(--font-poppins)', 'sans-serif'],
-        montserrat: ['var(--font-montserrat)', 'sans-serif'],
-        code: ['monospace'],
+        sans: ['var(--font-body)', 'system-ui', '-apple-system', 'Segoe UI', 'Roboto', 'sans-serif'],
+        display: ['var(--font-display)', 'Oswald', 'system-ui', 'sans-serif'],
+      },
+      fontSize: {
+        eyebrow: ['0.8125rem', { lineHeight: '1.2', letterSpacing: '0.12em' }],
+        caption: ['0.875rem', { lineHeight: '1.5' }],
+        body: ['clamp(1rem, 0.97rem + 0.15vw, 1.125rem)', { lineHeight: '1.6' }],
+        'body-lg': ['clamp(1.125rem, 1.05rem + 0.3vw, 1.25rem)', { lineHeight: '1.6' }],
+        h3: ['clamp(1.25rem, 1.1rem + 0.6vw, 1.5rem)', { lineHeight: '1.15', letterSpacing: '-0.01em' }],
+        h2: ['clamp(1.75rem, 1.4rem + 1.6vw, 2.5rem)', { lineHeight: '1.15', letterSpacing: '-0.01em' }],
+        h1: ['clamp(2.25rem, 1.6rem + 3.2vw, 4rem)', { lineHeight: '1.05', letterSpacing: '-0.01em' }],
       },
       colors: {
         background: 'hsl(var(--background))',
@@ -58,23 +64,6 @@ export default {
         border: 'hsl(var(--border))',
         input: 'hsl(var(--input))',
         ring: 'hsl(var(--ring))',
-        chart: {
-          '1': 'hsl(var(--chart-1))',
-          '2': 'hsl(var(--chart-2))',
-          '3': 'hsl(var(--chart-3))',
-          '4': 'hsl(var(--chart-4))',
-          '5': 'hsl(var(--chart-5))',
-        },
-        sidebar: {
-          DEFAULT: 'hsl(var(--sidebar-background))',
-          foreground: 'hsl(var(--sidebar-foreground))',
-          primary: 'hsl(var(--sidebar-primary))',
-          'primary-foreground': 'hsl(var(--sidebar-primary-foreground))',
-          accent: 'hsl(var(--sidebar-accent))',
-          'accent-foreground': 'hsl(var(--sidebar-accent-foreground))',
-          border: 'hsl(var(--sidebar-border))',
-          ring: 'hsl(var(--sidebar-ring))',
-        },
       },
       borderRadius: {
         lg: 'var(--radius)',
@@ -83,20 +72,12 @@ export default {
       },
       keyframes: {
         'accordion-down': {
-          from: {
-            height: '0',
-          },
-          to: {
-            height: 'var(--radix-accordion-content-height)',
-          },
+          from: { height: '0' },
+          to: { height: 'var(--radix-accordion-content-height)' },
         },
         'accordion-up': {
-          from: {
-            height: 'var(--radix-accordion-content-height)',
-          },
-          to: {
-            height: '0',
-          },
+          from: { height: 'var(--radix-accordion-content-height)' },
+          to: { height: '0' },
         },
         'pulse-soft': {
           '0%, 100%': { transform: 'scale(1)', opacity: '1' },
