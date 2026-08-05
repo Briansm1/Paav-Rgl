@@ -19,7 +19,7 @@ import { Button } from '@/components/ui/button';
 const testimonials = [
   {
     name: 'Daniela Rojas',
-    content: 'Queríamos agradecerles por el acompañamiento en este proceso tan importante para nuestra hija: ayudarla a perder sus miedos, a creer en que podía lograrlo y, sobre todo, sentirse segura en cada movimiento.',
+    content: 'Queríamos agradecerte por el acompañamiento en este proceso tan importante para nuestra hija, por ayudarla a perder sus miedos, a creer en que podía lograrlo y, sobre todo, a sentirse segura en cada movimiento. El mérito de esta licencia es de ella, pero sin tu ayuda no hubiese sido posible. Tu paciencia y técnicas son increíbles, y las palabras de aliento ya son de otro nivel. Muchísimas gracias, Brian, por estas semanas acompañándola en este proceso de aprendizaje.',
     headerImageId: 'achievement-daniela',
     gender: 'f'
   },
