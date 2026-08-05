@@ -2,15 +2,12 @@
 "use client";
 
 import React, { useState, useEffect } from 'react';
-import Image from 'next/image';
 import Link from 'next/link';
 import { Button } from '@/components/ui/button';
-import { PlaceHolderImages } from '@/app/lib/placeholder-images';
 import { ChevronRight, Star, ChevronDown } from 'lucide-react';
 import { cn } from '@/lib/utils';
 
 export const Hero = () => {
-  const heroImg = PlaceHolderImages.find(img => img.id === 'hero-bg');
   const [starCount, setStarCount] = useState(1);
   const [typedText, setTypedText] = useState("");
   const fullButtonText = "Ver planes";
@@ -50,23 +47,24 @@ export const Hero = () => {
 
   return (
     <section id="inicio" className="relative h-[100svh] min-h-[100svh] flex flex-col items-center overflow-hidden bg-black">
-      {/* Background with increased blur for better text readability */}
+      {/* Background Video - Replaces static Image */}
       <div className="absolute inset-0 z-0">
-        <Image 
-          src={heroImg?.imageUrl || ''} 
-          alt={heroImg?.description || 'Autoescuela'} 
-          fill 
-          className="object-cover object-center blur-[10px] md:blur-[12px] scale-110 opacity-50" 
-          priority 
+        <video 
+          src="https://i.imgur.com/PubXOVY.mp4"
+          autoPlay
+          loop
+          muted
+          playsInline
+          className="w-full h-full object-cover opacity-60"
         />
-        <div className="absolute inset-0 bg-gradient-to-b from-black/90 via-black/50 to-background z-10"></div>
+        <div className="absolute inset-0 bg-gradient-to-b from-black/90 via-black/40 to-background z-10"></div>
       </div>
 
-      {/* Content Container - Optimized for all devices, specifically filling 320px screens */}
+      {/* Content Container */}
       <div className="w-full max-w-[1440px] mx-auto px-4 min-[375px]:px-6 lg:px-10 relative z-20 flex-1 flex flex-col justify-between md:justify-center pt-24 md:pt-32 pb-10 md:pb-12">
         <div className="w-full flex flex-col justify-between items-center md:items-start gap-8 md:gap-14 flex-1">
           
-          {/* Main content block - Centered vertically on small mobile to fill space */}
+          {/* Main content block */}
           <div className="w-full flex flex-col items-center text-center md:items-start md:text-left gap-8 md:gap-12 flex-1 justify-center">
             <div className="w-full space-y-4 min-[375px]:space-y-6 md:space-y-10">
               {/* Header block with Title and Badge */}
@@ -98,7 +96,7 @@ export const Hero = () => {
             </div>
           </div>
 
-          {/* Trust Indicators - Pushed slightly lower on small mobile to fill height */}
+          {/* Trust Indicators */}
           <div className="flex flex-row flex-nowrap items-center justify-center md:justify-start gap-x-4 min-[375px]:gap-x-6 min-[420px]:gap-x-10 sm:gap-x-12 md:gap-x-16 animate-in fade-in duration-1000 delay-500 w-full mb-6 md:mb-0 overflow-visible">
             <div className="flex flex-col items-center text-center md:items-start md:text-left shrink-0">
               <p className="text-[11px] min-[375px]:text-sm min-[420px]:text-base sm:text-xl md:text-2xl lg:text-h3 font-display font-bold text-gold leading-none">Equipo</p>
@@ -122,7 +120,7 @@ export const Hero = () => {
         </div>
       </div>
       
-      {/* Scroll arrow - Hidden on smaller screens to avoid overlapping */}
+      {/* Scroll arrow */}
       <div className="absolute bottom-6 left-6 z-30 animate-bounce opacity-40 hidden md:block">
         <ChevronDown className="w-6 h-6 text-white" />
       </div>
