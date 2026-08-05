@@ -21,7 +21,7 @@ const services = [
     imgId: 'service-theory'
   },
   {
-    title: 'Técnica de conducción',
+    title: 'Técnicas de conducción',
     description: 'Practicá el control del vehículo y las maniobras necesarias para conducir de manera segura y fluida.',
     imgId: 'tecnica'
   }
@@ -74,7 +74,7 @@ export const Services = () => {
                         <div className="absolute inset-0 bg-gradient-to-t from-black/90 to-transparent"></div>
                       </div>
                       <CardHeader className="pt-8 px-6 text-center lg:text-left">
-                        <CardTitle className="text-xl md:text-2xl font-bold">{service.title}</CardTitle>
+                        <CardTitle className="text-xl md:text-2xl font-bold tracking-tight">{service.title}</CardTitle>
                       </CardHeader>
                       <CardContent className="px-6 pb-8 text-center lg:text-left">
                         <p className="text-muted-foreground text-sm md:text-base leading-relaxed">{service.description}</p>
