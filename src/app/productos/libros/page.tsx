@@ -177,7 +177,7 @@ export default function LibrosDigitalesPage() {
                     <span className="text-sm md:text-sm font-bold text-slate-400 uppercase tracking-widest">MATERIAL EXCLUSIVO</span>
                   </div>
 
-                  <h3 className="text-4xl md:text-3xl font-bold mb-4 text-white leading-tight h-[3.2em] md:h-auto flex items-center justify-center line-clamp-2 text-center">
+                  <h3 className="text-2xl min-[375px]:text-3xl md:text-3xl font-bold mb-4 text-white leading-tight flex items-center justify-center text-center min-h-[2.5em]">
                     {book.title}
                   </h3>
 
