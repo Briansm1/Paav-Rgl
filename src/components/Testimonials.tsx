@@ -45,7 +45,7 @@ const testimonials = [
   },
   {
     name: 'Lautaro Ramirez',
-    content: 'Muy recomendable la escuela de manejo. La mejor atención que recibí y todo excelente; pude concretar mi meta de recibir mi licencia de conducir.',
+    content: 'Muchísimas gracias a ustedes que me brindaron lo necesario para saber y comprender desde lo básico y más complejo al manejar. Muy cómodo en todas las clases, buena experiencia con ustedes. Pude aprobar los exámenes y conseguir mi licencia. Muchas gracias por la enseñanza y el acompañamiento. 🏁❤️',
     headerImageId: 'achievement-lautaro',
     gender: 'm'
   },
@@ -86,7 +86,7 @@ export const Testimonials = () => {
               Historias de quienes confiaron en <span className="text-primary">nosotros</span>
             </h2>
             <p className="text-body-lg text-muted-foreground max-w-[68ch] mx-auto font-sans">
-              Personas que llegaron con dudas or nervios y hoy cuentan cómo fue su proceso.
+              Personas que llegaron con dudas o nervios y hoy cuentan cómo fue su proceso.
             </p>
           </div>
 
