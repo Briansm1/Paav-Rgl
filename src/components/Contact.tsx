@@ -28,7 +28,7 @@ export const Contact = () => {
             <div className="w-full space-y-6">
               <a href={whatsappUrl} target="_blank" rel="noopener noreferrer" className="block w-full">
                 <Button size="lg" className="w-full h-16 md:h-20 bg-purple hover:bg-purple/90 text-purple-foreground text-h3 font-bold rounded-2xl animate-heartbeat">
-                  Unirme gratis
+                  Unirme GRATIS
                 </Button>
               </a>
               <p className="text-caption text-muted-foreground uppercase font-semibold tracking-[0.12em] max-w-[68ch] mx-auto">
