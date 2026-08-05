@@ -42,7 +42,7 @@ const testimonials = [
   },
   {
     name: 'Maria Silisque',
-    content: '¡EXCELENTE DIEZ! Recomiendo, super responsable, respetuoso y con una paciencia de oro. Gracias!!',
+    content: '¡Excelente 10! Recomiendo, súper responsable, respetuoso y con una paciencia de oro. ¡Gracias!',
     gender: 'f'
   },
   {
