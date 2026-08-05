@@ -11,7 +11,7 @@ export const Contact = () => {
       <div className="container mx-auto px-4 relative z-20">
         <div className="text-center max-w-3xl mx-auto mb-16 md:mb-20">
           <span className="kicker text-primary mb-6 inline-block bg-primary/10 px-4 py-1.5 rounded-full">
-            ¿QUERÉS SER UN MIEMBRO?
+            ¿QUERÉS SER MIEMBRO?
           </span>
           <h2 className="text-h2 font-display text-foreground mb-6">
             Formá parte de nuestra <span className="text-primary">comunidad</span>
