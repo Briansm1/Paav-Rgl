@@ -25,7 +25,7 @@ const testimonials = [
   },
   {
     name: 'Damaris Peñaloza',
-    content: '¡Excelente academia! Muy agradecida por la paciencia y las técnicas de enseñanza. Pude ganar la seguridad que me faltaba y sacar mi licencia sin problemas. ¡Súper recomendables!',
+    content: '',
     headerImageId: 'achievement-damaris',
     role: 'Egresada'
   },
@@ -118,36 +118,45 @@ export const Testimonials = () => {
             <CarouselContent className="-ml-4">
               {testimonials.map((t, index) => {
                 const headerImg = t.headerImageId ? PlaceHolderImages.find(p => p.id === t.headerImageId) : null;
+                const hasContent = t.content && t.content.trim().length > 0;
                 
                 return (
                   <CarouselItem key={index} className="pl-4 basis-[85%] sm:basis-1/2 lg:basis-1/3 py-4">
                     <Card className="h-full border-none shadow-xl rounded-[2.5rem] bg-card relative overflow-hidden flex flex-col group transition-all duration-300 hover:shadow-2xl">
                       {headerImg && (
-                        <div className="relative aspect-[16/10] w-full overflow-hidden border-b border-white/5">
+                        <div className={cn(
+                          "relative w-full overflow-hidden border-b border-white/5 bg-black/20",
+                          hasContent ? "aspect-[16/10]" : "aspect-square"
+                        )}>
                           <Image 
                             src={headerImg.imageUrl} 
                             alt={`Logro de ${t.name}`} 
                             fill 
                             priority={index < 3}
                             sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
-                            className="object-cover transition-transform duration-500 group-hover:scale-105"
+                            className={cn(
+                              "transition-transform duration-500 group-hover:scale-105",
+                              !hasContent ? "object-contain p-4" : "object-cover"
+                            )}
                             data-ai-hint={headerImg.imageHint}
                           />
                         </div>
                       )}
-                      <CardContent className="p-8 flex flex-col flex-grow">
-                        <div className="mb-6">
-                          <div className="flex gap-0.5 mb-4">
-                            {[...Array(5)].map((_, i) => (
-                              <Star key={i} className="w-4 h-4 text-yellow-500 fill-yellow-500" />
-                            ))}
+                      <CardContent className={cn("p-8 flex flex-col", hasContent ? "flex-grow" : "mt-auto")}>
+                        {hasContent && (
+                          <div className="mb-6">
+                            <div className="flex gap-0.5 mb-4">
+                              {[...Array(5)].map((_, i) => (
+                                <Star key={i} className="w-4 h-4 text-yellow-500 fill-yellow-500" />
+                              ))}
+                            </div>
+                            <p className="text-sm md:text-base text-muted-foreground leading-relaxed italic">
+                              "{t.content}"
+                            </p>
                           </div>
-                          <p className="text-sm md:text-base text-muted-foreground leading-relaxed italic">
-                            "{t.content}"
-                          </p>
-                        </div>
+                        )}
 
-                        <div className="mt-auto pt-6 border-t border-white/5">
+                        <div className={cn("pt-6 border-t border-white/5", !hasContent && "border-0 pt-0")}>
                           <p className="font-bold text-foreground text-lg tracking-tight">{t.name}</p>
                           <p className="text-[10px] text-primary font-bold uppercase tracking-widest mt-1">{t.role} Pilotos</p>
                         </div>
