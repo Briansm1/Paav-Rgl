@@ -26,7 +26,7 @@ const testimonials = [
   },
   {
     name: 'Julia Geoia',
-    content: '¡Hola! La verdad es que la academia es súper recomendable, tanto por la calidad de la enseñanza como por la atención. Pude superar mis miedos y también los conos, jajaja. El profesor es un genio: tiene muchísima paciencia, es muy respetuoso y explica de manera clara y práctica. La academia es muy completa; brindan material teórico y práctico. Fue una excelente experiencia. ¡Millones de gracias! Y les deseo muchísimos éxitos.',
+    content: '¡Hola! La verdad es que la academia es súper recomendable, tanto por la calidad de la enseñanza como por la atención. Pude superar mis miedos y también los conos, jajaja. El profesor es un genio: tiene muchísima paciencia, es muy respetuoso y explica de manera clara y práctica. La academia es muy completa; brindan material teórico y práctico. Fue una excelente experiencia. ¡Millones de gracias! Y les deseo muchísimas éxitos.',
     gender: 'f'
   },
   {
@@ -133,7 +133,7 @@ export const Testimonials = () => {
                             <p className="text-lg md:text-xl text-muted-foreground leading-relaxed mb-10">
                               {t.content}
                             </p>
-                            <Button className="h-14 px-8 rounded-full bg-primary hover:bg-primary/90 text-white font-bold text-lg gap-2">
+                            <Button className="h-14 px-10 rounded-full bg-primary hover:bg-primary/90 text-white font-bold text-lg gap-2 shadow-none border-none">
                               Ir
                               <ChevronRight className="w-5 h-5" />
                             </Button>
@@ -184,8 +184,8 @@ export const Testimonials = () => {
                 })}
               </CarouselContent>
               
-              <CarouselPrevious className="absolute -left-8 md:-left-12 top-1/2 -translate-y-1/2 h-10 w-10 md:h-14 md:w-14 rounded-full border-primary/20 bg-secondary text-white hover:bg-primary hover:text-white transition-all duration-300" />
-              <CarouselNext className="absolute -right-8 md:-right-12 top-1/2 -translate-y-1/2 h-10 w-10 md:h-14 md:w-14 rounded-full border-primary/20 bg-secondary text-white hover:bg-primary hover:text-white transition-all duration-300" />
+              <CarouselPrevious className="absolute -left-8 md:-left-12 top-1/2 -translate-y-1/2 h-10 w-10 md:h-14 md:w-14 rounded-full border-primary/20 bg-secondary text-white hover:bg-primary hover:text-white transition-all duration-300 shadow-none" />
+              <CarouselNext className="absolute -right-8 md:-right-12 top-1/2 -translate-y-1/2 h-10 w-10 md:h-14 md:w-14 rounded-full border-primary/20 bg-secondary text-white hover:bg-primary hover:text-white transition-all duration-300 shadow-none" />
             </Carousel>
           </div>
         </div>

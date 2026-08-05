@@ -205,7 +205,7 @@ export default function LibrosDigitalesPage() {
 
                   <div className="flex flex-col gap-4 w-full mt-auto items-center">
                     <a href={book.whatsappLink} target="_blank" rel="noopener noreferrer" className="w-full">
-                      <Button className="w-full h-16 md:h-16 rounded-xl bg-green-600 hover:bg-green-700 text-white text-lg md:text-xl font-bold transition-colors border-none shadow-none">
+                      <Button className="w-full h-14 rounded-xl bg-green-600 hover:bg-green-700 text-white text-lg font-bold transition-colors border-none shadow-none">
                         Comprar ahora
                       </Button>
                     </a>

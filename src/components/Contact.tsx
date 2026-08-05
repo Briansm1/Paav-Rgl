@@ -1,3 +1,4 @@
+
 "use client";
 
 import React from 'react';
@@ -27,7 +28,7 @@ export const Contact = () => {
             </div>
             <div className="w-full space-y-6">
               <a href={whatsappUrl} target="_blank" rel="noopener noreferrer" className="block w-full">
-                <Button size="lg" className="w-full h-16 md:h-20 bg-purple hover:bg-purple/90 text-purple-foreground text-h3 font-bold rounded-2xl animate-heartbeat">
+                <Button size="lg" className="w-full h-14 bg-purple hover:bg-purple/90 text-purple-foreground text-lg font-bold rounded-2xl animate-heartbeat shadow-none border-none">
                   Unirme GRATIS
                 </Button>
               </a>

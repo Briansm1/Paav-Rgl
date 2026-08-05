@@ -67,7 +67,7 @@ export const Pricing = () => {
 
                 <div className="mt-auto w-full px-2">
                   <Link href={plan.href} className="w-full">
-                    <Button className="w-full h-14 rounded-2xl text-body font-bold bg-primary hover:bg-primary/90 text-white">
+                    <Button className="w-full h-14 rounded-2xl text-lg font-bold bg-primary hover:bg-primary/90 text-white border-none shadow-none">
                       {plan.buttonText}
                     </Button>
                   </Link>

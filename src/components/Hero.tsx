@@ -87,12 +87,12 @@ export const Hero = () => {
             
             <div className="flex flex-col sm:flex-row gap-4 animate-in fade-in slide-in-from-bottom-10 duration-1000 delay-300 w-full sm:w-auto">
               <Link href="#planes" className="w-full sm:w-auto">
-                <Button size="lg" className="h-12 min-[375px]:h-14 min-[420px]:h-16 md:h-20 px-8 min-[375px]:px-10 min-[420px]:px-12 md:px-14 text-base min-[375px]:text-lg min-[420px]:text-xl md:text-2xl bg-primary hover:bg-primary/90 rounded-full w-full font-bold transition-all active:scale-95 shadow-2xl shadow-primary/30 border-none">
-                  <span className="inline-flex items-center min-w-[5rem] min-[375px]:min-w-[6rem] min-[420px]:min-w-[7.5rem] md:min-w-[7rem] justify-center">
+                <Button size="lg" className="h-14 px-10 text-lg md:h-14 md:px-12 bg-primary hover:bg-primary/90 rounded-full w-full font-bold transition-all active:scale-95 shadow-2xl shadow-primary/30 border-none">
+                  <span className="inline-flex items-center min-w-[6rem] justify-center">
                     {typedText}
-                    <span className="ml-0.5 w-[2px] h-4 min-[375px]:h-5 min-[420px]:h-6 md:h-7 bg-white animate-pulse" />
+                    <span className="ml-0.5 w-[2px] h-5 bg-white animate-pulse" />
                   </span>
-                  <ChevronRight className="ml-1 w-4 h-4 min-[375px]:w-5 min-[375px]:h-5 min-[420px]:w-6 min-[420px]:h-6 md:w-8 md:h-8" />
+                  <ChevronRight className="ml-1 w-5 h-5" />
                 </Button>
               </Link>
             </div>

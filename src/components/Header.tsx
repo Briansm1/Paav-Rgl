@@ -1,3 +1,4 @@
+
 "use client";
 
 import React, { useState, useEffect } from 'react';
@@ -222,7 +223,7 @@ export const Header = () => {
           
           <div className="w-full pt-4">
             <Link href="/#planes" onClick={() => setMobileMenuOpen(false)}>
-              <Button className="w-full h-14 bg-primary hover:bg-primary/90 rounded-full font-bold text-lg flex items-center justify-center gap-2">
+              <Button className="w-full h-14 bg-primary hover:bg-primary/90 rounded-full font-bold text-lg flex items-center justify-center gap-2 shadow-none border-none">
                 Ver planes <ChevronRight className="w-5 h-5" />
               </Button>
             </Link>

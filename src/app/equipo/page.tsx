@@ -105,7 +105,7 @@ export default function EquipoPage() {
                           rel="noopener noreferrer"
                           className="no-underline"
                         >
-                          <Button className="rounded-2xl bg-primary hover:bg-primary/90 text-white gap-3 font-bold px-10 h-16 text-lg transition-all active:scale-95 shadow-none border-none">
+                          <Button className="rounded-2xl bg-primary hover:bg-primary/90 text-white gap-3 font-bold px-10 h-14 text-lg transition-all active:scale-95 shadow-none border-none">
                             <Eye className="w-6 h-6" />
                             Ver
                           </Button>
@@ -128,7 +128,7 @@ export default function EquipoPage() {
             Sumate a la academia N°1 de la región y aprendé con profesionales que realmente se preocupan por tu progreso.
           </p>
           <Link href="/#planes">
-            <Button size="lg" className="h-14 px-12 rounded-full bg-primary hover:bg-primary/90 font-bold text-lg animate-heartbeat">
+            <Button size="lg" className="h-14 px-12 rounded-full bg-primary hover:bg-primary/90 font-bold text-lg animate-heartbeat shadow-none border-none">
               Ver planes disponibles
             </Button>
           </Link>

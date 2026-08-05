@@ -1,3 +1,4 @@
+
 import React from 'react';
 import Link from 'next/link';
 import { Button } from '@/components/ui/button';
@@ -21,7 +22,7 @@ export const CtaReady = () => {
           </div>
           <div className="px-2 w-full sm:w-auto">
             <Link href="#planes">
-              <Button size="lg" className="h-12 md:h-14 px-8 md:px-10 rounded-full bg-accent hover:bg-accent/90 text-white font-bold text-base md:text-lg animate-heartbeat w-full sm:w-auto shadow-none border-none">
+              <Button size="lg" className="h-14 px-10 rounded-full bg-accent hover:bg-accent/90 text-white font-bold text-lg animate-heartbeat w-full sm:w-auto shadow-none border-none">
                 Quiero empezar
               </Button>
             </Link>

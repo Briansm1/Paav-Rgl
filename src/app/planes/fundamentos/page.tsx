@@ -1,3 +1,4 @@
+
 import React from 'react';
 import Link from 'next/link';
 import { Header } from '@/components/Header';
@@ -146,7 +147,7 @@ export default function PlanFundamentosPage() {
                         <a href={option.whatsappLink} target="_blank" rel="noopener noreferrer" className="w-full">
                           <Button 
                             className={cn(
-                              "w-full h-16 md:h-16 rounded-xl text-xl font-bold animate-heartbeat transition-all group-hover:scale-[1.02] shadow-none border-none",
+                              "w-full h-14 rounded-xl text-lg font-bold animate-heartbeat transition-all group-hover:scale-[1.02] shadow-none border-none",
                               idx === 0 ? "bg-purple hover:bg-purple/90 text-purple-foreground" : "bg-primary hover:bg-primary/90"
                             )}
                           >
@@ -244,7 +245,7 @@ export default function PlanFundamentosPage() {
 
               <div className="pt-10 flex justify-center px-4">
                 <Link href="#opciones-plan" className="w-full max-sm:max-w-none">
-                  <Button className="w-full h-16 md:h-16 bg-primary hover:bg-primary/90 rounded-xl text-xl font-bold animate-heartbeat transition-all shadow-none border-none">
+                  <Button className="w-full h-14 bg-primary hover:bg-primary/90 rounded-xl text-lg font-bold animate-heartbeat transition-all shadow-none border-none">
                     Elegir un plan
                   </Button>
                 </Link>
@@ -262,7 +263,7 @@ export default function PlanFundamentosPage() {
             Nuestro equipo puede ayudarte a encontrar la opción más adecuada según tu experiencia y que queres lograr.
           </p>
           <a href="https://wa.me/5492966265603?text=Hola%2C%20tengo%20algunas%20consultas%20sobre%20el%20Programa%20Fundamentos" target="_blank" rel="noopener noreferrer">
-            <Button variant="outline" size="lg" className="h-16 px-12 rounded-full border-primary text-primary hover:bg-primary/5 text-center shadow-none text-xl font-bold">
+            <Button variant="outline" size="lg" className="h-14 px-10 rounded-full border-primary text-primary hover:bg-primary/5 text-center shadow-none text-lg font-bold">
               Conocer mi plan ideal
             </Button>
           </a>
