@@ -49,7 +49,7 @@ const digitalBooks = [
     id: 'book-experto',
     title: 'Programa ases de la teoría',
     specialBadge: '10 x 1',
-    price: '$17.999',
+    price: '$14.999',
     originalPrice: '$49.999',
     discount: '70% OFF',
     description: 'Reforzá tus conocimientos de conducción. Un recurso para estudiar normas, señales y conceptos importantes antes del examen teórico.',
