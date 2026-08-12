@@ -30,7 +30,7 @@ const digitalBooks = [
     id: 'book-novato',
     title: 'Programa conductor experto',
     specialBadge: '9 x 1',
-    price: '$14.999',
+    price: '$17.999',
     originalPrice: '$49.999',
     discount: '70% OFF',
     description: 'Mejorá tu seguridad y criterio al volante. Para quienes quieren superar miedos, mejorar su toma de decisiones y conducir con más confianza.',
@@ -49,7 +49,7 @@ const digitalBooks = [
     id: 'book-experto',
     title: 'Programa ases de la teoría',
     specialBadge: '10 x 1',
-    price: '$14.999',
+    price: '$17.999',
     originalPrice: '$49.999',
     discount: '70% OFF',
     description: 'Reforzá tus conocimientos de conducción. Un recurso para estudiar normas, señales y conceptos importantes antes del examen teórico.',
@@ -101,7 +101,6 @@ export default function LibrosDigitalesPage() {
     <main className="min-h-screen bg-background text-body">
       <Header />
       
-      {/* Header Section */}
       <section className="pt-24 pb-6 md:pt-32 md:pb-10 bg-secondary/30 border-b border-white/5 flex items-center justify-center">
         <div className="container mx-auto px-4 text-center">
           <Link href="/#inicio" className="inline-flex items-center gap-2 text-primary font-bold mb-3 hover:underline text-lg">
