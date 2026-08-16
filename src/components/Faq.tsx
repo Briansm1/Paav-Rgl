@@ -36,7 +36,7 @@ const faqs = [
       <>
         Podés consultar los planes disponibles en{" "}
         <Link href="/#planes" className="text-primary hover:underline font-bold">
-          planes
+          Planes
         </Link>{" "}
         y luego contactarnos para recibir información adicional sobre la opción más adecuada para vos.
       </>
