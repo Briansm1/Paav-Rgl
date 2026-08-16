@@ -31,7 +31,7 @@ const digitalBooks = [
     title: 'Programa conductor experto',
     specialBadge: '9 x 1',
     price: '$17.999',
-    originalPrice: '$49.999',
+    originalPrice: '$59.999',
     discount: '70% OFF',
     description: 'Mejorá tu seguridad y criterio al volante. Para quienes quieren superar miedos, mejorar su toma de decisiones y conducir con más confianza.',
     longDescription: 'Este libro digital te llevará de la mano en el proceso de perder el miedo al volante. Descubrirás técnicas psicológicas para mantener la calma y una guía paso a paso sobre los fundamentos técnicos que todo conductor principiante debe dominar antes de salir a la calle.',
