@@ -1,4 +1,3 @@
-
 import React from 'react';
 import Link from 'next/link';
 import { Header } from '@/components/Header';
@@ -66,7 +65,7 @@ export default function PlanExpertoPage() {
             {detailedPlans.map((plan, index) => (
               <div 
                 key={index} 
-                className="flex flex-col gap-10 p-6 md:p-12 rounded-[3rem] border bg-secondary shadow-2xl border-white/5 h-full w-full"
+                className="flex flex-col gap-10 p-6 md:p-12 rounded-[3rem] border bg-secondary shadow-2xl border-white/5 h-full w-full items-center text-center"
               >
                 <div id="precios" className="w-full space-y-8 flex flex-col items-center text-center">
                   <h2 className="text-3xl md:text-5xl font-bold tracking-tight text-center uppercase">{plan.name}</h2>
@@ -131,7 +130,7 @@ export default function PlanExpertoPage() {
                     <h3 className="text-2xl font-bold mb-6 flex items-center justify-center gap-3 text-foreground text-center">
                       ¿Qué incluye?
                     </h3>
-                    <div className="space-y-4">
+                    <div className="space-y-4 text-left">
                       {plan.features.map((feature, i) => (
                         <div key={i} className="flex items-start gap-4 group">
                           <div className="mt-1 bg-green-500/10 p-1.5 rounded-full shrink-0">
@@ -148,7 +147,7 @@ export default function PlanExpertoPage() {
                       ¿Este programa es para vos?
                     </h3>
                     <p className="text-lg text-foreground/80 mb-5 font-medium text-center italic">Está pensado para personas que:</p>
-                    <div className="space-y-4">
+                    <div className="space-y-4 text-left">
                       {plan.targetAudience.map((item, i) => (
                         <div key={i} className="flex items-start gap-4 group">
                           <div className="mt-1 bg-primary/10 p-1.5 rounded-full shrink-0">
@@ -165,7 +164,7 @@ export default function PlanExpertoPage() {
                       ¿Qué vas a lograr?
                     </h3>
                     <p className="text-lg text-foreground/80 mb-5 font-medium text-center italic">Con este programa vas a:</p>
-                    <div className="space-y-4">
+                    <div className="space-y-4 text-left">
                       {plan.outcomes.map((item, i) => (
                         <div key={i} className="flex items-start gap-4 group">
                           <div className="mt-1 bg-accent/10 p-1.5 rounded-full shrink-0">

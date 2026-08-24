@@ -66,7 +66,7 @@ export default function PlanFundamentosPage() {
     const timer = setTimeout(() => {
       if (scrollContainerRef.current && window.innerWidth < 768) {
         scrollContainerRef.current.scrollTo({
-          left: 70,
+          left: 100,
           behavior: 'smooth'
         });
         setTimeout(() => {
@@ -76,9 +76,9 @@ export default function PlanFundamentosPage() {
               behavior: 'smooth'
             });
           }
-        }, 600);
+        }, 800);
       }
-    }, 1200);
+    }, 1000);
     return () => clearTimeout(timer);
   }, []);
 
@@ -110,7 +110,7 @@ export default function PlanFundamentosPage() {
                     key={idx} 
                     className={cn(
                       "flex flex-col gap-8 p-8 md:p-10 rounded-[2.5rem] bg-black/40 border transition-all duration-300 shadow-inner relative overflow-hidden group",
-                      "min-w-[85%] md:min-w-0 snap-center",
+                      "min-w-[85%] md:min-w-0 snap-center items-center text-center",
                       idx === 0 ? "border-purple/40 bg-purple/5 ring-1 ring-purple/20" : "border-white/10"
                     )}
                   >
@@ -129,7 +129,7 @@ export default function PlanFundamentosPage() {
                       </h3>
                     </div>
 
-                    <div className="space-y-6">
+                    <div className="space-y-6 w-full">
                       <div className="flex flex-col items-center">
                         <span className="text-xs font-bold text-slate-400 uppercase tracking-widest mb-2">TRANSFERENCIA O EFECTIVO</span>
                         <p className="text-4xl md:text-6xl font-black text-green-500 tracking-tighter">{option.transferPrice}</p>
