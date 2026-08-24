@@ -66,4 +66,12 @@
   .text-tabular {
     font-variant-numeric: tabular-nums lining-nums;
   }
+  
+  .scrollbar-hide::-webkit-scrollbar {
+    display: none;
+  }
+  .scrollbar-hide {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
 }
