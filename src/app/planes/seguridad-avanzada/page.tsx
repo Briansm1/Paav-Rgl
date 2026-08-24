@@ -1,5 +1,6 @@
+'use client';
 
-import React from 'react';
+import React, { useEffect, useRef } from 'react';
 import Link from 'next/link';
 import { Header } from '@/components/Header';
 import { Footer } from '@/components/Footer';
@@ -59,6 +60,28 @@ const programDetails = {
 };
 
 export default function PlanSeguridadAvanzadaPage() {
+  const scrollContainerRef = useRef<HTMLDivElement>(null);
+
+  useEffect(() => {
+    const timer = setTimeout(() => {
+      if (scrollContainerRef.current && window.innerWidth < 768) {
+        scrollContainerRef.current.scrollTo({
+          left: 70,
+          behavior: 'smooth'
+        });
+        setTimeout(() => {
+          if (scrollContainerRef.current) {
+            scrollContainerRef.current.scrollTo({
+              left: 0,
+              behavior: 'smooth'
+            });
+          }
+        }, 600);
+      }
+    }, 1200);
+    return () => clearTimeout(timer);
+  }, []);
+
   return (
     <main className="min-h-screen bg-background text-body">
       <Header />
@@ -77,13 +100,17 @@ export default function PlanSeguridadAvanzadaPage() {
           <div className="max-w-5xl mx-auto">
             <div className="flex flex-col gap-10 p-6 md:p-12 rounded-[3rem] border bg-secondary shadow-2xl border-white/5 h-full w-full">
               
-              <div id="opciones-plan" className="flex flex-row md:grid md:grid-cols-2 gap-8 pt-6 overflow-x-auto md:overflow-x-visible pb-4 md:pb-0 snap-x snap-mandatory scrollbar-hide px-2">
+              <div 
+                ref={scrollContainerRef}
+                id="opciones-plan" 
+                className="flex flex-row md:grid md:grid-cols-2 gap-8 pt-6 overflow-x-auto md:overflow-x-visible pb-4 md:pb-0 snap-x snap-mandatory scrollbar-hide px-2"
+              >
                 {programDetails.options.map((option, idx) => (
                   <div 
                     key={idx} 
                     className={cn(
                       "flex flex-col gap-8 p-8 md:p-10 rounded-[2.5rem] bg-black/40 border transition-all duration-300 shadow-inner relative overflow-hidden group",
-                      "min-w-[300px] md:min-w-0 snap-center",
+                      "min-w-[85%] md:min-w-0 snap-center",
                       idx === 0 ? "border-purple/40 bg-purple/5 ring-1 ring-purple/20" : "border-white/10"
                     )}
                   >
