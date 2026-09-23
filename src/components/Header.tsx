@@ -80,7 +80,7 @@ export const Header = () => {
         setMobileMenuOpen(false);
       }}
       className={cn(
-        "relative text-[16px] font-medium transition-colors duration-300",
+        "relative text-[16px] font-medium transition-colors duration-300 uppercase",
         activeSection === link.href 
           ? "text-primary" 
           : "text-slate-300 hover:text-white"
@@ -118,7 +118,7 @@ export const Header = () => {
         <nav className="hidden lg:flex items-center gap-6 lg:gap-8">
           {navLinks.slice(0, 4).map(renderNavLink)}
           <DropdownMenu>
-            <DropdownMenuTrigger className="flex items-center gap-1 text-[16px] font-medium text-slate-300 hover:text-white outline-none transition-colors">
+            <DropdownMenuTrigger className="flex items-center gap-1 text-[16px] font-medium text-slate-300 hover:text-white outline-none transition-colors uppercase">
               Productos <ChevronDown className="w-4 h-4" />
             </DropdownMenuTrigger>
             <DropdownMenuContent className="bg-black border-white/10 text-white p-2 min-w-[220px]">
@@ -127,7 +127,7 @@ export const Header = () => {
                   <Link href={product.href} className="flex items-center justify-between gap-3 p-2 rounded-md w-full">
                     <div className="flex items-center gap-3">
                       <span className="text-white group-focus:text-white">{product.icon}</span>
-                      <span className="font-semibold text-caption">{product.name}</span>
+                      <span className="font-semibold text-caption uppercase">{product.name}</span>
                     </div>
                     {product.name === 'Cursos online' && (
                       <Badge variant="outline" className="text-[10px] h-4 px-1.5 border-primary/50 text-primary uppercase font-black tracking-tighter group-focus:border-white/50 group-focus:text-white">
@@ -141,7 +141,7 @@ export const Header = () => {
           </DropdownMenu>
           {navLinks.slice(4).map(renderNavLink)}
           <DropdownMenu>
-            <DropdownMenuTrigger className="flex items-center gap-1 text-[16px] font-medium text-slate-300 hover:text-white outline-none transition-colors">
+            <DropdownMenuTrigger className="flex items-center gap-1 text-[16px] font-medium text-slate-300 hover:text-white outline-none transition-colors uppercase">
               Redes <ChevronDown className="w-4 h-4" />
             </DropdownMenuTrigger>
             <DropdownMenuContent className="bg-black border-white/10 text-white p-2 min-w-[160px]">
@@ -149,7 +149,7 @@ export const Header = () => {
                 <DropdownMenuItem key={social.name} asChild className="focus:bg-primary focus:text-white cursor-pointer">
                   <a href={social.href} target="_blank" rel="noopener noreferrer" className="flex items-center gap-3 p-2 rounded-md">
                     <span className="text-white">{social.icon}</span>
-                    <span className="font-semibold text-caption">{social.name}</span>
+                    <span className="font-semibold text-caption uppercase">{social.name}</span>
                   </a>
                 </DropdownMenuItem>
               ))}
@@ -168,7 +168,7 @@ export const Header = () => {
       )}>
         <nav className="flex flex-col items-center gap-4 p-6 w-full max-w-sm text-center">
           {navLinks.slice(0, 4).map((link) => (
-            <Link key={link.name} href={link.href} className={cn("text-2xl font-semibold tracking-tight py-3 min-h-[44px] w-full block", activeSection === link.href ? "text-primary" : "text-white")} onClick={() => {
+            <Link key={link.name} href={link.href} className={cn("text-2xl font-semibold tracking-tight py-3 min-h-[44px] w-full block uppercase", activeSection === link.href ? "text-primary" : "text-white")} onClick={() => {
               setActiveSection(link.href);
               setMobileMenuOpen(false);
             }}>
@@ -178,13 +178,13 @@ export const Header = () => {
           
           {/* Productos en Móvil */}
           <div className="w-full flex flex-col items-center">
-            <button onClick={() => setMobileProductsOpen(!mobileProductsOpen)} className="flex items-center justify-center gap-2 text-2xl font-semibold text-white py-3 min-h-[44px] w-full">
+            <button onClick={() => setMobileProductsOpen(!mobileProductsOpen)} className="flex items-center justify-center gap-2 text-2xl font-semibold text-white py-3 min-h-[44px] w-full uppercase">
               Productos <ChevronDown className={cn("w-5 h-5 transition-transform", mobileProductsOpen && "rotate-180")} />
             </button>
             <div className={cn("flex flex-col items-center gap-5 overflow-hidden transition-all duration-300 w-full bg-white/5 rounded-2xl", mobileProductsOpen ? "max-h-72 py-6 mt-2 opacity-100" : "max-h-0 py-0 opacity-0")}>
               {productLinks.map((product) => (
                 <div key={product.name} className="flex flex-col items-center gap-1.5">
-                  <Link href={product.href} className="text-lg font-semibold text-slate-300 hover:text-primary flex items-center gap-2 py-2" onClick={() => {
+                  <Link href={product.href} className="text-lg font-semibold text-slate-300 hover:text-primary flex items-center gap-2 py-2 uppercase" onClick={() => {
                     setMobileMenuOpen(false);
                     setMobileProductsOpen(false);
                   }}>
@@ -200,12 +200,12 @@ export const Header = () => {
 
           {/* Redes en Móvil */}
           <div className="w-full flex flex-col items-center">
-            <button onClick={() => setMobileSocialsOpen(!mobileSocialsOpen)} className="flex items-center justify-center gap-2 text-2xl font-semibold text-white py-3 min-h-[44px] w-full">
+            <button onClick={() => setMobileSocialsOpen(!mobileSocialsOpen)} className="flex items-center justify-center gap-2 text-2xl font-semibold text-white py-3 min-h-[44px] w-full uppercase">
               Redes <ChevronDown className={cn("w-5 h-5 transition-transform", mobileSocialsOpen && "rotate-180")} />
             </button>
             <div className={cn("flex flex-col items-center gap-5 overflow-hidden transition-all duration-300 w-full bg-white/5 rounded-2xl", mobileSocialsOpen ? "max-h-72 py-6 mt-2 opacity-100" : "max-h-0 py-0 opacity-0")}>
               {socialLinks.map((social) => (
-                <a key={social.name} href={social.href} target="_blank" rel="noopener noreferrer" className="text-lg font-semibold text-slate-300 hover:text-primary flex items-center gap-2 py-2" onClick={() => setMobileMenuOpen(false)}>
+                <a key={social.name} href={social.href} target="_blank" rel="noopener noreferrer" className="text-lg font-semibold text-slate-300 hover:text-primary flex items-center gap-2 py-2 uppercase" onClick={() => setMobileMenuOpen(false)}>
                   {social.icon} {social.name}
                 </a>
               ))}
@@ -213,7 +213,7 @@ export const Header = () => {
           </div>
 
           {navLinks.slice(4).map((link) => (
-            <Link key={link.name} href={link.href} className={cn("text-2xl font-semibold tracking-tight py-3 min-h-[44px] w-full block", activeSection === link.href ? "text-primary" : "text-white")} onClick={() => {
+            <Link key={link.name} href={link.href} className={cn("text-2xl font-semibold tracking-tight py-3 min-h-[44px] w-full block uppercase", activeSection === link.href ? "text-primary" : "text-white")} onClick={() => {
               setActiveSection(link.href);
               setMobileMenuOpen(false);
             }}>
@@ -223,7 +223,7 @@ export const Header = () => {
           
           <div className="w-full pt-4">
             <Link href="/#planes" onClick={() => setMobileMenuOpen(false)}>
-              <Button className="w-full h-14 bg-primary hover:bg-primary/90 rounded-full font-bold text-lg flex items-center justify-center gap-2 shadow-none border-none">
+              <Button className="w-full h-14 bg-primary hover:bg-primary/90 rounded-full font-bold text-lg flex items-center justify-center gap-2 shadow-none border-none uppercase">
                 Ver planes <ChevronRight className="w-5 h-5" />
               </Button>
             </Link>
