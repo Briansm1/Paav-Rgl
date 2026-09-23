@@ -110,7 +110,7 @@ export const Header = () => {
             </div>
           ) : (
             <span className="text-xl md:text-2xl font-bold font-display tracking-tight text-white uppercase">
-              Pilotos - <span className="text-primary">ases al volante</span>
+              Pilotos ases al volante | <span className="text-primary">Autoescuela</span>
             </span>
           )}
         </Link>

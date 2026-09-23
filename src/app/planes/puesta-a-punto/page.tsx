@@ -9,47 +9,47 @@ import { Check, ArrowLeft, Clock, Gift } from 'lucide-react';
 import { cn } from '@/lib/utils';
 
 const programDetails = {
-  name: 'Programa fundamentos',
-  description: 'Diseñado para personas que comienzan desde cero o tienen poca experiencia al volante. Te acompañamos desde tus primeras prácticas hasta desarrollar las bases necesarias para conducir con mayor confianza.',
+  name: 'Programa puesta a punto',
+  description: 'Diseñado para personas que ya tienen conocimientos básicos y quieren mejorar aspectos específicos de su conducción. Trabajamos maniobras, técnica y situaciones reales para que puedas conducir con mayor tranquilidad y control.',
   options: [
     {
-      name: 'Plan oro',
-      originalTransferPrice: '$311.999',
-      transferPrice: '$265.199',
-      cardPrice: '$479.999',
-      savings: '15% OFF EN TRANSFERENCIA (AHORRO DE $214.800 VS TARJETA)',
-      sessions: "8 sesiones dinámicas (50' c/u)",
-      whatsappLink: "https://wa.me/5492966265603?text=Hola%2C%20vengo%20desde%20la%20web%20y%20quiero%20contratar%20el%20*plan%20oro*%20de%20*8%20sesiones*",
-      miniChecklist: ["Para empezar", "Primer contacto con el vehículo", "Bases de conducción"]
+      name: 'Plan as',
+      originalTransferPrice: '$165.999',
+      transferPrice: '$141.099',
+      cardPrice: '$255.999',
+      savings: '15% OFF EN TRANSFERENCIA (AHORRO DE $114.900 VS TARJETA)',
+      sessions: "4 sesiones dinámicas (50' c/u)",
+      whatsappLink: "https://wa.me/5492966265603?text=Hola%2C%20vengo%20desde%20la%20web%20y%20quiero%20contratar%20el%20*plan%20as*%20de%20*4%20sesiones*",
+      miniChecklist: ["Refuerzo de habilidades"]
     },
     {
-      name: 'Plan rookie',
-      originalTransferPrice: '$369.999',
-      transferPrice: '$314.499',
-      cardPrice: '$569.999',
-      savings: '15% OFF EN TRANSFERENCIA (AHORRO DE $255.500 VS TARJETA)',
-      sessions: "10 sesiones dinámicas (50' c/u)",
-      whatsappLink: "https://wa.me/5492966265603?text=Hola%2C%20vengo%20desde%20la%20web%20y%20quiero%20contratar%20el%20*plan%20rookie*%20de%20*10%20sesiones*",
-      miniChecklist: ["Más práctica", "Más tiempo de acompañamiento", "Mayor desarrollo de habilidades"]
+      name: 'Plan diamante',
+      originalTransferPrice: '$198.999',
+      transferPrice: '$169.149',
+      cardPrice: '$305.999',
+      savings: '15% OFF EN TRANSFERENCIA (AHORRO DE $136.850 VS TARJETA)',
+      sessions: "5 sesiones dinámicas (50' c/u)",
+      whatsappLink: "https://wa.me/5492966265603?text=Hola%2C%20vengo%20desde%20la%20web%20y%20quiero%20contratar%20el%20*plan%20diamante*%20de%20*5%20sesiones*",
+      miniChecklist: ["Perfeccionamiento completo"]
     }
   ],
   targetAudience: [
-    'Nunca manejaron y quieren empezar desde cero.',
-    'Tienen poca experiencia y necesitan construir una base sólida.',
-    'Tienen licencia, pero todavía no se sienten preparados para conducir solos.'
+    'Ya tienen experiencia manejando, pero quieren ganar más confianza al volante.',
+    'Necesitan practicar maniobras específicas antes de rendir su examen práctico.',
+    'Tienen licencia o conocimientos previos y quieren mejorar su técnica de conducción.'
   ],
   outcomes: [
-    'Familiarizarte con el vehículo y sus controles principales.',
-    'Realizar maniobras básicas con mayor seguridad y técnica.',
-    'Trabajar la confianza para conducir con más tranquilidad.',
-    'Llegar mejor preparado a tu examen práctico.',
-    'Contar con una base sólida para seguir desarrollando tu conducción.'
+    'Mejorar el control del vehículo y la coordinación al conducir.',
+    'Practicar maniobras específicas con una técnica correcta.',
+    'Corregir hábitos de conducción y mejorar tu forma de manejar.',
+    'Ganar mayor tranquilidad en situaciones que hoy te generan inseguridad.',
+    'Conducir de forma más fluida y segura.'
   ],
   features: [
     'Vehículo disponible para tus clases prácticas.',
-    'Acceso a nuestra comunidad privada de alumnos/as.',
-    'Formación teórica aplicada a situaciones reales de conducción.',
-    'Descuento en alquiler del vehículo para tu examen práctico.',
+    'Prácticas enfocadas en tus necesidades de conducción.',
+    'Repaso de aspectos teóricos aplicados a situaciones reales.',
+    'Descuento en alquiler del vehículo para el examen práctico.',
     'Orientación sobre requisitos y trámites para gestionar tu licencia.'
   ],
   bonuses: [
@@ -61,7 +61,7 @@ const programDetails = {
   ]
 };
 
-export default function PlanFundamentosPage() {
+export default function PlanPuestaAPuntoPage() {
   const scrollContainerRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
@@ -288,7 +288,7 @@ export default function PlanFundamentosPage() {
           <p className="text-xl text-muted-foreground mb-10 max-w-2xl mx-auto text-center">
             Nuestro equipo puede ayudarte a encontrar la opción más adecuada según tu experiencia y que queres lograr.
           </p>
-          <a href="https://wa.me/5492966265603?text=Hola%2C%20tengo%20algunas%20consultas%20sobre%20el%20Programa%20Fundamentos" target="_blank" rel="noopener noreferrer">
+          <a href="https://wa.me/5492966265603?text=Hola%2C%20tengo%20algunas%20consultas%20sobre%20el%20Programa%20Puesta%20a%20Punto" target="_blank" rel="noopener noreferrer">
             <Button variant="outline" size="lg" className="h-14 px-10 rounded-full border-primary text-primary hover:bg-primary/5 text-center shadow-none text-lg font-bold">
               Conocer mi plan ideal
             </Button>

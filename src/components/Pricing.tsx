@@ -1,4 +1,3 @@
-
 "use client";
 
 import React from 'react';
@@ -9,7 +8,9 @@ import { cn } from '@/lib/utils';
 const plans = [
   {
     name: 'Programa fundamentos',
-    price: 'Desde $311.999',
+    originalPrice: 'Desde $311.999',
+    price: 'Desde $265.199',
+    hasDiscount: true,
     description: 'Ideal para quienes empiezan desde cero o tienen poca experiencia al volante. Aprendé las bases de la conducción, familiarizate con el vehículo y ganá seguridad paso a paso.',
     badge: 'NIVEL INICIAL',
     href: '/planes/fundamentos',
@@ -17,18 +18,22 @@ const plans = [
   },
   {
     name: 'Programa puesta a punto',
-    price: 'Desde $165.999',
+    originalPrice: 'Desde $165.999',
+    price: 'Desde $141.099',
+    hasDiscount: true,
     description: 'Pensado para quienes ya tienen experiencia y quieren mejorar su manejo. Trabajá aspectos específicos de la conducción y reforzá tus habilidades.',
     badge: 'NIVEL INTERMEDIO',
-    href: '/planes/seguridad-avanzada',
+    href: '/planes/puesta-a-punto',
     buttonText: 'Elegir plan de 4 o 5 clases'
   },
   {
     name: 'Programa simulacro de examen',
+    originalPrice: null,
     price: 'Desde $86.999',
+    hasDiscount: false,
     description: 'Para alumnos que quieren prepararse antes de rendir el examen práctico. Practicá maniobras y situaciones reales del examen.',
     badge: 'NIVEL SUPERIOR',
-    href: '/planes/experto',
+    href: '/planes/simulacro-de-examen',
     buttonText: 'Elegir plan de 2 clases'
   }
 ];
@@ -58,16 +63,37 @@ export const Pricing = () => {
                 </div>
                 
                 <div className="mb-8 w-full flex-grow">
-                  <h4 className="text-h3 font-display font-semibold mb-4 text-foreground">{plan.name}</h4>
-                  <div className="flex items-center justify-center gap-2 mb-4">
-                    <span className="text-h2 font-display font-semibold text-green-500 text-tabular leading-none">{plan.price}</span>
+                  <h4 className="text-h3 font-display font-semibold mb-4 text-foreground uppercase">{plan.name}</h4>
+                  
+                  {/* Prices display */}
+                  <div className="flex flex-col items-center justify-center gap-1 mb-6">
+                    <span className="text-xs font-bold text-slate-400 uppercase tracking-widest">CON TRANSFERENCIA O EFECTIVO</span>
+                    
+                    {plan.hasDiscount ? (
+                      <div className="flex flex-col items-center justify-center">
+                        <span className="text-lg sm:text-xl font-bold text-red-500 line-through decoration-red-500 opacity-90">
+                          {plan.originalPrice}
+                        </span>
+                        <span className="text-3xl sm:text-5xl font-black text-green-500 tracking-tight leading-none mt-1">
+                          {plan.price}
+                        </span>
+                        <span className="text-[11px] font-black bg-amber-500/20 text-amber-400 border border-amber-500/40 px-3 py-1 rounded-full uppercase mt-2 tracking-wide">
+                          15% OFF APLICADO
+                        </span>
+                      </div>
+                    ) : (
+                      <span className="text-3xl sm:text-5xl font-black text-green-500 text-tabular leading-none mt-1">
+                        {plan.price}
+                      </span>
+                    )}
                   </div>
+
                   <p className="text-body text-muted-foreground font-medium mb-6 max-w-[68ch]">{plan.description}</p>
                 </div>
 
                 <div className="mt-auto w-full px-2">
                   <Link href={plan.href} className="w-full">
-                    <Button className="w-full h-14 rounded-2xl text-lg font-bold bg-primary hover:bg-primary/90 text-white border-none shadow-none">
+                    <Button className="w-full h-14 rounded-2xl text-lg font-bold bg-primary hover:bg-primary/90 text-white border-none shadow-none uppercase">
                       {plan.buttonText}
                     </Button>
                   </Link>

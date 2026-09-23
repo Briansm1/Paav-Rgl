@@ -51,7 +51,7 @@ export const Footer = () => {
           </div>
         </div>
         <div className="pt-8 border-t border-slate-800 flex flex-col items-center gap-6 text-caption text-slate-500 text-center pb-24 lg:pb-8">
-          <p>Copyright © 2026 PAAV. Todos los derechos reservados.</p>
+          <p>Copyright © 2026 Pilotos ases al volante | Autoescuela. Todos los derechos reservados.</p>
           <div className="flex flex-wrap justify-center gap-x-6 gap-y-4">
             <Link href="#" className="hover:text-white py-2">Política de Privacidad</Link>
             <Link href="#" className="hover:text-white py-2">Términos y Condiciones</Link>
