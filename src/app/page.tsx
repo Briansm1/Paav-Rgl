@@ -9,10 +9,12 @@ import { Faq } from '@/components/Faq';
 import { Contact } from '@/components/Contact';
 import { Footer } from '@/components/Footer';
 import { ScrollReveal } from '@/components/ScrollReveal';
+import { PromoModal } from '@/components/PromoModal';
 
 export default function Home() {
   return (
     <main className="min-h-screen">
+      <PromoModal />
       {/* SEO Optimized Hidden Content */}
       <section className="sr-only">
         <h1>
