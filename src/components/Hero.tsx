@@ -3,6 +3,7 @@
 
 import React, { useState, useEffect } from 'react';
 import Link from 'next/link';
+import Image from 'next/image';
 import { Button } from '@/components/ui/button';
 import { ChevronRight, Star, ChevronDown } from 'lucide-react';
 import { cn } from '@/lib/utils';
@@ -47,18 +48,30 @@ export const Hero = () => {
 
   return (
     <section id="inicio" className="relative h-[100svh] min-h-[100svh] flex flex-col items-center overflow-hidden bg-black">
-      {/* Background Video */}
-      <div className="absolute inset-0 z-0">
-        <video 
-          src="https://i.imgur.com/Ahthk3T.mp4"
-          autoPlay
-          loop
-          muted
-          playsInline
-          className="w-full h-full object-cover opacity-60"
+      {/* Background Image & Cinematic Effects */}
+      <div className="absolute inset-0 z-0 overflow-hidden">
+        {/* Hero Background Image */}
+        <Image
+          src="https://i.imgur.com/VtSts0f.png"
+          alt="Pilotos Ases al Volante"
+          fill
+          priority
+          className="object-cover animate-kenburns"
+          style={{ objectPosition: '70% 0%', opacity: 0.85 }}
+          sizes="100vw"
         />
-        <div className="absolute inset-0 bg-gradient-to-b from-black/90 via-black/40 to-background z-10"></div>
+        
+        {/* Dot Matrix Pattern Overlay (Hi-Tech & Compression masking) */}
+        <div className="absolute inset-0 z-10 dot-pattern opacity-40 pointer-events-none mix-blend-overlay" />
+        
+        {/* Ambient Radial Glow for Depth */}
+        <div className="absolute top-1/4 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[350px] bg-primary/20 rounded-full blur-[140px] pointer-events-none z-10" />
+        
+        {/* Multi-stage Gradient Mask & Vignette */}
+        <div className="absolute inset-0 bg-gradient-to-b from-black/95 via-black/45 to-background z-10 pointer-events-none" />
+        <div className="absolute inset-0 bg-radial-vignette opacity-70 z-10 pointer-events-none" />
       </div>
+
 
       {/* Content Container */}
       <div className="w-full max-w-[1440px] mx-auto px-4 min-[375px]:px-6 lg:px-10 relative z-20 flex-1 flex flex-col justify-between md:justify-center pt-24 md:pt-32 pb-10 md:pb-12">
@@ -70,7 +83,7 @@ export const Hero = () => {
               {/* Header block with Title and Badge */}
               <div className="flex flex-col md:flex-row items-center md:items-start justify-center md:justify-between gap-4 min-[375px]:gap-6 md:gap-8 w-full">
                 <h1 className="text-3xl min-[375px]:text-4xl min-[420px]:text-[2.6rem] sm:text-5xl md:text-6xl lg:text-h1 font-display font-semibold text-white drop-shadow-2xl animate-in fade-in slide-in-from-bottom-6 duration-1000 delay-100 leading-[1.1] text-balance text-center md:text-left flex-1 order-last md:order-first">
-                  <span className="text-primary">Aprendé a conducir</span> con clases adaptadas a tu nivel
+                  <span className="text-primary">Aprendé</span> a manejar y a <span className="text-primary">dominar</span> las emociones
                 </h1>
                 
                 <div className="shrink-0 px-4 py-1.5 min-[375px]:px-5 min-[375px]:py-2 md:px-6 md:py-3 text-[10px] min-[375px]:text-xs sm:text-sm md:text-eyebrow font-bold text-white uppercase tracking-[0.2em] bg-white/10 backdrop-blur-md border border-white/20 rounded-full animate-in fade-in slide-in-from-bottom-4 duration-700 whitespace-nowrap order-first md:order-last md:mt-4">
@@ -78,8 +91,8 @@ export const Hero = () => {
                 </div>
               </div>
               
-              <p className="text-sm min-[375px]:text-base min-[420px]:text-lg md:text-xl lg:text-body-lg text-white/90 max-w-[48ch] animate-in fade-in slide-in-from-bottom-8 duration-1000 delay-200 font-medium leading-relaxed mx-auto md:mx-0">
-                Clases teóricas y prácticas para empezar desde cero, mejorar tu manejo o prepararte para el examen práctico.
+              <p className="text-sm min-[375px]:text-base min-[420px]:text-lg md:text-xl lg:text-body-lg text-white/90 max-w-[52ch] animate-in fade-in slide-in-from-bottom-8 duration-1000 delay-200 font-medium leading-relaxed mx-auto md:mx-0">
+                Clases prácticas + habilidades clave para superar los nervios, ganar confianza y prepararte para el examen práctico.<br className="hidden sm:block" /><span className="block mt-2 text-white/70">Para personas con o sin experiencia.</span>
               </p>
             </div>
             

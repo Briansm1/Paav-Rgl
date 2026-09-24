@@ -11,7 +11,7 @@ export const Contact = () => {
     <section id="contacto" className="relative py-20 md:py-32 bg-background overflow-hidden">
       <div className="container mx-auto px-4 relative z-20">
         <div className="text-center max-w-3xl mx-auto mb-16 md:mb-20">
-          <span className="kicker text-primary mb-6 inline-block bg-primary/10 px-4 py-1.5 rounded-full">
+          <span className="kicker text-accent mb-6 inline-block bg-accent/10 px-4 py-1.5 rounded-full font-sans text-eyebrow font-semibold uppercase tracking-[0.12em]">
             ¿QUERÉS SER MIEMBRO?
           </span>
           <h2 className="text-h2 font-display text-foreground mb-6">

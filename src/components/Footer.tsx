@@ -32,21 +32,21 @@ export const Footer = () => {
             </div>
           </div>
           <div className="flex flex-col items-center">
-            <h4 className="text-eyebrow font-bold text-white uppercase tracking-[0.12em] mb-6">Enlaces Rápidos</h4>
+            <h4 className="text-body font-bold text-white uppercase tracking-[0.12em] mb-6">Enlaces Rápidos</h4>
             <ul className="space-y-4">
-              <li><Link href="/#inicio" className="text-[16px] text-slate-400 hover:text-white py-2 block">Inicio</Link></li>
-              <li><Link href="/#servicios" className="text-[16px] text-slate-400 hover:text-white py-2 block">Metodología</Link></li>
-              <li><Link href="/#testimonios" className="text-[16px] text-slate-400 hover:text-white py-2 block">Experiencias</Link></li>
-              <li><Link href="/#planes" className="text-[16px] text-slate-400 hover:text-white py-2 block">Planes</Link></li>
+              <li><Link href="/#inicio" className="text-[19px] text-slate-400 hover:text-white py-2 block">Inicio</Link></li>
+              <li><Link href="/#servicios" className="text-[19px] text-slate-400 hover:text-white py-2 block">Metodología</Link></li>
+              <li><Link href="/#testimonios" className="text-[19px] text-slate-400 hover:text-white py-2 block">Experiencias</Link></li>
+              <li><Link href="/#planes" className="text-[19px] text-slate-400 hover:text-white py-2 block">Planes</Link></li>
             </ul>
           </div>
           <div className="flex flex-col items-center">
-            <h4 className="text-eyebrow font-bold text-white uppercase tracking-[0.12em] mb-6">Servicios</h4>
+            <h4 className="text-body font-bold text-white uppercase tracking-[0.12em] mb-6">Servicios</h4>
             <ul className="space-y-4">
-              <li className="text-[16px] text-slate-400 py-1">Técnicas de conducción profesional</li>
-              <li className="text-[16px] text-slate-400 py-1">Conocimientos viales y del marco legal</li>
-              <li className="text-[16px] text-slate-400 py-1">Preparación mental y emocional</li>
-              <li className="text-[16px] text-slate-400 py-1">Alquiler del auto para examen</li>
+              <li className="text-[19px] text-slate-400 py-1">Técnicas de conducción profesional</li>
+              <li className="text-[19px] text-slate-400 py-1">Conocimientos viales y del marco legal</li>
+              <li className="text-[19px] text-slate-400 py-1">Preparación mental y emocional</li>
+              <li className="text-[19px] text-slate-400 py-1">Alquiler del auto para examen</li>
             </ul>
           </div>
         </div>

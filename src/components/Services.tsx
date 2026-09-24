@@ -32,7 +32,7 @@ export const Services = () => {
     <section id="servicios" className="relative py-20 md:py-32 bg-background overflow-hidden">
       <div className="container mx-auto px-4 lg:px-6 relative z-10">
         <div className="text-center max-w-4xl mx-auto mb-16 md:mb-24 px-4">
-          <span className="kicker kicker text-primary mb-6 inline-block bg-primary/10 px-4 py-1.5 rounded-full">
+          <span className="kicker text-accent mb-6 inline-block bg-accent/10 px-4 py-1.5 rounded-full font-sans text-eyebrow font-semibold uppercase tracking-[0.12em]">
             NUESTRA METODOLOGÍA
           </span>
           <h2 className="text-h2 font-display text-foreground mb-6">

@@ -65,7 +65,7 @@ export const Faq = () => {
     <section id="faq" className="relative py-20 md:py-32 overflow-hidden bg-background">
       <div className="container mx-auto px-4 relative z-10">
         <div className="text-center max-w-3xl mx-auto mb-16">
-          <span className="kicker text-primary mb-6 inline-block bg-primary/10 px-4 py-1.5 rounded-full">
+          <span className="kicker text-accent mb-6 inline-block bg-accent/10 px-4 py-1.5 rounded-full font-sans text-eyebrow font-semibold uppercase tracking-[0.12em]">
             PREGUNTAS COMUNES
           </span>
           <h2 className="text-h2 font-display text-foreground mb-6">
@@ -76,10 +76,10 @@ export const Faq = () => {
           <Accordion type="single" collapsible className="w-full">
             {faqs.map((faq, index) => (
               <AccordionItem key={index} value={`item-${index}`} className="border-white/5 last:border-0">
-                <AccordionTrigger className="text-left font-semibold text-body-lg hover:text-primary transition-colors py-6 leading-[1.35]">
+                <AccordionTrigger className="text-left font-semibold text-h3 hover:text-primary transition-colors py-6 leading-[1.3]">
                   {faq.question}
                 </AccordionTrigger>
-                <AccordionContent className="text-body text-muted-foreground leading-[1.6] pb-6 max-w-[68ch]">
+                <AccordionContent className="text-h3 text-muted-foreground leading-[1.6] pb-6 max-w-[68ch]">
                   {faq.answer}
                 </AccordionContent>
               </AccordionItem>

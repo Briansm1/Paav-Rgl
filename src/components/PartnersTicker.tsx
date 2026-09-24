@@ -21,7 +21,7 @@ export const PartnersTicker = () => {
   return (
     <section className="relative py-20 md:py-32 bg-black overflow-hidden border-t border-white/5">
       <div className="container mx-auto px-4 mb-12 relative z-20 text-center">
-        <span className="kicker text-slate-500 uppercase tracking-[0.2em] font-bold text-xs">
+        <span className="kicker text-accent mb-6 inline-block bg-accent/10 px-4 py-1.5 rounded-full font-sans text-eyebrow font-semibold uppercase tracking-[0.12em]">
           SOCIOS ESTRATÉGICOS
         </span>
       </div>

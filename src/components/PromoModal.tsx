@@ -2,7 +2,7 @@
 
 import React, { useState, useEffect } from 'react';
 import Link from 'next/link';
-import { X, CreditCard, Percent, Calendar, ArrowRight } from 'lucide-react';
+import { X, CreditCard, Calendar, ArrowRight } from 'lucide-react';
 import { Badge } from '@/components/ui/badge';
 
 export const PromoModal = () => {
@@ -59,7 +59,7 @@ export const PromoModal = () => {
         {/* Main Discount Headline */}
         <div className="text-center mb-4">
           <div className="inline-flex items-center justify-center gap-1.5 text-primary font-bold text-xs uppercase tracking-wider mb-0.5">
-            <Percent className="w-3.5 h-3.5 text-primary" /> OFERTA POR TIEMPO LIMITADO
+            OFERTA POR TIEMPO LIMITADO
           </div>
           <h2 id="promo-modal-title" className="text-2xl sm:text-4xl font-extrabold text-white tracking-tight leading-tight uppercase">
             <span className="text-primary font-black">15% DE DESCUENTO</span>
