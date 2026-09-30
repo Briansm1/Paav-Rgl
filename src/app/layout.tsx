@@ -73,6 +73,12 @@ export default function RootLayout({
     <html lang="es" className={`dark ${inter.variable} ${barlowCondensed.variable} antialiased`}>
       <head>
         <Script
+          async
+          src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2637359498719549"
+          crossOrigin="anonymous"
+          strategy="afterInteractive"
+        />
+        <Script
           src="https://www.googletagmanager.com/gtag/js?id=G-TXZ2N74HT0"
           strategy="afterInteractive"
         />
