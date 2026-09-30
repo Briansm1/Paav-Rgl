@@ -62,6 +62,9 @@ export const metadata: Metadata = {
     description: 'Aprendé a manejar con Pilotos ases al volante Autoescuela en Río Gallegos. Clases de manejo para principiantes, preparación para licencia de conducir, prácticas personalizadas y acompañamiento para examen práctico. Obtene más información en nuestra página web.',
     images: ['https://i.imgur.com/v6PauaL.png'],
   },
+  other: {
+    'google-adsense-account': 'ca-pub-2637359498719549',
+  },
 };
 
 export default function RootLayout({
@@ -72,6 +75,12 @@ export default function RootLayout({
   return (
     <html lang="es" className={`dark ${inter.variable} ${barlowCondensed.variable} antialiased`}>
       <head>
+        <meta name="google-adsense-account" content="ca-pub-2637359498719549" />
+        <script
+          async
+          src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2637359498719549"
+          crossOrigin="anonymous"
+        />
         <Script
           async
           src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2637359498719549"
