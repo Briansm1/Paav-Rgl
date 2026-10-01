@@ -104,20 +104,20 @@ export const Gallery = () => {
   const nextMedia2 = videoList[getRelativeIndex(2)];
 
   return (
-    <section id="galeria" className="relative py-14 sm:py-20 md:py-28 bg-background overflow-hidden">
+    <section id="galeria" className="relative py-20 md:py-32 bg-background overflow-hidden">
       {/* Contenedor principal */}
       <div className="container mx-auto px-4 lg:px-6 relative z-10">
         <div className="max-w-6xl mx-auto flex flex-col items-center">
           
           {/* Encabezado */}
-          <div className="mb-8 sm:mb-12 text-center">
-            <span className="kicker text-primary mb-3 inline-block bg-primary/10 border border-primary/20 px-4 py-1.5 rounded-full font-sans text-xs sm:text-sm font-bold uppercase tracking-wider">
+          <div className="mb-12 md:mb-16 text-center max-w-4xl px-4">
+            <span className="kicker text-accent mb-6 inline-block bg-accent/10 px-4 py-1.5 rounded-full font-sans text-eyebrow font-semibold uppercase tracking-[0.12em]">
               MOMENTOS AL VOLANTE
             </span>
-            <h2 className="text-2xl sm:text-4xl md:text-5xl font-extrabold text-white font-display mb-3 tracking-tight">
+            <h2 className="text-h2 font-display text-foreground mb-6">
               Así vivimos cada <span className="text-primary">clase práctica</span>
             </h2>
-            <p className="text-xs sm:text-base text-slate-300 max-w-[65ch] mx-auto font-sans leading-relaxed">
+            <p className="text-body-lg text-muted-foreground max-w-[68ch] mx-auto font-sans">
               Videos reales de nuestros alumnos dominando el vehículo en Río Gallegos. Experiencia 100% práctica y dinámica.
             </p>
           </div>
