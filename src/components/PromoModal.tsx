@@ -2,22 +2,68 @@
 
 import React, { useState, useEffect } from 'react';
 import Link from 'next/link';
-import { X, CreditCard, Calendar, ArrowRight } from 'lucide-react';
+import { X, CreditCard, ArrowRight, Clock } from 'lucide-react';
 import { Badge } from '@/components/ui/badge';
 
 export const PromoModal = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [isMounted, setIsMounted] = useState(false);
+  const [timeLeft, setTimeLeft] = useState({
+    days: 9,
+    hours: 0,
+    minutes: 0,
+    seconds: 0,
+  });
 
   useEffect(() => {
     setIsMounted(true);
+
+    const STORAGE_KEY = 'promo_countdown_target_v1';
+    let targetTime: number;
+    const savedTarget = typeof window !== 'undefined' ? localStorage.getItem(STORAGE_KEY) : null;
+
+    if (savedTarget && !isNaN(Number(savedTarget))) {
+      targetTime = Number(savedTarget);
+    } else {
+      // 9 días a partir de ahora
+      targetTime = Date.now() + 9 * 24 * 60 * 60 * 1000;
+      if (typeof window !== 'undefined') {
+        localStorage.setItem(STORAGE_KEY, targetTime.toString());
+      }
+    }
+
+    const calculateTimeLeft = () => {
+      const now = Date.now();
+      const difference = targetTime - now;
+
+      if (difference <= 0) {
+        return { days: 0, hours: 0, minutes: 0, seconds: 0 };
+      }
+
+      return {
+        days: Math.floor(difference / (1000 * 60 * 60 * 24)),
+        hours: Math.floor((difference / (1000 * 60 * 60)) % 24),
+        minutes: Math.floor((difference / (1000 * 60)) % 60),
+        seconds: Math.floor((difference / 1000) % 60),
+      };
+    };
+
+    setTimeLeft(calculateTimeLeft());
+
+    const interval = setInterval(() => {
+      setTimeLeft(calculateTimeLeft());
+    }, 1000);
+
     // Aparece 1 segundo después de que el usuario abre la página
     const timer = setTimeout(() => {
       setIsOpen(true);
       document.body.style.overflow = 'hidden';
     }, 1000);
 
-    return () => clearTimeout(timer);
+    return () => {
+      clearTimeout(timer);
+      clearInterval(interval);
+    };
   }, []);
 
   const closeModal = () => {
@@ -49,7 +95,7 @@ export const PromoModal = () => {
           <X className="w-5 h-5" />
         </button>
 
-        {/* Header Badge (Sin icono) */}
+        {/* Header Badge */}
         <div className="flex items-center justify-center mb-3 pt-1">
           <Badge className="bg-amber-500/10 text-amber-400 border-amber-500/30 px-3.5 py-1 text-xs sm:text-sm font-black uppercase tracking-wider shadow-sm text-center">
             ¡OPORTUNIDAD EXCLUSIVA!
@@ -57,7 +103,7 @@ export const PromoModal = () => {
         </div>
 
         {/* Main Discount Headline */}
-        <div className="text-center mb-4">
+        <div className="text-center mb-3">
           <div className="inline-flex items-center justify-center gap-1.5 text-primary font-bold text-xs uppercase tracking-wider mb-0.5">
             OFERTA POR TIEMPO LIMITADO
           </div>
@@ -70,9 +116,9 @@ export const PromoModal = () => {
         </div>
 
         {/* Offer Details Card */}
-        <div className="space-y-3 bg-white/5 border border-white/10 rounded-2xl p-3.5 sm:p-4 mb-4 text-center">
+        <div className="space-y-2.5 bg-white/5 border border-white/10 rounded-2xl p-3 sm:p-3.5 mb-3.5 text-center">
           <div className="flex flex-col items-center justify-center text-center">
-            <div className="p-2 rounded-xl bg-primary/20 text-primary mb-1.5">
+            <div className="p-1.5 rounded-xl bg-primary/20 text-primary mb-1">
               <CreditCard className="w-4 h-4" />
             </div>
             <p className="font-bold text-white text-sm sm:text-base leading-snug uppercase">
@@ -85,7 +131,7 @@ export const PromoModal = () => {
 
           <div className="h-px bg-white/10 w-full" />
 
-          {/* Exclusivo para planes (Sin icono) */}
+          {/* Exclusivo para planes */}
           <div className="text-center py-0.5">
             <p className="font-bold text-amber-400 text-xs uppercase tracking-wide">
               EXCLUSIVO PARA PLANES NIVEL INICIAL E INTERMEDIO
@@ -93,10 +139,38 @@ export const PromoModal = () => {
           </div>
         </div>
 
-        {/* Date validity badge */}
-        <div className="flex items-center justify-center gap-1.5 text-xs text-slate-400 mb-4 bg-zinc-900/90 py-1.5 px-3.5 rounded-full border border-white/10 w-fit mx-auto uppercase">
-          <Calendar className="w-3.5 h-3.5 text-amber-400 shrink-0" />
-          <span>VÁLIDO HASTA EL <strong className="text-white font-bold">09/10</strong></span>
+        {/* Countdown Timer */}
+        <div className="mb-4 bg-zinc-900/80 border border-white/10 rounded-2xl p-3 text-center">
+          <div className="flex items-center justify-center gap-1.5 text-[11px] sm:text-xs font-bold text-amber-400 uppercase mb-2 tracking-wider">
+            <Clock className="w-3.5 h-3.5" />
+            <span>LA OFERTA FINALIZA EN:</span>
+          </div>
+          <div className="grid grid-cols-4 gap-2 max-w-xs mx-auto">
+            <div className="bg-black/50 border border-white/10 rounded-xl py-1.5 px-1 text-center">
+              <span className="block text-lg sm:text-xl font-black text-white tabular-nums leading-tight">
+                {String(timeLeft.days).padStart(2, '0')}
+              </span>
+              <span className="text-[10px] font-semibold text-slate-400 uppercase tracking-wider">DÍAS</span>
+            </div>
+            <div className="bg-black/50 border border-white/10 rounded-xl py-1.5 px-1 text-center">
+              <span className="block text-lg sm:text-xl font-black text-white tabular-nums leading-tight">
+                {String(timeLeft.hours).padStart(2, '0')}
+              </span>
+              <span className="text-[10px] font-semibold text-slate-400 uppercase tracking-wider">HORAS</span>
+            </div>
+            <div className="bg-black/50 border border-white/10 rounded-xl py-1.5 px-1 text-center">
+              <span className="block text-lg sm:text-xl font-black text-white tabular-nums leading-tight">
+                {String(timeLeft.minutes).padStart(2, '0')}
+              </span>
+              <span className="text-[10px] font-semibold text-slate-400 uppercase tracking-wider">MIN</span>
+            </div>
+            <div className="bg-black/50 border border-amber-500/30 rounded-xl py-1.5 px-1 text-center bg-amber-500/5">
+              <span className="block text-lg sm:text-xl font-black text-amber-400 tabular-nums leading-tight">
+                {String(timeLeft.seconds).padStart(2, '0')}
+              </span>
+              <span className="text-[10px] font-semibold text-amber-400/80 uppercase tracking-wider">SEG</span>
+            </div>
+          </div>
         </div>
 
         {/* Action Buttons (Aprovechar & No Gracias) */}
@@ -119,3 +193,4 @@ export const PromoModal = () => {
     </div>
   );
 };
+

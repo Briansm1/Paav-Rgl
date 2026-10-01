@@ -13,10 +13,10 @@ export const CtaReady = () => {
             <Medal className="w-10 h-10 md:w-12 md:h-12 text-primary" />
           </div>
           <div className="space-y-4 px-1 md:px-2">
-            <h3 className="text-xl min-[375px]:text-2xl md:text-h2 font-display font-semibold tracking-tight leading-tight">
+            <h3 className="text-2xl min-[375px]:text-3xl md:text-h2 font-display font-bold md:font-semibold tracking-tight leading-tight">
               Estás a un paso de convertirte en un/una as al volante
             </h3>
-            <p className="text-sm md:text-body-lg text-muted-foreground max-w-[68ch] mx-auto">
+            <p className="text-base sm:text-lg md:text-body-lg text-slate-300 md:text-muted-foreground max-w-[68ch] mx-auto leading-relaxed">
               ¡No hay excusas, nada ni nadie puede detenerte, estamos para acompañarte hasta el final y lograr el resultado que esperas!
             </p>
           </div>
